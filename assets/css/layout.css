@@ -1,0 +1,319 @@
+/**
+ * Open ECDL — Master Design Foundation
+ * Layout, Grid & Spacing System
+ * Enroute Center for Development Ltd.
+ * 
+ * Target Engine: Elementor Pro Flexbox Containers & Modern CSS Grid
+ */
+
+/* ==========================================================================
+   1. RESET & BOX SIZING
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, svg, picture, video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ==========================================================================
+   2. CONTAINERS (Elementor-Compatible Container Architecture)
+   ========================================================================== */
+
+.ecdl-container {
+  width: 100%;
+  max-width: var(--container-max-width); /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.ecdl-container--narrow {
+  max-width: var(--container-narrow-max-width); /* 980px */
+}
+
+.ecdl-container--hero {
+  max-width: var(--container-hero-max-width); /* 1120px */
+}
+
+.ecdl-container--full {
+  max-width: 100%;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+/* ==========================================================================
+   3. SECTION STRUCTURES
+   ========================================================================== */
+
+.ecdl-section {
+  position: relative;
+  padding-top: var(--section-py-md);
+  padding-bottom: var(--section-py-md);
+  background-color: var(--color-canvas-primary);
+}
+
+.ecdl-section--sm {
+  padding-top: var(--section-py-sm);
+  padding-bottom: var(--section-py-sm);
+}
+
+.ecdl-section--lg {
+  padding-top: var(--section-py-lg);
+  padding-bottom: var(--section-py-lg);
+}
+
+/* Section Background Themes */
+.ecdl-section--white {
+  background-color: var(--ecdl-color-white);
+  color: var(--color-text-primary);
+}
+
+.ecdl-section--light {
+  background-color: var(--ecdl-color-surface);
+  border-top: 1px solid var(--ecdl-color-borders);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-section--dark {
+  background-color: var(--ecdl-color-black);
+  color: var(--color-text-on-dark);
+}
+
+.ecdl-section--dark h1,
+.ecdl-section--dark h2,
+.ecdl-section--dark h3,
+.ecdl-section--dark h4,
+.ecdl-section--dark h5 {
+  color: var(--color-text-on-dark);
+}
+
+.ecdl-section--dark p {
+  color: var(--color-text-on-dark-muted);
+}
+
+.ecdl-section--brand {
+  background-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-section--brand h1,
+.ecdl-section--brand h2,
+.ecdl-section--brand h3,
+.ecdl-section--brand p {
+  color: var(--ecdl-color-white);
+}
+
+/* Section Header Pattern (Standardized Editorial Layout) */
+.ecdl-section-header {
+  margin-bottom: clamp(2rem, 1.5rem + 1.8vw, 3.5rem);
+}
+
+.ecdl-section-header--center {
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ecdl-section-header--split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .ecdl-section-header--split {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .ecdl-section-header--split .ecdl-section-header__text {
+    max-width: 65%;
+  }
+  .ecdl-section-header--split .ecdl-section-header__action {
+    flex-shrink: 0;
+  }
+}
+
+.ecdl-section-header .ecdl-lead {
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. GRID SYSTEM (12-col Desktop, 8-col Tablet, 4-col Mobile)
+   ========================================================================== */
+
+.ecdl-grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .ecdl-grid-12 {
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--grid-gutter-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-grid-12 {
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter-desktop);
+  }
+}
+
+/* Auto-fit Responsive Card Grids (Elementor Loop Grid Compatible) */
+.ecdl-grid-cards-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-grid-cards-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-grid-cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gutter-desktop);
+  }
+}
+
+.ecdl-grid-cards-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-grid-cards-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-grid-cards-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gutter-desktop);
+  }
+}
+
+.ecdl-grid-cards-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .ecdl-grid-cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gutter-desktop);
+  }
+}
+
+/* Span Classes */
+.ecdl-col-12 { grid-column: 1 / -1; }
+
+@media (min-width: 1024px) {
+  .ecdl-col-lg-2  { grid-column: span 2; }
+  .ecdl-col-lg-3  { grid-column: span 3; }
+  .ecdl-col-lg-4  { grid-column: span 4; }
+  .ecdl-col-lg-5  { grid-column: span 5; }
+  .ecdl-col-lg-6  { grid-column: span 6; }
+  .ecdl-col-lg-7  { grid-column: span 7; }
+  .ecdl-col-lg-8  { grid-column: span 8; }
+  .ecdl-col-lg-9  { grid-column: span 9; }
+  .ecdl-col-lg-12 { grid-column: span 12; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ecdl-col-md-3 { grid-column: span 3; }
+  .ecdl-col-md-4 { grid-column: span 4; }
+  .ecdl-col-md-6 { grid-column: span 6; }
+  .ecdl-col-md-8 { grid-column: span 8; }
+}
+
+/* ==========================================================================
+   5. ELEMENTOR-COMPATIBLE FLEXBOX CONTAINERS
+   ========================================================================== */
+
+.ecdl-flex {
+  display: flex;
+}
+
+.ecdl-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ecdl-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ecdl-align-center {
+  align-items: center;
+}
+
+.ecdl-align-start {
+  align-items: flex-start;
+}
+
+.ecdl-align-end {
+  align-items: flex-end;
+}
+
+.ecdl-align-stretch {
+  align-items: stretch;
+}
+
+.ecdl-justify-start {
+  justify-content: flex-start;
+}
+
+.ecdl-justify-center {
+  justify-content: center;
+}
+
+.ecdl-justify-between {
+  justify-content: space-between;
+}
+
+.ecdl-justify-end {
+  justify-content: flex-end;
+}
+
+.ecdl-gap-2xs { gap: var(--space-2xs); }
+.ecdl-gap-xs  { gap: var(--space-xs); }
+.ecdl-gap-sm  { gap: var(--space-sm); }
+.ecdl-gap-md  { gap: var(--space-md); }
+.ecdl-gap-lg  { gap: var(--space-lg); }
+.ecdl-gap-xl  { gap: var(--space-xl); }
+
+.ecdl-inline-flex {
+  display: inline-flex;
+}
+
+.ecdl-relative {
+  position: relative;
+}
+
+.ecdl-w-full {
+  width: 100%;
+}

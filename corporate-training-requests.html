@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bespoke Training Requests &amp; Customized Solutions — Open ECDL</title>
+  <meta name="description" content="Submit corporate training requests, review bespoke training proposals, and track customized organizational development tracks." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate/requests" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111827',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/corporate-portal.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="corp-portal-wrapper">
+
+    <!-- 1. CORPORATE SIDEBAR -->
+    <aside class="corp-portal-sidebar" id="corp-sidebar" aria-label="Corporate Navigation">
+      <div class="corp-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="min-w-0">
+            <span class="block font-display text-sm font-extrabold tracking-tight text-white truncate" id="corp-brand-name">Unilever Bangladesh</span>
+            <span class="block text-[10px] text-neutral-400 truncate" id="corp-brand-industry">FMCG &amp; Consumer Goods</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="corp-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="corp-sidebar-nav">
+        <span class="corp-sidebar-section-title">Core Management</span>
+        <a href="/corporate/dashboard" class="corp-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="/corporate/company" class="corp-sidebar-link">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+          <span>Company Profile</span>
+        </a>
+        <a href="/corporate/departments" class="corp-sidebar-link">
+          <i data-lucide="network" class="w-4 h-4"></i>
+          <span>Departments</span>
+        </a>
+        <a href="/corporate/employees" class="corp-sidebar-link">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Employees</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Programmes &amp; Commercial</span>
+        <a href="/corporate/nominations" class="corp-sidebar-link">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Nominations</span>
+        </a>
+        <a href="/corporate/requests" class="corp-sidebar-link is-active">
+          <i data-lucide="file-plus-2" class="w-4 h-4"></i>
+          <span>Training Requests</span>
+        </a>
+        <a href="/corporate/proposals" class="corp-sidebar-link">
+          <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          <span>Proposals</span>
+        </a>
+        <a href="/corporate/programmes" class="corp-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Training Catalog</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Finance &amp; Reporting</span>
+        <a href="/corporate/reports" class="corp-sidebar-link">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Reports &amp; Analytics</span>
+        </a>
+        <a href="/corporate/invoices" class="corp-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Invoices &amp; Tax</span>
+        </a>
+        <a href="/corporate/settings" class="corp-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="corp-sidebar-footer">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Syeda Farah Naz" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
+          <div class="min-w-0 flex-1">
+            <div class="font-bold text-xs text-white truncate" id="corp-user-name">Syeda Farah Naz</div>
+            <div class="text-[10px] text-neutral-400 truncate" id="corp-user-role-label">Head of People &amp; L&amp;D</div>
+          </div>
+          <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. MAIN APPLICATION CONTENT -->
+    <div class="corp-portal-main">
+
+      <!-- Topbar -->
+      <header class="corp-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100" id="corp-sidebar-toggle">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2 text-xs font-semibold text-neutral-400">
+            <a href="/corporate/dashboard" class="hover:text-neutral-700">Corporate Portal</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold">Training Requests</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Tenant Switcher -->
+          <div class="flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Tenant:</span>
+            <select id="corp-tenant-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="unilever-bd">Unilever Bangladesh Ltd.</option>
+              <option value="apex-footwear">Apex Footwear Limited</option>
+            </select>
+          </div>
+
+          <!-- Role Switcher -->
+          <div class="hidden sm:flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Role:</span>
+            <select id="corp-role-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="admin">Corporate Account Admin</option>
+              <option value="lnd">Corporate HR/L&amp;D Manager</option>
+              <option value="supervisor">Corporate Supervisor</option>
+            </select>
+          </div>
+
+          <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
+            <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+            <span class="hidden md:inline">Switch Portal</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Workspace Area -->
+      <main class="corp-portal-workspace">
+
+        <!-- Header -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div>
+            <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Bespoke In-House Training Requests &amp; RFPs
+            </h1>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+              Commission customized corporate learning programs, track status progression timelines, and review dedicated faculty assignments.
+            </p>
+          </div>
+
+          <button type="button" onclick="document.getElementById('custom-request-modal').classList.remove('hidden')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs shadow-sm transition">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>Submit Training Request</span>
+          </button>
+        </div>
+
+        <!-- Training Requests List Container -->
+        <div class="space-y-6" id="training-requests-list">
+          <!-- Injected dynamically by corporate-portal.js with request number, topic, department, count, submitted date, status, assigned contact, next action -->
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- REQUEST DETAILS & STATUS TIMELINE MODAL -->
+  <div id="request-detail-modal" class="corp-modal-backdrop hidden">
+    <div class="corp-modal-content max-w-2xl">
+      <div class="corp-modal-header">
+        <div>
+          <span class="font-mono text-[10px] font-bold text-neutral-500" id="req-modal-num">TR-UNI-2026-001</span>
+          <h3 class="font-display font-bold text-base text-neutral-900" id="req-modal-title">Request Details &amp; Status Timeline</h3>
+        </div>
+        <button type="button" onclick="document.getElementById('request-detail-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="corp-modal-body space-y-6">
+        <!-- Metadata Pill Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-2 p-3 bg-neutral-50 rounded-xl border border-neutral-200 text-xs">
+          <div>Department: <strong class="text-neutral-900" id="req-modal-dept">Supply Chain</strong></div>
+          <div>Participants: <strong class="text-neutral-900" id="req-modal-count">35 Scholars</strong></div>
+          <div>Submitted: <strong class="text-neutral-900" id="req-modal-date">10 Nov 2026</strong></div>
+          <div>Status: <span class="corp-badge corp-badge-green" id="req-modal-status">Approved &amp; Scheduled</span></div>
+        </div>
+
+        <!-- Assigned Contact & Next Action -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block mb-1">Assigned ECDL Faculty / Contact:</span>
+            <div class="font-bold text-neutral-900" id="req-modal-contact-name">Advocate Rafiqul Islam</div>
+            <div class="text-neutral-500 text-[11px]" id="req-modal-contact-role">Lead Legal Faculty &amp; Counsel</div>
+            <div class="text-neutral-500 text-[11px] mt-0.5" id="req-modal-contact-email">rafiqul@open.ecdl.com.bd</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/70">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 block mb-1">Next Immediate Action:</span>
+            <div class="font-bold text-emerald-950" id="req-modal-next-action">Finalise venue &amp; logistical arrangements with factory HR</div>
+            <div class="mt-2" id="req-modal-proposal-link-box">
+              <a href="/corporate/proposals/PROP-UNI-2026-001" id="req-modal-proposal-link" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 underline">
+                <span>View Generated Proposal →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objectives -->
+        <div>
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-neutral-500 mb-2">Training Objectives &amp; Capability Focus</h4>
+          <ul class="list-disc pl-4 space-y-1 text-xs text-neutral-700" id="req-modal-objectives">
+            <!-- Injected -->
+          </ul>
+        </div>
+
+        <!-- Status Timeline Stepper -->
+        <div>
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-neutral-500 mb-4">Request Status Progression Timeline</h4>
+          <div class="corp-stepper pl-2" id="req-modal-stepper">
+            <!-- Timeline steps injected -->
+          </div>
+        </div>
+      </div>
+
+      <div class="corp-modal-footer">
+        <button type="button" onclick="document.getElementById('request-detail-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBMIT CUSTOM REQUEST MODAL -->
+  <div id="custom-request-modal" class="corp-modal-backdrop hidden">
+    <div class="corp-modal-content">
+      <div class="corp-modal-header">
+        <h3 class="font-display font-bold text-base text-neutral-900">Request Custom Corporate Training</h3>
+        <button type="button" onclick="document.getElementById('custom-request-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Custom training proposal request submitted. An ECDL Client Partner will reach out within 24 business hours.'); document.getElementById('custom-request-modal').classList.add('hidden');">
+        <div class="corp-modal-body space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Programme Title / Focus Area *</label>
+            <input type="text" required placeholder="e.g. Plant-Level Domestic Inquiries & Labour Dispute Resolution" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Target Department</label>
+              <input type="text" placeholder="e.g. Operations & Supply Chain" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Estimated Cohort Size *</label>
+              <input type="number" required min="5" max="200" placeholder="e.g. 35" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Preferred Delivery</label>
+              <select class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white">
+                <option value="Custom In-House">Custom In-House (Company Premises)</option>
+                <option value="Banani Campus">Executive Campus (Banani, Dhaka)</option>
+                <option value="Live Virtual">Interactive Virtual Cohort</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Target Timeline</label>
+              <input type="text" placeholder="e.g. Mid-January 2027" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Core Capability Gaps / Specific Needs *</label>
+            <textarea rows="3" required placeholder="Describe key challenges your team needs to solve (e.g. procedural defects in charge-sheets, distributor contract clauses, etc.)" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium"></textarea>
+          </div>
+        </div>
+        <div class="corp-modal-footer">
+          <button type="button" onclick="document.getElementById('custom-request-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">
+            Cancel
+          </button>
+          <button type="submit" class="px-5 py-2 rounded-lg bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold">
+            Submit RFP Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate-portal.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

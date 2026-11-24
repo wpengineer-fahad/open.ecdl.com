@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Employee Directory &amp; Talent Roster — Open ECDL</title>
+  <meta name="description" content="Manage corporate workforce records, departmental assignments, training status, and executive masterclass nominations." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate/employees" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111827',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/corporate-portal.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="corp-portal-wrapper">
+
+    <!-- ========================================================= -->
+    <!-- 1. CORPORATE SIDEBAR                                      -->
+    <!-- ========================================================= -->
+    <aside class="corp-portal-sidebar" id="corp-sidebar" aria-label="Corporate Navigation">
+      <div class="corp-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="min-w-0">
+            <span class="block font-display text-sm font-extrabold tracking-tight text-white truncate" id="corp-brand-name">Unilever Bangladesh</span>
+            <span class="block text-[10px] text-neutral-400 truncate" id="corp-brand-industry">FMCG &amp; Consumer Goods</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="corp-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="corp-sidebar-nav">
+        <span class="corp-sidebar-section-title">Core Management</span>
+        <a href="/corporate/dashboard" class="corp-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="/corporate/company" class="corp-sidebar-link">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+          <span>Company Profile</span>
+        </a>
+        <a href="/corporate/departments" class="corp-sidebar-link">
+          <i data-lucide="network" class="w-4 h-4"></i>
+          <span>Departments</span>
+        </a>
+        <a href="/corporate/employees" class="corp-sidebar-link is-active">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Employees</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Programmes &amp; Enrolment</span>
+        <a href="/corporate/nominations" class="corp-sidebar-link">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Nominations</span>
+        </a>
+        <a href="/corporate/training-requests" class="corp-sidebar-link">
+          <i data-lucide="file-plus-2" class="w-4 h-4"></i>
+          <span>Training Requests</span>
+        </a>
+        <a href="/courses" class="corp-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Training Catalog</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Finance &amp; Auditing</span>
+        <a href="/corporate/reports" class="corp-sidebar-link">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Reports &amp; Analytics</span>
+        </a>
+        <a href="/corporate/invoices" class="corp-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Invoices &amp; Tax</span>
+        </a>
+        <a href="/corporate/settings" class="corp-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="corp-sidebar-footer">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Syeda Farah Naz" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
+          <div class="min-w-0 flex-1">
+            <div class="font-bold text-xs text-white truncate" id="corp-user-name">Syeda Farah Naz</div>
+            <div class="text-[10px] text-neutral-400 truncate" id="corp-user-role-label">Head of People &amp; L&amp;D</div>
+          </div>
+          <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- 2. MAIN APPLICATION CONTENT                               -->
+    <!-- ========================================================= -->
+    <div class="corp-portal-main">
+
+      <!-- Topbar -->
+      <header class="corp-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100" id="corp-sidebar-toggle">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2 text-xs font-semibold text-neutral-400">
+            <a href="/corporate/dashboard" class="hover:text-neutral-700">Corporate Portal</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold">Employee Directory</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Tenant Switcher -->
+          <div class="flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Tenant:</span>
+            <select id="corp-tenant-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="unilever-bd">Unilever Bangladesh Ltd.</option>
+              <option value="apex-footwear">Apex Footwear Limited</option>
+            </select>
+          </div>
+
+          <!-- Role Switcher -->
+          <div class="hidden sm:flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Role:</span>
+            <select id="corp-role-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="admin">Corporate Account Admin</option>
+              <option value="lnd">Corporate HR/L&amp;D Manager</option>
+              <option value="supervisor">Corporate Supervisor</option>
+            </select>
+          </div>
+
+          <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
+            <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+            <span class="hidden md:inline">Switch Portal</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Workspace Area -->
+      <main class="corp-portal-workspace">
+
+        <!-- Header -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div>
+            <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Workforce Roster &amp; Employee Directory
+            </h1>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+              Search and filter organizational employees, track training statuses, and assign cohort nominations.
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-2.5">
+            <button type="button" onclick="document.getElementById('import-csv-modal').classList.remove('hidden')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-200 bg-white hover:bg-neutral-50 text-neutral-700 font-bold text-xs shadow-sm transition">
+              <i data-lucide="upload" class="w-4 h-4"></i>
+              <span>Import CSV Roster</span>
+            </button>
+            <button type="button" onclick="document.getElementById('add-employee-modal').classList.remove('hidden')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs shadow-sm transition">
+              <i data-lucide="user-plus" class="w-4 h-4"></i>
+              <span>Add Employee</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
+          
+          <div class="flex flex-wrap items-center gap-3 flex-1 min-w-[280px]">
+            <!-- Search -->
+            <div class="relative flex-1 min-w-[200px]">
+              <i data-lucide="search" class="w-4 h-4 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input type="text" id="emp-search-input" placeholder="Search by name, ID, title, or email..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+
+            <!-- Department Filter -->
+            <select id="emp-dept-filter" class="px-3 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <option value="all">All Departments</option>
+            </select>
+
+            <!-- Status Filter -->
+            <select id="emp-status-filter" class="px-3 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <option value="all">All Employment Status</option>
+              <option value="Active">Active</option>
+              <option value="On Leave">On Leave</option>
+              <option value="Probation">Probation</option>
+            </select>
+
+            <!-- Training Filter -->
+            <select id="emp-training-filter" class="px-3 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <option value="all">All Training Statuses</option>
+              <option value="Enrolled">Enrolled</option>
+              <option value="Completed">Completed</option>
+              <option value="Not Enrolled">Not Enrolled</option>
+            </select>
+          </div>
+
+          <!-- Total Count & View Toggle Buttons -->
+          <div class="flex items-center gap-4">
+            <span class="text-xs font-bold text-neutral-500" id="emp-total-count">0 Employees</span>
+
+            <div class="flex items-center rounded-lg border border-neutral-200 p-0.5 bg-neutral-100">
+              <button type="button" id="emp-view-table-btn" class="p-1.5 rounded-md bg-neutral-200 text-neutral-900" title="Table View">
+                <i data-lucide="list" class="w-4 h-4"></i>
+              </button>
+              <button type="button" id="emp-view-cards-btn" class="p-1.5 rounded-md text-neutral-500 hover:text-neutral-900" title="Card View">
+                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VIEW 1: EMPLOYEES TABLE -->
+        <div id="employees-table-wrapper" class="corp-table-container">
+          <div class="overflow-x-auto">
+            <table class="corp-table">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>Employee Name &amp; Contact</th>
+                  <th>Designation / Role</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                  <th>Training Status</th>
+                  <th class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="employees-tbody">
+                <!-- Injected by corporate-portal.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- VIEW 2: EMPLOYEES COMPACT CARDS GRID (Hidden by default) -->
+        <div id="employees-cards-wrapper" style="display: none;">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="employees-cards-grid">
+            <!-- Injected by corporate-portal.js -->
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- ADD EMPLOYEE MODAL -->
+  <div id="add-employee-modal" class="corp-modal-backdrop hidden">
+    <div class="corp-modal-content">
+      <div class="corp-modal-header">
+        <h3 class="font-display font-bold text-base text-neutral-900">Add New Employee</h3>
+        <button type="button" onclick="document.getElementById('add-employee-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Employee added to prototype directory.'); document.getElementById('add-employee-modal').classList.add('hidden');">
+        <div class="corp-modal-body space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Full Legal Name *</label>
+              <input type="text" required placeholder="e.g. Shakil Ahmed" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Employee ID *</label>
+              <input type="text" required placeholder="e.g. EMP-UNI-1011" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-mono font-bold" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Official Designation / Title *</label>
+            <input type="text" required placeholder="e.g. Assistant Brand Manager" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Corporate Email Address *</label>
+            <input type="email" required placeholder="e.g. shakil.ahmed@unilever.com" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Contact Phone</label>
+              <input type="tel" placeholder="+880 1711 000000" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Employment Status</label>
+              <select class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white">
+                <option value="Active">Active</option>
+                <option value="Probation">Probation</option>
+                <option value="On Leave">On Leave</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="corp-modal-footer">
+          <button type="button" onclick="document.getElementById('add-employee-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">
+            Cancel
+          </button>
+          <button type="submit" class="px-5 py-2 rounded-lg bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold">
+            Create Employee Record
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- IMPORT CSV ROSTER MODAL -->
+  <div id="import-csv-modal" class="corp-modal-backdrop hidden">
+    <div class="corp-modal-content">
+      <div class="corp-modal-header">
+        <h3 class="font-display font-bold text-base text-neutral-900">Import CSV Employee Roster</h3>
+        <button type="button" onclick="document.getElementById('import-csv-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="corp-modal-body space-y-4">
+        <p class="text-xs text-neutral-500">
+          Upload a standard spreadsheet containing employee identifiers, official emails, departments, and designations.
+        </p>
+
+        <!-- Simulated CSV Dropzone -->
+        <div class="border-2 border-dashed border-neutral-300 hover:border-emerald-500 rounded-xl p-8 text-center bg-neutral-50/70 transition-all cursor-pointer">
+          <i data-lucide="file-spreadsheet" class="w-10 h-10 text-emerald-600 mx-auto mb-2"></i>
+          <div class="text-xs font-bold text-neutral-900">Drag &amp; drop employee CSV here, or browse files</div>
+          <div class="text-[11px] text-neutral-400 mt-1">Supports .csv, .xlsx (Max 1,000 records per upload)</div>
+        </div>
+
+        <div class="p-3 bg-neutral-100 rounded-lg flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4 text-neutral-500"></i>
+            <span class="font-medium text-neutral-700">Need the formatted spreadsheet template?</span>
+          </div>
+          <a href="#" onclick="alert('Sample template downloaded: open_ecdl_corporate_roster_template.csv'); return false;" class="text-emerald-700 font-bold hover:underline">
+            Download Template
+          </a>
+        </div>
+      </div>
+      <div class="corp-modal-footer">
+        <button type="button" onclick="document.getElementById('import-csv-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">
+          Cancel
+        </button>
+        <button type="button" onclick="alert('Simulation: 15 employee records processed and validated successfully.'); document.getElementById('import-csv-modal').classList.add('hidden');" class="px-5 py-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold">
+          Process Upload
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK NOMINATION MODAL -->
+  <div id="nomination-modal" class="corp-modal-backdrop hidden">
+    <div class="corp-modal-content">
+      <div class="corp-modal-header">
+        <h3 class="font-display font-bold text-base text-neutral-900">Nominate Employee for Masterclass</h3>
+        <button type="button" onclick="document.getElementById('nomination-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form id="corporate-nomination-form">
+        <div class="corp-modal-body space-y-4">
+          
+          <div id="nom-modal-error" class="hidden p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-800 font-bold">
+            <!-- Duplicate error injected here -->
+          </div>
+
+          <div>
+            <label for="nom-modal-employee" class="block text-xs font-bold text-neutral-700 mb-1">Select Employee *</label>
+            <select id="nom-modal-employee" required class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <div>
+            <label for="nom-modal-course" class="block text-xs font-bold text-neutral-700 mb-1">Select Training Programme *</label>
+            <select id="nom-modal-course" required class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <div>
+            <label for="nom-modal-cohort" class="block text-xs font-bold text-neutral-700 mb-1">Cohort Batch / Schedule *</label>
+            <select id="nom-modal-cohort" required class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white">
+              <option value="cohort-bla-dec2026">Dec 12 – Dec 19, 2026 (Executive Hybrid Cohort) • 14 Seats Left</option>
+              <option value="cohort-sales-dec2026">Dec 20 – Dec 27, 2026 (Banani Campus) • 8 Seats Left</option>
+              <option value="cohort-priorities-jan2027">Jan 08 – Jan 09, 2027 (Live Virtual Stream) • 20 Seats Left</option>
+            </select>
+          </div>
+
+          <div class="p-3 bg-neutral-50 rounded-lg border border-neutral-200 text-xs text-neutral-600">
+            <strong>Duplicate Guard:</strong> ECDL prevents duplicate registrations for the same cohort batch in local session state.
+          </div>
+        </div>
+        <div class="corp-modal-footer">
+          <button type="button" onclick="document.getElementById('nomination-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">
+            Cancel
+          </button>
+          <button type="submit" class="px-5 py-2 rounded-lg bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold">
+            Submit Nomination
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate-portal.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

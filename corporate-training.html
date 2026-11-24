@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Training & Executive Solutions — Open ECDL | Enroute Center for Development</title>
+  <meta name="description" content="Customised enterprise learning and capability building solutions aligned with your organisation's operational priorities and business growth in Bangladesh." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate-training" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/header-footer.css" />
+  <link rel="stylesheet" href="assets/css/corporate.css" />
+</head>
+<body class="bg-white text-neutral-800 antialiased font-sans">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
+        <span class="text-neutral-300 hidden sm:inline">All corporate proposals include statutory Mushak Form 6.3 invoices</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:training@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>training@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="hover:text-white text-ecdl-yellow font-semibold transition-colors inline-flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+          <a href="courses.html" class="hover:text-ecdl-green transition-colors">Courses</a>
+          <a href="webinars.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1.5">
+            <span>Webinar</span>
+            <span class="w-2 h-2 rounded-full bg-ecdl-orange animate-pulse"></span>
+          </a>
+          <a href="training-calendar.html" class="hover:text-ecdl-green transition-colors">Calendar</a>
+          <a href="corporate-training.html" class="hover:text-ecdl-green transition-colors text-ecdl-green font-bold">Corporate</a>
+          <a href="corporate-case-studies.html" class="hover:text-ecdl-green transition-colors">Case Studies</a>
+          <a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1 text-ecdl-orange font-bold">
+            <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
+            <span>TNA Tool</span>
+          </a>
+        </nav>
+
+        <!-- Right Controls: Profile Dropdown + Proposal Button -->
+        <div class="flex items-center gap-2.5">
+          <!-- Profile / Auth Dropdown Wrapper -->
+          <div class="relative" id="profileDropdownWrapper">
+            <button
+              type="button"
+              id="profileMenuBtn"
+              onclick="toggleProfileDropdown()"
+              class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-neutral-200 hover:border-ecdl-green bg-neutral-50 hover:bg-ecdl-greenSoft transition-all text-sm font-semibold text-ecdl-dark"
+            >
+              <span id="profileAvatarBadge" class="w-7 h-7 rounded-full bg-ecdl-green text-white text-xs font-bold flex items-center justify-center">
+                ED
+              </span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Profile</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+            </button>
+            <div id="profileDropdownMenu" class="hidden absolute right-0 mt-2 w-60 rounded-2xl bg-white border border-neutral-200 shadow-cardHover p-2 z-50"></div>
+          </div>
+
+          <!-- Primary Proposal CTA -->
+          <a
+            href="corporate-proposal.html"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-sm transition-colors"
+          >
+            <span>Request Proposal</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="lg:hidden p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:bg-neutral-100"
+            aria-label="Toggle Menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="index.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
+      <a href="courses.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
+      <a href="corporate-training.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">Corporate Training</a>
+      <a href="corporate-tna.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-orange hover:bg-amber-50">Online TNA Tool</a>
+      <a href="corporate-case-studies.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Case Studies</a>
+      <a href="training-calendar.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Training Calendar</a>
+      <a href="corporate-proposal.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-white bg-ecdl-green text-center">Request a Proposal</a>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- HERO SECTION                                              -->
+  <!-- ========================================================= -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-ecdl-greenSoft/60 via-white to-amber-50/40 border-b border-neutral-200 pt-14 pb-20 lg:pt-24 lg:pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left: Editorial Headline & Actions -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ecdl-green/10 border border-ecdl-green/20 text-ecdl-green text-xs font-extrabold uppercase tracking-wider">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Enterprise Learning Partner</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ecdl-dark leading-[1.08] tracking-tight">
+            Develop People.<br />
+            <span class="text-ecdl-green">Strengthen Performance.</span>
+          </h1>
+
+          <p class="text-neutral-600 text-lg sm:text-xl leading-relaxed max-w-2xl">
+            Customised learning and development solutions aligned with your organisation's capability needs, operational priorities and business objectives.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              href="corporate-proposal.html"
+              class="px-8 py-4 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-base shadow-lg shadow-ecdl-green/20 hover:shadow-xl transition-all inline-flex items-center gap-2.5"
+            >
+              <span>Request a Training Proposal</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+
+            <a
+              href="#customised-solutions"
+              class="px-7 py-4 rounded-xl bg-white hover:bg-neutral-50 text-ecdl-dark border border-neutral-300 font-bold text-base transition-colors inline-flex items-center gap-2"
+            >
+              <span>Explore Solutions</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-neutral-500"></i>
+            </a>
+          </div>
+
+          <!-- Credibility Stats Pills -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-neutral-200/80">
+            <div>
+              <span class="block font-display text-2xl font-extrabold text-ecdl-dark">140+</span>
+              <span class="text-xs text-neutral-500">Corporate Clients</span>
+            </div>
+            <div>
+              <span class="block font-display text-2xl font-extrabold text-ecdl-green">43,000+</span>
+              <span class="text-xs text-neutral-500">Leaders Certified</span>
+            </div>
+            <div>
+              <span class="block font-display text-2xl font-extrabold text-ecdl-dark">100%</span>
+              <span class="text-xs text-neutral-500">Mushak-6.3 Compliant</span>
+            </div>
+            <div>
+              <span class="block font-display text-2xl font-extrabold text-ecdl-orange">200+</span>
+              <span class="text-xs text-neutral-500">Senior Faculty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Authentic Professional Training Imagery -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-ecdl-yellow/30 blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-6 -right-6 w-36 h-36 rounded-full bg-ecdl-green/20 blur-2xl pointer-events-none"></div>
+
+            <div class="rounded-3xl overflow-hidden border-2 border-white shadow-2xl relative z-10 bg-white">
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                alt="Open ECDL Corporate Executive Training Workshop"
+                class="w-full h-80 sm:h-96 object-cover"
+                loading="eager"
+              />
+
+              <!-- Floating Capability Badge -->
+              <div class="p-6 bg-white border-t border-neutral-100 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center font-bold">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-sm text-ecdl-dark">Tailored Enterprise Curriculum</h4>
+                    <p class="text-xs text-neutral-500">Kirkpatrick Level 1–4 Evaluation</p>
+                  </div>
+                </div>
+                <a href="corporate-tna.html" class="px-3.5 py-2 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-ecdl-dark font-bold text-xs transition-colors shrink-0">
+                  Run TNA →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 1. CORPORATE LEARNING CHALLENGES                          -->
+  <!-- ========================================================= -->
+  <section id="learning-challenges" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="alert-circle" class="w-4 h-4"></i>
+          Strategic Capability Gaps
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Common Corporate Learning Challenges in Bangladesh
+        </h2>
+        <p class="text-neutral-600 mt-3 text-base sm:text-lg">
+          Generic, off-the-shelf training seminars fail to produce sustained behavioral change. Organizations face specific structural barriers that require consultative intervention:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Challenge 1 -->
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-bold">
+              <i data-lucide="users-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Frontline Supervisor Gap</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Top technical performers promoted to line managers without structured people-leadership training, leading to shopfloor friction and high supervisor turnover.
+            </p>
+          </div>
+          <span class="mt-6 pt-4 border-t border-neutral-100 text-xs font-bold text-ecdl-green flex items-center gap-1">
+            <span>ECDL Solution: Frontline Academy</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Challenge 2 -->
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Regulatory Penalties & Labor Friction</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Frequent statutory changes in the Bangladesh Labour Act and NBR VAT rules result in audit disallowances, court notices, and avoidable labor unrest.
+            </p>
+          </div>
+          <span class="mt-6 pt-4 border-t border-neutral-100 text-xs font-bold text-ecdl-green flex items-center gap-1">
+            <span>ECDL Solution: Legal Mastery</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Challenge 3 -->
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center font-bold">
+              <i data-lucide="trending-down" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Margin Erosion in B2B Deals</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Commercial and key account teams immediately cave into buyer discount demands due to lack of consultative selling and joint business planning (JBP) skills.
+            </p>
+          </div>
+          <span class="mt-6 pt-4 border-t border-neutral-100 text-xs font-bold text-ecdl-green flex items-center gap-1">
+            <span>ECDL Solution: Commercial KAM</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+
+        <!-- Challenge 4 -->
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+              <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Spreadsheet Dependency</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Middle managers spend 8 to 12 hours weekly compiling static Excel reports rather than interpreting real-time Power BI telemetry to guide operations.
+            </p>
+          </div>
+          <span class="mt-6 pt-4 border-t border-neutral-100 text-xs font-bold text-ecdl-green flex items-center gap-1">
+            <span>ECDL Solution: Power BI & AI</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 2. CUSTOMISED TRAINING SOLUTIONS                          -->
+  <!-- ========================================================= -->
+  <section id="customised-solutions" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          Core Corporate Tracks
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Customised Enterprise Training Solutions
+        </h2>
+        <p class="text-neutral-600 mt-3 text-base sm:text-lg">
+          Every solution is engineered around your specific organizational workflows, incorporating internal SOPs, sanitized company data, and actual operational scenarios.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Track 1: Leadership -->
+        <article id="leadership-development" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-ecdl-greenSoft text-ecdl-green text-xs font-extrabold uppercase">Executive Track</span>
+              <i data-lucide="award" class="w-6 h-6 text-ecdl-green"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              Leadership &amp; Management Development
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Transition functional specialists into decisive corporate leaders with strategic governance, emotional intelligence, and accountability frameworks.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Strategic Thinking &amp; P&amp;L Alignment</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Executive Delegation &amp; Coaching</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Cross-Functional Collaboration</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 15–30 Leaders</span>
+            <a href="corporate-solution-detail.html?slug=leadership-management" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Track 2: Commercial & Functional Skills -->
+        <article id="functional-skills" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">Commercial Growth</span>
+              <i data-lucide="trending-up" class="w-6 h-6 text-ecdl-dark"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              Functional &amp; Commercial Excellence
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Equip B2B sales forces, territory commercial leads, and KAM teams with high-margin consultative negotiation and enterprise pipeline velocity.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Joint Business Planning (JBP) with Retailers</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Closing High-Value Enterprise Accounts</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Procurement TCO &amp; Vendor Qualification</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 20–35 Sales Leads</span>
+            <a href="corporate-solution-detail.html?slug=functional-technical" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Track 3: Compliance & Workplace Learning -->
+        <article id="compliance-learning" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-ecdl-orange text-white text-xs font-extrabold uppercase">Statutory Mastery</span>
+              <i data-lucide="scale" class="w-6 h-6 text-ecdl-orange"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              Statutory Compliance &amp; Labour Law
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Zero-penalty factory, labor, and NBR tax compliance led by Supreme Court advocates and licensed chartered accountant consultants.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Labour Act 2006 &amp; 2026 Amendments</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Flawless Domestic Inquiries &amp; Disciplinary Code</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Mushak-6.3 VAT &amp; VDS Invoicing</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 15–40 Managers</span>
+            <a href="corporate-solution-detail.html?slug=compliance-workplace" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Track 4: Digital Tech Skills -->
+        <article id="digital-skills" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-extrabold uppercase">Digital Workplace</span>
+              <i data-lucide="cpu" class="w-6 h-6 text-blue-700"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              Digital Modernization &amp; Analytics
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Replace sluggish manual spreadsheets with Microsoft Power BI, automated daily KPI telemetry, and secure enterprise AI workflows.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Executive Power BI Dashboarding</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Advanced Financial Modeling in Excel</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Enterprise Workflow Automation</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 15–25 Analysts</span>
+            <a href="corporate-solution-detail.html?slug=digital-technology" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Track 5: RMG Manufacturing -->
+        <article class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-extrabold uppercase">Industry Focused</span>
+              <i data-lucide="layers" class="w-6 h-6 text-emerald-700"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              RMG Manufacturing Academy
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Frontline line balancing, SMV throughput enhancement, Sedex/BSCI buyer audit compliance, and industrial relations for garment exporters.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Line Balancing &amp; Floor Efficiency</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Buyer Social Audits &amp; ILO Better Work</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Supervisor Communication &amp; Grievance Redress</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 25–50 Plant Leads</span>
+            <a href="corporate-solution-detail.html?slug=industry-rmg" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Track 6: Banking & NBFI -->
+        <article class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-extrabold uppercase">Financial Services</span>
+              <i data-lucide="calculator" class="w-6 h-6 text-amber-800"></i>
+            </div>
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              Banking &amp; NBFI Academy
+            </h3>
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Bangladesh Bank prudential regulation compliance, credit risk grading (CRG), non-performing loan recovery, and relationship wealth banking.
+            </p>
+            <ul class="space-y-2 pt-2 text-xs text-neutral-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Central Bank Prudential Compliance</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> AML &amp; CFT Risk Case Detection</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecdl-green"></i> Corporate &amp; SME Loan Structuring</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs text-neutral-500 font-medium">Cohort: 20–30 Branch Leads</span>
+            <a href="corporate-solution-detail.html?slug=industry-banking" class="text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>View Track Specs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. TRAINING DELIVERY MODES                                -->
+  <!-- ========================================================= -->
+  <section id="delivery-modes" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          Flexible Execution
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Enterprise Training Delivery Modes
+        </h2>
+        <p class="text-neutral-600 mt-2 text-base">
+          Choose the delivery environment that best aligns with your operational cadence, geographic footprint, and budget requirements:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+          <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-4">
+            <i data-lucide="building-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ecdl-dark">In-House On-Site</h3>
+          <p class="text-xs text-neutral-500 mt-1">At your headquarters or factory plant</p>
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Delivered directly at your offices or manufacturing facilities across Dhaka, Gazipur, Chittagong, and Sylhet. Zero travel downtime for your workforce.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+          <div class="w-12 h-12 rounded-2xl bg-ecdl-yellow/20 text-ecdl-dark flex items-center justify-center mb-4">
+            <i data-lucide="map-pin" class="w-6 h-6 text-ecdl-green"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ecdl-dark">ECDL Executive Campus</h3>
+          <p class="text-xs text-neutral-500 mt-1">Pink City, Gulshan Avenue, Dhaka</p>
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Host your executive cohorts in our dedicated Gulshan learning suites featuring high-end multimedia, executive catering, and boardroom breakout areas.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+            <i data-lucide="video" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ecdl-dark">Virtual Live Studios</h3>
+          <p class="text-xs text-neutral-500 mt-1">Interactive multi-location Zoom</p>
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Synchronous live cohorts connecting regional branches nationwide with live polling, virtual breakout rooms, and session recordings hosted in the corporate portal.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ecdl-dark">Offsite Executive Retreat</h3>
+          <p class="text-xs text-neutral-500 mt-1">Immersive resort environments</p>
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Multi-day strategy retreats in Gazipur or Sreemangal resorts. Focus on senior leadership synergy, vision alignment, and cultural transformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. OUR TRAINING DEVELOPMENT PROCESS                       -->
+  <!-- ========================================================= -->
+  <section id="delivery-process" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="git-commit" class="w-4 h-4"></i>
+          Consultative Methodology
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Our 5-Stage Corporate Delivery Process
+        </h2>
+        <p class="text-neutral-600 mt-3 text-base sm:text-lg">
+          Consult → Assess → Design → Deliver → Measure
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+        <!-- Stage 1: Consult -->
+        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">01</span>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Consult</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Strategic discovery meeting with HR Directors, L&amp;D Managers, and operational sponsors to align learning goals with business KPIs.
+            </p>
+          </div>
+          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 1 · Strategic Scope</span>
+        </div>
+
+        <!-- Stage 2: Assess -->
+        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">02</span>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Assess</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Diagnostic survey &amp; frontline interviews to benchmark baseline skills, identifying exact operational challenges and behavioral gaps.
+            </p>
+          </div>
+          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 2 · Diagnostic TNA</span>
+        </div>
+
+        <!-- Stage 3: Design -->
+        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">03</span>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Design</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Co-creation of bespoke curriculum, integrating company case studies, standard operating procedures, and practical action simulations.
+            </p>
+          </div>
+          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 3 · Syllabus Sign-Off</span>
+        </div>
+
+        <!-- Stage 4: Deliver -->
+        <div class="ecdl-process-step bg-ecdl-greenSoft/60 rounded-3xl p-6 border border-ecdl-green/30 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-ecdl-green text-white font-display font-extrabold text-xs mb-4 shadow-sm">04</span>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-greenDark mb-2">Deliver</h3>
+            <p class="text-xs text-neutral-700 leading-relaxed">
+              High-engagement experiential workshops led by vetted senior faculty. Case studies, live roleplays, and capstone project assignments.
+            </p>
+          </div>
+          <span class="mt-6 text-[11px] font-bold text-ecdl-green">Week 4+ · Interactive Execution</span>
+        </div>
+
+        <!-- Stage 5: Measure -->
+        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">05</span>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Measure</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Kirkpatrick evaluation report, 30-day workplace application check-in, and verified certificates issued via the ECDL Corporate Portal.
+            </p>
+          </div>
+          <span class="mt-6 text-[11px] font-bold text-neutral-400">Post-Delivery · ROI Audit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. INDUSTRY-SPECIFIC LEARNING SOLUTIONS                   -->
+  <!-- ========================================================= -->
+  <section id="industry-solutions" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>
+          Tailored to Your Sector
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Industry-Specific Learning Solutions
+        </h2>
+        <p class="text-neutral-600 mt-2 text-base">
+          We speak the operational and regulatory language of Bangladesh’s leading economic pillars:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Apparel &amp; Textiles</span>
+          <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">RMG Exporters &amp; Garments</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-4">
+            Compliance with buyer codes (Sedex/BSCI), industrial relations, line productivity, fabric costing accuracy, and ILO Better Work compliance.
+          </p>
+          <a href="corporate-solution-detail.html?slug=industry-rmg" class="text-xs font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+            <span>Explore RMG Academy →</span>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Financial Services</span>
+          <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">Banks, NBFIs &amp; Fintechs</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-4">
+            Bangladesh Bank regulatory circulars, credit risk grading (CRG), AML/CFT investigative case studies, and corporate wealth relationship sales.
+          </p>
+          <a href="corporate-solution-detail.html?slug=industry-banking" class="text-xs font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+            <span>Explore Banking Academy →</span>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Consumer &amp; Retail</span>
+          <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">FMCG, Retail &amp; Conglomerates</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-4">
+            Route-to-market distribution, key account velocity with superstores, territory sales monitoring, and consultative margin protection.
+          </p>
+          <a href="corporate-solution-detail.html?slug=functional-technical" class="text-xs font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+            <span>Explore Commercial Academy →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. FACILITATORS & SUBJECT EXPERTS                        -->
+  <!-- ========================================================= -->
+  <section id="facilitators" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+            <i data-lucide="user-check" class="w-4 h-4"></i>
+            Verified Subject Faculty
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            Learn From Senior Practitioners
+          </h2>
+          <p class="text-neutral-600 mt-2 max-w-xl text-base">
+            Our 200+ facilitators are seasoned corporate leaders, Supreme Court advocates, chartered accountants, and former regulatory consultants.
+          </p>
+        </div>
+        <button type="button" onclick="openInstructorModal()" class="px-5 py-3 rounded-xl border border-neutral-300 hover:border-ecdl-green hover:text-ecdl-green text-xs font-bold transition-colors">
+          Join Faculty Network →
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Faculty 1 -->
+        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-dark text-white font-display font-extrabold text-xl flex items-center justify-center">
+              TK
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Tarikul Kamrul</h3>
+              <p class="text-xs font-bold text-ecdl-green uppercase mt-0.5">Commercial Leadership &amp; KAM</p>
+            </div>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Veteran commercial director who has scaled B2B sales forces, FMCG brands, and key account retail networks across Bangladesh.
+            </p>
+          </div>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">20+ Years Leadership</span>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-green text-white font-display font-extrabold text-xl flex items-center justify-center">
+              JS
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Jafrul Hasan Sharif</h3>
+              <p class="text-xs font-bold text-ecdl-green uppercase mt-0.5">Labour Law &amp; Industrial Relations</p>
+            </div>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Senior legal consultant advising leading conglomerates on Bangladesh Labour Act statutory compliance, collective bargaining, and domestic inquiries.
+            </p>
+          </div>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">25+ Years Legal Practice</span>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-xl flex items-center justify-center">
+              FCA
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-extrabold text-ecdl-dark">NBR Enlisted VAT Faculty</h3>
+              <p class="text-xs font-bold text-ecdl-green uppercase mt-0.5">Finance, VAT &amp; Tax Governance</p>
+            </div>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Chartered Accountants &amp; licensed NBR consultants guiding corporate finance teams through Mushak-6.3 compliance, VDS audits, and input tax rebates.
+            </p>
+          </div>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">ICAB &amp; NBR Enlisted</span>
+        </div>
+
+        <!-- Faculty 4 -->
+        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-orange text-white font-display font-extrabold text-xl flex items-center justify-center">
+              PMP
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Lead PMP® Instructors</h3>
+              <p class="text-xs font-bold text-ecdl-green uppercase mt-0.5">Project &amp; Digital Transformation</p>
+            </div>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Certified Project Management Professionals directing multi-million dollar corporate infrastructure, supply chain, and IT programs.
+            </p>
+          </div>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">PMI Authorized Faculty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 11. VERIFIED CORPORATE CASE STUDIES PREVIEW               -->
+  <!-- ========================================================= -->
+  <section id="case-studies-preview" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+            <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+            Demonstrated Client ROI
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            Verified Corporate Impact &amp; Case Studies
+          </h2>
+          <p class="text-neutral-600 mt-2 max-w-xl text-base">
+            Review how leading institutions partnered with Open ECDL to overcome systemic capability hurdles and achieve quantifiable business results.
+          </p>
+        </div>
+        <a href="corporate-case-studies.html" class="px-5 py-3 rounded-xl bg-white border border-neutral-300 hover:border-ecdl-green text-ecdl-dark hover:text-ecdl-green font-bold text-xs sm:text-sm transition-colors inline-flex items-center gap-2">
+          <span>View All 5 Case Studies</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Case 1: Apex -->
+        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="p-7 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">APEX FOOTWEAR</span>
+              <span class="text-xs text-neutral-500">Export Manufacturing</span>
+            </div>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark">
+              Plant Leadership Transformation for 120 Senior Factory Supervisors
+            </h3>
+            <p class="text-sm text-neutral-600 line-clamp-3">
+              Comprehensive shopfloor academy in Gazipur addressing communication friction, root-cause problem solving, and supervisor attrition.
+            </p>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-green">28%</span>
+                <span class="text-[11px] text-neutral-600">Lower Turnover</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-neutral-100 text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-dark">Zero</span>
+                <span class="text-[11px] text-neutral-600">Labor Grievances</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-7 py-4 bg-neutral-50 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-medium text-neutral-500">120 Leaders Certified</span>
+            <a href="corporate-case-studies.html#cs-apex" class="text-xs font-bold text-ecdl-green hover:underline">Read Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Case 2: City Bank -->
+        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="p-7 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">COMMERCIAL BANK</span>
+              <span class="text-xs text-neutral-500">Financial Services</span>
+            </div>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark">
+              Credit Risk &amp; NBR VAT Compliance for 250 Relationship Managers
+            </h3>
+            <p class="text-sm text-neutral-600 line-clamp-3">
+              Nationwide institutional program aligning branch lending officers with central bank prudential regulations and NBR tax withholding.
+            </p>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-green">98.5%</span>
+                <span class="text-[11px] text-neutral-600">Approval Accuracy</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-neutral-100 text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-dark">250</span>
+                <span class="text-[11px] text-neutral-600">Certified Managers</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-7 py-4 bg-neutral-50 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-medium text-neutral-500">10 Nationwide Cohorts</span>
+            <a href="corporate-case-studies.html#cs-city-bank" class="text-xs font-bold text-ecdl-green hover:underline">Read Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Case 3: FMCG -->
+        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div class="p-7 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">MULTINATIONAL FMCG</span>
+              <span class="text-xs text-neutral-500">Consumer Goods</span>
+            </div>
+            <h3 class="font-display text-xl font-extrabold text-ecdl-dark">
+              Strategic Key Account Management (KAM) &amp; Negotiation Masterclass
+            </h3>
+            <p class="text-sm text-neutral-600 line-clamp-3">
+              Arming territory sales leaders with annual Joint Business Planning (JBP) and margin defense strategies for modern retail superstores.
+            </p>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-green">21%</span>
+                <span class="text-[11px] text-neutral-600">Modern Trade Growth</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-neutral-100 text-center">
+                <span class="block font-display text-2xl font-extrabold text-ecdl-dark">3.4x</span>
+                <span class="text-[11px] text-neutral-600">Calculated ROI</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-7 py-4 bg-neutral-50 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-medium text-neutral-500">45 Commercial Leads</span>
+            <a href="corporate-case-studies.html#cs-marico" class="text-xs font-bold text-ecdl-green hover:underline">Read Case Study →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 12. TRAINING NEEDS ASSESSMENT (TNA) CALLOUT               -->
+  <!-- ========================================================= -->
+  <section id="tna-callout" class="py-16 lg:py-24 bg-ecdl-dark text-white relative overflow-hidden">
+    <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-ecdl-green/20 blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-8 space-y-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">
+            Interactive Diagnostic Tool
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold leading-tight">
+            Diagnose Your Organisation’s Skills Gaps in 6 Simple Steps.
+          </h2>
+          <p class="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Complete our multi-step corporate Training Needs Assessment (TNA). Our senior advisory council will review your objectives and deliver a custom capability roadmap within 24 business hours.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a
+              href="corporate-tna.html"
+              class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-base shadow-lg transition-all inline-flex items-center gap-2"
+            >
+              <span>Launch Online TNA Tool</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="corporate-proposal.html"
+              class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base transition-colors inline-flex items-center gap-2"
+            >
+              <span>Request Direct Proposal</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-4 backdrop-blur-md">
+          <h4 class="font-display font-bold text-lg text-white">What You’ll Receive:</h4>
+          <ul class="space-y-3 text-sm text-neutral-300">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Benchmark analysis across your functional departments</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Tailored curriculum recommendations and syllabus drafts</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Itemized corporate voucher pricing with volume discounts</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Free 30-minute consultation with a lead faculty advisor</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 13. CORPORATE PORTAL INTRODUCTION                        -->
+  <!-- ========================================================= -->
+  <section id="corporate-portal" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green">
+            <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+            HR &amp; L&amp;D Management System
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            The Open ECDL Corporate Learning Portal
+          </h2>
+          <p class="text-neutral-600 text-base leading-relaxed">
+            Corporate HR directors and training coordinators receive dedicated access to our enterprise management dashboard, eliminating administrative friction:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3.5">
+              <div class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="user-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-sm text-ecdl-dark">Real-Time Attendance &amp; Cohort Telemetry</h4>
+                <p class="text-xs text-neutral-500 mt-0.5">Monitor which employees attend live sessions, complete quizzes, and submit capstone projects.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="receipt" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-sm text-ecdl-dark">Automated Mushak-6.3 VAT Invoices</h4>
+                <p class="text-xs text-neutral-500 mt-0.5">Download official government tax invoices and payment vouchers directly for accounting reconciliation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-sm text-ecdl-dark">Instant Cryptographic Certificate Registry</h4>
+                <p class="text-xs text-neutral-500 mt-0.5">Authenticate completion credentials and export compliance transcripts for corporate audit files.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Modern Dashboard UI Mockup -->
+        <div class="lg:col-span-7">
+          <div class="ecdl-portal-dashboard-mockup rounded-3xl p-6 sm:p-8 text-white relative">
+            <!-- Mock Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                <span class="ml-2 font-mono text-xs text-neutral-400">portal.ecdl.com.bd/enterprise/apex-footwear</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-ecdl-green/20 text-emerald-400 text-xs font-mono font-bold">ACTIVE ENTERPRISE PO</span>
+            </div>
+
+            <!-- Mock KPI Summary -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <span class="text-xs text-neutral-400 block">Enrolled Employees</span>
+                <span class="font-display text-2xl font-extrabold text-white">120</span>
+                <span class="text-[10px] text-emerald-400">100% Attendance</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <span class="text-xs text-neutral-400 block">Active Cohorts</span>
+                <span class="font-display text-2xl font-extrabold text-ecdl-yellow">4 Batches</span>
+                <span class="text-[10px] text-neutral-400">Gazipur Plant</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <span class="text-xs text-neutral-400 block">Mushak-6.3 Status</span>
+                <span class="font-display text-2xl font-extrabold text-emerald-400">Reconciled</span>
+                <span class="text-[10px] text-neutral-400">Tax Rebate Eligible</span>
+              </div>
+            </div>
+
+            <!-- Mock Cohort Table -->
+            <div class="rounded-2xl bg-white/5 border border-white/10 overflow-hidden text-xs">
+              <div class="grid grid-cols-4 p-3 font-bold text-neutral-400 border-b border-white/10 bg-white/5">
+                <span>Employee Name</span>
+                <span>Department</span>
+                <span>Progress</span>
+                <span>Certificate Status</span>
+              </div>
+              <div class="divide-y divide-white/5">
+                <div class="grid grid-cols-4 p-3 items-center">
+                  <span class="font-semibold text-white">Mahfuzur Rahman</span>
+                  <span class="text-neutral-400">Plant Line A</span>
+                  <span class="text-emerald-400 font-bold">100% (Completed)</span>
+                  <span class="text-ecdl-yellow font-mono">ECDL-2026-8492</span>
+                </div>
+                <div class="grid grid-cols-4 p-3 items-center">
+                  <span class="font-semibold text-white">Farhana Yasmin</span>
+                  <span class="text-neutral-400">Quality Assurance</span>
+                  <span class="text-emerald-400 font-bold">95% (Capstone Done)</span>
+                  <span class="text-ecdl-yellow font-mono">ECDL-2026-5104</span>
+                </div>
+                <div class="grid grid-cols-4 p-3 items-center">
+                  <span class="font-semibold text-white">Shahidul Islam</span>
+                  <span class="text-neutral-400">Supply Chain</span>
+                  <span class="text-amber-400 font-bold">90% (Final Quiz)</span>
+                  <span class="text-neutral-500 font-mono">Pending Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 14. CORPORATE FAQS                                        -->
+  <!-- ========================================================= -->
+  <section id="corporate-faqs" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="help-circle" class="w-4 h-4"></i>
+          Procurement &amp; Governance
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-neutral-600 mt-2 text-base">
+          Clear answers regarding customization, tax invoicing, trainer guarantees, and confidentiality.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(1)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">How does Open ECDL tailor corporate training for our specific industry?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-1" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-1" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed corp-faq-answer">
+            We begin with a structured Training Needs Assessment (TNA) involving diagnostic interviews with your leadership and frontline managers. We then integrate your proprietary case studies, internal SOPs, and industry regulatory frameworks into the curriculum.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(2)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">Can ECDL deliver trainings at our corporate premises or factory locations?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-2" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-2" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed hidden corp-faq-answer">
+            Yes. We deliver programs on-site at your corporate offices or manufacturing plants across Bangladesh (Dhaka, Gazipur, Narayanganj, Chittagong, Sylhet). Alternatively, sessions can be hosted at our executive training suites in Pink City, Gulshan, or at selected offsite resort venues.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(3)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">Do corporate training fees include Bangladesh Govt. VAT (Mushak-6.3)?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-3" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-3" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed hidden corp-faq-answer">
+            Yes. All ECDL corporate training fees are 100% transparent and VAT-inclusive. We provide official NBR-compliant Mushak Form 6.3 tax invoices to enable smooth corporate input tax rebates and tax accounting.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(4)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">What is your corporate trainer replacement guarantee?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-4" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-4" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed hidden corp-faq-answer">
+            We guarantee that all corporate programs are led by verified, industry-reputed subject matter experts. In the unlikely event an assigned faculty cannot attend due to an emergency, we provide an equivalent senior consultant approved by your HR team or reschedule at zero cost.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(5)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">How do you measure training effectiveness and return on investment (ROI)?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-5" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-5" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed hidden corp-faq-answer">
+            We utilize Kirkpatrick’s Four-Level Training Evaluation Model: 1. Reaction (immediate feedback), 2. Learning (pre/post-assessment benchmarks), 3. Behavior (30-day workplace application audits), and 4. Results (customized operational metrics tracked with your L&amp;D director).
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+          <button type="button" onclick="toggleCorporateFaq(6)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-display font-extrabold text-base sm:text-lg text-ecdl-dark">How does Open ECDL ensure confidentiality and intellectual property protection?</span>
+            <i data-lucide="chevron-down" id="corp-faq-icon-6" class="w-5 h-5 text-neutral-400 transition-transform corp-faq-icon"></i>
+          </button>
+          <div id="corp-faq-answer-6" class="mt-4 pt-4 border-t border-neutral-100 text-sm text-neutral-600 leading-relaxed hidden corp-faq-answer">
+            We execute a mutual Non-Disclosure Agreement (NDA) prior to the TNA phase. Any company documents, data files, or internal strategies shared during training simulations are strictly confidential and permanently erased post-delivery.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 15. CONSULTATION CTA                                      -->
+  <!-- ========================================================= -->
+  <section id="consultation-cta" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-ecdl-green text-white p-8 sm:p-14 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-ecdl-yellow/20 blur-3xl pointer-events-none"></div>
+
+        <div class="space-y-4 max-w-2xl relative z-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-ecdl-yellow text-xs font-extrabold uppercase">
+            Start Your Capability Transformation
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+            Ready to Build a High-Performing Corporate Workforce?
+          </h2>
+          <p class="text-emerald-100 text-base sm:text-lg">
+            Speak directly with an Open ECDL Senior Learning &amp; Development Advisor today. We will deliver a bespoke proposal tailored to your team size and timeline.
+          </p>
+          <div class="flex items-center gap-6 pt-2 text-xs sm:text-sm">
+            <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-ecdl-yellow"></i> +8801767804408</span>
+            <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow"></i> training@ecdl.com.bd</span>
+          </div>
+        </div>
+
+        <div class="relative z-10 shrink-0 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a
+            href="corporate-proposal.html"
+            class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-base shadow-lg transition-colors text-center"
+          >
+            Request a Proposal
+          </a>
+          <a
+            href="corporate-tna.html"
+            class="px-7 py-4 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-base transition-colors text-center"
+          >
+            Launch Online TNA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 16. GLOBAL FOOTER (#111111)                               -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <!-- Brand & Info Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
+          </p>
+          <div class="space-y-2 pt-2 text-xs text-neutral-300">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+              <span>+8801767804408</span>
+            </a>
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>training@ecdl.com.bd</span>
+            </a>
+            <div class="flex items-start gap-2.5 text-neutral-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Solutions Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Corporate Solutions</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-ecdl-yellow transition-colors">Executive Leadership Academy</a></li>
+            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-ecdl-yellow transition-colors">Labour Law &amp; Factory Compliance</a></li>
+            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-ecdl-yellow transition-colors">Key Account Sales &amp; Negotiation</a></li>
+            <li><a href="corporate-solution-detail.html?slug=digital-technology" class="hover:text-ecdl-yellow transition-colors">Power BI &amp; Business Intelligence</a></li>
+            <li><a href="corporate-solution-detail.html?slug=industry-rmg" class="hover:text-ecdl-yellow transition-colors">RMG Manufacturing Competitiveness</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="corporate-tna.html" class="hover:text-ecdl-yellow transition-colors">Online TNA Tool</a></li>
+            <li><a href="corporate-case-studies.html" class="hover:text-ecdl-yellow transition-colors">Case Studies</a></li>
+            <li><a href="corporate-proposal.html" class="hover:text-ecdl-yellow transition-colors">Request Proposal</a></li>
+            <li><a href="training-calendar.html" class="hover:text-ecdl-yellow transition-colors">Calendar</a></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
+          </ul>
+        </div>
+
+        <!-- Recommend / Sister Concerns Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Sister Concerns</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Socials -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+        <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="#site-header" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
+          <a href="#site-header" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="#site-header" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED MODALS & HELPERS -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- INSTRUCTOR MODAL -->
+  <div id="instructorModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Faculty Application</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Become an ECDL Instructor</h3>
+        </div>
+        <button type="button" onclick="closeModal('instructorModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="handleInstructorSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Full Name *</label>
+          <input type="text" required placeholder="e.g. Barrister / FCA / Lead Consultant" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Email *</label>
+            <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Phone *</label>
+            <input type="tel" required placeholder="+880 17..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Domain Expertise *</label>
+          <select required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm">
+            <option value="">Select Primary Track</option>
+            <option>Compliance & Labour Law 2026</option>
+            <option>Finance, VAT & SD Law 2012</option>
+            <option>Strategic HRM & Organizational Development</option>
+            <option>Commercial Sales & Key Account Management</option>
+            <option>Project Management & PMP Exam Prep</option>
+            <option>Workplace Mental Wellbeing & Leadership</option>
+            <option>Business Analytics & Power BI</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Brief Bio & Teaching Experience</label>
+          <textarea rows="3" placeholder="Summarize your years of industry experience, key credentials, and previous corporate training engagements..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow-md transition-colors">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VERIFY MODAL -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="flex gap-2">
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+          <span>Try sample IDs:</span>
+          <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-8492</button>
+          <button type="button" onclick="setModalCert('ECDL-2026-5104')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-5104</button>
+        </div>
+        <div id="modalCertResult" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-base font-extrabold">Learner &amp; Corporate Sign In</h3>
+        <button type="button" onclick="closeModal('authModal')" class="p-1.5 rounded-lg hover:bg-white/10 text-neutral-400">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handleSignIn(event)" class="p-6 space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Your Full Name</label>
+          <input id="authNameInput" type="text" placeholder="e.g. Mahfuzur Rahman" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Work Email</label>
+          <input id="authEmailInput" type="email" placeholder="mahfuz@company.com" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow transition-colors">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' };
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('hidden'); document.body.style.overflow = ''; } }
+    function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); }
+    function toggleProfileDropdown() { const m = document.getElementById('profileDropdownMenu'); if (m) m.classList.toggle('hidden'); }
+    function renderProfileMenu() {
+      const menu = document.getElementById('profileDropdownMenu');
+      const badge = document.getElementById('profileAvatarBadge');
+      const label = document.getElementById('profileBtnLabel');
+      if (!menu) return;
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = 'Profile';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+      } else {
+        if (badge) badge.textContent = 'IN';
+        if (label) label.textContent = 'Sign In';
+        menu.innerHTML = '<div class="p-2 space-y-2 text-center"><p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p><button type="button" onclick="toggleProfileDropdown(); openModal(\\'authModal\\')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Sign In / Profile</button></div>';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+    function handleLogout() { currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' }; toggleProfileDropdown(); renderProfileMenu(); showToast('You have logged out safely.', 'info'); }
+    function handleSignIn(e) { e.preventDefault(); const n = document.getElementById('authNameInput').value || 'Learner'; const em = document.getElementById('authEmailInput').value || 'learner@ecdl.com.bd'; currentUser = { loggedIn: true, name: n, email: em, initials: (n[0] + (n.split(' ')[1] ? n.split(' ')[1][0] : 'L')).toUpperCase() }; closeModal('authModal'); renderProfileMenu(); showToast('Welcome back, ' + n + '!', 'success'); }
+    function openInstructorModal() { openModal('instructorModal'); }
+    function handleInstructorSubmit(e) { e.preventDefault(); closeModal('instructorModal'); showToast('Thank you! Your instructor application has been submitted to ECDL Academic Council.', 'success'); }
+    function openVerifyModal() { openModal('verifyModal'); }
+    function setModalCert(id) { const inp = document.getElementById('modalCertInput'); if (inp) { inp.value = id; handleModalVerify(); } }
+    const CERTIFICATES = {
+      'ECDL-2026-8492': { name: 'Kazi Tanvir Ahmed', course: 'Bangladesh Labour Act 2006 and Its Amendment up to 2026', issueDate: '18 February 2026', grade: 'Distinction (94%)', status: 'Verified' },
+      'ECDL-2026-5104': { name: 'Farhana Yasmin', course: 'Practical Training on VAT & SD Law 2012', issueDate: '05 January 2026', grade: 'Certified Practitioner', status: 'Verified' },
+      'ECDL-2025-9931': { name: 'Shahidul Islam', course: 'Effective Sales Management: Achieve Big Sales Targets', issueDate: '12 December 2025', grade: 'High Honors', status: 'Verified' }
+    };
+    function handleModalVerify() {
+      const val = (document.getElementById('modalCertInput').value || '').trim().toUpperCase();
+      const res = document.getElementById('modalCertResult');
+      if (!val || !res) return;
+      res.classList.remove('hidden');
+      const rec = CERTIFICATES[val];
+      if (rec) {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
+      } else {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>\"' + val + '\" is not registered. Please double check the ID.</p></div>';
+      }
+    }
+    function showToast(msg, type) {
+      const c = document.getElementById('toastContainer');
+      if (!c) return;
+      const t = document.createElement('div');
+      t.className = 'px-4 py-3 rounded-2xl shadow-xl text-white text-xs font-bold transition-all transform pointer-events-auto flex items-center gap-2 ' + (type === 'success' ? 'bg-ecdl-green' : (type === 'error' ? 'bg-ecdl-orange' : 'bg-ecdl-dark'));
+      t.innerHTML = '<span>' + msg + '</span>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3500);
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderProfileMenu(); if (window.lucide) lucide.createIcons(); });
+  </script>
+
+  <!-- Required Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate.js"></script>
+</body>
+</html>

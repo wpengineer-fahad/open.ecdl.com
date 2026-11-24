@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Attendance Management & Audit — Open ECDL Operations</title>
+  <meta name="description" content="Session rollcall, live attendance logging, status updates, correction ledger, and export controls." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/operations/attendance" />
+
+  <!-- Fonts & CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              dark: '#0F172A',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/operations.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="ops-wrapper">
+
+    <!-- Operations Sidebar -->
+    <aside class="ops-sidebar" id="ops-sidebar" aria-label="Operations Navigation">
+      <div class="ops-sidebar-brand">
+        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-display font-bold text-base tracking-tight">
+          <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center font-black text-white text-sm">EC</div>
+          <div>
+            <span>Open ECDL</span>
+            <div class="text-[10px] text-emerald-400 font-mono tracking-normal uppercase">Operations Hub</div>
+          </div>
+        </a>
+        <button id="ops-sidebar-close" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Close Sidebar">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="px-4 py-3 bg-slate-900/60 border-b border-slate-800 flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-emerald-500 shrink-0 ops-user-avatar" />
+        <div class="min-w-0 flex-1">
+          <div class="text-xs font-bold text-white truncate ops-user-name">Nahid Hasan</div>
+          <div class="text-[11px] text-emerald-400 font-medium truncate ops-user-role-label">Training Manager</div>
+        </div>
+      </div>
+
+      <nav class="ops-sidebar-nav">
+        <div class="ops-sidebar-section-title">Core Operations</div>
+        <a href="/operations/dashboard" class="ops-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Operations Command</span>
+        </a>
+        <a href="/operations/programmes" class="ops-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Master Catalog</span>
+        </a>
+        <a href="/operations/cohorts" class="ops-sidebar-link">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span>Cohorts Scheduling</span>
+        </a>
+        <a href="/operations/sessions" class="ops-sidebar-link">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Session Timetable</span>
+        </a>
+        <a href="/operations/attendance" class="ops-sidebar-link is-active">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+          <span>Daily Attendance</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Faculty & Feedback</div>
+        <a href="/operations/trainers" class="ops-sidebar-link">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Faculty Directory</span>
+        </a>
+        <a href="/operations/evaluations" class="ops-sidebar-link">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Kirkpatrick Evals (L1-3)</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Quality & Governance</div>
+        <a href="/operations/quality" class="ops-sidebar-link">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Quality & CAPA (ISO)</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Finance & Systems</div>
+        <a href="/operations/finance" class="ops-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Batch Margins & Payouts</span>
+        </a>
+        <a href="/operations/settings" class="ops-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Room Allocation & Specs</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="ops-main">
+      <header class="ops-topbar">
+        <div class="flex items-center gap-3">
+          <button id="ops-sidebar-toggle" class="lg:hidden text-slate-600 hover:text-slate-900 p-1" aria-label="Open Sidebar">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+          <div>
+            <h1 class="text-sm font-bold text-slate-900">Session Attendance Roster</h1>
+            <div class="text-[11px] text-slate-500">Live Rollcall Management & Audit Trail Verification</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="ops-role-pill">
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
+            <select class="ops-role-select text-xs font-semibold text-slate-900 bg-transparent cursor-pointer">
+              <option value="manager">Training Manager (Nahid Hasan)</option>
+              <option value="coordinator">Course Coordinator (Afroza Sultana)</option>
+              <option value="trainer">Faculty / Trainer (Advocate Rafiqul Islam)</option>
+              <option value="finance">Finance Officer (A. K. Azad)</option>
+              <option value="quality">QA Manager (S. M. Shafiul Islam)</option>
+              <option value="admin">Platform Admin (System Operations)</option>
+            </select>
+          </div>
+          <button onclick="window.print()" class="px-2.5 py-1.5 border border-slate-300 rounded text-slate-700 font-semibold hover:bg-slate-50 text-xs flex items-center gap-1.5">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print PDF</span>
+          </button>
+          <button id="btn-mark-all-present" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
+            <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
+            <span>Mark All Present</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="ops-content">
+
+        <!-- Cohort & Session Selector Strip -->
+        <div class="bg-white p-4 rounded-lg border border-slate-200 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-4 w-full md:w-auto">
+            <div>
+              <label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Active Cohort</label>
+              <div class="text-xs font-bold text-slate-900 font-mono">
+                BLA-DEC-88 (Bangladesh Labour Act Masterclass)
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Select Scheduled Session</label>
+              <select id="att-session-select" class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded text-xs text-slate-800 font-medium">
+                <option value="SES-88-02">Session 02: Misconduct, Domestic Inquiry Charge Sheets (13 Dec)</option>
+                <option value="SES-88-01">Session 01: Statutory Worker Classification (12 Dec)</option>
+                <option value="SES-88-03">Session 03: Conducting Domestic Inquiries (19 Dec)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-500 font-medium">Classroom:</span>
+            <span class="text-xs font-semibold text-slate-800">Banani Executive Hall 01</span>
+          </div>
+        </div>
+
+        <!-- Attendance Stats Pill Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-6 text-center">
+          <div class="p-3 bg-white border border-slate-200 rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-slate-400">Total Enrolled</div>
+            <div class="text-lg font-black text-slate-900 mt-0.5" id="att-total-count">12</div>
+          </div>
+          <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-emerald-700">Present (P)</div>
+            <div class="text-lg font-black text-emerald-800 mt-0.5" id="att-present-count">11</div>
+          </div>
+          <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-rose-700">Absent (A)</div>
+            <div class="text-lg font-black text-rose-800 mt-0.5" id="att-absent-count">0</div>
+          </div>
+          <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-amber-700">Late (L)</div>
+            <div class="text-lg font-black text-amber-800 mt-0.5" id="att-late-count">1</div>
+          </div>
+          <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-blue-700">Excused (E)</div>
+            <div class="text-lg font-black text-blue-800 mt-0.5" id="att-excused-count">0</div>
+          </div>
+          <div class="p-3 bg-slate-900 text-white rounded-lg">
+            <div class="text-[10px] font-bold uppercase text-emerald-400">Completion Rate</div>
+            <div class="text-lg font-black text-white mt-0.5" id="att-rate-percentage">96.4%</div>
+          </div>
+        </div>
+
+        <!-- Attendance Roster Table -->
+        <div class="ops-card">
+          <div class="ops-card-header">
+            <div class="flex items-center gap-2">
+              <i data-lucide="list-checks" class="w-4 h-4 text-emerald-700"></i>
+              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">Session Rollcall Ledger</h2>
+            </div>
+            <div class="text-[11px] text-slate-500 font-mono">
+              Click P / A / L / E buttons to adjust participant status in real-time
+            </div>
+          </div>
+
+          <div class="ops-table-container">
+            <table class="ops-table" id="attendance-roster-table">
+              <thead>
+                <tr>
+                  <th>Participant Name</th>
+                  <th>Company / Client</th>
+                  <th>Email Address</th>
+                  <th>Check-In Time</th>
+                  <th>Status</th>
+                  <th>Quick Action (P/A/L/E)</th>
+                  <th>Correction History</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-roster-tbody">
+                <!-- Populated dynamically by operations.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Attendance Correction Audit Modal -->
+  <div class="ops-modal-backdrop" id="attendance-audit-modal">
+    <div class="ops-modal">
+      <div class="ops-modal-header">
+        <h3 class="font-bold text-slate-900 text-sm" id="audit-history-modal-title">Attendance Correction Audit Log</h3>
+        <button onclick="OpenECDLOperations.closeModal('attendance-audit-modal')" class="text-slate-400 hover:text-slate-600 p-1">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="ops-modal-body" id="audit-history-modal-body">
+        <!-- History entries rendered here -->
+      </div>
+      <div class="ops-modal-footer">
+        <button type="button" onclick="OpenECDLOperations.closeModal('attendance-audit-modal')" class="px-4 py-1.5 bg-slate-800 text-white rounded font-semibold text-xs">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/operations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

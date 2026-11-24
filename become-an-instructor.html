@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become an Instructor — Open ECDL | Enroute Center for Development</title>
+  <meta name="description" content="Collaborate with Open ECDL as an expert faculty member. Facilitate executive masterclasses, corporate academies, and professional capability programmes in Bangladesh." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/become-an-instructor" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/header-footer.css" />
+  <link rel="stylesheet" href="assets/css/trainers.css" />
+</head>
+<body class="bg-white text-neutral-800 antialiased font-sans" id="become-instructor-page">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">FACULTY RECRUITMENT</span>
+        <span class="text-neutral-300 hidden sm:inline">Partner with Bangladesh’s premier corporate learning institution</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:faculty@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>faculty@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="hover:text-white text-ecdl-yellow font-semibold transition-colors inline-flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+          
+          <!-- Open Training Dropdown -->
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1 hover:text-ecdl-green py-2 transition-colors">
+              <span>Open Training</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-hover:text-ecdl-green transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-72 hidden group-hover:block z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
+                <a href="courses.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="book-open" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">All Courses</div><div class="text-[11px] text-neutral-500 font-normal">Explore 24+ professional programmes</div></div>
+                </a>
+                <a href="training-calendar.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="calendar" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Training Calendar</div><div class="text-[11px] text-neutral-500 font-normal">Chronological schedule &amp; month view</div></div>
+                </a>
+                <a href="category.html?slug=compliance-management" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="layers" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Course Categories</div><div class="text-[11px] text-neutral-500 font-normal">8 specialized professional domains</div></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corporate Training Dropdown -->
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1 hover:text-ecdl-green py-2 transition-colors">
+              <span>Corporate Training</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 group-hover:text-ecdl-green transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-2 w-80 hidden group-hover:block z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
+                <a href="corporate-training.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="building-2" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Enterprise Overview</div><div class="text-[11px] text-neutral-500 font-normal">B2B customised learning &amp; academies</div></div>
+                </a>
+                <a href="corporate-tna.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="clipboard-check" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Training Needs Assessment</div><div class="text-[11px] text-neutral-500 font-normal">6-step capability diagnostic tool</div></div>
+                </a>
+                <a href="corporate-proposal.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="file-text" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Request a Proposal</div><div class="text-[11px] text-neutral-500 font-normal">Tiered pricing &amp; custom quotation</div></div>
+                </a>
+                <a href="corporate-case-studies.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="trophy" class="w-4 h-4"></i></div>
+                  <div><div class="font-bold text-xs">Case Studies</div><div class="text-[11px] text-neutral-500 font-normal">Documented client transformations</div></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="webinars.html" class="hover:text-ecdl-green transition-colors">Webinars &amp; Events</a>
+          <a href="trainers.html" class="hover:text-ecdl-green transition-colors">Trainers &amp; Experts</a>
+          <a href="become-an-instructor.html" class="text-ecdl-green font-bold transition-colors">Become an Instructor</a>
+        </nav>
+
+        <!-- Right Side Header CTA Buttons -->
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="openModal('searchModal')" class="p-2.5 text-neutral-600 hover:text-ecdl-green hover:bg-neutral-100 rounded-xl transition-colors" aria-label="Search courses">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Profile / Sign In Pill -->
+          <div class="relative">
+            <button id="profileBtn" type="button" onclick="toggleProfileDropdown()" class="flex items-center gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-xl border border-neutral-200 hover:border-ecdl-green transition-colors text-xs font-bold text-neutral-700">
+              <span id="profileAvatarBadge" class="w-6 h-6 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center text-[11px] font-black uppercase">IN</span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Sign In</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-neutral-400"></i>
+            </button>
+            <div id="profileDropdownMenu" class="absolute right-0 top-full pt-2 w-56 hidden z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-2 text-xs">
+                <!-- dynamic content injected by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Explore Faculty Button -->
+          <a href="trainers.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ecdl-dark hover:bg-neutral-800 text-white font-bold text-xs transition-colors shadow">
+            <i data-lucide="users" class="w-4 h-4 text-ecdl-yellow"></i>
+            <span>Browse Faculty</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-neutral-600 hover:text-ecdl-green hover:bg-neutral-100 rounded-xl transition-colors" aria-label="Toggle navigation">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-neutral-200 bg-white px-4 py-6 space-y-4">
+      <div class="space-y-2 text-sm font-bold text-neutral-800">
+        <a href="index.html" class="block py-2 text-neutral-700">Home</a>
+        <a href="courses.html" class="block py-2 text-neutral-700">Open Training Catalogue</a>
+        <a href="training-calendar.html" class="block py-2 text-neutral-700">Training Calendar</a>
+        <a href="corporate-training.html" class="block py-2 text-neutral-700">Corporate Training Hub</a>
+        <a href="trainers.html" class="block py-2 text-neutral-700">Faculty Directory</a>
+        <a href="become-an-instructor.html" class="block py-2 text-ecdl-green">Become an Instructor</a>
+        <a href="corporate-case-studies.html" class="block py-2 text-neutral-700">Corporate Case Studies</a>
+      </div>
+      <div class="pt-4 border-t border-neutral-100 flex flex-col gap-2.5">
+        <a href="#instructor-application-form-section" class="w-full text-center py-2.5 rounded-xl bg-ecdl-green text-white font-bold text-sm shadow">
+          Submit Application
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. BREADCRUMB NAVIGATION                                  -->
+  <!-- ========================================================= -->
+  <nav class="bg-neutral-50 border-b border-neutral-200 py-3 text-xs text-neutral-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2">
+      <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
+      <a href="trainers.html" class="hover:text-ecdl-green transition-colors">Trainers &amp; Experts</a>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
+      <span class="text-ecdl-dark font-bold">Become an Instructor</span>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 1: INTRODUCTION HERO                              -->
+  <!-- ========================================================= -->
+  <section id="instructor-intro" class="bg-gradient-to-b from-neutral-900 to-ecdl-dark text-white pt-16 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(16,139,68,0.25),transparent_60%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-ecdl-yellow border border-white/10 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>Faculty Collaboration</span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+          Teach at Open ECDL.<br />Shape the Next Generation of Industry Leaders.
+        </h1>
+
+        <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
+          Collaborate with Bangladesh’s premier corporate learning institution to design, co-brand, and facilitate accredited masterclasses for leading commercial enterprises and ambitious professionals.
+        </p>
+
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a href="#instructor-application-form-section" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-sm transition-all shadow-lg hover:shadow-xl">
+            <span>Apply to Join Faculty</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="#why-collaborate" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-colors border border-white/20">
+            <span>Why Teach With Us</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 2: WHY COLLABORATE WITH ECDL                      -->
+  <!-- ========================================================= -->
+  <section id="why-collaborate" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">The Faculty Partnership</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark mt-2 tracking-tight">
+          Why Partner with Open ECDL?
+        </h2>
+        <p class="text-neutral-600 mt-3 text-sm sm:text-base leading-relaxed">
+          We handle business development, corporate procurement, institutional marketing, classroom operations, and certification so you can focus entirely on delivering masterclass-grade instruction.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center font-bold">
+            <i data-lucide="building-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Institutional Prestige</h3>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+            Position your personal brand alongside Bangladesh’s recognized corporate training authority, trusted by over 120+ top enterprise conglomerates.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center font-bold">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Enterprise Corporate Reach</h3>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+            Gain direct access to C-suite, HR directors, and department heads across banking, FMCG, pharmaceuticals, and manufacturing sectors.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
+            <i data-lucide="file-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Full Instructional Support</h3>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+            Our instructional designers support you with slide deck polishing, sanitized company case materials, participant workbooks, and tech setups.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold">
+            <i data-lucide="banknote" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Fair &amp; Transparent Honorarium</h3>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+            Receive industry-leading corporate honorariums and predictable revenue-sharing models on open cohorts and long-term in-house academies.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 3: WHAT WE LOOK FOR                               -->
+  <!-- ========================================================= -->
+  <section id="what-we-look-for" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-5">
+          <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">Faculty Standards</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            What We Look for in an Open ECDL Facilitator
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            We do not engage theoretical lecturers. Our learners are working professionals, department managers, and senior directors who demand practical, tested operational solutions.
+          </p>
+          <div class="p-5 rounded-2xl bg-white border border-neutral-200 text-xs text-neutral-600 space-y-2">
+            <p class="font-bold text-ecdl-dark">Statutory &amp; Academic Verification:</p>
+            <p>Every applicant undergoes background vetting by the ECDL Academic Council. We do not accept unverified designations or honorary credentials.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-2 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-ecdl-green text-white flex items-center justify-center text-xs font-bold">01</div>
+            <h4 class="font-bold text-ecdl-dark text-base">10+ Years Field Leadership</h4>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Demonstrated career track record leading teams, resolving industrial challenges, or practicing before legal and tax tribunals.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-2 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-ecdl-green text-white flex items-center justify-center text-xs font-bold">02</div>
+            <h4 class="font-bold text-ecdl-dark text-base">Case-Based Pedagogy</h4>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Ability to structure learning around real operational dilemmas, role-plays, financial models, and actionable checklists.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-2 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-ecdl-green text-white flex items-center justify-center text-xs font-bold">03</div>
+            <h4 class="font-bold text-ecdl-dark text-base">Executive Presence</h4>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              High emotional intelligence and confident vocal gravitas capable of steering lively debates with senior corporate executives.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-2 shadow-sm">
+            <div class="w-8 h-8 rounded-lg bg-ecdl-green text-white flex items-center justify-center text-xs font-bold">04</div>
+            <h4 class="font-bold text-ecdl-dark text-base">Continuous Learning Mindset</h4>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Commitment to constantly updating case materials to reflect the latest Bangladesh statutory gazettes, tax circulars, and market trends.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 4: HIGH-DEMAND AREAS OF EXPERTISE                 -->
+  <!-- ========================================================= -->
+  <section id="areas-of-expertise" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">Priority Domains</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark mt-2 tracking-tight">
+          Current High-Demand Subject Areas
+        </h2>
+        <p class="text-neutral-600 mt-3 text-sm sm:text-base leading-relaxed">
+          We are actively expanding faculty cohorts in the following strategic operational fields:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="scale" class="w-4 h-4"></i>
+            <span>Labour Law &amp; Inquiries</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Industrial Compliance</h4>
+          <p class="text-xs text-neutral-500">2026 amendments, domestic inquiries, factory safety tribunals.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>Taxation &amp; VAT</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Direct &amp; Indirect Tax</h4>
+          <p class="text-xs text-neutral-500">Income Tax Act 2023, Mushak-6.3, AIT/TDS withholding audits.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+            <span>Financial Modeling</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Corporate Finance</h4>
+          <p class="text-xs text-neutral-500">DCF valuation, working capital optimization, capex modeling.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>Data Analytics &amp; AI</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Business Intelligence</h4>
+          <p class="text-xs text-neutral-500">Microsoft Power BI, DAX modeling, enterprise AI productivity.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="users" class="w-4 h-4"></i>
+            <span>Strategic HR</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Human Resource Leadership</h4>
+          <p class="text-xs text-neutral-500">KPI/OKR cascades, Hay job grading, total rewards architecture.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+            <span>B2B Sales &amp; KAM</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Commercial Excellence</h4>
+          <p class="text-xs text-neutral-500">Key account management, consultative closing, margin defense.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="factory" class="w-4 h-4"></i>
+            <span>Lean Manufacturing</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Operations &amp; Six Sigma</h4>
+          <p class="text-xs text-neutral-500">SMV reduction, line balancing, buyer Sedex/BSCI compliance.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <div class="flex items-center gap-2 text-ecdl-green font-bold text-xs uppercase">
+            <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+            <span>Occupational Wellbeing</span>
+          </div>
+          <h4 class="font-bold text-ecdl-dark text-sm">Workplace Mental Health</h4>
+          <p class="text-xs text-neutral-500">Burnout mitigation, psychological safety, ergonomic audits.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 5: THE 4-STAGE FACULTY ONBOARDING PROCESS         -->
+  <!-- ========================================================= -->
+  <section id="application-process" class="py-16 lg:py-24 bg-neutral-50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">Streamlined Onboarding</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark mt-2 tracking-tight">
+          The 4-Stage Faculty Onboarding Process
+        </h2>
+        <p class="text-neutral-600 mt-3 text-sm sm:text-base leading-relaxed">
+          From application submission to your first masterclass cohort:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 relative shadow-sm">
+          <span class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green font-black text-xs flex items-center justify-center">
+            01
+          </span>
+          <h4 class="font-display font-extrabold text-base text-ecdl-dark">Profile Review</h4>
+          <p class="text-xs text-neutral-600 leading-relaxed">
+            Our Academic Council assesses your professional dossier, verified credentials, and field track record within 3 business days.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 relative shadow-sm">
+          <span class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green font-black text-xs flex items-center justify-center">
+            02
+          </span>
+          <h4 class="font-display font-extrabold text-base text-ecdl-dark">Dialogue &amp; Demo</h4>
+          <p class="text-xs text-neutral-600 leading-relaxed">
+            A 45-minute consultative interview and short sample instructional presentation exploring your pedagogical methodology.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 relative shadow-sm">
+          <span class="w-8 h-8 rounded-lg bg-ecdl-greenSoft text-ecdl-green font-black text-xs flex items-center justify-center">
+            03
+          </span>
+          <h4 class="font-display font-extrabold text-base text-ecdl-dark">Curriculum Co-Design</h4>
+          <p class="text-xs text-neutral-600 leading-relaxed">
+            Collaborate with our instructional designers to polish slide materials, workbooks, case studies, and pre/post assessments.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 relative shadow-sm">
+          <span class="w-8 h-8 rounded-lg bg-ecdl-green text-white font-black text-xs flex items-center justify-center">
+            04
+          </span>
+          <h4 class="font-display font-extrabold text-base text-ecdl-dark">Masterclass Launch</h4>
+          <p class="text-xs text-neutral-600 leading-relaxed">
+            Your course is scheduled across the open training calendar and promoted directly to over 500+ corporate enterprise clients.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 6: INSTRUCTOR APPLICATION FORM                   -->
+  <!-- ========================================================= -->
+  <section id="instructor-application-form-section" class="py-16 lg:py-24 bg-white border-b border-neutral-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">Faculty Application</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark mt-2 tracking-tight">
+          Submit Your Faculty Expression of Interest
+        </h2>
+        <p class="text-neutral-600 mt-3 text-sm leading-relaxed">
+          Fill in your professional background below. Our Faculty Advisory Council reviews all applications with strict confidentiality.
+        </p>
+      </div>
+
+      <!-- Application Form Container -->
+      <div id="instructor-form-container" class="bg-neutral-50 border border-neutral-200 rounded-3xl p-6 sm:p-10 shadow-card">
+        <form id="become-instructor-form" onsubmit="handleInstructorApplication(event)" class="space-y-6">
+          
+          <!-- Personal / Contact Details -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-black uppercase tracking-wider text-neutral-400">1. Personal &amp; Contact Details</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Full Legal Name *</label>
+                <input id="inst-name" type="text" placeholder="e.g. Barrister Mahmudur Rahman" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" required />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Corporate Email Address *</label>
+                <input id="inst-email" type="email" placeholder="mahmudur@company.com" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" required />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Mobile / WhatsApp Number *</label>
+                <input id="inst-phone" type="tel" placeholder="+88017XXXXXXXX" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" required />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">LinkedIn Profile or Website URL</label>
+                <input id="inst-linkedin" type="url" placeholder="https://linkedin.com/in/username" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Background -->
+          <div class="space-y-4 pt-4 border-t border-neutral-200">
+            <h4 class="text-xs font-black uppercase tracking-wider text-neutral-400">2. Professional Background &amp; Domain</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Current Professional Title / Designation *</label>
+                <input id="inst-designation" type="text" placeholder="e.g. Senior Partner / Head of Taxation" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" required />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Current Organisation / Firm *</label>
+                <input id="inst-org" type="text" placeholder="e.g. Supreme Court Chambers / Apex Footwear" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white" required />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Primary Discipline / Category *</label>
+                <select id="inst-category" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white font-medium text-neutral-700" required>
+                  <option value="">Select Primary Domain...</option>
+                  <option value="Compliance Management">Compliance Management &amp; Labour Law</option>
+                  <option value="Finance & Accounts">Finance &amp; Accounts / Taxation</option>
+                  <option value="Business & Management">Business &amp; Executive Leadership</option>
+                  <option value="Human Resource">Human Resource &amp; People Strategy</option>
+                  <option value="Marketing & Sales">Marketing &amp; Consultative Sales</option>
+                  <option value="Skill Development">Skill Development &amp; Power BI</option>
+                  <option value="Workplace Wellbeing">Workplace Wellbeing &amp; Ergonomics</option>
+                  <option value="Personal Development Skills">Personal Development &amp; Communication</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-700 mb-1">Total Years of Professional Experience *</label>
+                <select id="inst-experience" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white font-medium text-neutral-700" required>
+                  <option value="10-15 Years">10 — 15 Years Field Leadership</option>
+                  <option value="16-20 Years">16 — 20 Years Senior Practice</option>
+                  <option value="20+ Years">20+ Years Distinguished Practice</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferred Delivery Modes -->
+          <div class="space-y-3 pt-4 border-t border-neutral-200">
+            <h4 class="text-xs font-black uppercase tracking-wider text-neutral-400">3. Preferred Delivery Modes *</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="flex items-center gap-2 p-3.5 rounded-xl border border-neutral-200 bg-white cursor-pointer hover:border-ecdl-green">
+                <input type="checkbox" name="inst-mode" value="Classroom In-Person" class="rounded text-ecdl-green focus:ring-ecdl-green" checked />
+                <span class="text-xs font-bold text-neutral-800">Classroom (Banani Campus)</span>
+              </label>
+              <label class="flex items-center gap-2 p-3.5 rounded-xl border border-neutral-200 bg-white cursor-pointer hover:border-ecdl-green">
+                <input type="checkbox" name="inst-mode" value="Live Online Interactive" class="rounded text-ecdl-green focus:ring-ecdl-green" checked />
+                <span class="text-xs font-bold text-neutral-800">Live Online Interactive</span>
+              </label>
+              <label class="flex items-center gap-2 p-3.5 rounded-xl border border-neutral-200 bg-white cursor-pointer hover:border-ecdl-green">
+                <input type="checkbox" name="inst-mode" value="In-House Corporate Academy" class="rounded text-ecdl-green focus:ring-ecdl-green" checked />
+                <span class="text-xs font-bold text-neutral-800">In-House Corporate</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- File Upload Demonstration Zone -->
+          <div class="space-y-3 pt-4 border-t border-neutral-200">
+            <h4 class="text-xs font-black uppercase tracking-wider text-neutral-400">4. CV / Professional Profile Attachment (Demonstration)</h4>
+            
+            <div id="instructor-cv-dropzone" class="dropzone-container p-8 rounded-2xl bg-white text-center cursor-pointer">
+              <i data-lucide="upload-cloud" class="w-10 h-10 text-neutral-400 mx-auto mb-2"></i>
+              <p class="text-sm font-bold text-neutral-800">Click to browse or drag and drop your Executive CV</p>
+              <p class="text-xs text-neutral-500 mt-1">PDF, DOCX, or RTF up to 15MB (UI Demonstration)</p>
+              <input id="instructor-cv-input" type="file" class="hidden" accept=".pdf,.doc,.docx" />
+            </div>
+
+            <!-- File preview tag -->
+            <div id="instructor-file-preview" class="hidden flex items-center justify-between p-3 rounded-xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs">
+              <div class="flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-ecdl-green"></i>
+                <span id="instructor-file-name" class="font-bold text-ecdl-dark">resume.pdf</span>
+              </div>
+              <button type="button" onclick="removeAttachedFile()" class="text-neutral-500 hover:text-ecdl-orange p-1">
+                <i data-lucide="x" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Statement of Interest -->
+          <div class="space-y-2 pt-4 border-t border-neutral-200">
+            <label class="block text-xs font-bold text-neutral-700">Statement of Training Interest &amp; Proposed Course Topics</label>
+            <textarea id="inst-message" rows="4" placeholder="Briefly describe the specific masterclasses or executive workshops you would like to facilitate with Open ECDL, including your pedagogical philosophy..." class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white"></textarea>
+          </div>
+
+          <!-- Consent & Submit -->
+          <div class="pt-4 space-y-4">
+            <label class="flex items-start gap-2.5 text-xs text-neutral-600 cursor-pointer">
+              <input type="checkbox" id="inst-consent" class="mt-0.5 rounded text-ecdl-green focus:ring-ecdl-green" checked required />
+              <span>I confirm that all stated professional designations, degrees, and corporate positions are authentic and verifiable by the ECDL Academic Council.</span>
+            </label>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-base transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Faculty Expression of Interest</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Simulated Success Container -->
+      <div id="instructor-success-container" class="hidden bg-white border border-ecdl-green rounded-3xl p-8 sm:p-12 text-center shadow-card space-y-6">
+        <div class="w-16 h-16 rounded-full bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mx-auto">
+          <i data-lucide="check-circle" class="w-10 h-10"></i>
+        </div>
+
+        <div class="space-y-2 max-w-lg mx-auto">
+          <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-greenSoft text-ecdl-green">
+            Application Logged Successfully
+          </span>
+          <h3 class="font-display text-2xl sm:text-3xl font-black text-ecdl-dark">
+            Thank You for Applying!
+          </h3>
+          <p id="instructor-confirm-name" class="font-bold text-sm text-neutral-700"></p>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed pt-1">
+            Your expression of interest has been delivered to the ECDL Faculty Council. Our Academic Director will review your dossier and contact you within 3 business days for a consultative dialogue.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 max-w-xs mx-auto">
+          <span class="text-[11px] font-bold text-neutral-500 block uppercase">Application Reference Code:</span>
+          <strong id="instructor-confirm-ref" class="font-mono text-base font-extrabold text-ecdl-green">ECDL-FAC-2026-000000</strong>
+        </div>
+
+        <div class="pt-2">
+          <a href="trainers.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ecdl-dark text-white font-bold text-xs hover:bg-neutral-800 transition-colors">
+            <span>Explore Current Faculty Directory</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 7: INSTRUCTOR FAQS ACCORDION                     -->
+  <!-- ========================================================= -->
+  <section id="instructor-faqs" class="py-16 lg:py-24 bg-neutral-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-black uppercase tracking-wider text-ecdl-green">Common Questions</span>
+        <h2 class="font-display text-3xl font-extrabold text-ecdl-dark mt-2 tracking-tight">
+          Frequently Asked Questions by Prospective Faculty
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-neutral-200 rounded-2xl overflow-hidden bg-white">
+          <button type="button" onclick="toggleInstructorFaq(1)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-ecdl-dark hover:text-ecdl-green transition-colors text-sm sm:text-base">
+            <span>What is the schedule commitment required for an Open ECDL faculty member?</span>
+            <i id="inst-faq-icon-1" data-lucide="chevron-down" class="inst-faq-icon w-5 h-5 text-neutral-400 transition-transform"></i>
+          </button>
+          <div id="inst-faq-ans-1" class="inst-faq-ans px-5 pb-5 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 hidden">
+            We understand that our faculty are active C-level executives, senior advocates, and consultants. Masterclasses are scheduled with high flexibility, typically over weekend workshops (Fridays and Saturdays) or evening live-online cohorts. Corporate in-house academies are scheduled months in advance based on your mutually agreed availability.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-neutral-200 rounded-2xl overflow-hidden bg-white">
+          <button type="button" onclick="toggleInstructorFaq(2)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-ecdl-dark hover:text-ecdl-green transition-colors text-sm sm:text-base">
+            <span>How is instructor compensation and honorarium structured?</span>
+            <i id="inst-faq-icon-2" data-lucide="chevron-down" class="inst-faq-icon w-5 h-5 text-neutral-400 transition-transform"></i>
+          </button>
+          <div id="inst-faq-ans-2" class="inst-faq-ans px-5 pb-5 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 hidden">
+            Open ECDL provides industry-leading compensation benchmarked against top regional business schools. Faculty may choose between fixed session honorariums or revenue-sharing models on open enrolment masterclasses. All payments are processed with full statutory tax compliance and formal withholding certificates.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-neutral-200 rounded-2xl overflow-hidden bg-white">
+          <button type="button" onclick="toggleInstructorFaq(3)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-ecdl-dark hover:text-ecdl-green transition-colors text-sm sm:text-base">
+            <span>Who owns the course intellectual property (IP)?</span>
+            <i id="inst-faq-icon-3" data-lucide="chevron-down" class="inst-faq-icon w-5 h-5 text-neutral-400 transition-transform"></i>
+          </button>
+          <div id="inst-faq-ans-3" class="inst-faq-ans px-5 pb-5 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 hidden">
+            You retain full intellectual ownership of your proprietary casework, frameworks, and insights. Open ECDL receives a non-exclusive license to market and deliver the curriculum under co-branded Open ECDL credentials.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-neutral-200 rounded-2xl overflow-hidden bg-white">
+          <button type="button" onclick="toggleInstructorFaq(4)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-ecdl-dark hover:text-ecdl-green transition-colors text-sm sm:text-base">
+            <span>Can I also facilitate customized in-house corporate training tracks?</span>
+            <i id="inst-faq-icon-4" data-lucide="chevron-down" class="inst-faq-icon w-5 h-5 text-neutral-400 transition-transform"></i>
+          </button>
+          <div id="inst-faq-ans-4" class="inst-faq-ans px-5 pb-5 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 hidden">
+            Yes! In fact, more than 60% of our enterprise engagements are customized in-house academies. When an enterprise requests training in your domain, our corporate sales advisory connects directly with you to scope the diagnostic TNA and co-deliver the program.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. SITE-WIDE FOOTER                                       -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3" aria-label="ECDL Home">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development Ltd.</span>
+            </div>
+          </a>
+          <p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+            Bangladesh’s leading corporate learning and capability development institution. Empowering professionals and organizations with practical, certified, high-impact training since 2017.
+          </p>
+        </div>
+
+        <!-- Faculty Links -->
+        <div class="space-y-3">
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Faculty &amp; Experts</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="trainers.html" class="hover:text-ecdl-green transition-colors">Faculty Directory</a></li>
+            <li><a href="become-an-instructor.html" class="text-ecdl-green font-bold">Become an Instructor</a></li>
+            <li><a href="trainers.html?category=compliance-management" class="hover:text-ecdl-green transition-colors">Legal &amp; Compliance Experts</a></li>
+            <li><a href="trainers.html?category=finance-accounts" class="hover:text-ecdl-green transition-colors">Tax &amp; Finance Faculty</a></li>
+            <li><a href="trainers.html?category=human-resource" class="hover:text-ecdl-green transition-colors">HR Strategy Specialists</a></li>
+          </ul>
+        </div>
+
+        <!-- Corporate Solutions -->
+        <div class="space-y-3">
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Corporate Solutions</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="corporate-training.html" class="hover:text-ecdl-green transition-colors">Enterprise Training Hub</a></li>
+            <li><a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors">Training Needs Assessment</a></li>
+            <li><a href="corporate-proposal.html" class="hover:text-ecdl-green transition-colors">Request a Proposal</a></li>
+            <li><a href="corporate-case-studies.html" class="hover:text-ecdl-green transition-colors">Client Case Studies</a></li>
+            <li><a href="courses.html" class="hover:text-ecdl-green transition-colors">Course Catalogue</a></li>
+            <li><a href="training-calendar.html" class="hover:text-ecdl-green transition-colors">Training Calendar</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Headquarters -->
+        <div class="space-y-3">
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Headquarters</h4>
+          <div class="text-xs text-neutral-400 space-y-2">
+            <p class="leading-relaxed">House 18, Road 24, Block K, Banani, Dhaka-1213, Bangladesh</p>
+            <p>Direct: <a href="tel:+8801767804408" class="text-white hover:text-ecdl-yellow font-semibold">+8801767804408</a></p>
+            <p>Faculty Desk: <a href="mailto:faculty@ecdl.com.bd" class="text-white hover:text-ecdl-yellow font-semibold">faculty@ecdl.com.bd</a></p>
+            <div class="pt-2">
+              <button type="button" onclick="openVerifyModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold text-ecdl-yellow transition-colors">
+                <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                <span>Verify Issued Certificate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Strip -->
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
+        <div class="flex items-center gap-6 text-neutral-400">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Faculty Honorarium Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Verify Certificate Modal -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative space-y-5">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-ecdl-dark">Verify ECDL Certificate</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-1 text-neutral-400 hover:text-neutral-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p class="text-xs text-neutral-600 leading-relaxed">
+        Enter the Certificate Identification Number printed at the bottom of the issued credential.
+      </p>
+      <div class="space-y-2">
+        <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="w-full px-4 py-3 rounded-xl border border-neutral-300 font-mono text-sm focus:border-ecdl-green focus:outline-none uppercase" />
+        <button type="button" onclick="handleModalVerify()" class="w-full py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-sm transition-colors shadow">
+          Verify Credential Authenticity
+        </button>
+      </div>
+      <div id="modalCertResult" class="hidden"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Common Header/Modal Scripts -->
+  <script>
+    let currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' };
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('hidden'); document.body.style.overflow = ''; } }
+    function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); }
+    function toggleProfileDropdown() { const m = document.getElementById('profileDropdownMenu'); if (m) m.classList.toggle('hidden'); }
+    function renderProfileMenu() {
+      const menu = document.getElementById('profileDropdownMenu');
+      const badge = document.getElementById('profileAvatarBadge');
+      const label = document.getElementById('profileBtnLabel');
+      if (!menu) return;
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = 'Profile';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+      } else {
+        if (badge) badge.textContent = 'IN';
+        if (label) label.textContent = 'Sign In';
+        menu.innerHTML = '<div class="p-2 space-y-2 text-center"><p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p><button type="button" onclick="toggleProfileDropdown(); openModal(\'authModal\')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Sign In / Profile</button></div>';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+    function openVerifyModal() { openModal('verifyModal'); }
+    function setModalCert(id) { const inp = document.getElementById('modalCertInput'); if (inp) { inp.value = id; handleModalVerify(); } }
+    const CERTIFICATES = {
+      'ECDL-2026-8492': { name: 'Kazi Tanvir Ahmed', course: 'Bangladesh Labour Act 2006 and Its Amendment up to 2026', issueDate: '18 February 2026', grade: 'Distinction (94%)', status: 'Verified' }
+    };
+    function handleModalVerify() {
+      const val = (document.getElementById('modalCertInput').value || '').trim().toUpperCase();
+      const res = document.getElementById('modalCertResult');
+      if (!val || !res) return;
+      res.classList.remove('hidden');
+      const rec = CERTIFICATES[val];
+      if (rec) {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p></div>';
+      } else {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>\"' + val + '\" is not registered.</p></div>';
+      }
+    }
+    function showToast(msg, type) {
+      const c = document.getElementById('toastContainer');
+      if (!c) return;
+      const t = document.createElement('div');
+      t.className = 'px-4 py-3 rounded-2xl shadow-xl text-white text-xs font-bold transition-all transform pointer-events-auto flex items-center gap-2 ' + (type === 'success' ? 'bg-ecdl-green' : (type === 'error' ? 'bg-ecdl-orange' : 'bg-ecdl-dark'));
+      t.innerHTML = '<span>' + msg + '</span>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3500);
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderProfileMenu(); if (window.lucide) lucide.createIcons(); });
+  </script>
+
+  <!-- Required Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/trainers.js"></script>
+</body>
+</html>

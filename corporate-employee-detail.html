@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Employee Profile &amp; Learning Transcript — Open ECDL</title>
+  <meta name="description" content="Detailed corporate employee learning profile, active course progression, verified executive certificates, and attendance logs." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate/employees/EMP-UNI-1001" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111827',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/corporate-portal.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="corp-portal-wrapper">
+
+    <!-- ========================================================= -->
+    <!-- 1. CORPORATE SIDEBAR                                      -->
+    <!-- ========================================================= -->
+    <aside class="corp-portal-sidebar" id="corp-sidebar" aria-label="Corporate Navigation">
+      <div class="corp-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="min-w-0">
+            <span class="block font-display text-sm font-extrabold tracking-tight text-white truncate" id="corp-brand-name">Unilever Bangladesh</span>
+            <span class="block text-[10px] text-neutral-400 truncate" id="corp-brand-industry">FMCG &amp; Consumer Goods</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="corp-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="corp-sidebar-nav">
+        <span class="corp-sidebar-section-title">Core Management</span>
+        <a href="/corporate/dashboard" class="corp-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="/corporate/company" class="corp-sidebar-link">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+          <span>Company Profile</span>
+        </a>
+        <a href="/corporate/departments" class="corp-sidebar-link">
+          <i data-lucide="network" class="w-4 h-4"></i>
+          <span>Departments</span>
+        </a>
+        <a href="/corporate/employees" class="corp-sidebar-link is-active">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Employees</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Programmes &amp; Enrolment</span>
+        <a href="/corporate/nominations" class="corp-sidebar-link">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Nominations</span>
+        </a>
+        <a href="/corporate/training-requests" class="corp-sidebar-link">
+          <i data-lucide="file-plus-2" class="w-4 h-4"></i>
+          <span>Training Requests</span>
+        </a>
+        <a href="/courses" class="corp-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Training Catalog</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Finance &amp; Auditing</span>
+        <a href="/corporate/reports" class="corp-sidebar-link">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Reports &amp; Analytics</span>
+        </a>
+        <a href="/corporate/invoices" class="corp-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Invoices &amp; Tax</span>
+        </a>
+        <a href="/corporate/settings" class="corp-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="corp-sidebar-footer">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Syeda Farah Naz" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
+          <div class="min-w-0 flex-1">
+            <div class="font-bold text-xs text-white truncate" id="corp-user-name">Syeda Farah Naz</div>
+            <div class="text-[10px] text-neutral-400 truncate" id="corp-user-role-label">Head of People &amp; L&amp;D</div>
+          </div>
+          <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- 2. MAIN APPLICATION CONTENT                               -->
+    <!-- ========================================================= -->
+    <div class="corp-portal-main">
+
+      <!-- Topbar -->
+      <header class="corp-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100" id="corp-sidebar-toggle">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2 text-xs font-semibold text-neutral-400">
+            <a href="/corporate/dashboard" class="hover:text-neutral-700">Corporate Portal</a>
+            <span>/</span>
+            <a href="/corporate/employees" class="hover:text-neutral-700">Employees</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold" id="emp-detail-id">EMP-UNI-1001</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Tenant Switcher -->
+          <div class="flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Tenant:</span>
+            <select id="corp-tenant-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="unilever-bd">Unilever Bangladesh Ltd.</option>
+              <option value="apex-footwear">Apex Footwear Limited</option>
+            </select>
+          </div>
+
+          <!-- Role Switcher -->
+          <div class="hidden sm:flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Role:</span>
+            <select id="corp-role-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="admin">Corporate Account Admin</option>
+              <option value="lnd">Corporate HR/L&amp;D Manager</option>
+              <option value="supervisor">Corporate Supervisor</option>
+            </select>
+          </div>
+
+          <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
+            <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+            <span class="hidden md:inline">Switch Portal</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Workspace Area -->
+      <main class="corp-portal-workspace">
+
+        <!-- Navigation Breadcrumb Action -->
+        <div class="mb-6">
+          <a href="/corporate/employees" class="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-500 hover:text-emerald-700">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Return to Employee Directory</span>
+          </a>
+        </div>
+
+        <!-- Employee Hero Card -->
+        <div class="bg-white rounded-xl border border-neutral-200 p-6 md:p-8 shadow-sm mb-8 flex flex-col md:flex-row items-center md:items-start gap-6">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Avatar" id="emp-detail-avatar" class="w-24 h-24 rounded-full object-cover ring-4 ring-emerald-500/20" />
+          
+          <div class="flex-1 text-center md:text-left">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-1">
+              <h1 class="font-display text-2xl font-black text-neutral-900" id="emp-detail-name">Naveed Karim</h1>
+              <span class="corp-badge corp-badge-green font-mono">Active Full-Time</span>
+            </div>
+            
+            <p class="text-sm font-semibold text-neutral-600 mb-4" id="emp-detail-designation">Commercial Sales Director</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-neutral-100 text-xs text-neutral-600">
+              <div>
+                <span class="block text-[10px] text-neutral-400 uppercase font-bold">Department</span>
+                <span class="font-bold text-neutral-900" id="emp-detail-dept">Customer Development</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-neutral-400 uppercase font-bold">Reporting Manager</span>
+                <span class="font-bold text-neutral-900" id="emp-detail-manager">Managing Director</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-neutral-400 uppercase font-bold">Joined Organization</span>
+                <span class="font-bold text-neutral-900" id="emp-detail-joined">15 Jan 2021</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-neutral-400 uppercase font-bold">Attendance Rate</span>
+                <span class="font-bold text-emerald-700" id="emp-detail-attendance">98.5%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex md:flex-col items-center gap-2">
+            <button type="button" onclick="OpenECDLCorporate.openDirectNomination('EMP-UNI-1001')" class="px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs shadow-sm transition whitespace-nowrap">
+              Nominate for Cohort
+            </button>
+          </div>
+        </div>
+
+        <!-- 2-Column Content Grid: Active Course & Training History -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Left Column: Active Progress & Enrolment Specs (4 Cols) -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Active Course Progress -->
+            <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
+              <h3 class="font-display font-bold text-base text-neutral-900 mb-4">Current Active Masterclass</h3>
+              <div id="emp-detail-active-course-card">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+
+            <!-- Learning Metrics Summary -->
+            <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm space-y-4">
+              <h3 class="font-display font-bold text-base text-neutral-900">Career Competency Stats</h3>
+              <div class="flex items-center justify-between pb-3 border-b border-neutral-100 text-xs">
+                <span class="text-neutral-500">Programmes Enrolled</span>
+                <span class="font-bold text-neutral-900 text-sm" id="emp-detail-enrolled-count">5</span>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-neutral-100 text-xs">
+                <span class="text-neutral-500">Programmes Completed</span>
+                <span class="font-bold text-neutral-900 text-sm" id="emp-detail-completed-count">2</span>
+              </div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="text-neutral-500">Verifiable Certificates</span>
+                <span class="font-bold text-emerald-700">2 Verified Credentials</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Training History Transcript (8 Cols) -->
+          <div class="lg:col-span-8 bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
+            <div class="flex items-center justify-between pb-4 border-b border-neutral-100 mb-4">
+              <div>
+                <h3 class="font-display font-bold text-base text-neutral-900">Training History Transcript</h3>
+                <p class="text-xs text-neutral-500 mt-0.5">Audited records of completed masterclass hours, grades, and certificates</p>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="corp-table">
+                <thead>
+                  <tr>
+                    <th>Programme Title</th>
+                    <th>Completed Date</th>
+                    <th>Hours</th>
+                    <th>Grade / Distinction</th>
+                  </tr>
+                </thead>
+                <tbody id="emp-detail-history-tbody">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate-portal.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

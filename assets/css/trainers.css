@@ -1,0 +1,69 @@
+/**
+ * Open ECDL — Phase 07: Trainers & Faculty Stylesheet
+ * Enroute Center for Development Ltd.
+ */
+
+/* Trainer Card Photography & Aspect Ratio */
+.trainer-card-portrait {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.trainer-avatar-lg {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Experience Timeline vertical connector */
+.timeline-stem {
+  position: relative;
+}
+
+.timeline-stem::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background-color: #E4E8E3;
+}
+
+.timeline-item:last-child .timeline-stem::before {
+  display: none;
+}
+
+/* File Upload Drag-and-Drop Zone */
+.dropzone-container {
+  border: 2px dashed #D1D5DB;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropzone-container:hover,
+.dropzone-container.is-dragover {
+  border-color: #108B44;
+  background-color: #EDF7F1;
+}
+
+/* Badge pills */
+.badge-category-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+/* Custom scrollbar for horizontal category filter pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

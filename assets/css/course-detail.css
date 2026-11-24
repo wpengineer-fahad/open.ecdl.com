@@ -1,0 +1,903 @@
+/**
+ * Open ECDL — Phase 04: Course Detail Experience Stylesheet
+ * Enroute Center for Development Ltd.
+ * 
+ * Implements:
+ * - Conversion-focused Two-Column Layout (Main Content + Sticky Registration Panel)
+ * - Page Header & Metadata Badges
+ * - 11 Main Content Sections (Overview, Outcomes, Prerequisites, Modules, Methodology, etc.)
+ * - Interactive Module Accordions & Lesson Preview Tags
+ * - Interactive Cohort Selector (Classroom, Zoom, On-Demand)
+ * - Mobile Sticky Bottom Action Bar & Safe Padding
+ */
+
+/* ==========================================================================
+   1. COURSE DETAIL HEADER
+   ========================================================================== */
+
+.ecdl-course-header {
+  background-color: var(--ecdl-color-surface);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 4rem);
+  position: relative;
+}
+
+.ecdl-course-header__kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-course-header__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2rem, 3.8vw, 3.125rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--ecdl-color-black);
+  margin: 0 0 var(--space-sm) 0;
+  max-width: 960px;
+}
+
+.ecdl-course-header__lead {
+  font-size: clamp(1rem, 1.25vw, 1.1875rem);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 860px;
+  margin: 0 0 var(--space-lg) 0;
+}
+
+/* Key Metadata Row */
+.ecdl-course-header__meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md) var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-meta-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ecdl-meta-badge-item__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  color: var(--ecdl-color-green);
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+}
+
+.ecdl-meta-badge-item__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-meta-badge-item__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-meta-badge-item__val {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+}
+
+/* ==========================================================================
+   2. TWO-COLUMN LAYOUT (MAIN CONTENT + STICKY REGISTRATION PANEL)
+   ========================================================================== */
+
+.ecdl-course-layout {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--ecdl-color-white);
+}
+
+.ecdl-course-grid-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-course-grid-two-col {
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  .ecdl-course-grid-two-col {
+    grid-template-columns: 1fr 420px;
+    gap: var(--space-3xl);
+  }
+}
+
+/* Main Content Area */
+.ecdl-course-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  min-width: 0;
+}
+
+/* Section Headings inside Course Detail */
+.ecdl-detail-section {
+  position: relative;
+  padding-top: var(--space-xs);
+}
+
+.ecdl-detail-section__header {
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-detail-section__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ecdl-color-black);
+  margin: 4px 0 0 0;
+}
+
+/* ==========================================================================
+   3. SECTION 1 & 2: OVERVIEW & OUTCOMES
+   ========================================================================== */
+
+.ecdl-overview-prose {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+.ecdl-overview-prose p {
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-overview-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* What You Will Learn 2-Col Grid */
+.ecdl-outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .ecdl-outcomes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) var(--space-lg);
+  }
+}
+
+.ecdl-outcome-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ecdl-outcome-item__check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.6875rem;
+  font-weight: 800;
+}
+
+.ecdl-outcome-item__text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ecdl-color-black);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. SECTION 3 & 4: WHO SHOULD ATTEND & PREREQUISITES
+   ========================================================================== */
+
+.ecdl-attend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ecdl-attend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-attend-item__bullet {
+  color: var(--ecdl-color-green);
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+.ecdl-prereq-card {
+  background-color: #FAFBF9;
+  border-left: 4px solid var(--ecdl-color-black);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   5. SECTION 5: INTERACTIVE MODULE ACCORDIONS
+   ========================================================================== */
+
+.ecdl-curriculum-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.ecdl-module-card {
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  background-color: var(--ecdl-color-white);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.ecdl-module-card.is-open {
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-module-card__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--ecdl-color-surface);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.ecdl-module-card__header:hover {
+  background-color: #EFF2EE;
+}
+
+.ecdl-module-card.is-open .ecdl-module-card__header {
+  background-color: #EAF5EE;
+}
+
+.ecdl-module-card__title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ecdl-module-card__num {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-module-card__title {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-module-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-module-card__chevron {
+  width: 18px;
+  height: 18px;
+  color: var(--ecdl-color-black);
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-module-card.is-open .ecdl-module-card__chevron {
+  transform: rotate(180deg);
+}
+
+.ecdl-module-card__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.ecdl-module-card.is-open .ecdl-module-card__body {
+  max-height: 800px;
+}
+
+.ecdl-module-card__inner {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ecdl-module-activity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ecdl-color-green);
+  background-color: #EAF5EE;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+/* Lesson Items */
+.ecdl-lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecdl-lesson-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  font-size: 0.8125rem;
+}
+
+.ecdl-lesson-item__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ecdl-color-black);
+  font-weight: 500;
+}
+
+.ecdl-lesson-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-preview-btn {
+  background: none;
+  border: 1px solid var(--ecdl-color-green);
+  color: var(--ecdl-color-green);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-preview-btn:hover {
+  background-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+}
+
+/* ==========================================================================
+   6. SECTION 6 & 7: METHODOLOGY & SCHEDULE DETAILS
+   ========================================================================== */
+
+.ecdl-methodology-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-methodology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ecdl-methodology-card {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ecdl-methodology-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ecdl-methodology-card__desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Schedule Venue Callout */
+.ecdl-venue-card {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* ==========================================================================
+   7. SECTION 8: TRAINER PROFILE (EXPANDED)
+   ========================================================================== */
+
+.ecdl-trainer-profile-card {
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  background-color: var(--ecdl-color-white);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-trainer-profile-card {
+    flex-direction: row;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+}
+
+.ecdl-trainer-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ecdl-trainer-avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ecdl-color-surface);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-trainer-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ecdl-trainer-profile-name {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ecdl-color-black);
+  margin: 0;
+}
+
+.ecdl-trainer-profile-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-2xs);
+}
+
+.ecdl-trainer-bio {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-trainer-credentials {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xs) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ecdl-trainer-cred-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   8. SECTION 9: ASSESSMENT & CERTIFICATION
+   ========================================================================== */
+
+.ecdl-cert-box {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .ecdl-cert-box {
+    grid-template-columns: 1fr 220px;
+  }
+}
+
+.ecdl-cert-box__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ecdl-color-yellow);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-cert-box__desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-on-dark-muted);
+}
+
+.ecdl-cert-badge-frame {
+  border: 2px dashed rgba(244, 219, 15, 0.4);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ecdl-cert-badge-frame__qr {
+  font-size: 0.75rem;
+  color: var(--ecdl-color-yellow);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   9. RIGHT-SIDE STICKY REGISTRATION PANEL (DESKTOP)
+   ========================================================================== */
+
+.ecdl-registration-panel {
+  position: sticky;
+  top: 96px;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-reg-panel__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-reg-panel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ecdl-reg-panel__body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Investment Header */
+.ecdl-reg-fee-block {
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-reg-fee-block__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.ecdl-reg-fee-block__price {
+  font-family: var(--font-family-heading);
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--ecdl-color-black);
+  line-height: 1.15;
+}
+
+.ecdl-reg-fee-block__tax {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+/* Cohort Selector */
+.ecdl-cohort-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecdl-cohort-selector__title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ecdl-color-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ecdl-cohort-card {
+  border: 1.5px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  padding: var(--space-sm);
+  background-color: var(--ecdl-color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ecdl-cohort-card:hover {
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-cohort-card.is-selected {
+  border-color: var(--ecdl-color-green);
+  background-color: #F7FAF8;
+  box-shadow: 0 0 0 1px var(--ecdl-color-green);
+}
+
+.ecdl-cohort-card input[type="radio"] {
+  margin-top: 3px;
+  accent-color: var(--ecdl-color-green);
+  cursor: pointer;
+}
+
+.ecdl-cohort-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.ecdl-cohort-card__date {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-cohort-card__meta {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-cohort-card__status {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-cohort-card__status.is-few {
+  color: #D97706;
+}
+
+/* Self-Paced Cohort Notice */
+.ecdl-self-paced-notice {
+  background-color: #F4FAF6;
+  border: 1px solid rgba(16, 139, 68, 0.2);
+  border-radius: var(--radius-xs);
+  padding: var(--space-sm);
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Registration Action Buttons */
+.ecdl-reg-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ecdl-group-savings-banner {
+  background-color: #FFFDF0;
+  border: 1px dashed #F4DB0F;
+  border-radius: var(--radius-xs);
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  color: var(--ecdl-color-black);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Trust list */
+.ecdl-trust-list {
+  list-style: none;
+  padding: var(--space-sm) 0 0 0;
+  margin: 0;
+  border-top: 1px solid var(--ecdl-color-borders);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-trust-list__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   10. MOBILE STICKY BOTTOM ACTION BAR
+   ========================================================================== */
+
+.ecdl-mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  body.has-course-sticky-cta {
+    padding-bottom: 76px;
+  }
+
+  .ecdl-mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--ecdl-color-white);
+    border-top: 1px solid var(--ecdl-color-borders);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+    padding: 12px var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    z-index: calc(var(--z-header) + 10);
+  }
+
+  .ecdl-mobile-bottom-bar__info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .ecdl-mobile-bottom-bar__price {
+    font-family: var(--font-family-heading);
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--ecdl-color-black);
+    line-height: 1.1;
+  }
+
+  .ecdl-mobile-bottom-bar__meta {
+    font-size: 0.6875rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+/* ==========================================================================
+   OPEN ECDL MODERN HOMEPAGE PARITY STYLES (Single Course Detail)
+   ========================================================================== */
+.ecdl-course-sticky-panel {
+  border-radius: 28px !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06) !important;
+  background-color: #FFFFFF !important;
+}
+
+.ecdl-module-accordion {
+  border-radius: 20px !important;
+  border: 1px solid #E5E7EB !important;
+  background-color: #FFFFFF !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 6px -1px rgba(17, 17, 17, 0.03) !important;
+}
+
+.ecdl-module-header {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.ecdl-trainer-profile-card {
+  border-radius: 24px !important;
+  border: 1px solid #E5E7EB !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.05) !important;
+}
+
+.ecdl-outcome-card, .ecdl-methodology-card {
+  border-radius: 18px !important;
+  border: 1px solid #E5E7EB !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 2px 6px -1px rgba(17, 17, 17, 0.03) !important;
+}

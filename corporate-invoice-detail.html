@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mushak 6.3 Tax Invoice Specification — Open ECDL</title>
+  <meta name="description" content="Official NBR statutory Mushak Form 6.3 tax invoice, line items breakdown, and bank payment clearance verification." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate/invoices/detail" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111827',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/corporate-portal.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="corp-portal-wrapper">
+
+    <!-- 1. CORPORATE SIDEBAR -->
+    <aside class="corp-portal-sidebar" id="corp-sidebar" aria-label="Corporate Navigation">
+      <div class="corp-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="min-w-0">
+            <span class="block font-display text-sm font-extrabold tracking-tight text-white truncate" id="corp-brand-name">Unilever Bangladesh</span>
+            <span class="block text-[10px] text-neutral-400 truncate" id="corp-brand-industry">FMCG &amp; Consumer Goods</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="corp-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="corp-sidebar-nav">
+        <span class="corp-sidebar-section-title">Core Management</span>
+        <a href="/corporate/dashboard" class="corp-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="/corporate/company" class="corp-sidebar-link">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+          <span>Company Profile</span>
+        </a>
+        <a href="/corporate/departments" class="corp-sidebar-link">
+          <i data-lucide="network" class="w-4 h-4"></i>
+          <span>Departments</span>
+        </a>
+        <a href="/corporate/employees" class="corp-sidebar-link">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Employees</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Programmes &amp; Commercial</span>
+        <a href="/corporate/nominations" class="corp-sidebar-link">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Nominations</span>
+        </a>
+        <a href="/corporate/requests" class="corp-sidebar-link">
+          <i data-lucide="file-plus-2" class="w-4 h-4"></i>
+          <span>Training Requests</span>
+        </a>
+        <a href="/corporate/proposals" class="corp-sidebar-link">
+          <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          <span>Proposals</span>
+        </a>
+        <a href="/corporate/programmes" class="corp-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Training Catalog</span>
+        </a>
+
+        <span class="corp-sidebar-section-title">Finance &amp; Reporting</span>
+        <a href="/corporate/reports" class="corp-sidebar-link">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Reports &amp; Analytics</span>
+        </a>
+        <a href="/corporate/invoices" class="corp-sidebar-link is-active">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Invoices &amp; Tax</span>
+        </a>
+        <a href="/corporate/settings" class="corp-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="corp-sidebar-footer">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Syeda Farah Naz" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
+          <div class="min-w-0 flex-1">
+            <div class="font-bold text-xs text-white truncate" id="corp-user-name">Syeda Farah Naz</div>
+            <div class="text-[10px] text-neutral-400 truncate" id="corp-user-role-label">Head of People &amp; L&amp;D</div>
+          </div>
+          <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. MAIN CONTENT -->
+    <div class="corp-portal-main">
+
+      <!-- Topbar -->
+      <header class="corp-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100" id="corp-sidebar-toggle">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2 text-xs font-semibold text-neutral-400">
+            <a href="/corporate/dashboard" class="hover:text-neutral-700">Corporate Portal</a>
+            <span>/</span>
+            <a href="/corporate/invoices" class="hover:text-neutral-700">Invoices</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold" id="topbar-invoice-id">Invoice Detail</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Tenant Switcher -->
+          <div class="flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Tenant:</span>
+            <select id="corp-tenant-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="unilever-bd">Unilever Bangladesh Ltd.</option>
+              <option value="apex-footwear">Apex Footwear Limited</option>
+            </select>
+          </div>
+
+          <!-- Role Switcher -->
+          <div class="hidden sm:flex items-center gap-1.5 bg-neutral-100 px-2.5 py-1 rounded-lg border border-neutral-200">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-500">Role:</span>
+            <select id="corp-role-select" class="bg-transparent text-xs font-bold text-neutral-900 focus:outline-none cursor-pointer">
+              <option value="admin">Corporate Account Admin</option>
+              <option value="lnd">Corporate HR/L&amp;D Manager</option>
+              <option value="supervisor">Corporate Supervisor</option>
+            </select>
+          </div>
+
+          <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
+            <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+            <span class="hidden md:inline">Switch Portal</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Workspace Area -->
+      <main class="corp-portal-workspace">
+
+        <!-- Action / Breadcrumb Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6 corp-no-print">
+          <div class="flex items-center gap-2">
+            <a href="/corporate/invoices" class="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-600 hover:text-neutral-900 px-3 py-1.5 rounded-lg border border-neutral-200 bg-white">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+              <span>Back to Invoices</span>
+            </a>
+            <span class="text-neutral-300">|</span>
+            <span class="font-mono text-xs font-bold text-neutral-500" id="inv-view-id">INV-2026-1042</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex items-center gap-2.5 corp-action-bar">
+            <button type="button" onclick="window.print()" class="px-3.5 py-2 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 font-bold text-xs flex items-center gap-1.5 shadow-sm transition">
+              <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+              <span>Print Mushak 6.3</span>
+            </button>
+            <button type="button" id="btn-submit-payment-evidence" onclick="OpenECDLCorporate.openEvidenceModal()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition">
+              <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+              <span>Submit Offline Payment Evidence</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Notification Toast / Verification Notice -->
+        <div id="invoice-verification-alert" class="hidden mb-6 p-4 rounded-xl border border-blue-200 bg-blue-50 text-blue-900 text-xs">
+          <div class="flex items-start gap-3">
+            <i data-lucide="clock" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5"></i>
+            <div>
+              <strong class="font-bold block text-sm mb-0.5">Offline Payment Evidence Submitted — Under Bank Verification</strong>
+              <p class="leading-relaxed" id="invoice-verification-text">
+                Payment slip has been received. In accordance with corporate governance rules, evidence submission initiates internal treasury reconciliation against bank statements and does not convert the invoice directly to Paid. Status will update upon bank clearance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- STATUTORY MUSHAK 6.3 TAX INVOICE (NBR BANGLADESH)         -->
+        <!-- ========================================================= -->
+        <div class="mushak-tax-invoice mb-8" id="mushak-invoice-container">
+          
+          <!-- Government Header -->
+          <div class="mushak-header-box">
+            <div class="text-[11px] font-semibold text-neutral-600 uppercase tracking-wider">Government of the People's Republic of Bangladesh</div>
+            <div class="text-xs font-bold text-neutral-800">National Board of Revenue (NBR)</div>
+            <div class="mushak-sub-header">
+              TAX INVOICE / কর চালানপত্র [MUSHAK FORM 6.3 / মূসক-৬.৩]
+            </div>
+            <div class="text-[10px] text-neutral-500 mt-1">[See Rule 40, Sub-rule (1), Clause (Ga) of VAT &amp; SD Act, 2012]</div>
+          </div>
+
+          <!-- Entity & Challan Details Grid -->
+          <div class="mushak-grid">
+            <div>
+              <div class="font-bold text-xs text-neutral-900 mb-1">Registered Supplier / Seller Information:</div>
+              <div class="font-bold text-sm text-neutral-900">Enroute Center for Development Ltd. (ECDL)</div>
+              <div class="text-neutral-600 text-xs mt-0.5">House 25, Road 11, Block F, Banani, Dhaka-1213</div>
+              <div class="text-neutral-700 text-xs mt-1">
+                <strong>Supplier BIN:</strong> <span class="font-mono">001948271-0101</span><br />
+                <strong>Supplier TIN:</strong> <span class="font-mono">518290192841</span>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <div class="font-bold text-xs text-neutral-900 mb-1">Challan &amp; Invoice Reference:</div>
+              <div class="text-xs font-bold text-neutral-900">Challan No: <span class="font-mono text-emerald-800 font-extrabold text-sm" id="mushak-challan-no">Mushak-6.3/2026/1042</span></div>
+              <div class="text-xs text-neutral-600 mt-0.5">Invoice Ref: <span class="font-mono" id="mushak-inv-no">INV-2026-1042</span></div>
+              <div class="text-xs text-neutral-600 mt-0.5">Date of Issue: <span class="font-bold text-neutral-800" id="mushak-issue-date">15 Nov 2026</span></div>
+              <div class="text-xs text-neutral-600 mt-0.5">Payment Due Date: <span class="font-bold text-neutral-800" id="mushak-due-date">30 Nov 2026</span></div>
+              <div class="mt-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold border" id="mushak-status-pill">
+                  <!-- Injected -->
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buyer Information -->
+          <div class="p-3 bg-neutral-50 border border-neutral-300 rounded mb-4 text-xs">
+            <div class="font-bold text-neutral-900 mb-1">Registered Buyer / Corporate Client Information:</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div>
+                <strong>Legal Name:</strong> <span id="mushak-buyer-name">Unilever Bangladesh Limited</span><br />
+                <strong>Address:</strong> <span id="mushak-buyer-address">ZN Tower, Plot 02, Road 08, Gulshan-1, Dhaka-1212</span>
+              </div>
+              <div>
+                <strong>Buyer BIN:</strong> <span class="font-mono font-bold" id="mushak-buyer-bin">000214891-0101</span><br />
+                <strong>Buyer TIN:</strong> <span class="font-mono font-bold" id="mushak-buyer-tin">418920193421</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Itemized Table -->
+          <table class="mushak-table">
+            <thead>
+              <tr>
+                <th class="w-10 text-center">SL</th>
+                <th>Description of Educational &amp; Corporate Training Services</th>
+                <th class="w-16 text-center">Seats</th>
+                <th class="w-28 text-right">Unit Rate (BDT)</th>
+                <th class="w-28 text-right">Taxable Value (BDT)</th>
+                <th class="w-24 text-right">VAT Rate (%)</th>
+                <th class="w-28 text-right">VAT (BDT)</th>
+                <th class="w-32 text-right">Total Amount (BDT)</th>
+              </tr>
+            </thead>
+            <tbody id="mushak-items-tbody">
+              <!-- Line items injected -->
+            </tbody>
+            <tfoot class="bg-neutral-50 font-bold border-t-2 border-neutral-900 text-xs">
+              <tr>
+                <td colspan="4" class="text-right py-2 px-3">Subtotal (Net Taxable Value):</td>
+                <td class="text-right py-2 px-3 font-mono" id="mushak-subtotal-val">BDT 150,000</td>
+                <td class="text-center py-2 px-3">15%</td>
+                <td class="text-right py-2 px-3 font-mono" id="mushak-vat-val">BDT 22,500</td>
+                <td class="text-right py-2 px-3 font-mono font-extrabold text-neutral-900" id="mushak-total-val">BDT 172,500</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- Amount In Words -->
+          <div class="text-xs text-neutral-700 italic mb-6 p-2 bg-neutral-50 border border-neutral-200">
+            <strong>In Words:</strong> <span id="mushak-in-words">One Hundred Seventy-Two Thousand Five Hundred Bangladeshi Taka Only.</span>
+          </div>
+
+          <!-- Signatures Footer -->
+          <div class="mushak-footer-sign">
+            <div class="mushak-sign-box">
+              Prepared by Accounts Officer<br />
+              <span class="text-[10px] text-neutral-400">ECDL Billing &amp; Taxation</span>
+            </div>
+            <div class="mushak-sign-box">
+              Verified by Head of Finance &amp; Tax<br />
+              <span class="text-[10px] text-neutral-400">Enroute Center for Development Ltd.</span>
+            </div>
+            <div class="mushak-sign-box">
+              Authorized Officer Signature &amp; Seal<br />
+              <span class="text-[10px] text-neutral-400">Digital Mushak 6.3 Verification</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PAYMENT RECORDS & AUDIT HISTORY                           -->
+        <!-- ========================================================= -->
+        <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm mb-10 corp-no-print">
+          <h2 class="font-display font-bold text-base text-neutral-900 mb-4 flex items-center gap-2">
+            <i data-lucide="history" class="w-4 h-4 text-neutral-500"></i>
+            <span>Payment History &amp; Banking Reconciliation</span>
+          </h2>
+          <div class="border border-neutral-200 rounded-lg overflow-hidden">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-neutral-100 text-neutral-700 font-bold border-b border-neutral-200">
+                <tr>
+                  <th class="py-2.5 px-4">Date</th>
+                  <th class="py-2.5 px-4">Method &amp; Transaction Reference</th>
+                  <th class="py-2.5 px-4">Originating Bank</th>
+                  <th class="py-2.5 px-4 text-right">Amount (BDT)</th>
+                  <th class="py-2.5 px-4 text-center">Clearance Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-200 text-neutral-700" id="invoice-payments-tbody">
+                <!-- Payment records injected -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- OFFLINE PAYMENT EVIDENCE SUBMISSION MODAL -->
+  <div id="payment-evidence-modal" class="corp-modal-backdrop hidden corp-no-print">
+    <div class="corp-modal-content">
+      <div class="corp-modal-header">
+        <h3 class="font-display font-bold text-base text-neutral-900">Submit Offline Payment Evidence</h3>
+        <button type="button" onclick="document.getElementById('payment-evidence-modal').classList.add('hidden')" class="text-neutral-400 hover:text-neutral-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="event.preventDefault(); OpenECDLCorporate.confirmEvidenceSubmission();">
+        <div class="corp-modal-body space-y-4">
+          <div class="p-3.5 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-900">
+            <strong>Internal Governance Note:</strong> Submitting payment deposit slips initiates banking verification and moves the invoice to <em>Pending Verification</em>. The invoice will only reflect <em>Paid</em> once treasury reconciles credit in ECDL bank account statements.
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Depositing Bank Name *</label>
+            <input type="text" id="ev-bank-name" required placeholder="e.g. Standard Chartered Bank / Eastern Bank PLC" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Branch Name</label>
+              <input type="text" id="ev-branch-name" placeholder="e.g. Gulshan Branch, Dhaka" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Date of Transfer / Deposit *</label>
+              <input type="date" id="ev-deposit-date" required value="2026-11-24" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Transaction Ref / Cheque No *</label>
+              <input type="text" id="ev-ref-number" required placeholder="e.g. BEFTN-982104 / CHQ-44810" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-neutral-700 mb-1">Amount Deposited (BDT) *</label>
+              <input type="text" id="ev-amount" required placeholder="e.g. BDT 166,750" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Deposit Slip / Receipt File (PDF/JPG) *</label>
+            <input type="file" id="ev-file" class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium bg-white" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 mb-1">Additional Verification Notes</label>
+            <textarea id="ev-notes" rows="2" placeholder="e.g. Corporate bank transfer completed via BEFTN from Unilever SCB corporate treasury account." class="w-full px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-medium"></textarea>
+          </div>
+        </div>
+        <div class="corp-modal-footer">
+          <button type="button" onclick="document.getElementById('payment-evidence-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-neutral-200 text-neutral-600 text-xs font-bold hover:bg-neutral-100">Cancel</button>
+          <button type="submit" class="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold">Submit Evidence for Verification</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate-portal.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

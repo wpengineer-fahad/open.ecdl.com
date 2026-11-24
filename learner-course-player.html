@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS Course Player — Open ECDL Learner Portal</title>
+  <meta name="description" content="Executive learning interface, curriculum player, lecture notes, and practical statutory workbooks." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/learner.css" />
+</head>
+<body class="bg-neutral-900 text-neutral-100 antialiased font-sans flex flex-col h-screen overflow-hidden">
+
+  <!-- ========================================================= -->
+  <!-- 1. COMPACT LMS PLAYER TOP HEADER                          -->
+  <!-- ========================================================= -->
+  <header class="h-16 bg-neutral-950 border-b border-neutral-800 px-4 sm:px-6 flex items-center justify-between shrink-0 z-20">
+    <div class="flex items-center gap-4 min-w-0">
+      <a href="/learner/my-courses" class="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 transition-colors" title="Back to My Courses">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      </a>
+
+      <div class="min-w-0">
+        <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold block">Tutor LMS Pro Interactive Player</span>
+        <h1 class="font-display font-bold text-sm sm:text-base text-white truncate max-w-md sm:max-w-xl">
+          Bangladesh Labour Act 2006 and Its Amendment up to 2026
+        </h1>
+      </div>
+    </div>
+
+    <!-- Progress & Verification Indicators -->
+    <div class="flex items-center gap-6">
+      <div class="hidden md:flex flex-col items-end">
+        <div class="flex items-center gap-2 text-xs font-bold text-neutral-300">
+          <span id="player-progress-ratio">7 of 12 Lessons</span>
+          <span>•</span>
+          <span id="player-progress-percent" class="text-emerald-400">65% Complete</span>
+        </div>
+        <div class="w-44 h-2 bg-neutral-800 rounded-full overflow-hidden mt-1">
+          <div class="h-full bg-ecdl-green rounded-full transition-all duration-300" id="player-progress-bar" style="width: 65%;"></div>
+        </div>
+      </div>
+
+      <a href="/learner/dashboard" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-800 text-xs font-semibold text-neutral-300">
+        <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i>
+        <span>Dashboard</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 2. SPLIT SCREEN: MAIN PLAYER & CURRICULUM ACCORDION       -->
+  <!-- ========================================================= -->
+  <div class="ecdl-lms-container" id="course-player-container">
+
+    <!-- LEFT / MAIN CONTENT AREA -->
+    <main class="ecdl-lms-main">
+
+      <!-- 16:9 Video Player Frame -->
+      <div class="ecdl-lms-video-frame relative" id="player-video-frame">
+        <video 
+          id="player-video-tag"
+          class="w-full h-full object-contain"
+          poster="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80"
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          controls
+        ></video>
+
+        <!-- Simulated Big Play Button Overlay -->
+        <div id="player-video-overlay" class="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer transition-opacity pointer-events-none">
+          <div class="w-16 h-16 rounded-full bg-ecdl-green text-white flex items-center justify-center shadow-2xl pl-1">
+            <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson Metadata Header -->
+      <div class="p-6 bg-neutral-900 border-b border-neutral-800">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-950 text-emerald-400 border border-emerald-800 mb-1" id="player-module-badge">
+              Module 03: Domestic Inquiries &amp; Disciplinary Proceedings
+            </span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight" id="player-lesson-title">
+              3.2 Drafting Charge-Sheets &amp; Show-Cause Notices under Section 24
+            </h2>
+            <div class="text-xs text-neutral-400 mt-1">
+              Faculty: <strong>Advocate Rafiqul Islam</strong> • Advocate, Supreme Court of Bangladesh
+            </div>
+          </div>
+
+          <!-- Mark Complete Reactive Button -->
+          <div>
+            <button type="button" id="player-mark-complete-btn" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-bold border border-neutral-700 transition-all">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Mark as Complete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabbed Lesson Workspace: Notes, Downloads, Discussion -->
+      <div class="p-6 bg-neutral-900 flex-1">
+
+        <!-- Tabs Header -->
+        <div class="flex items-center gap-6 border-b border-neutral-800 pb-3 mb-6 text-xs">
+          <button type="button" class="text-ecdl-green font-bold border-b-2 border-ecdl-green pb-3 -mb-3 transition-colors" data-player-tab="notes">
+            Lesson Notes &amp; Legal Framework
+          </button>
+          <button type="button" class="text-neutral-400 hover:text-white pb-3 -mb-3 transition-colors" data-player-tab="resources">
+            Downloads &amp; Model Formats (3)
+          </button>
+          <button type="button" class="text-neutral-400 hover:text-white pb-3 -mb-3 transition-colors" data-player-tab="qa">
+            Faculty Discussion &amp; Q&amp;A
+          </button>
+        </div>
+
+        <!-- Tab 1: Lesson Notes -->
+        <div id="tab-pane-notes" class="player-tab-pane text-neutral-300 text-sm leading-relaxed space-y-4 max-w-3xl">
+          <div class="p-4 rounded-xl bg-neutral-950 border border-neutral-800">
+            <h3 class="font-display font-bold text-base text-white mb-2">Section 24 Statutory Procedural Safeguards</h3>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Under Section 24(1)(b) of the Bangladesh Labour Act 2006 (incorporating all gazette amendments up to 2026), no order of dismissal under Section 23 shall be made unless the accused worker is served with a written charge-sheet clearly specifying the alleged misconduct and is granted a statutory minimum of <strong>7 (seven) calendar days</strong> to submit an official explanation.
+            </p>
+          </div>
+
+          <h4 class="font-bold text-white text-sm">Key Elements of an Irreproachable Charge-Sheet:</h4>
+          <ul class="list-disc pl-5 space-y-1.5 text-xs text-neutral-400">
+            <li><strong>Precision of Allegation:</strong> State explicit dates, times, and witnessed actions. Ambiguous terms like "disruptive conduct" will be struck down by the Labour Appellate Tribunal.</li>
+            <li><strong>Statutory Sub-Clause:</strong> Explicitly cross-reference the alleged misconduct to Section 23(4) (e.g. habitual absence, fraud, or damage to employer property).</li>
+            <li><strong>Service of Notice:</strong> Under Bangladesh Labour Rules 2015 Form-19, delivery must be provable via recipient signature or registered postal acknowledgement.</li>
+          </ul>
+        </div>
+
+        <!-- Tab 2: Resources & Downloads -->
+        <div id="tab-pane-resources" class="player-tab-pane text-xs space-y-3 max-w-2xl" style="display:none;">
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-950 border border-neutral-800">
+            <div class="flex items-center gap-3">
+              <i data-lucide="file-text" class="w-5 h-5 text-emerald-400"></i>
+              <div>
+                <div class="font-bold text-white">ECDL_Model_Charge_Sheet_Format_Sec24.pdf</div>
+                <div class="text-[11px] text-neutral-500">245 KB • Supreme Court Approved Template</div>
+              </div>
+            </div>
+            <button type="button" onclick="alert('Downloading sample template: ECDL_Model_Charge_Sheet_Format_Sec24.pdf')" class="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs flex items-center gap-1">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download</span>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-950 border border-neutral-800">
+            <div class="flex items-center gap-3">
+              <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-400"></i>
+              <div>
+                <div class="font-bold text-white">Domestic_Inquiry_Procedural_Checklist_2026.xlsx</div>
+                <div class="text-[11px] text-neutral-500">110 KB • 60-day Inquiry Statutory Timeline Calculator</div>
+              </div>
+            </div>
+            <button type="button" onclick="alert('Downloading: Domestic_Inquiry_Procedural_Checklist_2026.xlsx')" class="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs flex items-center gap-1">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 3: Q&A -->
+        <div id="tab-pane-qa" class="player-tab-pane text-xs space-y-4 max-w-2xl" style="display:none;">
+          <div class="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-2">
+            <div class="flex items-center justify-between text-neutral-400">
+              <span class="font-bold text-white">Tanvir Chowdhury, Head of HR</span>
+              <span class="text-[10px]">Asked 2 days ago</span>
+            </div>
+            <p class="text-neutral-300">
+              Can the 7-day reply period be shortened if both management and the CBA agree in writing?
+            </p>
+            <div class="p-3 bg-neutral-900 rounded-lg text-emerald-300 border-l-2 border-ecdl-green">
+              <strong>Advocate Rafiqul Islam (Faculty):</strong> No. The 7-day minimum in Section 24 is a statutory substantive right of the worker; bilateral agreements cannot contract out of mandatory statutory protections.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Player Footer Navigation -->
+      <div class="p-4 bg-neutral-950 border-t border-neutral-800 flex items-center justify-between text-xs">
+        <button type="button" onclick="OpenECDLLearner.selectLesson('les-3-1')" class="inline-flex items-center gap-1.5 text-neutral-400 hover:text-white font-bold">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: 3.1 Misconduct Categories</span>
+        </button>
+
+        <a href="/learner/assessments" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 font-bold hover:bg-emerald-900">
+          <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
+          <span>Take Module 03 Quiz</span>
+        </a>
+
+        <button type="button" onclick="OpenECDLLearner.selectLesson('les-3-3')" class="inline-flex items-center gap-1.5 text-neutral-400 hover:text-white font-bold">
+          <span>Next: 3.3 Conducting Fair Inquiries</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </main>
+
+    <!-- RIGHT / CURRICULUM PANE -->
+    <aside class="ecdl-lms-curriculum-pane" aria-label="Course Curriculum">
+      <div class="p-4 bg-neutral-950 border-b border-neutral-800 flex items-center justify-between">
+        <div class="font-bold text-xs text-white uppercase tracking-wider">Course Curriculum</div>
+        <span class="text-[11px] text-neutral-400">4 Modules • 12 Lessons</span>
+      </div>
+
+      <div id="player-curriculum-list" class="flex-1 overflow-y-auto">
+        <!-- Dynamically populated by assets/js/learner.js -->
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/learner.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

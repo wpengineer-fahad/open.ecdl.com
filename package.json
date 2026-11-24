@@ -1,0 +1,21 @@
+{
+  "name": "open-ecdl-design-foundation",
+  "version": "1.0.0",
+  "description": "Master Design Foundation and UI Component System for Open ECDL (Enroute Center for Development)",
+  "private": true,
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "test": "node test-verify.js"
+  },
+  "keywords": [
+    "design-system",
+    "ecdl",
+    "enroute",
+    "elementor-pro",
+    "tutor-lms",
+    "corporate-learning"
+  ],
+  "author": "Open ECDL Architecture & Design Team",
+  "license": "UNLICENSED"
+}

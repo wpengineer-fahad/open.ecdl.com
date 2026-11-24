@@ -1,0 +1,1202 @@
+/**
+ * Open ECDL — Phase 02: Homepage Stylesheet
+ * Enroute Center for Development Ltd.
+ * 
+ * Implements refined editorial styling for all 14 Homepage Sections:
+ * Section 1: Asymmetrical Hero
+ * Section 2: Credibility & Impact Metrics
+ * Section 3: Featured Training (3 Courses)
+ * Section 4: Explore by Category (8 Disciplines)
+ * Section 5: Individual vs Corporate Learning (Split)
+ * Section 6: Why Learn With ECDL (6 Feature Pillars)
+ * Section 7: Upcoming Scheduled Programmes & Webinars
+ * Section 8: How Learning Works (4-Stage Journey)
+ * Section 9: Corporate Training Feature
+ * Section 10: Learning Pathways
+ * Section 11: Learner Experiences & Outcomes
+ * Section 12: Insights & Knowledge Resources
+ * Section 13: FAQ Accordion
+ * Section 14: Final CTA
+ */
+
+/* ==========================================================================
+   SECTION 1 — HERO SECTION (ASYMMETRICAL EDITORIAL COMPOSITION)
+   ========================================================================== */
+
+.ecdl-hero-section {
+  position: relative;
+  background-color: var(--ecdl-color-white);
+  padding-top: clamp(2.5rem, 4vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 6rem);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  overflow: hidden;
+}
+
+.ecdl-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.ecdl-hero-content {
+  max-width: 640px;
+}
+
+.ecdl-hero-headline {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-hero);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--ecdl-color-black);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-hero-headline span.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.ecdl-hero-headline span.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 100%;
+  height: 10px;
+  background-color: var(--ecdl-color-yellow);
+  z-index: -1;
+}
+
+.ecdl-hero-lead {
+  font-size: var(--font-size-body-lead);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.ecdl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+/* Subtle Hero Discovery Search Bar */
+.ecdl-hero-discovery {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  max-width: 540px;
+}
+
+.ecdl-hero-discovery__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ecdl-hero-discovery__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ecdl-hero-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  padding: 4px 10px;
+  color: var(--ecdl-neutral-800);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-hero-chip:hover {
+  background-color: var(--ecdl-color-soft-green);
+  border-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-green);
+}
+
+/* Hero Media Column (Asymmetrical Photography Frame) */
+.ecdl-hero-media-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ecdl-hero-media-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 4.6;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.08);
+  border: 1px solid var(--ecdl-color-borders);
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-hero-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Verification Pill on Hero Photo */
+.ecdl-hero-floating-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-hero-floating-badge svg {
+  color: var(--ecdl-color-yellow);
+}
+
+/* Floating Metric Inset Card on Hero Photo */
+.ecdl-hero-floating-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  padding: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.ecdl-hero-floating-card__num {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ecdl-color-green);
+  line-height: 1;
+}
+
+.ecdl-hero-floating-card__text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ecdl-color-black);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   SECTION 2 — CREDIBILITY & IMPACT METRICS
+   ========================================================================== */
+
+.ecdl-credibility-section {
+  background-color: var(--ecdl-color-surface);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  padding: var(--section-py-md) 0;
+}
+
+.ecdl-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 1024px) {
+  .ecdl-impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.ecdl-impact-item {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.ecdl-impact-item:hover {
+  border-color: var(--ecdl-color-green);
+  transform: translateY(-2px);
+}
+
+.ecdl-impact-numeral {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ecdl-color-black);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2xs);
+}
+
+.ecdl-impact-label {
+  font-family: var(--font-family-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: 6px;
+}
+
+.ecdl-impact-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Verified Client Enterprise Sector Strip */
+.ecdl-client-strip {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--ecdl-color-borders);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ecdl-client-strip__title {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-client-strip__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ecdl-client-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  padding: 8px 14px;
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ecdl-neutral-800);
+}
+
+.ecdl-client-badge svg {
+  color: var(--ecdl-color-green);
+}
+
+/* ==========================================================================
+   SECTION 3 — FEATURED TRAINING (3 SPECIFIC COURSES)
+   ========================================================================== */
+
+.ecdl-featured-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+/* ==========================================================================
+   SECTION 4 — EXPLORE BY CATEGORY (ASYMMETRICAL 8 CATEGORY GRID)
+   ========================================================================== */
+
+.ecdl-categories-section {
+  background-color: var(--ecdl-color-surface);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-cat-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-cat-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-cat-bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+.ecdl-cat-card {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.ecdl-cat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.ecdl-cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-cat-card:hover::before {
+  background-color: var(--ecdl-color-green);
+}
+
+.ecdl-cat-card:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+.ecdl-cat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-cat-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-cat-card:hover .ecdl-cat-card__icon {
+  background-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-cat-card__count {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.ecdl-cat-card__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+  line-height: 1.35;
+}
+
+.ecdl-cat-card__desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.ecdl-cat-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-cat-card__footer span {
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-cat-card:hover .ecdl-cat-card__footer span {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   SECTION 5 — INDIVIDUAL VS CORPORATE LEARNING (SPLIT ARCHITECTURE)
+   ========================================================================== */
+
+.ecdl-split-learning-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 900px) {
+  .ecdl-split-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.ecdl-split-card {
+  border-radius: var(--radius-sm);
+  padding: clamp(1.75rem, 3vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.ecdl-split-card--individual {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-split-card--corporate {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border: 1px solid var(--color-border-on-dark);
+}
+
+.ecdl-split-card__badge {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-split-card__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-split-card--individual .ecdl-split-card__title {
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-split-card--corporate .ecdl-split-card__title {
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-split-card__desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.ecdl-split-card--individual .ecdl-split-card__desc {
+  color: var(--color-text-secondary);
+}
+
+.ecdl-split-card--corporate .ecdl-split-card__desc {
+  color: var(--color-text-on-dark-muted);
+}
+
+.ecdl-split-card__feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ecdl-split-card__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.ecdl-split-card--individual .ecdl-split-card__feature-item {
+  color: var(--ecdl-neutral-800);
+}
+
+.ecdl-split-card--corporate .ecdl-split-card__feature-item {
+  color: #D1D5DB;
+}
+
+.ecdl-split-card__feature-item svg {
+  color: var(--ecdl-color-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ecdl-split-card__footer {
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   SECTION 6 — WHY LEARN WITH ECDL (EDITORIAL FEATURE GRID)
+   ========================================================================== */
+
+.ecdl-why-section {
+  background-color: var(--ecdl-color-surface);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.ecdl-pillar-card {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-pillar-card:hover {
+  border-color: var(--ecdl-color-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-pillar-num {
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-pillar-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-pillar-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 7 — UPCOMING SCHEDULED PROGRAMMES & WEBINARS
+   ========================================================================== */
+
+.ecdl-upcoming-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ecdl-upcoming-card {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .ecdl-upcoming-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.ecdl-upcoming-card:hover {
+  border-color: var(--ecdl-color-green);
+  background-color: var(--ecdl-color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-upcoming-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 160px;
+}
+
+.ecdl-upcoming-date-text {
+  font-family: var(--font-family-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-upcoming-schedule-text {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-upcoming-details {
+  flex-grow: 1;
+}
+
+.ecdl-upcoming-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: 4px;
+}
+
+.ecdl-upcoming-meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ecdl-upcoming-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   SECTION 8 — HOW LEARNING WORKS (FOUR STAGES JOURNEY)
+   ========================================================================== */
+
+.ecdl-journey-section {
+  background-color: var(--ecdl-color-surface);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-journey-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .ecdl-journey-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+.ecdl-journey-step {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ecdl-journey-step__num {
+  font-family: var(--font-family-mono);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-journey-step__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: 6px;
+}
+
+.ecdl-journey-step__desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 9 — CORPORATE TRAINING FEATURE
+   ========================================================================== */
+
+.ecdl-corp-feature-section {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--color-border-on-dark);
+}
+
+.ecdl-corp-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-corp-feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.ecdl-corp-feature-content h2 {
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-corp-feature-content p {
+  color: var(--color-text-on-dark-muted);
+}
+
+.ecdl-corp-feature-img-wrap {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border-on-dark);
+  aspect-ratio: 16 / 11;
+  background-color: var(--ecdl-neutral-800);
+}
+
+.ecdl-corp-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   SECTION 10 — LEARNING PATHWAYS
+   ========================================================================== */
+
+.ecdl-pathways-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-pathways-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .ecdl-pathways-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ecdl-pathway-card {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-pathway-card:hover {
+  border-color: var(--ecdl-color-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-pathway-card__target {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ecdl-color-green);
+  margin-bottom: 4px;
+}
+
+.ecdl-pathway-card__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.ecdl-pathway-card__desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.ecdl-pathway-card__meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+  border-top: 1px solid var(--ecdl-color-borders);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  margin-bottom: var(--space-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-pathway-card__credential {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-pathway-card__credential svg {
+  color: var(--ecdl-color-yellow);
+}
+
+/* ==========================================================================
+   SECTION 11 — LEARNER EXPERIENCES & OUTCOMES
+   ========================================================================== */
+
+.ecdl-outcomes-section {
+  background-color: var(--ecdl-color-surface);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .ecdl-outcomes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ecdl-outcome-metric-card {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-outcome-metric-val {
+  font-family: var(--font-family-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--ecdl-color-green);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ecdl-outcome-metric-label {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: 6px;
+}
+
+.ecdl-outcome-metric-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Case Notes Cards */
+.ecdl-case-notes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .ecdl-case-notes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ecdl-case-note-card {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-left: 4px solid var(--ecdl-color-green);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+}
+
+.ecdl-case-note-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ecdl-color-green);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.ecdl-case-note-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: 4px;
+}
+
+.ecdl-case-note-org {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-case-note-outcome {
+  font-size: 0.875rem;
+  color: var(--ecdl-neutral-700);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 12 — INSIGHTS & KNOWLEDGE RESOURCES
+   ========================================================================== */
+
+.ecdl-insights-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .ecdl-insights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ecdl-insight-card {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-insight-card:hover {
+  border-color: var(--ecdl-color-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-insight-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-insight-card__category {
+  font-weight: 700;
+  color: var(--ecdl-color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ecdl-insight-card__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+  line-height: 1.35;
+}
+
+.ecdl-insight-card__summary {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.ecdl-insight-card__author {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ecdl-color-black);
+  padding-top: var(--space-xs);
+  border-top: 1px solid var(--ecdl-color-borders);
+}
+
+/* ==========================================================================
+   SECTION 13 — FAQ ACCORDION SECTION
+   ========================================================================== */
+
+.ecdl-faq-section {
+  background-color: var(--ecdl-color-surface);
+  padding: var(--section-py-lg) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+/* ==========================================================================
+   SECTION 14 — FINAL CLOSING CTA
+   ========================================================================== */
+
+.ecdl-final-cta-section {
+  background-color: var(--ecdl-color-white);
+  padding: var(--section-py-xl) 0;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-final-cta-box {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 4vw, 4rem);
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border-on-dark);
+}
+
+.ecdl-final-cta-title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ecdl-color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-final-cta-desc {
+  font-size: var(--font-size-body-lead);
+  line-height: 1.6;
+  color: var(--color-text-on-dark-muted);
+  max-width: 580px;
+  margin: 0 auto var(--space-xl) auto;
+}
+
+.ecdl-final-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.ecdl-final-cta-contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  font-size: 0.875rem;
+  color: var(--color-text-on-dark-muted);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-on-dark);
+}
+
+.ecdl-final-cta-contact-bar a {
+  color: var(--ecdl-color-yellow);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.ecdl-final-cta-contact-bar a:hover {
+  text-decoration: underline;
+}

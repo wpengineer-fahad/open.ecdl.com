@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Category — Open ECDL | Enroute Center for Development</title>
+  <meta name="description" content="Explore specialized executive training tracks by category.">
+  <link rel="canonical" href="https://open.ecdl.com.bd/category">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  <link rel="stylesheet" href="assets/css/catalogue.css">
+</head>
+<body class="bg-neutral-50/50 text-neutral-800 antialiased font-sans">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
+        <span class="text-neutral-300 hidden sm:inline">All course fees include Bangladesh Govt. VAT (Mushak-6.3 supplied on request)</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:training@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>training@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="hover:text-white text-ecdl-yellow font-semibold transition-colors inline-flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors ">Home</a>
+          <a href="courses.html" class="hover:text-ecdl-green transition-colors text-ecdl-green font-bold">Courses</a>
+          <a href="webinars.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1.5 ">
+            <span>Webinar</span>
+            <span class="w-2 h-2 rounded-full bg-ecdl-orange animate-pulse"></span>
+          </a>
+          <a href="training-calendar.html" class="hover:text-ecdl-green transition-colors ">Calendar</a>
+          <a href="index.html#corporate" class="hover:text-ecdl-green transition-colors">Corporate</a>
+          <a href="index.html#contact" class="hover:text-ecdl-green transition-colors">Contact</a>
+          <button type="button" onclick="openInstructorModal()" class="text-ecdl-green hover:text-ecdl-greenDark transition-colors">
+            Become an Instructor
+          </button>
+        </nav>
+
+        <!-- Right Controls: Profile Dropdown + Mobile Hamburger -->
+        <div class="flex items-center gap-2.5">
+          <!-- Profile / Auth Dropdown Wrapper -->
+          <div class="relative" id="profileDropdownWrapper">
+            <button
+              type="button"
+              id="profileMenuBtn"
+              onclick="toggleProfileDropdown()"
+              class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-neutral-200 hover:border-ecdl-green bg-neutral-50 hover:bg-ecdl-greenSoft transition-all text-sm font-semibold text-ecdl-dark"
+            >
+              <span id="profileAvatarBadge" class="w-7 h-7 rounded-full bg-ecdl-green text-white text-xs font-bold flex items-center justify-center">
+                ED
+              </span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Profile</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div
+              id="profileDropdownMenu"
+              class="hidden absolute right-0 mt-2 w-60 rounded-2xl bg-white border border-neutral-200 shadow-cardHover p-2 z-50"
+            ></div>
+          </div>
+
+          <!-- Primary Quick CTA -->
+          <a
+            href="courses.html"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white text-sm font-bold shadow-sm transition-colors"
+          >
+            <span>Explore Courses</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="lg:hidden p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:bg-neutral-100"
+            aria-label="Toggle Menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="index.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
+      <a href="courses.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
+      <a href="training-calendar.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Training Calendar</a>
+      <a href="webinars.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Live Webinars</a>
+      <a href="index.html#categories" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Categories</a>
+      <a href="index.html#corporate" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Corporate Training</a>
+      <a href="index.html#contact" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Contact</a>
+      <button type="button" onclick="toggleMobileMenu(); openInstructorModal();" class="w-full text-left px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">
+        Become an Instructor
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ====================================================================
+       SECTION 1: CATEGORY SPECIFIC HERO
+       ==================================================================== -->
+  <section class="ecdl-category-hero">
+    <div class="ecdl-container">
+
+      <!-- Breadcrumbs -->
+      <nav class="ecdl-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: var(--space-md);">
+        <a href="index.html" class="ecdl-breadcrumbs__link" style="color: var(--color-text-on-dark-muted);">Home</a>
+        <span class="ecdl-breadcrumbs__separator" style="color: var(--color-border-on-dark);">/</span>
+        <a href="courses.html" class="ecdl-breadcrumbs__link" style="color: var(--color-text-on-dark-muted);">Courses</a>
+        <span class="ecdl-breadcrumbs__separator" style="color: var(--color-border-on-dark);">/</span>
+        <span class="ecdl-breadcrumbs__current" id="category-bc-current" style="color: var(--ecdl-color-white);" aria-current="page">Discipline</span>
+      </nav>
+
+      <div class="ecdl-category-hero__kicker">
+        <span>Executive Training Discipline</span>
+        <span>•</span>
+        <span class="ecdl-badge ecdl-badge--yellow" id="category-hero-code" style="color: var(--ecdl-color-black); font-size: 0.6875rem;">CM</span>
+      </div>
+
+      <h1 class="ecdl-category-hero__title" id="category-hero-title">
+        Corporate Discipline
+      </h1>
+
+      <p class="ecdl-category-hero__desc" id="category-hero-desc">
+        Comprehensive description of executive capability building in this discipline.
+      </p>
+
+      <!-- Category Key Stats Bar -->
+      <div class="ecdl-category-stats-bar">
+        <div class="ecdl-category-stat">
+          <span class="ecdl-category-stat__num" id="category-hero-count">19</span>
+          <span class="ecdl-category-stat__label">Verified Masterclasses</span>
+        </div>
+        <div class="ecdl-category-stat">
+          <span class="ecdl-category-stat__num">100%</span>
+          <span class="ecdl-category-stat__label">Practitioner Faculty</span>
+        </div>
+        <div class="ecdl-category-stat">
+          <span class="ecdl-category-stat__num">Banani</span>
+          <span class="ecdl-category-stat__label">Campus & Zoom Live</span>
+        </div>
+        <div class="ecdl-category-stat">
+          <span class="ecdl-category-stat__num">QR Code</span>
+          <span class="ecdl-category-stat__label">Verifiable Credential</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       MAIN CATEGORY CONTENT
+       ==================================================================== -->
+  <main style="background-color: var(--ecdl-color-white); padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
+    <div class="ecdl-container">
+
+      <!-- SECTION 2: INTRODUCTORY STRATEGIC CONTEXT -->
+      <section style="margin-bottom: var(--space-2xl);">
+        <div class="ecdl-kicker">Strategic Relevance</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+          Why This Discipline Matters in Corporate Bangladesh
+        </h2>
+        <div class="ecdl-category-context-card">
+          <p id="category-context-text" style="margin: 0;">
+            Strategic context details dynamically loaded from verified ECDL curriculum framework.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 5: TOPICS COVERED -->
+      <section style="margin-bottom: var(--space-2xl);">
+        <div class="ecdl-kicker">Curriculum Scope</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+          Core Topics & Regulatory Modules Covered
+        </h2>
+        <p style="color: var(--color-text-secondary); font-size: 0.9375rem; margin-bottom: var(--space-sm);">
+          Curricula are continuously updated to reflect 2026 statutory amendments, judicial precedents, and international market standards.
+        </p>
+        <div class="ecdl-topics-grid" id="category-topics-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- SECTION 4: FILTERABLE COURSE RESULTS FOR THIS CATEGORY -->
+      <section style="margin-bottom: var(--space-3xl); padding-top: var(--space-lg); border-top: 1px solid var(--ecdl-color-borders);">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-lg);">
+          <div>
+            <div class="ecdl-kicker">Available Cohorts</div>
+            <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: 4px;">
+              Masterclasses & Workshops in this Discipline
+            </h2>
+            <div class="ecdl-results-count" id="catalogue-results-count">Showing programmes...</div>
+          </div>
+
+          <!-- Quick Filters: Delivery Mode & Sorting -->
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+            <div class="ecdl-catalogue-search" style="max-width: 260px;">
+              <svg class="ecdl-catalogue-search__icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="catalogue-search-input" class="ecdl-catalogue-search__input" placeholder="Search within category..." aria-label="Search within category">
+            </div>
+
+            <select id="catalogue-sort-select" class="ecdl-sort-select" aria-label="Sort courses">
+              <option value="soonest">Soonest Date</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="title-asc">Title: A–Z</option>
+            </select>
+
+            <div class="ecdl-view-toggle">
+              <button type="button" class="ecdl-view-btn is-active" id="catalogue-view-grid" title="Grid View" aria-label="Grid view">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </button>
+              <button type="button" class="ecdl-view-btn" id="catalogue-view-list" title="List View" aria-label="List view">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="3"/><rect x="3" y="10" width="18" height="3"/><rect x="3" y="16" width="18" height="3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ecdl-active-filters" id="catalogue-active-filters">
+          <!-- Active filter pills -->
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div id="catalogue-courses-container" class="ecdl-courses-container view-grid">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="ecdl-pagination" id="catalogue-pagination">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- SECTION 6: BENEFITS & LEARNING OUTCOMES -->
+      <section style="margin-bottom: var(--space-3xl); padding-top: var(--space-lg); border-top: 1px solid var(--ecdl-color-borders);">
+        <div class="ecdl-kicker">Tangible Business Impact</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+          Key Capability Outcomes for Your Organisation
+        </h2>
+        <div class="ecdl-benefits-grid" id="category-benefits-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- SECTION 7: RELEVANT TRAINERS & FACULTY -->
+      <section style="margin-bottom: var(--space-3xl); padding-top: var(--space-lg); border-top: 1px solid var(--ecdl-color-borders);">
+        <div class="ecdl-kicker">Faculty Leadership</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+          Learn from Practicing Industry Experts & Senior Advocates
+        </h2>
+        <div class="ecdl-faculty-grid" id="category-faculty-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- SECTION 9: CORPORATE GROUP-TRAINING CTA -->
+      <section style="background-color: var(--ecdl-color-surface); border: 1px solid var(--ecdl-color-borders); border-radius: var(--radius-sm); padding: clamp(2rem, 3.5vw, 3rem); margin-bottom: var(--space-3xl);">
+        <div class="ecdl-grid-12" style="align-items: center;">
+          <div class="ecdl-col-12 ecdl-col-lg-8">
+            <span class="ecdl-badge ecdl-badge--green" style="margin-bottom: 8px;">Enterprise Solutions</span>
+            <h3 style="font-family: var(--font-family-heading); font-size: clamp(1.375rem, 2vw, 1.875rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+              Need Dedicated In-House Training for Your Team?
+            </h3>
+            <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.6; margin: 0;">
+              Any masterclass in this discipline can be customized and delivered exclusively for your workforce at your corporate headquarters, factory premises, or our Banani campus. We conduct preliminary training needs assessments (TNA) and issue official 15% VAT Mushak Form 6.3 invoices.
+            </p>
+          </div>
+          <div class="ecdl-col-12 ecdl-col-lg-4" style="text-align: right; margin-top: var(--space-md); @media(min-width:1024px){ margin-top: 0; }">
+            <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--lg" data-ecdl-modal-target="modal-corporate-enquiry">
+              <span>Request Group Proposal</span>
+              <span class="ecdl-btn__icon ecdl-btn__icon--trailing">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10: CATEGORY SPECIFIC FAQS -->
+      <section style="margin-bottom: var(--space-3xl);">
+        <div class="ecdl-kicker">Discipline Guidance</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-md);">
+          Frequently Asked Questions
+        </h2>
+        <div class="ecdl-accordion" id="category-faq-accordion">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- SECTION 8: RELATED CATEGORIES CROSS-LINKS -->
+      <section style="padding-top: var(--space-lg); border-top: 1px solid var(--ecdl-color-borders);">
+        <div class="ecdl-kicker">Interdisciplinary Pathways</div>
+        <h2 style="font-family: var(--font-family-heading); font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 800; color: var(--ecdl-color-black); margin-bottom: var(--space-xs);">
+          Related Professional Disciplines
+        </h2>
+        <div class="ecdl-related-categories-grid" id="category-related-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       CORPORATE CONSULTATION MODAL
+       ==================================================================== -->
+  <div id="modal-corporate-enquiry" class="ecdl-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="corp-modal-title" aria-hidden="true">
+    <div class="ecdl-modal" style="max-width: 620px;">
+      <div class="ecdl-modal__header">
+        <div>
+          <span class="ecdl-badge ecdl-badge--green" style="margin-bottom: 4px;">Enterprise In-House</span>
+          <h3 id="corp-modal-title" class="ecdl-modal__title">Corporate Training Consultation</h3>
+        </div>
+        <button type="button" class="ecdl-modal__close" data-ecdl-modal-close aria-label="Close inquiry modal">✕</button>
+      </div>
+
+      <form onsubmit="event.preventDefault(); OpenECDL.closeModal(); alert('Thank you. Our corporate solutions director will reach out within 24 hours with a custom proposal.');">
+        <div class="ecdl-modal__body">
+          <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: var(--space-md);">
+            Request customized in-house training cohorts, statutory compliance audits, or bulk voucher seat bookings for your organization.
+          </p>
+
+          <div class="ecdl-grid-12">
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-name-cat" class="ecdl-label ecdl-label--required">Your Full Name</label>
+                <input type="text" id="corp-name-cat" class="ecdl-input" placeholder="e.g. Tariqul Hasan" required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-company-cat" class="ecdl-label ecdl-label--required">Organization / Company</label>
+                <input type="text" id="corp-company-cat" class="ecdl-input" placeholder="e.g. Apex Footwear Ltd." required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-email-cat" class="ecdl-label ecdl-label--required">Corporate Email</label>
+                <input type="email" id="corp-email-cat" class="ecdl-input" placeholder="e.g. t.hasan@apex.com.bd" required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-phone-cat" class="ecdl-label ecdl-label--required">Contact Number</label>
+                <input type="tel" id="corp-phone-cat" class="ecdl-input" placeholder="e.g. +880 1711-000000" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ecdl-modal__footer">
+          <button type="button" class="ecdl-btn ecdl-btn--secondary" data-ecdl-modal-close>Cancel</button>
+          <button type="submit" class="ecdl-btn ecdl-btn--primary">Request Consultation →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       GLOBAL FOOTER (PHASE 01 COMPATIBLE)
+       ==================================================================== -->
+  
+  <!-- ========================================================= -->
+  <!-- 4. GLOBAL FOOTER (#111111)                                -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <!-- Brand & Info Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
+          </p>
+          <div class="space-y-2 pt-2 text-xs text-neutral-300">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+              <span>+8801767804408</span>
+            </a>
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>training@ecdl.com.bd</span>
+            </a>
+            <div class="flex items-start gap-2.5 text-neutral-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Column -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">About Us</a></li>
+            <li><a href="courses.html" class="hover:text-ecdl-yellow transition-colors">Courses</a></li>
+            <li><a href="webinars.html" class="hover:text-ecdl-yellow transition-colors">Webinars</a></li>
+            <li><a href="training-calendar.html" class="hover:text-ecdl-yellow transition-colors">Calendar</a></li>
+            <li><a href="index.html#contact" class="hover:text-ecdl-yellow transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Links</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><button type="button" onclick="openInstructorModal()" class="hover:text-ecdl-yellow transition-colors">Become an Instructor</button></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
+            <li><button type="button" onclick="showToast('Terms of Use opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Terms of use</button></li>
+            <li><button type="button" onclick="showToast('Privacy Policy opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Privacy Policy</button></li>
+            <li><button type="button" onclick="showToast('Refund Policy: 100% refundable up to 48 hours prior to batch start.', 'info')" class="hover:text-ecdl-yellow transition-colors">Refund Policy</button></li>
+          </ul>
+        </div>
+
+        <!-- Recommend / Sister Concerns Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Recommend</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Socials -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+        <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED MODALS & HELPERS -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- INSTRUCTOR MODAL -->
+  <div id="instructorModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Faculty Application</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Become an ECDL Instructor</h3>
+        </div>
+        <button type="button" onclick="closeModal('instructorModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="handleInstructorSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Full Name *</label>
+          <input type="text" required placeholder="e.g. Barrister / FCA / Lead Consultant" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Email *</label>
+            <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Phone *</label>
+            <input type="tel" required placeholder="+880 17..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Domain Expertise *</label>
+          <select required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm">
+            <option value="">Select Primary Track</option>
+            <option>Compliance & Labour Law 2026</option>
+            <option>Finance, VAT & SD Law 2012</option>
+            <option>Strategic HRM & Organizational Development</option>
+            <option>Commercial Sales & Key Account Management</option>
+            <option>Project Management & PMP Exam Prep</option>
+            <option>Workplace Mental Wellbeing & Leadership</option>
+            <option>Business Analytics & Power BI</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Brief Bio & Teaching Experience</label>
+          <textarea rows="3" placeholder="Summarize your years of industry experience, key credentials, and previous corporate training engagements..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow-md transition-colors">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VERIFY MODAL -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="flex gap-2">
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+          <span>Try sample IDs:</span>
+          <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-8492</button>
+          <button type="button" onclick="setModalCert('ECDL-2026-5104')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-5104</button>
+        </div>
+        <div id="modalCertResult" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-base font-extrabold">Learner &amp; Corporate Sign In</h3>
+        <button type="button" onclick="closeModal('authModal')" class="p-1.5 rounded-lg hover:bg-white/10 text-neutral-400">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handleSignIn(event)" class="p-6 space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Your Full Name</label>
+          <input id="authNameInput" type="text" placeholder="e.g. Mahfuzur Rahman" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Work Email</label>
+          <input id="authEmailInput" type="email" placeholder="mahfuz@company.com" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow transition-colors">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' };
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('hidden'); document.body.style.overflow = ''; } }
+    function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); }
+    function toggleProfileDropdown() { const m = document.getElementById('profileDropdownMenu'); if (m) m.classList.toggle('hidden'); }
+    function renderProfileMenu() {
+      const menu = document.getElementById('profileDropdownMenu');
+      const badge = document.getElementById('profileAvatarBadge');
+      const label = document.getElementById('profileBtnLabel');
+      if (!menu) return;
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = 'Profile';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+      } else {
+        if (badge) badge.textContent = 'IN';
+        if (label) label.textContent = 'Sign In';
+        menu.innerHTML = '<div class="p-2 space-y-2 text-center"><p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p><button type="button" onclick="toggleProfileDropdown(); openModal(\'authModal\')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Sign In / Profile</button></div>';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+    function handleLogout() { currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' }; toggleProfileDropdown(); renderProfileMenu(); showToast('You have logged out safely.', 'info'); }
+    function handleSignIn(e) { e.preventDefault(); const n = document.getElementById('authNameInput').value || 'Learner'; const em = document.getElementById('authEmailInput').value || 'learner@ecdl.com.bd'; currentUser = { loggedIn: true, name: n, email: em, initials: (n[0] + (n.split(' ')[1] ? n.split(' ')[1][0] : 'L')).toUpperCase() }; closeModal('authModal'); renderProfileMenu(); showToast('Welcome back, ' + n + '!', 'success'); }
+    function openInstructorModal() { openModal('instructorModal'); }
+    function handleInstructorSubmit(e) { e.preventDefault(); closeModal('instructorModal'); showToast('Thank you! Your instructor application has been submitted to ECDL Academic Council.', 'success'); }
+    function openVerifyModal() { openModal('verifyModal'); }
+    function setModalCert(id) { const inp = document.getElementById('modalCertInput'); if (inp) { inp.value = id; handleModalVerify(); } }
+    const CERTIFICATES = {
+      'ECDL-2026-8492': { name: 'Kazi Tanvir Ahmed', course: 'Bangladesh Labour Act 2006 and Its Amendment up to 2026', issueDate: '18 February 2026', grade: 'Distinction (94%)', status: 'Verified' },
+      'ECDL-2026-5104': { name: 'Farhana Yasmin', course: 'Practical Training on VAT & SD Law 2012', issueDate: '05 January 2026', grade: 'Certified Practitioner', status: 'Verified' },
+      'ECDL-2025-9931': { name: 'Shahidul Islam', course: 'Effective Sales Management: Achieve Big Sales Targets', issueDate: '12 December 2025', grade: 'High Honors', status: 'Verified' }
+    };
+    function handleModalVerify() {
+      const val = (document.getElementById('modalCertInput').value || '').trim().toUpperCase();
+      const res = document.getElementById('modalCertResult');
+      if (!val || !res) return;
+      res.classList.remove('hidden');
+      const rec = CERTIFICATES[val];
+      if (rec) {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
+      } else {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>"' + val + '" is not registered. Please double check the ID.</p></div>';
+      }
+    }
+    function showToast(msg, type) {
+      const c = document.getElementById('toastContainer');
+      if (!c) return;
+      const t = document.createElement('div');
+      t.className = 'px-4 py-3 rounded-2xl shadow-xl text-white text-xs font-bold transition-all transform pointer-events-auto flex items-center gap-2 ' + (type === 'success' ? 'bg-ecdl-green' : (type === 'error' ? 'bg-ecdl-orange' : 'bg-ecdl-dark'));
+      t.innerHTML = '<span>' + msg + '</span>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3500);
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderProfileMenu(); if (window.lucide) lucide.createIcons(); });
+  </script>
+
+  
+  <!-- Required Scripts for Category Catalogue Interactivity -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/catalogue.js"></script>
+    
+</body>
+</html>

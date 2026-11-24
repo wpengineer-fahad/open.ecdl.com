@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group &amp; Enterprise Team Registration — Open ECDL</title>
+  <meta name="description" content="Register employee teams and cohorts for executive masterclasses with volume discounts and CSV roster import." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/registration/group" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/header-footer.css" />
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR                                        -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">B2B ROSTER REGISTRATION</span>
+        <span class="text-neutral-300 hidden sm:inline">Tiered Volume Pricing • Automated Pro-Forma Invoice Generation</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>Corporate Desk: +880 1767-804408</span>
+        </a>
+        <a href="mailto:corporate@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>corporate@ecdl.com.bd</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. MAIN HEADER                                            -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+          <a href="courses.html" class="hover:text-ecdl-green transition-colors">Courses</a>
+          <a href="corporate-training.html" class="hover:text-ecdl-green transition-colors">Corporate Training</a>
+          <a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors">TNA Tool</a>
+          <a href="corporate-proposal.html" class="hover:text-ecdl-green transition-colors">Proposal Request</a>
+          <a href="contact.html" class="hover:text-ecdl-green transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Header CTA -->
+        <div class="flex items-center gap-3">
+          <a href="cart.html" class="relative p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:border-ecdl-green hover:text-ecdl-green transition-colors" aria-label="Cart">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span class="ecdl-cart-badge-count absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-ecdl-orange text-white text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <a href="corporate-proposal.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-ecdl-dark hover:bg-neutral-800 text-white text-xs font-bold transition-colors">
+            <span>Request In-House Proposal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. PAGE HERO & VOLUME DISCOUNT BANNER                     -->
+  <!-- ========================================================= -->
+  <section class="bg-gradient-to-b from-white to-neutral-50 border-b border-neutral-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs text-neutral-500 mb-4" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+        <i data-lucide="chevron-right" class="w-3 h-3 text-neutral-400"></i>
+        <a href="corporate-training.html" class="hover:text-ecdl-green transition-colors">Corporate Training</a>
+        <i data-lucide="chevron-right" class="w-3 h-3 text-neutral-400"></i>
+        <span class="text-neutral-800 font-semibold">Group &amp; Roster Registration</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-2 border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            Enterprise Cohort Booking
+          </span>
+          <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+            Group Registration &amp; Participant Roster
+          </h1>
+          <p class="text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
+            Enroll multiple colleagues or departmental teams into Open ECDL executive masterclasses. Benefit from tiered volume savings, seamless CSV attendee roster import, and official corporate invoice billing.
+          </p>
+        </div>
+
+        <!-- Tiered Discount Box -->
+        <div class="lg:col-span-4 bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Volume Savings Schedule:</div>
+          <div class="space-y-1.5 text-xs text-neutral-700">
+            <div class="flex justify-between p-1.5 rounded bg-neutral-50">
+              <span>3 – 5 Participants</span>
+              <strong class="text-emerald-700 font-bold">5% Off Total</strong>
+            </div>
+            <div class="flex justify-between p-1.5 rounded bg-neutral-50">
+              <span>6 – 9 Participants</span>
+              <strong class="text-emerald-700 font-bold">10% Off Total</strong>
+            </div>
+            <div class="flex justify-between p-1.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-900 font-semibold">
+              <span>10+ Participants</span>
+              <strong class="text-emerald-800 font-bold">15% Enterprise Tier</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. MAIN FORM & ROSTER EDITOR                              -->
+  <!-- ========================================================= -->
+  <main class="ecdl-cart-section flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <form id="group-registration-form">
+        <div class="ecdl-cart-grid">
+
+          <!-- Left: Organization, Programme & Dynamic Roster -->
+          <div class="space-y-6">
+
+            <!-- 1. Organization & Focal Person Details -->
+            <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+              <h2 class="font-display text-base font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-100 flex items-center gap-2">
+                <i data-lucide="building" class="w-4 h-4 text-ecdl-green"></i>
+                <span>1. Organization &amp; Corporate Focal Point</span>
+              </h2>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Company / Organization Legal Name <span class="text-rose-600">*</span></label>
+                  <input type="text" required value="Apex Footwear Limited" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Company BIN / TIN (For Mushak 6.3) <span class="text-rose-600">*</span></label>
+                  <input type="text" required value="BIN: 000412839-0101" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Focal Person Full Name <span class="text-rose-600">*</span></label>
+                  <input type="text" required value="Farhana Rahman" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Focal Person Designation <span class="text-rose-600">*</span></label>
+                  <input type="text" required value="Senior Learning &amp; Talent Manager" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Official Email Address <span class="text-rose-600">*</span></label>
+                  <input type="email" required value="f.rahman@apexfootwear.com" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Official Mobile / Direct Extension <span class="text-rose-600">*</span></label>
+                  <input type="tel" required value="+880 1713-998877" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Target Programme & Cohort Batch -->
+            <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+              <h2 class="font-display text-base font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-100 flex items-center gap-2">
+                <i data-lucide="book-open" class="w-4 h-4 text-ecdl-green"></i>
+                <span>2. Programme &amp; Cohort Batch Selection</span>
+              </h2>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Executive Masterclass Programme <span class="text-rose-600">*</span></label>
+                  <select id="group-course-select" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs font-semibold focus:outline-none focus:border-ecdl-green">
+                    <option value="crs-labour-act-2026" data-price="12500" selected>Bangladesh Labour Act 2006 &amp; 2026 Amendments (BDT 12,500)</option>
+                    <option value="crs-sales-mgmt" data-price="14500">Effective Sales Management (BDT 14,500)</option>
+                    <option value="crs-priorities-productivity" data-price="7500">Managing Priorities &amp; Productivity (BDT 7,500)</option>
+                    <option value="crs-tax-vat" data-price="16000">Corporate Income Tax &amp; VAT Compliance 2026 (BDT 16,000)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-bold text-neutral-700 mb-1">Target Cohort Session <span class="text-rose-600">*</span></label>
+                  <select id="group-cohort-select" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-xs font-semibold focus:outline-none focus:border-ecdl-green">
+                    <option value="dec-2026-hybrid" selected>Dec 12 – Dec 19, 2026 (In-Person / Banani Campus)</option>
+                    <option value="jan-2027-virtual">Jan 16 – Jan 24, 2027 (Live Interactive Virtual)</option>
+                    <option value="feb-2027-inhouse">Custom In-House Enterprise Batch (At Client Premises)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Dynamic Participant Roster Table & CSV Import -->
+            <div class="bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-3 border-b border-neutral-100">
+                <div>
+                  <h2 class="font-display text-base font-bold text-neutral-900 flex items-center gap-2">
+                    <i data-lucide="users" class="w-4 h-4 text-ecdl-green"></i>
+                    <span>3. Attendee Roster Table</span>
+                  </h2>
+                  <p class="text-xs text-neutral-500 mt-0.5">
+                    Currently registering: <strong id="group-participant-count" class="text-neutral-900">5</strong> Participants
+                  </p>
+                </div>
+
+                <!-- CSV Actions -->
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="OpenECDLGroup.downloadSampleCSV()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-300 hover:border-neutral-400 text-[11px] font-bold text-neutral-700 transition-colors">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Template CSV</span>
+                  </button>
+                  <button type="button" onclick="OpenECDLGroup.addRow()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] font-bold transition-colors">
+                    <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                    <span>Add Participant</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- CSV Drag and Drop Zone -->
+              <div class="ecdl-upload-dropzone mb-4" id="group-csv-dropzone">
+                <i data-lucide="file-spreadsheet" class="w-7 h-7 text-emerald-600 mx-auto mb-1.5"></i>
+                <div class="font-bold text-xs text-neutral-900">
+                  Bulk Upload via CSV: Drag roster spreadsheet here or <span class="text-ecdl-green underline">browse file</span>
+                </div>
+                <div class="text-[11px] text-neutral-500 mt-0.5">
+                  Expected columns: Full Name, Email, Phone, Designation
+                </div>
+                <input type="file" id="group-csv-input" accept=".csv" class="hidden">
+              </div>
+
+              <!-- Editable Table Container -->
+              <div class="overflow-x-auto">
+                <table class="ecdl-roster-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 40px;">#</th>
+                      <th>Participant Full Name</th>
+                      <th>Official Email</th>
+                      <th>Mobile Phone</th>
+                      <th>Designation / Dept</th>
+                      <th style="width: 50px;" class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="group-roster-tbody">
+                    <!-- Populated dynamically by assets/js/checkout.js -->
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right: Summary Card & Tier Discounts -->
+          <aside>
+            <div class="ecdl-summary-card" id="group-pricing-card">
+              <h3 class="ecdl-summary-title">Group Tuition Breakdown</h3>
+
+              <!-- Tier Notice Pill -->
+              <div id="group-tier-notice" class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 mb-4 font-medium leading-relaxed">
+                🎉 5% Team discount unlocked! Add <strong>1 more</strong> for 10% Department tier.
+              </div>
+
+              <div class="space-y-2.5 text-xs">
+                <div class="flex justify-between text-neutral-600">
+                  <span>Registered Seats:</span>
+                  <span id="group-calc-count" class="font-bold text-neutral-900">5 Seats</span>
+                </div>
+
+                <div class="flex justify-between text-neutral-600">
+                  <span>Tuition Subtotal:</span>
+                  <span id="group-calc-subtotal" class="font-bold text-neutral-900">BDT 62,500</span>
+                </div>
+
+                <div class="flex justify-between text-emerald-700 font-semibold" id="group-calc-discount-row">
+                  <span>Volume Tier Savings:</span>
+                  <span id="group-calc-discount" class="font-bold">-BDT 3,125 (5%)</span>
+                </div>
+
+                <div class="flex justify-between text-neutral-600">
+                  <span>15% Statutory VAT:</span>
+                  <span id="group-calc-vat" class="font-semibold text-neutral-800">BDT 8,906</span>
+                </div>
+
+                <div class="flex justify-between text-base font-extrabold text-neutral-900 pt-3 border-t border-neutral-200">
+                  <span>Payable Total:</span>
+                  <span id="group-calc-total" class="text-ecdl-green">BDT 68,281</span>
+                </div>
+              </div>
+
+              <!-- Next Actions -->
+              <div class="mt-6 space-y-2">
+                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-display text-sm font-bold shadow-md hover:shadow-lg transition-all">
+                  <span>Proceed to Corporate Checkout</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+
+                <a href="corporate-proposal.html" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl border border-neutral-300 hover:border-neutral-400 text-neutral-700 text-xs font-bold transition-colors">
+                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-neutral-500"></i>
+                  <span>Need Custom In-House Delivery?</span>
+                </a>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-neutral-100 text-[11px] text-neutral-500 space-y-1.5">
+                <div>✓ Mushak Form 6.3 Tax Invoice generated</div>
+                <div>✓ Formal Purchase Order (PO) acceptance</div>
+                <div>✓ Prime Bank &amp; BRAC Bank BEFTN settlement</div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 5. FOOTER                                                 -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-10 pb-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="courses.html" class="hover:text-white transition-colors">Courses</a>
+          <a href="corporate-training.html" class="hover:text-white transition-colors">Corporate Training</a>
+          <a href="registration-group.html" class="hover:text-white transition-colors text-ecdl-yellow">Group Registration</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

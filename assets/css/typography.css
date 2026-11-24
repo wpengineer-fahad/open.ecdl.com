@@ -1,0 +1,216 @@
+/**
+ * Open ECDL — Master Design Foundation
+ * Typography System
+ * Enroute Center for Development Ltd.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-canvas-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings System */
+h1, h2, h3, h4, h5, h6,
+.ecdl-h1, .ecdl-h2, .ecdl-h3, .ecdl-h4, .ecdl-h5, .ecdl-h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-snug);
+  line-height: var(--line-height-heading);
+}
+
+/* Hero Heading (Editorial Statement) */
+.ecdl-heading-hero {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+/* H1 / Main Page & Section Display */
+h1, .ecdl-h1, .ecdl-heading-display {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* H2 / Section Headings */
+h2, .ecdl-h2, .ecdl-heading-section {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+/* H3 / Subheadings & Group Titles */
+h3, .ecdl-h3, .ecdl-heading-sub {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* H4 / Component Cards & Module Titles */
+h4, .ecdl-h4, .ecdl-heading-card {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* H5 / Minor Titles & List Headers */
+h5, .ecdl-h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Section Kicker / Eyebrow Badge */
+.ecdl-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-kicker);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-kicker);
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--ecdl-color-green);
+  border-radius: var(--radius-xs);
+}
+
+.ecdl-kicker--yellow {
+  color: var(--ecdl-color-black);
+  background-color: var(--ecdl-color-yellow);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+.ecdl-kicker--yellow::before {
+  display: none;
+}
+
+/* Body Text Variants */
+.ecdl-lead {
+  font-size: var(--font-size-body-lead);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 68ch;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.ecdl-text-sm {
+  font-size: var(--font-size-body-sm);
+  line-height: 1.5;
+}
+
+.ecdl-text-meta {
+  font-size: var(--font-size-meta);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+.ecdl-text-caption {
+  font-size: var(--font-size-caption);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+/* Editorial Emphasis & Markers */
+.ecdl-mark-yellow {
+  background: linear-gradient(180deg, transparent 65%, var(--ecdl-color-yellow) 65%);
+  padding: 0 4px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.ecdl-text-brand-green {
+  color: var(--ecdl-color-green) !important;
+}
+
+.ecdl-text-brand-orange {
+  color: var(--ecdl-color-orange) !important;
+}
+
+/* Editorial Blockquote */
+.ecdl-blockquote {
+  position: relative;
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: 3px solid var(--ecdl-color-green);
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-blockquote p {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-lead);
+  font-style: italic;
+  color: var(--ecdl-neutral-800);
+  line-height: 1.6;
+}
+
+.ecdl-blockquote cite {
+  display: block;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  font-style: normal;
+  font-weight: var(--font-weight-semibold);
+  color: var(--ecdl-neutral-700);
+  margin-top: var(--space-xs);
+}
+
+/* Code & Tokens */
+code, .ecdl-code {
+  font-family: var(--font-family-mono);
+  font-size: 0.85em;
+  background-color: var(--ecdl-neutral-100);
+  color: var(--ecdl-color-black);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--ecdl-neutral-200);
+}
+
+pre code {
+  display: block;
+  padding: var(--space-sm);
+  overflow-x: auto;
+  line-height: 1.5;
+}

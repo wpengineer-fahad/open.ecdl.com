@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account &amp; LMS Settings — Open ECDL Learner Portal</title>
+  <meta name="description" content="Manage your executive profile, professional affiliations, learning notifications, and password security." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/learner/settings" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/learner.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <div class="ecdl-portal-wrapper">
+
+    <!-- ========================================================= -->
+    <!-- 1. APPLICATION SIDEBAR                                    -->
+    <!-- ========================================================= -->
+    <aside class="ecdl-portal-sidebar" id="portal-sidebar" aria-label="Portal Navigation">
+      <div class="ecdl-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div>
+            <span class="block font-display text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
+            <span class="block text-[10px] text-neutral-400">Executive Academy</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="portal-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="ecdl-sidebar-nav">
+        <span class="ecdl-sidebar-section-title">My Learning</span>
+        <a href="/learner/dashboard" class="ecdl-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="/learner/my-courses" class="ecdl-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>My Courses</span>
+          <span class="ecdl-sidebar-badge">5</span>
+        </a>
+        <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="ecdl-sidebar-link">
+          <i data-lucide="play-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>LMS Course Player</span>
+        </a>
+        <a href="/learner/assessments" class="ecdl-sidebar-link">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+          <span>Assessments &amp; Quizzes</span>
+        </a>
+        <a href="/learner/certificates" class="ecdl-sidebar-link">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Certificates</span>
+          <span class="ecdl-sidebar-badge">2</span>
+        </a>
+        <a href="/learner/learning-history" class="ecdl-sidebar-link">
+          <i data-lucide="history" class="w-4 h-4"></i>
+          <span>Learning History</span>
+        </a>
+
+        <span class="ecdl-sidebar-section-title">Billing &amp; Account</span>
+        <a href="/learner/orders" class="ecdl-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Orders &amp; Invoices</span>
+        </a>
+        <a href="/learner/settings" class="ecdl-sidebar-link is-active">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Profile &amp; Settings</span>
+        </a>
+
+        <span class="ecdl-sidebar-section-title">Explore Catalog</span>
+        <a href="/courses" class="ecdl-sidebar-link">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>Browse Masterclasses</span>
+        </a>
+        <a href="/training-calendar" class="ecdl-sidebar-link">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Training Calendar</span>
+        </a>
+      </nav>
+
+      <div class="ecdl-sidebar-footer">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Naveed Karim" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
+          <div class="flex-1 min-w-0">
+            <div class="text-xs font-bold text-white truncate" id="sidebar-user-name">Naveed Karim</div>
+            <div class="text-[11px] text-neutral-400 truncate" id="sidebar-user-company">Unilever Bangladesh</div>
+          </div>
+          <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- 2. MAIN APPLICATION CONTENT                               -->
+    <!-- ========================================================= -->
+    <div class="ecdl-portal-main">
+
+      <!-- Topbar -->
+      <header class="ecdl-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100" id="portal-sidebar-open" aria-label="Open sidebar">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2 text-xs font-semibold text-neutral-400">
+            <a href="/learner/dashboard" class="hover:text-neutral-700">Learner Portal</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold">Profile &amp; Settings</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span>Corporate Account Verified</span>
+          </div>
+          <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
+            <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
+            <span class="hidden md:inline">Switch Role</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Workspace -->
+      <main class="ecdl-portal-workspace">
+
+        <!-- Toast notification for save -->
+        <div id="settings-save-toast" class="hidden mb-6 p-4 rounded-xl bg-emerald-500 text-white shadow-lg flex items-center justify-between transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <div class="text-sm font-bold">Profile Updated Successfully</div>
+              <div class="text-xs text-white/90">Your executive details and LMS preferences have been recorded.</div>
+            </div>
+          </div>
+          <button type="button" onclick="document.getElementById('settings-save-toast').classList.add('hidden')" class="text-white hover:text-white/80 p-1">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Prototype Disclaimer Banner -->
+        <div class="ecdl-proto-banner mb-6">
+          <i data-lucide="info" class="w-4 h-4 shrink-0 text-amber-800"></i>
+          <div>
+            <strong>Interactive Prototype:</strong> Learner profile data is initialized from local mock fixtures. Form updates trigger local state feedback and simulated storage without hitting an external backend.
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div class="mb-8">
+          <h1 class="font-display text-2xl font-black text-neutral-900 tracking-tight">Account &amp; LMS Preferences</h1>
+          <p class="text-sm text-neutral-500 mt-1">
+            Maintain your credential names for accredited certificates, corporate invoice details, and course schedule notifications.
+          </p>
+        </div>
+
+        <form id="learner-settings-form" class="space-y-8">
+
+          <!-- Section 1: Personal Details & Avatar -->
+          <div class="bg-white rounded-2xl border border-neutral-200/80 p-6 md:p-8 shadow-sm">
+            <div class="flex items-center gap-3 pb-6 border-b border-neutral-100 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center">
+                <i data-lucide="user" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h2 class="font-display font-bold text-base text-neutral-900">Personal &amp; Contact Information</h2>
+                <p class="text-xs text-neutral-500">Your legal name will appear exactly as specified on accredited certificates.</p>
+              </div>
+            </div>
+
+            <!-- Avatar Row -->
+            <div class="flex flex-col sm:flex-row items-center gap-6 mb-8 p-4 bg-neutral-50/70 rounded-xl border border-neutral-200/60">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" alt="Naveed Karim" class="w-20 h-20 rounded-full object-cover ring-4 ring-emerald-500/20" />
+              <div class="flex-1 text-center sm:text-left">
+                <div class="text-sm font-bold text-neutral-900">Profile Photograph</div>
+                <div class="text-xs text-neutral-500 mb-3">Accepted formats: JPG, PNG, WebP. Recommended 400×400px.</div>
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <button type="button" class="px-3.5 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold transition">
+                    Upload New Photo
+                  </button>
+                  <button type="button" class="px-3.5 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-100 text-neutral-600 text-xs font-semibold transition">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="learner-fullname" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Full Name (For Certificate) *
+                </label>
+                <input type="text" id="learner-fullname" name="fullname" value="Naveed Karim" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <p class="text-[11px] text-neutral-400 mt-1.5">Official name verified against national identity or corporate register.</p>
+              </div>
+
+              <div>
+                <label for="learner-email" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Official Email Address *
+                </label>
+                <div class="relative">
+                  <input type="email" id="learner-email" name="email" value="naveed.karim@unilever.com" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 pr-24" />
+                  <span class="absolute right-3 top-1/2 -translate-y-1/2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+                    <i data-lucide="check" class="w-3 h-3"></i> Verified
+                  </span>
+                </div>
+                <p class="text-[11px] text-neutral-400 mt-1.5">Used for cohort login, webinar links, and course access.</p>
+              </div>
+
+              <div>
+                <label for="learner-phone" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Contact Mobile Number *
+                </label>
+                <input type="tel" id="learner-phone" name="phone" value="+880 1711 000000" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <p class="text-[11px] text-neutral-400 mt-1.5">Used for venue coordinates and WhatsApp classroom group dispatch.</p>
+              </div>
+
+              <div>
+                <label for="learner-timezone" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Primary Timezone
+                </label>
+                <select id="learner-timezone" name="timezone" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white">
+                  <option value="Asia/Dhaka" selected>Asia/Dhaka (GMT +6:00, Bangladesh Standard Time)</option>
+                  <option value="Asia/Singapore">Asia/Singapore (GMT +8:00)</option>
+                  <option value="Asia/Dubai">Asia/Dubai (GMT +4:00)</option>
+                  <option value="Europe/London">Europe/London (GMT +0:00 / +1:00)</option>
+                </select>
+                <p class="text-[11px] text-neutral-400 mt-1.5">All webinar schedule dates adjust to this timezone.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Professional & Corporate Profile -->
+          <div class="bg-white rounded-2xl border border-neutral-200/80 p-6 md:p-8 shadow-sm">
+            <div class="flex items-center gap-3 pb-6 border-b border-neutral-100 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center">
+                <i data-lucide="briefcase" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h2 class="font-display font-bold text-base text-neutral-900">Corporate &amp; Professional Affiliation</h2>
+                <p class="text-xs text-neutral-500">Links your individual account to sponsored enterprise training agreements.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="learner-organization" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Employing Organisation
+                </label>
+                <input type="text" id="learner-organization" name="organization" value="Unilever Bangladesh Ltd." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+
+              <div>
+                <label for="learner-designation" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Official Designation / Title
+                </label>
+                <input type="text" id="learner-designation" name="designation" value="Commercial Sales Director" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+
+              <div>
+                <label for="learner-department" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Department / Function
+                </label>
+                <input type="text" id="learner-department" name="department" value="Customer Development &amp; Trade Strategy" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+
+              <div>
+                <label for="learner-industry" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Industry Sector
+                </label>
+                <select id="learner-industry" name="industry" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white">
+                  <option value="FMCG" selected>FMCG &amp; Retail Distribution</option>
+                  <option value="Banking">Banking &amp; Financial Services</option>
+                  <option value="RMG">Textiles &amp; Garments Manufacturing</option>
+                  <option value="Telecom">Telecommunications &amp; Tech</option>
+                  <option value="Pharmaceuticals">Pharmaceuticals &amp; Healthcare</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Password & Security -->
+          <div class="bg-white rounded-2xl border border-neutral-200/80 p-6 md:p-8 shadow-sm">
+            <div class="flex items-center gap-3 pb-6 border-b border-neutral-100 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h2 class="font-display font-bold text-base text-neutral-900">Security &amp; Password Update</h2>
+                <p class="text-xs text-neutral-500">Ensure your account uses a secure password to protect executive transcripts.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label for="curr-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Current Password
+                </label>
+                <input type="password" id="curr-password" name="curr_password" placeholder="••••••••••••" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+
+              <div>
+                <label for="new-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  New Password
+                </label>
+                <input type="password" id="new-password" name="new_password" placeholder="Min 8 characters" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+
+              <div>
+                <label for="confirm-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                  Confirm New Password
+                </label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Repeat new password" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+              </div>
+            </div>
+
+            <div class="mt-4 p-3 rounded-xl bg-neutral-50 border border-neutral-200/60 flex items-start gap-2.5 text-xs text-neutral-500">
+              <i data-lucide="info" class="w-4 h-4 text-neutral-400 shrink-0 mt-0.5"></i>
+              <span>Password must contain at least 8 alphanumeric characters, including at least one uppercase letter and one numeric digit.</span>
+            </div>
+          </div>
+
+          <!-- Section 4: Notification & LMS Preferences -->
+          <div class="bg-white rounded-2xl border border-neutral-200/80 p-6 md:p-8 shadow-sm">
+            <div class="flex items-center gap-3 pb-6 border-b border-neutral-100 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-800 flex items-center justify-center">
+                <i data-lucide="bell" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h2 class="font-display font-bold text-base text-neutral-900">Communication &amp; Accessibility Preferences</h2>
+                <p class="text-xs text-neutral-500">Control how Open ECDL notifies you about cohort schedules and learning milestones.</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <label class="flex items-start gap-3 p-3.5 rounded-xl border border-neutral-200 hover:bg-neutral-50/60 cursor-pointer transition">
+                <input type="checkbox" name="notif_schedule" checked class="mt-0.5 w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500" />
+                <div class="text-xs">
+                  <div class="font-bold text-neutral-900">Classroom &amp; Live Webinar Timetable Reminders</div>
+                  <div class="text-neutral-500">Receive calendar invitations and SMS notifications 24 hours prior to scheduled masterclass sessions.</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl border border-neutral-200 hover:bg-neutral-50/60 cursor-pointer transition">
+                <input type="checkbox" name="notif_certs" checked class="mt-0.5 w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500" />
+                <div class="text-xs">
+                  <div class="font-bold text-neutral-900">Certificate Issuance &amp; Verification Alerts</div>
+                  <div class="text-neutral-500">Get notified immediately once your case assessment is graded and the verifiable digital certificate is published.</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl border border-neutral-200 hover:bg-neutral-50/60 cursor-pointer transition">
+                <input type="checkbox" name="notif_digest" class="mt-0.5 w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500" />
+                <div class="text-xs">
+                  <div class="font-bold text-neutral-900">Monthly Bangladesh Regulatory &amp; HR Briefing</div>
+                  <div class="text-neutral-500">Curated legal summaries of statutory amendments, labor tribunal precedents, and upcoming masterclasses.</div>
+                </div>
+              </label>
+
+              <div class="pt-4 border-t border-neutral-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="lms-font-size" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                    LMS Player Font Sizing
+                  </label>
+                  <select id="lms-font-size" name="fontSize" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <option value="normal" selected>Standard (14px baseline)</option>
+                    <option value="large">Large / High Readability (16px baseline)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="lms-speed" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
+                    Default Video Playback Speed
+                  </label>
+                  <select id="lms-speed" name="speed" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <option value="1.0" selected>1.0x (Standard)</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex items-center justify-between pt-4">
+            <a href="/learner/dashboard" class="px-5 py-2.5 rounded-xl border border-neutral-200 hover:bg-neutral-100 text-xs font-bold text-neutral-700 transition">
+              Cancel &amp; Discard
+            </a>
+            <button type="submit" class="px-6 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold shadow-md hover:shadow transition flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4"></i>
+              <span>Save Profile &amp; Preferences</span>
+            </button>
+          </div>
+
+        </form>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/learner.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

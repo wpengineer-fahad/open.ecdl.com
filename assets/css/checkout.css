@@ -1,0 +1,612 @@
+/**
+ * Open ECDL — Phase 10: Registration, Cart, Checkout & Orders Stylesheet
+ * Enroute Center for Development Ltd.
+ */
+
+/* ==========================================================================
+   1. CART & CHECKOUT LAYOUT
+   ========================================================================== */
+.ecdl-cart-section,
+.ecdl-checkout-section,
+.ecdl-order-section {
+  padding: var(--space-xl, 3rem) 0;
+  background-color: var(--ecdl-color-surface, #F8F9FA);
+  min-height: 80vh;
+}
+
+.ecdl-cart-grid,
+.ecdl-checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg, 2rem);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-cart-grid,
+  .ecdl-checkout-grid {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   2. CART ITEMS TABLE & CARDS
+   ========================================================================== */
+.ecdl-cart-card {
+  background: #ffffff;
+  border: 1px solid var(--ecdl-color-borders, #E5E7EB);
+  border-radius: var(--radius-md, 16px);
+  padding: var(--space-md, 1.5rem);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.ecdl-cart-card:hover {
+  border-color: #D1D5DB;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.ecdl-cart-item-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ecdl-cart-item-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: #E5E7EB;
+}
+
+.ecdl-cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ecdl-cart-item-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black, #111111);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.ecdl-cart-item-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.ecdl-cart-item-title a:hover {
+  color: var(--ecdl-color-green, #108B44);
+}
+
+.ecdl-cart-item-meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary, #4B5563);
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ecdl-cohort-select {
+  background: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1F2937;
+  outline: none;
+  width: 100%;
+  max-width: 320px;
+}
+
+.ecdl-cohort-select:focus {
+  border-color: var(--ecdl-color-green, #108B44);
+  background: #ffffff;
+}
+
+.ecdl-cart-item-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #F3F4F6;
+  gap: 0.75rem;
+}
+
+/* Quantity stepper */
+.ecdl-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ecdl-qty-btn {
+  width: 32px;
+  height: 32px;
+  background: #F9FAFB;
+  border: none;
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.ecdl-qty-btn:hover:not(:disabled) {
+  background: #E5E7EB;
+}
+
+.ecdl-qty-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ecdl-qty-input {
+  width: 44px;
+  height: 32px;
+  border: none;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+  background: transparent;
+  outline: none;
+}
+
+/* Pricing in cart */
+.ecdl-cart-item-price {
+  text-align: right;
+}
+
+.ecdl-cart-unit-price {
+  font-size: 0.8125rem;
+  color: #6B7280;
+}
+
+.ecdl-cart-total-price {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--ecdl-color-black, #111111);
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+}
+
+.ecdl-remove-btn {
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+.ecdl-remove-btn:hover {
+  color: #DC2626;
+  background: #FEE2E2;
+}
+
+/* ==========================================================================
+   3. ORDER SUMMARY SIDEBAR
+   ========================================================================== */
+.ecdl-summary-card {
+  background: #ffffff;
+  border: 1px solid var(--ecdl-color-borders, #E5E7EB);
+  border-radius: var(--radius-md, 16px);
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 90px;
+}
+
+.ecdl-summary-title {
+  font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.1875rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.ecdl-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9375rem;
+  color: #4B5563;
+  margin-bottom: 0.85rem;
+}
+
+.ecdl-summary-row--total {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111111;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 2px dashed #E5E7EB;
+}
+
+.ecdl-tax-notice {
+  font-size: 0.75rem;
+  color: #6B7280;
+  background: #F9FAFB;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid #F3F4F6;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   4. CHECKOUT MULTI-STEP PROGRESS BAR
+   ========================================================================== */
+.ecdl-checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md, 16px);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.ecdl-step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #9CA3AF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.ecdl-step-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.ecdl-step-item.is-active {
+  color: var(--ecdl-color-green, #108B44);
+}
+
+.ecdl-step-item.is-active .ecdl-step-number {
+  background: var(--ecdl-color-green, #108B44);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(16, 139, 68, 0.15);
+}
+
+.ecdl-step-item.is-complete {
+  color: #111111;
+}
+
+.ecdl-step-item.is-complete .ecdl-step-number {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.ecdl-step-divider {
+  flex: 1;
+  height: 2px;
+  background: #E5E7EB;
+  margin: 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .ecdl-step-label {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   5. PAYMENT SELECTION & METHODS
+   ========================================================================== */
+.ecdl-payment-option-card {
+  border: 2px solid #E5E7EB;
+  border-radius: var(--radius-md, 16px);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.ecdl-payment-option-card:hover {
+  border-color: #CBD5E1;
+}
+
+.ecdl-payment-option-card.is-selected {
+  border-color: var(--ecdl-color-green, #108B44);
+  background: #F0FDF4;
+}
+
+.ecdl-payment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ecdl-payment-radio {
+  accent-color: var(--ecdl-color-green, #108B44);
+  width: 18px;
+  height: 18px;
+}
+
+.ecdl-bank-details-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.ecdl-bank-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #EDF2F7;
+}
+
+.ecdl-bank-field:last-child {
+  border-bottom: none;
+}
+
+.ecdl-copy-btn {
+  background: none;
+  border: none;
+  color: var(--ecdl-color-green, #108B44);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* File Upload Dropzone */
+.ecdl-upload-dropzone {
+  border: 2px dashed #CBD5E1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #FAFAFA;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 1rem 0;
+}
+
+.ecdl-upload-dropzone:hover,
+.ecdl-upload-dropzone.is-dragover {
+  border-color: var(--ecdl-color-green, #108B44);
+  background: #F0FDF4;
+}
+
+/* ==========================================================================
+   6. GROUP REGISTRATION ROSTER TABLE
+   ========================================================================== */
+.ecdl-roster-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+}
+
+.ecdl-roster-table th {
+  background: #F9FAFB;
+  color: #374151;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.ecdl-roster-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: middle;
+}
+
+.ecdl-roster-input {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  outline: none;
+  background: #ffffff;
+}
+
+.ecdl-roster-input:focus {
+  border-color: var(--ecdl-color-green, #108B44);
+  box-shadow: 0 0 0 2px rgba(16, 139, 68, 0.1);
+}
+
+/* ==========================================================================
+   7. NINE ORDER STATUS BADGES
+   ========================================================================== */
+.ecdl-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* 1. Pending Payment */
+.ecdl-status--pending-payment {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+/* 2. Processing */
+.ecdl-status--processing {
+  background: #EFF6FF;
+  color: #1E40AF;
+  border: 1px solid #BFDBFE;
+}
+
+/* 3. Paid */
+.ecdl-status--paid {
+  background: #DCFCE7;
+  color: #166534;
+  border: 1px solid #86EFAC;
+}
+
+/* 4. Payment Failed */
+.ecdl-status--failed {
+  background: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #FCA5A5;
+}
+
+/* 5. Awaiting Transfer */
+.ecdl-status--awaiting-transfer {
+  background: #FFEDD5;
+  color: #9A3412;
+  border: 1px solid #FDBA74;
+}
+
+/* 6. Evidence Submitted */
+.ecdl-status--evidence-submitted {
+  background: #F3E8FF;
+  color: #6B21A8;
+  border: 1px solid #D8B4FE;
+}
+
+/* 7. Pending Verification */
+.ecdl-status--pending-verification {
+  background: #E0E7FF;
+  color: #3730A3;
+  border: 1px solid #C7D2FE;
+}
+
+/* 8. Rejected */
+.ecdl-status--rejected {
+  background: #FFE4E6;
+  color: #9F1239;
+  border: 1px solid #FECDD3;
+}
+
+/* 9. Refunded */
+.ecdl-status--refunded {
+  background: #F1F5F9;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+}
+
+/* ==========================================================================
+   8. REVIEWER PROTOTYPE STATUS SWITCHER BAR
+   ========================================================================== */
+.ecdl-reviewer-bar {
+  background: #111827;
+  color: #F9FAFB;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  border: 1px solid #374151;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.ecdl-reviewer-bar__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9CA3AF;
+  margin-bottom: 0.75rem;
+}
+
+.ecdl-reviewer-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ecdl-reviewer-pill {
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #374151;
+  background: #1F2937;
+  color: #E5E7EB;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ecdl-reviewer-pill:hover {
+  background: #374151;
+  color: #ffffff;
+}
+
+.ecdl-reviewer-pill.is-active {
+  background: var(--ecdl-color-green, #108B44);
+  border-color: var(--ecdl-color-green, #108B44);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   9. PRINT RECEIPT / MUSHAK FORM 6.3 STYLES
+   ========================================================================== */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .ecdl-header,
+  .ecdl-footer,
+  .ecdl-reviewer-bar,
+  .no-print {
+    display: none !important;
+  }
+  .ecdl-order-section {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .ecdl-receipt-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}

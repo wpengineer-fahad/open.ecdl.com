@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout &amp; Enrollment — Open ECDL</title>
+  <meta name="description" content="Complete your corporate registration and secure cohort seats at Enroute Center for Development Ltd. (ECDL)." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/checkout" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/header-footer.css" />
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR                                        -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">SECURE CHECKOUT</span>
+        <span class="text-neutral-300 hidden sm:inline">256-bit Encrypted Session • Mushak Form 6.3 Authorized Billing</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <span class="inline-flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>PCI-DSS Compliant</span>
+        </span>
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>Support: +880 1767-804408</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. MAIN HEADER                                            -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Middle: Breadcrumb / Step Title -->
+        <div class="hidden md:flex items-center gap-2 text-xs font-semibold text-neutral-500">
+          <a href="cart.html" class="hover:text-ecdl-green">Cart</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
+          <span class="text-neutral-900">4-Step Registration Checkout</span>
+        </div>
+
+        <!-- Right Side: Trust & Help -->
+        <div class="flex items-center gap-4 text-xs">
+          <div class="hidden sm:flex items-center gap-1.5 text-neutral-600">
+            <i data-lucide="lock" class="w-4 h-4 text-emerald-600"></i>
+            <span>Encrypted Checkout</span>
+          </div>
+          <a href="cart.html" class="inline-flex items-center gap-1 text-ecdl-green font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            <span>Back to Cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. MAIN CHECKOUT SECTION                                  -->
+  <!-- ========================================================= -->
+  <main class="ecdl-checkout-section flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 4-Step Progress Indicator -->
+      <nav class="ecdl-checkout-steps" aria-label="Checkout Progress">
+        <div class="ecdl-step-item is-active" id="step-indicator-1">
+          <div class="ecdl-step-number">1</div>
+          <div class="ecdl-step-label">Participant Info</div>
+        </div>
+        <div class="ecdl-step-divider"></div>
+        <div class="ecdl-step-item" id="step-indicator-2">
+          <div class="ecdl-step-number">2</div>
+          <div class="ecdl-step-label">Registration Details</div>
+        </div>
+        <div class="ecdl-step-divider"></div>
+        <div class="ecdl-step-item" id="step-indicator-3">
+          <div class="ecdl-step-number">3</div>
+          <div class="ecdl-step-label">Payment Selection</div>
+        </div>
+        <div class="ecdl-step-divider"></div>
+        <div class="ecdl-step-item" id="step-indicator-4">
+          <div class="ecdl-step-number">4</div>
+          <div class="ecdl-step-label">Review &amp; Confirm</div>
+        </div>
+      </nav>
+
+      <div class="ecdl-checkout-grid">
+
+        <!-- Left: Form Steps Wizard -->
+        <div>
+          <form id="checkout-wizard-form" class="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8 shadow-sm">
+
+            <!-- STEP 1: PARTICIPANT INFORMATION -->
+            <div id="checkout-step-1">
+              <div class="mb-6 pb-4 border-b border-neutral-100">
+                <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider">Step 1 of 4</span>
+                <h2 class="font-display text-xl font-bold text-neutral-900 mt-1">Participant &amp; Contact Information</h2>
+                <p class="text-xs text-neutral-500 mt-1">
+                  Provide primary attendee or coordinator details for session joining links and certification.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-700 mb-1">Full Legal Name <span class="text-rose-600">*</span></label>
+                  <input type="text" id="chk-fullname" required value="Naveed Karim" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-sm focus:outline-none focus:border-ecdl-green">
+                  <span class="text-[11px] text-neutral-400">Name will appear exactly as typed on the accredited certificate of completion.</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-700 mb-1">Official / Corporate Email <span class="text-rose-600">*</span></label>
+                    <input type="email" id="chk-email" required value="naveed.karim@unilever.com" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-sm focus:outline-none focus:border-ecdl-green">
+                    <span class="text-[11px] text-neutral-400">LMS credentials &amp; materials sent here.</span>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-700 mb-1">Mobile Contact Number <span class="text-rose-600">*</span></label>
+                    <input type="tel" id="chk-phone" required value="+880 1711-223344" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-sm focus:outline-none focus:border-ecdl-green">
+                    <span class="text-[11px] text-neutral-400">For cohort SMS notifications &amp; WhatsApp coordination.</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-700 mb-1">Organization / Employer <span class="text-rose-600">*</span></label>
+                    <input type="text" id="chk-company" required value="Unilever Bangladesh Ltd." class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-sm focus:outline-none focus:border-ecdl-green">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-700 mb-1">Professional Designation <span class="text-rose-600">*</span></label>
+                    <input type="text" id="chk-designation" required value="Commercial Sales Director" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 text-sm focus:outline-none focus:border-ecdl-green">
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-neutral-100 flex justify-end">
+                <button type="button" onclick="OpenECDLCheckout.goToStep(2)" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-md transition-all">
+                  <span>Continue to Registration Details</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: REGISTRATION DETAILS -->
+            <div id="checkout-step-2" style="display:none;">
+              <div class="mb-6 pb-4 border-b border-neutral-100">
+                <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider">Step 2 of 4</span>
+                <h2 class="font-display text-xl font-bold text-neutral-900 mt-1">Registration Type &amp; Billing Profile</h2>
+                <p class="text-xs text-neutral-500 mt-1">
+                  Select enrollment sponsorship and provide tax information for statutory Mushak 6.3 challan issuance.
+                </p>
+              </div>
+
+              <!-- Sponsorship Type Selector -->
+              <div class="space-y-4 mb-6">
+                <label class="block text-xs font-bold text-neutral-700">Enrollment Sponsorship</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <label class="flex items-center gap-3 p-3.5 border border-neutral-200 rounded-xl cursor-pointer hover:border-ecdl-green">
+                    <input type="radio" name="registrationType" value="Individual" class="accent-ecdl-green">
+                    <div>
+                      <div class="font-bold text-xs text-neutral-900">Self-Sponsored (Individual)</div>
+                      <div class="text-[11px] text-neutral-500">Personal professional development</div>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 p-3.5 border border-emerald-300 bg-emerald-50/50 rounded-xl cursor-pointer hover:border-ecdl-green">
+                    <input type="radio" name="registrationType" value="Corporate" checked class="accent-ecdl-green">
+                    <div>
+                      <div class="font-bold text-xs text-neutral-900">Corporate Sponsored</div>
+                      <div class="text-[11px] text-neutral-500">Company pays tuition / PO billing</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Corporate Tax Fields -->
+              <div id="corporate-tax-fields" class="space-y-4 p-4 rounded-xl bg-neutral-50 border border-neutral-200 mb-6">
+                <div class="flex items-center justify-between text-xs font-bold text-neutral-800">
+                  <span>Corporate Invoicing &amp; Tax Profile</span>
+                  <span class="text-[10px] text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-mono">Mushak 6.3 Applicable</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-neutral-700 mb-1">Company BIN / TIN (Optional)</label>
+                    <input type="text" id="chk-tinbin" value="BIN: 001928412-0102" placeholder="e.g. BIN: 001928412-0101" class="w-full px-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-neutral-700 mb-1">Billing Attention / Department</label>
+                    <input type="text" id="chk-dept" value="Human Resources &amp; Capability Desk" class="w-full px-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-neutral-700 mb-1">Official Company Billing Address</label>
+                  <input type="text" id="chk-address" value="ZN Tower, Road 8, Gulshan-1, Dhaka-1212, Bangladesh" class="w-full px-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:border-ecdl-green">
+                </div>
+
+                <div class="flex items-start gap-2 pt-1">
+                  <input type="checkbox" id="chk-mushak-req" checked class="mt-1 accent-ecdl-green">
+                  <label for="chk-mushak-req" class="text-xs text-neutral-600">
+                    Generate an official physical/digital <strong>Mushak Form 6.3 VAT Challan</strong> addressed to our organization's accounts desk.
+                  </label>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                <button type="button" onclick="OpenECDLCheckout.goToStep(1)" class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-neutral-600 hover:text-neutral-900">
+                  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                  <span>Back to Step 1</span>
+                </button>
+                <button type="button" onclick="OpenECDLCheckout.goToStep(3)" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-md transition-all">
+                  <span>Continue to Payment Selection</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: PAYMENT SELECTION -->
+            <div id="checkout-step-3" style="display:none;">
+              <div class="mb-6 pb-4 border-b border-neutral-100">
+                <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider">Step 3 of 4</span>
+                <h2 class="font-display text-xl font-bold text-neutral-900 mt-1">Select Payment Method</h2>
+                <p class="text-xs text-neutral-500 mt-1">
+                  Choose between automated online payment clearance or offline corporate bank transfer.
+                </p>
+              </div>
+
+              <!-- Option 1: Online Payment -->
+              <div class="ecdl-payment-option-card is-selected" id="opt-card-online">
+                <div class="ecdl-payment-header">
+                  <input type="radio" name="paymentMethod" value="online" checked class="ecdl-payment-radio">
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-sm text-neutral-900">Online Payment Gateway</span>
+                      <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Instant Clearance</span>
+                    </div>
+                    <p class="text-xs text-neutral-500 mt-0.5">
+                      Credit / Debit Cards (Visa, Mastercard, Amex) • Mobile Wallets (bKash, Nagad, Rocket) • Internet Banking
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-3 pt-3 border-t border-neutral-100 flex flex-wrap items-center gap-4 text-xs text-neutral-600">
+                  <span class="flex items-center gap-1 font-semibold text-neutral-800">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                    <span>0% Convenience Surcharge</span>
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i>
+                    <span>Instant Seat Confirmation</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Option 2: Offline Invoice / Bank Transfer -->
+              <div class="ecdl-payment-option-card" id="opt-card-offline">
+                <div class="ecdl-payment-header">
+                  <input type="radio" name="paymentMethod" value="offline" class="ecdl-payment-radio">
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-sm text-neutral-900">Offline Corporate Invoice &amp; Bank Transfer</span>
+                      <span class="text-[10px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">BEFTN / RTGS / PO</span>
+                    </div>
+                    <p class="text-xs text-neutral-500 mt-0.5">
+                      Issue official Pro-Forma Invoice for internal corporate accounts approval and bank wire execution.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bank Instructions Box (Revealed when offline selected) -->
+                <div id="offline-payment-instructions" style="display:none;" class="ecdl-bank-details-box mt-3">
+                  <div class="font-bold text-xs text-neutral-900 mb-2 flex items-center justify-between">
+                    <span>Corporate Bank Account for Tuition Transfer:</span>
+                    <span class="text-[11px] text-neutral-500 font-normal">Primary Clearing</span>
+                  </div>
+                  <div class="space-y-1.5 text-xs text-neutral-700">
+                    <div class="ecdl-bank-field">
+                      <span class="text-neutral-500">Bank Name:</span>
+                      <span class="font-bold text-neutral-900">Prime Bank PLC</span>
+                    </div>
+                    <div class="ecdl-bank-field">
+                      <span class="text-neutral-500">Account Name:</span>
+                      <span class="font-bold text-neutral-900">Enroute Center for Development Ltd.</span>
+                    </div>
+                    <div class="ecdl-bank-field">
+                      <span class="text-neutral-500">Account Number:</span>
+                      <span class="font-mono font-bold text-neutral-900">2118311029481</span>
+                    </div>
+                    <div class="ecdl-bank-field">
+                      <span class="text-neutral-500">Routing Number:</span>
+                      <span class="font-mono text-neutral-900">060260421 (Banani Branch)</span>
+                    </div>
+                  </div>
+                  <div class="mt-3 pt-2 border-t border-neutral-200 text-[11px] text-neutral-500">
+                    Pro-forma invoice will be generated upon checkout with 10 business days settlement validity.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                <button type="button" onclick="OpenECDLCheckout.goToStep(2)" class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-neutral-600 hover:text-neutral-900">
+                  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                  <span>Back to Step 2</span>
+                </button>
+                <button type="button" onclick="OpenECDLCheckout.goToStep(4)" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-md transition-all">
+                  <span>Review &amp; Confirmation</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4: REVIEW & CONFIRMATION -->
+            <div id="checkout-step-4" style="display:none;">
+              <div class="mb-6 pb-4 border-b border-neutral-100">
+                <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider">Step 4 of 4</span>
+                <h2 class="font-display text-xl font-bold text-neutral-900 mt-1">Review Your Order &amp; Confirm Booking</h2>
+                <p class="text-xs text-neutral-500 mt-1">
+                  Verify participant, organization, and billing details before completing official registration.
+                </p>
+              </div>
+
+              <!-- Participant & Billing Verification Card -->
+              <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 mb-6 space-y-3 text-xs">
+                <div class="flex items-center justify-between pb-2 border-b border-neutral-200">
+                  <span class="font-bold text-neutral-900 text-sm">Booking Summary</span>
+                  <button type="button" onclick="OpenECDLCheckout.goToStep(1)" class="text-ecdl-green font-bold hover:underline">Edit</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-neutral-700">
+                  <div>
+                    <span class="text-neutral-400 block text-[11px]">Primary Attendee:</span>
+                    <strong id="rev-fullname" class="text-neutral-900 text-sm">Naveed Karim</strong>
+                  </div>
+                  <div>
+                    <span class="text-neutral-400 block text-[11px]">Contact Email &amp; Phone:</span>
+                    <span id="rev-email" class="font-medium">naveed@company.com</span> • <span id="rev-phone">+880 1711-223344</span>
+                  </div>
+                  <div>
+                    <span class="text-neutral-400 block text-[11px]">Organization &amp; Title:</span>
+                    <span id="rev-company" class="font-medium">Commercial Sales Director, Unilever</span>
+                  </div>
+                  <div>
+                    <span class="text-neutral-400 block text-[11px]">Registration Type:</span>
+                    <span id="rev-type" class="font-bold text-neutral-900">Corporate Sponsored</span>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <span class="text-neutral-400 block text-[11px]">Selected Payment Mode:</span>
+                    <span id="rev-payment" class="font-bold text-emerald-800">Online Payment Gateway (Instant Confirmation)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms and Disclaimers -->
+              <div class="mb-6 p-4 rounded-xl bg-emerald-50/50 border border-emerald-200 text-xs text-neutral-700 space-y-3">
+                <div class="flex items-start gap-2.5">
+                  <input type="checkbox" id="chk-terms" required checked class="mt-0.5 accent-ecdl-green">
+                  <label for="chk-terms" class="cursor-pointer">
+                    <strong>I agree to the Open ECDL Enrollment Terms &amp; Conditions</strong> and acknowledge that course attendance, accreditation issuance, and cohort materials follow Enroute Center for Development Ltd. quality standards.
+                  </label>
+                </div>
+                <div class="text-[11px] text-neutral-500 pl-6">
+                  * Prototype Demonstration Note: Clicking "Confirm &amp; Place Order" records an official demonstration booking and transitions to order confirmation. No real financial debit occurs.
+                </div>
+              </div>
+
+              <div class="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                <button type="button" onclick="OpenECDLCheckout.goToStep(3)" class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-neutral-600 hover:text-neutral-900">
+                  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                  <span>Back to Step 3</span>
+                </button>
+                <button type="submit" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-display text-sm font-bold shadow-lg hover:shadow-xl transition-all">
+                  <span>Confirm &amp; Place Order</span>
+                  <i data-lucide="check-circle" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right: Sticky Order Summary -->
+        <aside>
+          <div class="ecdl-summary-card">
+            <h3 class="ecdl-summary-title">Order Items</h3>
+
+            <div id="checkout-summary-items" class="space-y-2 mb-4">
+              <!-- Dynamically populated -->
+            </div>
+
+            <div class="pt-3 border-t border-neutral-100 space-y-2">
+              <div class="ecdl-summary-row text-xs">
+                <span>Tuition Subtotal:</span>
+                <span id="checkout-subtotal" class="font-bold text-neutral-900">BDT 27,000</span>
+              </div>
+              <div class="ecdl-summary-row text-xs">
+                <span>15% VAT (Mushak 6.3):</span>
+                <span id="checkout-vat" class="font-semibold text-neutral-800">BDT 4,050</span>
+              </div>
+              <div class="ecdl-summary-row ecdl-summary-row--total pt-2">
+                <span class="text-sm">Total Due:</span>
+                <span id="checkout-grand-total" class="text-ecdl-green">BDT 31,050</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-neutral-100 text-xs text-neutral-500 space-y-2">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                <span>Guaranteed seat reservation in selected cohort</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="file-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>Automated Mushak Form 6.3 Tax Challan</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-emerald-600"></i>
+                <span>Verifiable ECDL Certificate of Completion</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 4. FOOTER                                                 -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-10 pb-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="cart.html" class="hover:text-white transition-colors">Cart</a>
+          <a href="checkout.html" class="hover:text-white transition-colors text-ecdl-yellow">Checkout</a>
+          <a href="registration-group.html" class="hover:text-white transition-colors">Group Registration</a>
+          <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

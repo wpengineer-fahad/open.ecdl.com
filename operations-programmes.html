@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Catalog & Tracks — Open ECDL Operations</title>
+  <meta name="description" content="Master training catalog, curriculum versions, syllabus controls, and cohort creation triggers." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/operations/programmes" />
+
+  <!-- Fonts & CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              dark: '#0F172A',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/operations.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <div class="ops-wrapper">
+
+    <!-- Operations Sidebar -->
+    <aside class="ops-sidebar" id="ops-sidebar" aria-label="Operations Navigation">
+      <div class="ops-sidebar-brand">
+        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-display font-bold text-base tracking-tight">
+          <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center font-black text-white text-sm">EC</div>
+          <div>
+            <span>Open ECDL</span>
+            <div class="text-[10px] text-emerald-400 font-mono tracking-normal uppercase">Operations Hub</div>
+          </div>
+        </a>
+        <button id="ops-sidebar-close" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Close Sidebar">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="px-4 py-3 bg-slate-900/60 border-b border-slate-800 flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-emerald-500 shrink-0 ops-user-avatar" />
+        <div class="min-w-0 flex-1">
+          <div class="text-xs font-bold text-white truncate ops-user-name">Nahid Hasan</div>
+          <div class="text-[11px] text-emerald-400 font-medium truncate ops-user-role-label">Training Manager</div>
+        </div>
+      </div>
+
+      <nav class="ops-sidebar-nav">
+        <div class="ops-sidebar-section-title">Core Operations</div>
+        <a href="/operations/dashboard" class="ops-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Operations Command</span>
+        </a>
+        <a href="/operations/programmes" class="ops-sidebar-link is-active">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Master Catalog</span>
+        </a>
+        <a href="/operations/cohorts" class="ops-sidebar-link">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span>Cohorts Scheduling</span>
+          <span class="ops-sidebar-badge">8</span>
+        </a>
+        <a href="/operations/sessions" class="ops-sidebar-link">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Session Timetable</span>
+        </a>
+        <a href="/operations/attendance" class="ops-sidebar-link">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+          <span>Daily Attendance</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Faculty & Feedback</div>
+        <a href="/operations/trainers" class="ops-sidebar-link">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Faculty Directory</span>
+        </a>
+        <a href="/operations/evaluations" class="ops-sidebar-link">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Kirkpatrick Evals (L1-3)</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Quality & Governance</div>
+        <a href="/operations/quality" class="ops-sidebar-link">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Quality & CAPA (ISO)</span>
+        </a>
+
+        <div class="ops-sidebar-section-title">Finance & Systems</div>
+        <a href="/operations/finance" class="ops-sidebar-link">
+          <i data-lucide="receipt" class="w-4 h-4"></i>
+          <span>Batch Margins & Payouts</span>
+        </a>
+        <a href="/operations/settings" class="ops-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Room Allocation & Specs</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="ops-main">
+      <header class="ops-topbar">
+        <div class="flex items-center gap-3">
+          <button id="ops-sidebar-toggle" class="lg:hidden text-slate-600 hover:text-slate-900 p-1" aria-label="Open Sidebar">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+          <div>
+            <h1 class="text-sm font-bold text-slate-900">Master Catalog & Track Governance</h1>
+            <div class="text-[11px] text-slate-500">6 Authorized Master Curriculum Tracks • Syllabus Control v4.2</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="ops-role-pill">
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
+            <select class="ops-role-select text-xs font-semibold text-slate-900 bg-transparent cursor-pointer">
+              <option value="manager">Training Manager (Nahid Hasan)</option>
+              <option value="coordinator">Course Coordinator (Afroza Sultana)</option>
+              <option value="trainer">Faculty / Trainer (Advocate Rafiqul Islam)</option>
+              <option value="finance">Finance Officer (A. K. Azad)</option>
+              <option value="quality">QA Manager (S. M. Shafiul Islam)</option>
+              <option value="admin">Platform Admin (System Operations)</option>
+            </select>
+          </div>
+          <button onclick="OpenECDLOperations.openModal('create-cohort-modal')" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-semibold transition-colors">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Schedule New Cohort</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="ops-content">
+        <!-- Search & Filter Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+          <div class="relative w-full sm:w-80">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input type="text" id="programmes-search" placeholder="Search master tracks, codes..." class="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:ring-1 focus:ring-emerald-500 focus:outline-none" />
+          </div>
+          <div class="text-xs text-slate-500 font-medium">
+            Showing <strong class="text-slate-900">6 Active Approved Syllabi</strong>
+          </div>
+        </div>
+
+        <!-- Programmes Table Card -->
+        <div class="ops-card">
+          <div class="ops-table-container">
+            <table class="ops-table" id="programmes-table">
+              <thead>
+                <tr>
+                  <th>Programme Title & Track</th>
+                  <th>Current Version</th>
+                  <th>Authorized Delivery Modes</th>
+                  <th>Contact Hours</th>
+                  <th>Default Fee (BDT)</th>
+                  <th>Active Cohorts</th>
+                  <th>Track Coordinator</th>
+                  <th class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="programmes-table-tbody">
+                <!-- Populated dynamically by operations.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Create Cohort Modal -->
+  <div class="ops-modal-backdrop" id="create-cohort-modal">
+    <div class="ops-modal">
+      <div class="ops-modal-header">
+        <h3 class="font-bold text-slate-900 text-sm">Schedule New Training Cohort</h3>
+        <button onclick="OpenECDLOperations.closeModal('create-cohort-modal')" class="text-slate-400 hover:text-slate-600 p-1">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="event.preventDefault(); OpenECDLOperations.closeModal('create-cohort-modal'); OpenECDLOperations.showToast('New Cohort created and staged in scheduling queue', 'success');">
+        <div class="ops-modal-body space-y-4 text-xs">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Master Programme</label>
+            <select class="w-full p-2 border border-slate-300 rounded focus:ring-1 focus:ring-emerald-500 text-xs">
+              <option>Bangladesh Labour Act 2006 & Gazetted Amendments Masterclass (v4.2)</option>
+              <option>B2B Sales Negotiation & High-Value Account Strategy (v3.1)</option>
+              <option>Executive Priorities, Delegation & Deep Work Mastery (v2.8)</option>
+              <option>Supply Chain Due Diligence & ESG Environmental Governance (v3.0)</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Cohort Batch Code</label>
+              <input type="text" value="BLA-JAN-95" class="w-full p-2 border border-slate-300 rounded font-mono text-xs" />
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Delivery Mode</label>
+              <select class="w-full p-2 border border-slate-300 rounded text-xs">
+                <option>Classroom (Banani Campus)</option>
+                <option>Live Online (Zoom Enterprise)</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Start Date</label>
+              <input type="date" value="2027-01-25" class="w-full p-2 border border-slate-300 rounded text-xs" />
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Capacity (Seats)</label>
+              <input type="number" value="30" class="w-full p-2 border border-slate-300 rounded text-xs" />
+            </div>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Assigned Lead Trainer</label>
+            <select class="w-full p-2 border border-slate-300 rounded text-xs">
+              <option>Advocate Rafiqul Islam (Supreme Court of Bangladesh)</option>
+              <option>Syed Tanvir Ahmed (Former Head of Trade Marketing, BAT)</option>
+              <option>Dr. Kazi Anowar Hossain (Executive Coach)</option>
+              <option>Engr. Mahbubur Rahman (Lead ESG Auditor)</option>
+            </select>
+          </div>
+        </div>
+        <div class="ops-modal-footer">
+          <button type="button" onclick="OpenECDLOperations.closeModal('create-cohort-modal')" class="px-3 py-1.5 border border-slate-300 rounded text-slate-700 font-semibold hover:bg-slate-50 text-xs">Cancel</button>
+          <button type="submit" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-semibold text-xs">Schedule Cohort</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/operations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

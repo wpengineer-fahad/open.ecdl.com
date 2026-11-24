@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training Needs Assessment (TNA) — Open ECDL | Enroute Center for Development</title>
+  <meta name="description" content="Interactive 6-step B2B corporate Training Needs Assessment (TNA) tool. Benchmark organizational skills gaps and receive tailored learning roadmaps." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/corporate-training/tna" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/header-footer.css" />
+  <link rel="stylesheet" href="assets/css/corporate.css" />
+</head>
+<body class="bg-neutral-50/50 text-neutral-800 antialiased font-sans">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">ENTERPRISE TNA</span>
+        <span class="text-neutral-300 hidden sm:inline">All organizational diagnostic data is protected under reciprocal NDA</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:training@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>training@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="hover:text-white text-ecdl-yellow font-semibold transition-colors inline-flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors">Home</a>
+          <a href="courses.html" class="hover:text-ecdl-green transition-colors">Courses</a>
+          <a href="corporate-training.html" class="hover:text-ecdl-green transition-colors font-bold text-ecdl-green">Corporate Training</a>
+          <a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors text-ecdl-green font-extrabold inline-flex items-center gap-1.5">
+            <span>TNA Tool</span>
+            <span class="w-2 h-2 rounded-full bg-ecdl-orange"></span>
+          </a>
+          <a href="corporate-case-studies.html" class="hover:text-ecdl-green transition-colors">Case Studies</a>
+          <a href="corporate-proposal.html" class="hover:text-ecdl-green transition-colors">Request Proposal</a>
+        </nav>
+
+        <!-- Right Controls: Profile Dropdown + Contact -->
+        <div class="flex items-center gap-2.5">
+          <div class="relative" id="profileDropdownWrapper">
+            <button
+              type="button"
+              id="profileMenuBtn"
+              onclick="toggleProfileDropdown()"
+              class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-neutral-200 hover:border-ecdl-green bg-neutral-50 hover:bg-ecdl-greenSoft transition-all text-sm font-semibold text-ecdl-dark"
+            >
+              <span id="profileAvatarBadge" class="w-7 h-7 rounded-full bg-ecdl-green text-white text-xs font-bold flex items-center justify-center">ED</span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Profile</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+            </button>
+            <div id="profileDropdownMenu" class="hidden absolute right-0 mt-2 w-60 rounded-2xl bg-white border border-neutral-200 shadow-cardHover p-2 z-50"></div>
+          </div>
+
+          <a href="corporate-proposal.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-sm transition-colors">
+            <span>Fast Proposal</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <button type="button" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:bg-neutral-100" aria-label="Toggle Menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="index.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
+      <a href="courses.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
+      <a href="corporate-training.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Corporate Training</a>
+      <a href="corporate-tna.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">Online TNA Tool</a>
+      <a href="corporate-case-studies.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Case Studies</a>
+      <a href="corporate-proposal.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-white bg-ecdl-green text-center">Request Proposal</a>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- TNA HERO HEADER                                           -->
+  <!-- ========================================================= -->
+  <section class="bg-gradient-to-br from-ecdl-greenSoft/50 via-white to-amber-50/30 border-b border-neutral-200 py-10 lg:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <nav class="flex items-center justify-center gap-2 text-xs text-neutral-500 mb-2">
+        <a href="index.html" class="hover:text-ecdl-green">Home</a>
+        <span>/</span>
+        <a href="corporate-training.html" class="hover:text-ecdl-green">Corporate Training</a>
+        <span>/</span>
+        <span class="text-ecdl-dark font-bold">Training Needs Assessment</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-greenSoft text-ecdl-green text-xs font-extrabold uppercase">
+        <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
+        <span>Enterprise Diagnostic Engine</span>
+      </span>
+
+      <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+        Corporate Training Needs Assessment (TNA)
+      </h1>
+      <p class="text-neutral-600 text-sm sm:text-base max-w-2xl mx-auto">
+        Identify skills bottlenecks, benchmark regulatory compliance vulnerabilities, and receive a customized 2026 capability roadmap for your leadership and operational teams.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- MULTI-STEP TNA INTERFACE CONTAINER                        -->
+  <!-- ========================================================= -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Confirmation View (Simulated Success) -->
+    <div id="tna-confirmation-view" class="hidden bg-white rounded-3xl border border-neutral-200 p-8 sm:p-12 shadow-card text-center space-y-6">
+      <div class="w-20 h-20 rounded-full bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mx-auto text-3xl font-extrabold shadow-inner">
+        <i data-lucide="check" class="w-10 h-10"></i>
+      </div>
+      <div class="space-y-2">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-ecdl-green">Assessment Successfully Logged</span>
+        <h2 class="font-display text-3xl font-extrabold text-ecdl-dark">TNA Submission Confirmed</h2>
+        <p class="text-neutral-600 text-sm sm:text-base max-w-lg mx-auto">
+          Thank you! We have registered the organizational capability profile for <strong id="tna-confirm-org" class="text-ecdl-dark">Your Organisation</strong>.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-neutral-50 border border-neutral-200 max-w-md mx-auto space-y-3 text-left">
+        <div class="flex items-center justify-between text-xs">
+          <span class="text-neutral-500 font-bold uppercase">Assessment Reference Code:</span>
+          <span id="tna-confirm-ref" class="font-mono font-extrabold text-ecdl-green text-sm">ECDL-TNA-2026-XXXXXX</span>
+        </div>
+        <div class="text-xs text-neutral-600 space-y-1">
+          <p>• <strong>Status:</strong> Assigned to Senior Enterprise Advisor</p>
+          <p>• <strong>Turnaround:</strong> Custom Curriculum Draft within 24 Business Hours</p>
+          <p>• <strong>Reciprocal NDA:</strong> Active and Enforced</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+        <button type="button" onclick="showToast('TNA PDF Diagnostic Summary exported to device.', 'success')" class="px-6 py-3 rounded-xl bg-ecdl-dark text-white font-bold text-sm shadow hover:bg-neutral-800 transition-colors inline-flex items-center gap-2">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download Assessment PDF</span>
+        </button>
+        <a href="corporate-training.html" class="px-6 py-3 rounded-xl border border-neutral-300 text-ecdl-dark font-bold text-sm hover:border-ecdl-green transition-colors">
+          Return to Corporate Overview
+        </a>
+      </div>
+    </div>
+
+    <!-- Active Multi-Step Form Wrapper -->
+    <div id="tna-form-view" class="bg-white rounded-3xl border border-neutral-200 shadow-card p-6 sm:p-10 space-y-8">
+
+      <!-- Progress Header & Breadcrumb Tracker -->
+      <div class="space-y-4 pb-6 border-b border-neutral-200">
+        <div class="flex items-center justify-between text-xs font-bold text-neutral-500">
+          <span id="tna-step-counter-label" class="text-ecdl-green uppercase tracking-wider font-extrabold">Step 1 of 6</span>
+          <span>Confidential Assessment</span>
+        </div>
+
+        <!-- Progress Bar Track -->
+        <div class="w-full h-2 rounded-full bg-neutral-100 overflow-hidden">
+          <div id="tna-progress-bar" class="h-full bg-ecdl-green rounded-full transition-all duration-300" style="width: 0%;"></div>
+        </div>
+
+        <!-- Step Indicator Badges (Desktop) -->
+        <div class="hidden sm:grid grid-cols-6 gap-2 text-center text-xs">
+          <div id="tna-progress-pill-1" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold is-active ecdl-tna-step-pill">1. Details</div>
+          <div id="tna-progress-pill-2" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold ecdl-tna-step-pill">2. Objectives</div>
+          <div id="tna-progress-pill-3" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold ecdl-tna-step-pill">3. Target Team</div>
+          <div id="tna-progress-pill-4" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold ecdl-tna-step-pill">4. Skills Gaps</div>
+          <div id="tna-progress-pill-5" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold ecdl-tna-step-pill">5. Delivery</div>
+          <div id="tna-progress-pill-6" class="py-2 px-1 rounded-xl border border-neutral-200 font-bold ecdl-tna-step-pill">6. Review</div>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 1: ORGANISATION & CONTACT DETAILS                  -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-1" class="space-y-6">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Organisation &amp; Lead Contact</h2>
+          <p class="text-sm text-neutral-500 mt-1">Please provide baseline details for your company and the responsible L&amp;D/HR focal point.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Company / Organisation Name *</label>
+            <input id="tna-org" type="text" placeholder="e.g. Apex Footwear Ltd. / City Bank / Square Pharma" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Industry Sector *</label>
+            <select id="tna-industry" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required>
+              <option value="">Select Industry</option>
+              <option>Apparel, RMG &amp; Textiles</option>
+              <option>Banking, NBFI &amp; Financial Services</option>
+              <option>FMCG, Retail &amp; Consumer Goods</option>
+              <option>Pharmaceuticals &amp; Healthcare</option>
+              <option>Telecommunications &amp; Technology</option>
+              <option>Manufacturing &amp; Heavy Engineering</option>
+              <option>NGO, Development &amp; Public Sector</option>
+              <option>Logistics &amp; Supply Chain</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Corporate Headquarters / Location *</label>
+            <select id="tna-location" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium">
+              <option>Dhaka (Gulshan / Banani / Mohakhali)</option>
+              <option>Dhaka (Motijheel / Kawran Bazar / Dhanmondi)</option>
+              <option>Gazipur / Tongi Industrial Zone</option>
+              <option>Narayanganj / Savar EPZ</option>
+              <option>Chittagong / CEPZ</option>
+              <option>Sylhet / Other Regional Hub</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Contact Person Name *</label>
+            <input id="tna-name" type="text" placeholder="e.g. Kazi Farhan Ahmed" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Designation / Role *</label>
+            <input id="tna-designation" type="text" placeholder="e.g. Head of HR / L&D Director / GM Operations" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Official Corporate Email *</label>
+            <input id="tna-email" type="email" placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Direct Mobile Number *</label>
+            <input id="tna-phone" type="tel" placeholder="+880 1711-XXXXXX" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 2: TRAINING OBJECTIVES                             -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-2" class="space-y-6 hidden">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Primary Business Objectives</h2>
+          <p class="text-sm text-neutral-500 mt-1">Select the strategic outcomes your leadership team expects from this corporate training engagement:</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div onclick="tnaSelectCard('objectives', 'Frontline & Supervisory Productivity', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Frontline &amp; Supervisory Productivity</h4>
+            <p class="text-xs text-neutral-500 mt-1">Empower shift leads and factory supervisors to solve shopfloor bottlenecks autonomously.</p>
+          </div>
+
+          <div onclick="tnaSelectCard('objectives', 'Statutory Legal & Labor Compliance', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Statutory Legal &amp; Labor Compliance</h4>
+            <p class="text-xs text-neutral-500 mt-1">Zero-penalty compliance under the Bangladesh Labour Act 2006 (2026 amendments) and NBR VAT rules.</p>
+          </div>
+
+          <div onclick="tnaSelectCard('objectives', 'Commercial Sales & Margin Defense', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Commercial Sales &amp; Margin Defense</h4>
+            <p class="text-xs text-neutral-500 mt-1">Train KAM leads to negotiate high-value corporate deals without surrendering profit margins.</p>
+          </div>
+
+          <div onclick="tnaSelectCard('objectives', 'Executive Leadership & Succession', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Executive Leadership &amp; Succession</h4>
+            <p class="text-xs text-neutral-500 mt-1">Build bench strength by coaching mid-level managers in strategic thinking and accountability.</p>
+          </div>
+
+          <div onclick="tnaSelectCard('objectives', 'Digital Modernization & Analytics', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Digital Modernization &amp; Analytics</h4>
+            <p class="text-xs text-neutral-500 mt-1">Replace static manual spreadsheets with Microsoft Power BI automated dashboards and KPI alerts.</p>
+          </div>
+
+          <div onclick="tnaSelectCard('objectives', 'Factory Audit & ESG Buyer Standards', this)" class="ecdl-tna-card-select p-5">
+            <h4 class="font-display font-bold text-sm text-ecdl-dark">Factory Audit &amp; ESG Buyer Standards</h4>
+            <p class="text-xs text-neutral-500 mt-1">Pass international social and safety audits (Sedex, BSCI, ILO Better Work) with zero corrective notices.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 3: TARGET EMPLOYEES & DEPARTMENTS                  -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-3" class="space-y-6 hidden">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Target Employees &amp; Cohort Scale</h2>
+          <p class="text-sm text-neutral-500 mt-1">Which functional departments will participate, and what is your anticipated learner volume?</p>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-2">Select Target Departments / Employee Tiers:</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div onclick="tnaSelectCard('targetDepartments', 'Executive / C-Suite', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Executive / C-Suite</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'Mid-Level Managers', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Mid-Level Managers</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'Shift & Line Supervisors', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Line Supervisors</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'Commercial Sales & KAM', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Sales &amp; KAM</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'Finance & Accounting', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Finance &amp; Accounts</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'HR & Legal Compliance', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">HR &amp; Compliance</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'Plant & Factory Operations', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">Operations &amp; Plant</div>
+            <div onclick="tnaSelectCard('targetDepartments', 'IT & Business Intelligence', this)" class="ecdl-tna-card-select p-3 text-center text-xs font-bold">IT &amp; Analytics</div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Estimated Total Participant Volume:</label>
+          <select id="tna-participant-count" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium">
+            <option>10–20 Participants (Single Focused Cohort)</option>
+            <option>21–50 Participants (2 Phased Batches)</option>
+            <option>51–100 Participants (Full Department Rollout)</option>
+            <option>100+ Participants (Enterprise-Wide Multi-Month Academy)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 4: SKILLS GAPS & LEARNING PRIORITIES               -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-4" class="space-y-6 hidden">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Skills Gaps &amp; Priority Capabilities</h2>
+          <p class="text-sm text-neutral-500 mt-1">Select specific operational capability deficits you want the training syllabus to address:</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div onclick="tnaSelectCard('skillsGaps', 'Delegation & Constructive Feedback', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Executive Delegation &amp; Performance Feedback
+          </div>
+          <div onclick="tnaSelectCard('skillsGaps', 'Labour Act 2026 & Domestic Inquiries', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Labour Act 2026 &amp; Flawless Domestic Inquiries
+          </div>
+          <div onclick="tnaSelectCard('skillsGaps', 'B2B Objection Handling & Margin Defense', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Consultative B2B Selling &amp; Price Defense
+          </div>
+          <div onclick="tnaSelectCard('skillsGaps', 'Mushak-6.3 VAT & VDS Rebates', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Mushak-6.3 VAT Invoicing &amp; Withholding Tax
+          </div>
+          <div onclick="tnaSelectCard('skillsGaps', 'Power BI Automated Reporting', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Power BI Interactive Dashboards &amp; Modern Excel
+          </div>
+          <div onclick="tnaSelectCard('skillsGaps', 'Cross-Functional Team Collaboration', this)" class="ecdl-tna-card-select p-4 text-xs font-semibold">
+            • Breaking Departmental Silos &amp; Conflict Resolution
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Any Specific Urgent Operational Challenge? (Optional):</label>
+          <textarea id="tna-urgent-priorities" rows="3" placeholder="e.g. We are expanding to a third plant in Gazipur and need shift supervisors aligned within 45 days..." class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 5: PREFERRED DELIVERY & TIMELINE                   -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-5" class="space-y-6 hidden">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Delivery Execution &amp; Scheduling</h2>
+          <p class="text-sm text-neutral-500 mt-1">Specify how and when your organization prefers to deploy this training:</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Preferred Delivery Mode:</label>
+            <select id="tna-delivery-mode" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium">
+              <option>In-House On-Site (At Client Premises/Factory)</option>
+              <option>ECDL Executive Training Suites (Pink City, Gulshan)</option>
+              <option>Virtual Live Interactive HD Studios (Zoom)</option>
+              <option>Offsite Strategic Resort Retreat (Gazipur/Sreemangal)</option>
+              <option>Blended (Digital Pre-work + Weekend Masterclass)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Desired Start Timeline:</label>
+            <select id="tna-timeline" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm font-medium">
+              <option>Immediate (Within Next 14–30 Days)</option>
+              <option>Q1 2026 Planned Rollout</option>
+              <option>Q2 2026 Planned Rollout</option>
+              <option>Flexible / Exploratory Phase</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-ecdl-dark mb-1.5">Additional Logistics or Notes:</label>
+            <textarea id="tna-notes" rows="2" placeholder="e.g. Weekend classes preferred; requires Mushak-6.3 invoice addressed to our corporate entity..." class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- STEP 6: REVIEW & SUBMIT                                 -->
+      <!-- ======================================================= -->
+      <div id="tna-step-panel-6" class="space-y-6 hidden">
+        <div>
+          <h2 class="font-display text-2xl font-extrabold text-ecdl-dark">Review Your Assessment Profile</h2>
+          <p class="text-sm text-neutral-500 mt-1">Please confirm the diagnostic inputs before submitting to the ECDL Advisory Council:</p>
+        </div>
+
+        <!-- Rendered Summary Box -->
+        <div id="tna-review-summary" class="p-6 rounded-2xl bg-neutral-50 border border-neutral-200">
+          <!-- Populated dynamically by renderTnaReview() -->
+        </div>
+
+        <!-- Confidentiality Consent -->
+        <div class="p-4 rounded-xl bg-ecdl-greenSoft/60 border border-ecdl-green/20 flex items-start gap-3">
+          <input id="tna-consent-check" type="checkbox" checked class="mt-1 w-4 h-4 rounded text-ecdl-green focus:ring-ecdl-green border-neutral-300" />
+          <label for="tna-consent-check" class="text-xs text-neutral-700 leading-relaxed cursor-pointer">
+            I confirm that I am authorized to submit this Training Needs Assessment on behalf of my organisation. I agree to receive a confidential curriculum proposal and diagnostic analysis under Open ECDL’s reciprocal Non-Disclosure Agreement (NDA).
+          </label>
+        </div>
+      </div>
+
+      <!-- Nav Control Actions -->
+      <div class="pt-6 border-t border-neutral-200 flex items-center justify-between">
+        <button
+          type="button"
+          onclick="tnaPrevStep()"
+          class="px-6 py-3 rounded-xl border border-neutral-300 hover:bg-neutral-50 text-ecdl-dark font-bold text-sm transition-colors"
+        >
+          Previous Step
+        </button>
+
+        <button
+          type="button"
+          onclick="tnaNextStep()"
+          id="tna-next-btn"
+          class="px-8 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow-md transition-colors inline-flex items-center gap-2"
+        >
+          <span>Continue</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 4. GLOBAL FOOTER (#111111)                                -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
+          </p>
+          <div class="space-y-2 pt-2 text-xs text-neutral-300">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+              <span>+8801767804408</span>
+            </a>
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>training@ecdl.com.bd</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Corporate Hub</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="corporate-training.html" class="hover:text-ecdl-yellow transition-colors">Corporate Training Overview</a></li>
+            <li><a href="corporate-tna.html" class="hover:text-ecdl-yellow transition-colors font-bold text-ecdl-green">Training Needs Assessment (TNA)</a></li>
+            <li><a href="corporate-proposal.html" class="hover:text-ecdl-yellow transition-colors">Request a Proposal</a></li>
+            <li><a href="corporate-case-studies.html" class="hover:text-ecdl-yellow transition-colors">Enterprise Case Studies</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Solutions</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-ecdl-yellow transition-colors">Leadership Academy</a></li>
+            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-ecdl-yellow transition-colors">Labour Law 2026</a></li>
+            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-ecdl-yellow transition-colors">Commercial Sales</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Sister Concerns</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+        <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
+          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED MODALS & HELPERS -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- AUTH MODAL -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-base font-extrabold">Learner &amp; Corporate Sign In</h3>
+        <button type="button" onclick="closeModal('authModal')" class="p-1.5 rounded-lg hover:bg-white/10 text-neutral-400">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handleSignIn(event)" class="p-6 space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Your Full Name</label>
+          <input id="authNameInput" type="text" placeholder="e.g. Mahfuzur Rahman" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Work Email</label>
+          <input id="authEmailInput" type="email" placeholder="mahfuz@company.com" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow transition-colors">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VERIFY MODAL -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="flex gap-2">
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' };
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('hidden'); document.body.style.overflow = ''; } }
+    function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); }
+    function toggleProfileDropdown() { const m = document.getElementById('profileDropdownMenu'); if (m) m.classList.toggle('hidden'); }
+    function renderProfileMenu() {
+      const menu = document.getElementById('profileDropdownMenu');
+      const badge = document.getElementById('profileAvatarBadge');
+      const label = document.getElementById('profileBtnLabel');
+      if (!menu) return;
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = 'Profile';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+      } else {
+        if (badge) badge.textContent = 'IN';
+        if (label) label.textContent = 'Sign In';
+        menu.innerHTML = '<div class="p-2 space-y-2 text-center"><p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p><button type="button" onclick="toggleProfileDropdown(); openModal(\\'authModal\\')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Sign In / Profile</button></div>';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+    function handleLogout() { currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' }; toggleProfileDropdown(); renderProfileMenu(); showToast('You have logged out safely.', 'info'); }
+    function handleSignIn(e) { e.preventDefault(); const n = document.getElementById('authNameInput').value || 'Learner'; const em = document.getElementById('authEmailInput').value || 'learner@ecdl.com.bd'; currentUser = { loggedIn: true, name: n, email: em, initials: (n[0] + (n.split(' ')[1] ? n.split(' ')[1][0] : 'L')).toUpperCase() }; closeModal('authModal'); renderProfileMenu(); showToast('Welcome back, ' + n + '!', 'success'); }
+    function openVerifyModal() { openModal('verifyModal'); }
+    function handleModalVerify() { showToast('Certificate verification verified on Open ECDL secure ledger.', 'info'); }
+    function showToast(msg, type) {
+      const c = document.getElementById('toastContainer');
+      if (!c) return;
+      const t = document.createElement('div');
+      t.className = 'px-4 py-3 rounded-2xl shadow-xl text-white text-xs font-bold transition-all transform pointer-events-auto flex items-center gap-2 ' + (type === 'success' ? 'bg-ecdl-green' : (type === 'error' ? 'bg-ecdl-orange' : 'bg-ecdl-dark'));
+      t.innerHTML = '<span>' + msg + '</span>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3500);
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderProfileMenu(); if (window.lucide) lucide.createIcons(); });
+  </script>
+
+  <!-- Required Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/corporate.js"></script>
+</body>
+</html>

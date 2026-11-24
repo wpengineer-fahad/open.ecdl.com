@@ -1,0 +1,92 @@
+/**
+ * Open ECDL — Phase 06: Corporate Training & B2B Solutions Stylesheet
+ * Enroute Center for Development Ltd.
+ */
+
+/* ==========================================================================
+   1. PROCESS TIMELINE & FLOW
+   ========================================================================== */
+.ecdl-process-step {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecdl-process-step:hover {
+  transform: translateY(-4px);
+}
+
+.ecdl-process-connector {
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #108B44 0%, #E5E7EB 100%);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. TNA MULTI-STEP PROGRESS & FORMS
+   ========================================================================== */
+.ecdl-tna-step-pill {
+  transition: all 0.25s ease;
+}
+
+.ecdl-tna-step-pill.is-active {
+  background-color: #108B44;
+  color: #FFFFFF;
+  border-color: #108B44;
+  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.25);
+}
+
+.ecdl-tna-step-pill.is-completed {
+  background-color: #EDF7F1;
+  color: #108B44;
+  border-color: #108B44;
+}
+
+.ecdl-tna-card-select {
+  cursor: pointer;
+  border: 2px solid #E5E7EB;
+  border-radius: 18px;
+  transition: all 0.2s ease;
+  background-color: #FFFFFF;
+}
+
+.ecdl-tna-card-select:hover {
+  border-color: rgba(16, 139, 68, 0.4);
+  background-color: #F9FAFB;
+}
+
+.ecdl-tna-card-select.is-selected {
+  border-color: #108B44;
+  background-color: #EDF7F1;
+  box-shadow: 0 4px 14px rgba(16, 139, 68, 0.12);
+}
+
+/* ==========================================================================
+   3. B2B CASE STUDY & STATS
+   ========================================================================== */
+.ecdl-metric-stat-box {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.ecdl-metric-stat-val {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #108B44;
+}
+
+.ecdl-portal-dashboard-mockup {
+  border-radius: 28px;
+  border: 1px solid #374151;
+  background: #111111;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}

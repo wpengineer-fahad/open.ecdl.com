@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orders &amp; Tax Invoices — Open ECDL Learner Portal</title>
+  <meta name="description" content="View past masterclass enrollments, tuition receipts, and official Mushak 6.3 tax challans." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/learner/orders" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/learner.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <div class="ecdl-portal-wrapper">
+
+    <!-- ========================================================= -->
+    <!-- 1. APPLICATION SIDEBAR                                    -->
+    <!-- ========================================================= -->
+    <aside class="ecdl-portal-sidebar" id="portal-sidebar" aria-label="Portal Navigation">
+      <div class="ecdl-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div>
+            <span class="block font-display text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
+            <span class="block text-[10px] text-neutral-400">Executive Academy</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="portal-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="ecdl-sidebar-nav">
+        <span class="ecdl-sidebar-section-title">My Learning</span>
+        <a href="/learner/dashboard" class="ecdl-sidebar-link">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="/learner/my-courses" class="ecdl-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>My Courses</span>
+          <span class="ecdl-sidebar-badge">5</span>
+        </a>
+        <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="ecdl-sidebar-link">
+          <i data-lucide="play-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>LMS Course Player</span>
+        </a>
+        <a href="/learner/assessments" class="ecdl-sidebar-link">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+          <span>Assessments &amp; Quizzes</span>
+        </a>
+        <a href="/learner/certificates" class="ecdl-sidebar-link">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Certificates</span>
+          <span class="ecdl-sidebar-badge">2</span>
+        </a>
+        <a href="/learner/learning-history" class="ecdl-sidebar-link">
+          <i data-lucide="clock" class="w-4 h-4"></i>
+          <span>Learning History</span>
+        </a>
+
+        <span class="ecdl-sidebar-section-title mt-4">Account &amp; Billing</span>
+        <a href="/learner/orders" class="ecdl-sidebar-link is-active">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Orders &amp; Invoices</span>
+        </a>
+        <a href="/learner/settings" class="ecdl-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Profile &amp; Settings</span>
+        </a>
+      </nav>
+
+      <div class="ecdl-sidebar-footer">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover border border-neutral-600" id="shell-learner-avatar">
+        <div class="min-w-0 flex-1">
+          <div class="font-bold text-xs text-white truncate" id="shell-learner-name">Naveed Karim</div>
+          <div class="text-[10px] text-neutral-400 truncate" id="shell-learner-title">Unilever Bangladesh</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- 2. MAIN WORKSPACE                                         -->
+    <!-- ========================================================= -->
+    <div class="ecdl-portal-workspace">
+
+      <!-- Compact Topbar -->
+      <header class="ecdl-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg border border-neutral-200 text-neutral-700" id="portal-mobile-toggle">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="hidden sm:flex items-center gap-2 text-xs font-semibold text-neutral-500">
+            <a href="/learner/dashboard" class="hover:text-ecdl-green">Dashboard</a>
+            <span>/</span>
+            <span class="text-neutral-900 font-bold">Orders &amp; Billing</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="/cart" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 text-xs font-bold text-neutral-700 hover:text-ecdl-green">
+            <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+            <span>View Shopping Cart</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="ecdl-portal-content">
+
+        <!-- Header Row -->
+        <div class="mb-6">
+          <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Billing Records &amp; Tax Invoices
+          </h1>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+            Access statutory Mushak Form 6.3 invoices, payment verification statuses, and corporate purchase orders.
+          </p>
+        </div>
+
+        <!-- Orders Table Card -->
+        <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left" id="learner-orders-table">
+              <thead>
+                <tr class="bg-neutral-50 text-neutral-500 font-bold uppercase tracking-wider border-b border-neutral-200">
+                  <th class="py-3 px-4">Order Reference</th>
+                  <th class="py-3 px-4">Date</th>
+                  <th class="py-3 px-4">Programme Title</th>
+                  <th class="py-3 px-4 text-center">Seats</th>
+                  <th class="py-3 px-4 text-right">Total (BDT)</th>
+                  <th class="py-3 px-4 text-center">Status</th>
+                  <th class="py-3 px-4 text-right">Mushak 6.3 Invoice</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-100">
+                <tr>
+                  <td class="py-3.5 px-4 font-mono font-bold text-neutral-900">
+                    <a href="/orders/ECDL-ORD-2026-1042" class="hover:text-ecdl-green underline">ECDL-ORD-2026-1042</a>
+                  </td>
+                  <td class="py-3.5 px-4 text-neutral-500">20 Nov 2026</td>
+                  <td class="py-3.5 px-4 font-semibold text-neutral-900">
+                    Effective Sales Management
+                    <div class="text-[11px] text-neutral-400 font-normal">Dec 20 – Dec 28, 2026 (Live Hybrid)</div>
+                  </td>
+                  <td class="py-3.5 px-4 text-center font-bold">1</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-neutral-900">BDT 16,675</td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                      Paid
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <a href="/orders/ECDL-ORD-2026-1042" class="text-ecdl-green font-bold hover:underline">
+                      View Invoice →
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="py-3.5 px-4 font-mono font-bold text-neutral-900">
+                    <a href="/orders/ECDL-ORD-2026-1088" class="hover:text-ecdl-green underline">ECDL-ORD-2026-1088</a>
+                  </td>
+                  <td class="py-3.5 px-4 text-neutral-500">22 Nov 2026</td>
+                  <td class="py-3.5 px-4 font-semibold text-neutral-900">
+                    Bangladesh Labour Act 2006 &amp; 2026 Amendments
+                    <div class="text-[11px] text-neutral-400 font-normal">Dec 12 – Dec 19, 2026 (Banani Campus)</div>
+                  </td>
+                  <td class="py-3.5 px-4 text-center font-bold">1</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-neutral-900">BDT 14,375</td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900">
+                      Awaiting Transfer
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <a href="/orders/ECDL-ORD-2026-1088" class="text-ecdl-green font-bold hover:underline">
+                      Pro-Forma &rarr;
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="py-3.5 px-4 font-mono font-bold text-neutral-900">
+                    <a href="/orders/ECDL-ORD-2026-0880" class="hover:text-ecdl-green underline">ECDL-ORD-2026-0880</a>
+                  </td>
+                  <td class="py-3.5 px-4 text-neutral-500">10 Nov 2026</td>
+                  <td class="py-3.5 px-4 font-semibold text-neutral-900">
+                    Managing Priorities &amp; Productivity
+                    <div class="text-[11px] text-neutral-400 font-normal">Executive Masterclass</div>
+                  </td>
+                  <td class="py-3.5 px-4 text-center font-bold">1</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-neutral-900">BDT 8,625</td>
+                  <td class="py-3.5 px-4 text-center">
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-neutral-200 text-neutral-700">
+                      Refunded (Mushak 6.8)
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <a href="/orders/ECDL-ORD-2026-0880" class="text-neutral-600 font-semibold hover:underline">
+                      Credit Note &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/learner.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

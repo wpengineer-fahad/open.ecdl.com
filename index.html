@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECDL — Enroute Center for Development Ltd. | Corporate Training & Executive Education</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            },
+          },
+          boxShadow: {
+            card: '0 8px 30px rgba(17, 17, 17, 0.06)',
+            cardHover: '0 18px 40px rgba(17, 17, 17, 0.12)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #111111;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    }
+    /* Custom range slider for Corporate Team Size Estimator */
+    input[type="range"].ecdl-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 9999px;
+      background: #2C2C2C;
+      outline: none;
+    }
+    input[type="range"].ecdl-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: #F4DB0F;
+      border: 3px solid #111111;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(244, 219, 15, 0.45);
+      transition: transform 0.15s ease;
+    }
+    input[type="range"].ecdl-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.1);
+    }
+    input[type="range"].ecdl-slider::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: #F4DB0F;
+      border: 3px solid #111111;
+      cursor: pointer;
+    }
+    /* 3D Brochure Tilt */
+    .brochure-card {
+      transform: perspective(1000px) rotateY(-8deg) rotateX(2deg);
+      transition: transform 0.4s ease;
+    }
+    .brochure-card:hover {
+      transform: perspective(1000px) rotateY(-2deg) rotateX(0deg) translateY(-4px);
+    }
+    /* Subtle modal animation */
+    @keyframes modalPop {
+      from { opacity: 0; transform: translateY(12px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .animate-modal {
+      animation: modalPop 0.22s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-white text-ecdl-dark antialiased selection:bg-ecdl-yellow selection:text-ecdl-dark">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs sm:text-sm border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2.5 flex-wrap">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold tracking-wide bg-ecdl-yellow text-ecdl-dark uppercase">
+          2026 Updated
+        </span>
+        <span class="text-neutral-200">
+          Bangladesh Labour Act 2006 (Amended up to 2026) — All listed fees now <strong class="text-white">VAT Inclusive</strong>.
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hidden md:inline-flex items-center gap-1.5 hover:text-ecdl-yellow transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:training@ecdl.com.bd" class="hidden lg:inline-flex items-center gap-1.5 hover:text-ecdl-yellow transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>training@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-ecdl-green text-white font-semibold text-xs transition-colors">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="#home" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-neutral-700">
+          <a href="#home" class="hover:text-ecdl-green transition-colors">Home</a>
+          <a href="#courses" class="hover:text-ecdl-green transition-colors">Courses</a>
+          <a href="#webinars" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1.5">
+            <span>Webinar</span>
+            <span class="w-2 h-2 rounded-full bg-ecdl-orange animate-pulse"></span>
+          </a>
+          <a href="training-calendar.html" class="hover:text-ecdl-green transition-colors">Calendar</a>
+          <a href="#corporate" class="hover:text-ecdl-green transition-colors">Corporate</a>
+          <a href="#contact" class="hover:text-ecdl-green transition-colors">Contact</a>
+          <button type="button" onclick="openInstructorModal()" class="text-ecdl-green hover:text-ecdl-greenDark transition-colors">
+            Become an Instructor
+          </button>
+        </nav>
+
+        <!-- Right Controls: Profile Dropdown + Mobile Hamburger -->
+        <div class="flex items-center gap-2.5">
+          <!-- Profile / Auth Dropdown Wrapper -->
+          <div class="relative" id="profileDropdownWrapper">
+            <button
+              type="button"
+              id="profileMenuBtn"
+              onclick="toggleProfileDropdown()"
+              class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-neutral-200 hover:border-ecdl-green bg-neutral-50 hover:bg-ecdl-greenSoft transition-all text-sm font-semibold text-ecdl-dark"
+            >
+              <span id="profileAvatarBadge" class="w-7 h-7 rounded-full bg-ecdl-green text-white text-xs font-bold flex items-center justify-center">
+                ED
+              </span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Profile</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div
+              id="profileDropdownMenu"
+              class="hidden absolute right-0 mt-2 w-60 rounded-2xl bg-white border border-neutral-200 shadow-cardHover p-2 z-50"
+            >
+              <!-- Populated dynamically by renderProfileMenu() -->
+            </div>
+          </div>
+
+          <!-- Primary Quick CTA -->
+          <a
+            href="#courses"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white text-sm font-bold shadow-sm transition-colors"
+          >
+            <span>Find Courses</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="lg:hidden p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:bg-neutral-100"
+            aria-label="Toggle Menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="#home" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
+      <a href="#courses" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
+      <a href="training-calendar.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Training Calendar</a>
+      <a href="#webinars" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Live Webinars</a>
+      <a href="#categories" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Categories</a>
+      <a href="#corporate" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Corporate Training</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Contact</a>
+      <button type="button" onclick="toggleMobileMenu(); openInstructorModal();" class="w-full text-left px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">
+        Become an Instructor
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. HERO SECTION WITH LIVE KEYWORD SEARCH                  -->
+  <!-- ========================================================= -->
+  <section id="home" class="relative overflow-hidden"><div id="hero" class="sr-only"></div>
+  <div class="relative overflow-hidden bg-gradient-to-br from-ecdl-greenSoft via-white to-white pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-neutral-100">
+    <!-- Decorative subtle shapes -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-ecdl-green/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 left-0 w-72 h-72 rounded-full bg-ecdl-yellow/20 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Column: Copy & Search -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-ecdl-green/25 shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-ecdl-green"></span>
+            <span class="text-xs sm:text-sm font-bold text-ecdl-green">
+              Bangladesh’s Premier Corporate & Professional Learning Hub
+            </span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-ecdl-dark leading-[1.12]">
+            Over <span class="text-ecdl-green">43,000+</span> Participants.
+            More than <span class="underline decoration-ecdl-yellow decoration-4 underline-offset-4">1,500</span> Trainings.
+            <span class="block mt-1">Learn Anything.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
+            Industry-led certification workshops and executive masterclasses built for Bangladesh’s workforce.
+            Every listed price is <strong class="text-ecdl-dark">cleanly inclusive of VAT</strong>—so what you see is the exact amount you pay.
+          </p>
+
+          <!-- Search Box -->
+          <form onsubmit="handleHeroSearch(event)" class="bg-white p-2 rounded-2xl border-2 border-neutral-200 focus-within:border-ecdl-green shadow-card flex flex-col sm:flex-row gap-2 max-w-2xl transition-colors">
+            <div class="flex items-center gap-3 flex-1 px-3 py-2">
+              <i data-lucide="search" class="w-5 h-5 text-ecdl-green shrink-0"></i>
+              <input
+                id="heroSearchInput"
+                type="text"
+                placeholder="Search by keyword, example: labour law"
+                class="w-full text-sm sm:text-base text-ecdl-dark placeholder-neutral-400 focus:outline-none bg-transparent"
+                oninput="syncSearchInput(this.value)"
+              />
+            </div>
+            <button
+              type="submit"
+              class="px-6 py-3.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-sm transition-colors flex items-center justify-center gap-2 shrink-0"
+            >
+              <span>Find Courses</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </form>
+
+          <!-- Popular Keyword Chips -->
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500 mr-1">Popular:</span>
+            <button type="button" onclick="quickKeywordSearch('Labour Law')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Labour Law 2026</button>
+            <button type="button" onclick="quickKeywordSearch('Sales')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Sales Management</button>
+            <button type="button" onclick="quickKeywordSearch('VAT')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">VAT &amp; SD Law</button>
+            <button type="button" onclick="quickKeywordSearch('PMP')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">PMP Prep</button>
+            <button type="button" onclick="quickKeywordSearch('HR')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Strategic HR</button>
+          </div>
+        </div>
+
+        <!-- Right Column: Featured Spotlight Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-ecdl-dark text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-neutral-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-ecdl-green/25 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between gap-3 mb-5 relative z-10">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-ecdl-yellow text-ecdl-dark uppercase">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                Flagship 2026 Batch
+              </span>
+              <span class="text-xs font-semibold text-neutral-300">Dhaka &amp; Live Online</span>
+            </div>
+
+            <h2 class="font-display text-xl sm:text-2xl font-extrabold leading-snug mb-3 relative z-10">
+              Bangladesh Labour Act 2006 and Its Amendment up to 2026
+            </h2>
+            <p class="text-sm text-neutral-300 leading-relaxed mb-5 relative z-10">
+              Master recent statutory updates, HR compliance audits, disciplinary procedures, and termination calculations directly with senior legal practitioner <strong class="text-white">Jafrul Hasan Sharif</strong>.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-6 relative z-10">
+              <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                <span class="block text-[11px] uppercase tracking-wider text-neutral-400">All-Inclusive Fee</span>
+                <span class="block font-display text-xl font-extrabold text-ecdl-yellow mt-0.5">৳ 5,000</span>
+                <span class="text-[11px] text-emerald-300 font-medium">Incl. 15% VAT · No extra fees</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                <span class="block text-[11px] uppercase tracking-wider text-neutral-400">Corporate Savings</span>
+                <span class="block font-display text-xl font-extrabold text-white mt-0.5">Up to 20%</span>
+                <span class="text-[11px] text-neutral-300 font-medium">5+ Seats · Mushak-6.3</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 relative z-10">
+              <button
+                type="button"
+                onclick="openEnrollModal('labour-act-2026')"
+                class="flex-1 py-3 px-5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
+              >
+                <span>Enroll Now — ৳ 5,000</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <button
+                type="button"
+                onclick="openSyllabusModal('labour-act-2026')"
+                class="py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors"
+              >
+                View Syllabus
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. ANIMATED IMPACT METRICS BAR                            -->
+  <!-- ========================================================= -->
+  <section id="impactSection" class="bg-ecdl-green text-white py-10 sm:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+        <div class="p-4 rounded-2xl bg-white/10 border border-white/15">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-yellow">
+            <span class="counter-value" data-target="1500">1,500</span>+
+          </div>
+          <p class="text-sm sm:text-base font-semibold text-white mt-1">Training programs</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/10 border border-white/15">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-yellow">
+            <span class="counter-value" data-target="43000">43,000</span>+
+          </div>
+          <p class="text-sm sm:text-base font-semibold text-white mt-1">Participants</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/10 border border-white/15">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-yellow">
+            <span class="counter-value" data-target="200">200</span>+
+          </div>
+          <p class="text-sm sm:text-base font-semibold text-white mt-1">Expert facilitators</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/10 border border-white/15">
+          <div class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-yellow">
+            <span class="counter-value" data-target="140">140</span>+
+          </div>
+          <p class="text-sm sm:text-base font-semibold text-white mt-1">Organizations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 5. FEATURED COURSES CATALOG (VAT-INCLUSIVE PRICING)       -->
+  <!-- ========================================================= -->
+  <section id="courses" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading & Transparency Pill -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            Featured &amp; Executive Programs
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            Featured Courses
+          </h2>
+          <p class="text-neutral-600 mt-2.5 text-base leading-relaxed">
+            Actionable workshops crafted for Bangladesh’s business landscape. All listed BDT fees are cleanly inclusive of VAT—with automatic 10%–20% corporate bulk discounts.
+          </p>
+        </div>
+
+        <!-- Inline Catalog Search -->
+        <div class="w-full lg:w-80">
+          <div class="relative">
+            <i data-lucide="search" class="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="catalogSearchInput"
+              type="text"
+              placeholder="Filter courses or trainer..."
+              oninput="handleCatalogSearch(this.value)"
+              class="w-full pl-10 pr-9 py-2.5 rounded-xl border border-neutral-200 focus:border-ecdl-green focus:outline-none text-sm bg-neutral-50 focus:bg-white transition-colors"
+            />
+            <button
+              type="button"
+              id="clearSearchBtn"
+              onclick="resetCourseFilters()"
+              class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-ecdl-dark"
+              aria-label="Clear search"
+            >
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="courseFilterTabs" class="flex flex-wrap items-center gap-2 mb-8">
+        <!-- Populated dynamically by renderFilterTabs() -->
+      </div>
+
+      <!-- Active Filter Status Bar -->
+      <div id="filterStatusBar" class="hidden mb-6 px-4 py-3 rounded-xl bg-ecdl-greenSoft border border-ecdl-green/20 flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span id="filterStatusText" class="font-medium text-ecdl-dark"></span>
+        <button type="button" onclick="resetCourseFilters()" class="font-bold text-ecdl-green hover:underline">
+          Reset Filters
+        </button>
+      </div>
+
+      <!-- Courses Grid -->
+      <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Populated dynamically by renderCourses() -->
+      </div>
+
+      <!-- Browse All Courses CTA -->
+      <div class="mt-12 text-center">
+        <button
+          type="button"
+          onclick="resetCourseFilters(true)"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border-2 border-ecdl-dark bg-white hover:bg-ecdl-dark text-ecdl-dark hover:text-white font-bold text-sm sm:text-base transition-colors"
+        >
+          <span>Browse All Courses</span>
+          <i data-lucide="layout-grid" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 6. BROWSE COURSES BY CATEGORY (8 TRACKS)                  -->
+  <!-- ========================================================= -->
+  <section id="categories" class="py-16 lg:py-24 bg-neutral-50 border-y border-neutral-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          Specialized Learning Tracks
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Browse Courses by Category
+        </h2>
+        <p class="text-neutral-600 mt-2.5 text-base">
+          Select a functional domain below to immediately filter our active catalog and discover tailored training programs.
+        </p>
+      </div>
+
+      <div id="categoryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Populated dynamically by renderCategoryCards() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. UPCOMING LIVE WEBINARS                                 -->
+  <!-- ========================================================= -->
+  <section id="webinars" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold uppercase bg-ecdl-orange text-white mb-3">
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+            Live Interactive Sessions
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+            Upcoming Free Executive Webinars
+          </h2>
+          <p class="text-neutral-600 mt-2 max-w-xl">
+            Join live 90-minute Q&amp;A briefings hosted by ECDL faculty. Limited seats per session—reserve your spot instantly.
+          </p>
+        </div>
+        <div>
+          <a href="webinars.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-ecdl-green hover:text-ecdl-greenDark">
+            <span>View Past Archives &amp; Full Hub</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="webinarsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-7">
+        <!-- Populated dynamically by renderWebinars() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. ONLINE CERTIFICATE VERIFICATION                        -->
+  <!-- ========================================================= -->
+  <section id="verify" class="py-16 lg:py-20 bg-ecdl-greenSoft border-y border-ecdl-green/15">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-ecdl-green/20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-green text-white text-xs font-bold uppercase">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+              Instant Digital Verification
+            </span>
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-ecdl-dark">
+              Verify an ECDL Training Certificate
+            </h2>
+            <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
+              Employers, HR managers, and graduates can authenticate any ECDL completion credential online using the unique certificate ID.
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-1">
+              <span class="text-xs font-bold text-neutral-500">Try sample IDs:</span>
+              <button type="button" onclick="testCertificateId('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2026-8492</button>
+              <button type="button" onclick="testCertificateId('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2026-5104</button>
+              <button type="button" onclick="testCertificateId('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2025-9931</button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-4">
+            <form onsubmit="handleInlineVerify(event)" class="flex flex-col sm:flex-row gap-2.5">
+              <input
+                id="inlineCertInput"
+                type="text"
+                placeholder="Enter Certificate ID (e.g. ECDL-2026-8492)"
+                class="flex-1 px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase"
+              />
+              <button
+                type="submit"
+                class="px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors shrink-0"
+              >
+                Verify Now
+              </button>
+            </form>
+
+            <!-- Live Verification Result Box -->
+            <div id="inlineCertResult" class="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm">
+              <!-- Populated by testCertificateId() -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. CORPORATE B2B SOLUTIONS & TEAM ESTIMATOR (#111111)     -->
+  <!-- ========================================================= -->
+  <section id="corporate" class="py-16 lg:py-24 bg-ecdl-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Left: Team Size & Corporate Savings Estimator -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">
+            <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+            Corporate &amp; In-House Training
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold leading-tight">
+            Upskill Your Entire Organization with Tailored Programs
+          </h2>
+          <p class="text-neutral-300 text-base leading-relaxed">
+            Trusted by 140+ banks, RMG leaders, telecoms, and multinationals across Bangladesh. Estimate your team’s VAT-inclusive bulk discount right now.
+          </p>
+
+          <!-- Interactive Slider Panel -->
+          <div class="bg-ecdl-charcoal border border-white/10 rounded-3xl p-6 space-y-6">
+            <div class="flex items-center justify-between gap-4">
+              <label for="teamSizeSlider" class="text-sm font-bold text-neutral-200">
+                Select Team Size to Train
+              </label>
+              <span id="teamSizeBadge" class="px-3.5 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-sm">
+                20 Employees
+              </span>
+            </div>
+
+            <input
+              id="teamSizeSlider"
+              type="range"
+              min="5"
+              max="100"
+              step="5"
+              value="20"
+              oninput="updateTeamEstimator(this.value)"
+              class="w-full ecdl-slider"
+            />
+            <div class="flex justify-between text-xs text-neutral-400 font-medium">
+              <span>5 Staff</span>
+              <span>25 Staff</span>
+              <span>50 Staff</span>
+              <span>100+ Enterprise</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="rounded-2xl bg-black/40 border border-white/10 p-4">
+                <span class="block text-xs text-neutral-400">Eligible Discount Tier</span>
+                <span id="teamDiscountTier" class="block font-display text-2xl font-extrabold text-ecdl-yellow mt-1">
+                  20% Off
+                </span>
+              </div>
+              <div class="rounded-2xl bg-black/40 border border-white/10 p-4">
+                <span class="block text-xs text-neutral-400">Est. VAT-Incl. Savings</span>
+                <span id="teamEstimatedSavings" class="block font-display text-2xl font-extrabold text-emerald-400 mt-1">
+                  ৳ 14,000+
+                </span>
+              </div>
+            </div>
+
+            <p id="teamRecommendation" class="text-xs sm:text-sm text-neutral-300 bg-white/5 border border-white/10 rounded-xl p-3.5 leading-relaxed">
+              <!-- Updated dynamically -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Corporate Proposal Request Form -->
+        <div class="lg:col-span-6">
+          <div class="bg-white text-ecdl-dark rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <h3 class="font-display text-2xl font-extrabold text-ecdl-dark">
+              Request a Custom Corporate Proposal
+            </h3>
+            <p class="text-sm text-neutral-600 mt-1 mb-6">
+              Receive a customized TNA syllabus, trainer profiles, and Mushak-6.3 VAT-inclusive quotation within 24 hours.
+            </p>
+
+            <form id="corporateProposalForm" onsubmit="handleCorporateFormSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Your Full Name *</label>
+                  <input type="text" required placeholder="e.g. Mahmudul Hasan" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Organization Name *</label>
+                  <input type="text" required placeholder="e.g. Apex Group / BRAC Bank" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Work Email *</label>
+                  <input type="email" required placeholder="name@company.com.bd" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Phone / WhatsApp *</label>
+                  <input type="tel" required placeholder="+8801XXXXXXXXX" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Estimated Team Size</label>
+                  <input
+                    id="corpTeamSizeInput"
+                    type="text"
+                    readonly
+                    value="20 Employees (20% Off)"
+                    class="w-full px-4 py-2.5 rounded-xl border border-ecdl-green/40 bg-ecdl-greenSoft text-ecdl-green font-bold text-sm"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Primary Focus Area</label>
+                  <select class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white">
+                    <option>Labour Law &amp; Compliance</option>
+                    <option>Sales &amp; Negotiation Excellence</option>
+                    <option>VAT, Tax &amp; Financial Controls</option>
+                    <option>Strategic HR &amp; Leadership</option>
+                    <option>Project Management (PMP)</option>
+                    <option>Productivity &amp; Workplace Wellbeing</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-neutral-600 mb-1.5">Training Objectives (Optional)</label>
+                <textarea rows="3" placeholder="Tell us about your preferred dates, location (Dhaka/Chattogram/Online), or specific skill gaps..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3.5 px-6 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-md transition-colors flex items-center justify-center gap-2"
+              >
+                <span>Get Tailored Corporate Quotation</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. EXPERT FACILITATORS                                   -->
+  <!-- ========================================================= -->
+  <section id="facilitators" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          200+ Industry Practitioners
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Learn from Bangladesh’s Leading Facilitators
+        </h2>
+        <p class="text-neutral-600 mt-2.5">
+          Our faculty members are active CXOs, legal advisors, FCAs, and certified global practitioners—not just theorists.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Facilitator 1 -->
+        <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-green text-white font-display font-extrabold text-xl flex items-center justify-center mb-4">
+              TK
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Tarikul Kamrul</h3>
+            <p class="text-xs font-bold text-ecdl-green uppercase tracking-wide mt-0.5">Sales &amp; Commercial Leadership</p>
+            <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+              Over 18 years leading national FMCG &amp; B2B revenue teams across Bangladesh. Specialist in key-account strategy and target execution.
+            </p>
+          </div>
+          <button type="button" onclick="quickKeywordSearch('Tarikul Kamrul')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+            <span>View Workshops</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Facilitator 2 -->
+        <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-dark text-ecdl-yellow font-display font-extrabold text-xl flex items-center justify-center mb-4">
+              JH
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">Jafrul Hasan Sharif</h3>
+            <p class="text-xs font-bold text-ecdl-green uppercase tracking-wide mt-0.5">Labour Law &amp; Compliance Advisor</p>
+            <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+              Renowned authority on Bangladesh Labour Act 2006 &amp; recent 2026 amendments, industrial relations, and corporate HR compliance audits.
+            </p>
+          </div>
+          <button type="button" onclick="quickKeywordSearch('Jafrul Hasan Sharif')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+            <span>View Workshops</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Facilitator 3 -->
+        <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-xl flex items-center justify-center mb-4">
+              FCA
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">NBR Enlisted VAT Faculty</h3>
+            <p class="text-xs font-bold text-ecdl-green uppercase tracking-wide mt-0.5">Finance, VAT &amp; SD Law 2012</p>
+            <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+              Fellow Chartered Accountants &amp; licensed VAT consultants guiding finance teams on Mushak-9.1 filing, VDS compliance, and NBR audits.
+            </p>
+          </div>
+          <button type="button" onclick="quickKeywordSearch('VAT')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+            <span>View Workshops</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Facilitator 4 -->
+        <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
+          <div>
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-orange text-white font-display font-extrabold text-xl flex items-center justify-center mb-4">
+              PMP
+            </div>
+            <h3 class="font-display text-lg font-extrabold text-ecdl-dark">PMP® Lead Instructors</h3>
+            <p class="text-xs font-bold text-ecdl-green uppercase tracking-wide mt-0.5">Project &amp; Agile Delivery</p>
+            <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+              Certified Project Management Professionals with multi-million dollar infrastructure, telecom, and IT delivery portfolios.
+            </p>
+          </div>
+          <button type="button" onclick="quickKeywordSearch('PMP')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+            <span>View Workshops</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 11. BECOME AN INSTRUCTOR CALLOUT (#108B44 + #F4DB0F CTA)  -->
+  <!-- ========================================================= -->
+  <section id="final-cta" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-ecdl-green text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+        <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-ecdl-yellow/15 pointer-events-none"></div>
+        <div class="max-w-2xl relative z-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-ecdl-yellow text-xs font-extrabold uppercase tracking-wider mb-3">
+            Join ECDL’s 200+ Expert Faculty Network
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold leading-tight">
+            Share Your Industry Expertise. Become an ECDL Instructor.
+          </h2>
+          <p class="text-emerald-50 mt-3 text-base">
+            Lead high-impact corporate trainings, public executive workshops, and live webinars backed by our dedicated marketing and operations team.
+          </p>
+        </div>
+        <div class="relative z-10 shrink-0">
+          <button
+            type="button"
+            onclick="openInstructorModal()"
+            class="px-7 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-sm sm:text-base shadow-lg transition-colors inline-flex items-center gap-2"
+          >
+            <span>Apply as an Instructor</span>
+            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 12. EXPLORE OUR COMPANY PROFILE (BROCHURE SHOWCASE)       -->
+  <!-- ========================================================= -->
+  <section id="company-profile" class="py-16 lg:py-24 bg-neutral-50 border-y border-neutral-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left: 3D-Styled Company Profile Cover -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="brochure-card w-full max-w-sm rounded-3xl bg-ecdl-dark text-white p-8 shadow-2xl border-l-8 border-ecdl-green relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-36 h-36 bg-ecdl-orange/25 rounded-full blur-2xl"></div>
+            <div class="flex items-center justify-between mb-10 relative z-10">
+              <span class="font-display font-extrabold text-xl tracking-tight text-white">ECDL</span>
+              <span class="px-2.5 py-1 rounded-md bg-ecdl-yellow text-ecdl-dark text-[11px] font-extrabold uppercase">2026 Edition</span>
+            </div>
+            <div class="space-y-3 mb-10 relative z-10">
+              <span class="block text-xs uppercase tracking-widest text-emerald-400 font-bold">Corporate Capability Deck</span>
+              <h3 class="font-display text-3xl font-extrabold leading-tight">
+                Company Profile &amp; Impact Report
+              </h3>
+              <p class="text-xs text-neutral-300 leading-relaxed">
+                Enroute Center for Development Ltd. — Strategies, client benchmarks, and 1,500+ delivered training outcomes.
+              </p>
+            </div>
+            <div class="pt-5 border-t border-white/15 flex items-center justify-between text-xs text-neutral-300 relative z-10">
+              <span>43,000+ Alumni</span>
+              <span class="text-ecdl-yellow font-bold">140+ Clients</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Authentic ECDL Company Profile Copy & Actions -->
+        <div class="lg:col-span-7 space-y-5">
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            Corporate Credentials
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark">
+            Explore Our Company Profile
+          </h2>
+          <p class="text-neutral-600 text-base sm:text-lg leading-relaxed">
+            Learn about our impact on other businesses. Our company profile offers a comprehensive overview of our strategies, achievements, and the measurable improvements we’ve delivered for our clients.
+          </p>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm font-medium text-ecdl-dark">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-green shrink-0"></i>
+              <span>Complete 2026 Corporate Training Calendar</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-green shrink-0"></i>
+              <span>Transparent VAT-Inclusive Pricing Matrix</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-green shrink-0"></i>
+              <span>Client Case Studies &amp; ROI Metrics</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-ecdl-green shrink-0"></i>
+              <span>Enroute Group Sister Concerns Overview</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-3 pt-3">
+            <button
+              type="button"
+              onclick="downloadCompanyProfile()"
+              class="px-7 py-3.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-md transition-colors inline-flex items-center gap-2"
+            >
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Download Now</span>
+            </button>
+            <button
+              type="button"
+              onclick="openProfilePreviewModal()"
+              class="px-6 py-3.5 rounded-xl border-2 border-neutral-300 hover:border-ecdl-green text-ecdl-dark hover:text-ecdl-green font-bold text-sm sm:text-base transition-colors inline-flex items-center gap-2"
+            >
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>Quick Preview</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 13. TESTIMONIALS & INTERACTIVE FAQ                        -->
+  <!-- ========================================================= -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Testimonials -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-ecdl-green">Verified Participant Voices</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark mt-2">
+          Trusted by Professionals Across Bangladesh
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div class="rounded-2xl border border-neutral-200 p-6 bg-white shadow-card">
+          <div class="flex items-center gap-1 text-ecdl-yellow mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-sm text-neutral-700 leading-relaxed">
+            “The Bangladesh Labour Act 2006 (2026 Amended) workshop cleared up every ambiguity our HR team faced during factory compliance audits. Also appreciated the straightforward ৳ 5,000 VAT-inclusive fee with zero surprise charges at checkout.”
+          </p>
+          <div class="mt-5 pt-4 border-t border-neutral-100">
+            <p class="font-bold text-sm text-ecdl-dark">Farzana Akter</p>
+            <p class="text-xs text-neutral-500">Head of HR Compliance, Leading RMG Group</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-neutral-200 p-6 bg-white shadow-card">
+          <div class="flex items-center gap-1 text-ecdl-yellow mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-sm text-neutral-700 leading-relaxed">
+            “Tarikul Kamrul’s Effective Sales Management session directly helped our regional managers redesign their territory pipeline. We enrolled 12 team members and got our 20% corporate discount and Mushak-6.3 invoice seamlessly.”
+          </p>
+          <div class="mt-5 pt-4 border-t border-neutral-100">
+            <p class="font-bold text-sm text-ecdl-dark">Tanvir Ahmed</p>
+            <p class="text-xs text-neutral-500">National Sales Manager, FMCG Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-neutral-200 p-6 bg-white shadow-card">
+          <div class="flex items-center gap-1 text-ecdl-yellow mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-sm text-neutral-700 leading-relaxed">
+            “Practical Training on VAT &amp; SD Law 2012 walked us through live Mushak-9.1 returns and VDS scenarios. It paid for itself in the very first month of our financial quarter.”
+          </p>
+          <div class="mt-5 pt-4 border-t border-neutral-100">
+            <p class="font-bold text-sm text-ecdl-dark">Nusrat Jahan</p>
+            <p class="text-xs text-neutral-500">Assistant Manager, Finance &amp; Tax</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions -->
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-8">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ecdl-green">Common Questions</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-ecdl-dark mt-1.5">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div id="faqContainer" class="space-y-3">
+          <!-- Populated dynamically by renderFAQs() -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 14. CONTACT & FULL ECDL FOOTER (#111111)                  -->
+  <!-- ========================================================= -->
+  <footer id="contact" class="bg-ecdl-dark text-neutral-300 pt-16 pb-10 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Brand & Direct Contact -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development Ltd.</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Empowering Bangladesh’s professionals and enterprises through practical, accredited training programs since inception.
+          </p>
+
+          <div class="space-y-2.5 pt-2 text-sm">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>+8801767804408</span>
+            </a>
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>training@ecdl.com.bd</span>
+            </a>
+            <div class="flex items-start gap-2.5 text-neutral-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Column -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">About Us</a></li>
+            <li><a href="#courses" class="hover:text-ecdl-yellow transition-colors">Courses</a></li>
+            <li><a href="#webinars" class="hover:text-ecdl-yellow transition-colors">Webinars</a></li>
+            <li><a href="#contact" class="hover:text-ecdl-yellow transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Links</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><button type="button" onclick="openInstructorModal()" class="hover:text-ecdl-yellow transition-colors">Become an Instructor</button></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
+            <li><button type="button" onclick="showToast('Terms of Use opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Terms of use</button></li>
+            <li><button type="button" onclick="showToast('Privacy Policy opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Privacy Policy</button></li>
+            <li><button type="button" onclick="showToast('Refund Policy: 100% refundable up to 48 hours prior to batch start.', 'info')" class="hover:text-ecdl-yellow transition-colors">Refund Policy</button></li>
+          </ul>
+        </div>
+
+        <!-- Recommend / Sister Concerns Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Recommend</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#home" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
+            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Socials -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+        <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="#contact" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
+          <a href="#contact" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="#contact" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- MODALS (SYLLABUS, SMART ENROLLMENT, WEBINAR, VERIFY, ETC) -->
+  <!-- ========================================================= -->
+
+  <!-- A. COURSE SYLLABUS MODAL ("Read More") -->
+  <div id="syllabusModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-white border-b border-neutral-100 px-6 py-4 flex items-center justify-between z-10">
+        <span id="sylCategory" class="px-3 py-1 rounded-full bg-ecdl-greenSoft text-ecdl-green text-xs font-extrabold uppercase"></span>
+        <button type="button" onclick="closeModal('syllabusModal')" class="p-2 rounded-xl hover:bg-neutral-100 text-neutral-500">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8 space-y-6">
+        <div>
+          <h3 id="sylTitle" class="font-display text-2xl font-extrabold text-ecdl-dark"></h3>
+          <p id="sylMeta" class="text-sm text-neutral-500 mt-2"></p>
+        </div>
+        <p id="sylSummary" class="text-sm sm:text-base text-neutral-700 leading-relaxed"></p>
+        <div>
+          <h4 class="font-display font-bold text-ecdl-dark text-sm uppercase tracking-wider mb-3">Key Modules &amp; Takeaways</h4>
+          <ul id="sylModules" class="space-y-2.5 text-sm text-neutral-700"></ul>
+        </div>
+        <div class="rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/20 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span class="block text-xs font-bold text-ecdl-green uppercase">All-Inclusive Participant Fee</span>
+            <span id="sylPrice" class="font-display text-2xl font-extrabold text-ecdl-dark"></span>
+            <span class="block text-xs text-neutral-600">Exact payable total · VAT already included</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a id="sylDetailLink" href="courses.html" class="px-4 py-3 rounded-xl border border-neutral-300 hover:border-ecdl-green hover:text-ecdl-green text-ecdl-dark font-bold text-xs sm:text-sm transition-colors text-center inline-flex items-center justify-center gap-1.5"><span>Full Details</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+            <button
+            type="button"
+            id="sylEnrollBtn"
+            class="px-6 py-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors"
+          >
+            Enroll Now
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B. SMART ENROLLMENT MODAL (VAT-INCLUSIVE + MUSHAK BREAKDOWN) -->
+  <div id="enrollModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Transparent VAT-Inclusive Checkout</span>
+          <h3 id="enrollCourseTitle" class="font-display text-lg font-extrabold leading-snug mt-0.5"></h3>
+        </div>
+        <button type="button" onclick="closeModal('enrollModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300 shrink-0">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="enrollForm" onsubmit="submitEnrollment(event)" class="p-6 space-y-5">
+        <!-- Individual vs Corporate Seat Controls -->
+        <div class="grid grid-cols-2 gap-2 p-1 rounded-xl bg-neutral-100">
+          <button type="button" id="modeIndividualBtn" onclick="setEnrollMode('individual')" class="py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-white text-ecdl-dark shadow-sm">
+            Individual (1 Seat)
+          </button>
+          <button type="button" id="modeCorporateBtn" onclick="setEnrollMode('corporate')" class="py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-neutral-600">
+            Corporate / Group (2–50)
+          </button>
+        </div>
+
+        <!-- Seat Stepper -->
+        <div class="flex items-center justify-between p-4 rounded-2xl border border-neutral-200 bg-neutral-50">
+          <div>
+            <span class="block text-sm font-bold text-ecdl-dark">Number of Participants</span>
+            <span class="text-xs text-neutral-500">5–9 seats: <strong class="text-ecdl-green">10% off</strong> · 10+ seats: <strong class="text-ecdl-green">20% off</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="adjustSeats(-1)" class="w-9 h-9 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-100 font-bold text-lg flex items-center justify-center">−</button>
+            <input id="enrollSeatsInput" type="number" min="1" max="50" value="1" oninput="updateEnrollPricing()" class="w-14 text-center py-1.5 rounded-xl border border-neutral-300 font-display font-extrabold text-base bg-white" />
+            <button type="button" onclick="adjustSeats(1)" class="w-9 h-9 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-100 font-bold text-lg flex items-center justify-center">+</button>
+          </div>
+        </div>
+
+        <!-- Locked VAT-Inclusive Price Summary -->
+        <div class="rounded-2xl border-2 border-ecdl-green/25 bg-ecdl-greenSoft p-4 space-y-2.5">
+          <div class="flex justify-between text-sm text-neutral-700">
+            <span>Course Fee (<span id="calcSeatLabel">1 Seat</span> × <span id="calcUnitPrice">৳ 3,500</span> Incl. VAT)</span>
+            <span id="calcGrossTotal" class="font-bold text-ecdl-dark">৳ 3,500</span>
+          </div>
+          <div id="calcDiscountRow" class="hidden flex justify-between text-sm text-ecdl-green font-bold">
+            <span id="calcDiscountLabel">Corporate Bulk Discount</span>
+            <span id="calcDiscountValue">- ৳ 0</span>
+          </div>
+          <div class="pt-2.5 border-t border-ecdl-green/20 flex items-end justify-between">
+            <div>
+              <span class="block text-xs font-extrabold uppercase text-ecdl-green">Exact Payable Total</span>
+              <span class="text-[11px] text-neutral-600">VAT included — no extra tax added at payment</span>
+            </div>
+            <span id="calcFinalTotal" class="font-display text-2xl font-extrabold text-ecdl-dark">৳ 3,500</span>
+          </div>
+
+          <!-- Compact Expandable Tax Invoice Breakdown (Mushak-6.3) -->
+          <div class="pt-1">
+            <button type="button" onclick="toggleTaxBreakdown()" class="text-xs font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <i data-lucide="receipt" class="w-3.5 h-3.5"></i>
+              <span>View Tax Invoice Breakdown (Mushak-6.3)</span>
+            </button>
+            <div id="taxBreakdownBox" class="hidden mt-2 p-3 rounded-xl bg-white border border-ecdl-green/20 text-xs text-neutral-600 space-y-1">
+              <div class="flex justify-between">
+                <span>Net Training Fee (Excl. VAT)</span>
+                <span id="calcNetBase" class="font-semibold text-ecdl-dark">৳ 3,043.48</span>
+              </div>
+              <div class="flex justify-between">
+                <span id="calcVatRateLabel">Included VAT (15%)</span>
+                <span id="calcIncludedVat" class="font-semibold text-ecdl-dark">৳ 456.52</span>
+              </div>
+              <div class="flex justify-between pt-1 border-t border-neutral-100 font-bold text-ecdl-dark">
+                <span>Total (Matches Checkout Exactly)</span>
+                <span id="calcBreakdownTotal">৳ 3,500.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participant Details -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Full Name *</label>
+            <input id="enrollName" type="text" required placeholder="Participant / Coordinator Name" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Phone Number *</label>
+            <input id="enrollPhone" type="tel" required placeholder="+8801XXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Email Address *</label>
+            <input id="enrollEmail" type="email" required placeholder="you@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Organization (Optional)</label>
+            <input id="enrollOrg" type="text" placeholder="Company Name (for Mushak-6.3)" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+
+        <!-- Payment Method Selector -->
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-2">Preferred Payment Method</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="payMethod" value="bKash" checked class="peer sr-only" />
+              <div class="text-center py-2 px-2 rounded-xl border border-neutral-200 peer-checked:border-ecdl-green peer-checked:bg-ecdl-greenSoft text-xs font-bold">bKash</div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="payMethod" value="Nagad" class="peer sr-only" />
+              <div class="text-center py-2 px-2 rounded-xl border border-neutral-200 peer-checked:border-ecdl-green peer-checked:bg-ecdl-greenSoft text-xs font-bold">Nagad</div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="payMethod" value="SSLCommerz Card" class="peer sr-only" />
+              <div class="text-center py-2 px-2 rounded-xl border border-neutral-200 peer-checked:border-ecdl-green peer-checked:bg-ecdl-greenSoft text-xs font-bold">Card / Bank</div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="payMethod" value="Corporate Invoice" class="peer sr-only" />
+              <div class="text-center py-2 px-2 rounded-xl border border-neutral-200 peer-checked:border-ecdl-green peer-checked:bg-ecdl-greenSoft text-xs font-bold">Corp Invoice</div>
+            </label>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          id="enrollSubmitBtn"
+          class="w-full py-3.5 px-6 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-extrabold text-sm sm:text-base shadow-md transition-colors"
+        >
+          Confirm Enrollment — ৳ 3,500
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- C. WEBINAR REGISTRATION MODAL -->
+  <div id="webinarModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-md w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-green text-white px-6 py-4 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase text-ecdl-yellow">Free Live Webinar Seat</span>
+          <h3 id="webinarModalTitle" class="font-display text-lg font-extrabold mt-0.5"></h3>
+        </div>
+        <button type="button" onclick="closeModal('webinarModal')" class="p-2 rounded-xl hover:bg-white/10 text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form id="webinarRegForm" onsubmit="submitWebinarRegistration(event)" class="p-6 space-y-4">
+        <p id="webinarModalSchedule" class="text-xs font-semibold text-ecdl-green bg-ecdl-greenSoft px-3.5 py-2.5 rounded-xl"></p>
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Full Name *</label>
+          <input id="webinarRegName" type="text" required placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Email (Zoom Link Sent Here) *</label>
+          <input id="webinarRegEmail" type="email" required placeholder="you@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Phone / WhatsApp *</label>
+          <input type="tel" required placeholder="+8801XXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors">
+          Reserve Free Seat
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- D. VERIFY CERTIFICATE MODAL -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-lg w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-5 h-5 text-ecdl-yellow"></i>
+          <h3 class="font-display text-lg font-extrabold">Certificate Verification</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <form onsubmit="handleModalVerify(event)" class="flex gap-2">
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Check</button>
+        </form>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="text-neutral-500 font-semibold py-1">Quick Test:</span>
+          <button type="button" onclick="verifyInModal('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2026-8492</button>
+          <button type="button" onclick="verifyInModal('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2026-5104</button>
+          <button type="button" onclick="verifyInModal('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2025-9931</button>
+        </div>
+        <div id="modalCertResult" class="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm">
+          Enter a certificate ID above to verify credential authenticity.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E. BECOME AN INSTRUCTOR MODAL -->
+  <div id="instructorModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="bg-ecdl-green text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-lg font-extrabold">Apply as an ECDL Facilitator</h3>
+        <button type="button" onclick="closeModal('instructorModal')" class="p-2 rounded-xl hover:bg-white/10 text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="submitInstructorApplication(event)" class="p-6 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Full Name *</label>
+            <input type="text" required placeholder="Dr. / Mr. / Ms." class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Current Designation *</label>
+            <input type="text" required placeholder="e.g. Head of HR / FCA" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Email *</label>
+            <input type="email" required placeholder="name@domain.com" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Primary Domain *</label>
+            <select class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm bg-white">
+              <option>Compliance &amp; Labour Law</option>
+              <option>Finance, VAT &amp; Accounts</option>
+              <option>Marketing &amp; Sales</option>
+              <option>Human Resource</option>
+              <option>Business &amp; Project Management</option>
+              <option>Personal Development &amp; Wellbeing</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Proposed Workshop Topic &amp; Bio *</label>
+          <textarea rows="3" required placeholder="Briefly share your facilitation experience and proposed training topic..." class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-sm transition-colors">
+          Submit Facilitator Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- F. COMPANY PROFILE PREVIEW MODAL -->
+  <div id="profilePreviewModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-lg font-extrabold">ECDL Company Profile — 2026 Snapshot</h3>
+        <button type="button" onclick="closeModal('profilePreviewModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4 text-sm text-neutral-700 leading-relaxed">
+        <p><strong>Enroute Center for Development Ltd. (ECDL)</strong> is a premier capacity-building institution under the Enroute Group umbrella (alongside <em>Enroute International Ltd</em>, <em>Enroute Digital Lab</em>, and <em>Sudoksho</em>).</p>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-xl bg-ecdl-greenSoft border border-ecdl-green/20">
+            <span class="block font-display text-xl font-extrabold text-ecdl-green">1,500+</span>
+            <span class="text-xs font-semibold text-ecdl-dark">Delivered Trainings</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-ecdl-greenSoft border border-ecdl-green/20">
+            <span class="block font-display text-xl font-extrabold text-ecdl-green">43,000+</span>
+            <span class="text-xs font-semibold text-ecdl-dark">Trained Professionals</span>
+          </div>
+        </div>
+        <p>All public workshop fees are published strictly <strong>VAT-inclusive</strong> for clarity across individual and corporate enrollments, accompanied by compliant Mushak-6.3 invoices.</p>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="closeModal('profilePreviewModal')" class="px-4 py-2.5 rounded-xl border border-neutral-300 font-bold text-xs">Close</button>
+          <button type="button" onclick="downloadCompanyProfile()" class="px-5 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-xs">Download Full Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- G. SIGN-IN / PROFILE MODAL -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="animate-modal bg-white rounded-3xl max-w-md w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-lg font-extrabold">Sign In to ECDL Portal</h3>
+        <button type="button" onclick="closeModal('authModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="handleSignIn(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Full Name</label>
+          <input id="authNameInput" type="text" required value="EDL Learner" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Email Address</label>
+          <input id="authEmailInput" type="email" required value="learner@ecdl.com.bd" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">
+          Access My Profile
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- H. NON-BLOCKING TOAST NOTIFICATION -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- ========================================================= -->
+  <!-- APPLICATION JAVASCRIPT                                    -->
+  <!-- ========================================================= -->
+  <script>
+    // Safe icon fallback if CDN is unavailable
+    if (typeof window.lucide === "undefined") {
+      window.lucide = { createIcons: function () {} };
+    }
+
+    /* ============================================================
+     * 1. AUTHENTIC ECDL DATA STORE (VAT-INCLUSIVE PRICING)
+     * ============================================================ */
+    const COURSES = [
+      {
+        id: "effective-sales",
+        title: "Effective Sales Management: Achieve Big Sales Targets",
+        category: "Marketing & Sales",
+        facilitator: "Tarikul Kamrul",
+        duration: "Full-Day Intensive · 8 Hours",
+        format: "In-Person (Dhaka) & Live Online",
+        priceInclVat: 3500,
+        vatRate: 0.15,
+        badge: "Bestseller",
+        badgeTone: "yellow",
+        rating: "4.9",
+        enrolled: "1,420+",
+        summary: "Equip sales leaders and account managers with repeatable territory planning, pipeline velocity metrics, and closing frameworks built specifically for Bangladesh’s competitive B2B and FMCG markets.",
+        modules: [
+          "Annual & quarterly target breakdown into daily sales KPIs",
+          "Key Account Management (KAM) & high-value consultative pitching",
+          "Handling price objections without eroding profit margins",
+          "Coaching field sales teams & running high-accountability review meetings"
+        ]
+      },
+      {
+        id: "labour-act-2026",
+        title: "Bangladesh Labour Act 2006 and Its Amendment up to 2026",
+        category: "Compliance Management",
+        facilitator: "Jafrul Hasan Sharif",
+        duration: "2-Day Executive Workshop · 12 Hours",
+        format: "In-Person (Gulshan) & Live Online",
+        priceInclVat: 5000,
+        vatRate: 0.15,
+        badge: "2026 Updated",
+        badgeTone: "orange",
+        rating: "5.0",
+        enrolled: "2,850+",
+        summary: "Comprehensive legal walkthrough of the Bangladesh Labour Act 2006 including all statutory updates and amendments up to 2026—vital for HR leaders, compliance officers, and factory management.",
+        modules: [
+          "Key statutory changes & compliance requirements up to 2026",
+          "Appointment letters, service books, leave encashment & maternity benefits",
+          "Lawful disciplinary inquiry, show-cause notices & misconduct procedures",
+          "Gratuity, provident fund, retrenchment & final settlement calculations"
+        ]
+      },
+      {
+        id: "priorities-productivity",
+        title: "Managing Priorities & Productivity",
+        category: "Personal Development Skills",
+        facilitator: "ECDL Executive Faculty",
+        duration: "Full-Day Workshop · 7 Hours",
+        format: "In-Person & Live Online",
+        priceInclVat: 3500,
+        vatRate: 0.15,
+        badge: "High Demand",
+        badgeTone: "green",
+        rating: "4.8",
+        enrolled: "1,910+",
+        summary: "Eliminate workplace burnout and firefighting. Learn practical prioritization frameworks, executive delegation systems, and deep-work rituals for high-output managers.",
+        modules: [
+          "Eisenhower Impact Matrix & 80/20 high-leverage task audits",
+          "Running crisp 30-minute meetings with clear action ownership",
+          "Managing competing upward requests from senior stakeholders",
+          "Building sustainable weekly planning & focus routines"
+        ]
+      },
+      {
+        id: "strategic-hrm",
+        title: "Strategic Human Resource Management",
+        category: "Human Resource",
+        facilitator: "Senior HR Faculty, ECDL",
+        duration: "Full-Day Masterclass · 8 Hours",
+        format: "In-Person (Dhaka) & Live Online",
+        priceInclVat: 3500,
+        vatRate: 0.15,
+        badge: "Executive Track",
+        badgeTone: "dark",
+        rating: "4.9",
+        enrolled: "1,180+",
+        summary: "Transition HR from administrative support to a measurable business partner. Align workforce planning, KPI scorecards, and retention strategies directly to company profitability.",
+        modules: [
+          "Connecting HR strategy with organizational P&L and growth goals",
+          "Competency-based hiring, onboarding & succession pipelines",
+          "Balanced Scorecard KPIs & fair performance appraisal calibration",
+          "Compensation benchmarking & retaining top performers"
+        ]
+      },
+      {
+        id: "vat-sd-law-2012",
+        title: "Practical Training on VAT & SD Law 2012",
+        category: "Finance & Accounts",
+        facilitator: "FCA & NBR Enlisted VAT Consultant",
+        duration: "Full-Day Practical Lab · 8 Hours",
+        format: "In-Person & Live Online",
+        priceInclVat: 3000,
+        vatRate: 0.05,
+        badge: "NBR Practical",
+        badgeTone: "green",
+        rating: "4.9",
+        enrolled: "2,140+",
+        summary: "Hands-on operational workshop on VAT & Supplementary Duty Act 2012—covering Mushak-6.3 invoicing, VDS deductions, input tax credit rebates, and monthly Mushak-9.1 return preparation.",
+        modules: [
+          "Practical Mushak-6.1, 6.2, 6.3 & 6.6 documentation workflow",
+          "VAT Deducted at Source (VDS) rules, treasury challans & exemptions",
+          "Rebate eligibility conditions & common audit disallowance pitfalls",
+          "Step-by-step live walkthrough of online Mushak-9.1 filing"
+        ]
+      },
+      {
+        id: "pmp-certification",
+        title: "Project Management Professional (PMP)",
+        category: "Business and Management",
+        facilitator: "PMP Certified Lead Trainer",
+        duration: "35 Contact Hours · 5 Weekends",
+        format: "Hybrid Executive Cohort",
+        priceInclVat: 25000,
+        vatRate: 0.15,
+        badge: "Global Cert Prep",
+        badgeTone: "yellow",
+        rating: "5.0",
+        enrolled: "960+",
+        summary: "End-to-end 35 PDU preparation aligned with the latest PMI Exam Content Outline covering Predictive, Agile, and Hybrid delivery frameworks, plus mock exam coaching.",
+        modules: [
+          "People Domain: Leading cross-functional teams & conflict resolution",
+          "Process Domain: Scope, schedule, earned value cost & risk control",
+          "Agile & Hybrid lifecycles, Scrum artifacts & velocity planning",
+          "Full-length simulated PMP mock exams & PMI application review"
+        ]
+      }
+    ];
+
+    const CATEGORIES = [
+      { name: "Business and Management", count: 14, icon: "briefcase", desc: "PMP, operations, strategy & executive governance" },
+      { name: "Finance & Accounts", count: 12, icon: "calculator", desc: "VAT & SD Law, corporate tax, financial modeling" },
+      { name: "Human Resource", count: 16, icon: "users", desc: "Strategic HRM, KPIs, talent & org development" },
+      { name: "Marketing & Sales", count: 15, icon: "trending-up", desc: "Sales leadership, B2B negotiation & digital growth" },
+      { name: "Personal Development Skills", count: 11, icon: "compass", desc: "Productivity, communication & executive presence" },
+      { name: "Workplace Wellbeing", count: 6, icon: "heart-handshake", desc: "Stress resilience, mental health & healthy culture" },
+      { name: "Compliance Management", count: 9, icon: "scale", desc: "Bangladesh Labour Act 2026 & factory audits" },
+      { name: "Skill Development", count: 18, icon: "cpu", desc: "Excel analytics, Power BI & modern workplace tools" }
+    ];
+
+    const WEBINARS = [
+      {
+        id: "web-labour-2026",
+        title: "2026 Labour Law Amendments: Top 10 Compliance Risks for HR",
+        host: "Jafrul Hasan Sharif",
+        date: "Thursday, 26 Nov 2026 · 8:00 PM BST",
+        seatsLeft: 18,
+        registered: false
+      },
+      {
+        id: "web-vat-mushak",
+        title: "Zero-Error Mushak-9.1 & VDS Compliance Briefing",
+        host: "FCA & NBR VAT Consultant",
+        date: "Saturday, 28 Nov 2026 · 7:30 PM BST",
+        seatsLeft: 24,
+        registered: false
+      },
+      {
+        id: "web-sales-q1",
+        title: "Designing Winning 2027 B2B Sales Targets & Incentives",
+        host: "Tarikul Kamrul",
+        date: "Tuesday, 01 Dec 2026 · 8:00 PM BST",
+        seatsLeft: 14,
+        registered: false
+      }
+    ];
+
+    const CERTIFICATES = {
+      "ECDL-2026-8492": {
+        holder: "Nadia Rahman",
+        course: "Bangladesh Labour Act 2006 and Its Amendment up to 2026",
+        issued: "14 October 2026",
+        grade: "Distinction · Verified",
+        organization: "Apex Footwear Ltd."
+      },
+      "ECDL-2026-5104": {
+        holder: "Sajidul Islam",
+        course: "Effective Sales Management: Achieve Big Sales Targets",
+        issued: "02 November 2026",
+        grade: "Completed · Verified",
+        organization: "Unilever Consumer Care"
+      },
+      "ECDL-2025-9931": {
+        holder: "Mahfuzur Chowdhury",
+        course: "Practical Training on VAT & SD Law 2012",
+        issued: "19 December 2025",
+        grade: "Merit · Verified",
+        organization: "City Group Bangladesh"
+      }
+    };
+
+    const FAQS = [
+      {
+        q: "Are all listed course prices inclusive of VAT?",
+        a: "Yes. Every price displayed across the ECDL website (for example, ৳ 3,500 or ৳ 5,000) is 100% inclusive of applicable VAT. You will never see an unexpected tax surcharge added at checkout. For corporate accounting, we automatically provide a Mushak-6.3 VAT invoice showing the base fee and included VAT split."
+      },
+      {
+        q: "How do corporate bulk discounts work?",
+        a: "Organizations enrolling 5 to 9 participants receive an instant 10% discount on the VAT-inclusive fee, and teams of 10 or more receive 20% off automatically. For 50+ staff or customized in-house programs, enterprise packages of 25% off are available."
+      },
+      {
+        q: "Will I receive a verifiable certificate after completing a course?",
+        a: "Yes. Every participant receives an official ECDL completion certificate carrying a unique Credential ID (e.g., ECDL-2026-8492) that employers can verify anytime directly on this portal."
+      },
+      {
+        q: "Can we pay via bKash, Nagad, or Corporate Cheque / Bank Transfer?",
+        a: "Absolutely. Individual participants can pay seamlessly via bKash, Nagad, or Visa/Mastercard (SSLCommerz), while corporate teams can select Corporate Invoice to settle via BEFTN, RTGS, or A/C Payee cheque."
+      }
+    ];
+
+    /* ============================================================
+     * 2. APPLICATION STATE
+     * ============================================================ */
+    let activeCategory = "All";
+    let searchQuery = "";
+    let activeEnrollCourseId = null;
+    let activeWebinarId = null;
+    let currentUser = {
+      loggedIn: true,
+      name: "EDL Learner",
+      email: "learner@ecdl.com.bd",
+      initials: "ED"
+    };
+
+    /* ============================================================
+     * 3. HELPER UTILITIES
+     * ============================================================ */
+    function formatBDT(amount) {
+      return "৳ " + Math.round(amount).toLocaleString("en-US");
+    }
+
+    function formatBDTExact(amount) {
+      return "৳ " + amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function showToast(message, type) {
+      const container = document.getElementById("toastContainer");
+      if (!container) return;
+
+      const colors = {
+        success: "bg-ecdl-green text-white border-ecdl-greenDark",
+        info: "bg-ecdl-dark text-white border-neutral-700",
+        warning: "bg-ecdl-yellow text-ecdl-dark border-ecdl-yellowHover"
+      };
+      const tone = colors[type] || colors.success;
+
+      const el = document.createElement("div");
+      el.className = "pointer-events-auto px-4 py-3 rounded-2xl border shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2.5 animate-modal " + tone;
+      el.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 shrink-0"></i><span>${message}</span>`;
+      container.appendChild(el);
+      lucide.createIcons();
+
+      setTimeout(function () {
+        el.style.opacity = "0";
+        el.style.transition = "opacity 0.25s ease";
+        setTimeout(function () {
+          if (el.parentNode) el.parentNode.removeChild(el);
+        }, 260);
+      }, 3600);
+    }
+
+    function copyTextSafe(text) {
+      try {
+        const temp = document.createElement("textarea");
+        temp.value = text;
+        temp.setAttribute("readonly", "");
+        temp.style.position = "absolute";
+        temp.style.left = "-9999px";
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        showToast("Copied " + text + " to clipboard!", "success");
+      } catch (e) {
+        showToast("Certificate ID: " + text, "info");
+      }
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        lucide.createIcons();
+      }
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+    }
+
+    /* ============================================================
+     * 4. NAVIGATION & PROFILE MENU
+     * ============================================================ */
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      if (menu) menu.classList.toggle("hidden");
+    }
+
+    function toggleProfileDropdown() {
+      const menu = document.getElementById("profileDropdownMenu");
+      if (menu) menu.classList.toggle("hidden");
+    }
+
+    function renderProfileMenu() {
+      const menu = document.getElementById("profileDropdownMenu");
+      const badge = document.getElementById("profileAvatarBadge");
+      const label = document.getElementById("profileBtnLabel");
+      if (!menu) return;
+
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = "Profile";
+        menu.innerHTML = `
+          <div class="px-3 py-2.5 border-b border-neutral-100">
+            <p class="text-sm font-bold text-ecdl-dark">${currentUser.name}</p>
+            <p class="text-xs text-neutral-500 truncate">${currentUser.email}</p>
+          </div>
+          <div class="py-1.5 space-y-0.5 text-sm">
+            <button type="button" onclick="toggleProfileDropdown(); showToast('Viewing enrolled courses for ${currentUser.name}', 'info')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2">
+              <i data-lucide="book-open" class="w-4 h-4"></i> My Courses
+            </button>
+            <button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2">
+              <i data-lucide="award" class="w-4 h-4"></i> My Certificates
+            </button>
+            <button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2">
+              <i data-lucide="log-out" class="w-4 h-4"></i> Logout
+            </button>
+          </div>
+        `;
+      } else {
+        if (badge) badge.textContent = "IN";
+        if (label) label.textContent = "Sign In";
+        menu.innerHTML = `
+          <div class="p-2 space-y-2 text-center">
+            <p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p>
+            <button type="button" onclick="toggleProfileDropdown(); openModal('authModal')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">
+              Sign In / Profile
+            </button>
+          </div>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    function handleLogout() {
+      currentUser.loggedIn = false;
+      toggleProfileDropdown();
+      renderProfileMenu();
+      showToast("You have logged out safely.", "info");
+    }
+
+    function handleSignIn(event) {
+      event.preventDefault();
+      const nameVal = (document.getElementById("authNameInput").value || "EDL Learner").trim();
+      const emailVal = (document.getElementById("authEmailInput").value || "learner@ecdl.com.bd").trim();
+      const parts = nameVal.split(" ");
+      const initials = (parts[0][0] + (parts[1] ? parts[1][0] : (parts[0][1] || "L"))).toUpperCase();
+
+      currentUser = { loggedIn: true, name: nameVal, email: emailVal, initials: initials };
+      closeModal("authModal");
+      renderProfileMenu();
+      showToast("Welcome back, " + nameVal + "!", "success");
+    }
+
+    /* ============================================================
+     * 5. COURSES CATALOG, SEARCH & CATEGORY FILTERING
+     * ============================================================ */
+    function renderFilterTabs() {
+      const container = document.getElementById("courseFilterTabs");
+      if (!container) return;
+
+      const uniqueCats = ["All", "Compliance Management", "Marketing & Sales", "Finance & Accounts", "Human Resource", "Business and Management", "Personal Development Skills"];
+
+      container.innerHTML = uniqueCats.map(function (cat) {
+        const isActive = activeCategory === cat;
+        const cls = isActive
+          ? "bg-ecdl-green text-white border-ecdl-green shadow-sm"
+          : "bg-white text-neutral-700 border-neutral-200 hover:border-ecdl-green hover:text-ecdl-green";
+        return `<button type="button" onclick="selectCategory('${cat.replace(/'/g, "\\'")}')" class="px-4 py-2 rounded-full border text-xs sm:text-sm font-bold transition-all ${cls}">${cat}</button>`;
+      }).join("");
+    }
+
+    function selectCategory(category, shouldScroll) {
+      activeCategory = category;
+      renderFilterTabs();
+      renderCourses();
+      if (shouldScroll) {
+        const el = document.getElementById("courses");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function syncSearchInput(val) {
+      searchQuery = val;
+      const catalogInput = document.getElementById("catalogSearchInput");
+      if (catalogInput && catalogInput.value !== val) catalogInput.value = val;
+      renderCourses();
+    }
+
+    function handleCatalogSearch(val) {
+      searchQuery = val;
+      const heroInput = document.getElementById("heroSearchInput");
+      if (heroInput && heroInput.value !== val) heroInput.value = val;
+      renderCourses();
+    }
+
+    function handleHeroSearch(event) {
+      event.preventDefault();
+      const input = document.getElementById("heroSearchInput");
+      if (input) syncSearchInput(input.value);
+      const sec = document.getElementById("courses");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function quickKeywordSearch(keyword) {
+      activeCategory = "All";
+      searchQuery = keyword;
+      const heroInput = document.getElementById("heroSearchInput");
+      const catalogInput = document.getElementById("catalogSearchInput");
+      if (heroInput) heroInput.value = keyword;
+      if (catalogInput) catalogInput.value = keyword;
+      renderFilterTabs();
+      renderCourses();
+      const sec = document.getElementById("courses");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function resetCourseFilters(shouldScroll) {
+      activeCategory = "All";
+      searchQuery = "";
+      const heroInput = document.getElementById("heroSearchInput");
+      const catalogInput = document.getElementById("catalogSearchInput");
+      if (heroInput) heroInput.value = "";
+      if (catalogInput) catalogInput.value = "";
+      renderFilterTabs();
+      renderCourses();
+      if (shouldScroll) {
+        const sec = document.getElementById("courses");
+        if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function renderCourses() {
+      const grid = document.getElementById("coursesGrid");
+      const statusBar = document.getElementById("filterStatusBar");
+      const statusText = document.getElementById("filterStatusText");
+      const clearBtn = document.getElementById("clearSearchBtn");
+      if (!grid) return;
+
+      const q = (searchQuery || "").trim().toLowerCase();
+      if (clearBtn) clearBtn.classList.toggle("hidden", q.length === 0);
+
+      const filtered = COURSES.filter(function (c) {
+        const matchesCat = activeCategory === "All" || c.category === activeCategory;
+        const matchesQuery =
+          !q ||
+          c.title.toLowerCase().includes(q) ||
+          c.category.toLowerCase().includes(q) ||
+          c.facilitator.toLowerCase().includes(q) ||
+          c.summary.toLowerCase().includes(q);
+        return matchesCat && matchesQuery;
+      });
+
+      if (statusBar && statusText) {
+        if (activeCategory !== "All" || q.length > 0) {
+          statusBar.classList.remove("hidden");
+          const parts = [];
+          if (activeCategory !== "All") parts.push("Category: " + activeCategory);
+          if (q.length > 0) parts.push('Keyword: "' + searchQuery + '"');
+          statusText.textContent = "Showing " + filtered.length + " matching program" + (filtered.length === 1 ? "" : "s") + " (" + parts.join(" · ") + ")";
+        } else {
+          statusBar.classList.add("hidden");
+        }
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full rounded-3xl border-2 border-dashed border-neutral-200 bg-neutral-50 p-10 text-center">
+            <p class="font-display text-xl font-extrabold text-ecdl-dark">No courses matched your current filter</p>
+            <p class="text-sm text-neutral-600 mt-1.5">Try clearing your search keyword or browse all active VAT-inclusive workshops.</p>
+            <button type="button" onclick="resetCourseFilters()" class="mt-5 px-6 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">
+              Show All ${COURSES.length} Courses
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const badgeStyles = {
+        yellow: "bg-ecdl-yellow text-ecdl-dark",
+        orange: "bg-ecdl-orange text-white",
+        green: "bg-ecdl-green text-white",
+        dark: "bg-ecdl-dark text-white"
+      };
+
+      grid.innerHTML = filtered.map(function (c) {
+        const badgeCls = badgeStyles[c.badgeTone] || badgeStyles.green;
+        return `
+          <article class="group bg-white rounded-3xl border border-neutral-200 hover:border-ecdl-green/50 shadow-card hover:shadow-cardHover transition-all flex flex-col overflow-hidden">
+            <!-- Card Visual Header -->
+            <div class="relative bg-ecdl-dark p-5 text-white overflow-hidden">
+              <div class="absolute -right-8 -bottom-8 w-28 h-28 rounded-full bg-ecdl-green/35 group-hover:scale-125 transition-transform"></div>
+              <div class="flex items-center justify-between gap-2 relative z-10 mb-4">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wide ${badgeCls}">
+                  ${c.badge}
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-ecdl-yellow">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  ${c.rating}
+                </span>
+              </div>
+              <span class="block text-[11px] font-bold uppercase tracking-wider text-emerald-300 relative z-10">
+                ${c.category}
+              </span>
+              <h3 class="font-display text-lg font-extrabold leading-snug mt-1 text-white relative z-10 min-h-[3.2rem]">
+                ${c.title}
+              </h3>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between gap-5">
+              <div class="space-y-3">
+                <div class="flex items-center gap-2 text-xs font-semibold text-neutral-600">
+                  <i data-lucide="user-check" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+                  <span>Facilitator: <strong class="text-ecdl-dark">${c.facilitator}</strong></span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-neutral-500">
+                  <i data-lucide="clock" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+                  <span>${c.duration} · ${c.enrolled} Alumni</span>
+                </div>
+                <p class="text-sm text-neutral-600 leading-relaxed line-clamp-3">
+                  ${c.summary}
+                </p>
+              </div>
+
+              <!-- Price + CTAs -->
+              <div class="pt-4 border-t border-neutral-100 space-y-4">
+                <div class="flex items-baseline justify-between gap-2">
+                  <div>
+                    <span class="font-display text-2xl font-extrabold text-ecdl-dark">${formatBDT(c.priceInclVat)}</span>
+                    <span class="ml-1.5 inline-flex items-center px-2 py-0.5 rounded-md bg-ecdl-greenSoft text-ecdl-green text-[11px] font-extrabold">
+                      Incl. VAT
+                    </span>
+                  </div>
+                  <span class="text-[11px] font-medium text-neutral-500">No extra tax</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button
+                    type="button"
+                    onclick="openSyllabusModal('${c.id}')"
+                    class="py-2.5 px-3 rounded-xl border border-neutral-300 hover:border-ecdl-dark text-ecdl-dark font-bold text-xs sm:text-sm transition-colors"
+                  >
+                    Read More
+                  </button>
+                  <button
+                    type="button"
+                    onclick="openEnrollModal('${c.id}')"
+                    class="py-2.5 px-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-xs sm:text-sm shadow-sm transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+    }
+
+    /* ============================================================
+     * 6. CATEGORY CARDS RENDERING
+     * ============================================================ */
+    function renderCategoryCards() {
+      const grid = document.getElementById("categoryGrid");
+      if (!grid) return;
+
+      grid.innerHTML = CATEGORIES.map(function (cat) {
+        return `
+          <button
+            type="button"
+            onclick="selectCategory('${cat.name.replace(/'/g, "\\'")}', true)"
+            class="group text-left bg-white rounded-2xl p-6 border border-neutral-200 hover:border-ecdl-green shadow-sm hover:shadow-cardHover transition-all flex flex-col justify-between gap-4"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft group-hover:bg-ecdl-green text-ecdl-green group-hover:text-white flex items-center justify-center transition-colors">
+                <i data-lucide="${cat.icon}" class="w-6 h-6"></i>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-neutral-100 group-hover:bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold transition-colors">
+                ${cat.count} Programs
+              </span>
+            </div>
+            <div>
+              <h3 class="font-display font-extrabold text-base text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+                ${cat.name}
+              </h3>
+              <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">${cat.desc}</p>
+            </div>
+          </button>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+    }
+
+    /* ============================================================
+     * 7. SYLLABUS & SMART ENROLLMENT MODALS
+     * ============================================================ */
+    function openSyllabusModal(courseId) {
+      const c = COURSES.find(function (item) { return item.id === courseId; });
+      if (!c) return;
+
+      document.getElementById("sylCategory").textContent = c.category;
+      document.getElementById("sylTitle").textContent = c.title;
+      document.getElementById("sylMeta").textContent = "Facilitator: " + c.facilitator + " · " + c.duration + " · " + c.format;
+      document.getElementById("sylSummary").textContent = c.summary;
+      document.getElementById("sylPrice").textContent = formatBDT(c.priceInclVat) + " Incl. VAT";
+      document.getElementById("sylModules").innerHTML = c.modules.map(function (m) {
+        return `<li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-ecdl-green shrink-0 mt-0.5"></i><span>${m}</span></li>`;
+      }).join("");
+
+      const detailLink = document.getElementById("sylDetailLink");
+      if (detailLink) {
+        const slug = c.id === "labour-act-2026" ? "bangladesh-labour-act-2006-amendment-2026" : c.id;
+        detailLink.href = "course-detail.html?slug=" + slug;
+      }
+      const btn = document.getElementById("sylEnrollBtn");
+      btn.onclick = function () {
+        closeModal("syllabusModal");
+        openEnrollModal(c.id);
+      };
+
+      openModal("syllabusModal");
+    }
+
+    function openEnrollModal(courseId) {
+      const c = COURSES.find(function (item) { return item.id === courseId; });
+      if (!c) return;
+
+      activeEnrollCourseId = c.id;
+      document.getElementById("enrollCourseTitle").textContent = c.title;
+      document.getElementById("enrollSeatsInput").value = 1;
+      document.getElementById("taxBreakdownBox").classList.add("hidden");
+      setEnrollMode("individual");
+      updateEnrollPricing();
+      openModal("enrollModal");
+    }
+
+    function setEnrollMode(mode) {
+      const indBtn = document.getElementById("modeIndividualBtn");
+      const corpBtn = document.getElementById("modeCorporateBtn");
+      const seatsInput = document.getElementById("enrollSeatsInput");
+
+      if (mode === "corporate") {
+        corpBtn.className = "py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-white text-ecdl-dark shadow-sm";
+        indBtn.className = "py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-neutral-600";
+        if (parseInt(seatsInput.value, 10) < 5) seatsInput.value = 5;
+      } else {
+        indBtn.className = "py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-white text-ecdl-dark shadow-sm";
+        corpBtn.className = "py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-neutral-600";
+        seatsInput.value = 1;
+      }
+      updateEnrollPricing();
+    }
+
+    function adjustSeats(delta) {
+      const seatsInput = document.getElementById("enrollSeatsInput");
+      let val = parseInt(seatsInput.value, 10) || 1;
+      val = Math.min(50, Math.max(1, val + delta));
+      seatsInput.value = val;
+      updateEnrollPricing();
+    }
+
+    function updateEnrollPricing() {
+      const c = COURSES.find(function (item) { return item.id === activeEnrollCourseId; });
+      if (!c) return;
+
+      const seatsInput = document.getElementById("enrollSeatsInput");
+      let seats = parseInt(seatsInput.value, 10) || 1;
+      if (seats < 1) seats = 1;
+      if (seats > 50) seats = 50;
+
+      const grossInclVat = c.priceInclVat * seats;
+      let discountPct = 0;
+      if (seats >= 10) discountPct = 20;
+      else if (seats >= 5) discountPct = 10;
+
+      const discountAmt = Math.round(grossInclVat * (discountPct / 100));
+      const finalPayable = grossInclVat - discountAmt;
+
+      // Informational Mushak-6.3 VAT split inside the VAT-inclusive total
+      const netBase = finalPayable / (1 + c.vatRate);
+      const includedVat = finalPayable - netBase;
+
+      document.getElementById("calcSeatLabel").textContent = seats + (seats === 1 ? " Seat" : " Seats");
+      document.getElementById("calcUnitPrice").textContent = formatBDT(c.priceInclVat);
+      document.getElementById("calcGrossTotal").textContent = formatBDT(grossInclVat);
+
+      const discRow = document.getElementById("calcDiscountRow");
+      if (discountPct > 0) {
+        discRow.classList.remove("hidden");
+        document.getElementById("calcDiscountLabel").textContent = "Corporate Bulk Discount (" + discountPct + "% Off)";
+        document.getElementById("calcDiscountValue").textContent = "- " + formatBDT(discountAmt);
+      } else {
+        discRow.classList.add("hidden");
+      }
+
+      document.getElementById("calcFinalTotal").textContent = formatBDT(finalPayable);
+      document.getElementById("calcNetBase").textContent = formatBDTExact(netBase);
+      document.getElementById("calcVatRateLabel").textContent = "Included VAT (" + Math.round(c.vatRate * 100) + "%)";
+      document.getElementById("calcIncludedVat").textContent = formatBDTExact(includedVat);
+      document.getElementById("calcBreakdownTotal").textContent = formatBDTExact(finalPayable);
+      document.getElementById("enrollSubmitBtn").textContent = "Confirm Enrollment — " + formatBDT(finalPayable) + " (Incl. VAT)";
+    }
+
+    function toggleTaxBreakdown() {
+      const box = document.getElementById("taxBreakdownBox");
+      if (box) box.classList.toggle("hidden");
+    }
+
+    function submitEnrollment(event) {
+      event.preventDefault();
+      const c = COURSES.find(function (item) { return item.id === activeEnrollCourseId; });
+      const name = document.getElementById("enrollName").value.trim();
+      const total = document.getElementById("calcFinalTotal").textContent;
+      const payMethodEl = document.querySelector('input[name="payMethod"]:checked');
+      const payMethod = payMethodEl ? payMethodEl.value : "bKash";
+
+      closeModal("enrollModal");
+      document.getElementById("enrollForm").reset();
+      showToast("Enrollment confirmed for " + name + " (" + total + " via " + payMethod + ")! Receipt sent.", "success");
+    }
+
+    /* ============================================================
+     * 8. LIVE WEBINARS
+     * ============================================================ */
+    function renderWebinars() {
+      const grid = document.getElementById("webinarsGrid");
+      if (!grid) return;
+
+      grid.innerHTML = WEBINARS.map(function (w) {
+        const btnHtml = w.registered
+          ? `<button type="button" disabled class="w-full py-3 rounded-xl bg-ecdl-greenSoft text-ecdl-green font-bold text-sm inline-flex items-center justify-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Seat Reserved</button>`
+          : `<button type="button" onclick="openWebinarModal('${w.id}')" class="w-full py-3 rounded-xl bg-ecdl-dark hover:bg-ecdl-green text-white font-bold text-sm transition-colors">Reserve Free Seat</button>`;
+
+        return `
+          <div class="rounded-3xl border border-neutral-200 p-6 bg-white shadow-card flex flex-col justify-between gap-5">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-ecdl-orange/10 text-ecdl-orange text-xs font-extrabold uppercase">FREE LIVE</span>
+                <span class="text-xs font-bold text-neutral-500">${w.seatsLeft} seats left</span>
+              </div>
+              <h3 class="font-display text-lg font-extrabold text-ecdl-dark leading-snug">${w.title}</h3>
+              <p class="text-xs font-semibold text-ecdl-green flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-4 h-4"></i> ${w.date}
+              </p>
+              <p class="text-xs text-neutral-600">Hosted by <strong>${w.host}</strong></p>
+            </div>
+            ${btnHtml}
+          </div>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+    }
+
+    function openWebinarModal(webinarId) {
+      const w = WEBINARS.find(function (item) { return item.id === webinarId; });
+      if (!w) return;
+      activeWebinarId = w.id;
+      document.getElementById("webinarModalTitle").textContent = w.title;
+      document.getElementById("webinarModalSchedule").textContent = w.date + " · Host: " + w.host;
+      openModal("webinarModal");
+    }
+
+    function submitWebinarRegistration(event) {
+      event.preventDefault();
+      const w = WEBINARS.find(function (item) { return item.id === activeWebinarId; });
+      if (w) {
+        w.registered = true;
+        if (w.seatsLeft > 1) w.seatsLeft -= 1;
+      }
+      closeModal("webinarModal");
+      document.getElementById("webinarRegForm").reset();
+      renderWebinars();
+      showToast("Free webinar seat reserved! Zoom link dispatched to your email.", "success");
+    }
+
+    /* ============================================================
+     * 9. CERTIFICATE VERIFICATION
+     * ============================================================ */
+    function renderCertMarkup(id) {
+      const cleanId = (id || "").trim().toUpperCase();
+      const record = CERTIFICATES[cleanId];
+      if (!cleanId) {
+        return `<p class="text-neutral-500">Enter an ECDL Certificate ID to verify authenticity.</p>`;
+      }
+      if (!record) {
+        return `
+          <div class="flex items-start gap-3 text-ecdl-orange">
+            <i data-lucide="alert-circle" class="w-5 h-5 shrink-0 mt-0.5"></i>
+            <div>
+              <p class="font-bold text-ecdl-dark">No matching record found for "${cleanId}"</p>
+              <p class="text-xs text-neutral-600 mt-0.5">Please check the ID or try sample ID <strong>ECDL-2026-8492</strong>.</p>
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-ecdl-green text-white text-xs font-extrabold">
+              <i data-lucide="badge-check" class="w-4 h-4 text-ecdl-yellow"></i> VERIFIED CREDENTIAL
+            </span>
+            <button type="button" onclick="copyTextSafe('${cleanId}')" class="text-xs font-mono font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+              <span>${cleanId}</span>
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <p class="font-display font-extrabold text-base text-ecdl-dark">${record.holder}</p>
+          <p class="text-xs text-neutral-700 font-semibold">${record.course}</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 pt-1 border-t border-neutral-200">
+            <span>Issued: <strong class="text-ecdl-dark">${record.issued}</strong></span>
+            <span>Org: <strong class="text-ecdl-dark">${record.organization}</strong></span>
+          </div>
+        </div>
+      `;
+    }
+
+    function testCertificateId(id) {
+      const input = document.getElementById("inlineCertInput");
+      const box = document.getElementById("inlineCertResult");
+      if (input) input.value = id;
+      if (box) {
+        box.innerHTML = renderCertMarkup(id);
+        lucide.createIcons();
+      }
+    }
+
+    function handleInlineVerify(event) {
+      event.preventDefault();
+      const val = document.getElementById("inlineCertInput").value;
+      testCertificateId(val);
+    }
+
+    function openVerifyModal() {
+      openModal("verifyModal");
+    }
+
+    function verifyInModal(id) {
+      const input = document.getElementById("modalCertInput");
+      const box = document.getElementById("modalCertResult");
+      if (input) input.value = id;
+      if (box) {
+        box.innerHTML = renderCertMarkup(id);
+        lucide.createIcons();
+      }
+    }
+
+    function handleModalVerify(event) {
+      event.preventDefault();
+      const val = document.getElementById("modalCertInput").value;
+      verifyInModal(val);
+    }
+
+    /* ============================================================
+     * 10. CORPORATE TEAM ESTIMATOR & PROPOSAL FORM
+     * ============================================================ */
+    function updateTeamEstimator(val) {
+      const size = parseInt(val, 10) || 20;
+      const badge = document.getElementById("teamSizeBadge");
+      const discountEl = document.getElementById("teamDiscountTier");
+      const savingsEl = document.getElementById("teamEstimatedSavings");
+      const recEl = document.getElementById("teamRecommendation");
+      const formField = document.getElementById("corpTeamSizeInput");
+
+      let discountPct = 10;
+      let recText = "Recommended: <strong>Group Public Seat Allocation</strong> with 10% corporate discount and consolidated Mushak-6.3 tax invoicing.";
+
+      if (size >= 50) {
+        discountPct = 25;
+        recText = "Recommended: <strong>Annual Enterprise L&amp;D Retainer</strong> with customized Training Needs Analysis (TNA), dedicated faculty, and 25% savings.";
+      } else if (size >= 10) {
+        discountPct = 20;
+        recText = "Recommended: <strong>Dedicated In-House Corporate Batch</strong> delivered at your office or ECDL Gulshan venue with tailored case studies and 20% savings.";
+      }
+
+      const avgFee = 3500;
+      const estSavings = Math.round(size * avgFee * (discountPct / 100));
+
+      if (badge) badge.textContent = size >= 100 ? "100+ Employees" : size + " Employees";
+      if (discountEl) discountEl.textContent = size >= 50 ? "25% Enterprise" : discountPct + "% Off";
+      if (savingsEl) savingsEl.textContent = formatBDT(estSavings) + "+";
+      if (recEl) recEl.innerHTML = recText;
+      if (formField) {
+        formField.value = (size >= 100 ? "100+" : size) + " Employees (" + discountPct + "% Off)";
+      }
+    }
+
+    function handleCorporateFormSubmit(event) {
+      event.preventDefault();
+      event.target.reset();
+      updateTeamEstimator(document.getElementById("teamSizeSlider").value);
+      showToast("Corporate proposal request received! Our B2B team will respond within 24 hours.", "success");
+    }
+
+    /* ============================================================
+     * 11. INSTRUCTOR APPLICATION & COMPANY PROFILE DOWNLOAD
+     * ============================================================ */
+    function openInstructorModal() {
+      openModal("instructorModal");
+    }
+
+    function submitInstructorApplication(event) {
+      event.preventDefault();
+      event.target.reset();
+      closeModal("instructorModal");
+      showToast("Application submitted! ECDL Academic Board will review your profile.", "success");
+    }
+
+    function openProfilePreviewModal() {
+      openModal("profilePreviewModal");
+    }
+
+    function downloadCompanyProfile() {
+      const content = [
+        "ENROUTE CENTER FOR DEVELOPMENT LTD. (ECDL)",
+        "Company Profile & 2026 Executive Training Catalog",
+        "==================================================",
+        "Impact Metrics: 1,500+ Training Programs | 43,000+ Participants | 200+ Facilitators | 140+ Organizations",
+        "All Public Workshop Fees Are Cleanly Inclusive of VAT (Mushak-6.3 Provided):",
+        "- Effective Sales Management: Achieve Big Sales Targets — BDT 3,500 (Incl. VAT)",
+        "- Bangladesh Labour Act 2006 and Its Amendment up to 2026 — BDT 5,000 (Incl. VAT)",
+        "- Managing Priorities & Productivity — BDT 3,500 (Incl. VAT)",
+        "- Strategic Human Resource Management — BDT 3,500 (Incl. VAT)",
+        "- Practical Training on VAT & SD Law 2012 — BDT 3,000 (Incl. VAT)",
+        "- Project Management Professional (PMP) — BDT 25,000 (Incl. VAT)",
+        "",
+        "Contact: +8801767804408 | training@ecdl.com.bd | Pink City, Gulshan Avenue, Dhaka",
+        "Sister Concerns: Enroute International Ltd | Enroute Digital Lab | Sudoksho"
+      ].join("\n");
+
+      try {
+        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "ECDL-Company-Profile-2026.txt";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Downloading ECDL 2026 Company Profile...", "success");
+      } catch (err) {
+        showToast("Profile ready — contact training@ecdl.com.bd for the full print PDF.", "info");
+      }
+    }
+
+    /* ============================================================
+     * 12. INTERACTIVE FAQ ACCORDION
+     * ============================================================ */
+    function renderFAQs() {
+      const container = document.getElementById("faqContainer");
+      if (!container) return;
+
+      container.innerHTML = FAQS.map(function (item, idx) {
+        const isFirst = idx === 0;
+        return `
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden">
+            <button
+              type="button"
+              onclick="toggleFAQ(${idx})"
+              class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-ecdl-dark hover:bg-neutral-50 transition-colors"
+            >
+              <span>${item.q}</span>
+              <i id="faqIcon-${idx}" data-lucide="chevron-down" class="w-5 h-5 text-ecdl-green shrink-0 transition-transform ${isFirst ? "rotate-180" : ""}"></i>
+            </button>
+            <div id="faqAnswer-${idx}" class="${isFirst ? "" : "hidden"} px-5 pb-5 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-3">
+              ${item.a}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+    }
+
+    function toggleFAQ(idx) {
+      const ans = document.getElementById("faqAnswer-" + idx);
+      const icon = document.getElementById("faqIcon-" + idx);
+      if (ans) ans.classList.toggle("hidden");
+      if (icon) icon.classList.toggle("rotate-180");
+    }
+
+    /* ============================================================
+     * 13. ANIMATED IMPACT COUNTERS
+     * ============================================================ */
+    function initAnimatedCounters() {
+      const section = document.getElementById("impactSection");
+      const counters = document.querySelectorAll(".counter-value");
+      let animated = false;
+
+      function runCounters() {
+        if (animated) return;
+        animated = true;
+        counters.forEach(function (el) {
+          const target = parseInt(el.getAttribute("data-target"), 10) || 0;
+          const duration = 1100;
+          const start = performance.now();
+
+          function step(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target).toLocaleString("en-US");
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target.toLocaleString("en-US");
+            }
+          }
+          requestAnimationFrame(step);
+        });
+      }
+
+      if ("IntersectionObserver" in window && section) {
+        const observer = new IntersectionObserver(
+          function (entries) {
+            if (entries.some(function (entry) { return entry.isIntersecting; })) {
+              runCounters();
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.2 }
+        );
+        observer.observe(section);
+      } else {
+        runCounters();
+      }
+    }
+
+    /* ============================================================
+     * 14. CLOSE DROPDOWN / MODALS ON OUTSIDE CLICK OR ESC
+     * ============================================================ */
+    document.addEventListener("click", function (event) {
+      const wrapper = document.getElementById("profileDropdownWrapper");
+      const menu = document.getElementById("profileDropdownMenu");
+      if (wrapper && menu && !wrapper.contains(event.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        ["syllabusModal", "enrollModal", "webinarModal", "verifyModal", "instructorModal", "profilePreviewModal", "authModal"].forEach(closeModal);
+      }
+    });
+
+    /* ============================================================
+     * 15. SAFE BOOTSTRAP ON DOM READY
+     * ============================================================ */
+    function initApp() {
+      try {
+        renderProfileMenu();
+        renderFilterTabs();
+        renderCourses();
+        renderCategoryCards();
+        renderWebinars();
+        renderFAQs();
+        updateTeamEstimator(20);
+        testCertificateId("ECDL-2026-8492");
+        initAnimatedCounters();
+        lucide.createIcons();
+      } catch (err) {
+        console.error("ECDL Portal initialization error:", err);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initApp);
+    } else {
+      initApp();
+    }
+  </script>
+</body>
+</html>

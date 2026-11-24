@@ -1,0 +1,540 @@
+/**
+ * Open ECDL — Phase 05: Webinars & Policy Briefings Stylesheet
+ * Enroute Center for Development Ltd.
+ */
+
+/* ==========================================================================
+   1. WEBINARS HERO & FEATURED BANNER
+   ========================================================================== */
+.ecdl-webinars-hero {
+  background-color: var(--ecdl-color-white);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.ecdl-webinars-hero__header {
+  margin-bottom: var(--space-xl);
+}
+
+.ecdl-webinars-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ecdl-color-black);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-xs);
+}
+
+.ecdl-webinars-hero__lead {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Featured Webinar Spotlight Card */
+.ecdl-featured-webinar-card {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-xl);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.ecdl-featured-webinar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--ecdl-color-yellow);
+}
+
+.ecdl-featured-webinar__badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-featured-webinar__live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(244, 219, 15, 0.15);
+  border: 1px solid rgba(244, 219, 15, 0.4);
+  color: var(--ecdl-color-yellow);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.ecdl-featured-webinar__live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--ecdl-color-yellow);
+  animation: ecdl-pulse-slow 1.5s infinite ease-in-out;
+}
+
+.ecdl-featured-webinar__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 800;
+  color: var(--ecdl-color-white);
+  line-height: 1.35;
+  margin: 0 0 var(--space-sm);
+}
+
+.ecdl-featured-webinar__desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 var(--space-md);
+  max-width: 640px;
+}
+
+.ecdl-featured-webinar__outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecdl-featured-webinar__outcome-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ecdl-featured-webinar__speakers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.ecdl-featured-speaker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ecdl-featured-speaker__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--ecdl-color-green);
+  object-fit: cover;
+}
+
+.ecdl-featured-speaker__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-featured-speaker__title {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Right column inside featured card: Countdown & CTA */
+.ecdl-featured-webinar__sidebar {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ecdl-countdown-block {
+  text-align: center;
+}
+
+.ecdl-countdown-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ecdl-color-yellow);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.ecdl-countdown-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xs);
+  padding: 6px 2px;
+}
+
+.ecdl-countdown-num {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-countdown-unit {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ecdl-featured-sidebar-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  .ecdl-featured-webinar-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+  }
+}
+
+/* ==========================================================================
+   2. TABS & WEBINAR GRID
+   ========================================================================== */
+.ecdl-webinars-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-webinars-tabs-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  padding-bottom: var(--space-sm);
+}
+
+.ecdl-webinars-tabs {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.ecdl-webinar-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 4px;
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-webinar-tab-btn:hover {
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-webinar-tab-btn.is-active {
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-webinar-tab-btn.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--ecdl-color-green);
+  border-radius: 2px;
+}
+
+.ecdl-webinar-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: 9999px;
+  padding: 1px 7px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-left: 6px;
+}
+
+.ecdl-webinar-tab-btn.is-active .ecdl-webinar-tab-count {
+  background-color: var(--ecdl-color-soft-green);
+  border-color: rgba(16, 139, 68, 0.3);
+  color: var(--ecdl-color-green);
+}
+
+/* Grid of Webinar Cards */
+.ecdl-webinars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Individual Webinar Card */
+.ecdl-webinar-card {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-webinar-card:hover {
+  border-color: var(--ecdl-color-green);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.ecdl-webinar-card__meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-webinar-card__time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-webinar-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ecdl-color-black);
+  line-height: 1.4;
+  margin: 0 0 var(--space-xs);
+}
+
+.ecdl-webinar-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ecdl-webinar-card__title a:hover {
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-webinar-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0 0 var(--space-md);
+}
+
+.ecdl-webinar-card__outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-webinar-card__outcome-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.ecdl-webinar-card__speaker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-webinar-card__speaker-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ecdl-webinar-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--ecdl-color-borders);
+}
+
+/* Past Webinar Resource Block */
+.ecdl-past-resources-block {
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  padding: 10px 12px;
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8125rem;
+}
+
+.ecdl-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--ecdl-color-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-resource-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. WEBINAR REGISTRATION MODAL
+   ========================================================================== */
+.ecdl-webinar-reg-modal {
+  max-width: 580px;
+}
+
+.ecdl-form-error-msg {
+  font-size: 0.75rem;
+  color: #DC2626;
+  margin-top: 4px;
+  display: none;
+}
+
+.ecdl-input.has-error {
+  border-color: #DC2626;
+  background-color: #FEF2F2;
+}
+
+.ecdl-input.has-error + .ecdl-form-error-msg {
+  display: block;
+}
+
+/* Confirmation Success State */
+.ecdl-confirmation-card {
+  text-align: center;
+  padding: var(--space-md) var(--space-xs);
+}
+
+.ecdl-confirmation-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--ecdl-color-soft-green);
+  border: 2px solid var(--ecdl-color-green);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ecdl-color-green);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-confirmation-title {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--ecdl-color-black);
+  margin: 0 0 var(--space-xs);
+}
+
+.ecdl-confirmation-ref {
+  display: inline-block;
+  background-color: var(--ecdl-color-surface);
+  border: 1px dashed var(--ecdl-color-borders);
+  padding: 4px 12px;
+  border-radius: var(--radius-xs);
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-confirmation-msg {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 440px;
+  margin: 0 auto var(--space-lg);
+}
+
+.ecdl-confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+
+/* ==========================================================================
+   OPEN ECDL MODERN HOMEPAGE PARITY STYLES (Webinars Hub)
+   ========================================================================== */
+.ecdl-webinar-card {
+  border-radius: 24px !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.05) !important;
+  background-color: #FFFFFF !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ecdl-webinar-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(16, 139, 68, 0.45) !important;
+  box-shadow: 0 20px 30px -4px rgba(16, 139, 68, 0.12) !important;
+}
+
+.ecdl-webinar-featured-banner {
+  border-radius: 28px !important;
+  box-shadow: 0 20px 40px -10px rgba(17, 17, 17, 0.25) !important;
+}

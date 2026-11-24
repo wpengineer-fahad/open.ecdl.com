@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Webinars & Policy Briefings — Open ECDL</title>
+  <meta name="description" content="Join live interactive policy briefings, statutory labour law panels, and executive commercial masterclasses in Bangladesh.">
+  <link rel="canonical" href="https://open.ecdl.com.bd/webinars">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
+            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  <link rel="stylesheet" href="assets/css/webinars.css">
+</head>
+<body class="bg-neutral-50/50 text-neutral-800 antialiased font-sans">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP UTILITY BAR (#111111)                              -->
+  <!-- ========================================================= -->
+  <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
+        <span class="text-neutral-300 hidden sm:inline">All course fees include Bangladesh Govt. VAT (Mushak-6.3 supplied on request)</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="tel:+8801767804408" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>+8801767804408</span>
+        </a>
+        <a href="mailto:training@ecdl.com.bd" class="hover:text-ecdl-yellow transition-colors hidden md:inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>training@ecdl.com.bd</span>
+        </a>
+        <button type="button" onclick="openVerifyModal()" class="hover:text-white text-ecdl-yellow font-semibold transition-colors inline-flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verify Certificate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2. STICKY MAIN NAVBAR (#FFFFFF)                           -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+
+        <!-- Custom Brand SVG Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
+              ECDL
+            </span>
+            <span class="block text-[11px] font-medium text-neutral-500">
+              Enroute Center for Development
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="index.html" class="hover:text-ecdl-green transition-colors ">Home</a>
+          <a href="courses.html" class="hover:text-ecdl-green transition-colors ">Courses</a>
+          <a href="webinars.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1.5 text-ecdl-green font-bold">
+            <span>Webinar</span>
+            <span class="w-2 h-2 rounded-full bg-ecdl-orange animate-pulse"></span>
+          </a>
+          <a href="training-calendar.html" class="hover:text-ecdl-green transition-colors ">Calendar</a>
+          <a href="index.html#corporate" class="hover:text-ecdl-green transition-colors">Corporate</a>
+          <a href="index.html#contact" class="hover:text-ecdl-green transition-colors">Contact</a>
+          <button type="button" onclick="openInstructorModal()" class="text-ecdl-green hover:text-ecdl-greenDark transition-colors">
+            Become an Instructor
+          </button>
+        </nav>
+
+        <!-- Right Controls: Profile Dropdown + Mobile Hamburger -->
+        <div class="flex items-center gap-2.5">
+          <!-- Profile / Auth Dropdown Wrapper -->
+          <div class="relative" id="profileDropdownWrapper">
+            <button
+              type="button"
+              id="profileMenuBtn"
+              onclick="toggleProfileDropdown()"
+              class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-neutral-200 hover:border-ecdl-green bg-neutral-50 hover:bg-ecdl-greenSoft transition-all text-sm font-semibold text-ecdl-dark"
+            >
+              <span id="profileAvatarBadge" class="w-7 h-7 rounded-full bg-ecdl-green text-white text-xs font-bold flex items-center justify-center">
+                ED
+              </span>
+              <span id="profileBtnLabel" class="hidden sm:inline">Profile</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div
+              id="profileDropdownMenu"
+              class="hidden absolute right-0 mt-2 w-60 rounded-2xl bg-white border border-neutral-200 shadow-cardHover p-2 z-50"
+            ></div>
+          </div>
+
+          <!-- Primary Quick CTA -->
+          <a
+            href="courses.html"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white text-sm font-bold shadow-sm transition-colors"
+          >
+            <span>Explore Courses</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="lg:hidden p-2.5 rounded-xl border border-neutral-200 text-ecdl-dark hover:bg-neutral-100"
+            aria-label="Toggle Menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="index.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
+      <a href="courses.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
+      <a href="training-calendar.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Training Calendar</a>
+      <a href="webinars.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Live Webinars</a>
+      <a href="index.html#categories" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Categories</a>
+      <a href="index.html#corporate" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Corporate Training</a>
+      <a href="index.html#contact" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Contact</a>
+      <button type="button" onclick="toggleMobileMenu(); openInstructorModal();" class="w-full text-left px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">
+        Become an Instructor
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ====================================================================
+       2. WEBINARS HERO & FEATURED UPCOMING BANNER
+       ==================================================================== -->
+  <section class="ecdl-webinars-hero">
+    <div class="ecdl-container">
+
+      <!-- Breadcrumbs -->
+      <nav class="ecdl-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html" class="ecdl-breadcrumbs__link">Home</a>
+        <span class="ecdl-breadcrumbs__separator">/</span>
+        <span class="ecdl-breadcrumbs__current" aria-current="page">Webinars & Briefings</span>
+      </nav>
+
+      <!-- Section Title -->
+      <div class="ecdl-webinars-hero__header">
+        <span class="ecdl-kicker">Interactive Virtual Policy Series</span>
+        <h1 class="ecdl-webinars-hero__title">Executive Webinars & Policy Briefings</h1>
+        <p class="ecdl-webinars-hero__lead">
+          Join high-level regulatory briefings, commercial negotiation masterclasses, and executive panels. Delivered live on Zoom with interactive faculty Q&A.
+        </p>
+      </div>
+
+      <!-- Featured Upcoming Spotlight Card -->
+      <article class="ecdl-featured-webinar-card" id="featured-webinar">
+        <div>
+          <div class="ecdl-featured-webinar__badge-row">
+            <span class="ecdl-featured-webinar__live-tag">
+              <span class="ecdl-featured-webinar__live-dot"></span>
+              <span>Next Flagship Broadcast</span>
+            </span>
+            <span class="ecdl-badge ecdl-badge--dark">Compliance Management</span>
+            <span class="ecdl-badge ecdl-badge--green">Complimentary Registration</span>
+          </div>
+
+          <h2 class="ecdl-featured-webinar__title">
+            Executive Policy Briefing: 2026 Bangladesh Labour Act Gazette Amendments & Workplace Impact
+          </h2>
+
+          <p class="ecdl-featured-webinar__desc">
+            An authoritative statutory breakdown of recent gazette notifications, revised Labour Rules, worker classification standards, and separation dispute defense for HR directors and legal counsels.
+          </p>
+
+          <ul class="ecdl-featured-webinar__outcomes">
+            <li class="ecdl-featured-webinar__outcome-item">
+              <span style="color:var(--ecdl-color-yellow); font-weight:800;">✓</span>
+              <span>Section-by-Section legal updates in latest 2026 Labour Act amendments</span>
+            </li>
+            <li class="ecdl-featured-webinar__outcome-item">
+              <span style="color:var(--ecdl-color-yellow); font-weight:800;">✓</span>
+              <span>Factory inspection readiness checklist and DIFE audit defense protocols</span>
+            </li>
+            <li class="ecdl-featured-webinar__outcome-item">
+              <span style="color:var(--ecdl-color-yellow); font-weight:800;">✓</span>
+              <span>Live interactive advisory Q&A directly with Supreme Court advocates</span>
+            </li>
+          </ul>
+
+          <div class="ecdl-featured-webinar__speakers">
+            <div class="ecdl-featured-speaker">
+              <img class="ecdl-featured-speaker__avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Advocate Rafiqul Islam">
+              <div>
+                <div class="ecdl-featured-speaker__name">Advocate Rafiqul Islam</div>
+                <div class="ecdl-featured-speaker__title">Advocate, Supreme Court of Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="ecdl-featured-speaker">
+              <img class="ecdl-featured-speaker__avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Ms. Shahnaz Begum">
+              <div>
+                <div class="ecdl-featured-speaker__name">Ms. Shahnaz Begum</div>
+                <div class="ecdl-featured-speaker__title">Former Joint Director, DIFE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar: Countdown & Registration CTA -->
+        <div class="ecdl-featured-webinar__sidebar">
+          <div class="ecdl-countdown-block">
+            <div class="ecdl-countdown-label">Broadcast Commences In</div>
+            <div class="ecdl-countdown-grid">
+              <div class="ecdl-countdown-item">
+                <div class="ecdl-countdown-num" id="countdown-days">16</div>
+                <div class="ecdl-countdown-unit">Days</div>
+              </div>
+              <div class="ecdl-countdown-item">
+                <div class="ecdl-countdown-num" id="countdown-hours">02</div>
+                <div class="ecdl-countdown-unit">Hours</div>
+              </div>
+              <div class="ecdl-countdown-item">
+                <div class="ecdl-countdown-num" id="countdown-mins">18</div>
+                <div class="ecdl-countdown-unit">Mins</div>
+              </div>
+              <div class="ecdl-countdown-item">
+                <div class="ecdl-countdown-num" id="countdown-secs">45</div>
+                <div class="ecdl-countdown-unit">Secs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ecdl-featured-sidebar-specs">
+            <div>📅 <strong>Thursday, Dec 10, 2026</strong></div>
+            <div>⏱️ <strong>03:00 PM – 04:30 PM (BST)</strong></div>
+            <div>🌐 <strong>Zoom High-Definition Webinar</strong></div>
+            <div>🎟️ <strong>140 Virtual Seats Remaining</strong></div>
+          </div>
+
+          <button type="button" class="ecdl-btn ecdl-btn--primary" data-webinar-register="evt-labour-briefing-2026" style="width:100%; justify-content:center;">
+            <span>Reserve Free Seat</span>
+            <span class="ecdl-btn__icon ecdl-btn__icon--trailing">→</span>
+          </button>
+
+          <a href="events.html?slug=2026-bangladesh-labour-law-amendment-briefing" style="font-size:0.75rem; text-align:center; color:rgba(255,255,255,0.7); text-decoration:none;">
+            View Full Agenda & Speaker Bios →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       3. WEBINARS LISTING (UPCOMING & PAST TABS)
+       ==================================================================== -->
+  <section class="ecdl-webinars-section">
+    <div class="ecdl-container">
+
+      <!-- Tabs Header -->
+      <div class="ecdl-webinars-tabs-row">
+        <div class="ecdl-webinars-tabs" role="tablist" aria-label="Webinar Categories">
+          <button type="button" class="ecdl-webinar-tab-btn is-active" id="tab-btn-upcoming" role="tab" aria-selected="true" aria-controls="panel-webinars-upcoming">
+            <span>Upcoming Webinars</span>
+            <span class="ecdl-webinar-tab-count">4</span>
+          </button>
+          <button type="button" class="ecdl-webinar-tab-btn" id="tab-btn-past" role="tab" aria-selected="false" aria-controls="panel-webinars-past">
+            <span>Past Webinars & Slide Decks</span>
+            <span class="ecdl-webinar-tab-count">3</span>
+          </button>
+        </div>
+
+        <div style="font-size:0.8125rem; color:var(--color-text-secondary);">
+          <span>Default Timezone: <strong>Asia/Dhaka (BST • UTC+6)</strong></span>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           TAB 1: UPCOMING WEBINARS PANEL
+           ================================================================ -->
+      <div id="panel-webinars-upcoming" role="tabpanel" aria-labelledby="tab-btn-upcoming">
+        <div class="ecdl-webinars-grid">
+
+          <!-- Card 1: Labour Act Policy Briefing -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--yellow">Featured Briefing</span>
+                <span class="ecdl-badge ecdl-badge--blue">Live Zoom Stream</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span><strong>Dec 10, 2026</strong> • 03:00 PM – 04:30 PM (BST)</span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=2026-bangladesh-labour-law-amendment-briefing">Executive Policy Briefing: 2026 Bangladesh Labour Act Gazette Amendments</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                An authoritative statutory breakdown of recent gazette notifications, revised Labour Rules, and compliance priorities for industrial employers.
+              </p>
+
+              <ul class="ecdl-webinar-card__outcomes">
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Section-by-Section legal updates in 2026 Labour amendments</span>
+                </li>
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Factory inspection readiness checklist for DIFE audits</span>
+                </li>
+              </ul>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Advocate Rafiqul Islam">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Advocate Rafiqul Islam</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Supreme Court of Bangladesh</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--green">Complimentary</span>
+              <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm" data-webinar-register="evt-labour-briefing-2026">
+                <span>Register Free →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: B2B Negotiation -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--dark">Marketing & Sales</span>
+                <span class="ecdl-badge ecdl-badge--blue">Live Zoom Stream</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span><strong>Dec 15, 2026</strong> • 07:00 PM – 08:30 PM (BST)</span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=b2b-sales-negotiation-procurement-defense">High-Stakes B2B Negotiation: Defending Profit Margins Against Procurement Teams</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                Learn Harvard principled negotiation frameworks to resist procurement discounting pressure, protect profit margins, and close multi-year enterprise contracts.
+              </p>
+
+              <ul class="ecdl-webinar-card__outcomes">
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Harvard margin-protection framework and BATNA determination</span>
+                </li>
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Concession trading matrices that prevent unreciprocated discounts</span>
+                </li>
+              </ul>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Tanvir Ahmed, SPHRi">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Tanvir Ahmed, SPHRi</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Commercial Capability Partner</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--green">Complimentary</span>
+              <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm" data-webinar-register="evt-sales-negotiation-webinar">
+                <span>Register Free →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: People Analytics -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--dark">Human Resource</span>
+                <span class="ecdl-badge ecdl-badge--blue">Live Zoom Stream</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span><strong>Dec 28, 2026</strong> • 04:00 PM – 05:30 PM (BST)</span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=ai-powered-hr-analytics-dhaka-2026">Predictive Workforce Planning: Utilizing Modern People Analytics in Bangladesh</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                Explore how top HR leaders in Bangladesh are moving from descriptive turnover reports to predictive workforce planning and retention analytics.
+              </p>
+
+              <ul class="ecdl-webinar-card__outcomes">
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Calculating true cost-of-turnover across executive and plant roles</span>
+                </li>
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Automated Power BI HR dashboard wireframes for board review</span>
+                </li>
+              </ul>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Zahid Hossain, GPHR">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Zahid Hossain, GPHR</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Group Head of HR & Analytics</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--green">Complimentary</span>
+              <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm" data-webinar-register="evt-hr-analytics-webinar">
+                <span>Register Free →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Executive Wellbeing -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--dark">Workplace Wellbeing</span>
+                <span class="ecdl-badge ecdl-badge--blue">Live Zoom Stream</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span><strong>Jan 12, 2027</strong> • 04:00 PM – 05:30 PM (BST)</span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=executive-wellbeing-burnout-prevention">Executive Wellbeing & Workplace Burnout Prevention: Corporate Leadership Strategies</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                Practical science-backed frameworks for senior business leaders to prevent executive exhaustion, establish sustainable workplace cultures, and preserve clarity.
+              </p>
+
+              <ul class="ecdl-webinar-card__outcomes">
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Cognitive warning signs of executive chronic stress and exhaustion</span>
+                </li>
+                <li class="ecdl-webinar-card__outcome-item">
+                  <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
+                  <span>Five-minute physiological reset protocols to regulate nervous systems</span>
+                </li>
+              </ul>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Dr. Nusrat Jahan">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Dr. Nusrat Jahan, PhD</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Organizational Psychologist</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--green">Complimentary</span>
+              <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm" data-webinar-register="evt-wellbeing-webinar-jan2027">
+                <span>Register Free →</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ================================================================
+           TAB 2: PAST WEBINARS PANEL (ON-DEMAND & SLIDE DECKS)
+           ================================================================ -->
+      <div id="panel-webinars-past" role="tabpanel" aria-labelledby="tab-btn-past" hidden>
+        <div class="ecdl-webinars-grid">
+
+          <!-- Past Webinar 1: ESG Compliance -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--neutral">Session Concluded</span>
+                <span class="ecdl-badge ecdl-badge--dark">Compliance Management</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Concluded on <strong>Nov 12, 2026</strong></span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=hrm-code-of-conduct-esg-compliance-webinar">ESG & Social Due Diligence in Bangladesh Supply Chains: Preparing for EU CSDDD</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                A critical policy briefing examining the European Union Corporate Sustainability Due Diligence Directive (CSDDD) and its contractual implications for Bangladesh exporters.
+              </p>
+
+              <!-- Resources download box -->
+              <div class="ecdl-past-resources-block">
+                <div style="font-weight:700; color:var(--ecdl-color-black);">Available Archived Resources:</div>
+                <a href="events.html?slug=hrm-code-of-conduct-esg-compliance-webinar" class="ecdl-resource-link">
+                  <span>🎥 Watch Full Session Recording (1h 28m)</span>
+                </a>
+                <a href="events.html?slug=hrm-code-of-conduct-esg-compliance-webinar" class="ecdl-resource-link">
+                  <span>📑 Download Official Slide Deck PDF (48 Slides)</span>
+                </a>
+              </div>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Dr. Mahfuzur Rahman">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Dr. Mahfuzur Rahman</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">International Labour Law & ESG Advisor</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--neutral">Open Access</span>
+              <a href="events.html?slug=hrm-code-of-conduct-esg-compliance-webinar" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">
+                <span>View Resources →</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Past Webinar 2: Recession Proofing Sales -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--neutral">Session Concluded</span>
+                <span class="ecdl-badge ecdl-badge--dark">Marketing & Sales</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Concluded on <strong>Oct 28, 2026</strong></span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=effective-b2b-sales-funnel-recession-proofing">Recession-Proofing Commercial B2B Sales Pipelines in Volatile Markets</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                Practical commercial strategies deployed by high-growth B2B enterprise teams to sustain pipeline velocity, protect pricing power, and eliminate forecast leakages.
+              </p>
+
+              <div class="ecdl-past-resources-block">
+                <div style="font-weight:700; color:var(--ecdl-color-black);">Available Archived Resources:</div>
+                <a href="events.html?slug=effective-b2b-sales-funnel-recession-proofing" class="ecdl-resource-link">
+                  <span>🎥 Watch Video Recording (1h 32m)</span>
+                </a>
+                <a href="events.html?slug=effective-b2b-sales-funnel-recession-proofing" class="ecdl-resource-link">
+                  <span>📑 Download B2B Pipeline Playbook (.PDF)</span>
+                </a>
+              </div>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Tanvir Ahmed, SPHRi">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Tanvir Ahmed, SPHRi</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Commercial Capability Partner</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--neutral">Open Access</span>
+              <a href="events.html?slug=effective-b2b-sales-funnel-recession-proofing" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">
+                <span>View Resources →</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Past Webinar 3: Executive Focus -->
+          <article class="ecdl-webinar-card">
+            <div>
+              <div class="ecdl-webinar-card__meta-top">
+                <span class="ecdl-badge ecdl-badge--neutral">Session Concluded</span>
+                <span class="ecdl-badge ecdl-badge--dark">Workplace Wellbeing</span>
+              </div>
+
+              <div class="ecdl-webinar-card__time">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Concluded on <strong>Oct 15, 2026</strong></span>
+              </div>
+
+              <h3 class="ecdl-webinar-card__title">
+                <a href="events.html?slug=mindfulness-stress-reduction-corporate-leaders">Neuroscience of Executive Focus: Stress Inoculation & Decision Quality</a>
+              </h3>
+
+              <p class="ecdl-webinar-card__desc">
+                Evidence-based cognitive protocols to mitigate leadership decision fatigue, regulate sympathetic nervous system stress, and enhance long-term cognitive stamina.
+              </p>
+
+              <div class="ecdl-past-resources-block">
+                <div style="font-weight:700; color:var(--ecdl-color-black);">Available Archived Resources:</div>
+                <a href="events.html?slug=mindfulness-stress-reduction-corporate-leaders" class="ecdl-resource-link">
+                  <span>🎥 Watch Video Recording (1h 25m)</span>
+                </a>
+                <a href="events.html?slug=mindfulness-stress-reduction-corporate-leaders" class="ecdl-resource-link">
+                  <span>📑 Download Neuroscience Guide (.PDF)</span>
+                </a>
+              </div>
+
+              <div class="ecdl-webinar-card__speaker">
+                <img class="ecdl-webinar-card__speaker-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Dr. Nusrat Jahan">
+                <div>
+                  <div style="font-size:0.8125rem; font-weight:700;">Dr. Nusrat Jahan, PhD</div>
+                  <div style="font-size:0.6875rem; color:var(--color-text-secondary);">Organizational Psychologist</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ecdl-webinar-card__footer">
+              <span class="ecdl-badge ecdl-badge--neutral">Open Access</span>
+              <a href="events.html?slug=mindfulness-stress-reduction-corporate-leaders" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">
+                <span>View Resources →</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       4. WEBINAR REGISTRATION MODAL WITH VALIDATION & CONFIRMATION
+       ==================================================================== -->
+  <div id="modal-webinar-registration" class="ecdl-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-webinar-title" aria-hidden="true">
+    <div class="ecdl-modal ecdl-webinar-reg-modal">
+
+      <!-- View A: Registration Form -->
+      <div id="webinar-form-view">
+        <div class="ecdl-modal__header">
+          <div>
+            <span class="ecdl-badge ecdl-badge--green" style="margin-bottom: 4px;">Complimentary Registration</span>
+            <h3 id="modal-webinar-title" class="ecdl-modal__title" style="font-size:1.1875rem;">
+              Webinar Registration
+            </h3>
+            <div id="modal-webinar-time" style="font-size:0.8125rem; color:var(--color-text-secondary); margin-top:3px;">
+              Date & Time Loading...
+            </div>
+          </div>
+          <button type="button" class="ecdl-modal__close" data-webinar-modal-close aria-label="Close registration modal">✕</button>
+        </div>
+
+        <form id="webinar-reg-form" novalidate>
+          <div class="ecdl-modal__body">
+            <p style="font-size:0.875rem; color:var(--color-text-secondary); margin-bottom:var(--space-md);">
+              Reserve your complimentary virtual seat. Your personalized high-definition Zoom credentials and executive materials will be dispatched upon registration.
+            </p>
+
+            <div class="ecdl-grid-12">
+              <!-- Full Name -->
+              <div class="ecdl-col-12 ecdl-col-md-6">
+                <div class="ecdl-form-group">
+                  <label for="webinar-reg-name" class="ecdl-label ecdl-label--required">Full Name</label>
+                  <input type="text" id="webinar-reg-name" class="ecdl-input" placeholder="e.g. Tariqul Hasan" required>
+                  <span class="ecdl-form-error-msg">Please enter your full name.</span>
+                </div>
+              </div>
+
+              <!-- Corporate Email -->
+              <div class="ecdl-col-12 ecdl-col-md-6">
+                <div class="ecdl-form-group">
+                  <label for="webinar-reg-email" class="ecdl-label ecdl-label--required">Work / Corporate Email</label>
+                  <input type="email" id="webinar-reg-email" class="ecdl-input" placeholder="e.g. t.hasan@apex.com.bd" required>
+                  <span class="ecdl-form-error-msg">Please enter a valid business email address.</span>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="ecdl-col-12 ecdl-col-md-6">
+                <div class="ecdl-form-group">
+                  <label for="webinar-reg-phone" class="ecdl-label ecdl-label--required">Contact Phone Number</label>
+                  <input type="tel" id="webinar-reg-phone" class="ecdl-input" placeholder="e.g. +880 1711-000000" required>
+                  <span class="ecdl-form-error-msg">Please enter a valid phone number.</span>
+                </div>
+              </div>
+
+              <!-- Organisation / Company -->
+              <div class="ecdl-col-12 ecdl-col-md-6">
+                <div class="ecdl-form-group">
+                  <label for="webinar-reg-company" class="ecdl-label ecdl-label--required">Organisation / Company</label>
+                  <input type="text" id="webinar-reg-company" class="ecdl-input" placeholder="e.g. Apex Footwear Ltd." required>
+                  <span class="ecdl-form-error-msg">Please enter your organisation name.</span>
+                </div>
+              </div>
+
+              <!-- Designation -->
+              <div class="ecdl-col-12">
+                <div class="ecdl-form-group">
+                  <label for="webinar-reg-designation" class="ecdl-label ecdl-label--required">Job Title / Designation</label>
+                  <input type="text" id="webinar-reg-designation" class="ecdl-input" placeholder="e.g. Head of Human Resources / Legal Counsel" required>
+                  <span class="ecdl-form-error-msg">Please enter your job title.</span>
+                </div>
+              </div>
+
+              <!-- Consent Checkbox -->
+              <div class="ecdl-col-12">
+                <label style="display:flex; align-items:flex-start; gap:8px; font-size:0.8125rem; color:var(--color-text-secondary); cursor:pointer;">
+                  <input type="checkbox" id="webinar-reg-consent" required style="margin-top:2px;">
+                  <span>I agree to receive the session access link, calendar invitation, and educational compliance resources from Open ECDL.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ecdl-modal__footer">
+            <button type="button" class="ecdl-btn ecdl-btn--secondary" data-webinar-modal-close>Cancel</button>
+            <button type="submit" class="ecdl-btn ecdl-btn--primary">
+              <span>Confirm Registration →</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- View B: Simulated Confirmation Success State -->
+      <div id="webinar-confirmation-view" hidden>
+        <div class="ecdl-modal__body ecdl-confirmation-card">
+          <div class="ecdl-confirmation-icon">✓</div>
+          <h3 class="ecdl-confirmation-title">Registration Confirmed</h3>
+          
+          <div class="ecdl-confirmation-ref" id="confirm-reference-code">
+            ECDL-WEB-84291
+          </div>
+
+          <p class="ecdl-confirmation-msg">
+            Thank you, <strong id="confirm-attendee-name">Delegate</strong>. Your virtual seat has been confirmed for <strong id="confirm-webinar-title">Executive Webinar</strong>. We have dispatched your personalized Zoom meeting link and calendar entry to <strong id="confirm-attendee-email">your email</strong>.
+          </p>
+
+          <div class="ecdl-confirmation-actions">
+            <button type="button" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm" id="confirm-download-ics">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Add to Calendar (.ICS)</span>
+            </button>
+            <button type="button" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm" data-webinar-modal-close>
+              Done
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Corporate Modal for Header CTA -->
+  <div id="modal-corporate-enquiry" class="ecdl-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="corp-modal-title" aria-hidden="true">
+    <div class="ecdl-modal" style="max-width: 620px;">
+      <div class="ecdl-modal__header">
+        <div>
+          <span class="ecdl-badge ecdl-badge--green" style="margin-bottom: 4px;">Enterprise In-House</span>
+          <h3 id="corp-modal-title" class="ecdl-modal__title">Corporate Training Consultation</h3>
+        </div>
+        <button type="button" class="ecdl-modal__close" data-ecdl-modal-close aria-label="Close inquiry modal">✕</button>
+      </div>
+
+      <form onsubmit="event.preventDefault(); OpenECDL.closeModal(); alert('Thank you. Our corporate solutions director will reach out within 24 hours with a custom proposal.');">
+        <div class="ecdl-modal__body">
+          <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: var(--space-md);">
+            Request customized in-house training cohorts, statutory compliance audits, or bulk voucher seat bookings for your organization.
+          </p>
+
+          <div class="ecdl-grid-12">
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-name-web" class="ecdl-label ecdl-label--required">Your Full Name</label>
+                <input type="text" id="corp-name-web" class="ecdl-input" placeholder="e.g. Tariqul Hasan" required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-company-web" class="ecdl-label ecdl-label--required">Organization / Company</label>
+                <input type="text" id="corp-company-web" class="ecdl-input" placeholder="e.g. Apex Footwear Ltd." required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-email-web" class="ecdl-label ecdl-label--required">Corporate Email</label>
+                <input type="email" id="corp-email-web" class="ecdl-input" placeholder="e.g. t.hasan@apex.com.bd" required>
+              </div>
+            </div>
+            <div class="ecdl-col-12 ecdl-col-md-6">
+              <div class="ecdl-form-group">
+                <label for="corp-phone-web" class="ecdl-label ecdl-label--required">Contact Number</label>
+                <input type="tel" id="corp-phone-web" class="ecdl-input" placeholder="e.g. +880 1711-000000" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ecdl-modal__footer">
+          <button type="button" class="ecdl-btn ecdl-btn--secondary" data-ecdl-modal-close>Cancel</button>
+          <button type="submit" class="ecdl-btn ecdl-btn--primary">Request Consultation →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="ecdl-search-overlay" id="search-dialog" role="dialog" aria-modal="true" aria-label="Site Search Dialog" hidden>
+    <div class="ecdl-search-dialog">
+      <div class="ecdl-search-header">
+        <svg class="ecdl-search-input-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" class="ecdl-search-input" id="search-query-input" placeholder="Search training, topics, faculty, or statutory regulations..." autocomplete="off">
+        <button type="button" class="ecdl-search-close" data-ecdl-search-close aria-label="Close search">✕</button>
+      </div>
+      <div class="ecdl-search-tags">
+        <span class="ecdl-search-tags__label">Trending Searches:</span>
+        <button type="button" class="ecdl-search-tag-chip">Labour Act 2006</button>
+        <button type="button" class="ecdl-search-tag-chip">VAT & Tax 2012</button>
+        <button type="button" class="ecdl-search-tag-chip">Effective Sales</button>
+        <button type="button" class="ecdl-search-tag-chip">Power BI</button>
+      </div>
+      <div class="ecdl-search-results">
+        <div class="ecdl-search-results__count" id="search-results-count">Recommended Programs</div>
+        <div id="search-results-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       5. GLOBAL FOOTER (PHASE 01 COMPATIBLE)
+       ==================================================================== -->
+  
+  <!-- ========================================================= -->
+  <!-- 4. GLOBAL FOOTER (#111111)                                -->
+  <!-- ========================================================= -->
+  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <!-- Brand & Info Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            </svg>
+            <div>
+              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
+          </p>
+          <div class="space-y-2 pt-2 text-xs text-neutral-300">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
+              <span>+8801767804408</span>
+            </a>
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
+              <span>training@ecdl.com.bd</span>
+            </a>
+            <div class="flex items-start gap-2.5 text-neutral-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
+              <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Column -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">About Us</a></li>
+            <li><a href="courses.html" class="hover:text-ecdl-yellow transition-colors">Courses</a></li>
+            <li><a href="webinars.html" class="hover:text-ecdl-yellow transition-colors">Webinars</a></li>
+            <li><a href="training-calendar.html" class="hover:text-ecdl-yellow transition-colors">Calendar</a></li>
+            <li><a href="index.html#contact" class="hover:text-ecdl-yellow transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Links</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><button type="button" onclick="openInstructorModal()" class="hover:text-ecdl-yellow transition-colors">Become an Instructor</button></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
+            <li><button type="button" onclick="showToast('Terms of Use opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Terms of use</button></li>
+            <li><button type="button" onclick="showToast('Privacy Policy opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Privacy Policy</button></li>
+            <li><button type="button" onclick="showToast('Refund Policy: 100% refundable up to 48 hours prior to batch start.', 'info')" class="hover:text-ecdl-yellow transition-colors">Refund Policy</button></li>
+          </ul>
+        </div>
+
+        <!-- Recommend / Sister Concerns Column -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Recommend</h4>
+          <ul class="space-y-2.5 text-sm text-neutral-300">
+            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Socials -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+        <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-3">
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="index.html#contact" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED MODALS & HELPERS -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- INSTRUCTOR MODAL -->
+  <div id="instructorModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Faculty Application</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Become an ECDL Instructor</h3>
+        </div>
+        <button type="button" onclick="closeModal('instructorModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <form onsubmit="handleInstructorSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Full Name *</label>
+          <input type="text" required placeholder="e.g. Barrister / FCA / Lead Consultant" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Email *</label>
+            <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-ecdl-dark mb-1">Phone *</label>
+            <input type="tel" required placeholder="+880 17..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Domain Expertise *</label>
+          <select required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm">
+            <option value="">Select Primary Track</option>
+            <option>Compliance & Labour Law 2026</option>
+            <option>Finance, VAT & SD Law 2012</option>
+            <option>Strategic HRM & Organizational Development</option>
+            <option>Commercial Sales & Key Account Management</option>
+            <option>Project Management & PMP Exam Prep</option>
+            <option>Workplace Mental Wellbeing & Leadership</option>
+            <option>Business Analytics & Power BI</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-ecdl-dark mb-1">Brief Bio & Teaching Experience</label>
+          <textarea rows="3" placeholder="Summarize your years of industry experience, key credentials, and previous corporate training engagements..." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow-md transition-colors">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VERIFY MODAL -->
+  <div id="verifyModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
+      <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
+        </div>
+        <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="flex gap-2">
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
+          <span>Try sample IDs:</span>
+          <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-8492</button>
+          <button type="button" onclick="setModalCert('ECDL-2026-5104')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-5104</button>
+        </div>
+        <div id="modalCertResult" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full shadow-2xl border border-neutral-200 overflow-hidden">
+      <div class="bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="font-display text-base font-extrabold">Learner &amp; Corporate Sign In</h3>
+        <button type="button" onclick="closeModal('authModal')" class="p-1.5 rounded-lg hover:bg-white/10 text-neutral-400">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <form onsubmit="handleSignIn(event)" class="p-6 space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Your Full Name</label>
+          <input id="authNameInput" type="text" placeholder="e.g. Mahfuzur Rahman" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 mb-1">Work Email</label>
+          <input id="authEmailInput" type="email" placeholder="mahfuz@company.com" class="w-full px-3.5 py-2 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm shadow transition-colors">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' };
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('hidden'); document.body.style.overflow = ''; } }
+    function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); if (m) m.classList.toggle('hidden'); }
+    function toggleProfileDropdown() { const m = document.getElementById('profileDropdownMenu'); if (m) m.classList.toggle('hidden'); }
+    function renderProfileMenu() {
+      const menu = document.getElementById('profileDropdownMenu');
+      const badge = document.getElementById('profileAvatarBadge');
+      const label = document.getElementById('profileBtnLabel');
+      if (!menu) return;
+      if (currentUser.loggedIn) {
+        if (badge) badge.textContent = currentUser.initials;
+        if (label) label.textContent = 'Profile';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+      } else {
+        if (badge) badge.textContent = 'IN';
+        if (label) label.textContent = 'Sign In';
+        menu.innerHTML = '<div class="p-2 space-y-2 text-center"><p class="text-xs text-neutral-500 px-2">Sign in to manage enrollments &amp; certificates.</p><button type="button" onclick="toggleProfileDropdown(); openModal(\'authModal\')" class="w-full py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Sign In / Profile</button></div>';
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+    function handleLogout() { currentUser = { loggedIn: false, name: '', email: '', initials: 'IN' }; toggleProfileDropdown(); renderProfileMenu(); showToast('You have logged out safely.', 'info'); }
+    function handleSignIn(e) { e.preventDefault(); const n = document.getElementById('authNameInput').value || 'Learner'; const em = document.getElementById('authEmailInput').value || 'learner@ecdl.com.bd'; currentUser = { loggedIn: true, name: n, email: em, initials: (n[0] + (n.split(' ')[1] ? n.split(' ')[1][0] : 'L')).toUpperCase() }; closeModal('authModal'); renderProfileMenu(); showToast('Welcome back, ' + n + '!', 'success'); }
+    function openInstructorModal() { openModal('instructorModal'); }
+    function handleInstructorSubmit(e) { e.preventDefault(); closeModal('instructorModal'); showToast('Thank you! Your instructor application has been submitted to ECDL Academic Council.', 'success'); }
+    function openVerifyModal() { openModal('verifyModal'); }
+    function setModalCert(id) { const inp = document.getElementById('modalCertInput'); if (inp) { inp.value = id; handleModalVerify(); } }
+    const CERTIFICATES = {
+      'ECDL-2026-8492': { name: 'Kazi Tanvir Ahmed', course: 'Bangladesh Labour Act 2006 and Its Amendment up to 2026', issueDate: '18 February 2026', grade: 'Distinction (94%)', status: 'Verified' },
+      'ECDL-2026-5104': { name: 'Farhana Yasmin', course: 'Practical Training on VAT & SD Law 2012', issueDate: '05 January 2026', grade: 'Certified Practitioner', status: 'Verified' },
+      'ECDL-2025-9931': { name: 'Shahidul Islam', course: 'Effective Sales Management: Achieve Big Sales Targets', issueDate: '12 December 2025', grade: 'High Honors', status: 'Verified' }
+    };
+    function handleModalVerify() {
+      const val = (document.getElementById('modalCertInput').value || '').trim().toUpperCase();
+      const res = document.getElementById('modalCertResult');
+      if (!val || !res) return;
+      res.classList.remove('hidden');
+      const rec = CERTIFICATES[val];
+      if (rec) {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
+      } else {
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>"' + val + '" is not registered. Please double check the ID.</p></div>';
+      }
+    }
+    function showToast(msg, type) {
+      const c = document.getElementById('toastContainer');
+      if (!c) return;
+      const t = document.createElement('div');
+      t.className = 'px-4 py-3 rounded-2xl shadow-xl text-white text-xs font-bold transition-all transform pointer-events-auto flex items-center gap-2 ' + (type === 'success' ? 'bg-ecdl-green' : (type === 'error' ? 'bg-ecdl-orange' : 'bg-ecdl-dark'));
+      t.innerHTML = '<span>' + msg + '</span>';
+      c.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3500);
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderProfileMenu(); if (window.lucide) lucide.createIcons(); });
+  </script>
+
+  
+  <!-- Required Scripts for Webinars Interactivity -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/webinars.js"></script>
+    
+</body>
+</html>

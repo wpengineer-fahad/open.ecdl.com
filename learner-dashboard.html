@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learner Portal Dashboard — Open ECDL</title>
+  <meta name="description" content="Manage your executive masterclasses, learning progress, live cohort schedules, and accredited credentials at Enroute Center for Development Ltd." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/learner/dashboard" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              yellowHover: '#E2CA0A',
+              orange: '#F3520A',
+              orangeDark: '#D64606',
+              dark: '#111111',
+              charcoal: '#1B1B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/learner.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <div class="ecdl-portal-wrapper">
+
+    <!-- ========================================================= -->
+    <!-- 1. APPLICATION SIDEBAR                                    -->
+    <!-- ========================================================= -->
+    <aside class="ecdl-portal-sidebar" id="portal-sidebar" aria-label="Portal Navigation">
+      
+      <!-- Brand Logo Header -->
+      <div class="ecdl-sidebar-brand justify-between">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Open ECDL Home">
+          <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div>
+            <span class="block font-display text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
+            <span class="block text-[10px] text-neutral-400">Executive Academy</span>
+          </div>
+        </a>
+        <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="portal-sidebar-close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="ecdl-sidebar-nav">
+        <span class="ecdl-sidebar-section-title">My Learning</span>
+        <a href="/learner/dashboard" class="ecdl-sidebar-link is-active">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="/learner/my-courses" class="ecdl-sidebar-link">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>My Courses</span>
+          <span class="ecdl-sidebar-badge">5</span>
+        </a>
+        <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="ecdl-sidebar-link">
+          <i data-lucide="play-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>LMS Course Player</span>
+        </a>
+        <a href="/learner/assessments" class="ecdl-sidebar-link">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+          <span>Assessments &amp; Quizzes</span>
+        </a>
+        <a href="/learner/certificates" class="ecdl-sidebar-link">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Certificates</span>
+          <span class="ecdl-sidebar-badge">2</span>
+        </a>
+        <a href="/learner/learning-history" class="ecdl-sidebar-link">
+          <i data-lucide="clock" class="w-4 h-4"></i>
+          <span>Learning History</span>
+        </a>
+
+        <span class="ecdl-sidebar-section-title mt-4">Account &amp; Billing</span>
+        <a href="/learner/orders" class="ecdl-sidebar-link">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Orders &amp; Invoices</span>
+        </a>
+        <a href="/learner/settings" class="ecdl-sidebar-link">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Profile &amp; Settings</span>
+        </a>
+        <a href="/cart" class="ecdl-sidebar-link">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>Cart &amp; Checkout</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Footer -->
+      <div class="ecdl-sidebar-footer">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover border border-neutral-600" id="shell-learner-avatar">
+        <div class="min-w-0 flex-1">
+          <div class="font-bold text-xs text-white truncate" id="shell-learner-name">Naveed Karim</div>
+          <div class="text-[10px] text-neutral-400 truncate" id="shell-learner-title">Unilever Bangladesh</div>
+        </div>
+        <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
+          <i data-lucide="log-out" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- 2. MAIN WORKSPACE & TOPBAR                                -->
+    <!-- ========================================================= -->
+    <div class="ecdl-portal-workspace">
+
+      <!-- Compact Topbar -->
+      <header class="ecdl-portal-topbar">
+        <div class="flex items-center gap-3">
+          <button type="button" class="lg:hidden p-2 rounded-lg border border-neutral-200 text-neutral-700" id="portal-mobile-toggle" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <div class="hidden sm:flex items-center gap-2 text-xs font-semibold text-neutral-500">
+            <span>Executive Learner Portal</span>
+            <span>•</span>
+            <span class="text-neutral-900">Enroute Center for Development</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="/courses" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-neutral-600 hover:text-ecdl-green">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span>Browse Public Catalogue</span>
+          </a>
+          <a href="/cart" class="relative p-2 rounded-lg text-neutral-600 hover:text-neutral-900">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span class="ecdl-cart-badge-count absolute top-1 right-1 w-4 h-4 rounded-full bg-ecdl-orange text-white text-[10px] font-bold flex items-center justify-center">2</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Portal Content -->
+      <main class="ecdl-portal-content" id="learner-dashboard-container">
+
+        <!-- Welcome Greeting Banner -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 mb-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              Verified Scholar • Winter 2026 Cohort
+            </span>
+            <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Welcome back, <span id="dash-greeting-name">Naveed Karim</span>
+            </h1>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+              Commercial Sales Director • Unilever Bangladesh Ltd. • Customer Development Department
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs shadow-md transition-all">
+              <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+              <span>Resume Active Lesson</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4-Metric Summary Cards -->
+        <div class="ecdl-metrics-grid">
+          <div class="ecdl-metric-card">
+            <div>
+              <div class="ecdl-metric-val">5</div>
+              <div class="ecdl-metric-label">Enrolled Courses</div>
+            </div>
+            <div class="ecdl-metric-icon bg-emerald-50 text-emerald-700">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+          </div>
+
+          <div class="ecdl-metric-card">
+            <div>
+              <div class="ecdl-metric-val">2</div>
+              <div class="ecdl-metric-label">In Progress</div>
+            </div>
+            <div class="ecdl-metric-icon bg-blue-50 text-blue-700">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+          </div>
+
+          <div class="ecdl-metric-card">
+            <div>
+              <div class="ecdl-metric-val">2</div>
+              <div class="ecdl-metric-label">Certificates Earned</div>
+            </div>
+            <div class="ecdl-metric-icon bg-amber-50 text-amber-700">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+          </div>
+
+          <div class="ecdl-metric-card">
+            <div>
+              <div class="ecdl-metric-val">38 hrs</div>
+              <div class="ecdl-metric-label">CPD Hours Learned</div>
+            </div>
+            <div class="ecdl-metric-icon bg-purple-50 text-purple-700">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTINUE LEARNING HERO BANNER -->
+        <div class="ecdl-continue-hero">
+          <div class="max-w-2xl relative z-10">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" id="dash-hero-category">
+                Compliance Management
+              </span>
+              <span class="text-xs text-neutral-400">Classroom &amp; Live Stream Cohort</span>
+            </div>
+
+            <h2 class="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug" id="dash-hero-title">
+              Bangladesh Labour Act 2006 and Its Amendment up to 2026
+            </h2>
+
+            <div class="text-xs text-emerald-300 font-semibold mt-2 flex items-center gap-1.5" id="dash-hero-lesson">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span>Up Next: Drafting Charge-Sheets &amp; Show-Cause Notices under Section 24</span>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-neutral-300 font-bold mb-1">
+                <span>Cohort Progression</span>
+                <span id="dash-hero-progress">65% Complete</span>
+              </div>
+              <div class="ecdl-progress-bar-wrap">
+                <div class="ecdl-progress-bar-fill" id="dash-hero-progress-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" id="dash-hero-resume-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs shadow-lg transition-all">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Resume Lesson</span>
+              </a>
+              <a href="/learner/my-courses" class="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl border border-neutral-600 hover:bg-white/10 text-neutral-200 text-xs font-semibold transition-all">
+                <span>View Full Curriculum</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-COLUMN DASHBOARD GRID: UPCOMING SESSIONS & RECOMMENDED -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+          <!-- Left Column: Upcoming Live Sessions (7 Cols) -->
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+            <div class="flex items-center justify-between pb-4 border-b border-neutral-100 mb-4">
+              <div class="flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4 text-ecdl-green"></i>
+                <h3 class="font-display font-bold text-base text-neutral-900">Upcoming Live Cohort Sessions</h3>
+              </div>
+              <a href="/training-calendar" class="text-xs font-bold text-ecdl-green hover:underline">Full Calendar</a>
+            </div>
+
+            <div class="space-y-3" id="dash-upcoming-sessions">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Right Column: Recommended Programmes (5 Cols) -->
+          <div class="lg:col-span-5 bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm">
+            <div class="flex items-center justify-between pb-4 border-b border-neutral-100 mb-4">
+              <div class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i>
+                <h3 class="font-display font-bold text-base text-neutral-900">Recommended Pathways</h3>
+              </div>
+              <a href="/courses" class="text-xs font-bold text-ecdl-green hover:underline">Explore All</a>
+            </div>
+
+            <div class="space-y-2.5" id="dash-recommended-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/data/mock-data.js"></script>
+  <script src="assets/js/learner.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1889 @@
+/**
+ * Open ECDL — Master Design Foundation
+ * Reusable Component Library
+ * Enroute Center for Development Ltd.
+ * 
+ * Target Engine: WordPress (Elementor Pro / Tutor LMS Pro / ECDL Core)
+ * Compliance: WCAG 2.2 AA Standard (Minimum 44px touch targets, visible focus, high contrast)
+ */
+
+/* ==========================================================================
+   1. BUTTONS (Primary, Secondary, Ghost, Sizes, States)
+   ========================================================================== */
+
+.ecdl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: var(--min-touch-target); /* 44px WCAG touch target */
+  padding: 0 var(--space-md);
+  font-family: var(--font-family-heading);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+}
+
+.ecdl-btn:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Primary Button (Brand Green) */
+.ecdl-btn--primary {
+  background-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-btn--primary:hover {
+  background-color: var(--ecdl-green-hover);
+  border-color: var(--ecdl-green-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-btn--primary:active {
+  background-color: var(--ecdl-green-active);
+  border-color: var(--ecdl-green-active);
+  transform: translateY(0);
+}
+
+/* Secondary Button (Refined Editorial Outline) */
+.ecdl-btn--secondary {
+  background-color: transparent;
+  color: var(--ecdl-color-black);
+  border-color: var(--ecdl-color-borders);
+}
+
+.ecdl-btn--secondary:hover {
+  background-color: var(--ecdl-color-surface);
+  border-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-black);
+  transform: translateY(-1px);
+}
+
+.ecdl-btn--secondary:active {
+  background-color: var(--ecdl-neutral-100);
+  transform: translateY(0);
+}
+
+/* Accent Orange Button (Selective Promotional / Registration Urgency) */
+.ecdl-btn--orange {
+  background-color: var(--ecdl-color-orange);
+  color: var(--ecdl-color-white);
+  border-color: var(--ecdl-color-orange);
+}
+
+.ecdl-btn--orange:hover {
+  background-color: var(--ecdl-orange-hover);
+  border-color: var(--ecdl-orange-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Dark Mode Button */
+.ecdl-btn--on-dark {
+  background-color: var(--ecdl-color-white);
+  color: var(--ecdl-color-black);
+  border-color: var(--ecdl-color-white);
+}
+
+.ecdl-btn--on-dark:hover {
+  background-color: var(--ecdl-color-surface);
+  border-color: var(--ecdl-color-surface);
+}
+
+.ecdl-btn--secondary-on-dark {
+  background-color: transparent;
+  color: var(--ecdl-color-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.ecdl-btn--secondary-on-dark:hover {
+  border-color: var(--ecdl-color-white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Ghost / Tertiary Button */
+.ecdl-btn--ghost {
+  background-color: transparent;
+  color: var(--ecdl-color-green);
+  border-color: transparent;
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+
+.ecdl-btn--ghost:hover {
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-green-hover);
+}
+
+/* Size Modifiers */
+.ecdl-btn--sm {
+  min-height: 36px;
+  padding: 0 var(--space-sm);
+  font-size: 0.8125rem;
+}
+
+.ecdl-btn--lg {
+  min-height: 52px;
+  padding: 0 var(--space-xl);
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+/* Disabled State */
+.ecdl-btn:disabled,
+.ecdl-btn[aria-disabled="true"],
+.ecdl-btn.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.ecdl-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-btn:hover .ecdl-btn__icon--trailing {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   2. SITE HEADER (Theme Builder / Global Navigation)
+   ========================================================================== */
+
+.ecdl-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--ecdl-color-white);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  transition: box-shadow var(--transition-fast);
+}
+
+.ecdl-header.is-scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+/* Brand Emblem */
+.ecdl-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-brand__mark {
+  width: 38px;
+  height: 38px;
+  background-color: var(--ecdl-color-green);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ecdl-color-white);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.ecdl-brand__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-brand__title {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 1.1875rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-brand__tagline {
+  font-family: var(--font-family-body);
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Nav Menu */
+.ecdl-nav {
+  display: none;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-nav {
+    display: flex;
+  }
+}
+
+.ecdl-nav__link {
+  font-family: var(--font-family-heading);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--ecdl-neutral-700);
+  text-decoration: none;
+  padding: 8px 4px;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-nav__link:hover,
+.ecdl-nav__link.is-active {
+  color: var(--ecdl-color-green);
+  border-bottom-color: var(--ecdl-color-green);
+}
+
+.ecdl-nav__link:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Header Actions */
+.ecdl-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.ecdl-header__mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  color: var(--ecdl-color-black);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-header__mobile-toggle {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   3. SITE FOOTER (Executive Institutional Footer)
+   ========================================================================== */
+
+.ecdl-footer {
+  background-color: var(--ecdl-color-black);
+  color: var(--color-text-on-dark);
+  padding-top: var(--section-py-md);
+  padding-bottom: var(--space-xl);
+  border-top: 1px solid var(--color-border-on-dark);
+}
+
+.ecdl-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .ecdl-footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.ecdl-footer__brand-col {
+  max-width: 360px;
+}
+
+.ecdl-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  color: var(--ecdl-color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-footer__desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-footer__address {
+  font-style: normal;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-text-on-dark-muted);
+}
+
+.ecdl-footer__heading {
+  font-family: var(--font-family-heading);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-footer__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ecdl-footer__nav-link {
+  color: var(--color-text-on-dark-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-footer__nav-link:hover {
+  color: var(--ecdl-color-white);
+}
+
+.ecdl-footer__bottom {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-on-dark);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: 0.8125rem;
+  color: var(--color-text-on-dark-muted);
+}
+
+@media (min-width: 768px) {
+  .ecdl-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.ecdl-footer__legal-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* ==========================================================================
+   4. STAT DISPLAY (Editorial Institutional Metrics)
+   ========================================================================== */
+
+.ecdl-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.ecdl-stat {
+  padding: var(--space-lg);
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.ecdl-stat:hover {
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-stat__numeral-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: var(--space-2xs);
+}
+
+.ecdl-stat__numeral {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.25rem, 1.8rem + 1.5vw, 3.25rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+  color: var(--ecdl-color-black);
+  letter-spacing: -0.03em;
+}
+
+.ecdl-stat__unit {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-green);
+  text-transform: uppercase;
+}
+
+.ecdl-stat__label {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-2xs);
+}
+
+.ecdl-stat__desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. CATEGORY CARD
+   ========================================================================== */
+
+.ecdl-card-category {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  position: relative;
+}
+
+.ecdl-card-category:hover {
+  transform: translateY(-3px);
+  border-color: var(--ecdl-color-green);
+  box-shadow: var(--shadow-md);
+}
+
+.ecdl-card-category:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+.ecdl-card-category__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-card-category__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-color-green);
+  border-radius: var(--radius-xs);
+}
+
+.ecdl-card-category__count {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ecdl-card-category__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.1875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.ecdl-card-category__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.ecdl-card-category__link-text {
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-card-category:hover .ecdl-card-category__link-text {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   6. SEARCH FIELD & FILTER PANEL
+   ========================================================================== */
+
+.ecdl-search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ecdl-search-field__icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: var(--ecdl-neutral-400);
+  pointer-events: none;
+}
+
+.ecdl-search-field__input {
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 48px;
+  min-height: 48px;
+  font-family: var(--font-family-body);
+  font-size: 0.9375rem;
+  color: var(--ecdl-color-black);
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ecdl-search-field__input:focus {
+  outline: none;
+  border-color: var(--ecdl-color-green);
+  box-shadow: 0 0 0 3px var(--ecdl-green-focus);
+}
+
+.ecdl-search-field__kbd {
+  position: absolute;
+  right: 12px;
+  font-family: var(--font-family-mono);
+  font-size: 0.6875rem;
+  color: var(--ecdl-neutral-500);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Filter Panel */
+.ecdl-filter-panel {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ecdl-filter-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-filter-panel__title {
+  font-family: var(--font-family-heading);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin: 0;
+}
+
+.ecdl-filter-panel__reset {
+  background: none;
+  border: none;
+  color: var(--ecdl-color-green);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  padding: 0;
+}
+
+.ecdl-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecdl-filter-group__legend {
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   7. PROGRAMME BADGE
+   ========================================================================== */
+
+.ecdl-prog-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ecdl-prog-badge--executive {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-yellow);
+  border: 1px solid rgba(244, 219, 15, 0.3);
+}
+
+.ecdl-prog-badge--verified {
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-green-tint-800);
+  border: 1px solid var(--ecdl-green-tint-200);
+}
+
+.ecdl-prog-badge--intensive {
+  background-color: var(--ecdl-orange-tint-100);
+  color: var(--ecdl-color-orange);
+  border: 1px solid var(--ecdl-orange-tint-200);
+}
+
+/* ==========================================================================
+   8. PORTAL SIDEBAR & TOPBAR (Corporate / Learner Dashboard System)
+   ========================================================================== */
+
+.ecdl-portal-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 480px;
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .ecdl-portal-layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.ecdl-portal-sidebar {
+  background-color: var(--ecdl-color-white);
+  border-right: 1px solid var(--ecdl-color-borders);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-portal-sidebar__title {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.ecdl-portal-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ecdl-portal-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--ecdl-neutral-700);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.ecdl-portal-nav__link:hover {
+  background-color: var(--ecdl-color-surface);
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-portal-nav__link.is-active {
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-color-green);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ecdl-portal-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-portal-topbar {
+  background-color: var(--ecdl-color-white);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ecdl-portal-topbar__title {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin: 0;
+}
+
+.ecdl-portal-content {
+  padding: var(--space-md);
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   9. DATA TABLE (Enterprise Registrations, Invoices, Roster)
+   ========================================================================== */
+
+.ecdl-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  background-color: var(--ecdl-color-white);
+}
+
+.ecdl-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.ecdl-table th {
+  background-color: var(--ecdl-color-surface);
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  white-space: nowrap;
+}
+
+.ecdl-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  color: var(--ecdl-neutral-800);
+  vertical-align: middle;
+}
+
+.ecdl-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ecdl-table tr:hover td {
+  background-color: var(--ecdl-color-surface);
+}
+
+/* ==========================================================================
+   10. TEXT LINKS (Editorial Underline & Arrow Links)
+   ========================================================================== */
+
+.ecdl-link {
+  color: var(--ecdl-color-green);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  position: relative;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ecdl-link:hover {
+  color: var(--ecdl-green-hover);
+}
+
+.ecdl-link:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.ecdl-link--underline {
+  border-bottom: 1.5px solid var(--ecdl-green-tint-200);
+}
+
+.ecdl-link--underline:hover {
+  border-bottom-color: var(--ecdl-color-green);
+}
+
+.ecdl-link--arrow .ecdl-link__arrow {
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-link--arrow:hover .ecdl-link__arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   11. STATUS BADGES & TAGS
+   ========================================================================== */
+
+.ecdl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
+}
+
+.ecdl-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.ecdl-badge--green,
+.ecdl-badge--open {
+  background-color: var(--ecdl-color-soft-green);
+  color: var(--ecdl-green-tint-800);
+  border: 1px solid var(--ecdl-green-tint-200);
+}
+
+.ecdl-badge--yellow,
+.ecdl-badge--featured {
+  background-color: var(--ecdl-color-yellow);
+  color: var(--ecdl-color-black);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ecdl-badge--orange,
+.ecdl-badge--limited {
+  background-color: var(--ecdl-orange-tint-100);
+  color: var(--ecdl-color-orange);
+  border: 1px solid var(--ecdl-orange-tint-200);
+}
+
+.ecdl-badge--neutral {
+  background-color: var(--ecdl-neutral-100);
+  color: var(--ecdl-neutral-700);
+  border: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-badge--dark {
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-neutral-800);
+}
+
+.ecdl-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--ecdl-color-borders);
+  background-color: var(--ecdl-color-white);
+  color: var(--ecdl-neutral-700);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.ecdl-pill:hover,
+.ecdl-pill.is-active {
+  border-color: var(--ecdl-color-green);
+  background-color: var(--ecdl-green-tint-50);
+  color: var(--ecdl-color-green);
+}
+
+/* ==========================================================================
+   12. COURSE CARD (Tutor LMS Pro & Elementor Loop Grid Compatible)
+   ========================================================================== */
+
+.ecdl-card-course {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  height: 100%;
+}
+
+.ecdl-card-course:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--ecdl-green-tint-200);
+}
+
+.ecdl-card-course:focus-within {
+  border-color: var(--ecdl-color-green);
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+}
+
+.ecdl-card-course__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-card-course__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.ecdl-card-course:hover .ecdl-card-course__img {
+  transform: scale(1.04);
+}
+
+.ecdl-card-course__badge-bar {
+  position: absolute;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  right: var(--space-xs);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.ecdl-card-course__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ecdl-card-course__meta-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-card-course__category {
+  font-weight: var(--font-weight-semibold);
+  color: var(--ecdl-color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.ecdl-card-course__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.1875rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.35;
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-card-course__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-card-course__title a:hover {
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-card-course__title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.ecdl-card-course__summary {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ecdl-card-course__specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xs) var(--space-xs);
+  padding: var(--space-xs) 0;
+  border-top: 1px solid var(--ecdl-color-borders);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  margin-bottom: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-card-course__spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ecdl-card-course__spec-item svg {
+  color: var(--ecdl-neutral-400);
+  flex-shrink: 0;
+}
+
+.ecdl-card-course__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  position: relative;
+  z-index: 2;
+}
+
+.ecdl-card-course__price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-card-course__price-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.ecdl-card-course__price {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+}
+
+/* ==========================================================================
+   13. TRAINER CARD (Faculty & Executive Trainers)
+   ========================================================================== */
+
+.ecdl-card-trainer {
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.ecdl-card-trainer:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-card-trainer__portrait-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--ecdl-color-surface);
+}
+
+.ecdl-card-trainer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.ecdl-card-trainer:hover .ecdl-card-trainer__img {
+  transform: scale(1.03);
+}
+
+.ecdl-card-trainer__verified-badge {
+  position: absolute;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  padding: 4px 8px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ecdl-card-trainer__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ecdl-card-trainer__name {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin-bottom: 2px;
+}
+
+.ecdl-card-trainer__title {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--ecdl-color-green);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-card-trainer__bio {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+  flex-grow: 1;
+}
+
+.ecdl-card-trainer__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.ecdl-card-trainer__tag {
+  font-size: 0.6875rem;
+  padding: 2px 8px;
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  color: var(--ecdl-neutral-700);
+  border-radius: var(--radius-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   14. EVENT CARD (Masterclasses & Executive Roundtables)
+   ========================================================================== */
+
+.ecdl-card-event {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  transition: all var(--transition-normal);
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .ecdl-card-event {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ecdl-card-event:hover {
+  border-color: var(--ecdl-color-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecdl-card-event__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--ecdl-color-surface);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  text-align: center;
+}
+
+.ecdl-card-event__date-month {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--ecdl-color-green);
+  letter-spacing: 0.05em;
+}
+
+.ecdl-card-event__date-day {
+  font-family: var(--font-family-heading);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.1;
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-card-event__content {
+  flex-grow: 1;
+}
+
+.ecdl-card-event__meta-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.ecdl-card-event__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin-bottom: 4px;
+}
+
+.ecdl-card-event__venue {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-card-event__action {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   15. FAQ ACCORDION (WAI-ARIA Disclosure)
+   ========================================================================== */
+
+.ecdl-accordion {
+  border-top: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-accordion__item {
+  border-bottom: 1px solid var(--ecdl-color-borders);
+}
+
+.ecdl-accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-family-heading);
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-accordion__trigger:hover {
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-accordion__trigger:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+.ecdl-accordion__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: transform var(--transition-fast);
+}
+
+.ecdl-accordion__trigger[aria-expanded="true"] .ecdl-accordion__icon {
+  transform: rotate(180deg);
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-accordion__content {
+  display: none;
+  padding-bottom: var(--space-md);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-accordion__content.is-open {
+  display: block;
+}
+
+/* ==========================================================================
+   16. BREADCRUMBS
+   ========================================================================== */
+
+.ecdl-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-md) 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ecdl-breadcrumb__item a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.ecdl-breadcrumb__item a:hover {
+  color: var(--ecdl-color-green);
+}
+
+.ecdl-breadcrumb__item--active {
+  color: var(--ecdl-color-black);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ecdl-breadcrumb__separator {
+  color: var(--ecdl-neutral-300);
+  user-select: none;
+}
+
+/* ==========================================================================
+   17. FORM CONTROLS & FIELD LABELS
+   ========================================================================== */
+
+.ecdl-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--space-md);
+}
+
+.ecdl-label {
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--ecdl-neutral-800);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ecdl-label--required::after {
+  content: '*';
+  color: var(--ecdl-color-orange);
+}
+
+.ecdl-input,
+.ecdl-select,
+.ecdl-textarea {
+  width: 100%;
+  font-family: var(--font-family-body);
+  font-size: 0.9375rem;
+  color: var(--ecdl-color-black);
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  min-height: var(--min-touch-target);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ecdl-input::placeholder,
+.ecdl-textarea::placeholder {
+  color: var(--ecdl-neutral-400);
+}
+
+.ecdl-input:hover,
+.ecdl-select:hover,
+.ecdl-textarea:hover {
+  border-color: var(--ecdl-neutral-500);
+}
+
+.ecdl-input:focus,
+.ecdl-select:focus,
+.ecdl-textarea:focus {
+  outline: none;
+  border-color: var(--ecdl-color-green);
+  box-shadow: 0 0 0 3px var(--ecdl-green-focus);
+}
+
+.ecdl-input:disabled,
+.ecdl-select:disabled,
+.ecdl-textarea:disabled {
+  background-color: var(--ecdl-color-surface);
+  border-color: var(--ecdl-color-borders);
+  color: var(--ecdl-neutral-400);
+  cursor: not-allowed;
+}
+
+.ecdl-form-help {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.ecdl-form-error {
+  font-size: 0.75rem;
+  color: var(--color-status-error);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ecdl-input--error,
+.ecdl-select--error,
+.ecdl-textarea--error {
+  border-color: var(--color-status-error) !important;
+}
+
+/* Checkbox & Radio */
+.ecdl-checkbox-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--ecdl-neutral-700);
+  user-select: none;
+}
+
+.ecdl-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-xs);
+  background-color: var(--ecdl-color-white);
+  cursor: pointer;
+  margin-top: 2px;
+  position: relative;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.ecdl-checkbox:checked {
+  background-color: var(--ecdl-color-green);
+  border-color: var(--ecdl-color-green);
+}
+
+.ecdl-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--ecdl-color-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ecdl-checkbox:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   18. EMPTY STATE & LOADING STATES
+   ========================================================================== */
+
+.ecdl-empty-state {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  border: 1.5px dashed var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  background-color: var(--ecdl-color-surface);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.ecdl-empty-state__icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-md);
+  color: var(--ecdl-neutral-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ecdl-color-white);
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+}
+
+.ecdl-empty-state__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.ecdl-empty-state__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-lg);
+  max-width: 44ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Shimmer Loading Skeleton */
+@keyframes ecdl-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.ecdl-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e6e6e6 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: ecdl-shimmer 1.5s infinite;
+  border-radius: var(--radius-xs);
+}
+
+.ecdl-skeleton-text {
+  height: 14px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.ecdl-skeleton-text--short {
+  width: 60%;
+}
+
+.ecdl-skeleton-card {
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--ecdl-color-white);
+}
+
+.ecdl-skeleton-media {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.ecdl-skeleton-body {
+  padding: var(--space-md);
+}
+
+.ecdl-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2.5px solid var(--ecdl-green-tint-200);
+  border-top-color: var(--ecdl-color-green);
+  border-radius: 50%;
+  animation: ecdl-spin 0.8s linear infinite;
+}
+
+@keyframes ecdl-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   19. PAGINATION
+   ========================================================================== */
+
+.ecdl-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xl) 0 0 0;
+}
+
+.ecdl-pagination__item {
+  display: inline-flex;
+}
+
+.ecdl-pagination__link {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ecdl-color-borders);
+  border-radius: var(--radius-sm);
+  background-color: var(--ecdl-color-white);
+  color: var(--ecdl-neutral-800);
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.ecdl-pagination__link:hover {
+  border-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-green);
+  background-color: var(--ecdl-color-soft-green);
+}
+
+.ecdl-pagination__link:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+.ecdl-pagination__link[aria-current="page"],
+.ecdl-pagination__link.is-active {
+  background-color: var(--ecdl-color-green);
+  border-color: var(--ecdl-color-green);
+  color: var(--ecdl-color-white);
+}
+
+/* ==========================================================================
+   20. MODAL & TOAST NOTIFICATIONS
+   ========================================================================== */
+
+.ecdl-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.ecdl-modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ecdl-modal {
+  background-color: var(--ecdl-color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xl);
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.ecdl-modal-backdrop.is-open .ecdl-modal {
+  transform: translateY(0);
+}
+
+.ecdl-modal__header {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--ecdl-color-borders);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ecdl-modal__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--ecdl-color-black);
+  margin: 0;
+}
+
+.ecdl-modal__close {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecdl-modal__close:hover {
+  color: var(--ecdl-color-black);
+}
+
+.ecdl-modal__body {
+  padding: var(--space-lg);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ecdl-neutral-700);
+}
+
+.ecdl-modal__footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--ecdl-color-borders);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  background-color: var(--ecdl-color-surface);
+}
+
+/* Toast Notifications */
+.ecdl-toast-container {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 380px;
+  width: calc(100vw - var(--space-lg) * 2);
+  pointer-events: none;
+}
+
+.ecdl-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--ecdl-color-black);
+  color: var(--ecdl-color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  border-left: 4px solid var(--ecdl-color-green);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.ecdl-toast.is-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.ecdl-toast--warning {
+  border-left-color: var(--ecdl-color-yellow);
+}
+
+.ecdl-toast--error {
+  border-left-color: var(--ecdl-color-orange);
+}
+
+.ecdl-toast__icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.ecdl-toast__content {
+  flex-grow: 1;
+}
+
+.ecdl-toast__title {
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  margin-bottom: 2px;
+}
+
+.ecdl-toast__close {
+  background: none;
+  border: none;
+  color: var(--color-text-on-dark-muted);
+  cursor: pointer;
+  padding: 2px;
+  margin-left: var(--space-xs);
+}
+
+.ecdl-toast__close:hover {
+  color: var(--ecdl-color-white);
+}

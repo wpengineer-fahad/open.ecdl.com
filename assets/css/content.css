@@ -1,0 +1,280 @@
+/**
+ * Open ECDL — Phase 08: Corporate Identity & Content Pages Styles
+ * Enroute Center for Development Ltd.
+ * 
+ * Supports:
+ * - /about (Storytelling timeline, values grid, ecosystem cards)
+ * - /leadership (Executive & advisory directories, quotes, profile cards)
+ * - /impact (Restrained data visualization, Kirkpatrick framework, sector distribution meters)
+ * - /quality-assurance (5-stage QA lifecycle, certification disclosure notice, audit readiness)
+ * - /resources (Resource directory cards, filter pills, search input)
+ * - /resources/:slug (Long-form editorial typography, sticky TOC, callouts, companion downloads)
+ * - /contact (Split contact info, validated interactive form, map card, corporate FAQs)
+ */
+
+/* ==========================================================================
+   1. EDITORIAL ARTICLE TYPOGRAPHY & LAYOUT (resource-detail.html)
+   ========================================================================== */
+.ecdl-prose {
+  color: #374151;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.ecdl-prose p {
+  margin-bottom: 1.5rem;
+}
+
+.ecdl-prose h2 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.ecdl-prose h3 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ecdl-prose blockquote {
+  border-left: 4px solid #108B44;
+  background-color: #EDF7F1;
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 1rem 1rem 0;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #111111;
+}
+
+.ecdl-prose ul, .ecdl-prose ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.ecdl-prose li {
+  margin-bottom: 0.625rem;
+  line-height: 1.7;
+}
+
+.ecdl-prose strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Sticky Table of Contents active state */
+.toc-link {
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+}
+
+.toc-link:hover, .toc-link.is-active {
+  color: #108B44;
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
+
+.toc-link.is-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  background-color: #108B44;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. MILESTONE TIMELINE (about.html)
+   ========================================================================== */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #108B44 0%, #108B44 80%, #E5E7EB 100%);
+}
+
+@media (min-width: 768px) {
+  .timeline-container::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  border: 3px solid #108B44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  color: #108B44;
+  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.15);
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .timeline-badge {
+    left: 50%;
+  }
+}
+
+/* ==========================================================================
+   3. RESTRAINED DATA VISUALIZATION (impact.html)
+   ========================================================================== */
+.meter-bar {
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #E5E7EB;
+  overflow: hidden;
+  position: relative;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   4. QUALITY ASSURANCE FRAMEWORK (quality-assurance.html)
+   ========================================================================== */
+.qa-phase-step {
+  position: relative;
+}
+
+.qa-phase-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.qa-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. RESOURCE DIRECTORY FILTERS & CARDS (resources.html)
+   ========================================================================== */
+.resource-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.resource-filter-btn.is-active {
+  background-color: #108B44;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.25);
+}
+
+.resource-filter-btn:not(.is-active) {
+  background-color: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  color: #4B5563;
+}
+
+.resource-filter-btn:not(.is-active):hover {
+  background-color: #EDF7F1;
+  color: #108B44;
+  border-color: #108B44;
+}
+
+.resource-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: #108B44;
+}
+
+/* ==========================================================================
+   6. CONTACT FORM & ACCORDIONS (contact.html)
+   ========================================================================== */
+.form-floating-label {
+  transition: all 0.2s ease;
+}
+
+.form-input-field:focus {
+  border-color: #108B44;
+  box-shadow: 0 0 0 3px rgba(16, 139, 68, 0.15);
+  outline: none;
+}
+
+.form-input-field.is-invalid {
+  border-color: #F3520A;
+  box-shadow: 0 0 0 3px rgba(243, 82, 10, 0.15);
+}
+
+.contact-faq-item[open] summary svg {
+  transform: rotate(180deg);
+}
