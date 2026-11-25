@@ -4,7 +4,7 @@ const path = require('path');
 
 console.log('====================================================');
 console.log('   OPEN ECDL — COMPREHENSIVE VERIFICATION SUITE     ');
-console.log('   Phase 00 – 14 (Internal Training Operations & Quality UI)');
+console.log('   Phase 00 – 15 (Legal, Verification & Utility UI)');
 console.log('====================================================\n');
 
 const requiredFiles = [
@@ -129,7 +129,18 @@ const requiredFiles = [
   'operations-settings.html',
   'assets/css/operations.css',
   'assets/js/operations.js',
-  'docs/OPERATIONS_QUALITY_SPEC.md'
+  'docs/OPERATIONS_QUALITY_SPEC.md',
+  'terms.html',
+  'privacy.html',
+  'refund.html',
+  'cancellation-policy.html',
+  'certificate-verification.html',
+  'faq.html',
+  '404.html',
+  'utility-states.html',
+  'assets/css/utility.css',
+  'assets/js/utility.js',
+  'docs/LEGAL_VERIFICATION_UTILITY_SPEC.md'
 ];
 
 let hasErrors = false;
@@ -615,6 +626,32 @@ if (mockData.operationsData && mockData.operationsData.cohorts && mockData.opera
   }
 } else {
   console.error('[FAIL] mockData.operationsData missing!');
+  hasErrors = true;
+}
+
+// 17. Verify Phase 15 Legal, Certificate Verification & FAQ Datasets
+const validCert = mockData.verifyDemoCertificate && mockData.verifyDemoCertificate('DEMO-ECDL-2026-0001');
+const revokedCert = mockData.verifyDemoCertificate && mockData.verifyDemoCertificate('DEMO-ECDL-2026-REVOKED');
+const unknownCert = mockData.verifyDemoCertificate && mockData.verifyDemoCertificate('DEMO-ECDL-9999-UNKNOWN');
+if (
+  validCert && validCert.status === 'valid' && validCert.isDemonstration &&
+  revokedCert && revokedCert.status === 'revoked' &&
+  unknownCert && unknownCert.status === 'unknown'
+) {
+  console.log(`[PASS] Demo certificate verification engine verified: valid (${validCert.record.credentialNumber}), revoked (${revokedCert.record.credentialNumber}), unknown handled safely.`);
+} else {
+  console.error('[FAIL] Demo certificate verification helpers failed!');
+  hasErrors = true;
+}
+
+const requiredFaqCats = ['Courses', 'Registration', 'Payments', 'Certificates', 'Corporate Training', 'Online Learning', 'Technical Support'];
+const hasAllCats = mockData.faqCategories && requiredFaqCats.every(c => mockData.faqCategories.includes(c));
+const faqSearchRes = mockData.getFaqItems && mockData.getFaqItems('all', 'Mushak');
+const faqEmptyRes = mockData.getFaqItems && mockData.getFaqItems('all', 'nonexistentxyz999');
+if (hasAllCats && mockData.faqItems && mockData.faqItems.length >= 21 && faqSearchRes.length >= 1 && faqEmptyRes.length === 0) {
+  console.log(`[PASS] FAQ directory dataset verified: ${mockData.faqCategories.length} categories, ${mockData.faqItems.length} entries, keyword search and empty-search states validated.`);
+} else {
+  console.error('[FAIL] FAQ categories or search helpers failed!');
   hasErrors = true;
 }
 
@@ -1745,6 +1782,80 @@ try {
       hasErrors = true;
     }
   }
+
+  // JJJ. Legal Pages Check (Phase 15)
+  const legalPages = ['terms.html', 'privacy.html', 'refund.html', 'cancellation-policy.html'];
+  for (const page of legalPages) {
+    const html = fs.readFileSync(path.join(__dirname, page), 'utf8');
+    const ok = html.includes('DRAFT — PENDING LEGAL REVIEW') &&
+      html.includes('id="legal-toc-sidebar"') &&
+      html.includes('class="legal-toc-link') &&
+      html.includes('ecdl-legal-prose') &&
+      html.includes('window.print()');
+    if (ok) {
+      console.log(`[PASS] ${page}: Draft notice, sticky TOC, legal prose width, and print controls verified.`);
+    } else {
+      console.error(`[FAIL] ${page} missing required legal template sections or draft disclaimer!`);
+      hasErrors = true;
+    }
+  }
+
+  // KKK. certificate-verification.html Check (Phase 15)
+  const certVerHtml = fs.readFileSync(path.join(__dirname, 'certificate-verification.html'), 'utf8');
+  const certVerElements = [
+    { name: 'Credential Input Form', ok: certVerHtml.includes('id="cert-verify-form"') && certVerHtml.includes('id="cert-credential-input"') },
+    { name: 'Loading State Block', ok: certVerHtml.includes('id="cert-state-loading"') },
+    { name: 'Valid Demo State & Notice', ok: certVerHtml.includes('id="cert-state-valid"') && certVerHtml.includes('PROTOTYPE DEMONSTRATION RECORD') },
+    { name: 'Revoked Credential State', ok: certVerHtml.includes('id="cert-state-revoked"') },
+    { name: 'Unknown Credential State', ok: certVerHtml.includes('id="cert-state-unknown"') }
+  ];
+  for (const el of certVerElements) {
+    if (el.ok) {
+      console.log(`[PASS] certificate-verification.html: ${el.name} verified.`);
+    } else {
+      console.error(`[FAIL] certificate-verification.html missing ${el.name}!`);
+      hasErrors = true;
+    }
+  }
+
+  // LLL. faq.html Check (Phase 15)
+  const faqHtml = fs.readFileSync(path.join(__dirname, 'faq.html'), 'utf8');
+  const faqElements = [
+    { name: 'Search Input', ok: faqHtml.includes('id="faq-search-input"') },
+    { name: 'Category Tabs Container', ok: faqHtml.includes('id="faq-category-tabs"') },
+    { name: 'Accordion List Container', ok: faqHtml.includes('id="faq-accordion-list"') },
+    { name: 'Empty Search State', ok: faqHtml.includes('id="faq-empty-state"') }
+  ];
+  for (const el of faqElements) {
+    if (el.ok) {
+      console.log(`[PASS] faq.html: ${el.name} verified.`);
+    } else {
+      console.error(`[FAIL] faq.html missing ${el.name}!`);
+      hasErrors = true;
+    }
+  }
+
+  // MMM. 404.html & utility-states.html Check (Phase 15)
+  const notFoundHtml = fs.readFileSync(path.join(__dirname, '404.html'), 'utf8');
+  const utilityHtml = fs.readFileSync(path.join(__dirname, 'utility-states.html'), 'utf8');
+  const utilityElements = [
+    { name: 'Custom 404 Recovery Search', ok: notFoundHtml.includes('id="notfound-search-form"') },
+    { name: 'Empty-Search Pattern', ok: utilityHtml.includes('id="demo-empty-search"') },
+    { name: 'Access Denied Pattern', ok: utilityHtml.includes('id="demo-access-denied"') },
+    { name: 'Session Expired Pattern', ok: utilityHtml.includes('id="demo-session-expired"') },
+    { name: 'Form Submission Failed Pattern', ok: utilityHtml.includes('id="demo-form-fail-box"') },
+    { name: 'Service Unavailable Pattern', ok: utilityHtml.includes('id="demo-service-unavailable"') },
+    { name: 'Loading Skeletons Pattern', ok: utilityHtml.includes('id="demo-skeleton-view"') && utilityHtml.includes('ecdl-skeleton') },
+    { name: 'Confirmation Dialog Triggers', ok: utilityHtml.includes('id="btn-dialog-standard"') && utilityHtml.includes('id="btn-dialog-destructive"') }
+  ];
+  for (const el of utilityElements) {
+    if (el.ok) {
+      console.log(`[PASS] Phase 15 Utility UI: ${el.name} verified.`);
+    } else {
+      console.error(`[FAIL] Phase 15 Utility UI missing ${el.name}!`);
+      hasErrors = true;
+    }
+  }
 } catch (err) {
   console.error(`[FAIL] HTML reading error: ${err.message}`);
   hasErrors = true;
@@ -1904,6 +2015,22 @@ const server = http.createServer((req, res) => {
     reqPath = '/operations-finance.html';
   } else if (reqPath === '/operations/settings' || reqPath === '/operations/settings/') {
     reqPath = '/operations-settings.html';
+  } else if (reqPath === '/terms' || reqPath === '/terms/') {
+    reqPath = '/terms.html';
+  } else if (reqPath === '/privacy' || reqPath === '/privacy/') {
+    reqPath = '/privacy.html';
+  } else if (reqPath === '/refund' || reqPath === '/refund/') {
+    reqPath = '/refund.html';
+  } else if (reqPath === '/cancellation-policy' || reqPath === '/cancellation-policy/') {
+    reqPath = '/cancellation-policy.html';
+  } else if (reqPath === '/certificate-verification' || reqPath === '/certificate-verification/') {
+    reqPath = '/certificate-verification.html';
+  } else if (reqPath === '/faq' || reqPath === '/faq/') {
+    reqPath = '/faq.html';
+  } else if (reqPath === '/404' || reqPath === '/404/') {
+    reqPath = '/404.html';
+  } else if (reqPath === '/utility-states' || reqPath === '/utility-states/' || reqPath === '/ui-states' || reqPath === '/ui-states/') {
+    reqPath = '/utility-states.html';
 
 
   } else if (!path.extname(reqPath)) {
@@ -2119,6 +2246,27 @@ server.listen(3100, () => {
     '/assets/js/operations.js',
     '/docs/OPERATIONS_QUALITY_SPEC.md',
 
+    // Phase 15 Legal, Verification, FAQ & Utility Routes
+    '/terms',
+    '/terms.html',
+    '/privacy',
+    '/privacy.html',
+    '/refund',
+    '/refund.html',
+    '/cancellation-policy',
+    '/cancellation-policy.html',
+    '/certificate-verification',
+    '/certificate-verification.html',
+    '/faq',
+    '/faq.html',
+    '/404',
+    '/404.html',
+    '/utility-states',
+    '/utility-states.html',
+    '/assets/css/utility.css',
+    '/assets/js/utility.js',
+    '/docs/LEGAL_VERIFICATION_UTILITY_SPEC.md',
+
 
     // CSS stylesheets
     '/assets/css/tokens.css',
@@ -2171,7 +2319,7 @@ server.listen(3100, () => {
           console.log('====================================================');
           process.exit(1);
         } else {
-          console.log('   ALL OPEN ECDL PHASE 00 THROUGH PHASE 14 (INTERNAL TRAINING OPERATIONS AND QUALITY UI) CHECKS PASSED 100%!  ');
+          console.log('   ALL OPEN ECDL PHASE 00 THROUGH PHASE 15 (LEGAL, VERIFICATION & UTILITY UI) CHECKS PASSED 100%!  ');
           console.log('====================================================');
           process.exit(0);
         }

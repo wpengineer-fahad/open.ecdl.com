@@ -232,6 +232,30 @@ const server = http.createServer((req, res) => {
   } else if (reqPath === '/operations/settings' || reqPath === '/operations/settings/') {
     // Route for Phase 14 Operations Settings & Facilities
     reqPath = '/operations-settings.html';
+  } else if (reqPath === '/terms' || reqPath === '/terms/') {
+    // Route for Phase 15 Terms and Conditions (Draft)
+    reqPath = '/terms.html';
+  } else if (reqPath === '/privacy' || reqPath === '/privacy/') {
+    // Route for Phase 15 Privacy Policy (Draft)
+    reqPath = '/privacy.html';
+  } else if (reqPath === '/refund' || reqPath === '/refund/') {
+    // Route for Phase 15 Refund Policy (Draft)
+    reqPath = '/refund.html';
+  } else if (reqPath === '/cancellation-policy' || reqPath === '/cancellation-policy/') {
+    // Route for Phase 15 Cancellation Policy (Draft)
+    reqPath = '/cancellation-policy.html';
+  } else if (reqPath === '/certificate-verification' || reqPath === '/certificate-verification/') {
+    // Route for Phase 15 Public Certificate Verification
+    reqPath = '/certificate-verification.html';
+  } else if (reqPath === '/faq' || reqPath === '/faq/') {
+    // Route for Phase 15 Searchable FAQ Directory
+    reqPath = '/faq.html';
+  } else if (reqPath === '/404' || reqPath === '/404/') {
+    // Route for Phase 15 Custom 404 Page Preview
+    reqPath = '/404.html';
+  } else if (reqPath === '/utility-states' || reqPath === '/utility-states/' || reqPath === '/ui-states' || reqPath === '/ui-states/') {
+    // Route for Phase 15 System Utility Interfaces Showcase
+    reqPath = '/utility-states.html';
   } else if (!path.extname(reqPath)) {
     // Try appending .html if file exists without extension
     const potentialHtml = path.join(__dirname, reqPath + '.html');
@@ -251,8 +275,14 @@ const server = http.createServer((req, res) => {
 
   fs.stat(fullPath, (err, stats) => {
     if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-      res.end('404 Not Found - Open ECDL Design System Prototype');
+      const notFoundPage = path.join(__dirname, '404.html');
+      if (fs.existsSync(notFoundPage)) {
+        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+        fs.createReadStream(notFoundPage).pipe(res);
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+        res.end('404 Not Found - Open ECDL Design System Prototype');
+      }
       return;
     }
 

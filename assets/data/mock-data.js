@@ -11429,6 +11429,267 @@ const OpenECDLMockData = {
     return { success: true, settings: ops.settings };
   };
 
+  // =========================================================================
+  // PHASE 15 — LEGAL, VERIFICATION, FAQ & UTILITY DATA
+  // =========================================================================
+
+  OpenECDLMockData.demoCertificates = [
+    {
+      credentialNumber: 'DEMO-ECDL-2026-0001',
+      status: 'valid',
+      isDemonstration: true,
+      recipientMaskedName: 'N. K***m (Sample Learner)',
+      organizationMasked: 'Enterprise Demo Partner',
+      programmeTitle: 'Bangladesh Labour Act 2006 & Domestic Inquiry Masterclass',
+      deliveryMode: 'Blended Classroom (Demo Cohort)',
+      completionStatus: 'Completed Assessment Threshold (Demo)',
+      issueDate: '18 November 2026 (Demo)',
+      validUntil: 'No Expiry (Demonstration Record)',
+      issuingAuthority: 'Open ECDL Prototype Verification Sandbox',
+      demoNotice: 'PROTOTYPE DEMONSTRATION RECORD — Fictional verification sample only; not an official ECDL certificate.'
+    },
+    {
+      credentialNumber: 'DEMO-ECDL-2026-0002',
+      status: 'valid',
+      isDemonstration: true,
+      recipientMaskedName: 'S. R***n (Sample Delegate)',
+      organizationMasked: 'Corporate Academy Demo',
+      programmeTitle: 'B2B Sales Negotiation & High-Value Account Strategy',
+      deliveryMode: 'Classroom Executive Workshop (Demo)',
+      completionStatus: 'Completed Workshop & Case Review (Demo)',
+      issueDate: '25 October 2026 (Demo)',
+      validUntil: 'No Expiry (Demonstration Record)',
+      issuingAuthority: 'Open ECDL Prototype Verification Sandbox',
+      demoNotice: 'PROTOTYPE DEMONSTRATION RECORD — Fictional verification sample only; not an official ECDL certificate.'
+    },
+    {
+      credentialNumber: 'DEMO-ECDL-2026-REVOKED',
+      status: 'revoked',
+      isDemonstration: true,
+      recipientMaskedName: 'A. H***n (Sample Record)',
+      organizationMasked: 'Withheld for Privacy',
+      programmeTitle: 'Supply Chain Due Diligence & ESG Governance',
+      revokedDate: '10 November 2026 (Demo)',
+      revocationReason: 'Demonstration state: Credential superseded or administratively withdrawn in sandbox test.',
+      issuingAuthority: 'Open ECDL Prototype Verification Sandbox',
+      demoNotice: 'PROTOTYPE DEMONSTRATION RECORD — Fictional revoked-credential state for UI review.'
+    }
+  ];
+
+  OpenECDLMockData.verifyDemoCertificate = function(rawCode) {
+    const code = (rawCode || '').trim().toUpperCase();
+    if (!code) {
+      return { status: 'invalid_input', message: 'Please enter a demonstration credential number.' };
+    }
+    const found = (OpenECDLMockData.demoCertificates || []).find(
+      c => c.credentialNumber.toUpperCase() === code
+    );
+    if (!found) {
+      return {
+        status: 'unknown',
+        queriedCode: code,
+        isDemonstration: true,
+        message: 'No matching demonstration credential was found in the prototype registry.'
+      };
+    }
+    return {
+      status: found.status,
+      queriedCode: code,
+      isDemonstration: true,
+      record: found
+    };
+  };
+
+  OpenECDLMockData.faqCategories = [
+    'Courses',
+    'Registration',
+    'Payments',
+    'Certificates',
+    'Corporate Training',
+    'Online Learning',
+    'Technical Support'
+  ];
+
+  OpenECDLMockData.faqItems = [
+    // 1. Courses
+    {
+      id: 'faq-crs-1',
+      category: 'Courses',
+      question: 'Who designs and delivers Open ECDL training programmes?',
+      answer: 'Open ECDL courses are facilitated by practicing legal advocates, senior HR directors, supply-chain auditors, and industry executives with verified field experience in Bangladesh corporate and manufacturing environments.',
+      tags: ['faculty', 'curriculum', 'trainers']
+    },
+    {
+      id: 'faq-crs-2',
+      category: 'Courses',
+      question: 'Are course materials updated for recent Bangladesh Labour Act amendments?',
+      answer: 'Yes. Compliance and industrial jurisprudence courses include current statutory modules covering gazette updates, domestic inquiry rules, and workplace compliance templates.',
+      tags: ['labour act', 'syllabus', 'compliance']
+    },
+    {
+      id: 'faq-crs-3',
+      category: 'Courses',
+      question: 'What delivery formats are available for open-enrollment courses?',
+      answer: 'Programmes are scheduled in three primary formats depending on the cohort: Executive Classroom sessions at our Banani campus, Live Online interactive Zoom cohorts, and Hybrid blended tracks.',
+      tags: ['classroom', 'hybrid', 'live online']
+    },
+
+    // 2. Registration
+    {
+      id: 'faq-reg-1',
+      category: 'Registration',
+      question: 'How do individual learners register for an upcoming cohort?',
+      answer: 'Select a scheduled cohort from the Course Catalogue or Training Calendar, click Register Now to add the seat to your registration cart, complete participant details, and choose an online or invoice payment option.',
+      tags: ['enroll', 'cart', 'cohort']
+    },
+    {
+      id: 'faq-reg-2',
+      category: 'Registration',
+      question: 'Can one HR coordinator nominate multiple employees at once?',
+      answer: 'Yes. Our Group Registration flow and Corporate Client Portal both support multi-participant rosters, CSV bulk import templates, and consolidated corporate invoicing.',
+      tags: ['group', 'hr', 'nominations', 'bulk']
+    },
+    {
+      id: 'faq-reg-3',
+      category: 'Registration',
+      question: 'What happens when a cohort reaches maximum seat capacity?',
+      answer: 'When seats fill, the cohort moves to Waitlist status. Waitlisted applicants are notified automatically if a confirmed seat opens or when the next scheduled batch launches.',
+      tags: ['waitlist', 'seats', 'capacity']
+    },
+
+    // 3. Payments
+    {
+      id: 'faq-pay-1',
+      category: 'Payments',
+      question: 'Are course fees listed in Bangladeshi Taka (BDT) and how is VAT handled?',
+      answer: 'All fees are displayed in BDT. Statutory VAT handling and Mushak Form 6.3 breakdowns are itemized clearly during checkout and on corporate tax invoices based on applicable rules.',
+      tags: ['bdt', 'vat', 'mushak', 'tax']
+    },
+    {
+      id: 'faq-pay-2',
+      category: 'Payments',
+      question: 'Do you support corporate bank transfers and purchase orders?',
+      answer: 'Yes. Eligible corporate accounts can request an official invoice for EFT/BEFTN bank transfer or cheque settlement and upload payment confirmation evidence for treasury verification.',
+      tags: ['invoice', 'bank transfer', 'beftn', 'corporate']
+    },
+    {
+      id: 'faq-pay-3',
+      category: 'Payments',
+      question: 'Where can I review refund and cancellation eligibility terms?',
+      answer: 'Refund timelines, seat transfers, and cohort rescheduling provisions are outlined in our draft Refund Policy and Cancellation Policy pages, subject to final legal review.',
+      tags: ['refund', 'cancellation', 'policy']
+    },
+
+    // 4. Certificates
+    {
+      id: 'faq-crt-1',
+      category: 'Certificates',
+      question: 'How can an employer verify an ECDL certificate?',
+      answer: 'Employers and HR teams can visit the public Certificate Verification page and enter the credential number printed on the certificate. In this prototype, fictional demo IDs such as DEMO-ECDL-2026-0001 can be tested.',
+      tags: ['verify', 'credential', 'employer']
+    },
+    {
+      id: 'faq-crt-2',
+      category: 'Certificates',
+      question: 'What attendance or assessment criteria are required to earn completion credentials?',
+      answer: 'Participants generally need to satisfy minimum session attendance thresholds and complete required post-training evaluations or practical workshops specified in the cohort syllabus.',
+      tags: ['attendance', 'assessment', 'completion']
+    },
+    {
+      id: 'faq-crt-3',
+      category: 'Certificates',
+      question: 'What personal information is shown on public verification results?',
+      answer: 'To safeguard learner privacy, public verification results limit displayed details to masked/partial recipient identification, programme title, completion status, and issuance status—never contact details or national IDs.',
+      tags: ['privacy', 'verification', 'data protection']
+    },
+
+    // 5. Corporate Training
+    {
+      id: 'faq-crp-1',
+      category: 'Corporate Training',
+      question: 'Can ECDL customise a training curriculum for our organisation?',
+      answer: 'Yes. Our B2B advisory team conducts structured Training Needs Assessments (TNA) and designs customised academies aligned to your company policies, sector risks, and competency levels.',
+      tags: ['custom', 'tna', 'in-house', 'b2b']
+    },
+    {
+      id: 'faq-crp-2',
+      category: 'Corporate Training',
+      question: 'What reporting does our HR team receive after an in-house programme?',
+      answer: 'Corporate clients receive attendance ledgers, pre- and post-assessment score comparisons, participant feedback summaries, and completion status inside the Corporate Client Portal.',
+      tags: ['reports', 'kirkpatrick', 'hr', 'analytics']
+    },
+    {
+      id: 'faq-crp-3',
+      category: 'Corporate Training',
+      question: 'How do we request a commercial training proposal?',
+      answer: 'Use the Request a Training Proposal form in the Corporate Training section or submit a bespoke request from the Corporate Client Portal to specify participant headcount, location, and target dates.',
+      tags: ['proposal', 'rfp', 'quotation']
+    },
+
+    // 6. Online Learning
+    {
+      id: 'faq-onl-1',
+      category: 'Online Learning',
+      question: 'How do I access live online sessions and recorded replays?',
+      answer: 'Enrolled learners log into the Learner Portal and navigate to My Courses to view live Zoom session links, downloadable slide decks, and authorized session replays.',
+      tags: ['zoom', 'lms', 'portal', 'recordings']
+    },
+    {
+      id: 'faq-onl-2',
+      category: 'Online Learning',
+      question: 'Are self-paced modules accessible on mobile devices?',
+      answer: 'Yes. The Open ECDL Learner Portal and lesson player are responsive across desktop browsers, tablets, and smartphones for flexible review.',
+      tags: ['mobile', 'responsive', 'self-paced']
+    },
+    {
+      id: 'faq-onl-3',
+      category: 'Online Learning',
+      question: 'How long do learners retain portal access to downloaded handouts?',
+      answer: 'Digital handouts and templates downloaded by enrolled learners remain available for ongoing workplace reference, while LMS portal access windows follow the cohort specification.',
+      tags: ['handouts', 'materials', 'access']
+    },
+
+    // 7. Technical Support
+    {
+      id: 'faq-tec-1',
+      category: 'Technical Support',
+      question: 'What should I do if my login session expires or I forget my password?',
+      answer: 'Use the Forgot Password link on the login screen to trigger a password reset flow, or sign in again if an idle timeout expires your browser session.',
+      tags: ['password', 'login', 'session expired']
+    },
+    {
+      id: 'faq-tec-2',
+      category: 'Technical Support',
+      question: 'Who can I contact if an online payment confirmation or invoice receipt fails to upload?',
+      answer: 'If a submission fails due to connectivity or file size limits, retry the upload with a PDF/JPG under 5 MB or reach out to our Banani operations desk at +8801767804408.',
+      tags: ['upload', 'payment', 'error', 'support']
+    },
+    {
+      id: 'faq-tec-3',
+      category: 'Technical Support',
+      question: 'Which browsers are recommended for the Open ECDL learning and corporate portals?',
+      answer: 'We recommend up-to-date versions of Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari with JavaScript enabled for smooth video playback and interactive reporting.',
+      tags: ['browser', 'chrome', 'requirements']
+    }
+  ];
+
+  OpenECDLMockData.getFaqItems = function(category, query) {
+    let items = OpenECDLMockData.faqItems || [];
+    if (category && category !== 'all') {
+      items = items.filter(item => item.category.toLowerCase() === category.toLowerCase());
+    }
+    if (query && query.trim()) {
+      const q = query.trim().toLowerCase();
+      items = items.filter(item =>
+        item.question.toLowerCase().includes(q) ||
+        item.answer.toLowerCase().includes(q) ||
+        item.category.toLowerCase().includes(q) ||
+        (item.tags || []).some(t => t.toLowerCase().includes(q))
+      );
+    }
+    return items;
+  };
+
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = OpenECDLMockData;

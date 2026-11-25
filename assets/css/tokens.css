@@ -241,3 +241,13 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Global Accessible Keyboard Focus Ring & Mobile Horizontal Overflow Guard */
+html, body {
+  overflow-x: clip;
+}
+
+:focus-visible {
+  outline: var(--focus-outline-width, 2px) solid var(--focus-outline-color, #108B44);
+  outline-offset: var(--focus-outline-offset, 2px);
+}

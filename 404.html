@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Open ECDL</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://open.ecdl.com.bd/404" />
+  <meta name="description" content="The requested Open ECDL page could not be found. Search courses, verify credentials, or navigate back to the home portal." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111111',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utility.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans min-h-screen flex flex-col">
+
+  <!-- Minimal Header -->
+  <header class="bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group" aria-label="ECDL Home">
+        <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#108B44" />
+          <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+          <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+          <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+        </svg>
+        <div class="leading-tight">
+          <span class="block font-display text-lg font-extrabold text-ecdl-dark">ECDL</span>
+          <span class="block text-[11px] font-medium text-neutral-500">Enroute Center for Development</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3 text-xs font-bold">
+        <a href="/utility-states" class="px-3.5 py-2 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-700 transition-colors">
+          UI States Library
+        </a>
+        <a href="/" class="px-4 py-2 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white transition-colors">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 404 Hero -->
+  <main class="flex-1 flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl w-full space-y-10 text-center">
+
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          HTTP 404 • Route Not Found
+        </div>
+
+        <div class="font-display text-7xl sm:text-8xl font-extrabold text-ecdl-dark tracking-tighter">
+          4<span class="text-ecdl-green">0</span>4
+        </div>
+
+        <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-ecdl-dark">
+          We couldn't find that Open ECDL page
+        </h1>
+
+        <p class="text-sm sm:text-base text-neutral-600 max-w-xl mx-auto leading-relaxed">
+          The link you followed may have been moved, renamed, or mistyped. Use the search bar below or jump directly to one of our core portals.
+        </p>
+      </div>
+
+      <!-- Recovery Search Bar -->
+      <form id="notfound-search-form" class="max-w-lg mx-auto flex flex-col sm:flex-row gap-2.5">
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input
+            type="text"
+            id="notfound-search-input"
+            placeholder="Search FAQs, policies, or support topics..."
+            aria-label="Search Open ECDL help topics"
+            class="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-ecdl-green"
+          />
+        </div>
+        <button type="submit" class="px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">
+          Search Help
+        </button>
+      </form>
+
+      <!-- Popular Destinations Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+        <a href="/courses" class="p-5 bg-white rounded-2xl border border-neutral-200 hover:border-ecdl-green hover:shadow-md transition-all group">
+          <div class="w-9 h-9 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-3">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-ecdl-dark group-hover:text-ecdl-green">Course Catalogue</div>
+          <div class="text-xs text-neutral-500 mt-1">Browse upcoming workshops</div>
+        </a>
+
+        <a href="/corporate-training" class="p-5 bg-white rounded-2xl border border-neutral-200 hover:border-ecdl-green hover:shadow-md transition-all group">
+          <div class="w-9 h-9 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-3">
+            <i data-lucide="building-2" class="w-4 h-4"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-ecdl-dark group-hover:text-ecdl-green">Corporate Training</div>
+          <div class="text-xs text-neutral-500 mt-1">B2B learning solutions</div>
+        </a>
+
+        <a href="/certificate-verification" class="p-5 bg-white rounded-2xl border border-neutral-200 hover:border-ecdl-green hover:shadow-md transition-all group">
+          <div class="w-9 h-9 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-3">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-ecdl-dark group-hover:text-ecdl-green">Verify Certificate</div>
+          <div class="text-xs text-neutral-500 mt-1">Credential verification sandbox</div>
+        </a>
+
+        <a href="/faq" class="p-5 bg-white rounded-2xl border border-neutral-200 hover:border-ecdl-green hover:shadow-md transition-all group">
+          <div class="w-9 h-9 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-3">
+            <i data-lucide="help-circle" class="w-4 h-4"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-ecdl-dark group-hover:text-ecdl-green">Help &amp; FAQ</div>
+          <div class="text-xs text-neutral-500 mt-1">Search answers by topic</div>
+        </a>
+      </div>
+
+      <div class="text-xs text-neutral-500">
+        Reviewing frontend error states? Inspect all 8 utility UI patterns on the <a href="/utility-states" class="text-ecdl-green font-bold underline">Utility &amp; System States Page</a>.
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-neutral-200 py-6 text-center text-xs text-neutral-500">
+    © 2026 Enroute Center for Development Ltd. (ECDL) • <a href="/contact" class="text-ecdl-green font-semibold hover:underline">Contact Operations Support</a>
+  </footer>
+
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/utility.js"></script>
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Utility Interfaces &amp; UI States — Open ECDL</title>
+  <meta name="description" content="Complete utility interface gallery: 404, empty-search results, access denied, session expired, form failure, service unavailable, loading skeletons, and confirmation dialogs." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/utility-states" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111111',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utility.css" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 shrink-0" aria-label="ECDL Home">
+        <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#108B44" />
+          <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+          <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+          <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+        </svg>
+        <div class="leading-tight">
+          <span class="block font-display text-lg font-extrabold text-ecdl-dark">ECDL UI States</span>
+          <span class="block text-[11px] font-medium text-neutral-500">Phase 15 Utility &amp; System Interfaces</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-5 text-xs font-bold text-neutral-600">
+        <a href="/404" class="hover:text-ecdl-green">404 Page</a>
+        <a href="/faq" class="hover:text-ecdl-green">FAQ Directory</a>
+        <a href="/certificate-verification" class="hover:text-ecdl-green">Verify Certificate</a>
+        <a href="/terms" class="hover:text-ecdl-green">Legal Drafts</a>
+      </nav>
+
+      <a href="/" class="px-4 py-2 rounded-xl bg-ecdl-dark text-white text-xs font-bold hover:bg-neutral-800 transition-colors">
+        Home
+      </a>
+    </div>
+  </header>
+
+  <main id="utility-states-showcase" class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+    <header class="space-y-2 border-b border-neutral-200 pb-6">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-greenSoft text-ecdl-greenDark text-xs font-bold">
+        System Pattern Library
+      </span>
+      <h1 class="font-display text-3xl font-extrabold text-ecdl-dark">Utility, Error &amp; Loading State Interfaces</h1>
+      <p class="text-sm text-neutral-600 max-w-3xl">
+        Consistent, accessible utility patterns used across Open ECDL public pages, registration flows, and enterprise portals.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- 1. Custom 404 Page Preview -->
+      <section id="demo-not-found-card" class="bg-white rounded-3xl border border-neutral-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">01 • Not Found State</span>
+          <a href="/404" class="text-xs font-bold text-ecdl-green hover:underline">Open Full /404 Page &rarr;</a>
+        </div>
+        <div class="p-6 rounded-2xl bg-neutral-50 border border-neutral-100 text-center space-y-2">
+          <div class="font-display text-4xl font-extrabold text-ecdl-dark">4<span class="text-ecdl-green">0</span>4</div>
+          <h2 class="font-display text-base font-bold text-ecdl-dark">Page Not Found</h2>
+          <p class="text-xs text-neutral-600">Requested resource could not be located on this portal.</p>
+          <div class="pt-2">
+            <a href="/404" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-ecdl-green text-white text-xs font-bold">Inspect /404 Route</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Empty-Search Results -->
+      <section id="demo-empty-search" class="bg-white rounded-3xl border border-neutral-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">02 • Empty-Search Results</span>
+          <a href="/faq?q=zzzznotfound" class="text-xs font-bold text-ecdl-green hover:underline">Test Live on /faq &rarr;</a>
+        </div>
+        <div class="p-6 rounded-2xl bg-neutral-50 border border-dashed border-neutral-300 text-center space-y-2.5">
+          <div class="w-11 h-11 rounded-xl bg-white border border-neutral-200 text-neutral-500 flex items-center justify-center mx-auto">
+            <i data-lucide="search-x" class="w-5 h-5"></i>
+          </div>
+          <h2 class="font-display text-base font-bold text-ecdl-dark">No matching results found</h2>
+          <p class="text-xs text-neutral-600">Try clearing filters or broadening your search keyword.</p>
+          <button type="button" onclick="window.location.href='/courses'" class="px-4 py-2 rounded-xl bg-ecdl-dark text-white text-xs font-bold">
+            Reset Search Filters
+          </button>
+        </div>
+      </section>
+
+      <!-- 3. Access Denied (403) -->
+      <section id="demo-access-denied" class="bg-white rounded-3xl border border-rose-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-rose-600">03 • Access Denied (HTTP 403)</span>
+          <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 text-[10px] font-bold">RBAC Guard</span>
+        </div>
+        <div class="p-6 rounded-2xl bg-rose-50/70 border border-rose-200 space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h2 class="font-display text-base font-extrabold text-rose-950">Access Restricted</h2>
+              <p class="text-xs text-rose-900 leading-relaxed mt-1">
+                Your current portal role does not hold permission to view this internal resource or corporate account record.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <a href="/account/select-portal" class="px-3.5 py-2 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold transition-colors">Switch Authorised Portal</a>
+            <a href="/contact" class="px-3.5 py-2 rounded-xl bg-white border border-rose-200 text-rose-800 text-xs font-bold">Request Access</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Session Expired (401) -->
+      <section id="demo-session-expired" class="bg-white rounded-3xl border border-amber-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-700">04 • Session Expired (HTTP 401)</span>
+          <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-bold">Auth Timeout</span>
+        </div>
+        <div class="p-6 rounded-2xl bg-amber-50 border border-amber-200 space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h2 class="font-display text-base font-extrabold text-amber-950">Your Session Has Expired</h2>
+              <p class="text-xs text-amber-900 leading-relaxed mt-1">
+                For account security, inactive portal sessions expire after 30 minutes. Please sign in again to resume safely.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <a href="/login" class="px-4 py-2 rounded-xl bg-amber-700 hover:bg-amber-800 text-white text-xs font-bold transition-colors">Sign In Again</a>
+            <a href="/" class="px-4 py-2 rounded-xl bg-white border border-amber-300 text-amber-900 text-xs font-bold">Return Home</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Form Submission Failed -->
+      <section id="demo-form-failed" class="bg-white rounded-3xl border border-neutral-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">05 • Form Submission Failed</span>
+          <span class="text-[11px] font-semibold text-neutral-500">Interactive Retry</span>
+        </div>
+        <div id="demo-form-fail-box" class="p-5 rounded-2xl bg-rose-50 border border-rose-200 space-y-3" role="alert">
+          <div class="flex items-start gap-3">
+            <i data-lucide="x-circle" class="w-5 h-5 text-rose-600 shrink-0 mt-0.5"></i>
+            <div class="text-xs text-rose-900 space-y-1">
+              <div class="font-bold text-sm">Submission Could Not Be Completed</div>
+              <p>A temporary network timeout prevented saving your nomination roster. Your entered form fields are preserved locally.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 pt-1">
+            <button type="button" id="btn-retry-failed-form" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-colors">
+              Retry Submission
+            </button>
+          </div>
+        </div>
+        <div id="demo-form-retry-success" class="hidden p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 font-semibold flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+          <span>Retry simulated successfully — submission queue recovered.</span>
+        </div>
+      </section>
+
+      <!-- 6. Temporary Service Unavailable (503) -->
+      <section id="demo-service-unavailable" class="bg-white rounded-3xl border border-neutral-200 p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">06 • Service Unavailable (HTTP 503)</span>
+          <span class="px-2 py-0.5 rounded bg-neutral-100 text-neutral-700 text-[10px] font-bold">Maintenance Window</span>
+        </div>
+        <div class="p-6 rounded-2xl bg-neutral-900 text-white space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-ecdl-yellow text-ecdl-dark flex items-center justify-center shrink-0">
+              <i data-lucide="wrench" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h2 class="font-display text-base font-extrabold">Scheduled Platform Maintenance</h2>
+              <p class="text-xs text-neutral-300 leading-relaxed mt-1">
+                Enrolment checkout or reporting APIs are temporarily unavailable while database updates complete. Expected recovery: 15 minutes.
+              </p>
+            </div>
+          </div>
+          <div class="pt-1 text-[11px] text-neutral-400">
+            Urgent enquiries: <strong class="text-white">+8801767804408</strong> • training@ecdl.com.bd
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 7. Loading Skeletons -->
+    <section id="demo-loading-skeletons" class="bg-white rounded-3xl border border-neutral-200 p-6 sm:p-8 space-y-5">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">07 • Loading Skeletons</span>
+          <h2 class="font-display text-lg font-extrabold text-ecdl-dark">Async Content &amp; Table Shimmer Placeholders</h2>
+        </div>
+        <button type="button" id="btn-toggle-skeleton" class="px-4 py-2 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold transition-colors">
+          Simulate Loaded Content
+        </button>
+      </div>
+
+      <!-- Skeleton Placeholder Grid -->
+      <div id="demo-skeleton-view" class="grid grid-cols-1 md:grid-cols-3 gap-5" aria-busy="true" aria-label="Loading course cards">
+        <div class="p-5 rounded-2xl border border-neutral-200 space-y-3">
+          <div class="ecdl-skeleton h-32 w-full"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-title"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-full"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-3/4"></div>
+        </div>
+        <div class="p-5 rounded-2xl border border-neutral-200 space-y-3">
+          <div class="ecdl-skeleton h-32 w-full"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-title"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-full"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-2/3"></div>
+        </div>
+        <div class="p-5 rounded-2xl border border-neutral-200 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="ecdl-skeleton ecdl-skeleton-avatar"></div>
+            <div class="flex-1 space-y-2">
+              <div class="ecdl-skeleton ecdl-skeleton-line w-3/4"></div>
+              <div class="ecdl-skeleton ecdl-skeleton-line w-1/2"></div>
+            </div>
+          </div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-full"></div>
+          <div class="ecdl-skeleton ecdl-skeleton-line w-5/6"></div>
+          <div class="ecdl-skeleton h-10 w-full mt-2"></div>
+        </div>
+      </div>
+
+      <!-- Simulated Loaded State -->
+      <div id="demo-loaded-view" class="hidden grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="p-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 space-y-2">
+          <span class="text-[10px] font-bold uppercase text-ecdl-green">Loaded State</span>
+          <h3 class="font-display font-bold text-sm text-ecdl-dark">Bangladesh Labour Act 2006 Masterclass</h3>
+          <p class="text-xs text-neutral-600">Skeleton resolved cleanly into live cohort card.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 space-y-2">
+          <span class="text-[10px] font-bold uppercase text-ecdl-green">Loaded State</span>
+          <h3 class="font-display font-bold text-sm text-ecdl-dark">B2B Sales Negotiation Strategy</h3>
+          <p class="text-xs text-neutral-600">Skeleton resolved cleanly into live cohort card.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 space-y-2">
+          <span class="text-[10px] font-bold uppercase text-ecdl-green">Loaded State</span>
+          <h3 class="font-display font-bold text-sm text-ecdl-dark">Faculty Profile Summary</h3>
+          <p class="text-xs text-neutral-600">Avatar and metadata hydrated after fetch completion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Confirmation Dialogs -->
+    <section id="demo-confirmation-dialogs" class="bg-white rounded-3xl border border-neutral-200 p-6 sm:p-8 space-y-5">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">08 • Confirmation Dialogs</span>
+        <h2 class="font-display text-lg font-extrabold text-ecdl-dark">Accessible Modal Confirmation Patterns</h2>
+        <p class="text-xs text-neutral-600 mt-1">
+          Click any trigger below to test standard, warning, and destructive ARIA confirmation dialogs with keyboard Escape and backdrop close support.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <button type="button" id="btn-dialog-standard" class="px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold transition-colors">
+          Standard Confirmation
+        </button>
+        <button type="button" id="btn-dialog-warning" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-colors">
+          Unsaved Changes Warning
+        </button>
+        <button type="button" id="btn-dialog-destructive" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-colors">
+          Destructive Cancellation Dialog
+        </button>
+      </div>
+
+      <div id="dialog-action-feedback" class="hidden p-3.5 rounded-xl bg-ecdl-greenSoft border border-ecdl-green/20 text-xs font-bold text-ecdl-greenDark"></div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ecdl-dark text-white py-8 mt-12 text-center text-xs text-neutral-400">
+    © 2026 Enroute Center for Development Ltd. (ECDL) • Phase 15 Utility &amp; System Interfaces
+  </footer>
+
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/utility.js"></script>
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+</body>
+</html>

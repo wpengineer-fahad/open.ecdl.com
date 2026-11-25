@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Certificate Verification (Demo) — Open ECDL</title>
+  <meta name="description" content="Verify demonstration Open ECDL credentials using fictional sample certificate numbers with privacy-safe validation." />
+  <link rel="canonical" href="https://open.ecdl.com.bd/certificate-verification" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ecdl: {
+              green: '#108B44',
+              greenDark: '#0D7338',
+              greenSoft: '#EDF7F1',
+              yellow: '#F4DB0F',
+              orange: '#F3520A',
+              dark: '#111111',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/header-footer.css" />
+  <link rel="stylesheet" href="/assets/css/utility.css" />
+  <meta property="og:site_name" content="Open ECDL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Public Certificate Verification (Demo) — Open ECDL" />
+  <meta property="og:description" content="Verify demonstration Open ECDL credentials using fictional sample certificate numbers with privacy-safe validation." />
+  <meta property="og:url" content="https://open.ecdl.com.bd/certificate-verification" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <!-- Top Utility Bar -->
+  <div class="ecdl-utility-topbar bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-yellow text-ecdl-dark uppercase">Prototype Registry</span>
+        <span class="text-neutral-300 hidden sm:inline">Public Credential Verification Sandbox • Privacy-Minimised Lookup</span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="/faq?category=Certificates" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-ecdl-yellow"></i>
+          <span>Certificate FAQs</span>
+        </a>
+        <a href="/contact" class="hover:text-ecdl-yellow transition-colors inline-flex items-center gap-1.5 font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-ecdl-green"></i>
+          <span>Registrar Desk</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        <a href="/" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
+          <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+          </svg>
+          <div class="leading-tight">
+            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">ECDL</span>
+            <span class="block text-[11px] font-medium text-neutral-500">Enroute Center for Development</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="/" class="hover:text-ecdl-green transition-colors">Home</a>
+          <a href="/courses" class="hover:text-ecdl-green transition-colors">Courses</a>
+          <a href="/corporate-training" class="hover:text-ecdl-green transition-colors">Corporate Training</a>
+          <a href="/certificate-verification" class="text-ecdl-green font-bold">Verify Certificate</a>
+          <a href="/faq" class="hover:text-ecdl-green transition-colors">FAQ</a>
+          <a href="/contact" class="hover:text-ecdl-green transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="/login" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold shadow-sm transition-colors">
+            <span>Learner Portal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <!-- Page Heading & Demo Notice -->
+      <div class="text-center space-y-4">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ecdl-greenSoft text-ecdl-greenDark text-xs font-bold border border-ecdl-green/20">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          Public Credential Verification (Demonstration Sandbox)
+        </span>
+        <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-ecdl-dark tracking-tight">
+          Verify an ECDL Certificate
+        </h1>
+        <p class="text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+          Enter a demonstration credential number below to inspect verification states, privacy-safe credential summaries, and status handling.
+        </p>
+
+        <!-- Prototype Warning Pill -->
+        <div class="max-w-2xl mx-auto p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-center justify-center gap-2.5">
+          <i data-lucide="info" class="w-4 h-4 text-amber-700 shrink-0"></i>
+          <span>
+            <strong>Demonstration Mode:</strong> Only fictional test codes (<code>DEMO-ECDL-...</code>) resolve here. Real legacy certificates are verified through the ECDL Registrar office.
+          </span>
+        </div>
+      </div>
+
+      <!-- Verification Search Form Card -->
+      <section class="bg-white rounded-3xl border border-neutral-200 shadow-sm p-6 sm:p-8 space-y-6">
+        <form id="cert-verify-form" class="space-y-3" novalidate>
+          <label for="cert-credential-input" class="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+            Credential / Certificate Number
+          </label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-1">
+              <i data-lucide="hash" class="w-4 h-4 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+              <input
+                type="text"
+                id="cert-credential-input"
+                name="credential"
+                placeholder="e.g., DEMO-ECDL-2026-0001"
+                autocomplete="off"
+                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-neutral-300 text-sm font-mono font-semibold text-ecdl-dark focus:outline-none focus:ring-2 focus:ring-ecdl-green focus:border-ecdl-green"
+              />
+            </div>
+            <button
+              type="submit"
+              id="cert-verify-btn"
+              class="px-7 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark disabled:opacity-60 text-white font-bold text-sm shadow-sm transition-colors inline-flex items-center justify-center gap-2 shrink-0"
+            >
+              <i data-lucide="search" class="w-4 h-4"></i>
+              <span>Verify Credential</span>
+            </button>
+          </div>
+          <p id="cert-input-error" class="hidden text-xs font-semibold text-rose-600 flex items-center gap-1.5" role="alert"></p>
+        </form>
+
+        <!-- Quick Demo Code Selector -->
+        <div class="pt-4 border-t border-neutral-100">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-2.5">
+            Try Demonstration Credential States:
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-0001" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-mono font-semibold transition-colors">
+              DEMO-ECDL-2026-0001 (Valid)
+            </button>
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-0002" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-mono font-semibold transition-colors">
+              DEMO-ECDL-2026-0002 (Valid)
+            </button>
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-REVOKED" class="px-3 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 text-xs font-mono font-semibold transition-colors">
+              DEMO-ECDL-2026-REVOKED (Revoked)
+            </button>
+            <button type="button" data-demo-cert="DEMO-ECDL-9999-UNKNOWN" class="px-3 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-700 border border-neutral-200 text-xs font-mono font-semibold transition-colors">
+              DEMO-ECDL-9999-UNKNOWN (Not Found)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Result States Area -->
+      <section aria-live="polite">
+
+        <!-- 1. Idle Prompt State -->
+        <div id="cert-state-idle" class="bg-white rounded-3xl border border-dashed border-neutral-300 p-8 text-center space-y-2">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 text-neutral-500 flex items-center justify-center mx-auto">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h2 class="font-display text-base font-bold text-ecdl-dark">Ready for Verification</h2>
+          <p class="text-xs text-neutral-500 max-w-md mx-auto">
+            Submit one of the fictional demonstration IDs above to inspect valid, revoked, loading, and unknown states.
+          </p>
+        </div>
+
+        <!-- 2. Loading State -->
+        <div id="cert-state-loading" class="hidden bg-white rounded-3xl border border-neutral-200 p-8 space-y-5">
+          <div class="flex items-center gap-3 text-sm font-bold text-ecdl-green">
+            <svg class="animate-spin h-5 w-5 text-ecdl-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span>Querying demonstration credential ledger...</span>
+          </div>
+          <div class="space-y-3">
+            <div class="ecdl-skeleton ecdl-skeleton-title"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="ecdl-skeleton h-14"></div>
+              <div class="ecdl-skeleton h-14"></div>
+              <div class="ecdl-skeleton h-14"></div>
+              <div class="ecdl-skeleton h-14"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Valid Certificate State (Strictly Privacy-Safe & Clearly Marked as Demo) -->
+        <div id="cert-state-valid" class="hidden bg-white rounded-3xl border-2 border-emerald-500 shadow-sm overflow-hidden">
+          <div class="bg-emerald-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="badge-check" class="w-6 h-6 text-ecdl-yellow"></i>
+              <div>
+                <div class="font-display text-sm font-extrabold uppercase tracking-wide">Valid Demonstration Credential</div>
+                <div class="text-[11px] text-emerald-100">Verified in Prototype Registry • Privacy-Safe Summary</div>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-[11px] font-extrabold uppercase tracking-wider">
+              Demo Record Only
+            </span>
+          </div>
+
+          <!-- Mandatory Demo Identification Banner -->
+          <div class="bg-amber-50 border-b border-amber-200 px-6 py-2.5 text-xs text-amber-900 font-semibold flex items-center gap-2">
+            <i data-lucide="alert-circle" class="w-4 h-4 text-amber-700 shrink-0"></i>
+            <span>PROTOTYPE DEMONSTRATION RECORD — Fictional sample data; does not verify an actual issued ECDL certificate.</span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
+              <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Credential Number</div>
+                <div class="font-mono font-bold text-ecdl-dark mt-1" id="cert-valid-id">DEMO-ECDL-2026-0001</div>
+              </div>
+              <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Recipient (Privacy-Masked)</div>
+                <div class="font-bold text-ecdl-dark mt-1" id="cert-valid-recipient">N. K***m (Sample Learner)</div>
+                <div class="text-xs text-neutral-500 mt-0.5" id="cert-valid-org">Enterprise Demo Partner</div>
+              </div>
+              <div class="sm:col-span-2 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Programme Completed</div>
+                <div class="font-display font-bold text-base text-ecdl-dark mt-1" id="cert-valid-programme">Bangladesh Labour Act 2006 &amp; Domestic Inquiry Masterclass</div>
+                <div class="text-xs text-neutral-500 mt-1" id="cert-valid-mode">Blended Classroom (Demo Cohort)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Completion &amp; Issue Date</div>
+                <div class="font-semibold text-ecdl-dark mt-1" id="cert-valid-issued">18 November 2026 (Demo)</div>
+                <div class="text-xs text-emerald-700 font-medium mt-0.5" id="cert-valid-completion">Completed Assessment Threshold (Demo)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Issuing Sandbox</div>
+                <div class="font-semibold text-ecdl-dark mt-1" id="cert-valid-authority">Open ECDL Prototype Verification Sandbox</div>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-neutral-500 flex items-center gap-2 pt-2 border-t border-neutral-100">
+              <i data-lucide="lock" class="w-3.5 h-3.5 text-ecdl-green"></i>
+              <span>Personal contact details, national IDs, and internal assessment scores are withheld under ECDL privacy standards.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Revoked Certificate State -->
+        <div id="cert-state-revoked" class="hidden bg-white rounded-3xl border-2 border-rose-500 shadow-sm overflow-hidden">
+          <div class="bg-rose-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="shield-off" class="w-6 h-6 text-rose-200"></i>
+              <div>
+                <div class="font-display text-sm font-extrabold uppercase tracking-wide">Credential Revoked / Invalidated</div>
+                <div class="text-[11px] text-rose-100">This demonstration credential is no longer valid</div>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-white/20 text-white text-[11px] font-bold uppercase">Demo Revoked State</span>
+          </div>
+          <div class="p-6 sm:p-8 space-y-4 text-sm">
+            <div class="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 space-y-1.5">
+              <div class="text-xs font-bold uppercase tracking-wider">Credential Reference: <span class="font-mono" id="cert-revoked-id">DEMO-ECDL-2026-REVOKED</span></div>
+              <div class="font-semibold" id="cert-revoked-programme">Supply Chain Due Diligence &amp; ESG Governance</div>
+              <div class="text-xs"><strong>Effective Date:</strong> <span id="cert-revoked-date">10 November 2026 (Demo)</span></div>
+              <p class="text-xs pt-1" id="cert-revoked-reason">
+                Demonstration state: Credential superseded or administratively withdrawn in sandbox test.
+              </p>
+            </div>
+            <p class="text-xs text-neutral-600">
+              If you believe a real ECDL credential status requires manual review, please contact our Registrar office directly with a copy of the issued document.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Unknown Credential State -->
+        <div id="cert-state-unknown" class="hidden bg-white rounded-3xl border-2 border-amber-400 shadow-sm overflow-hidden">
+          <div class="bg-amber-50 px-6 py-5 border-b border-amber-200 flex items-start gap-3">
+            <i data-lucide="help-circle" class="w-6 h-6 text-amber-700 shrink-0 mt-0.5"></i>
+            <div>
+              <h2 class="font-display text-base font-extrabold text-amber-950">Credential Not Found</h2>
+              <p class="text-xs text-amber-900 mt-1">
+                No matching demonstration credential was found for <code class="font-mono font-bold px-1.5 py-0.5 bg-amber-200/60 rounded" id="cert-unknown-code">UNKNOWN</code>.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 space-y-3 text-xs text-neutral-600 leading-relaxed">
+            <p class="font-semibold text-ecdl-dark">Verification Tips:</p>
+            <ul class="list-disc pl-5 space-y-1.5">
+              <li>Confirm the exact prefix and hyphens (for demonstration testing, use codes starting with <code>DEMO-ECDL-</code>).</li>
+              <li>Ensure uppercase/numeric characters such as <code>0</code> vs <code>O</code> are entered accurately.</li>
+              <li>Certificates issued prior to the digital verification registry rollout can be verified manually through ECDL's Registrar desk.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Helpful Support Message Card -->
+      <section class="bg-ecdl-dark text-white rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-xl">
+          <h2 class="font-display text-lg font-extrabold text-white">Need Manual Verification Assistance?</h2>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            HR background-screening teams or employers verifying pre-2026 corporate workshop certificates can contact the ECDL Academic Registrar with the participant's name and programme cohort date.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-1 text-xs text-ecdl-yellow font-semibold">
+            <span>verification@ecdl.com.bd</span>
+            <span class="text-neutral-500">•</span>
+            <span>+8801767804408</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3 shrink-0">
+          <a href="/contact" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs transition-colors">
+            Contact Registrar
+          </a>
+          <a href="/faq?category=Certificates" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors">
+            Certificate FAQs
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="bg-ecdl-dark text-white border-t border-white/10 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <p>© 2026 Enroute Center for Development Ltd. (ECDL). Banani, Dhaka-1213.</p>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="/terms" class="hover:text-white">Terms</a>
+        <a href="/privacy" class="hover:text-white">Privacy</a>
+        <a href="/refund" class="hover:text-white">Refund</a>
+        <a href="/cancellation-policy" class="hover:text-white">Cancellation</a>
+        <a href="/faq" class="hover:text-white">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/utility.js"></script>
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+  <script src="/assets/js/seo-schema.js"></script>
+</body>
+</html>

@@ -499,6 +499,13 @@
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 640px) {
+  .mushak-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .mushak-table {
   width: 100%;
   border-collapse: collapse;
@@ -520,9 +527,18 @@
 
 .mushak-footer-sign {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: space-between;
   margin-top: 3rem;
   padding-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .mushak-footer-sign {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .mushak-sign-box {
@@ -543,7 +559,6 @@
 }
 
 .corp-toggle-input {
-  sr-only: true;
   position: absolute;
   opacity: 0;
   width: 0;

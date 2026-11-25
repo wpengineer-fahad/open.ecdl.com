@@ -1,0 +1,216 @@
+/**
+ * Open ECDL — Phase 15: Legal, Verification, FAQ & Utility UI Stylesheet
+ * Enroute Center for Development Ltd.
+ */
+
+/* ==========================================================================
+   1. LEGAL DOCUMENT PROSE & SECTION NAVIGATION
+   ========================================================================== */
+.ecdl-legal-prose {
+  max-width: 72ch;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.ecdl-legal-prose section {
+  scroll-margin-top: 6.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.ecdl-legal-prose section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.ecdl-legal-prose h2 {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.875rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+}
+
+.ecdl-legal-prose h3 {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ecdl-legal-prose p {
+  margin-bottom: 1rem;
+}
+
+.ecdl-legal-prose ul,
+.ecdl-legal-prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.ecdl-legal-prose li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  color: #4B5563;
+  border-left: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.legal-toc-link:hover {
+  color: #108B44;
+  background-color: #EDF7F1;
+}
+
+.legal-toc-link.is-active {
+  color: #0D7338;
+  font-weight: 700;
+  background-color: #EDF7F1;
+  border-left-color: #108B44;
+}
+
+/* ==========================================================================
+   2. LOADING SKELETON SHIMMER
+   ========================================================================== */
+@keyframes ecdlShimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.ecdl-skeleton {
+  background: #F3F4F6;
+  background-image: linear-gradient(90deg, #F3F4F6 0px, #E5E7EB 40px, #F3F4F6 80px);
+  background-size: 900px 100%;
+  animation: ecdlShimmer 1.4s infinite linear;
+  border-radius: 0.5rem;
+}
+
+.ecdl-skeleton-line {
+  height: 0.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.ecdl-skeleton-title {
+  height: 1.5rem;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.ecdl-skeleton-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+}
+
+/* ==========================================================================
+   3. FAQ ACCORDION & TRANSITIONS
+   ========================================================================== */
+.faq-accordion-btn[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+  color: #108B44;
+}
+
+.faq-accordion-panel {
+  transition: all 0.2s ease;
+}
+
+/* ==========================================================================
+   4. CONFIRMATION DIALOG MODAL
+   ========================================================================== */
+.ecdl-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background-color: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.ecdl-dialog-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ecdl-dialog-panel {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  max-width: 28rem;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #E5E7EB;
+  transform: translateY(10px) scale(0.98);
+  transition: transform 0.2s ease;
+}
+
+.ecdl-dialog-backdrop.is-open .ecdl-dialog-panel {
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   5. PRINT-FRIENDLY LEGAL & CERTIFICATE STYLING
+   ========================================================================== */
+@media print {
+  .no-print,
+  header,
+  footer,
+  .ecdl-utility-topbar,
+  #legal-toc-sidebar,
+  #legal-doc-switcher {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ecdl-legal-prose {
+    max-width: 100% !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+    color: #111111 !important;
+  }
+
+  .ecdl-legal-prose h2,
+  .ecdl-legal-prose h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .ecdl-legal-prose section,
+  .legal-draft-banner {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
