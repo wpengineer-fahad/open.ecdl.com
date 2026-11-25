@@ -575,6 +575,14 @@
     const result = Object.assign({ ogImage: DEFAULT_OG_IMAGE }, mapped);
     if (norm === '/') {
       result.schemas = [buildOrganizationSchema()];
+    } else if (norm !== '/404') {
+      result.schemas = [
+        buildOrganizationSchema(),
+        buildBreadcrumbSchema([
+          { name: 'Home', url: SITE_ORIGIN + '/' },
+          { name: (result.title || 'Page').split('—')[0].trim(), url: result.canonical }
+        ])
+      ];
     }
     return result;
   }
