@@ -629,9 +629,10 @@
     upsertMeta('name', 'twitter:title', meta.title);
     upsertMeta('name', 'twitter:description', meta.description);
 
-    // Inject structured data JSON-LD cleanly (replacing any existing managed node)
+    // Inject structured data JSON-LD cleanly (avoiding duplicate scripts from legacy page scripts)
     const validSchemas = (meta.schemas || []).filter(Boolean);
     if (validSchemas.length > 0) {
+      document.querySelectorAll('head script[type="application/ld+json"]:not(#ecdl-seo-jsonld)').forEach((el) => el.remove());
       let ldEl = document.getElementById('ecdl-seo-jsonld');
       if (!ldEl) {
         ldEl = document.createElement('script');

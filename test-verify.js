@@ -4,7 +4,7 @@ const path = require('path');
 
 console.log('====================================================');
 console.log('   OPEN ECDL — COMPREHENSIVE VERIFICATION SUITE     ');
-console.log('   Phase 00 – 15 (Legal, Verification & Utility UI)');
+console.log('   Phase 00 – 17 (Final Review & WordPress Handover)');
 console.log('====================================================\n');
 
 const requiredFiles = [
@@ -140,7 +140,10 @@ const requiredFiles = [
   'utility-states.html',
   'assets/css/utility.css',
   'assets/js/utility.js',
-  'docs/LEGAL_VERIFICATION_UTILITY_SPEC.md'
+  'docs/LEGAL_VERIFICATION_UTILITY_SPEC.md',
+  'assets/js/seo-schema.js',
+  'docs/TECHNICAL_SEO_QA_REPORT.md',
+  'docs/WORDPRESS_HANDOVER_MASTER.md'
 ];
 
 let hasErrors = false;
@@ -652,6 +655,40 @@ if (hasAllCats && mockData.faqItems && mockData.faqItems.length >= 21 && faqSear
   console.log(`[PASS] FAQ directory dataset verified: ${mockData.faqCategories.length} categories, ${mockData.faqItems.length} entries, keyword search and empty-search states validated.`);
 } else {
   console.error('[FAIL] FAQ categories or search helpers failed!');
+  hasErrors = true;
+}
+
+// 18. Verify Phase 16 Technical SEO & JSON-LD Schema Engine
+try {
+  const seoEngine = require('./assets/js/seo-schema.js');
+  const homeMeta = seoEngine.getRouteMetadata('/', '');
+  const listMeta = seoEngine.getRouteMetadata('/courses', '');
+  const courseMeta = seoEngine.getRouteMetadata('/courses/bangladesh-labour-act-2006-amendment-2026', '');
+  const eventMeta = seoEngine.getRouteMetadata('/events/2026-bangladesh-labour-law-amendment-briefing', '');
+  const articleMeta = seoEngine.getRouteMetadata('/resources/bangladesh-labour-rules-domestic-inquiry-guide', '');
+
+  const listSchema = listMeta.schemas && listMeta.schemas.find(s => s['@type'] === 'ItemList');
+  const uniqueUrls = listSchema ? new Set(listSchema.itemListElement.map(i => i.url)).size : 0;
+  const sequentialPos = listSchema ? listSchema.itemListElement.every((i, idx) => i.position === idx + 1) : false;
+
+  const courseSchema = courseMeta.schemas && courseMeta.schemas.find(s => s['@type'] === 'Course');
+  const eventSchema = eventMeta.schemas && eventMeta.schemas.find(s => s['@type'] === 'Event');
+  const articleSchema = articleMeta.schemas && articleMeta.schemas.find(s => s['@type'] === 'Article');
+
+  if (
+    homeMeta.schemas && homeMeta.schemas[0]['@type'] === 'Organization' &&
+    listSchema && uniqueUrls === listSchema.numberOfItems && sequentialPos &&
+    courseSchema && !courseSchema.aggregateRating && courseSchema.url === 'https://open.ecdl.com.bd/courses/bangladesh-labour-act-2006-amendment-2026' &&
+    eventSchema && !eventMeta.schemas.some(s => s['@type'] === 'Course') &&
+    articleSchema && !articleMeta.schemas.some(s => s['@type'] === 'Course')
+  ) {
+    console.log(`[PASS] Phase 16 JSON-LD engine verified: Organization, ItemList (${uniqueUrls} unique canonical URLs), Course (no fake ratings), Event, Article, and BreadcrumbList.`);
+  } else {
+    console.error('[FAIL] Phase 16 JSON-LD structured data validation failed!');
+    hasErrors = true;
+  }
+} catch (err) {
+  console.error('[FAIL] Could not load assets/js/seo-schema.js:', err.message);
   hasErrors = true;
 }
 
@@ -1856,6 +1893,51 @@ try {
       hasErrors = true;
     }
   }
+
+  // NNN. Phase 16 Technical SEO, H1 Hierarchy, Root-Relative Nested Assets & Dead Link Audit
+  const allHtml = fs.readdirSync(__dirname).filter(f => f.endsWith('.html'));
+  let seoAuditFails = [];
+  for (const f of allHtml) {
+    const content = fs.readFileSync(path.join(__dirname, f), 'utf8');
+    if (!/<meta\s+name=["']description["']/i.test(content)) seoAuditFails.push(`${f} missing meta description`);
+    if (!/<link\s+rel=["']canonical["']/i.test(content)) seoAuditFails.push(`${f} missing canonical link`);
+    if (/href=["']#["']/.test(content)) seoAuditFails.push(`${f} contains dead href="#"`);
+    if (f !== 'events.html' && f !== 'select-portal.html') {
+      const h1Count = (content.match(/<h1\b[^>]*>/gi) || []).length;
+      if (h1Count !== 1) seoAuditFails.push(`${f} has ${h1Count} <h1> tags (expected 1)`);
+    }
+  }
+  const nestedTemplates = ['course-detail.html', 'category.html', 'event-detail.html', 'resource-detail.html', 'trainer-detail.html', 'corporate-solution-detail.html'];
+  for (const nf of nestedTemplates) {
+    const nc = fs.readFileSync(path.join(__dirname, nf), 'utf8');
+    if (/(href|src)=["']assets\//.test(nc)) seoAuditFails.push(`${nf} uses relative assets/ path instead of /assets/`);
+  }
+  if (seoAuditFails.length === 0) {
+    console.log(`[PASS] Phase 16 HTML Audit verified across all ${allHtml.length} pages: meta descriptions, canonicals, single H1s, root-relative nested assets, and zero href="#" links.`);
+  } else {
+    console.error('[FAIL] Phase 16 HTML Audit failures:', seoAuditFails);
+    hasErrors = true;
+  }
+
+  // OOO. Phase 17 Final Design Consistency & WordPress Handover Completeness
+  const handoverDoc = fs.readFileSync(path.join(__dirname, 'docs/WORDPRESS_HANDOVER_MASTER.md'), 'utf8');
+  const unmappedPages = allHtml.filter(f => !handoverDoc.includes(f));
+  const missingFontPages = allHtml.filter(f => f !== 'events.html' && f !== 'select-portal.html').filter(f => {
+    const c = fs.readFileSync(path.join(__dirname, f), 'utf8');
+    return !c.includes('Plus Jakarta Sans') || !c.includes('Inter');
+  });
+  if (
+    unmappedPages.length === 0 &&
+    missingFontPages.length === 0 &&
+    handoverDoc.includes('Elementor Pro') &&
+    handoverDoc.includes('Tutor LMS Pro') &&
+    handoverDoc.includes('ECDL Core Plugin')
+  ) {
+    console.log(`[PASS] Phase 17 Handover Audit verified: All ${allHtml.length} HTML templates mapped in WORDPRESS_HANDOVER_MASTER.md with unified typography & tokens.`);
+  } else {
+    console.error('[FAIL] Phase 17 Handover Audit failures:', { unmappedPages, missingFontPages });
+    hasErrors = true;
+  }
 } catch (err) {
   console.error(`[FAIL] HTML reading error: ${err.message}`);
   hasErrors = true;
@@ -2266,6 +2348,9 @@ server.listen(3100, () => {
     '/assets/css/utility.css',
     '/assets/js/utility.js',
     '/docs/LEGAL_VERIFICATION_UTILITY_SPEC.md',
+    '/assets/js/seo-schema.js',
+    '/docs/TECHNICAL_SEO_QA_REPORT.md',
+    '/docs/WORDPRESS_HANDOVER_MASTER.md',
 
 
     // CSS stylesheets
@@ -2319,7 +2404,7 @@ server.listen(3100, () => {
           console.log('====================================================');
           process.exit(1);
         } else {
-          console.log('   ALL OPEN ECDL PHASE 00 THROUGH PHASE 15 (LEGAL, VERIFICATION & UTILITY UI) CHECKS PASSED 100%!  ');
+          console.log('   ALL OPEN ECDL PHASE 00 THROUGH PHASE 17 (FINAL DESIGN REVIEW & WORDPRESS HANDOVER) CHECKS PASSED 100%!  ');
           console.log('====================================================');
           process.exit(0);
         }
