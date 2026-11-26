@@ -162,8 +162,17 @@
       }
 
       if (isActive) {
+        link.classList.remove('text-black');
         link.classList.add('text-ecdl-green', 'font-bold');
         link.setAttribute('aria-current', 'page');
+        const parentGroup = link.closest('.relative.group');
+        if (parentGroup) {
+          const triggerBtn = parentGroup.querySelector('button');
+          if (triggerBtn) {
+            triggerBtn.classList.remove('text-black');
+            triggerBtn.classList.add('text-ecdl-green', 'font-bold');
+          }
+        }
       }
     });
   }
