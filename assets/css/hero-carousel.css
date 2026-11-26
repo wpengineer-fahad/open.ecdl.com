@@ -17,7 +17,8 @@
 }
 
 .ecdl-hero-carousel__inner {
-  max-width: 80rem; /* 1280px matches max-w-7xl container */
+  max-width: 80rem;
+  /* 1280px matches max-w-7xl container */
   margin: 0 auto;
   padding: 2rem 1rem 1.75rem;
   display: flex;
@@ -68,8 +69,8 @@
   pointer-events: none;
   transform: translateX(16px);
   transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
-              transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-              visibility 0s linear 600ms;
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 600ms;
 }
 
 .ecdl-hero-slide.is-active {
@@ -78,8 +79,8 @@
   pointer-events: auto;
   transform: translateX(0);
   transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
-              transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-              visibility 0s linear 0s;
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
   z-index: 2;
 }
 
@@ -88,6 +89,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .ecdl-hero-slide,
   .ecdl-hero-slide.is-active,
   .ecdl-hero-slide.is-leaving {
