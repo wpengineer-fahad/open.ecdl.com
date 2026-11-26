@@ -7,10 +7,10 @@
   <meta name="description" content="Discover how Bangladesh's top enterprises achieve measurable capability transformation, supervisor retention, and statutory compliance with Open ECDL." />
   <link rel="canonical" href="https://open.ecdl.com.bd/corporate-training/case-studies" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
           },
           boxShadow: {
-            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
-            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -47,12 +65,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/header-footer.css" />
-  <link rel="stylesheet" href="assets/css/corporate.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/header-footer.css" />
+  <link rel="stylesheet" href="/assets/css/corporate.css" />
   <meta property="og:site_name" content="Open ECDL" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Corporate Case Studies & Impact Reports — Open ECDL | Enroute Center for Development" />
@@ -69,7 +87,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
         <span class="text-neutral-300 hidden sm:inline">All corporate proposals include statutory Mushak Form 6.3 invoices</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -99,16 +117,16 @@
         <!-- Custom Brand SVG Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -128,15 +146,15 @@
               <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
                 <a href="courses.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="book-open" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">All Courses</div><div class="text-[11px] text-neutral-500 font-normal">Explore 24+ professional programmes</div></div>
+                  <div><div class="font-bold text-xs">All Courses</div><div class="text-xs text-neutral-500 font-normal">Explore 24+ professional programmes</div></div>
                 </a>
                 <a href="training-calendar.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="calendar" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Training Calendar</div><div class="text-[11px] text-neutral-500 font-normal">Chronological schedule &amp; month view</div></div>
+                  <div><div class="font-bold text-xs">Training Calendar</div><div class="text-xs text-neutral-500 font-normal">Chronological schedule &amp; month view</div></div>
                 </a>
                 <a href="category.html?slug=compliance-management" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="layers" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Course Categories</div><div class="text-[11px] text-neutral-500 font-normal">8 specialized professional domains</div></div>
+                  <div><div class="font-bold text-xs">Course Categories</div><div class="text-xs text-neutral-500 font-normal">8 specialized professional domains</div></div>
                 </a>
               </div>
             </div>
@@ -152,19 +170,19 @@
               <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
                 <a href="corporate-training.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="building-2" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Enterprise Overview</div><div class="text-[11px] text-neutral-500 font-normal">B2B customised learning &amp; academies</div></div>
+                  <div><div class="font-bold text-xs">Enterprise Overview</div><div class="text-xs text-neutral-500 font-normal">B2B customised learning &amp; academies</div></div>
                 </a>
                 <a href="corporate-tna.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="clipboard-check" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Training Needs Assessment</div><div class="text-[11px] text-neutral-500 font-normal">6-step capability diagnostic tool</div></div>
+                  <div><div class="font-bold text-xs">Training Needs Assessment</div><div class="text-xs text-neutral-500 font-normal">6-step capability diagnostic tool</div></div>
                 </a>
                 <a href="corporate-proposal.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="file-text" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Request a Proposal</div><div class="text-[11px] text-neutral-500 font-normal">Tiered pricing &amp; custom quotation</div></div>
+                  <div><div class="font-bold text-xs">Request a Proposal</div><div class="text-xs text-neutral-500 font-normal">Tiered pricing &amp; custom quotation</div></div>
                 </a>
                 <a href="corporate-case-studies.html" class="flex items-center gap-3 p-2.5 rounded-xl bg-ecdl-greenSoft text-ecdl-green transition-colors font-bold">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green text-white flex items-center justify-center"><i data-lucide="trophy" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Case Studies</div><div class="text-[11px] text-neutral-600 font-normal">Documented client transformations</div></div>
+                  <div><div class="font-bold text-xs">Case Studies</div><div class="text-xs text-neutral-600 font-normal">Documented client transformations</div></div>
                 </a>
               </div>
             </div>
@@ -184,7 +202,7 @@
           <!-- Profile / Sign In Pill -->
           <div class="relative">
             <button id="profileBtn" type="button" onclick="toggleProfileDropdown()" class="flex items-center gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-xl border border-neutral-200 hover:border-ecdl-green transition-colors text-xs font-bold text-neutral-700">
-              <span id="profileAvatarBadge" class="w-6 h-6 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center text-[11px] font-black uppercase">IN</span>
+              <span id="profileAvatarBadge" class="w-6 h-6 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center text-xs font-black uppercase">IN</span>
               <span id="profileBtnLabel" class="hidden sm:inline">Sign In</span>
               <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-neutral-400"></i>
             </button>
@@ -279,7 +297,7 @@
       </div>
 
       <!-- Executive Impact Metrics Banner -->
-      <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+      <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
         <div class="border-r border-white/10 pr-4 last:border-r-0">
           <span class="block font-display text-3xl sm:text-4xl font-extrabold text-white">1,500+</span>
           <span class="text-xs sm:text-sm text-neutral-300 block mt-1">Corporate Programmes Executed</span>
@@ -293,7 +311,7 @@
           <span class="text-xs sm:text-sm text-neutral-300 block mt-1">Average Documented ROI</span>
         </div>
         <div>
-          <span class="block font-display text-3xl sm:text-4xl font-extrabold text-ecdl-orange">98.4%</span>
+          <span class="block font-display text-3xl sm:text-4xl font-extrabold text-[#1B4D3E]">98.4%</span>
           <span class="text-xs sm:text-sm text-neutral-300 block mt-1">Client Re-engagement Rate</span>
         </div>
       </div>
@@ -345,7 +363,7 @@
       <!-- ========================================== -->
       <!-- CASE STUDY 1: APEX FOOTWEAR LIMITED        -->
       <!-- ========================================== -->
-      <article id="cs-apex-footwear" class="case-study-item border border-neutral-200 rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="manufacturing" data-slug="apex-footwear">
+      <article id="cs-apex-footwear" class="case-study-item border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="manufacturing" data-slug="apex-footwear">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
           <!-- Left Visual & Client Summary Column -->
           <div class="lg:col-span-5 bg-neutral-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
@@ -354,7 +372,7 @@
             
             <div class="relative z-20 space-y-4">
               <div class="flex items-center justify-between gap-3">
-                <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-ecdl-green text-white">
+                <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-green text-white">
                   Plant Transformation
                 </span>
                 <span class="font-display font-extrabold text-xl text-white tracking-widest">
@@ -380,7 +398,7 @@
               </blockquote>
               <div class="mt-3">
                 <p class="font-bold text-white text-xs">Syed Manzur Elahi</p>
-                <p class="text-[11px] text-neutral-400">Executive Director of Human Resources, Apex Footwear Limited</p>
+                <p class="text-xs text-neutral-400">Executive Director of Human Resources, Apex Footwear Limited</p>
               </div>
             </div>
           </div>
@@ -398,7 +416,7 @@
               <!-- Challenge vs Approach -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 space-y-2">
-                  <div class="flex items-center gap-2 text-ecdl-orange font-bold text-xs uppercase tracking-wider">
+                  <div class="flex items-center gap-2 text-[#1B4D3E] font-bold text-xs uppercase tracking-wider">
                     <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                     <span>The Operational Challenge</span>
                   </div>
@@ -432,19 +450,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">28%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Reduction in supervisor turnover within 6 months</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Reduction in supervisor turnover within 6 months</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">14.2%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Improvement in on-time shift delivery velocity</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Improvement in on-time shift delivery velocity</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-dark">120</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Certified plant leaders with ECDL credentials</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Certified plant leaders with ECDL credentials</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
-                    <span class="block font-display text-2xl font-black text-ecdl-orange">Zero</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Labor disputes or statutory compliance grievances</span>
+                    <span class="block font-display text-2xl font-black text-[#1B4D3E]">Zero</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Labor disputes or statutory compliance grievances</span>
                   </div>
                 </div>
               </div>
@@ -468,7 +486,7 @@
       <!-- ========================================== -->
       <!-- CASE STUDY 2: THE CITY BANK PLC            -->
       <!-- ========================================== -->
-      <article id="cs-city-bank" class="case-study-item border border-neutral-200 rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="banking" data-slug="city-bank">
+      <article id="cs-city-bank" class="case-study-item border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="banking" data-slug="city-bank">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
           <!-- Left Visual & Client Summary Column -->
           <div class="lg:col-span-5 bg-neutral-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
@@ -477,7 +495,7 @@
             
             <div class="relative z-20 space-y-4">
               <div class="flex items-center justify-between gap-3">
-                <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-ecdl-yellow text-ecdl-dark">
+                <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-yellow text-black">
                   Banking Capability
                 </span>
                 <span class="font-display font-extrabold text-xl text-white tracking-widest">
@@ -503,7 +521,7 @@
               </blockquote>
               <div class="mt-3">
                 <p class="font-bold text-white text-xs">Mashrur Arefin</p>
-                <p class="text-[11px] text-neutral-400">Managing Director &amp; CEO, The City Bank PLC</p>
+                <p class="text-xs text-neutral-400">Managing Director &amp; CEO, The City Bank PLC</p>
               </div>
             </div>
           </div>
@@ -521,7 +539,7 @@
               <!-- Challenge vs Approach -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 space-y-2">
-                  <div class="flex items-center gap-2 text-ecdl-orange font-bold text-xs uppercase tracking-wider">
+                  <div class="flex items-center gap-2 text-[#1B4D3E] font-bold text-xs uppercase tracking-wider">
                     <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                     <span>The Operational Challenge</span>
                   </div>
@@ -555,19 +573,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">98.5%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">First-cycle credit appraisal accuracy rating</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">First-cycle credit appraisal accuracy rating</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">22%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Faster corporate loan processing turnaround</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Faster corporate loan processing turnaround</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-dark">85</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Certified Corporate Credit Analysts</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Certified Corporate Credit Analysts</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
-                    <span class="block font-display text-2xl font-black text-ecdl-orange">100%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Bangladesh Bank Circular Compliance adherence</span>
+                    <span class="block font-display text-2xl font-black text-[#1B4D3E]">100%</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Bangladesh Bank Circular Compliance adherence</span>
                   </div>
                 </div>
               </div>
@@ -591,7 +609,7 @@
       <!-- ========================================== -->
       <!-- CASE STUDY 3: MARICO BANGLADESH LIMITED    -->
       <!-- ========================================== -->
-      <article id="cs-marico-bangladesh" class="case-study-item border border-neutral-200 rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="fmcg" data-slug="marico-bangladesh">
+      <article id="cs-marico-bangladesh" class="case-study-item border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="fmcg" data-slug="marico-bangladesh">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
           <!-- Left Visual & Client Summary Column -->
           <div class="lg:col-span-5 bg-neutral-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
@@ -600,7 +618,7 @@
             
             <div class="relative z-20 space-y-4">
               <div class="flex items-center justify-between gap-3">
-                <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-ecdl-green text-white">
+                <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-green text-white">
                   Culture &amp; Wellbeing
                 </span>
                 <span class="font-display font-extrabold text-xl text-white tracking-widest">
@@ -626,7 +644,7 @@
               </blockquote>
               <div class="mt-3">
                 <p class="font-bold text-white text-xs">Ashish Goupal</p>
-                <p class="text-[11px] text-neutral-400">Managing Director, Marico Bangladesh Limited</p>
+                <p class="text-xs text-neutral-400">Managing Director, Marico Bangladesh Limited</p>
               </div>
             </div>
           </div>
@@ -644,7 +662,7 @@
               <!-- Challenge vs Approach -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 space-y-2">
-                  <div class="flex items-center gap-2 text-ecdl-orange font-bold text-xs uppercase tracking-wider">
+                  <div class="flex items-center gap-2 text-[#1B4D3E] font-bold text-xs uppercase tracking-wider">
                     <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                     <span>The Operational Challenge</span>
                   </div>
@@ -678,19 +696,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">41%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Decrease in reported workplace fatigue incidents</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Decrease in reported workplace fatigue incidents</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">94%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Positive rating on internal psychological safety audit</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Positive rating on internal psychological safety audit</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-dark">340</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Field associates credentialed in wellbeing practices</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Field associates credentialed in wellbeing practices</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
-                    <span class="block font-display text-2xl font-black text-ecdl-orange">18%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Lower unscheduled employee absenteeism</span>
+                    <span class="block font-display text-2xl font-black text-[#1B4D3E]">18%</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Lower unscheduled employee absenteeism</span>
                   </div>
                 </div>
               </div>
@@ -714,7 +732,7 @@
       <!-- ========================================== -->
       <!-- CASE STUDY 4: SQUARE PHARMACEUTICALS PLC   -->
       <!-- ========================================== -->
-      <article id="cs-square-pharmaceuticals" class="case-study-item border border-neutral-200 rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="pharmaceuticals" data-slug="square-pharmaceuticals">
+      <article id="cs-square-pharmaceuticals" class="case-study-item border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="pharmaceuticals" data-slug="square-pharmaceuticals">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
           <!-- Left Visual & Client Summary Column -->
           <div class="lg:col-span-5 bg-neutral-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
@@ -723,7 +741,7 @@
             
             <div class="relative z-20 space-y-4">
               <div class="flex items-center justify-between gap-3">
-                <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-ecdl-green text-white">
+                <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-green text-white">
                   Financial Strategy
                 </span>
                 <span class="font-display font-extrabold text-xl text-white tracking-widest">
@@ -749,7 +767,7 @@
               </blockquote>
               <div class="mt-3">
                 <p class="font-bold text-white text-xs">Tapan Chowdhury</p>
-                <p class="text-[11px] text-neutral-400">Managing Director, Square Pharmaceuticals PLC</p>
+                <p class="text-xs text-neutral-400">Managing Director, Square Pharmaceuticals PLC</p>
               </div>
             </div>
           </div>
@@ -767,7 +785,7 @@
               <!-- Challenge vs Approach -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 space-y-2">
-                  <div class="flex items-center gap-2 text-ecdl-orange font-bold text-xs uppercase tracking-wider">
+                  <div class="flex items-center gap-2 text-[#1B4D3E] font-bold text-xs uppercase tracking-wider">
                     <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                     <span>The Operational Challenge</span>
                   </div>
@@ -801,19 +819,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">100%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Standardized DCF models across 8 plant units</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Standardized DCF models across 8 plant units</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">15 Days</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Shaved off annual capex budgeting cycles</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Shaved off annual capex budgeting cycles</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-dark">45</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Advanced Financial Analysts credentialed</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Advanced Financial Analysts credentialed</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-yellow">3.8x</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Modeled ROI on strategic expansion capital</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Modeled ROI on strategic expansion capital</span>
                   </div>
                 </div>
               </div>
@@ -837,7 +855,7 @@
       <!-- ========================================== -->
       <!-- CASE STUDY 5: GRAMEENPHONE RETAIL PARTNERS -->
       <!-- ========================================== -->
-      <article id="cs-grameenphone-retail" class="case-study-item border border-neutral-200 rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="telecommunications" data-slug="grameenphone-retail">
+      <article id="cs-grameenphone-retail" class="case-study-item border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-card hover:shadow-cardHover transition-all" data-industry="telecommunications" data-slug="grameenphone-retail">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
           <!-- Left Visual & Client Summary Column -->
           <div class="lg:col-span-5 bg-neutral-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
@@ -846,7 +864,7 @@
             
             <div class="relative z-20 space-y-4">
               <div class="flex items-center justify-between gap-3">
-                <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-ecdl-orange text-white">
+                <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-ecdl-yellow text-black">
                   Commercial Excellence
                 </span>
                 <span class="font-display font-extrabold text-xl text-white tracking-widest">
@@ -872,7 +890,7 @@
               </blockquote>
               <div class="mt-3">
                 <p class="font-bold text-white text-xs">Yasir Azman</p>
-                <p class="text-[11px] text-neutral-400">Chief Executive Officer, Grameenphone</p>
+                <p class="text-xs text-neutral-400">Chief Executive Officer, Grameenphone</p>
               </div>
             </div>
           </div>
@@ -890,7 +908,7 @@
               <!-- Challenge vs Approach -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 space-y-2">
-                  <div class="flex items-center gap-2 text-ecdl-orange font-bold text-xs uppercase tracking-wider">
+                  <div class="flex items-center gap-2 text-[#1B4D3E] font-bold text-xs uppercase tracking-wider">
                     <i data-lucide="alert-triangle" class="w-4 h-4"></i>
                     <span>The Operational Challenge</span>
                   </div>
@@ -924,19 +942,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">22.4%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Average increase in quarterly enterprise sales</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Average increase in quarterly enterprise sales</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-green">96%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Retention rate among tier-1 corporate clients</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Retention rate among tier-1 corporate clients</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-dark">450</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Commercial Specialists credentialed</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Commercial Specialists credentialed</span>
                   </div>
                   <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-center">
                     <span class="block font-display text-2xl font-black text-ecdl-yellow">35%</span>
-                    <span class="text-[11px] text-neutral-500 block mt-0.5 font-medium leading-tight">Higher adoption of digital service packages</span>
+                    <span class="text-xs text-neutral-500 block mt-0.5 font-medium leading-tight">Higher adoption of digital service packages</span>
                   </div>
                 </div>
               </div>
@@ -958,7 +976,7 @@
       </article>
 
       <!-- Empty state when no matches -->
-      <div id="cs-empty-state" class="hidden text-center py-16 px-4 bg-neutral-50 rounded-3xl border border-dashed border-neutral-300">
+      <div id="cs-empty-state" class="hidden text-center py-16 px-4 bg-neutral-50 rounded-xl border border-dashed border-neutral-300">
         <i data-lucide="search-x" class="w-12 h-12 text-neutral-400 mx-auto mb-3"></i>
         <h4 class="font-display text-lg font-bold text-neutral-800">No case studies found</h4>
         <p class="text-sm text-neutral-500 max-w-md mx-auto mt-1 mb-4">
@@ -1003,7 +1021,7 @@
   <!-- ========================================================= -->
   <!-- 8. SITE-WIDE FOOTER                                       -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white border-t border-white/10">
+  <footer class="bg-[#123B30] text-white border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         
@@ -1011,29 +1029,29 @@
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="flex items-center gap-3" aria-label="ECDL Home">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div>
-              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
-              <span class="block text-xs text-neutral-400">Enroute Center for Development Ltd.</span>
+              <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-white/85">Enroute Center for Development Ltd.</span>
             </div>
           </a>
-          <p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+          <p class="text-xs text-white/85 leading-relaxed max-w-sm">
             Bangladesh’s leading corporate learning and capability development institution. Empowering professionals and organizations with practical, certified, high-impact training since 2017.
           </p>
-          <div class="pt-2 flex items-center gap-3 text-neutral-400">
+          <div class="pt-2 flex items-center gap-3 text-white/85">
             <span class="text-xs font-semibold text-neutral-300">Statutory Tax Compliance:</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-white/10 text-white font-mono">Mushak Form 6.3</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-white/10 text-white font-sans">Mushak Form 6.3</span>
           </div>
         </div>
 
         <!-- Corporate Training Links -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Corporate Solutions</h4>
-          <ul class="space-y-2 text-xs text-neutral-400">
+          <ul class="space-y-2 text-xs text-white/85">
             <li><a href="corporate-training.html" class="hover:text-ecdl-green transition-colors">Corporate Training Hub</a></li>
             <li><a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors">Training Needs Assessment</a></li>
             <li><a href="corporate-proposal.html" class="hover:text-ecdl-green transition-colors">Request a Proposal</a></li>
@@ -1046,7 +1064,7 @@
         <!-- Open Programmes -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Open Training</h4>
-          <ul class="space-y-2 text-xs text-neutral-400">
+          <ul class="space-y-2 text-xs text-white/85">
             <li><a href="courses.html" class="hover:text-ecdl-green transition-colors">All Courses Catalogue</a></li>
             <li><a href="training-calendar.html" class="hover:text-ecdl-green transition-colors">Training Calendar</a></li>
             <li><a href="webinars.html" class="hover:text-ecdl-green transition-colors">Upcoming Webinars</a></li>
@@ -1059,10 +1077,10 @@
         <!-- Contact & Accreditation -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Headquarters</h4>
-          <div class="text-xs text-neutral-400 space-y-2">
+          <div class="text-xs text-white/85 space-y-2">
             <p class="leading-relaxed">House 18, Road 24, Block K, Banani, Dhaka-1213, Bangladesh</p>
-            <p>Direct: <a href="tel:+8801767804408" class="text-white hover:text-ecdl-yellow font-semibold">+8801767804408</a></p>
-            <p>Corporate: <a href="mailto:corporate@ecdl.com.bd" class="text-white hover:text-ecdl-yellow font-semibold">corporate@ecdl.com.bd</a></p>
+            <p>Direct: <a href="tel:+8801767804408" class="text-white hover:text-[#C9A227] font-semibold">+8801767804408</a></p>
+            <p>Corporate: <a href="mailto:corporate@ecdl.com.bd" class="text-white hover:text-[#C9A227] font-semibold">corporate@ecdl.com.bd</a></p>
             <div class="pt-2">
               <button type="button" onclick="openVerifyModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold text-ecdl-yellow transition-colors">
                 <i data-lucide="award" class="w-3.5 h-3.5"></i>
@@ -1075,9 +1093,9 @@
       </div>
 
       <!-- Bottom Legal Strip -->
-      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
         <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
-        <div class="flex items-center gap-6 text-neutral-400">
+        <div class="flex items-center gap-6 text-white/85">
           <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
           <a href="/terms#sec-fees" class="hover:text-white transition-colors">VAT Policy (NBR 2012)</a>
@@ -1128,13 +1146,13 @@
         Enter the Certificate Identification Number printed at the bottom of the issued credential.
       </p>
       <div class="space-y-2">
-        <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="w-full px-4 py-3 rounded-xl border border-neutral-300 font-mono text-sm focus:border-ecdl-green focus:outline-none uppercase" />
+        <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="w-full px-4 py-3 rounded-xl border border-neutral-300 font-sans text-sm focus:border-ecdl-green focus:outline-none uppercase" />
         <button type="button" onclick="handleModalVerify()" class="w-full py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-sm transition-colors shadow">
           Verify Credential Authenticity
         </button>
       </div>
       <div id="modalCertResult" class="hidden"></div>
-      <div class="pt-2 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500">
+      <div class="pt-2 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
         <span>Try sample: <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="text-ecdl-green underline font-bold">ECDL-2026-8492</button></span>
         <span>Secure ECDL Registry</span>
       </div>
@@ -1184,7 +1202,7 @@
       if (currentUser.loggedIn) {
         if (badge) badge.textContent = currentUser.initials;
         if (label) label.textContent = 'Profile';
-        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-[#1B4D3E] font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
       } else {
         if (badge) badge.textContent = 'IN';
         if (label) label.textContent = 'Sign In';
@@ -1208,7 +1226,7 @@
       res.classList.remove('hidden');
       const rec = CERTIFICATES[val];
       if (rec) {
-        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-sans font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
       } else {
         res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>\"' + val + '\" is not registered. Please double check the ID.</p></div>';
       }
@@ -1226,8 +1244,8 @@
   </script>
 
   <!-- Required Data & Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/corporate.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/corporate.js"></script>
   <script src="/assets/js/seo-schema.js"></script>
 </body>
 </html>

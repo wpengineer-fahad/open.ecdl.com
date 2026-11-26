@@ -7,10 +7,10 @@
   <meta name="description" content="Interactive 6-step B2B corporate Training Needs Assessment (TNA) tool. Benchmark organizational skills gaps and receive tailored learning roadmaps." />
   <link rel="canonical" href="https://open.ecdl.com.bd/corporate-training/tna" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
           },
           boxShadow: {
-            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
-            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -47,12 +65,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/header-footer.css" />
-  <link rel="stylesheet" href="assets/css/corporate.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/header-footer.css" />
+  <link rel="stylesheet" href="/assets/css/corporate.css" />
   <meta property="og:site_name" content="Open ECDL" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Training Needs Assessment (TNA) — Open ECDL | Enroute Center for Development" />
@@ -69,7 +87,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">ENTERPRISE TNA</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">ENTERPRISE TNA</span>
         <span class="text-neutral-300 hidden sm:inline">All organizational diagnostic data is protected under reciprocal NDA</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -99,16 +117,16 @@
         <!-- Custom Brand SVG Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -199,7 +217,7 @@
   <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
     <!-- Confirmation View (Simulated Success) -->
-    <div id="tna-confirmation-view" class="hidden bg-white rounded-3xl border border-neutral-200 p-8 sm:p-12 shadow-card text-center space-y-6">
+    <div id="tna-confirmation-view" class="hidden bg-white rounded-xl border border-neutral-200 p-8 sm:p-12 shadow-card text-center space-y-6">
       <div class="w-20 h-20 rounded-full bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mx-auto text-3xl font-extrabold shadow-inner">
         <i data-lucide="check" class="w-10 h-10"></i>
       </div>
@@ -214,7 +232,7 @@
       <div class="p-6 rounded-2xl bg-neutral-50 border border-neutral-200 max-w-md mx-auto space-y-3 text-left">
         <div class="flex items-center justify-between text-xs">
           <span class="text-neutral-500 font-bold uppercase">Assessment Reference Code:</span>
-          <span id="tna-confirm-ref" class="font-mono font-extrabold text-ecdl-green text-sm">ECDL-TNA-2026-XXXXXX</span>
+          <span id="tna-confirm-ref" class="font-sans font-extrabold text-ecdl-green text-sm">ECDL-TNA-2026-XXXXXX</span>
         </div>
         <div class="text-xs text-neutral-600 space-y-1">
           <p>• <strong>Status:</strong> Assigned to Senior Enterprise Advisor</p>
@@ -235,7 +253,7 @@
     </div>
 
     <!-- Active Multi-Step Form Wrapper -->
-    <div id="tna-form-view" class="bg-white rounded-3xl border border-neutral-200 shadow-card p-6 sm:p-10 space-y-8">
+    <div id="tna-form-view" class="bg-white rounded-xl border border-neutral-200 shadow-card p-6 sm:p-10 space-y-8">
 
       <!-- Progress Header & Breadcrumb Tracker -->
       <div class="space-y-4 pb-6 border-b border-neutral-200">
@@ -524,31 +542,31 @@
   <!-- ========================================================= -->
   <!-- 4. GLOBAL FOOTER (#111111)                                -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
+  <footer class="bg-[#123B30] text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div>
-              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
-              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+              <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-white/85">Enroute Center for Development</span>
             </div>
           </div>
-          <p class="text-sm text-neutral-400 leading-relaxed">
+          <p class="text-sm text-white/85 leading-relaxed">
             Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
           </p>
           <div class="space-y-2 pt-2 text-xs text-neutral-300">
-            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
               <span>+8801767804408</span>
             </a>
-            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
               <span>training@ecdl.com.bd</span>
             </a>
@@ -556,39 +574,39 @@
         </div>
 
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Corporate Hub</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Corporate Hub</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="corporate-training.html" class="hover:text-ecdl-yellow transition-colors">Corporate Training Overview</a></li>
-            <li><a href="corporate-tna.html" class="hover:text-ecdl-yellow transition-colors font-bold text-ecdl-green">Training Needs Assessment (TNA)</a></li>
-            <li><a href="corporate-proposal.html" class="hover:text-ecdl-yellow transition-colors">Request a Proposal</a></li>
-            <li><a href="corporate-case-studies.html" class="hover:text-ecdl-yellow transition-colors">Enterprise Case Studies</a></li>
+            <li><a href="corporate-training.html" class="hover:text-[#C9A227] transition-colors">Corporate Training Overview</a></li>
+            <li><a href="corporate-tna.html" class="hover:text-[#C9A227] transition-colors font-bold text-ecdl-green">Training Needs Assessment (TNA)</a></li>
+            <li><a href="corporate-proposal.html" class="hover:text-[#C9A227] transition-colors">Request a Proposal</a></li>
+            <li><a href="corporate-case-studies.html" class="hover:text-[#C9A227] transition-colors">Enterprise Case Studies</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-2 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Solutions</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Solutions</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-ecdl-yellow transition-colors">Leadership Academy</a></li>
-            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-ecdl-yellow transition-colors">Labour Law 2026</a></li>
-            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-ecdl-yellow transition-colors">Commercial Sales</a></li>
+            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-[#C9A227] transition-colors">Leadership Academy</a></li>
+            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-[#C9A227] transition-colors">Labour Law 2026</a></li>
+            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-[#C9A227] transition-colors">Commercial Sales</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Sister Concerns</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Sister Concerns</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
-            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
-            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+            <li><a href="index.html" class="hover:text-[#C9A227] transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-[#C9A227] transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-[#C9A227] transition-colors">Sudoksho</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/85">
         <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
         <div class="flex items-center gap-3">
-          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
-          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">Facebook</a>
+          <a href="#site-header" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -627,7 +645,7 @@
     <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
       <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
         <div>
-          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
           <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
         </div>
         <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
@@ -636,7 +654,7 @@
       </div>
       <div class="p-6 space-y-4">
         <div class="flex gap-2">
-          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-sans text-sm uppercase" />
           <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
         </div>
       </div>
@@ -657,7 +675,7 @@
       if (currentUser.loggedIn) {
         if (badge) badge.textContent = currentUser.initials;
         if (label) label.textContent = 'Profile';
-        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-[#1B4D3E] font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
       } else {
         if (badge) badge.textContent = 'IN';
         if (label) label.textContent = 'Sign In';
@@ -682,8 +700,8 @@
   </script>
 
   <!-- Required Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/corporate.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/corporate.js"></script>
   <script src="/assets/js/seo-schema.js"></script>
 </body>
 </html>

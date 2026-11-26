@@ -224,7 +224,7 @@
           <div>
             <span class="text-neutral-500 block text-xs uppercase font-bold mb-1">Identified Skills Gaps</span>
             <div class="flex flex-wrap gap-1.5">
-              ${d.skillsGaps.map(g => `<span class="px-2.5 py-1 rounded-md bg-ecdl-orange/10 text-ecdl-orange font-bold text-xs">${g}</span>`).join('')}
+              ${d.skillsGaps.map(g => `<span class="px-2.5 py-1 rounded-md bg-[#F7F5F0] text-[#1B4D3E] font-bold text-xs">${g}</span>`).join('')}
             </div>
           </div>
           ${d.urgentPriorities ? `<div><span class="text-neutral-500 block text-xs uppercase font-bold">Specific Challenge:</span><p class="italic text-neutral-600">${d.urgentPriorities}</p></div>` : ''}
@@ -505,7 +505,7 @@
       const cs = window.mockData.getCaseStudyBySlug(solution.relatedCaseStudySlug);
       if (cs) {
         csContainer.innerHTML = `
-          <div class="bg-gradient-to-br from-neutral-900 to-ecdl-dark text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-card">
+          <div class="bg-gradient-to-br from-neutral-900 to-ecdl-dark text-white rounded-xl p-6 sm:p-8 relative overflow-hidden shadow-card">
             <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
               <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-ecdl-green text-white uppercase tracking-wider">
                 ${cs.industry}
@@ -522,7 +522,7 @@
               ${cs.outcomes.map(o => `
                 <div>
                   <span class="block font-display text-lg sm:text-xl font-extrabold text-ecdl-yellow">${o.metric}</span>
-                  <span class="text-[11px] text-neutral-300 leading-tight block mt-0.5">${o.label}</span>
+                  <span class="text-xs text-neutral-300 leading-tight block mt-0.5">${o.label}</span>
                 </div>
               `).join('')}
             </div>

@@ -21,7 +21,7 @@
   right: -24px;
   width: 48px;
   height: 2px;
-  background: linear-gradient(90deg, #108B44 0%, #E5E7EB 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, #E5E7EB 100%);
   z-index: 1;
 }
 
@@ -33,16 +33,16 @@
 }
 
 .ecdl-tna-step-pill.is-active {
-  background-color: #108B44;
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border-color: #108B44;
-  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.25);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(27, 77, 62, 0.25);
 }
 
 .ecdl-tna-step-pill.is-completed {
-  background-color: #EDF7F1;
-  color: #108B44;
-  border-color: #108B44;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .ecdl-tna-card-select {
@@ -54,14 +54,14 @@
 }
 
 .ecdl-tna-card-select:hover {
-  border-color: rgba(16, 139, 68, 0.4);
+  border-color: rgba(27, 77, 62, 0.4);
   background-color: #F9FAFB;
 }
 
 .ecdl-tna-card-select.is-selected {
-  border-color: #108B44;
-  background-color: #EDF7F1;
-  box-shadow: 0 4px 14px rgba(16, 139, 68, 0.12);
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 14px rgba(27, 77, 62, 0.12);
 }
 
 /* ==========================================================================
@@ -70,23 +70,23 @@
 .ecdl-metric-stat-box {
   background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
   border: 1px solid #E5E7EB;
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 20px;
   text-align: center;
 }
 
 .ecdl-metric-stat-val {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 2.25rem;
+  font-size: var(--font-heading-size);
   line-height: 1;
-  color: #108B44;
+  color: var(--color-primary);
 }
 
 .ecdl-portal-dashboard-mockup {
-  border-radius: 28px;
-  border: 1px solid #374151;
-  background: #111111;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  border: 1px solid var(--color-black);
+  background: var(--color-black);
+  box-shadow: 0 8px 20px rgba(27, 77, 62, 0.10);
   overflow: hidden;
 }

@@ -147,7 +147,7 @@ const OpenECDLMockData = {
       heroDescription: 'Equip senior executives, directors, and operational leaders with rigorous business planning frameworks, balanced scorecard mechanisms, and supervisory execution toolkits.',
       strategicContext: 'In Bangladesh’s rapidly evolving industrial landscape, corporate competitiveness hinges on shifting from informal supervision to structured, metrics-driven business management.',
       icon: 'briefcase',
-      accentColor: '#108B44',
+      accentColor: '#1B4D3E',
       featuredCourse: 'Supervisory Leadership & Shopfloor Operational Excellence',
       topicsCovered: [
         'Strategic Planning & Vision Alignment',
@@ -223,7 +223,7 @@ const OpenECDLMockData = {
       heroDescription: 'Transform human resource operations into an indispensable strategic growth engine through metrics-driven recruitment, competency modeling, and retention systems.',
       strategicContext: 'Modern corporate Bangladesh requires HR leaders who can bridge employee advocacy with board-level commercial strategy and labor law compliance.',
       icon: 'users',
-      accentColor: '#108B44',
+      accentColor: '#1B4D3E',
       featuredCourse: 'Strategic Talent Acquisition & Modern People Analytics',
       topicsCovered: [
         'Talent Acquisition & Behavioral Interviewing',
@@ -261,7 +261,7 @@ const OpenECDLMockData = {
       heroDescription: 'Master the high-stakes dynamics of modern B2B selling, strategic key account management, price negotiation, and distribution channel optimization.',
       strategicContext: 'In price-sensitive, highly competitive markets, commercial success demands consultative, value-led selling rather than simple discounting.',
       icon: 'trending-up',
-      accentColor: '#F3520A',
+      accentColor: '#C9A227',
       featuredCourse: 'Effective Sales Management & Strategic Key Accounts',
       topicsCovered: [
         'B2B Solution Selling & Value Articulation',
@@ -298,7 +298,7 @@ const OpenECDLMockData = {
       heroDescription: 'Cultivate commanding boardroom communication, critical thinking, decisive time management, and the emotional intelligence needed for senior corporate leadership.',
       strategicContext: 'Technical acumen gets executives hired; personal presence, strategic delegation, and persuasive communication determine who ascends to the executive suite.',
       icon: 'sparkles',
-      accentColor: '#F4DB0F',
+      accentColor: '#C9A227',
       featuredCourse: 'Managing Priorities & Productivity',
       topicsCovered: [
         'Executive Presence & Boardroom Public Speaking',
@@ -335,7 +335,7 @@ const OpenECDLMockData = {
       heroDescription: 'Foster psychologically safe, resilient, and energized work environments that reduce chronic executive burnout and absenteeism across corporate teams.',
       strategicContext: 'High-pressure corporate cycles in Dhaka often lead to executive exhaustion. Proactive wellbeing frameworks directly protect employee retention and organizational productivity.',
       icon: 'heart',
-      accentColor: '#108B44',
+      accentColor: '#1B4D3E',
       featuredCourse: 'Corporate Mental Resilience & Workplace Wellbeing Strategies',
       topicsCovered: [
         'Chronic Stress Management & Biofeedback',
@@ -372,7 +372,7 @@ const OpenECDLMockData = {
       heroDescription: 'Master authoritative statutory interpretations of the Bangladesh Labour Act 2006 (amended to 2026), Domestic Inquiries, NBR VAT 2012, and global export ESG regulations.',
       strategicContext: 'Regulatory oversight by DIFE, the Labour Court, and the NBR is at an all-time high. A single procedural lapse in a domestic inquiry can cost millions in legal damages.',
       icon: 'shield-check',
-      accentColor: '#108B44',
+      accentColor: '#1B4D3E',
       featuredCourse: 'Bangladesh Labour Act 2006 and Its Amendment up to 2026',
       topicsCovered: [
         'Bangladesh Labour Act 2006 (Amendments to 2026)',

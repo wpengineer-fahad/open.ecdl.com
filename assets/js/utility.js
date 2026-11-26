@@ -271,7 +271,7 @@
                 aria-controls="panel-${item.id}"
               >
                 <div class="space-y-1.5">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-ecdl-greenSoft text-ecdl-greenDark">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-ecdl-greenSoft text-ecdl-greenDark">
                     ${item.category}
                   </span>
                   <h3 class="font-display text-base font-bold text-ecdl-dark leading-snug">

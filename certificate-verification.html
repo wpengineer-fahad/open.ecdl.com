@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -17,18 +17,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              orange: '#F3520A',
-              dark: '#111111',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -56,7 +81,7 @@
   <div class="ecdl-utility-topbar bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-yellow text-ecdl-dark uppercase">Prototype Registry</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-yellow text-black uppercase">Prototype Registry</span>
         <span class="text-neutral-300 hidden sm:inline">Public Credential Verification Sandbox • Privacy-Minimised Lookup</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -78,14 +103,14 @@
       <div class="flex items-center justify-between h-20 gap-4">
         <a href="/" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
-            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">ECDL</span>
-            <span class="block text-[11px] font-medium text-neutral-500">Enroute Center for Development</span>
+            <span class="block font-sans text-base font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">ECDL</span>
+            <span class="block text-xs font-medium text-neutral-500">Enroute Center for Development</span>
           </div>
         </a>
 
@@ -133,7 +158,7 @@
       </div>
 
       <!-- Verification Search Form Card -->
-      <section class="bg-white rounded-3xl border border-neutral-200 shadow-sm p-6 sm:p-8 space-y-6">
+      <section class="bg-white rounded-xl border border-neutral-200 shadow-sm p-6 sm:p-8 space-y-6">
         <form id="cert-verify-form" class="space-y-3" novalidate>
           <label for="cert-credential-input" class="block text-xs font-bold uppercase tracking-wider text-neutral-600">
             Credential / Certificate Number
@@ -147,7 +172,7 @@
                 name="credential"
                 placeholder="e.g., DEMO-ECDL-2026-0001"
                 autocomplete="off"
-                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-neutral-300 text-sm font-mono font-semibold text-ecdl-dark focus:outline-none focus:ring-2 focus:ring-ecdl-green focus:border-ecdl-green"
+                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-neutral-300 text-sm font-sans font-semibold text-ecdl-dark focus:outline-none focus:ring-2 focus:ring-ecdl-green focus:border-ecdl-green"
               />
             </div>
             <button
@@ -164,20 +189,20 @@
 
         <!-- Quick Demo Code Selector -->
         <div class="pt-4 border-t border-neutral-100">
-          <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-2.5">
+          <div class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2.5">
             Try Demonstration Credential States:
           </div>
           <div class="flex flex-wrap gap-2">
-            <button type="button" data-demo-cert="DEMO-ECDL-2026-0001" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-mono font-semibold transition-colors">
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-0001" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-sans font-semibold transition-colors">
               DEMO-ECDL-2026-0001 (Valid)
             </button>
-            <button type="button" data-demo-cert="DEMO-ECDL-2026-0002" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-mono font-semibold transition-colors">
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-0002" class="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-sans font-semibold transition-colors">
               DEMO-ECDL-2026-0002 (Valid)
             </button>
-            <button type="button" data-demo-cert="DEMO-ECDL-2026-REVOKED" class="px-3 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 text-xs font-mono font-semibold transition-colors">
+            <button type="button" data-demo-cert="DEMO-ECDL-2026-REVOKED" class="px-3 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 text-xs font-sans font-semibold transition-colors">
               DEMO-ECDL-2026-REVOKED (Revoked)
             </button>
-            <button type="button" data-demo-cert="DEMO-ECDL-9999-UNKNOWN" class="px-3 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-700 border border-neutral-200 text-xs font-mono font-semibold transition-colors">
+            <button type="button" data-demo-cert="DEMO-ECDL-9999-UNKNOWN" class="px-3 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-700 border border-neutral-200 text-xs font-sans font-semibold transition-colors">
               DEMO-ECDL-9999-UNKNOWN (Not Found)
             </button>
           </div>
@@ -188,7 +213,7 @@
       <section aria-live="polite">
 
         <!-- 1. Idle Prompt State -->
-        <div id="cert-state-idle" class="bg-white rounded-3xl border border-dashed border-neutral-300 p-8 text-center space-y-2">
+        <div id="cert-state-idle" class="bg-white rounded-xl border border-dashed border-neutral-300 p-8 text-center space-y-2">
           <div class="w-12 h-12 rounded-2xl bg-neutral-100 text-neutral-500 flex items-center justify-center mx-auto">
             <i data-lucide="award" class="w-6 h-6"></i>
           </div>
@@ -199,7 +224,7 @@
         </div>
 
         <!-- 2. Loading State -->
-        <div id="cert-state-loading" class="hidden bg-white rounded-3xl border border-neutral-200 p-8 space-y-5">
+        <div id="cert-state-loading" class="hidden bg-white rounded-xl border border-neutral-200 p-8 space-y-5">
           <div class="flex items-center gap-3 text-sm font-bold text-ecdl-green">
             <svg class="animate-spin h-5 w-5 text-ecdl-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -219,16 +244,16 @@
         </div>
 
         <!-- 3. Valid Certificate State (Strictly Privacy-Safe & Clearly Marked as Demo) -->
-        <div id="cert-state-valid" class="hidden bg-white rounded-3xl border-2 border-emerald-500 shadow-sm overflow-hidden">
+        <div id="cert-state-valid" class="hidden bg-white rounded-xl border-2 border-[#C9A227] shadow-sm overflow-hidden">
           <div class="bg-emerald-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
               <i data-lucide="badge-check" class="w-6 h-6 text-ecdl-yellow"></i>
               <div>
                 <div class="font-display text-sm font-extrabold uppercase tracking-wide">Valid Demonstration Credential</div>
-                <div class="text-[11px] text-emerald-100">Verified in Prototype Registry • Privacy-Safe Summary</div>
+                <div class="text-xs text-emerald-100">Verified in Prototype Registry • Privacy-Safe Summary</div>
               </div>
             </div>
-            <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-[11px] font-extrabold uppercase tracking-wider">
+            <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-black text-xs font-extrabold uppercase tracking-wider">
               Demo Record Only
             </span>
           </div>
@@ -242,31 +267,31 @@
           <div class="p-6 sm:p-8 space-y-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
               <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Credential Number</div>
-                <div class="font-mono font-bold text-ecdl-dark mt-1" id="cert-valid-id">DEMO-ECDL-2026-0001</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Credential Number</div>
+                <div class="font-sans font-bold text-ecdl-dark mt-1" id="cert-valid-id">DEMO-ECDL-2026-0001</div>
               </div>
               <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Recipient (Privacy-Masked)</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Recipient (Privacy-Masked)</div>
                 <div class="font-bold text-ecdl-dark mt-1" id="cert-valid-recipient">N. K***m (Sample Learner)</div>
                 <div class="text-xs text-neutral-500 mt-0.5" id="cert-valid-org">Enterprise Demo Partner</div>
               </div>
               <div class="sm:col-span-2 p-4 rounded-xl bg-neutral-50 border border-neutral-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Programme Completed</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Programme Completed</div>
                 <div class="font-display font-bold text-base text-ecdl-dark mt-1" id="cert-valid-programme">Bangladesh Labour Act 2006 &amp; Domestic Inquiry Masterclass</div>
                 <div class="text-xs text-neutral-500 mt-1" id="cert-valid-mode">Blended Classroom (Demo Cohort)</div>
               </div>
               <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Completion &amp; Issue Date</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Completion &amp; Issue Date</div>
                 <div class="font-semibold text-ecdl-dark mt-1" id="cert-valid-issued">18 November 2026 (Demo)</div>
                 <div class="text-xs text-emerald-700 font-medium mt-0.5" id="cert-valid-completion">Completed Assessment Threshold (Demo)</div>
               </div>
               <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Issuing Sandbox</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-400">Issuing Sandbox</div>
                 <div class="font-semibold text-ecdl-dark mt-1" id="cert-valid-authority">Open ECDL Prototype Verification Sandbox</div>
               </div>
             </div>
 
-            <div class="text-[11px] text-neutral-500 flex items-center gap-2 pt-2 border-t border-neutral-100">
+            <div class="text-xs text-neutral-500 flex items-center gap-2 pt-2 border-t border-neutral-100">
               <i data-lucide="lock" class="w-3.5 h-3.5 text-ecdl-green"></i>
               <span>Personal contact details, national IDs, and internal assessment scores are withheld under ECDL privacy standards.</span>
             </div>
@@ -274,20 +299,20 @@
         </div>
 
         <!-- 4. Revoked Certificate State -->
-        <div id="cert-state-revoked" class="hidden bg-white rounded-3xl border-2 border-rose-500 shadow-sm overflow-hidden">
+        <div id="cert-state-revoked" class="hidden bg-white rounded-xl border-2 border-rose-500 shadow-sm overflow-hidden">
           <div class="bg-rose-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
               <i data-lucide="shield-off" class="w-6 h-6 text-rose-200"></i>
               <div>
                 <div class="font-display text-sm font-extrabold uppercase tracking-wide">Credential Revoked / Invalidated</div>
-                <div class="text-[11px] text-rose-100">This demonstration credential is no longer valid</div>
+                <div class="text-xs text-rose-100">This demonstration credential is no longer valid</div>
               </div>
             </div>
-            <span class="px-3 py-1 rounded-full bg-white/20 text-white text-[11px] font-bold uppercase">Demo Revoked State</span>
+            <span class="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase">Demo Revoked State</span>
           </div>
           <div class="p-6 sm:p-8 space-y-4 text-sm">
             <div class="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 space-y-1.5">
-              <div class="text-xs font-bold uppercase tracking-wider">Credential Reference: <span class="font-mono" id="cert-revoked-id">DEMO-ECDL-2026-REVOKED</span></div>
+              <div class="text-xs font-bold uppercase tracking-wider">Credential Reference: <span class="font-sans" id="cert-revoked-id">DEMO-ECDL-2026-REVOKED</span></div>
               <div class="font-semibold" id="cert-revoked-programme">Supply Chain Due Diligence &amp; ESG Governance</div>
               <div class="text-xs"><strong>Effective Date:</strong> <span id="cert-revoked-date">10 November 2026 (Demo)</span></div>
               <p class="text-xs pt-1" id="cert-revoked-reason">
@@ -301,13 +326,13 @@
         </div>
 
         <!-- 5. Unknown Credential State -->
-        <div id="cert-state-unknown" class="hidden bg-white rounded-3xl border-2 border-amber-400 shadow-sm overflow-hidden">
+        <div id="cert-state-unknown" class="hidden bg-white rounded-xl border-2 border-amber-400 shadow-sm overflow-hidden">
           <div class="bg-amber-50 px-6 py-5 border-b border-amber-200 flex items-start gap-3">
             <i data-lucide="help-circle" class="w-6 h-6 text-amber-700 shrink-0 mt-0.5"></i>
             <div>
               <h2 class="font-display text-base font-extrabold text-amber-950">Credential Not Found</h2>
               <p class="text-xs text-amber-900 mt-1">
-                No matching demonstration credential was found for <code class="font-mono font-bold px-1.5 py-0.5 bg-amber-200/60 rounded" id="cert-unknown-code">UNKNOWN</code>.
+                No matching demonstration credential was found for <code class="font-sans font-bold px-1.5 py-0.5 bg-amber-200/60 rounded" id="cert-unknown-code">UNKNOWN</code>.
               </p>
             </div>
           </div>
@@ -324,7 +349,7 @@
       </section>
 
       <!-- Helpful Support Message Card -->
-      <section class="bg-ecdl-dark text-white rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <section class="bg-ecdl-dark text-white rounded-xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div class="space-y-2 max-w-xl">
           <h2 class="font-display text-lg font-extrabold text-white">Need Manual Verification Assistance?</h2>
           <p class="text-xs text-neutral-300 leading-relaxed">
@@ -349,8 +374,8 @@
     </div>
   </main>
 
-  <footer class="bg-ecdl-dark text-white border-t border-white/10 mt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+  <footer class="bg-[#123B30] text-white border-t border-white/10 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
       <p>© 2026 Enroute Center for Development Ltd. (ECDL). Banani, Dhaka-1213.</p>
       <div class="flex flex-wrap items-center gap-5">
         <a href="/terms" class="hover:text-white">Terms</a>

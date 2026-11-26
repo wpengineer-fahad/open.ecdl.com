@@ -313,7 +313,7 @@
         resultsContainer.innerHTML = `
           <div style="text-align: center; padding: var(--space-xl) var(--space-sm); color: var(--color-text-secondary);">
             <div style="font-weight: 700; color: var(--ecdl-color-black); margin-bottom: 4px;">No programs matching "${query}"</div>
-            <div style="font-size: 0.8125rem;">Try searching for "Labour Act", "VAT", "Finance", "Leadership", or contact our advisors for custom corporate delivery.</div>
+            <div style="font-size: var(--font-small);">Try searching for "Labour Act", "VAT", "Finance", "Leadership", or contact our advisors for custom corporate delivery.</div>
           </div>
         `;
         return;

@@ -206,7 +206,7 @@
     const associatedCourses = (window.OpenECDLMockData.getCoursesByTrainer && window.OpenECDLMockData.getCoursesByTrainer(t.slug)) || [];
 
     return `
-      <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between group">
+      <article class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between group">
         <div>
           <!-- Photo & Category Badge Header -->
           <div class="relative overflow-hidden bg-neutral-100">
@@ -214,14 +214,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
             
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 z-10">
-              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-ecdl-green text-white shadow">
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-ecdl-green text-white shadow">
                 ${t.category}
               </span>
-              ${t.featured ? `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-ecdl-yellow text-ecdl-dark shadow">Featured Lead</span>` : ''}
+              ${t.featured ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-ecdl-yellow text-ecdl-dark shadow">Featured Lead</span>` : ''}
             </div>
 
             <div class="absolute bottom-3 left-4 right-4 z-10 text-white">
-              <span class="text-[11px] font-semibold text-neutral-300 block">${t.experience}</span>
+              <span class="text-xs font-semibold text-neutral-300 block">${t.experience}</span>
               <span class="text-xs font-bold text-ecdl-yellow truncate block">${t.industry}</span>
             </div>
           </div>
@@ -233,7 +233,7 @@
                 <a href="${detailUrl}">${t.name}</a>
               </h3>
               <p class="text-xs font-bold text-neutral-500 mt-1 line-clamp-1">${t.title}</p>
-              ${t.organization ? `<p class="text-[11px] text-neutral-400 mt-0.5 italic line-clamp-1">${t.organization}</p>` : ''}
+              ${t.organization ? `<p class="text-xs text-neutral-400 mt-0.5 italic line-clamp-1">${t.organization}</p>` : ''}
             </div>
 
             <!-- Short Biography -->
@@ -243,14 +243,14 @@
 
             <!-- Verified Expertise Badges -->
             <div class="pt-2">
-              <span class="text-[10px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">Core Expertise:</span>
+              <span class="text-xs font-black uppercase tracking-wider text-neutral-400 block mb-1.5">Core Expertise:</span>
               <div class="flex flex-wrap gap-1.5">
                 ${t.expertise.slice(0, 3).map(e => `
-                  <span class="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-700 font-bold text-[11px]">
+                  <span class="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-700 font-bold text-xs">
                     ${e}
                   </span>
                 `).join('')}
-                ${t.expertise.length > 3 ? `<span class="px-2 py-1 rounded-md bg-neutral-50 text-neutral-400 font-bold text-[10px]">+${t.expertise.length - 3} more</span>` : ''}
+                ${t.expertise.length > 3 ? `<span class="px-2 py-1 rounded-md bg-neutral-50 text-neutral-400 font-bold text-xs">+${t.expertise.length - 3} more</span>` : ''}
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@
             </div>
           </div>
           <div class="pb-8 space-y-1">
-            <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-black uppercase tracking-wider bg-neutral-100 text-neutral-700">
+            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-black uppercase tracking-wider bg-neutral-100 text-neutral-700">
               ${item.period}
             </span>
             <h4 class="font-display font-extrabold text-base text-ecdl-dark">${item.role}</h4>
@@ -397,7 +397,7 @@
           <div class="p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm hover:border-ecdl-green transition-all flex flex-col justify-between">
             <div class="space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <span class="px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-ecdl-greenSoft text-ecdl-green">
+                <span class="px-2.5 py-0.5 rounded text-xs font-extrabold uppercase tracking-wider bg-ecdl-greenSoft text-ecdl-green">
                   ${c.category}
                 </span>
                 <span class="text-xs text-neutral-400 font-semibold">${c.deliveryMode}</span>
@@ -466,8 +466,8 @@
             <img src="${other.avatar}" alt="${other.name}" class="w-12 h-12 rounded-xl object-cover shrink-0" />
             <div class="overflow-hidden">
               <h5 class="font-display font-bold text-xs text-ecdl-dark truncate">${other.name}</h5>
-              <p class="text-[11px] text-neutral-500 truncate">${other.title}</p>
-              <span class="text-[10px] font-bold text-ecdl-green">${other.category}</span>
+              <p class="text-xs text-neutral-500 truncate">${other.title}</p>
+              <span class="text-xs font-bold text-ecdl-green">${other.category}</span>
             </div>
           </a>
         `).join('');

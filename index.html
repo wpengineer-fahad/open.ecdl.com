@@ -14,10 +14,10 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" />
   <script src="/assets/js/seo-schema.js" defer></script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,33 +26,53 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
-            },
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
+            }
           },
           boxShadow: {
-            card: '0 8px 30px rgba(17, 17, 17, 0.06)',
-            cardHover: '0 18px 40px rgba(17, 17, 17, 0.12)',
-          },
-        },
-      },
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
+          }
+        }
+      }
     };
   </script>
 
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
 
   <style>
     html, body {
@@ -64,7 +84,7 @@
       background-color: #FFFFFF;
     }
     :focus-visible {
-      outline: 2px solid #108B44;
+      outline: 2px solid #1B4D3E;
       outline-offset: 2px;
     }
     @media (prefers-reduced-motion: reduce) {
@@ -74,8 +94,8 @@
         scroll-behavior: auto !important;
       }
     }
-    h1, h2, h3, h4, .font-display {
-      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
     }
     /* Custom range slider for Corporate Team Size Estimator */
     input[type="range"].ecdl-slider {
@@ -83,7 +103,7 @@
       appearance: none;
       height: 8px;
       border-radius: 9999px;
-      background: #2C2C2C;
+      background: rgba(255, 255, 255, 0.24);
       outline: none;
     }
     input[type="range"].ecdl-slider::-webkit-slider-thumb {
@@ -92,7 +112,7 @@
       width: 24px;
       height: 24px;
       border-radius: 9999px;
-      background: #F4DB0F;
+      background: #C9A227;
       border: 3px solid #111111;
       cursor: pointer;
       box-shadow: 0 2px 10px rgba(244, 219, 15, 0.45);
@@ -105,7 +125,7 @@
       width: 24px;
       height: 24px;
       border-radius: 9999px;
-      background: #F4DB0F;
+      background: #C9A227;
       border: 3px solid #111111;
       cursor: pointer;
     }
@@ -135,7 +155,7 @@
   <div class="bg-ecdl-dark text-white text-xs sm:text-sm border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2.5 flex-wrap">
-        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-extrabold tracking-wide bg-ecdl-yellow text-ecdl-dark uppercase">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-extrabold tracking-wide bg-ecdl-yellow text-black uppercase">
           2026 Updated
         </span>
         <span class="text-neutral-200">
@@ -169,16 +189,16 @@
         <!-- Custom Brand SVG Logo -->
         <a href="#home" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -229,7 +249,7 @@
           <!-- Primary Quick CTA -->
           <a
             href="#courses"
-            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white text-sm font-bold shadow-sm transition-colors"
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-sm font-bold shadow-sm transition-colors"
           >
             <span>Find Courses</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -267,11 +287,8 @@
   <!-- 3. HERO SECTION WITH LIVE KEYWORD SEARCH                  -->
   <!-- ========================================================= -->
   <section id="home" class="relative overflow-hidden"><div id="hero" class="sr-only"></div>
-  <div class="relative overflow-hidden bg-gradient-to-br from-ecdl-greenSoft via-white to-white pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-neutral-100">
+  <div class="relative overflow-hidden bg-white pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-neutral-200">
     <!-- Decorative subtle shapes -->
-    <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-ecdl-green/10 blur-3xl"></div>
-    <div class="pointer-events-none absolute bottom-0 left-0 w-72 h-72 rounded-full bg-ecdl-yellow/20 blur-3xl"></div>
-
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
@@ -284,10 +301,10 @@
             </span>
           </div>
 
-          <h1 class="font-display text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-ecdl-dark leading-[1.12]">
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-4xl font-extrabold tracking-tight text-ecdl-dark leading-[1.12]">
             Over <span class="text-ecdl-green">43,000+</span> Participants.
-            More than <span class="underline decoration-ecdl-yellow decoration-4 underline-offset-4">1,500</span> Trainings.
-            <span class="block mt-1">Learn Anything.</span>
+            More than <span class="underline decoration-[#C9A227] decoration-2 underline-offset-4">1,500</span> Trainings.
+            <span class="block mt-1 text-[#C9A227]">Learn Anything.</span>
           </h1>
 
           <p class="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
@@ -309,7 +326,7 @@
             </div>
             <button
               type="submit"
-              class="px-6 py-3.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-sm transition-colors flex items-center justify-center gap-2 shrink-0"
+              class="px-6 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm sm:text-base shadow-sm transition-colors flex items-center justify-center gap-2 shrink-0"
             >
               <span>Find Courses</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -329,11 +346,11 @@
 
         <!-- Right Column: Featured Spotlight Card -->
         <div class="lg:col-span-5">
-          <div class="bg-ecdl-dark text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-neutral-800 relative overflow-hidden">
+          <div class="bg-ecdl-dark text-white rounded-xl p-6 sm:p-8 shadow-2xl border border-neutral-800 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-40 h-40 bg-ecdl-green/25 rounded-full blur-2xl pointer-events-none"></div>
 
             <div class="flex items-center justify-between gap-3 mb-5 relative z-10">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-ecdl-yellow text-ecdl-dark uppercase">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-ecdl-yellow text-black uppercase">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
                 Flagship 2026 Batch
               </span>
@@ -349,14 +366,14 @@
 
             <div class="grid grid-cols-2 gap-3 mb-6 relative z-10">
               <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-                <span class="block text-[11px] uppercase tracking-wider text-neutral-400">All-Inclusive Fee</span>
+                <span class="block text-xs uppercase tracking-wider text-neutral-400">All-Inclusive Fee</span>
                 <span class="block font-display text-xl font-extrabold text-ecdl-yellow mt-0.5">৳ 5,000</span>
-                <span class="text-[11px] text-emerald-300 font-medium">Incl. 15% VAT · No extra fees</span>
+                <span class="text-xs text-emerald-300 font-medium">Incl. 15% VAT · No extra fees</span>
               </div>
               <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-                <span class="block text-[11px] uppercase tracking-wider text-neutral-400">Corporate Savings</span>
+                <span class="block text-xs uppercase tracking-wider text-neutral-400">Corporate Savings</span>
                 <span class="block font-display text-xl font-extrabold text-white mt-0.5">Up to 20%</span>
-                <span class="text-[11px] text-neutral-300 font-medium">5+ Seats · Mushak-6.3</span>
+                <span class="text-xs text-neutral-300 font-medium">5+ Seats · Mushak-6.3</span>
               </div>
             </div>
 
@@ -364,7 +381,7 @@
               <button
                 type="button"
                 onclick="openEnrollModal('labour-act-2026')"
-                class="flex-1 py-3 px-5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
+                class="flex-1 py-3 px-5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
               >
                 <span>Enroll Now — ৳ 5,000</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -498,7 +515,7 @@
   <!-- ========================================================= -->
   <!-- 6. BROWSE COURSES BY CATEGORY (8 TRACKS)                  -->
   <!-- ========================================================= -->
-  <section id="categories" class="py-16 lg:py-24 bg-neutral-50 border-y border-neutral-200/70">
+  <section id="categories" class="py-16 lg:py-24 bg-[#F7F5F0] border-y border-neutral-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-ecdl-green mb-2">
@@ -526,7 +543,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
         <div>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold uppercase bg-ecdl-orange text-white mb-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold uppercase bg-ecdl-yellow text-black mb-3">
             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
             Live Interactive Sessions
           </span>
@@ -556,7 +573,7 @@
   <!-- ========================================================= -->
   <section id="verify" class="py-16 lg:py-20 bg-ecdl-greenSoft border-y border-ecdl-green/15">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-ecdl-green/20">
+      <div class="bg-white rounded-xl p-6 sm:p-10 shadow-card border border-ecdl-green/20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-6 space-y-4">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-green text-white text-xs font-bold uppercase">
@@ -571,9 +588,9 @@
             </p>
             <div class="flex flex-wrap items-center gap-2 pt-1">
               <span class="text-xs font-bold text-neutral-500">Try sample IDs:</span>
-              <button type="button" onclick="testCertificateId('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2026-8492</button>
-              <button type="button" onclick="testCertificateId('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2026-5104</button>
-              <button type="button" onclick="testCertificateId('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-mono font-bold text-ecdl-dark transition-colors">ECDL-2025-9931</button>
+              <button type="button" onclick="testCertificateId('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-sans font-bold text-ecdl-dark transition-colors">ECDL-2026-8492</button>
+              <button type="button" onclick="testCertificateId('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-sans font-bold text-ecdl-dark transition-colors">ECDL-2026-5104</button>
+              <button type="button" onclick="testCertificateId('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-xs font-sans font-bold text-ecdl-dark transition-colors">ECDL-2025-9931</button>
             </div>
           </div>
 
@@ -583,7 +600,7 @@
                 id="inlineCertInput"
                 type="text"
                 placeholder="Enter Certificate ID (e.g. ECDL-2026-8492)"
-                class="flex-1 px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase"
+                class="flex-1 px-4 py-3 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-sans text-sm uppercase"
               />
               <button
                 type="submit"
@@ -612,7 +629,7 @@
 
         <!-- Left: Team Size & Corporate Savings Estimator -->
         <div class="lg:col-span-6 space-y-6">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-black text-xs font-extrabold uppercase">
             <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
             Corporate &amp; In-House Training
           </span>
@@ -624,12 +641,12 @@
           </p>
 
           <!-- Interactive Slider Panel -->
-          <div class="bg-ecdl-charcoal border border-white/10 rounded-3xl p-6 space-y-6">
+          <div class="bg-ecdl-charcoal border border-white/10 rounded-xl p-6 space-y-6">
             <div class="flex items-center justify-between gap-4">
               <label for="teamSizeSlider" class="text-sm font-bold text-neutral-200">
                 Select Team Size to Train
               </label>
-              <span id="teamSizeBadge" class="px-3.5 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-sm">
+              <span id="teamSizeBadge" class="px-3.5 py-1 rounded-full bg-ecdl-yellow text-black font-display font-extrabold text-sm">
                 20 Employees
               </span>
             </div>
@@ -660,7 +677,7 @@
               </div>
               <div class="rounded-2xl bg-black/40 border border-white/10 p-4">
                 <span class="block text-xs text-neutral-400">Est. VAT-Incl. Savings</span>
-                <span id="teamEstimatedSavings" class="block font-display text-2xl font-extrabold text-emerald-400 mt-1">
+                <span id="teamEstimatedSavings" class="block font-display text-2xl font-extrabold text-[#C9A227] mt-1">
                   ৳ 14,000+
                 </span>
               </div>
@@ -674,7 +691,7 @@
 
         <!-- Right: Corporate Proposal Request Form -->
         <div class="lg:col-span-6">
-          <div class="bg-white text-ecdl-dark rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <div class="bg-white text-ecdl-dark rounded-xl p-6 sm:p-8 shadow-2xl">
             <h3 class="font-display text-2xl font-extrabold text-ecdl-dark">
               Request a Custom Corporate Proposal
             </h3>
@@ -736,7 +753,7 @@
 
               <button
                 type="submit"
-                class="w-full py-3.5 px-6 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-md transition-colors flex items-center justify-center gap-2"
+                class="w-full py-3.5 px-6 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm sm:text-base shadow-md transition-colors flex items-center justify-center gap-2"
               >
                 <span>Get Tailored Corporate Quotation</span>
                 <i data-lucide="send" class="w-4 h-4"></i>
@@ -780,7 +797,7 @@
               Over 18 years leading national FMCG &amp; B2B revenue teams across Bangladesh. Specialist in key-account strategy and target execution.
             </p>
           </div>
-          <button type="button" onclick="quickKeywordSearch('Tarikul Kamrul')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+          <button type="button" onclick="quickKeywordSearch('Tarikul Kamrul')" class="mt-5 text-left text-xs font-bold text-[#1B4D3E] hover:underline inline-flex items-center gap-1">
             <span>View Workshops</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
@@ -798,7 +815,7 @@
               Renowned authority on Bangladesh Labour Act 2006 &amp; recent 2026 amendments, industrial relations, and corporate HR compliance audits.
             </p>
           </div>
-          <button type="button" onclick="quickKeywordSearch('Jafrul Hasan Sharif')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+          <button type="button" onclick="quickKeywordSearch('Jafrul Hasan Sharif')" class="mt-5 text-left text-xs font-bold text-[#1B4D3E] hover:underline inline-flex items-center gap-1">
             <span>View Workshops</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
@@ -807,7 +824,7 @@
         <!-- Facilitator 3 -->
         <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
           <div>
-            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-black font-display font-extrabold text-xl flex items-center justify-center mb-4">
               FCA
             </div>
             <h3 class="font-display text-lg font-extrabold text-ecdl-dark">NBR Enlisted VAT Faculty</h3>
@@ -816,7 +833,7 @@
               Fellow Chartered Accountants &amp; licensed VAT consultants guiding finance teams on Mushak-9.1 filing, VDS compliance, and NBR audits.
             </p>
           </div>
-          <button type="button" onclick="quickKeywordSearch('VAT')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+          <button type="button" onclick="quickKeywordSearch('VAT')" class="mt-5 text-left text-xs font-bold text-[#1B4D3E] hover:underline inline-flex items-center gap-1">
             <span>View Workshops</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
@@ -825,7 +842,7 @@
         <!-- Facilitator 4 -->
         <div class="rounded-2xl border border-neutral-200 p-6 hover:shadow-cardHover transition-all flex flex-col justify-between bg-white">
           <div>
-            <div class="w-16 h-16 rounded-2xl bg-ecdl-orange text-white font-display font-extrabold text-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-black font-display font-extrabold text-xl flex items-center justify-center mb-4">
               PMP
             </div>
             <h3 class="font-display text-lg font-extrabold text-ecdl-dark">PMP® Lead Instructors</h3>
@@ -834,7 +851,7 @@
               Certified Project Management Professionals with multi-million dollar infrastructure, telecom, and IT delivery portfolios.
             </p>
           </div>
-          <button type="button" onclick="quickKeywordSearch('PMP')" class="mt-5 text-left text-xs font-bold text-ecdl-orange hover:underline inline-flex items-center gap-1">
+          <button type="button" onclick="quickKeywordSearch('PMP')" class="mt-5 text-left text-xs font-bold text-[#1B4D3E] hover:underline inline-flex items-center gap-1">
             <span>View Workshops</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
@@ -844,11 +861,11 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- 11. BECOME AN INSTRUCTOR CALLOUT (#108B44 + #F4DB0F CTA)  -->
+  <!-- 11. BECOME AN INSTRUCTOR CALLOUT (#1B4D3E + #C9A227 CTA)  -->
   <!-- ========================================================= -->
   <section id="final-cta" class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl bg-ecdl-green text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+      <div class="rounded-xl bg-ecdl-green text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 shadow-xl relative overflow-hidden">
         <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-ecdl-yellow/15 pointer-events-none"></div>
         <div class="max-w-2xl relative z-10">
           <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-ecdl-yellow text-xs font-extrabold uppercase tracking-wider mb-3">
@@ -865,7 +882,7 @@
           <button
             type="button"
             onclick="openInstructorModal()"
-            class="px-7 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-sm sm:text-base shadow-lg transition-colors inline-flex items-center gap-2"
+            class="px-7 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-black font-extrabold text-sm sm:text-base shadow-lg transition-colors inline-flex items-center gap-2"
           >
             <span>Apply as an Instructor</span>
             <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
@@ -878,20 +895,20 @@
   <!-- ========================================================= -->
   <!-- 12. EXPLORE OUR COMPANY PROFILE (BROCHURE SHOWCASE)       -->
   <!-- ========================================================= -->
-  <section id="company-profile" class="py-16 lg:py-24 bg-neutral-50 border-y border-neutral-200/70">
+  <section id="company-profile" class="py-16 lg:py-24 bg-[#F7F5F0] border-y border-neutral-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left: 3D-Styled Company Profile Cover -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="brochure-card w-full max-w-sm rounded-3xl bg-ecdl-dark text-white p-8 shadow-2xl border-l-8 border-ecdl-green relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-36 h-36 bg-ecdl-orange/25 rounded-full blur-2xl"></div>
+          <div class="brochure-card w-full max-w-sm rounded-xl bg-ecdl-dark text-white p-8 shadow-2xl border-l-8 border-ecdl-green relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-36 h-36 bg-[#C9A227]/20 rounded-full blur-2xl"></div>
             <div class="flex items-center justify-between mb-10 relative z-10">
               <span class="font-display font-extrabold text-xl tracking-tight text-white">ECDL</span>
-              <span class="px-2.5 py-1 rounded-md bg-ecdl-yellow text-ecdl-dark text-[11px] font-extrabold uppercase">2026 Edition</span>
+              <span class="px-2.5 py-1 rounded-md bg-ecdl-yellow text-black text-xs font-extrabold uppercase">2026 Edition</span>
             </div>
             <div class="space-y-3 mb-10 relative z-10">
-              <span class="block text-xs uppercase tracking-widest text-emerald-400 font-bold">Corporate Capability Deck</span>
+              <span class="block text-xs uppercase tracking-widest text-[#C9A227] font-bold">Corporate Capability Deck</span>
               <h3 class="font-display text-3xl font-extrabold leading-tight">
                 Company Profile &amp; Impact Report
               </h3>
@@ -942,7 +959,7 @@
             <button
               type="button"
               onclick="downloadCompanyProfile()"
-              class="px-7 py-3.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm sm:text-base shadow-md transition-colors inline-flex items-center gap-2"
+              class="px-7 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm sm:text-base shadow-md transition-colors inline-flex items-center gap-2"
             >
               <i data-lucide="download" class="w-4 h-4"></i>
               <span>Download Now</span>
@@ -1048,7 +1065,7 @@
   <!-- ========================================================= -->
   <!-- 14. CONTACT & FULL ECDL FOOTER (#111111)                  -->
   <!-- ========================================================= -->
-  <footer id="contact" class="bg-ecdl-dark text-neutral-300 pt-16 pb-10 border-t border-neutral-800">
+  <footer id="contact" class="bg-[#123B30] text-white pt-16 pb-10 border-t border-neutral-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
@@ -1057,31 +1074,31 @@
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div>
-              <span class="block font-display text-xl font-extrabold text-white">ECDL</span>
-              <span class="block text-xs text-neutral-400">Enroute Center for Development Ltd.</span>
+              <span class="block font-sans text-base font-extrabold text-white">ECDL</span>
+              <span class="block text-xs text-white/85">Enroute Center for Development Ltd.</span>
             </div>
           </div>
 
-          <p class="text-sm text-neutral-400 leading-relaxed">
+          <p class="text-sm text-white/85 leading-relaxed">
             Empowering Bangladesh’s professionals and enterprises through practical, accredited training programs since inception.
           </p>
 
           <div class="space-y-2.5 pt-2 text-sm">
-            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="phone" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
               <span>+8801767804408</span>
             </a>
-            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
               <span>training@ecdl.com.bd</span>
             </a>
-            <div class="flex items-start gap-2.5 text-neutral-400">
+            <div class="flex items-start gap-2.5 text-white/85">
               <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
               <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
             </div>
@@ -1090,46 +1107,46 @@
 
         <!-- Company Column -->
         <div class="lg:col-span-2 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Company</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Company</h4>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">About Us</a></li>
-            <li><a href="#courses" class="hover:text-ecdl-yellow transition-colors">Courses</a></li>
-            <li><a href="#webinars" class="hover:text-ecdl-yellow transition-colors">Webinars</a></li>
-            <li><a href="#contact" class="hover:text-ecdl-yellow transition-colors">Contact</a></li>
+            <li><a href="#company-profile" class="hover:text-[#C9A227] transition-colors">About Us</a></li>
+            <li><a href="#courses" class="hover:text-[#C9A227] transition-colors">Courses</a></li>
+            <li><a href="#webinars" class="hover:text-[#C9A227] transition-colors">Webinars</a></li>
+            <li><a href="#contact" class="hover:text-[#C9A227] transition-colors">Contact</a></li>
           </ul>
         </div>
 
         <!-- Links Column -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Links</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Links</h4>
           <ul class="space-y-2.5 text-sm">
-            <li><button type="button" onclick="openInstructorModal()" class="hover:text-ecdl-yellow transition-colors">Become an Instructor</button></li>
-            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
-            <li><button type="button" onclick="showToast('Terms of Use opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Terms of use</button></li>
-            <li><button type="button" onclick="showToast('Privacy Policy opened in reader.', 'info')" class="hover:text-ecdl-yellow transition-colors">Privacy Policy</button></li>
-            <li><button type="button" onclick="showToast('Refund Policy: 100% refundable up to 48 hours prior to batch start.', 'info')" class="hover:text-ecdl-yellow transition-colors">Refund Policy</button></li>
+            <li><button type="button" onclick="openInstructorModal()" class="hover:text-[#C9A227] transition-colors">Become an Instructor</button></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-[#C9A227] transition-colors">Verify Certificate</button></li>
+            <li><button type="button" onclick="showToast('Terms of Use opened in reader.', 'info')" class="hover:text-[#C9A227] transition-colors">Terms of use</button></li>
+            <li><button type="button" onclick="showToast('Privacy Policy opened in reader.', 'info')" class="hover:text-[#C9A227] transition-colors">Privacy Policy</button></li>
+            <li><button type="button" onclick="showToast('Refund Policy: 100% refundable up to 48 hours prior to batch start.', 'info')" class="hover:text-[#C9A227] transition-colors">Refund Policy</button></li>
           </ul>
         </div>
 
         <!-- Recommend / Sister Concerns Column -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Recommend</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Recommend</h4>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="#home" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
-            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
-            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
-            <li><a href="#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+            <li><a href="#home" class="hover:text-[#C9A227] transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="#company-profile" class="hover:text-[#C9A227] transition-colors">Enroute International Ltd</a></li>
+            <li><a href="#company-profile" class="hover:text-[#C9A227] transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="#company-profile" class="hover:text-[#C9A227] transition-colors">Sudoksho</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Bottom Copyright & Socials -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/85">
         <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
         <div class="flex items-center gap-3">
-          <a href="#contact" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
-          <a href="#contact" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
-          <a href="#contact" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+          <a href="#contact" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">Facebook</a>
+          <a href="#contact" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="#contact" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">Youtube</a>
         </div>
       </div>
     </div>
@@ -1169,7 +1186,7 @@
             <button
             type="button"
             id="sylEnrollBtn"
-            class="px-6 py-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors"
+            class="px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors"
           >
             Enroll Now
           </button>
@@ -1184,7 +1201,7 @@
     <div class="animate-modal bg-white rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-neutral-200">
       <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
         <div>
-          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Transparent VAT-Inclusive Checkout</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-yellow">Transparent VAT-Inclusive Checkout</span>
           <h3 id="enrollCourseTitle" class="font-display text-lg font-extrabold leading-snug mt-0.5"></h3>
         </div>
         <button type="button" onclick="closeModal('enrollModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300 shrink-0">
@@ -1229,7 +1246,7 @@
           <div class="pt-2.5 border-t border-ecdl-green/20 flex items-end justify-between">
             <div>
               <span class="block text-xs font-extrabold uppercase text-ecdl-green">Exact Payable Total</span>
-              <span class="text-[11px] text-neutral-600">VAT included — no extra tax added at payment</span>
+              <span class="text-xs text-neutral-600">VAT included — no extra tax added at payment</span>
             </div>
             <span id="calcFinalTotal" class="font-display text-2xl font-extrabold text-ecdl-dark">৳ 3,500</span>
           </div>
@@ -1305,7 +1322,7 @@
         <button
           type="submit"
           id="enrollSubmitBtn"
-          class="w-full py-3.5 px-6 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-extrabold text-sm sm:text-base shadow-md transition-colors"
+          class="w-full py-3.5 px-6 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-sm sm:text-base shadow-md transition-colors"
         >
           Confirm Enrollment — ৳ 3,500
         </button>
@@ -1318,7 +1335,7 @@
     <div class="animate-modal bg-white rounded-3xl max-w-md w-full shadow-2xl border border-neutral-200 overflow-hidden">
       <div class="bg-ecdl-green text-white px-6 py-4 flex items-center justify-between">
         <div>
-          <span class="text-[11px] font-extrabold uppercase text-ecdl-yellow">Free Live Webinar Seat</span>
+          <span class="text-xs font-extrabold uppercase text-ecdl-yellow">Free Live Webinar Seat</span>
           <h3 id="webinarModalTitle" class="font-display text-lg font-extrabold mt-0.5"></h3>
         </div>
         <button type="button" onclick="closeModal('webinarModal')" class="p-2 rounded-xl hover:bg-white/10 text-white">
@@ -1339,7 +1356,7 @@
           <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Phone / WhatsApp *</label>
           <input type="tel" required placeholder="+8801XXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm" />
         </div>
-        <button type="submit" class="w-full py-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-sm transition-colors">
+        <button type="submit" class="w-full py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">
           Reserve Free Seat
         </button>
       </form>
@@ -1360,14 +1377,14 @@
       </div>
       <div class="p-6 space-y-4">
         <form onsubmit="handleModalVerify(event)" class="flex gap-2">
-          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-sans text-sm uppercase" />
           <button type="submit" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">Check</button>
         </form>
         <div class="flex flex-wrap gap-2 text-xs">
           <span class="text-neutral-500 font-semibold py-1">Quick Test:</span>
-          <button type="button" onclick="verifyInModal('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2026-8492</button>
-          <button type="button" onclick="verifyInModal('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2026-5104</button>
-          <button type="button" onclick="verifyInModal('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-mono font-bold">ECDL-2025-9931</button>
+          <button type="button" onclick="verifyInModal('ECDL-2026-8492')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-sans font-bold">ECDL-2026-8492</button>
+          <button type="button" onclick="verifyInModal('ECDL-2026-5104')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-sans font-bold">ECDL-2026-5104</button>
+          <button type="button" onclick="verifyInModal('ECDL-2025-9931')" class="px-2.5 py-1 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow font-sans font-bold">ECDL-2025-9931</button>
         </div>
         <div id="modalCertResult" class="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm">
           Enter a certificate ID above to verify credential authenticity.
@@ -1417,7 +1434,7 @@
           <label class="block text-xs font-bold uppercase text-neutral-600 mb-1">Proposed Workshop Topic &amp; Bio *</label>
           <textarea rows="3" required placeholder="Briefly share your facilitation experience and proposed training topic..." class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none text-sm"></textarea>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-sm transition-colors">
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-black font-extrabold text-sm transition-colors">
           Submit Facilitator Application
         </button>
       </form>
@@ -1448,7 +1465,7 @@
         <p>All public workshop fees are published strictly <strong>VAT-inclusive</strong> for clarity across individual and corporate enrollments, accompanied by compliant Mushak-6.3 invoices.</p>
         <div class="pt-2 flex justify-end gap-2">
           <button type="button" onclick="closeModal('profilePreviewModal')" class="px-4 py-2.5 rounded-xl border border-neutral-300 font-bold text-xs">Close</button>
-          <button type="button" onclick="downloadCompanyProfile()" class="px-5 py-2.5 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-xs">Download Full Profile</button>
+          <button type="button" onclick="downloadCompanyProfile()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs">Download Full Profile</button>
         </div>
       </div>
     </div>
@@ -1736,7 +1753,7 @@
       const colors = {
         success: "bg-ecdl-green text-white border-ecdl-greenDark",
         info: "bg-ecdl-dark text-white border-neutral-700",
-        warning: "bg-ecdl-yellow text-ecdl-dark border-ecdl-yellowHover"
+        warning: "bg-ecdl-yellow text-black border-ecdl-yellowHover"
       };
       const tone = colors[type] || colors.success;
 
@@ -1823,7 +1840,7 @@
             <button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2">
               <i data-lucide="award" class="w-4 h-4"></i> My Certificates
             </button>
-            <button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2">
+            <button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-[#1B4D3E] font-bold flex items-center gap-2">
               <i data-lucide="log-out" class="w-4 h-4"></i> Logout
             </button>
           </div>
@@ -1976,7 +1993,7 @@
 
       if (filtered.length === 0) {
         grid.innerHTML = `
-          <div class="col-span-full rounded-3xl border-2 border-dashed border-neutral-200 bg-neutral-50 p-10 text-center">
+          <div class="col-span-full rounded-xl border-2 border-dashed border-neutral-200 bg-neutral-50 p-10 text-center">
             <p class="font-display text-xl font-extrabold text-ecdl-dark">No courses matched your current filter</p>
             <p class="text-sm text-neutral-600 mt-1.5">Try clearing your search keyword or browse all active VAT-inclusive workshops.</p>
             <button type="button" onclick="resetCourseFilters()" class="mt-5 px-6 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm">
@@ -1988,8 +2005,8 @@
       }
 
       const badgeStyles = {
-        yellow: "bg-ecdl-yellow text-ecdl-dark",
-        orange: "bg-ecdl-orange text-white",
+        yellow: "bg-ecdl-yellow text-black",
+        orange: "bg-ecdl-yellow text-black",
         green: "bg-ecdl-green text-white",
         dark: "bg-ecdl-dark text-white"
       };
@@ -1997,12 +2014,12 @@
       grid.innerHTML = filtered.map(function (c) {
         const badgeCls = badgeStyles[c.badgeTone] || badgeStyles.green;
         return `
-          <article class="group bg-white rounded-3xl border border-neutral-200 hover:border-ecdl-green/50 shadow-card hover:shadow-cardHover transition-all flex flex-col overflow-hidden">
+          <article class="group bg-white rounded-xl border border-neutral-200 hover:border-ecdl-green/50 shadow-card hover:shadow-cardHover transition-all flex flex-col overflow-hidden">
             <!-- Card Visual Header -->
             <div class="relative bg-ecdl-dark p-5 text-white overflow-hidden">
               <div class="absolute -right-8 -bottom-8 w-28 h-28 rounded-full bg-ecdl-green/35 group-hover:scale-125 transition-transform"></div>
               <div class="flex items-center justify-between gap-2 relative z-10 mb-4">
-                <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wide ${badgeCls}">
+                <span class="px-2.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wide ${badgeCls}">
                   ${c.badge}
                 </span>
                 <span class="inline-flex items-center gap-1 text-xs font-bold text-ecdl-yellow">
@@ -2010,7 +2027,7 @@
                   ${c.rating}
                 </span>
               </div>
-              <span class="block text-[11px] font-bold uppercase tracking-wider text-emerald-300 relative z-10">
+              <span class="block text-xs font-bold uppercase tracking-wider text-emerald-300 relative z-10">
                 ${c.category}
               </span>
               <h3 class="font-display text-lg font-extrabold leading-snug mt-1 text-white relative z-10 min-h-[3.2rem]">
@@ -2039,11 +2056,11 @@
                 <div class="flex items-baseline justify-between gap-2">
                   <div>
                     <span class="font-display text-2xl font-extrabold text-ecdl-dark">${formatBDT(c.priceInclVat)}</span>
-                    <span class="ml-1.5 inline-flex items-center px-2 py-0.5 rounded-md bg-ecdl-greenSoft text-ecdl-green text-[11px] font-extrabold">
+                    <span class="ml-1.5 inline-flex items-center px-2 py-0.5 rounded-md bg-ecdl-greenSoft text-ecdl-green text-xs font-extrabold">
                       Incl. VAT
                     </span>
                   </div>
-                  <span class="text-[11px] font-medium text-neutral-500">No extra tax</span>
+                  <span class="text-xs font-medium text-neutral-500">No extra tax</span>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5">
@@ -2057,7 +2074,7 @@
                   <button
                     type="button"
                     onclick="openEnrollModal('${c.id}')"
-                    class="py-2.5 px-3 rounded-xl bg-ecdl-orange hover:bg-ecdl-orangeDark text-white font-bold text-xs sm:text-sm shadow-sm transition-colors"
+                    class="py-2.5 px-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-xs sm:text-sm shadow-sm transition-colors"
                   >
                     Enroll Now
                   </button>
@@ -2089,7 +2106,7 @@
               <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft group-hover:bg-ecdl-green text-ecdl-green group-hover:text-white flex items-center justify-center transition-colors">
                 <i data-lucide="${cat.icon}" class="w-6 h-6"></i>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-neutral-100 group-hover:bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold transition-colors">
+              <span class="px-2.5 py-1 rounded-full bg-neutral-100 group-hover:bg-ecdl-yellow text-black text-xs font-extrabold transition-colors">
                 ${cat.count} Programs
               </span>
             </div>
@@ -2247,10 +2264,10 @@
           : `<button type="button" onclick="openWebinarModal('${w.id}')" class="w-full py-3 rounded-xl bg-ecdl-dark hover:bg-ecdl-green text-white font-bold text-sm transition-colors">Reserve Free Seat</button>`;
 
         return `
-          <div class="rounded-3xl border border-neutral-200 p-6 bg-white shadow-card flex flex-col justify-between gap-5">
+          <div class="rounded-xl border border-neutral-200 p-6 bg-white shadow-card flex flex-col justify-between gap-5">
             <div class="space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <span class="px-2.5 py-1 rounded-full bg-ecdl-orange/10 text-ecdl-orange text-xs font-extrabold uppercase">FREE LIVE</span>
+                <span class="px-2.5 py-1 rounded-full bg-[#F7F5F0] text-[#1B4D3E] text-xs font-extrabold uppercase">FREE LIVE</span>
                 <span class="text-xs font-bold text-neutral-500">${w.seatsLeft} seats left</span>
               </div>
               <h3 class="font-display text-lg font-extrabold text-ecdl-dark leading-snug">${w.title}</h3>
@@ -2300,7 +2317,7 @@
       }
       if (!record) {
         return `
-          <div class="flex items-start gap-3 text-ecdl-orange">
+          <div class="flex items-start gap-3 text-[#1B4D3E]">
             <i data-lucide="alert-circle" class="w-5 h-5 shrink-0 mt-0.5"></i>
             <div>
               <p class="font-bold text-ecdl-dark">No matching record found for "${cleanId}"</p>
@@ -2315,7 +2332,7 @@
             <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-ecdl-green text-white text-xs font-extrabold">
               <i data-lucide="badge-check" class="w-4 h-4 text-ecdl-yellow"></i> VERIFIED CREDENTIAL
             </span>
-            <button type="button" onclick="copyTextSafe('${cleanId}')" class="text-xs font-mono font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
+            <button type="button" onclick="copyTextSafe('${cleanId}')" class="text-xs font-sans font-bold text-ecdl-green hover:underline inline-flex items-center gap-1">
               <span>${cleanId}</span>
               <i data-lucide="copy" class="w-3.5 h-3.5"></i>
             </button>
@@ -2473,7 +2490,7 @@
             <button
               type="button"
               onclick="toggleFAQ(${idx})"
-              class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-ecdl-dark hover:bg-neutral-50 transition-colors"
+              class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-sans font-bold text-sm sm:text-base text-ecdl-dark hover:bg-neutral-50 transition-colors"
             >
               <span>${item.q}</span>
               <i id="faqIcon-${idx}" data-lucide="chevron-down" class="w-5 h-5 text-ecdl-green shrink-0 transition-transform ${isFirst ? "rotate-180" : ""}"></i>

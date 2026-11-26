@@ -7,10 +7,10 @@
   <meta name="description" content="Executive learning interface, curriculum player, lecture notes, and practical statutory workbooks." />
   <link rel="canonical" href="https://open.ecdl.com.bd/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -43,11 +65,11 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/learner.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/learner.css" />
 </head>
 <body class="bg-neutral-900 text-neutral-100 antialiased font-sans flex flex-col h-screen overflow-hidden">
 
@@ -61,7 +83,7 @@
       </a>
 
       <div class="min-w-0">
-        <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold block">Tutor LMS Pro Interactive Player</span>
+        <span class="text-xs uppercase tracking-wider text-[#C9A227] font-bold block">Tutor LMS Pro Interactive Player</span>
         <h1 class="font-display font-bold text-sm sm:text-base text-white truncate max-w-md sm:max-w-xl">
           Bangladesh Labour Act 2006 and Its Amendment up to 2026
         </h1>
@@ -74,7 +96,7 @@
         <div class="flex items-center gap-2 text-xs font-bold text-neutral-300">
           <span id="player-progress-ratio">7 of 12 Lessons</span>
           <span>•</span>
-          <span id="player-progress-percent" class="text-emerald-400">65% Complete</span>
+          <span id="player-progress-percent" class="text-[#C9A227]">65% Complete</span>
         </div>
         <div class="w-44 h-2 bg-neutral-800 rounded-full overflow-hidden mt-1">
           <div class="h-full bg-ecdl-green rounded-full transition-all duration-300" id="player-progress-bar" style="width: 65%;"></div>
@@ -118,7 +140,7 @@
       <div class="p-6 bg-neutral-900 border-b border-neutral-800">
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-950 text-emerald-400 border border-emerald-800 mb-1" id="player-module-badge">
+            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-emerald-950 text-[#C9A227] border border-emerald-800 mb-1" id="player-module-badge">
               Module 03: Domestic Inquiries &amp; Disciplinary Proceedings
             </span>
             <h2 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight" id="player-lesson-title">
@@ -176,10 +198,10 @@
         <div id="tab-pane-resources" class="player-tab-pane text-xs space-y-3 max-w-2xl" style="display:none;">
           <div class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-950 border border-neutral-800">
             <div class="flex items-center gap-3">
-              <i data-lucide="file-text" class="w-5 h-5 text-emerald-400"></i>
+              <i data-lucide="file-text" class="w-5 h-5 text-[#C9A227]"></i>
               <div>
                 <div class="font-bold text-white">ECDL_Model_Charge_Sheet_Format_Sec24.pdf</div>
-                <div class="text-[11px] text-neutral-500">245 KB • Supreme Court Approved Template</div>
+                <div class="text-xs text-neutral-500">245 KB • Supreme Court Approved Template</div>
               </div>
             </div>
             <button type="button" onclick="alert('Downloading sample template: ECDL_Model_Charge_Sheet_Format_Sec24.pdf')" class="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs flex items-center gap-1">
@@ -190,10 +212,10 @@
 
           <div class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-950 border border-neutral-800">
             <div class="flex items-center gap-3">
-              <i data-lucide="file-spreadsheet" class="w-5 h-5 text-emerald-400"></i>
+              <i data-lucide="file-spreadsheet" class="w-5 h-5 text-[#C9A227]"></i>
               <div>
                 <div class="font-bold text-white">Domestic_Inquiry_Procedural_Checklist_2026.xlsx</div>
-                <div class="text-[11px] text-neutral-500">110 KB • 60-day Inquiry Statutory Timeline Calculator</div>
+                <div class="text-xs text-neutral-500">110 KB • 60-day Inquiry Statutory Timeline Calculator</div>
               </div>
             </div>
             <button type="button" onclick="alert('Downloading: Domestic_Inquiry_Procedural_Checklist_2026.xlsx')" class="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs flex items-center gap-1">
@@ -208,7 +230,7 @@
           <div class="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-2">
             <div class="flex items-center justify-between text-neutral-400">
               <span class="font-bold text-white">Tanvir Chowdhury, Head of HR</span>
-              <span class="text-[10px]">Asked 2 days ago</span>
+              <span class="text-xs">Asked 2 days ago</span>
             </div>
             <p class="text-neutral-300">
               Can the 7-day reply period be shortened if both management and the CBA agree in writing?
@@ -228,7 +250,7 @@
           <span>Previous: 3.1 Misconduct Categories</span>
         </button>
 
-        <a href="/learner/assessments" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 font-bold hover:bg-emerald-900">
+        <a href="/learner/assessments" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950 text-[#C9A227] border border-emerald-800 font-bold hover:bg-emerald-900">
           <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
           <span>Take Module 03 Quiz</span>
         </a>
@@ -245,7 +267,7 @@
     <aside class="ecdl-lms-curriculum-pane" aria-label="Course Curriculum">
       <div class="p-4 bg-neutral-950 border-b border-neutral-800 flex items-center justify-between">
         <div class="font-bold text-xs text-white uppercase tracking-wider">Course Curriculum</div>
-        <span class="text-[11px] text-neutral-400">4 Modules • 12 Lessons</span>
+        <span class="text-xs text-neutral-400">4 Modules • 12 Lessons</span>
       </div>
 
       <div id="player-curriculum-list" class="flex-1 overflow-y-auto">
@@ -256,8 +278,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/learner.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/learner.js"></script>
   <script>
     if (window.lucide) {
       window.lucide.createIcons();

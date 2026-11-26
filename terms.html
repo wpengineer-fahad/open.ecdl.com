@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -17,20 +17,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -58,7 +81,7 @@
   <div class="ecdl-utility-topbar bg-ecdl-dark text-white text-xs py-2 border-b border-white/10 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400 text-ecdl-dark uppercase">Legal Draft</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-400 text-ecdl-dark uppercase">Legal Draft</span>
         <span class="text-neutral-300 hidden sm:inline">Enroute Center for Development Ltd. (ECDL) • Governance &amp; Policy Documentation</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -80,14 +103,14 @@
       <div class="flex items-center justify-between h-20 gap-4">
         <a href="/" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
-            <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">ECDL</span>
-            <span class="block text-[11px] font-medium text-neutral-500">Enroute Center for Development</span>
+            <span class="block font-sans text-base font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">ECDL</span>
+            <span class="block text-xs font-medium text-neutral-500">Enroute Center for Development</span>
           </div>
         </a>
 
@@ -215,7 +238,7 @@
         <article class="lg:col-span-8 ecdl-legal-prose">
 
           <section id="sec-scope">
-            <h2><span class="text-ecdl-green font-mono text-base">01</span> Scope &amp; Applicability</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">01</span> Scope &amp; Applicability</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> This section defines the scope of access to the Open ECDL web platform, online learning management interfaces, corporate client portals, and in-person executive workshops operated by Enroute Center for Development Ltd. (ECDL).
             </p>
@@ -225,7 +248,7 @@
           </section>
 
           <section id="sec-enrollment">
-            <h2><span class="text-ecdl-green font-mono text-base">02</span> Enrolment &amp; Cohort Eligibility</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">02</span> Enrolment &amp; Cohort Eligibility</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> This clause outlines how open-enrollment seat reservations, corporate group nominations, and waitlist allocations are confirmed.
             </p>
@@ -237,7 +260,7 @@
           </section>
 
           <section id="sec-fees">
-            <h2><span class="text-ecdl-green font-mono text-base">03</span> Fees, Taxes &amp; Payment Terms</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">03</span> Fees, Taxes &amp; Payment Terms</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> Programme fees on Open ECDL are denominated in Bangladeshi Taka (BDT). Applicable statutory VAT and Mushak Form 6.3 tax documentation rules will be formalized in the approved commercial terms.
             </p>
@@ -247,7 +270,7 @@
           </section>
 
           <section id="sec-conduct">
-            <h2><span class="text-ecdl-green font-mono text-base">04</span> Learner Conduct &amp; Portal Access</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">04</span> Learner Conduct &amp; Portal Access</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> Authorised account credentials for the Learner Portal and Corporate Client Portal are strictly assigned to named individuals or authorised corporate representatives.
             </p>
@@ -257,7 +280,7 @@
           </section>
 
           <section id="sec-ip">
-            <h2><span class="text-ecdl-green font-mono text-base">05</span> Courseware &amp; Intellectual Property</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">05</span> Courseware &amp; Intellectual Property</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> All curriculum frameworks, slide decks, statutory case studies, assessment instruments, and recorded video sessions remain the intellectual property of ECDL or its respective faculty authors and licensing partners.
             </p>
@@ -267,7 +290,7 @@
           </section>
 
           <section id="sec-certificates">
-            <h2><span class="text-ecdl-green font-mono text-base">06</span> Assessments &amp; Certification</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">06</span> Assessments &amp; Certification</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> Issuance of completion certificates is subject to satisfying programme-specific attendance, participation, and evaluation requirements established for each cohort.
             </p>
@@ -277,7 +300,7 @@
           </section>
 
           <section id="sec-liability">
-            <h2><span class="text-ecdl-green font-mono text-base">07</span> Limitation &amp; Governing Law (Draft)</h2>
+            <h2><span class="text-ecdl-green font-sans text-base">07</span> Limitation &amp; Governing Law (Draft)</h2>
             <p>
               <strong>[Draft Pending Legal Review]</strong> This placeholder covers educational disclaimers (for example, clarifying that compliance workshops provide professional guidance rather than formal client-specific legal representation), force majeure events, and applicable dispute resolution jurisdiction in Dhaka, Bangladesh.
             </p>
@@ -289,18 +312,18 @@
   </main>
 
   <!-- Global Footer -->
-  <footer class="bg-ecdl-dark text-white border-t border-white/10 no-print">
+  <footer class="bg-[#123B30] text-white border-t border-white/10 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
         <div class="space-y-3">
           <div class="font-display text-lg font-extrabold text-white">ECDL</div>
-          <p class="text-neutral-400 leading-relaxed">
+          <p class="text-white/85 leading-relaxed">
             Enroute Center for Development Ltd. — Executive Education &amp; Corporate Capability Building, Banani, Dhaka.
           </p>
         </div>
         <div class="space-y-2">
           <h4 class="font-bold text-white uppercase tracking-wider">Legal Drafts</h4>
-          <ul class="space-y-1.5 text-neutral-400">
+          <ul class="space-y-1.5 text-white/85">
             <li><a href="/terms" class="text-ecdl-green font-bold">Terms &amp; Conditions</a></li>
             <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
             <li><a href="/refund" class="hover:text-white">Refund Policy</a></li>
@@ -309,7 +332,7 @@
         </div>
         <div class="space-y-2">
           <h4 class="font-bold text-white uppercase tracking-wider">Verification &amp; Support</h4>
-          <ul class="space-y-1.5 text-neutral-400">
+          <ul class="space-y-1.5 text-white/85">
             <li><a href="/certificate-verification" class="hover:text-white">Verify Certificate</a></li>
             <li><a href="/faq" class="hover:text-white">Frequently Asked Questions</a></li>
             <li><a href="/utility-states" class="hover:text-white">System Utility States</a></li>
@@ -318,7 +341,7 @@
         </div>
         <div class="space-y-2">
           <h4 class="font-bold text-white uppercase tracking-wider">Platform</h4>
-          <ul class="space-y-1.5 text-neutral-400">
+          <ul class="space-y-1.5 text-white/85">
             <li><a href="/courses" class="hover:text-white">Course Catalogue</a></li>
             <li><a href="/corporate-training" class="hover:text-white">Corporate Training</a></li>
             <li><a href="/login" class="hover:text-white">Portal Login</a></li>

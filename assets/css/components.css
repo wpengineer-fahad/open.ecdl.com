@@ -18,8 +18,8 @@
   gap: var(--space-xs);
   min-height: var(--min-touch-target); /* 44px WCAG touch target */
   padding: 0 var(--space-md);
-  font-family: var(--font-family-heading);
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-semibold);
   line-height: 1;
   text-decoration: none;
@@ -60,8 +60,8 @@
 /* Secondary Button (Refined Editorial Outline) */
 .ecdl-btn--secondary {
   background-color: transparent;
-  color: var(--ecdl-color-black);
-  border-color: var(--ecdl-color-borders);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .ecdl-btn--secondary:hover {
@@ -79,7 +79,7 @@
 /* Accent Orange Button (Selective Promotional / Registration Urgency) */
 .ecdl-btn--orange {
   background-color: var(--ecdl-color-orange);
-  color: var(--ecdl-color-white);
+  color: var(--color-black);
   border-color: var(--ecdl-color-orange);
 }
 
@@ -131,13 +131,13 @@
 .ecdl-btn--sm {
   min-height: 36px;
   padding: 0 var(--space-sm);
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
 }
 
 .ecdl-btn--lg {
   min-height: 52px;
   padding: 0 var(--space-xl);
-  font-size: 1.0625rem;
+  font-size: var(--font-body-size);
   letter-spacing: -0.01em;
 }
 
@@ -204,9 +204,9 @@
   align-items: center;
   justify-content: center;
   color: var(--ecdl-color-white);
-  font-family: var(--font-family-heading);
+  font-family: var(--font-body);
   font-weight: var(--font-weight-extrabold);
-  font-size: 1.125rem;
+  font-size: var(--font-body-size);
   letter-spacing: -0.02em;
 }
 
@@ -216,17 +216,17 @@
 }
 
 .ecdl-brand__title {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-body);
   font-weight: var(--font-weight-extrabold);
-  font-size: 1.1875rem;
+  font-size: var(--font-body-size);
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--ecdl-color-black);
 }
 
 .ecdl-brand__tagline {
-  font-family: var(--font-family-body);
-  font-size: 0.6875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -249,8 +249,8 @@
 }
 
 .ecdl-nav__link {
-  font-family: var(--font-family-heading);
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-medium);
   color: var(--ecdl-neutral-700);
   text-decoration: none;
@@ -336,7 +336,7 @@
 }
 
 .ecdl-footer__desc {
-  font-size: 0.875rem;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--color-text-on-dark-muted);
   margin-bottom: var(--space-md);
@@ -344,16 +344,16 @@
 
 .ecdl-footer__address {
   font-style: normal;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   line-height: 1.6;
   color: var(--color-text-on-dark-muted);
 }
 
 .ecdl-footer__heading {
-  font-family: var(--font-family-heading);
-  font-size: 0.9375rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
-  color: var(--ecdl-color-white);
+  color: var(--color-accent);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
@@ -371,7 +371,7 @@
 .ecdl-footer__nav-link {
   color: var(--color-text-on-dark-muted);
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   transition: color var(--transition-fast);
 }
 
@@ -385,7 +385,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-on-dark-muted);
 }
 
@@ -448,8 +448,8 @@
 }
 
 .ecdl-stat__numeral {
-  font-family: var(--font-family-heading);
-  font-size: clamp(2.25rem, 1.8rem + 1.5vw, 3.25rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-extrabold);
   line-height: 1;
   color: var(--ecdl-color-black);
@@ -457,23 +457,23 @@
 }
 
 .ecdl-stat__unit {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-green);
   text-transform: uppercase;
 }
 
 .ecdl-stat__label {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-2xs);
 }
 
 .ecdl-stat__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
@@ -525,7 +525,7 @@
 }
 
 .ecdl-card-category__count {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-secondary);
   background-color: var(--ecdl-color-surface);
@@ -537,8 +537,8 @@
 }
 
 .ecdl-card-category__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.1875rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
@@ -546,7 +546,7 @@
 }
 
 .ecdl-card-category__desc {
-  font-size: 0.875rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-md);
@@ -554,8 +554,8 @@
 }
 
 .ecdl-card-category__link-text {
-  font-family: var(--font-family-heading);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-green);
   display: inline-flex;
@@ -593,8 +593,8 @@
   padding-left: 42px;
   padding-right: 48px;
   min-height: 48px;
-  font-family: var(--font-family-body);
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-white);
   border: 1px solid var(--ecdl-color-borders);
@@ -611,8 +611,8 @@
 .ecdl-search-field__kbd {
   position: absolute;
   right: 12px;
-  font-family: var(--font-family-mono);
-  font-size: 0.6875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   color: var(--ecdl-neutral-500);
   background-color: var(--ecdl-color-surface);
   border: 1px solid var(--ecdl-color-borders);
@@ -640,8 +640,8 @@
 }
 
 .ecdl-filter-panel__title {
-  font-family: var(--font-family-heading);
-  font-size: 0.9375rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin: 0;
@@ -651,7 +651,7 @@
   background: none;
   border: none;
   color: var(--ecdl-color-green);
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
   padding: 0;
@@ -664,8 +664,8 @@
 }
 
 .ecdl-filter-group__legend {
-  font-family: var(--font-family-heading);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-neutral-700);
   text-transform: uppercase;
@@ -683,8 +683,8 @@
   gap: 6px;
   padding: 4px 10px;
   border-radius: var(--radius-xs);
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -737,8 +737,8 @@
 }
 
 .ecdl-portal-sidebar__title {
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -760,7 +760,7 @@
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-medium);
   color: var(--ecdl-neutral-700);
   text-decoration: none;
@@ -794,8 +794,8 @@
 }
 
 .ecdl-portal-topbar__title {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin: 0;
@@ -822,13 +822,13 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.875rem;
+  font-size: var(--font-body-size);
 }
 
 .ecdl-table th {
   background-color: var(--ecdl-color-surface);
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -903,8 +903,8 @@
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
   letter-spacing: 0.04em;
@@ -957,7 +957,7 @@
   display: inline-flex;
   align-items: center;
   padding: 6px 14px;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-medium);
   border-radius: var(--radius-pill);
   border: 1px solid var(--ecdl-color-borders);
@@ -1043,7 +1043,7 @@
   align-items: center;
   gap: var(--space-xs);
   margin-bottom: var(--space-xs);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -1052,12 +1052,12 @@
   color: var(--ecdl-color-green);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
 }
 
 .ecdl-card-course__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.1875rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   line-height: 1.35;
   color: var(--ecdl-color-black);
@@ -1081,7 +1081,7 @@
 }
 
 .ecdl-card-course__summary {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-md);
@@ -1100,7 +1100,7 @@
   border-top: 1px solid var(--ecdl-color-borders);
   border-bottom: 1px solid var(--ecdl-color-borders);
   margin-bottom: var(--space-md);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -1130,15 +1130,15 @@
 }
 
 .ecdl-card-course__price-label {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   text-transform: uppercase;
   color: var(--color-text-secondary);
   letter-spacing: 0.05em;
 }
 
 .ecdl-card-course__price {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
 }
@@ -1188,7 +1188,7 @@
   background-color: var(--ecdl-color-black);
   color: var(--ecdl-color-white);
   padding: 4px 8px;
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   border-radius: var(--radius-xs);
   display: flex;
@@ -1204,22 +1204,22 @@
 }
 
 .ecdl-card-trainer__name {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin-bottom: 2px;
 }
 
 .ecdl-card-trainer__title {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: var(--font-weight-medium);
   color: var(--ecdl-color-green);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-card-trainer__bio {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-sm);
@@ -1234,7 +1234,7 @@
 }
 
 .ecdl-card-trainer__tag {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   padding: 2px 8px;
   background-color: var(--ecdl-color-surface);
   border: 1px solid var(--ecdl-color-borders);
@@ -1284,8 +1284,8 @@
 }
 
 .ecdl-card-event__date-month {
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   color: var(--ecdl-color-green);
@@ -1293,8 +1293,8 @@
 }
 
 .ecdl-card-event__date-day {
-  font-family: var(--font-family-heading);
-  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-extrabold);
   line-height: 1.1;
   color: var(--ecdl-color-black);
@@ -1308,21 +1308,21 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   margin-bottom: 4px;
 }
 
 .ecdl-card-event__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin-bottom: 4px;
 }
 
 .ecdl-card-event__venue {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -1352,8 +1352,8 @@
   background: none;
   border: none;
   text-align: left;
-  font-family: var(--font-family-heading);
-  font-size: 1.0625rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   cursor: pointer;
@@ -1385,7 +1385,7 @@
 .ecdl-accordion__content {
   display: none;
   padding-bottom: var(--space-md);
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
@@ -1406,7 +1406,7 @@
   list-style: none;
   padding: 0;
   margin: 0 0 var(--space-md) 0;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -1448,8 +1448,8 @@
 }
 
 .ecdl-label {
-  font-family: var(--font-family-heading);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-semibold);
   color: var(--ecdl-neutral-800);
   display: flex;
@@ -1466,8 +1466,8 @@
 .ecdl-select,
 .ecdl-textarea {
   width: 100%;
-  font-family: var(--font-family-body);
-  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-white);
   border: 1px solid var(--ecdl-color-borders);
@@ -1506,12 +1506,12 @@
 }
 
 .ecdl-form-help {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
 .ecdl-form-error {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-status-error);
   display: flex;
   align-items: center;
@@ -1530,7 +1530,7 @@
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--ecdl-neutral-700);
   user-select: none;
 }
@@ -1599,15 +1599,15 @@
 }
 
 .ecdl-empty-state__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-empty-state__desc {
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-lg);
@@ -1698,8 +1698,8 @@
   border-radius: var(--radius-sm);
   background-color: var(--ecdl-color-white);
   color: var(--ecdl-neutral-800);
-  font-family: var(--font-family-heading);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -1773,8 +1773,8 @@
 }
 
 .ecdl-modal__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: var(--font-weight-bold);
   color: var(--ecdl-color-black);
   margin: 0;
@@ -1798,7 +1798,7 @@
 
 .ecdl-modal__body {
   padding: var(--space-lg);
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--ecdl-neutral-700);
 }
@@ -1837,7 +1837,7 @@
   color: var(--ecdl-color-white);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.45;
   border-left: 4px solid var(--ecdl-color-green);
   transform: translateX(100%);
@@ -1871,7 +1871,7 @@
 
 .ecdl-toast__title {
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-heading);
+  font-family: var(--font-body);
   margin-bottom: 2px;
 }
 

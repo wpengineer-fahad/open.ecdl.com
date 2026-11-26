@@ -879,14 +879,14 @@
 
     const isFree = course.priceType === 'free';
     const isCorp = course.priceType === 'corporate';
-    const priceText = isFree ? 'Free' : (isCorp ? 'Request Information' : `${course.price} <span style="font-size:0.75rem; color:var(--color-text-secondary);">${course.priceVat}</span>`);
+    const priceText = isFree ? 'Free' : (isCorp ? 'Request Information' : `${course.price} <span style="font-size: var(--font-small); color:var(--color-text-secondary);">${course.priceVat}</span>`);
 
     modal.innerHTML = `
       <div class="ecdl-modal" style="max-width: 680px;">
         <div class="ecdl-modal__header">
           <div>
             <span class="ecdl-badge ecdl-badge--green" style="margin-bottom: 4px;">${course.category}</span>
-            <h3 class="ecdl-modal__title" style="font-size: 1.25rem;">${course.title}</h3>
+            <h3 class="ecdl-modal__title" style="font-size: var(--font-heading-size);">${course.title}</h3>
           </div>
           <button type="button" class="ecdl-modal__close" aria-label="Close dialog">✕</button>
         </div>
@@ -894,38 +894,38 @@
         <div class="ecdl-modal__body">
           <div style="display: flex; gap: var(--space-md); margin-bottom: var(--space-md); flex-wrap: wrap;">
             <div style="flex: 1 1 200px;">
-              <span style="font-size: 0.75rem; color: var(--color-text-secondary); text-transform: uppercase;">Delivery Format</span>
+              <span style="font-size: var(--font-small); color: var(--color-text-secondary); text-transform: uppercase;">Delivery Format</span>
               <div style="font-weight: 700; color: var(--ecdl-color-black);">${course.deliveryMode}</div>
             </div>
             <div style="flex: 1 1 140px;">
-              <span style="font-size: 0.75rem; color: var(--color-text-secondary); text-transform: uppercase;">Duration</span>
+              <span style="font-size: var(--font-small); color: var(--color-text-secondary); text-transform: uppercase;">Duration</span>
               <div style="font-weight: 700; color: var(--ecdl-color-black);">${course.duration}</div>
             </div>
             <div style="flex: 1 1 140px;">
-              <span style="font-size: 0.75rem; color: var(--color-text-secondary); text-transform: uppercase;">Next Available Date</span>
+              <span style="font-size: var(--font-small); color: var(--color-text-secondary); text-transform: uppercase;">Next Available Date</span>
               <div style="font-weight: 700; color: var(--ecdl-color-green);">${course.nextDate}</div>
             </div>
           </div>
 
-          <p style="font-size: 0.9375rem; line-height: 1.6; color: var(--color-text-primary); margin-bottom: var(--space-md);">
+          <p style="font-size: var(--font-body-size); line-height: 1.6; color: var(--color-text-primary); margin-bottom: var(--space-md);">
             ${course.summary}
           </p>
 
           <div style="background-color: var(--ecdl-color-surface); padding: var(--space-md); border-radius: var(--radius-sm); border: 1px solid var(--ecdl-color-borders); margin-bottom: var(--space-md);">
-            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 6px;">Lead Facilitator</div>
+            <div style="font-size: var(--font-small); font-weight: 700; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 6px;">Lead Facilitator</div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <img src="${course.trainer.avatar}" alt="${course.trainer.name}" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
               <div>
                 <strong style="color: var(--ecdl-color-black); display: block;">${course.trainer.name}</strong>
-                <span style="font-size: 0.8125rem; color: var(--color-text-secondary);">${course.trainer.title}</span>
+                <span style="font-size: var(--font-small); color: var(--color-text-secondary);">${course.trainer.title}</span>
               </div>
             </div>
           </div>
 
           <div style="display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-sm); border-top: 1px solid var(--ecdl-color-borders);">
             <div>
-              <span style="font-size: 0.75rem; color: var(--color-text-secondary); display: block;">Investment</span>
-              <span style="font-size: 1.375rem; font-weight: 800; color: var(--ecdl-color-black);">${priceText}</span>
+              <span style="font-size: var(--font-small); color: var(--color-text-secondary); display: block;">Investment</span>
+              <span style="font-size: var(--font-heading-size); font-weight: 800; color: var(--ecdl-color-black);">${priceText}</span>
             </div>
             <div style="display: flex; gap: 8px;">
               <button type="button" class="ecdl-btn ecdl-btn--secondary" data-ecdl-modal-target="modal-corporate-enquiry" onclick="document.getElementById('modal-course-quick-view').classList.remove('is-open');">Corporate Inquiry</button>

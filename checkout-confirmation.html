@@ -7,10 +7,10 @@
   <meta name="description" content="Official enrollment confirmation and Mushak 6.3 VAT invoice receipt for Enroute Center for Development Ltd. (ECDL)." />
   <link rel="canonical" href="https://open.ecdl.com.bd/checkout/confirmation" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -58,7 +80,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">BOOKING CONFIRMED</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">BOOKING CONFIRMED</span>
         <span class="text-neutral-300 hidden sm:inline">Enroute Center for Development Ltd. • Formal Registration Record</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -81,16 +103,16 @@
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -138,7 +160,7 @@
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 shadow-sm text-xs text-neutral-700">
           <span class="text-neutral-400">Order Reference:</span>
-          <strong id="conf-order-id" class="font-mono text-neutral-900 font-bold">ECDL-ORD-2026-1042</strong>
+          <strong id="conf-order-id" class="font-sans text-neutral-900 font-bold">ECDL-ORD-2026-1042</strong>
         </div>
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 shadow-sm text-xs text-neutral-700">
           <span class="text-neutral-400">Order Date:</span>
@@ -175,19 +197,19 @@
         <div class="flex flex-wrap items-start justify-between gap-6 pb-6 border-b border-neutral-200">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span class="font-display font-black text-xl text-neutral-900 tracking-tight">ENROUTE CENTER FOR DEVELOPMENT LTD.</span>
+              <span class="font-sans font-black text-xl text-neutral-900 tracking-tight">ENROUTE CENTER FOR DEVELOPMENT LTD.</span>
             </div>
             <p class="text-xs text-neutral-500">
               House 25, Road 04, Block F, Banani, Dhaka-1213, Bangladesh<br>
               Phone: +880 1767-804408 • Email: billing@ecdl.com.bd
             </p>
-            <div class="text-[11px] font-mono text-neutral-600 pt-1">
+            <div class="text-xs font-sans text-neutral-600 pt-1">
               BIN: 002391048-0101 • TIN: 481920412849
             </div>
           </div>
 
           <div class="text-right sm:text-right">
-            <span class="inline-block px-3 py-1 rounded bg-neutral-900 text-white font-mono text-xs font-bold uppercase tracking-wider mb-2">
+            <span class="inline-block px-3 py-1 rounded bg-neutral-900 text-white font-sans text-xs font-bold uppercase tracking-wider mb-2">
               Tax Invoice (Mushak 6.3)
             </span>
             <div class="text-xs text-neutral-500">National Board of Revenue Compliant</div>
@@ -197,7 +219,7 @@
         <!-- Customer & Billing Information -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 border-b border-neutral-200 text-xs">
           <div>
-            <span class="text-neutral-400 block text-[11px] uppercase tracking-wider font-bold mb-1">Invoiced Participant / Organization:</span>
+            <span class="text-neutral-400 block text-xs uppercase tracking-wider font-bold mb-1">Invoiced Participant / Organization:</span>
             <div id="conf-customer-info" class="space-y-0.5 text-neutral-800">
               <div class="font-bold text-neutral-900">Naveed Karim</div>
               <div>Commercial Sales Director • Unilever Bangladesh Ltd.</div>
@@ -206,7 +228,7 @@
           </div>
 
           <div>
-            <span class="text-neutral-400 block text-[11px] uppercase tracking-wider font-bold mb-1">Invoice Particulars:</span>
+            <span class="text-neutral-400 block text-xs uppercase tracking-wider font-bold mb-1">Invoice Particulars:</span>
             <div class="space-y-1 text-neutral-700">
               <div><strong>Payment Mode:</strong> Verified Gateway Transaction</div>
               <div><strong>Statutory Tax Rate:</strong> 15% VAT Included</div>
@@ -257,7 +279,7 @@
         </div>
 
         <!-- Sign-off Footer -->
-        <div class="pt-6 flex flex-wrap items-center justify-between text-[11px] text-neutral-500 gap-4">
+        <div class="pt-6 flex flex-wrap items-center justify-between text-xs text-neutral-500 gap-4">
           <div>
             Computer-generated official receipt. Valid without physical signature when issued digitally.
           </div>
@@ -280,7 +302,7 @@
           <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
             <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs mb-3">1</div>
             <h4 class="font-bold text-xs text-neutral-900 mb-1">LMS Portal Activation</h4>
-            <p class="text-[11px] text-neutral-500 leading-relaxed">
+            <p class="text-xs text-neutral-500 leading-relaxed">
               Your Sudoksho / Open ECDL platform credentials will arrive via email within 2 business hours.
             </p>
           </div>
@@ -288,7 +310,7 @@
           <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
             <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs mb-3">2</div>
             <h4 class="font-bold text-xs text-neutral-900 mb-1">Calendar &amp; Zoom Link</h4>
-            <p class="text-[11px] text-neutral-500 leading-relaxed">
+            <p class="text-xs text-neutral-500 leading-relaxed">
               Cohort timetable and calendar sync invites have been prepared for Microsoft Outlook and Google Calendar.
             </p>
           </div>
@@ -296,7 +318,7 @@
           <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
             <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs mb-3">3</div>
             <h4 class="font-bold text-xs text-neutral-900 mb-1">Preparatory Case Material</h4>
-            <p class="text-[11px] text-neutral-500 leading-relaxed">
+            <p class="text-xs text-neutral-500 leading-relaxed">
               Faculty workbooks, gazette notifications, and briefing notes will unlock 3 days prior to batch launch.
             </p>
           </div>
@@ -321,9 +343,9 @@
   <!-- ========================================================= -->
   <!-- 5. FOOTER                                                 -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white pt-8 pb-8 border-t border-white/10 mt-auto no-print">
+  <footer class="bg-[#123B30] text-white pt-8 pb-8 border-t border-white/10 mt-auto no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
         <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="courses.html" class="hover:text-white transition-colors">Courses</a>

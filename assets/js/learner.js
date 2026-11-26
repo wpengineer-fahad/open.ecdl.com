@@ -132,7 +132,7 @@
         <div class="p-3.5 bg-neutral-50 rounded-xl border border-neutral-200 text-xs">
           <div class="flex items-center justify-between font-bold text-neutral-900 mb-1">
             <span>${c.title}</span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono">Live Hybrid</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-sans">Live Hybrid</span>
           </div>
           <div class="text-neutral-500 flex items-center gap-1.5 mb-2">
             <i data-lucide="calendar" class="w-3.5 h-3.5 text-neutral-400"></i>
@@ -157,7 +157,7 @@
         <div class="p-3 rounded-xl border border-neutral-200 bg-white hover:border-ecdl-green transition-all flex items-center justify-between gap-3 text-xs">
           <div>
             <div class="font-bold text-neutral-900 line-clamp-1">${rc.title}</div>
-            <div class="text-[11px] text-neutral-500">${rc.category} • ${rc.duration}</div>
+            <div class="text-xs text-neutral-500">${rc.category} • ${rc.duration}</div>
           </div>
           <a href="/courses/${rc.slug}" class="px-3 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-bold shrink-0">
             View
@@ -235,7 +235,7 @@
           <article class="ecdl-learner-card">
             <div class="relative">
               <img src="${c.thumbnail}" alt="${c.title}" class="ecdl-learner-card-img">
-              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                 isCompleted ? 'bg-emerald-600 text-white' : 
                 isProgress ? 'bg-ecdl-dark text-white' : 
                 isUpcoming ? 'bg-blue-600 text-white' : 'bg-neutral-800 text-white'
@@ -245,7 +245,7 @@
             </div>
 
             <div class="ecdl-learner-card-body">
-              <span class="text-[11px] font-bold text-ecdl-green uppercase tracking-wider mb-1">${c.category}</span>
+              <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider mb-1">${c.category}</span>
               <h3 class="font-display font-bold text-base text-neutral-900 leading-snug mb-2">
                 ${c.title}
               </h3>
@@ -263,7 +263,7 @@
                   <div class="ecdl-progress-bar-wrap" style="background:#E5E7EB; height:6px;">
                     <div class="ecdl-progress-bar-fill" style="width:${c.progressPercent}%;"></div>
                   </div>
-                  <div class="text-[11px] text-neutral-400 mt-1">
+                  <div class="text-xs text-neutral-400 mt-1">
                     ${c.completedLessonsCount} of ${c.totalLessonsCount} Lessons Completed
                   </div>
                 </div>
@@ -275,7 +275,7 @@
                     <i data-lucide="award" class="w-4 h-4 text-emerald-700"></i>
                     <span>Grade: ${c.grade}</span>
                   </div>
-                  <div class="text-[11px] text-emerald-700 mt-0.5">Completed on ${c.completedDate}</div>
+                  <div class="text-xs text-emerald-700 mt-0.5">Completed on ${c.completedDate}</div>
                 </div>
               ` : ''}
 
@@ -285,7 +285,7 @@
                     <i data-lucide="clock" class="w-4 h-4 text-blue-700"></i>
                     <span>${c.cohort}</span>
                   </div>
-                  <div class="text-[11px] text-blue-700 mt-0.5">LMS unlocks 3 days prior to launch</div>
+                  <div class="text-xs text-blue-700 mt-0.5">LMS unlocks 3 days prior to launch</div>
                 </div>
               ` : ''}
 
@@ -313,7 +313,7 @@
                     <span>Cohort Enrolled</span>
                   </button>
                 ` : `
-                  <a href="/courses/${c.slug}" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-4 rounded-xl bg-ecdl-orange text-white text-xs font-bold hover:bg-ecdl-orangeDark">
+                  <a href="/courses/${c.slug}" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-4 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white text-xs font-bold hover:bg-ecdl-orangeDark">
                     <span>Enroll Now</span>
                   </a>
                 `}
@@ -414,7 +414,7 @@
                   </div>
                   <div class="flex-1 min-width-0">
                     <div class="line-clamp-1 font-medium text-neutral-200">${les.title}</div>
-                    <div class="text-[11px] text-neutral-400 flex items-center gap-1.5 mt-0.5">
+                    <div class="text-xs text-neutral-400 flex items-center gap-1.5 mt-0.5">
                       <i data-lucide="${les.type === 'video' ? 'play-circle' : 'file-text'}" class="w-3 h-3"></i>
                       <span>${les.duration}</span>
                     </div>
@@ -661,7 +661,7 @@
           <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
             <i data-lucide="award" class="w-6 h-6"></i>
           </div>
-          <span class="text-[11px] font-mono text-neutral-500 font-bold">${cert.credentialId}</span>
+          <span class="text-xs font-sans text-neutral-500 font-bold">${cert.credentialId}</span>
         </div>
 
         <h3 class="font-display font-bold text-base text-neutral-900 mb-1 leading-snug">
@@ -672,7 +672,7 @@
         </p>
 
         <div class="mt-auto pt-4 border-t border-neutral-100 flex items-center justify-between">
-          <span class="text-[11px] text-emerald-700 font-bold flex items-center gap-1">
+          <span class="text-xs text-emerald-700 font-bold flex items-center gap-1">
             <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
             <span>Verified Registry</span>
           </span>
@@ -707,15 +707,15 @@
             <div class="grid grid-cols-2 gap-8 max-w-md mx-auto pt-6 border-t border-neutral-200 text-xs text-neutral-700">
               <div>
                 <div class="font-bold text-neutral-900">${found.signatories[0] || 'Tanvir Ahmed, SPHRi'}</div>
-                <div class="text-[10px] text-neutral-400">Head of Faculty &amp; Learner Experience</div>
+                <div class="text-xs text-neutral-400">Head of Faculty &amp; Learner Experience</div>
               </div>
               <div>
                 <div class="font-bold text-neutral-900">${found.signatories[1] || 'Advocate Rafiqul Islam'}</div>
-                <div class="text-[10px] text-neutral-400">Chair, Compliance Governance Board</div>
+                <div class="text-xs text-neutral-400">Chair, Compliance Governance Board</div>
               </div>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-400">
+            <div class="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-400">
               <span>Credential: <strong>${found.credentialId}</strong></span>
               <span>Issued: <strong>${found.issueDate}</strong></span>
               <span>Status: <strong class="text-emerald-700">Verified</strong></span>
@@ -750,12 +750,12 @@
           <td class="py-3 px-4 font-bold text-neutral-900">${r.year}</td>
           <td class="py-3 px-4">
             <div class="font-bold text-neutral-900">${r.courseTitle}</div>
-            <div class="text-[11px] text-neutral-500">${r.category} • ${r.dateFormatted}</div>
+            <div class="text-xs text-neutral-500">${r.category} • ${r.dateFormatted}</div>
           </td>
           <td class="py-3 px-4 text-neutral-600">${r.deliveryMode}</td>
           <td class="py-3 px-4 font-bold text-neutral-700">${r.hours} hrs</td>
           <td class="py-3 px-4">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold ${
               r.status === 'Completed' ? 'bg-emerald-100 text-emerald-800' : 'bg-neutral-100 text-neutral-800'
             }">${r.status}</span>
           </td>

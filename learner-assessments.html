@@ -7,10 +7,10 @@
   <meta name="description" content="Complete executive knowledge evaluations, practical statutory quizzes, and case study assignments." />
   <link rel="canonical" href="https://open.ecdl.com.bd/learner/assessments" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -43,11 +65,11 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/learner.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/learner.css" />
 </head>
 <body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
 
@@ -60,14 +82,14 @@
       <div class="ecdl-sidebar-brand justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div>
-            <span class="block font-display text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
-            <span class="block text-[10px] text-neutral-400">Executive Academy</span>
+            <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
+            <span class="block text-xs text-neutral-400">Executive Academy</span>
           </div>
         </a>
         <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="portal-sidebar-close">
@@ -87,7 +109,7 @@
           <span class="ecdl-sidebar-badge">5</span>
         </a>
         <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="ecdl-sidebar-link">
-          <i data-lucide="play-circle" class="w-4 h-4 text-emerald-400"></i>
+          <i data-lucide="play-circle" class="w-4 h-4 text-[#C9A227]"></i>
           <span>LMS Course Player</span>
         </a>
         <a href="/learner/assessments" class="ecdl-sidebar-link is-active">
@@ -119,7 +141,7 @@
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover border border-neutral-600" id="shell-learner-avatar">
         <div class="min-w-0 flex-1">
           <div class="font-bold text-xs text-white truncate" id="shell-learner-name">Naveed Karim</div>
-          <div class="text-[10px] text-neutral-400 truncate" id="shell-learner-title">Unilever Bangladesh</div>
+          <div class="text-xs text-neutral-400 truncate" id="shell-learner-title">Unilever Bangladesh</div>
         </div>
       </div>
     </aside>
@@ -156,7 +178,7 @@
         <!-- Header Row -->
         <div class="mb-8">
           <div class="flex items-center gap-2 mb-1">
-            <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">Tutor LMS Quizzes</span>
+            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">Tutor LMS Quizzes</span>
             <span class="text-xs text-neutral-500">• 80% Passing Threshold for Credential Issuance</span>
           </div>
           <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
@@ -252,8 +274,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/learner.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/learner.js"></script>
   <script>
     if (window.lucide) {
       window.lucide.createIcons();

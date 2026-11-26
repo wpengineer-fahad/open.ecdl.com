@@ -240,7 +240,7 @@
       methodGrid.innerHTML = course.learningMethodology.map(m => `
         <div class="ecdl-methodology-card">
           <div class="ecdl-methodology-card__title">
-            <span style="color:var(--ecdl-color-green); font-size:1.125rem;">■</span>
+            <span style="color:var(--ecdl-color-green); font-size: var(--font-body-size);">■</span>
             <span>${escapeHtml(m.title)}</span>
           </div>
           <p class="ecdl-methodology-card__desc">${escapeHtml(m.desc)}</p>
@@ -254,9 +254,9 @@
       const isClassroom = course.deliveryMode === 'Classroom' || course.deliveryMode === 'Blended';
       venueEl.innerHTML = `
         <div>
-          <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-text-secondary); font-weight:700;">Location & Delivery</span>
-          <h4 style="margin:2px 0 4px 0; color:var(--ecdl-color-black); font-size:1rem;">${escapeHtml(course.location)}</h4>
-          <p style="font-size:0.8125rem; color:var(--color-text-secondary); margin:0;">
+          <span style="font-size: var(--font-small); text-transform:uppercase; color:var(--color-text-secondary); font-weight:700;">Location & Delivery</span>
+          <h4 style="margin:2px 0 4px 0; color:var(--ecdl-color-black); font-size: var(--font-body-size);">${escapeHtml(course.location)}</h4>
+          <p style="font-size: var(--font-small); color:var(--color-text-secondary); margin:0;">
             ${isClassroom ? 'Executive Training Hall • High-speed Wi-Fi • Dedicated breakout areas • Refreshments provided' : 'High-definition live Zoom interactive stream with screen-sharing and real-time faculty defense'}
           </p>
         </div>
@@ -274,7 +274,7 @@
         <div class="ecdl-trainer-profile-card">
           <div class="ecdl-trainer-avatar-col">
             <img class="ecdl-trainer-avatar-img" src="${tf.avatar}" alt="${escapeHtml(tf.name)}">
-            <span class="ecdl-badge ecdl-badge--dark" style="font-size:0.6875rem;">${escapeHtml(tf.experience)}</span>
+            <span class="ecdl-badge ecdl-badge--dark" style="font-size: var(--font-small);">${escapeHtml(tf.experience)}</span>
           </div>
           <div class="ecdl-trainer-info-col">
             <h3 class="ecdl-trainer-profile-name">${escapeHtml(tf.name)}</h3>
@@ -305,14 +305,14 @@
               <strong>Attendance Requirement:</strong> ${escapeHtml(cert.attendance)}<br>
               <strong>Grading:</strong> ${escapeHtml(cert.grading)}
             </p>
-            <p class="ecdl-cert-box__desc" style="font-size:0.8125rem;">
+            <p class="ecdl-cert-box__desc" style="font-size: var(--font-small);">
               ${escapeHtml(cert.verification)}
             </p>
           </div>
           <div class="ecdl-cert-badge-frame">
-            <div style="font-size:2rem; margin-bottom:4px;">📜</div>
+            <div style="font-size: var(--font-heading-size); margin-bottom:4px;">📜</div>
             <span class="ecdl-cert-badge-frame__qr">Verified QR Credential</span>
-            <div style="font-size:0.6875rem; color:var(--color-text-on-dark-muted); margin-top:4px;">Open ECDL Registry</div>
+            <div style="font-size: var(--font-small); color:var(--color-text-on-dark-muted); margin-top:4px;">Open ECDL Registry</div>
           </div>
         </div>
       `;
@@ -361,7 +361,7 @@
           </article>
         `).join('');
       } else {
-        relatedWrap.innerHTML = `<p style="color:var(--color-text-secondary); font-size:0.875rem;">Explore more in the <a href="courses.html" style="color:var(--ecdl-color-green); font-weight:700;">full course catalogue →</a></p>`;
+        relatedWrap.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore more in the <a href="courses.html" style="color:var(--ecdl-color-green); font-weight:700;">full course catalogue →</a></p>`;
       }
     }
   }
@@ -405,7 +405,7 @@
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--ecdl-color-green); flex-shrink:0;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             <div>
               <strong>Instant Digital Academy Access</strong><br>
-              <span style="font-size:0.75rem; color:var(--color-text-secondary);">Start immediately upon enrollment. Access video lectures, downloadable datasets, and terminal labs 24/7.</span>
+              <span style="font-size: var(--font-small); color:var(--color-text-secondary);">Start immediately upon enrollment. Access video lectures, downloadable datasets, and terminal labs 24/7.</span>
             </div>
           </div>
         `;
@@ -413,7 +413,7 @@
         cohortWrap.innerHTML = `
           <div class="ecdl-cohort-selector__title">
             <span>Select Available Cohort</span>
-            <span style="font-size:0.6875rem; color:var(--ecdl-color-green); text-transform:none;">${course.cohorts.length} Batches Scheduled</span>
+            <span style="font-size: var(--font-small); color:var(--ecdl-color-green); text-transform:none;">${course.cohorts.length} Batches Scheduled</span>
           </div>
           ${course.cohorts.map((c, i) => `
             <label class="ecdl-cohort-card ${c.id === selectedCohortId ? 'is-selected' : ''}" data-cohort-id="${c.id}">
@@ -512,18 +512,18 @@
         <div class="ecdl-modal__header">
           <div>
             <span class="ecdl-badge ecdl-badge--green" style="margin-bottom:4px;">Complimentary Preview</span>
-            <h3 class="ecdl-modal__title" style="font-size:1.125rem;">${escapeHtml(lessonTitle)}</h3>
+            <h3 class="ecdl-modal__title" style="font-size: var(--font-body-size);">${escapeHtml(lessonTitle)}</h3>
           </div>
           <button type="button" class="ecdl-modal__close" onclick="document.getElementById('modal-lesson-preview').classList.remove('is-open'); document.body.style.overflow='';">✕</button>
         </div>
         <div class="ecdl-modal__body">
           <div style="background-color:var(--ecdl-color-surface); padding:var(--space-md); border-radius:var(--radius-sm); border:1px solid var(--ecdl-color-borders); margin-bottom:var(--space-md);">
-            <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--color-text-secondary); margin-bottom:4px;">Lesson Learning Objectives</div>
-            <p style="font-size:0.875rem; line-height:1.6; color:var(--ecdl-color-black); margin:0;">
+            <div style="font-size: var(--font-small); text-transform:uppercase; font-weight:700; color:var(--color-text-secondary); margin-bottom:4px;">Lesson Learning Objectives</div>
+            <p style="font-size: var(--font-small); line-height:1.6; color:var(--ecdl-color-black); margin:0;">
               This sample preview provides an executive introduction to statutory interpretations, drafting mechanics, and practical business case applications covered in full during the live masterclass cohort.
             </p>
           </div>
-          <p style="font-size:0.8125rem; color:var(--color-text-secondary);">
+          <p style="font-size: var(--font-small); color:var(--color-text-secondary);">
             Full video recordings, editable workbooks, statutory gazette annexures, and faculty slide decks are unlocked upon official batch registration.
           </p>
         </div>
@@ -557,13 +557,13 @@
         <div class="ecdl-modal__header">
           <div>
             <span class="ecdl-badge ecdl-badge--green" style="margin-bottom:4px;">Official Enrollment</span>
-            <h3 class="ecdl-modal__title" style="font-size:1.25rem;">Register for ${escapeHtml(course.title)}</h3>
+            <h3 class="ecdl-modal__title" style="font-size: var(--font-heading-size);">Register for ${escapeHtml(course.title)}</h3>
           </div>
           <button type="button" class="ecdl-modal__close" onclick="document.getElementById('modal-individual-enroll').classList.remove('is-open'); document.body.style.overflow='';">✕</button>
         </div>
         <form onsubmit="event.preventDefault(); document.getElementById('modal-individual-enroll').classList.remove('is-open'); document.body.style.overflow=''; alert('Registration initiated! A confirmation email and Mushak 6.3 pro-forma invoice have been generated for your record.');">
           <div class="ecdl-modal__body">
-            <div style="background-color:#EAF5EE; border:1px solid #108B44; border-radius:var(--radius-xs); padding:10px 14px; margin-bottom:var(--space-md); font-size:0.8125rem;">
+            <div style="background-color:#F7F5F0; border:1px solid #1B4D3E; border-radius:var(--radius-xs); padding:10px 14px; margin-bottom:var(--space-md); font-size: var(--font-small);">
               <strong>Selected Batch:</strong> ${escapeHtml(cohortInfo)}<br>
               <strong>Investment:</strong> ${course.price} ${course.priceVat ? `<small>(${course.priceVat})</small>` : ''}
             </div>
@@ -625,13 +625,13 @@
         <div class="ecdl-modal__header">
           <div>
             <span class="ecdl-badge ecdl-badge--yellow" style="color:var(--ecdl-color-black); margin-bottom:4px;">Corporate Team Voucher</span>
-            <h3 class="ecdl-modal__title" style="font-size:1.25rem;">Group Registration: ${escapeHtml(course.title)}</h3>
+            <h3 class="ecdl-modal__title" style="font-size: var(--font-heading-size);">Group Registration: ${escapeHtml(course.title)}</h3>
           </div>
           <button type="button" class="ecdl-modal__close" onclick="document.getElementById('modal-group-booking').classList.remove('is-open'); document.body.style.overflow='';">✕</button>
         </div>
         <form onsubmit="event.preventDefault(); document.getElementById('modal-group-booking').classList.remove('is-open'); document.body.style.overflow=''; alert('Group booking request submitted! A corporate account advisor will contact you within 24 hours with official Mushak 6.3 billing.');">
           <div class="ecdl-modal__body">
-            <div style="background-color:#FFFDF0; border:1px solid #F4DB0F; border-radius:var(--radius-xs); padding:10px 14px; margin-bottom:var(--space-md); font-size:0.8125rem;">
+            <div style="background-color:#F7F5F0; border:1px solid #C9A227; border-radius:var(--radius-xs); padding:10px 14px; margin-bottom:var(--space-md); font-size: var(--font-small);">
               <strong>Corporate Group Discounts:</strong> 10% discount for 3–5 seats • 15% discount for 6+ seats.
             </div>
 
@@ -645,7 +645,7 @@
               <div class="ecdl-col-12 ecdl-col-md-6">
                 <div class="ecdl-form-group">
                   <label class="ecdl-label">Estimated Total Investment</label>
-                  <div id="group-calc-total" style="font-size:1.25rem; font-weight:800; color:var(--ecdl-color-black); margin-top:6px;">
+                  <div id="group-calc-total" style="font-size: var(--font-heading-size); font-weight:800; color:var(--ecdl-color-black); margin-top:6px;">
                     BDT ${(basePrice * 3 * 0.9).toLocaleString()} + VAT
                   </div>
                 </div>

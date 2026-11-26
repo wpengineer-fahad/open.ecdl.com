@@ -1,201 +1,188 @@
 /**
  * Open ECDL — Master Design Foundation
- * Global Design Tokens (Design Tokens Specification)
+ * Global Design Tokens (Editorial Typography & Colour System)
  * Enroute Center for Development Ltd.
- * 
+ *
  * Target Engine: WordPress (Elementor Pro / Tutor LMS Pro / ECDL Core)
  * Compliance: WCAG 2.2 Level AA Standard
  */
 
 :root {
   /* ==========================================================================
-     1. BRAND COLORS (Strict Palette)
+     1. CORE DESIGN TOKENS (Central WordPress / Elementor Mapping)
      ========================================================================== */
-  
-  /* Primary Core Brand Colors */
-  --ecdl-color-green: #108B44;         /* Primary Brand Green */
-  --ecdl-color-yellow: #F4DB0F;        /* Brand Yellow */
-  --ecdl-color-white: #FFFFFF;         /* White */
-  --ecdl-color-orange: #F3520A;        /* Accent Orange (Selective promo/urgency) */
-  --ecdl-color-black: #111111;         /* Primary Black (Typography & Dark sections) */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
 
-  /* Supporting Neutral Colors */
-  --ecdl-color-surface: #F7F8F6;       /* Neutral Surface background */
-  --ecdl-color-soft-green: #EAF5EE;    /* Soft Green subtle tint */
-  --ecdl-color-borders: #E4E8E3;       /* Neutral structural borders */
-  --ecdl-color-text-secondary: #5B625D;/* Secondary Text */
+  --font-display: 48px;
+  --font-heading-size: 32px;
+  --font-body-size: 16px;
+  --font-small: 14px;
 
-  /* Extended Functional Shades for Primary Green */
-  --ecdl-green-hover: #0D7338;
-  --ecdl-green-active: #095729;
-  --ecdl-green-focus: rgba(16, 139, 68, 0.25);
-  --ecdl-green-tint-50: #F0F9F4;
-  --ecdl-green-tint-100: var(--ecdl-color-soft-green);
-  --ecdl-green-tint-200: #C2E5D0;
-  --ecdl-green-tint-800: #0C6130;
-
-  /* Extended Functional Shades for Accent Orange */
-  --ecdl-orange-hover: #D74605;
-  --ecdl-orange-active: #B53800;
-  --ecdl-orange-tint-50: #FFF5F0;
-  --ecdl-orange-tint-100: #FEE8DE;
-  --ecdl-orange-tint-200: #FCD0BD;
-
-  /* Extended Functional Shades for Brand Yellow */
-  --ecdl-yellow-hover: #E3CB08;
-  --ecdl-yellow-tint-50: #FEFDE8;
-  --ecdl-yellow-tint-100: #FCF8B4;
-  --ecdl-yellow-text: #8A7A00;
-
-  /* Neutrals Ladder */
-  --ecdl-neutral-0: #FFFFFF;
-  --ecdl-neutral-50: var(--ecdl-color-surface);
-  --ecdl-neutral-100: #EFF1EE;
-  --ecdl-neutral-150: #E9ECE8;
-  --ecdl-neutral-200: var(--ecdl-color-borders);
-  --ecdl-neutral-300: #CBD2CA;
-  --ecdl-neutral-400: #98A197;
-  --ecdl-neutral-500: #6F776F;
-  --ecdl-neutral-600: var(--ecdl-color-text-secondary);
-  --ecdl-neutral-700: #383D39;
-  --ecdl-neutral-800: #222623;
-  --ecdl-neutral-900: var(--ecdl-color-black);
-
-  /* Functional Semantic Color Tokens */
-  --color-canvas-primary: var(--ecdl-color-white);
-  --color-canvas-secondary: var(--ecdl-color-surface);
-  --color-canvas-dark: var(--ecdl-color-black);
-  --color-canvas-card: var(--ecdl-color-white);
-
-  --color-text-primary: var(--ecdl-color-black);
-  --color-text-secondary: var(--ecdl-color-text-secondary);
-  --color-text-muted: #79827B;
-  --color-text-on-dark: var(--ecdl-color-white);
-  --color-text-on-dark-muted: #A6AFA8;
-  --color-text-brand: var(--ecdl-color-green);
-
-  --color-border-subtle: #EDF1EC;
-  --color-border-default: var(--ecdl-color-borders);
-  --color-border-strong: #CBD2CA;
-  --color-border-focus: var(--ecdl-color-green);
-  --color-border-on-dark: #2A2E2B;
-
-  --color-brand-primary: var(--ecdl-color-green);
-  --color-brand-accent-yellow: var(--ecdl-color-yellow);
-  --color-brand-accent-orange: var(--ecdl-color-orange);
-
-  /* Status Colors */
-  --color-status-success: var(--ecdl-color-green);
-  --color-status-success-bg: var(--ecdl-color-soft-green);
-  --color-status-warning: #D97706;
-  --color-status-warning-bg: #FEF3C7;
-  --color-status-error: #DC2626;
-  --color-status-error-bg: #FEF2F2;
-  --color-status-info: #0284C7;
-  --color-status-info-bg: #F0F9FF;
+  --color-primary: #1B4D3E;
+  --color-footer: #123B30;
+  --color-accent: #C9A227;
+  --color-surface: #F7F5F0;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 
   /* ==========================================================================
-     2. TYPOGRAPHY SYSTEM (Plus Jakarta Sans Headings, Inter Body)
+     2. DERIVED PALETTE ALIASES (Restrained Opacity & Semantic Compatibility)
      ========================================================================== */
-  
-  --font-family-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --ecdl-color-green: var(--color-primary);
+  --ecdl-color-yellow: var(--color-accent);
+  --ecdl-color-white: var(--color-white);
+  --ecdl-color-orange: var(--color-accent);
+  --ecdl-color-black: var(--color-black);
 
-  /* Fluid Font Sizes using clamp(min, preferred, max) */
-  /* Hero Statement: 56–72px | Mobile: 36–44px */
-  --font-size-hero: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  --ecdl-color-surface: var(--color-surface);
+  --ecdl-color-soft-green: var(--color-surface);
+  --ecdl-color-borders: rgba(27, 77, 62, 0.16);
+  --ecdl-color-text-secondary: rgba(0, 0, 0, 0.72);
 
-  /* Desktop H1: 56–68px | Mobile: 32–40px */
-  --font-size-h1: clamp(2rem, 1.4rem + 2.4vw, 4.25rem);
+  /* Primary Green Interactive Shades (never using #123B30 outside footer) */
+  --ecdl-green-hover: #153D31;
+  --ecdl-green-active: #102F26;
+  --ecdl-green-focus: rgba(27, 77, 62, 0.25);
+  --ecdl-green-tint-50: var(--color-surface);
+  --ecdl-green-tint-100: var(--color-surface);
+  --ecdl-green-tint-200: rgba(27, 77, 62, 0.2);
+  --ecdl-green-tint-800: var(--color-primary);
 
-  /* Desktop H2: 36–44px | Mobile: 26–32px */
-  --font-size-h2: clamp(1.625rem, 1.3rem + 1.25vw, 2.75rem);
+  /* Gold Accent Interactive Shades */
+  --ecdl-orange-hover: #B59020;
+  --ecdl-orange-active: #9E7D1B;
+  --ecdl-orange-tint-50: rgba(201, 162, 39, 0.10);
+  --ecdl-orange-tint-100: rgba(201, 162, 39, 0.18);
+  --ecdl-orange-tint-200: rgba(201, 162, 39, 0.30);
 
-  /* H3: 24–28px | Mobile: 20–22px */
-  --font-size-h3: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+  --ecdl-yellow-hover: #B59020;
+  --ecdl-yellow-tint-50: rgba(201, 162, 39, 0.10);
+  --ecdl-yellow-tint-100: rgba(201, 162, 39, 0.18);
+  --ecdl-yellow-text: #85680F;
 
-  /* H4: 18–22px */
-  --font-size-h4: clamp(1.125rem, 1.05rem + 0.3vw, 1.375rem);
+  /* Neutrals Ladder (Restrained opacity variants of Black & Warm Off-White) */
+  --ecdl-neutral-0: var(--color-white);
+  --ecdl-neutral-50: var(--color-surface);
+  --ecdl-neutral-100: rgba(27, 77, 62, 0.05);
+  --ecdl-neutral-150: rgba(27, 77, 62, 0.08);
+  --ecdl-neutral-200: rgba(27, 77, 62, 0.14);
+  --ecdl-neutral-300: rgba(27, 77, 62, 0.24);
+  --ecdl-neutral-400: rgba(0, 0, 0, 0.45);
+  --ecdl-neutral-500: rgba(0, 0, 0, 0.60);
+  --ecdl-neutral-600: rgba(0, 0, 0, 0.72);
+  --ecdl-neutral-700: rgba(0, 0, 0, 0.84);
+  --ecdl-neutral-800: rgba(0, 0, 0, 0.92);
+  --ecdl-neutral-900: var(--color-black);
 
-  /* H5: 16–18px */
-  --font-size-h5: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  /* Semantic Canvas & Text Aliases */
+  --color-canvas-primary: var(--color-white);
+  --color-canvas-secondary: var(--color-surface);
+  --color-canvas-dark: var(--color-primary);
+  --color-canvas-card: var(--color-white);
 
-  /* Section Kicker / Eyebrow: 12–13px */
-  --font-size-kicker: 0.8125rem;
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: rgba(0, 0, 0, 0.75);
+  --color-text-muted: rgba(0, 0, 0, 0.60);
+  --color-text-on-dark: var(--color-white);
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.82);
+  --color-text-brand: var(--color-primary);
 
-  /* Body Copy Scale: Desktop: 16–18px | Mobile: 15–16px */
-  --font-size-body-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); /* 17px–20px */
-  --font-size-body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);       /* 16px–18px */
-  --font-size-body-sm: 0.875rem;                                  /* 14px */
-  --font-size-meta: 0.8125rem;                                     /* 13px */
-  --font-size-caption: 0.75rem;                                   /* 12px */
+  --color-border-subtle: rgba(27, 77, 62, 0.10);
+  --color-border-default: rgba(27, 77, 62, 0.16);
+  --color-border-strong: rgba(27, 77, 62, 0.30);
+  --color-border-focus: var(--color-primary);
+  --color-border-on-dark: rgba(255, 255, 255, 0.18);
+
+  --color-brand-primary: var(--color-primary);
+  --color-brand-accent-yellow: var(--color-accent);
+  --color-brand-accent-orange: var(--color-accent);
+
+  /* Accessible System States (Kept semantically clear for errors/warnings/success) */
+  --color-status-success: #1B4D3E;
+  --color-status-success-bg: #F7F5F0;
+  --color-status-warning: #B45309;
+  --color-status-warning-bg: #FEF3C7;
+  --color-status-error: #B91C1C;
+  --color-status-error-bg: #FEF2F2;
+  --color-status-info: #1B4D3E;
+  --color-status-info-bg: rgba(27, 77, 62, 0.08);
+
+  /* ==========================================================================
+     3. STRICT TYPOGRAPHY TOKENS (Playfair Display + Inter | 4 Sizes Only)
+     ========================================================================== */
+  --font-family-heading: var(--font-heading);
+  --font-family-body: var(--font-body);
+  --font-family-mono: var(--font-body);
+
+  --font-size-hero: var(--font-display);
+  --font-size-h1: var(--font-display);
+  --font-size-h2: var(--font-heading-size);
+  --font-size-h3: var(--font-heading-size);
+  --font-size-h4: var(--font-heading-size);
+  --font-size-h5: var(--font-heading-size);
+  --font-size-body-lead: var(--font-body-size);
+  --font-size-body: var(--font-body-size);
+  --font-size-body-sm: var(--font-small);
+  --font-size-kicker: var(--font-small);
+  --font-size-meta: var(--font-small);
+  --font-size-caption: var(--font-small);
 
   /* Line Heights */
   --line-height-tight: 1.15;
-  --line-height-snug: 1.28;
-  --line-height-heading: 1.24;
-  --line-height-body: 1.62;
+  --line-height-snug: 1.25;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.65;
   --line-height-relaxed: 1.75;
 
   /* Letter Spacing */
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-snug: -0.015em;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-snug: -0.01em;
   --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.04em;
-  --letter-spacing-kicker: 0.08em;
+  --letter-spacing-wide: 0.03em;
+  --letter-spacing-kicker: 0.06em;
 
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
+  --font-weight-extrabold: 700;
 
   /* ==========================================================================
-     3. SPACING & LAYOUT SYSTEM
+     4. SPACING, CONTAINERS & RESTRAINED SHAPES
      ========================================================================== */
-
-  /* Content Widths (1280px Max Content Width) */
   --container-max-width: 1280px;
   --container-narrow-max-width: 980px;
   --container-hero-max-width: 1120px;
   --container-padding-x: clamp(1rem, 0.5rem + 2vw, 2.5rem);
 
-  /* Consistent Section Vertical Padding */
-  --section-py-sm: clamp(2.5rem, 1.8rem + 2.5vw, 4rem);    /* 40px - 64px */
-  --section-py-md: clamp(3.5rem, 2.5rem + 3.5vw, 6rem);    /* 56px - 96px */
-  --section-py-lg: clamp(4.5rem, 3rem + 5vw, 8rem);        /* 72px - 128px */
+  --section-py-sm: clamp(2.5rem, 1.8rem + 2.5vw, 4rem);
+  --section-py-md: clamp(3.5rem, 2.5rem + 3.5vw, 5.5rem);
+  --section-py-lg: clamp(4.5rem, 3rem + 5vw, 7rem);
 
-  /* Fixed Spacing Scale */
-  --space-4xs: 0.125rem;  /* 2px */
-  --space-3xs: 0.25rem;   /* 4px */
-  --space-2xs: 0.5rem;    /* 8px */
-  --space-xs: 0.75rem;    /* 12px */
-  --space-sm: 1rem;       /* 16px */
-  --space-md: 1.5rem;     /* 24px */
-  --space-lg: 2rem;       /* 32px */
-  --space-xl: 3rem;       /* 48px */
-  --space-2xl: 4.5rem;    /* 72px */
-  --space-3xl: 6rem;      /* 96px */
-  --space-4xl: 8rem;      /* 128px */
+  --space-4xs: 0.125rem;
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
 
-  /* Grid Gutters */
-  --grid-gutter-desktop: 2rem;    /* 32px */
-  --grid-gutter-tablet: 1.5rem;   /* 24px */
-  --grid-gutter-mobile: 1rem;     /* 16px */
+  --grid-gutter-desktop: 2rem;
+  --grid-gutter-tablet: 1.5rem;
+  --grid-gutter-mobile: 1rem;
 
-  /* Breakpoint Dimensions (Reference tokens) */
   --breakpoint-mobile: 375px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
   --breakpoint-wide: 1440px;
 
-  /* ==========================================================================
-     4. COMPONENT SHAPES & ELEVATIONS
-     ========================================================================== */
-
-  /* Restrained Architectural Radii */
+  /* Subtle Corner Radii & Minimal Shadows */
   --radius-none: 0px;
   --radius-xs: 2px;
   --radius-sm: 4px;
@@ -203,20 +190,17 @@
   --radius-lg: 8px;
   --radius-pill: 9999px;
 
-  /* Shadows (Subtle, non-muddy, high precision) */
-  --shadow-xs: 0 1px 2px rgba(17, 17, 17, 0.04);
-  --shadow-sm: 0 2px 4px rgba(17, 17, 17, 0.05);
-  --shadow-md: 0 4px 12px rgba(17, 17, 17, 0.06), 0 1px 3px rgba(17, 17, 17, 0.04);
-  --shadow-lg: 0 12px 28px rgba(17, 17, 17, 0.08), 0 2px 8px rgba(17, 17, 17, 0.03);
-  --shadow-xl: 0 20px 40px -8px rgba(17, 17, 17, 0.12);
-  --shadow-card-hover: 0 14px 30px rgba(16, 139, 68, 0.09), 0 4px 10px rgba(17, 17, 17, 0.04);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 4px 12px rgba(27, 77, 62, 0.06);
+  --shadow-card-hover: 0 6px 16px rgba(27, 77, 62, 0.08);
 
-  /* Transitions & Motion */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Z-Index Hierarchy */
   --z-base: 1;
   --z-elevated: 10;
   --z-dropdown: 100;
@@ -226,11 +210,17 @@
   --z-modal: 1000;
   --z-toast: 1100;
 
-  /* Accessibility & Focus */
   --focus-outline-width: 2px;
-  --focus-outline-offset: 3px;
-  --focus-outline-color: var(--ecdl-color-green);
+  --focus-outline-offset: 2px;
+  --focus-outline-color: var(--color-primary);
   --min-touch-target: 44px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-display: 36px;
+    --font-heading-size: 26px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -248,6 +238,6 @@ html, body {
 }
 
 :focus-visible {
-  outline: var(--focus-outline-width, 2px) solid var(--focus-outline-color, #108B44);
+  outline: var(--focus-outline-width, 2px) solid var(--focus-outline-color, #1B4D3E);
   outline-offset: var(--focus-outline-offset, 2px);
 }

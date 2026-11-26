@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2xs);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-sm);
 }
@@ -70,7 +70,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-widest);
@@ -78,8 +78,8 @@
 }
 
 .ecdl-catalogue-hero__title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: var(--letter-spacing-tight);
@@ -88,7 +88,7 @@
 }
 
 .ecdl-catalogue-hero__desc {
-  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  font-size: var(--font-body-size);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
   max-width: 720px;
@@ -109,13 +109,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--ecdl-color-black);
 }
 
 .ecdl-hero-stat-item strong {
   color: var(--ecdl-color-green);
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
 }
 
 /* ==========================================================================
@@ -181,7 +181,7 @@
 }
 
 .ecdl-filter-sidebar__title {
-  font-size: 1rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   display: flex;
@@ -193,7 +193,7 @@
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   color: var(--ecdl-color-green);
   font-weight: 600;
   cursor: pointer;
@@ -226,8 +226,8 @@
   background: none;
   border: none;
   padding: 0 0 var(--space-xs) 0;
-  font-family: var(--font-family-body);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-black);
   cursor: pointer;
@@ -264,7 +264,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-primary);
   user-select: none;
   padding: 2px 0;
@@ -330,7 +330,7 @@
 }
 
 .ecdl-filter-item__count {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   background-color: var(--ecdl-color-surface);
   padding: 1px 6px;
@@ -379,8 +379,8 @@
   width: 100%;
   height: 42px;
   padding: 0 36px 0 38px;
-  font-family: var(--font-family-body);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-white);
   border: 1px solid var(--ecdl-color-borders);
@@ -413,7 +413,7 @@
 
 /* Results Count */
 .ecdl-results-count {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -435,7 +435,7 @@
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   font-weight: 600;
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-surface);
@@ -459,7 +459,7 @@
 .ecdl-mobile-filter-badge {
   background-color: var(--ecdl-color-green);
   color: var(--ecdl-color-white);
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   padding: 1px 5px;
   border-radius: 8px;
@@ -470,15 +470,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
 .ecdl-sort-select {
   height: 38px;
   padding: 0 28px 0 10px;
-  font-family: var(--font-family-body);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-white);
@@ -542,7 +542,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-surface);
@@ -569,7 +569,7 @@
 }
 
 .ecdl-clear-all-chips {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-status-error);
   font-weight: 600;
   text-decoration: underline;
@@ -660,7 +660,7 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -683,7 +683,7 @@
 }
 
 .ecdl-course-card__category {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -693,8 +693,8 @@
 }
 
 .ecdl-course-card__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.0625rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: 700;
   line-height: 1.35;
   color: var(--ecdl-color-black);
@@ -717,7 +717,7 @@
 }
 
 .ecdl-course-card__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   line-height: 1.5;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-sm);
@@ -736,7 +736,7 @@
   gap: var(--space-xs);
   padding: var(--space-xs) 0;
   border-top: 1px solid var(--ecdl-color-borders);
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -764,7 +764,7 @@
 }
 
 .ecdl-course-card__trainer-name {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   white-space: nowrap;
@@ -789,8 +789,8 @@
 }
 
 .ecdl-course-card__price {
-  font-family: var(--font-family-heading);
-  font-size: 1.0625rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: 800;
   color: var(--ecdl-color-black);
   line-height: 1.2;
@@ -801,13 +801,13 @@
 }
 
 .ecdl-course-card__price.is-corporate {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   font-weight: 700;
 }
 
 .ecdl-course-card__price-sub {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -833,13 +833,13 @@
   }
 
   .ecdl-courses-container.view-list .ecdl-course-card__title {
-    font-size: 1.1875rem;
+    font-size: var(--font-heading-size);
     min-height: auto;
   }
 
   .ecdl-courses-container.view-list .ecdl-course-card__desc {
     -webkit-line-clamp: 3;
-    font-size: 0.875rem;
+    font-size: var(--font-body-size);
   }
 
   .ecdl-courses-container.view-list .ecdl-course-card__footer {
@@ -869,8 +869,8 @@
   min-width: 40px;
   height: 40px;
   padding: 0 12px;
-  font-family: var(--font-family-body);
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-white);
@@ -925,15 +925,15 @@
 }
 
 .ecdl-empty-state__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-empty-state__text {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   max-width: 480px;
   margin: 0 auto var(--space-lg);
@@ -988,7 +988,7 @@
 }
 
 .ecdl-mobile-filter-drawer__title {
-  font-size: 1.125rem;
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin: 0;
@@ -1039,7 +1039,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(16, 139, 68, 0.25) 0%, rgba(17, 17, 17, 0) 70%);
+  background: radial-gradient(circle, rgba(27, 77, 62, 0.25) 0%, rgba(17, 17, 17, 0) 70%);
   pointer-events: none;
 }
 
@@ -1047,7 +1047,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-widest);
@@ -1056,8 +1056,8 @@
 }
 
 .ecdl-category-hero__title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
   font-weight: 800;
   line-height: 1.15;
   color: var(--ecdl-color-white);
@@ -1065,7 +1065,7 @@
 }
 
 .ecdl-category-hero__desc {
-  font-size: clamp(1rem, 1.3vw, 1.1875rem);
+  font-size: var(--font-body-size);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-on-dark-muted);
   max-width: 780px;
@@ -1086,14 +1086,14 @@
 }
 
 .ecdl-category-stat__num {
-  font-family: var(--font-family-heading);
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-yellow);
 }
 
 .ecdl-category-stat__label {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-on-dark-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1106,7 +1106,7 @@
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-xl) 0;
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-primary);
 }
@@ -1124,7 +1124,7 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   background-color: var(--ecdl-color-surface);
@@ -1167,7 +1167,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: rgba(16, 139, 68, 0.12);
+  background-color: rgba(27, 77, 62, 0.12);
   color: var(--ecdl-color-green);
   display: grid;
   place-content: center;
@@ -1176,7 +1176,7 @@
 }
 
 .ecdl-benefit-card__text {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.5;
   color: var(--ecdl-color-black);
   margin: 0;
@@ -1220,13 +1220,13 @@
 }
 
 .ecdl-faculty-card__name {
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
 }
 
 .ecdl-faculty-card__title {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.4;
 }
@@ -1263,14 +1263,14 @@
 }
 
 .ecdl-related-cat-card__title {
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 4px;
 }
 
 .ecdl-related-cat-card__count {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--ecdl-color-green);
   font-weight: 600;
 }
@@ -1281,7 +1281,7 @@
    ========================================================================== */
 
 .ecdl-course-card {
-  border-radius: 24px !important;
+  border-radius: 8px !important;
   border: 1px solid #E5E7EB !important;
   box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -1290,8 +1290,8 @@
 
 .ecdl-course-card:hover {
   transform: translateY(-5px) !important;
-  border-color: rgba(16, 139, 68, 0.45) !important;
-  box-shadow: 0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06) !important;
+  border-color: rgba(27, 77, 62, 0.45) !important;
+  box-shadow: 0 20px 30px -4px rgba(27, 77, 62, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06) !important;
 }
 
 .ecdl-course-card__media {
@@ -1301,24 +1301,24 @@
 
 .ecdl-course-card__title,
 .ecdl-course-card__title a {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-heading);
   font-weight: 800 !important;
-  color: #111111 !important;
+  color: var(--color-black) !important;
   line-height: 1.35 !important;
   transition: color 0.2s ease !important;
 }
 
 .ecdl-course-card__title a:hover {
-  color: #108B44 !important;
+  color: var(--color-primary) !important;
 }
 
 .ecdl-course-card__category {
-  font-family: 'Inter', sans-serif !important;
+  font-family: var(--font-body);
   font-weight: 700 !important;
-  font-size: 0.6875rem !important;
+  font-size: var(--font-small);
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
-  color: #108B44 !important;
+  color: var(--color-primary) !important;
 }
 
 .ecdl-badge {
@@ -1329,50 +1329,50 @@
 }
 
 .ecdl-badge--green {
-  background-color: #EDF7F1 !important;
-  color: #108B44 !important;
+  background-color: var(--color-surface) !important;
+  color: var(--color-primary) !important;
 }
 
 .ecdl-badge--yellow {
-  background-color: #F4DB0F !important;
-  color: #111111 !important;
+  background-color: var(--color-accent) !important;
+  color: var(--color-black) !important;
 }
 
 .ecdl-badge--orange {
-  background-color: #F3520A !important;
+  background-color: var(--color-accent) !important;
   color: #FFFFFF !important;
 }
 
 .ecdl-btn--primary {
-  background-color: #108B44 !important;
+  background-color: var(--color-primary) !important;
   color: #FFFFFF !important;
   border-radius: 12px !important;
   font-weight: 700 !important;
   padding: 8px 18px !important;
-  box-shadow: 0 2px 4px rgba(16, 139, 68, 0.2) !important;
+  box-shadow: 0 2px 4px rgba(27, 77, 62, 0.2) !important;
   transition: all 0.2s ease !important;
 }
 
 .ecdl-btn--primary:hover {
-  background-color: #0D7338 !important;
+  background-color: #153D31 !important;
   transform: translateY(-1px) !important;
 }
 
 .ecdl-btn--secondary {
   border: 1px solid #D1D5DB !important;
-  color: #111111 !important;
+  color: var(--color-black) !important;
   border-radius: 12px !important;
   font-weight: 700 !important;
   transition: all 0.2s ease !important;
 }
 
 .ecdl-btn--secondary:hover {
-  border-color: #108B44 !important;
-  color: #108B44 !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
 }
 
 .ecdl-filter-sidebar {
-  border-radius: 24px !important;
+  border-radius: 8px !important;
   border: 1px solid #E5E7EB !important;
   box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.05) !important;
   background-color: #FFFFFF !important;
@@ -1386,7 +1386,7 @@
 }
 
 .ecdl-filter-reset-btn {
-  color: #F3520A !important;
+  color: var(--color-accent) !important;
   font-weight: 700 !important;
 }
 
@@ -1396,9 +1396,9 @@
 }
 
 .ecdl-catalogue-search__input:focus {
-  border-color: #108B44 !important;
+  border-color: var(--color-primary) !important;
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(16, 139, 68, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.15) !important;
 }
 
 .ecdl-sort-select {
@@ -1413,9 +1413,9 @@
 }
 
 .ecdl-view-btn.is-active {
-  background-color: #108B44 !important;
+  background-color: var(--color-primary) !important;
   color: #FFFFFF !important;
-  border-color: #108B44 !important;
+  border-color: var(--color-primary) !important;
 }
 
 .ecdl-pagination__btn {
@@ -1424,11 +1424,11 @@
 }
 
 .ecdl-pagination__btn.is-active {
-  background-color: #108B44 !important;
+  background-color: var(--color-primary) !important;
   color: #FFFFFF !important;
 }
 
 .ecdl-course-card__trainer-avatar {
   border-radius: 9999px !important;
-  border: 2px solid #EDF7F1 !important;
+  border: 2px solid var(--color-surface) !important;
 }

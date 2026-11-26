@@ -190,7 +190,7 @@
           <div class="ecdl-event-completed-banner">
             <div>
               <h3 class="ecdl-event-completed-banner__title">Session Concluded • On-Demand Resources Available</h3>
-              <p style="margin:0 0 10px; font-size:0.875rem;">
+              <p style="margin:0 0 10px; font-size: var(--font-small);">
                 ${escapeHtml(event.resources.executiveSummary || 'The live broadcast for this session has concluded. You may access the recorded masterclass video and download the verified slide deck below.')}
               </p>
               <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -218,12 +218,12 @@
       aboutEl.innerHTML = `
         <p style="line-height:1.7; margin-bottom:var(--space-md);">${escapeHtml(event.about)}</p>
         <div style="background-color:var(--ecdl-color-surface); border:1px solid var(--ecdl-color-borders); border-radius:var(--radius-xs); padding:var(--space-md); margin-top:var(--space-md);">
-          <div style="font-size:0.8125rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--color-text-secondary); margin-bottom:8px;">
+          <div style="font-size: var(--font-small); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--color-text-secondary); margin-bottom:8px;">
             Key Learning Outcomes & Takeaways
           </div>
           <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
             ${(event.outcomes || []).map(o => `
-              <li style="display:flex; align-items:flex-start; gap:8px; font-size:0.875rem; color:var(--ecdl-color-black);">
+              <li style="display:flex; align-items:flex-start; gap:8px; font-size: var(--font-small); color:var(--ecdl-color-black);">
                 <span style="color:var(--ecdl-color-green); font-weight:800;">✓</span>
                 <span>${escapeHtml(o)}</span>
               </li>
@@ -256,7 +256,7 @@
             <div>
               <h4 class="ecdl-event-speaker-name">${escapeHtml(spk.name)}</h4>
               <div class="ecdl-event-speaker-title">${escapeHtml(spk.title)}</div>
-              ${spk.organization ? `<div style="font-size:0.6875rem; color:var(--ecdl-color-green); font-weight:600; margin-top:2px;">${escapeHtml(spk.organization)}</div>` : ''}
+              ${spk.organization ? `<div style="font-size: var(--font-small); color:var(--ecdl-color-green); font-weight:600; margin-top:2px;">${escapeHtml(spk.organization)}</div>` : ''}
             </div>
           </div>
           <p class="ecdl-event-speaker-bio">${escapeHtml(spk.bio)}</p>
@@ -317,20 +317,20 @@
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:var(--space-xs);">
                 <span class="ecdl-badge ecdl-badge--dark">${rel.deliveryMode}</span>
-                <span class="ecdl-badge ecdl-badge--neutral" style="font-size:0.6875rem;">${rel.dateFormatted}</span>
+                <span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">${rel.dateFormatted}</span>
               </div>
-              <h4 style="font-family:var(--font-heading); font-size:0.9375rem; font-weight:700; margin:0 0 6px;">
+              <h4 style="font-family:var(--font-heading); font-size: var(--font-body-size); font-weight:700; margin:0 0 6px;">
                 <a href="events.html?slug=${rel.slug}" style="color:inherit; text-decoration:none;">${escapeHtml(rel.title)}</a>
               </h4>
             </div>
             <div style="margin-top:var(--space-sm); pt:var(--space-xs); display:flex; justify-content:space-between; align-items:center;">
-              <span class="ecdl-badge ecdl-badge--green" style="font-size:0.6875rem;">${rel.seats || 'Open'}</span>
+              <span class="ecdl-badge ecdl-badge--green" style="font-size: var(--font-small);">${rel.seats || 'Open'}</span>
               <a href="events.html?slug=${rel.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">View →</a>
             </div>
           </div>
         `).join('');
       } else {
-        relatedEl.innerHTML = `<p style="color:var(--color-text-secondary); font-size:0.875rem;">Explore upcoming sessions on our <a href="training-calendar.html" style="color:var(--ecdl-color-green); font-weight:600;">Training Calendar</a>.</p>`;
+        relatedEl.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore upcoming sessions on our <a href="training-calendar.html" style="color:var(--ecdl-color-green); font-weight:600;">Training Calendar</a>.</p>`;
       }
     }
   }
@@ -381,7 +381,7 @@
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
             <span>Add to Calendar (.ICS)</span>
           </button>
-          <button type="button" class="ecdl-btn ecdl-btn--ghost" data-ecdl-modal-target="modal-corporate-enquiry" style="width:100%; font-size:0.8125rem;">
+          <button type="button" class="ecdl-btn ecdl-btn--ghost" data-ecdl-modal-target="modal-corporate-enquiry" style="width:100%; font-size: var(--font-small);">
             <span>Request In-House Proposal</span>
           </button>
         `;
@@ -402,9 +402,9 @@
       } else if (event.status === 'cancelled') {
         actionsEl.innerHTML = `
           <div style="background-color:#FEF2F2; border:1px solid #FCA5A5; border-radius:var(--radius-xs); padding:var(--space-md); text-align:center; margin-bottom:var(--space-sm);">
-            <div style="font-size:1.25rem; color:#991B1B; margin-bottom:4px;">✕</div>
-            <div style="font-size:0.875rem; font-weight:700; color:#991B1B;">Registration Closed</div>
-            <p style="font-size:0.75rem; color:#7F1D1D; margin:4px 0 0;">This session has been deferred. Please explore alternative dates on the calendar.</p>
+            <div style="font-size: var(--font-heading-size); color:#991B1B; margin-bottom:4px;">✕</div>
+            <div style="font-size: var(--font-small); font-weight:700; color:#991B1B;">Registration Closed</div>
+            <p style="font-size: var(--font-small); color:#7F1D1D; margin:4px 0 0;">This session has been deferred. Please explore alternative dates on the calendar.</p>
           </div>
           <a href="training-calendar.html" class="ecdl-btn ecdl-btn--primary" style="width:100%; justify-content:center;">
             <span>Browse Alternative Dates →</span>

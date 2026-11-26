@@ -7,18 +7,18 @@
 :root {
   --ops-sidebar-width: 260px;
   --ops-topbar-height: 64px;
-  --ops-bg: #F8FAFC;
+  --ops-bg: var(--color-surface);
   --ops-surface: #FFFFFF;
   --ops-border: #E2E8F0;
   --ops-border-subtle: #F1F5F9;
   
   /* Brand & Status Accents */
-  --ops-primary: #108B44;
-  --ops-primary-dark: #0D7338;
-  --ops-primary-light: #ECFDF5;
-  --ops-dark: #0F172A;
-  --ops-slate-800: #1E293B;
-  --ops-slate-700: #334155;
+  --ops-primary: var(--color-primary);
+  --ops-primary-dark: #153D31;
+  --ops-primary-light: var(--color-surface);
+  --ops-dark: var(--color-primary);
+  --ops-slate-800: rgba(27, 77, 62, 0.92);
+  --ops-slate-700: var(--color-black);
   --ops-slate-600: #475569;
   --ops-slate-500: #64748B;
   
@@ -37,14 +37,14 @@
   display: flex;
   min-height: 100vh;
   background-color: var(--ops-bg);
-  color: #1E293B;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-black);
+  font-family: var(--font-body);
 }
 
 /* Sidebar Navigation */
 .ops-sidebar {
   width: var(--ops-sidebar-width);
-  background-color: #0F172A;
+  background-color: var(--color-primary);
   color: #E2E8F0;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
   bottom: 0;
   left: 0;
   z-index: 40;
-  border-right: 1px solid #1E293B;
+  border-right: 1px solid rgba(27, 77, 62, 0.92);
   transition: transform 0.25s ease-in-out;
 }
 
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #1E293B;
+  border-bottom: 1px solid rgba(27, 77, 62, 0.92);
 }
 
 .ops-sidebar-nav {
@@ -85,11 +85,11 @@
 }
 
 .ops-sidebar-section-title {
-  font-size: 10px;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #64748B;
+  color: rgba(255, 255, 255, 0.72);
   padding: 0.85rem 0.75rem 0.35rem;
 }
 
@@ -98,7 +98,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.55rem 0.75rem;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 500;
   color: #94A3B8;
   border-radius: 0.5rem;
@@ -119,7 +119,7 @@
 
 .ops-sidebar-badge {
   margin-left: auto;
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   padding: 0.1rem 0.45rem;
   border-radius: 9999px;
@@ -173,9 +173,9 @@
 }
 
 .ops-role-select {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 600;
-  color: #0F172A;
+  color: var(--color-primary);
   background: transparent;
   border: none;
   outline: none;
@@ -193,7 +193,7 @@
 
 /* Disclaimer / Compliance Banners */
 .ops-iso-banner {
-  background-color: #F0FDF4;
+  background-color: var(--color-surface);
   border: 1px solid #BBF7D0;
   border-left: 4px solid var(--ops-primary);
   border-radius: 0.5rem;
@@ -201,7 +201,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: #166534;
   margin-bottom: 1.5rem;
 }
@@ -235,7 +235,7 @@
 }
 
 .ops-stat-label {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -243,15 +243,15 @@
 }
 
 .ops-stat-value {
-  font-size: 1.75rem;
+  font-size: var(--font-heading-size);
   font-weight: 800;
-  color: #0F172A;
+  color: var(--color-primary);
   margin-top: 0.25rem;
   letter-spacing: -0.02em;
 }
 
 .ops-stat-sub {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--ops-slate-500);
   margin-top: 0.35rem;
   display: flex;
@@ -289,15 +289,15 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
 }
 
 .ops-table th {
-  background-color: #F8FAFC;
+  background-color: var(--color-surface);
   color: var(--ops-slate-600);
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.6875rem;
+  font-size: var(--font-body-size);
   letter-spacing: 0.05em;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--ops-border);
@@ -307,12 +307,12 @@
 .ops-table td {
   padding: 0.875rem 1rem;
   border-bottom: 1px solid var(--ops-border-subtle);
-  color: #334155;
+  color: var(--color-black);
   vertical-align: middle;
 }
 
 .ops-table tr:hover td {
-  background-color: #F8FAFC;
+  background-color: var(--color-surface);
 }
 
 /* Status Badges */
@@ -322,14 +322,14 @@
   gap: 0.35rem;
   padding: 0.2rem 0.55rem;
   border-radius: 9999px;
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 600;
   text-transform: capitalize;
   white-space: nowrap;
 }
 
 .ops-badge-success {
-  background-color: #ECFDF5;
+  background-color: var(--color-surface);
   color: #065F46;
   border: 1px solid #A7F3D0;
 }
@@ -374,7 +374,7 @@
   height: 26px;
   border-radius: 0.25rem;
   border: none;
-  font-size: 0.6875rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -387,11 +387,11 @@
 
 .ops-att-btn:hover {
   background-color: #E2E8F0;
-  color: #0F172A;
+  color: var(--color-primary);
 }
 
 .ops-att-btn.is-present {
-  background-color: #108B44;
+  background-color: var(--color-primary);
   color: #FFFFFF;
 }
 
@@ -450,7 +450,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   color: #64748B;
   transition: all 0.2s ease;
@@ -465,11 +465,11 @@
 .ops-step-item.is-current .ops-step-circle {
   border-color: var(--ops-primary);
   color: var(--ops-primary);
-  box-shadow: 0 0 0 4px #ECFDF5;
+  box-shadow: 0 0 0 4px var(--color-surface);
 }
 
 .ops-step-label {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: #475569;
   margin-top: 0.5rem;
@@ -528,7 +528,7 @@
 .ops-modal-footer {
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--ops-border);
-  background-color: #F8FAFC;
+  background-color: var(--color-surface);
   display: flex;
   align-items: center;
   justify-content: flex-end;

@@ -7,10 +7,10 @@
   <meta name="description" content="Collaborate with Open ECDL as an expert faculty member. Facilitate executive masterclasses, corporate academies, and professional capability programmes in Bangladesh." />
   <link rel="canonical" href="https://open.ecdl.com.bd/become-an-instructor" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
           },
           boxShadow: {
-            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
-            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -69,7 +87,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">FACULTY RECRUITMENT</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">FACULTY RECRUITMENT</span>
         <span class="text-neutral-300 hidden sm:inline">Partner with Bangladesh’s premier corporate learning institution</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -99,16 +117,16 @@
         <!-- Custom Brand SVG Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -128,15 +146,15 @@
               <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
                 <a href="courses.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="book-open" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">All Courses</div><div class="text-[11px] text-neutral-500 font-normal">Explore 24+ professional programmes</div></div>
+                  <div><div class="font-bold text-xs">All Courses</div><div class="text-xs text-neutral-500 font-normal">Explore 24+ professional programmes</div></div>
                 </a>
                 <a href="training-calendar.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="calendar" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Training Calendar</div><div class="text-[11px] text-neutral-500 font-normal">Chronological schedule &amp; month view</div></div>
+                  <div><div class="font-bold text-xs">Training Calendar</div><div class="text-xs text-neutral-500 font-normal">Chronological schedule &amp; month view</div></div>
                 </a>
                 <a href="category.html?slug=compliance-management" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="layers" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Course Categories</div><div class="text-[11px] text-neutral-500 font-normal">8 specialized professional domains</div></div>
+                  <div><div class="font-bold text-xs">Course Categories</div><div class="text-xs text-neutral-500 font-normal">8 specialized professional domains</div></div>
                 </a>
               </div>
             </div>
@@ -152,19 +170,19 @@
               <div class="bg-white rounded-2xl shadow-xl border border-neutral-100 p-3 space-y-1">
                 <a href="corporate-training.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="building-2" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Enterprise Overview</div><div class="text-[11px] text-neutral-500 font-normal">B2B customised learning &amp; academies</div></div>
+                  <div><div class="font-bold text-xs">Enterprise Overview</div><div class="text-xs text-neutral-500 font-normal">B2B customised learning &amp; academies</div></div>
                 </a>
                 <a href="corporate-tna.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="clipboard-check" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Training Needs Assessment</div><div class="text-[11px] text-neutral-500 font-normal">6-step capability diagnostic tool</div></div>
+                  <div><div class="font-bold text-xs">Training Needs Assessment</div><div class="text-xs text-neutral-500 font-normal">6-step capability diagnostic tool</div></div>
                 </a>
                 <a href="corporate-proposal.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="file-text" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Request a Proposal</div><div class="text-[11px] text-neutral-500 font-normal">Tiered pricing &amp; custom quotation</div></div>
+                  <div><div class="font-bold text-xs">Request a Proposal</div><div class="text-xs text-neutral-500 font-normal">Tiered pricing &amp; custom quotation</div></div>
                 </a>
                 <a href="corporate-case-studies.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-ecdl-greenSoft text-neutral-700 hover:text-ecdl-green transition-colors">
                   <div class="w-8 h-8 rounded-lg bg-ecdl-green/10 flex items-center justify-center text-ecdl-green"><i data-lucide="trophy" class="w-4 h-4"></i></div>
-                  <div><div class="font-bold text-xs">Case Studies</div><div class="text-[11px] text-neutral-500 font-normal">Documented client transformations</div></div>
+                  <div><div class="font-bold text-xs">Case Studies</div><div class="text-xs text-neutral-500 font-normal">Documented client transformations</div></div>
                 </a>
               </div>
             </div>
@@ -184,7 +202,7 @@
           <!-- Profile / Sign In Pill -->
           <div class="relative">
             <button id="profileBtn" type="button" onclick="toggleProfileDropdown()" class="flex items-center gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-xl border border-neutral-200 hover:border-ecdl-green transition-colors text-xs font-bold text-neutral-700">
-              <span id="profileAvatarBadge" class="w-6 h-6 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center text-[11px] font-black uppercase">IN</span>
+              <span id="profileAvatarBadge" class="w-6 h-6 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center text-xs font-black uppercase">IN</span>
               <span id="profileBtnLabel" class="hidden sm:inline">Sign In</span>
               <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-neutral-400"></i>
             </button>
@@ -295,7 +313,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Pillar 1 -->
-        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+        <div class="p-7 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center font-bold">
             <i data-lucide="building-2" class="w-6 h-6"></i>
           </div>
@@ -306,7 +324,7 @@
         </div>
 
         <!-- Pillar 2 -->
-        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+        <div class="p-7 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center font-bold">
             <i data-lucide="target" class="w-6 h-6"></i>
           </div>
@@ -317,7 +335,7 @@
         </div>
 
         <!-- Pillar 3 -->
-        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+        <div class="p-7 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
             <i data-lucide="file-check" class="w-6 h-6"></i>
           </div>
@@ -328,7 +346,7 @@
         </div>
 
         <!-- Pillar 4 -->
-        <div class="p-7 rounded-3xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
+        <div class="p-7 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-ecdl-green transition-all shadow-sm space-y-4">
           <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold">
             <i data-lucide="banknote" class="w-6 h-6"></i>
           </div>
@@ -581,7 +599,7 @@
       </div>
 
       <!-- Application Form Container -->
-      <div id="instructor-form-container" class="bg-neutral-50 border border-neutral-200 rounded-3xl p-6 sm:p-10 shadow-card">
+      <div id="instructor-form-container" class="bg-neutral-50 border border-neutral-200 rounded-xl p-6 sm:p-10 shadow-card">
         <form id="become-instructor-form" onsubmit="handleInstructorApplication(event)" class="space-y-6">
           
           <!-- Personal / Contact Details -->
@@ -688,7 +706,7 @@
                 <i data-lucide="file-text" class="w-4 h-4 text-ecdl-green"></i>
                 <span id="instructor-file-name" class="font-bold text-ecdl-dark">resume.pdf</span>
               </div>
-              <button type="button" onclick="removeAttachedFile()" class="text-neutral-500 hover:text-ecdl-orange p-1">
+              <button type="button" onclick="removeAttachedFile()" class="text-neutral-500 hover:text-[#1B4D3E] p-1">
                 <i data-lucide="x" class="w-4 h-4"></i>
               </button>
             </div>
@@ -717,7 +735,7 @@
       </div>
 
       <!-- Simulated Success Container -->
-      <div id="instructor-success-container" class="hidden bg-white border border-ecdl-green rounded-3xl p-8 sm:p-12 text-center shadow-card space-y-6">
+      <div id="instructor-success-container" class="hidden bg-white border border-ecdl-green rounded-xl p-8 sm:p-12 text-center shadow-card space-y-6">
         <div class="w-16 h-16 rounded-full bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mx-auto">
           <i data-lucide="check-circle" class="w-10 h-10"></i>
         </div>
@@ -736,8 +754,8 @@
         </div>
 
         <div class="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 max-w-xs mx-auto">
-          <span class="text-[11px] font-bold text-neutral-500 block uppercase">Application Reference Code:</span>
-          <strong id="instructor-confirm-ref" class="font-mono text-base font-extrabold text-ecdl-green">ECDL-FAC-2026-000000</strong>
+          <span class="text-xs font-bold text-neutral-500 block uppercase">Application Reference Code:</span>
+          <strong id="instructor-confirm-ref" class="font-sans text-base font-extrabold text-ecdl-green">ECDL-FAC-2026-000000</strong>
         </div>
 
         <div class="pt-2">
@@ -818,7 +836,7 @@
   <!-- ========================================================= -->
   <!-- 8. SITE-WIDE FOOTER                                       -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white border-t border-white/10">
+  <footer class="bg-[#123B30] text-white border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         
@@ -826,17 +844,17 @@
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="flex items-center gap-3" aria-label="ECDL Home">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div>
-              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
-              <span class="block text-xs text-neutral-400">Enroute Center for Development Ltd.</span>
+              <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-white/85">Enroute Center for Development Ltd.</span>
             </div>
           </a>
-          <p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+          <p class="text-xs text-white/85 leading-relaxed max-w-sm">
             Bangladesh’s leading corporate learning and capability development institution. Empowering professionals and organizations with practical, certified, high-impact training since 2017.
           </p>
         </div>
@@ -844,7 +862,7 @@
         <!-- Faculty Links -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Faculty &amp; Experts</h4>
-          <ul class="space-y-2 text-xs text-neutral-400">
+          <ul class="space-y-2 text-xs text-white/85">
             <li><a href="trainers.html" class="hover:text-ecdl-green transition-colors">Faculty Directory</a></li>
             <li><a href="become-an-instructor.html" class="text-ecdl-green font-bold">Become an Instructor</a></li>
             <li><a href="trainers.html?category=compliance-management" class="hover:text-ecdl-green transition-colors">Legal &amp; Compliance Experts</a></li>
@@ -856,7 +874,7 @@
         <!-- Corporate Solutions -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Corporate Solutions</h4>
-          <ul class="space-y-2 text-xs text-neutral-400">
+          <ul class="space-y-2 text-xs text-white/85">
             <li><a href="corporate-training.html" class="hover:text-ecdl-green transition-colors">Enterprise Training Hub</a></li>
             <li><a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors">Training Needs Assessment</a></li>
             <li><a href="corporate-proposal.html" class="hover:text-ecdl-green transition-colors">Request a Proposal</a></li>
@@ -869,10 +887,10 @@
         <!-- Contact & Headquarters -->
         <div class="space-y-3">
           <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider">Headquarters</h4>
-          <div class="text-xs text-neutral-400 space-y-2">
+          <div class="text-xs text-white/85 space-y-2">
             <p class="leading-relaxed">House 18, Road 24, Block K, Banani, Dhaka-1213, Bangladesh</p>
-            <p>Direct: <a href="tel:+8801767804408" class="text-white hover:text-ecdl-yellow font-semibold">+8801767804408</a></p>
-            <p>Faculty Desk: <a href="mailto:faculty@ecdl.com.bd" class="text-white hover:text-ecdl-yellow font-semibold">faculty@ecdl.com.bd</a></p>
+            <p>Direct: <a href="tel:+8801767804408" class="text-white hover:text-[#C9A227] font-semibold">+8801767804408</a></p>
+            <p>Faculty Desk: <a href="mailto:faculty@ecdl.com.bd" class="text-white hover:text-[#C9A227] font-semibold">faculty@ecdl.com.bd</a></p>
             <div class="pt-2">
               <button type="button" onclick="openVerifyModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold text-ecdl-yellow transition-colors">
                 <i data-lucide="award" class="w-3.5 h-3.5"></i>
@@ -885,9 +903,9 @@
       </div>
 
       <!-- Bottom Legal Strip -->
-      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
         <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
-        <div class="flex items-center gap-6 text-neutral-400">
+        <div class="flex items-center gap-6 text-white/85">
           <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
           <a href="#compensation" class="hover:text-white transition-colors">Faculty Honorarium Policy</a>
@@ -914,7 +932,7 @@
         Enter the Certificate Identification Number printed at the bottom of the issued credential.
       </p>
       <div class="space-y-2">
-        <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="w-full px-4 py-3 rounded-xl border border-neutral-300 font-mono text-sm focus:border-ecdl-green focus:outline-none uppercase" />
+        <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="w-full px-4 py-3 rounded-xl border border-neutral-300 font-sans text-sm focus:border-ecdl-green focus:outline-none uppercase" />
         <button type="button" onclick="handleModalVerify()" class="w-full py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-extrabold text-sm transition-colors shadow">
           Verify Credential Authenticity
         </button>
@@ -941,7 +959,7 @@
       if (currentUser.loggedIn) {
         if (badge) badge.textContent = currentUser.initials;
         if (label) label.textContent = 'Profile';
-        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\'Viewing enrolled courses for ' + currentUser.name + '\', \'info\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-[#1B4D3E] font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
       } else {
         if (badge) badge.textContent = 'IN';
         if (label) label.textContent = 'Sign In';
@@ -961,7 +979,7 @@
       res.classList.remove('hidden');
       const rec = CERTIFICATES[val];
       if (rec) {
-        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p></div>';
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-sans font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p></div>';
       } else {
         res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>\"' + val + '\" is not registered.</p></div>';
       }

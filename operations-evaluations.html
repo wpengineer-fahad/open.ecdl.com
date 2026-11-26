@@ -10,23 +10,50 @@
   <!-- Fonts & CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              dark: '#0F172A',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -48,11 +75,11 @@
     <!-- Operations Sidebar -->
     <aside class="ops-sidebar" id="ops-sidebar" aria-label="Operations Navigation">
       <div class="ops-sidebar-brand">
-        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-display font-bold text-base tracking-tight">
-          <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center font-black text-white text-sm">EC</div>
+        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-sans font-bold text-base tracking-tight">
+          <div class="w-8 h-8 rounded bg-[#C9A227] text-black flex items-center justify-center font-black text-white text-sm">EC</div>
           <div>
             <span>Open ECDL</span>
-            <div class="text-[10px] text-emerald-400 font-mono tracking-normal uppercase">Operations Hub</div>
+            <div class="text-xs text-[#C9A227] font-sans tracking-normal uppercase">Operations Hub</div>
           </div>
         </a>
         <button id="ops-sidebar-close" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Close Sidebar">
@@ -60,11 +87,11 @@
         </button>
       </div>
 
-      <div class="px-4 py-3 bg-slate-900/60 border-b border-slate-800 flex items-center gap-3">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-emerald-500 shrink-0 ops-user-avatar" />
+      <div class="px-4 py-3 bg-black/20 border-b border-white/15 flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-[#C9A227] shrink-0 ops-user-avatar" />
         <div class="min-w-0 flex-1">
           <div class="text-xs font-bold text-white truncate ops-user-name">Nahid Hasan</div>
-          <div class="text-[11px] text-emerald-400 font-medium truncate ops-user-role-label">Training Manager</div>
+          <div class="text-xs text-[#C9A227] font-medium truncate ops-user-role-label">Training Manager</div>
         </div>
       </div>
 
@@ -129,13 +156,13 @@
           </button>
           <div>
             <h1 class="text-sm font-bold text-slate-900">Kirkpatrick Evaluation & Learning Analytics</h1>
-            <div class="text-[11px] text-slate-500">Levels 1, 2 & 3: Reaction, Pre/Post Knowledge Gain & 60-Day Behavioral Transfer</div>
+            <div class="text-xs text-slate-500">Levels 1, 2 & 3: Reaction, Pre/Post Knowledge Gain & 60-Day Behavioral Transfer</div>
           </div>
         </div>
 
         <div class="flex items-center gap-2">
           <div class="ops-role-pill">
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
             <select class="ops-role-select text-xs font-semibold text-slate-900 bg-transparent cursor-pointer">
               <option value="manager">Training Manager (Nahid Hasan)</option>
               <option value="coordinator">Course Coordinator (Afroza Sultana)</option>
@@ -160,12 +187,12 @@
           <!-- Level 1: Reaction -->
           <div class="ops-card p-5 border-t-4 border-t-emerald-600">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 1</span>
-              <span class="ops-badge ops-badge-success text-[10px]">World Class</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 1</span>
+              <span class="ops-badge ops-badge-success text-xs">World Class</span>
             </div>
             <div class="text-2xl font-black text-slate-900 mt-2" id="eval-metric-l1">4.88 / 5.00</div>
             <div class="text-xs text-slate-600 font-semibold mt-1">Participant Reaction & Content Relevance</div>
-            <p class="text-[11px] text-slate-500 mt-2">
+            <p class="text-xs text-slate-500 mt-2">
               Aggregated across 348 post-session evaluations. Net Promoter Score: <strong class="text-emerald-700" id="eval-metric-nps">+84 NPS</strong>.
             </p>
           </div>
@@ -173,14 +200,14 @@
           <!-- Level 2: Learning Gain -->
           <div class="ops-card p-5 border-t-4 border-t-blue-600">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 2</span>
-              <span class="ops-badge ops-badge-info text-[10px]">Pre vs Post Test</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 2</span>
+              <span class="ops-badge ops-badge-info text-xs">Pre vs Post Test</span>
             </div>
             <div class="text-2xl font-black text-blue-700 mt-2" id="eval-metric-l2-gain">+43.4% Net Gain</div>
             <div class="text-xs text-slate-600 font-semibold mt-1">
               Baseline: <span id="eval-metric-l2-pre">45.8%</span> &rarr; Post-Cohort: <strong class="text-emerald-700" id="eval-metric-l2-post">89.2%</strong>
             </div>
-            <p class="text-[11px] text-slate-500 mt-2">
+            <p class="text-xs text-slate-500 mt-2">
               Statistically validated knowledge retention across statutory jurisprudence and negotiation cases.
             </p>
           </div>
@@ -188,12 +215,12 @@
           <!-- Level 3: Behavioral Transfer -->
           <div class="ops-card p-5 border-t-4 border-t-purple-600">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 3</span>
-              <span class="ops-badge ops-badge-neutral text-[10px]">60-Day Manager Survey</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kirkpatrick Level 3</span>
+              <span class="ops-badge ops-badge-neutral text-xs">60-Day Manager Survey</span>
             </div>
             <div class="text-2xl font-black text-purple-700 mt-2" id="eval-metric-l3">4.72 / 5.00</div>
             <div class="text-xs text-slate-600 font-semibold mt-1">On-The-Job Application & Behavioral Transfer</div>
-            <p class="text-[11px] text-slate-500 mt-2">
+            <p class="text-xs text-slate-500 mt-2">
               Evaluated by line managers and HR business partners 60 days post-training completion.
             </p>
           </div>

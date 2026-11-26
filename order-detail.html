@@ -7,10 +7,10 @@
   <meta name="description" content="View your order status, participant allocations, payment verification, and Mushak 6.3 tax invoice." />
   <link rel="canonical" href="https://open.ecdl.com.bd/orders" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -43,12 +65,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/header-footer.css" />
-  <link rel="stylesheet" href="assets/css/checkout.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/header-footer.css" />
+  <link rel="stylesheet" href="/assets/css/checkout.css" />
 </head>
 <body class="bg-neutral-50 text-neutral-800 antialiased font-sans flex flex-col min-h-screen">
 
@@ -58,7 +80,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">ORDER STATUS VIEWER</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">ORDER STATUS VIEWER</span>
         <span class="text-neutral-300 hidden sm:inline">Enroute Center for Development Ltd. • Official Learner &amp; Corporate Record</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -81,16 +103,16 @@
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -131,7 +153,7 @@
       <div class="ecdl-reviewer-bar no-print" id="reviewer-status-toolbar">
         <div class="ecdl-reviewer-bar__title">
           <span>🛠️ Prototype Demonstration: Reviewer Order Status Switcher (9 States)</span>
-          <span class="text-[10px] text-neutral-400">Click any state to preview UI &amp; notices live</span>
+          <span class="text-xs text-neutral-400">Click any state to preview UI &amp; notices live</span>
         </div>
         <div class="ecdl-reviewer-pills">
           <button type="button" class="ecdl-reviewer-pill is-active" data-state="paid" onclick="OpenECDLOrder.switchState('paid')">
@@ -179,7 +201,7 @@
           <div>
             <div class="flex items-center gap-3">
               <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider">Order Reference</span>
-              <span id="ord-type-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-neutral-100 text-neutral-800">Individual Learner</span>
+              <span id="ord-type-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-neutral-100 text-neutral-800">Individual Learner</span>
             </div>
             <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 mt-1" id="ord-id">
               ECDL-ORD-2026-1042
@@ -217,14 +239,14 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-neutral-700">
               <div>
-                <span class="text-neutral-400 block text-[11px]">Primary Contact:</span>
+                <span class="text-neutral-400 block text-xs">Primary Contact:</span>
                 <strong id="ord-cust-name" class="text-neutral-900 text-sm">Naveed Karim</strong>
                 <div id="ord-cust-contact" class="text-neutral-500 mt-0.5">naveed.karim@unilever.com • +880 1711-223344</div>
               </div>
               <div>
-                <span class="text-neutral-400 block text-[11px]">Organization &amp; Designation:</span>
+                <span class="text-neutral-400 block text-xs">Organization &amp; Designation:</span>
                 <div id="ord-cust-org" class="font-semibold text-neutral-800">Commercial Sales Director • Unilever Bangladesh Ltd.</div>
-                <div id="ord-cust-tin" class="text-neutral-500 font-mono text-[11px] mt-0.5">BIN: 001928412-0102</div>
+                <div id="ord-cust-tin" class="text-neutral-500 font-sans text-xs mt-0.5">BIN: 001928412-0102</div>
               </div>
             </div>
           </div>
@@ -280,8 +302,8 @@
             <div class="p-4 bg-white rounded-xl border border-amber-200 text-xs text-neutral-700 space-y-1">
               <div><strong>Bank:</strong> Prime Bank PLC (Banani Branch)</div>
               <div><strong>Account Name:</strong> Enroute Center for Development Ltd.</div>
-              <div><strong>Account No:</strong> <span class="font-mono font-bold text-neutral-900">2118311029481</span></div>
-              <div><strong>Routing No:</strong> <span class="font-mono">060260421</span></div>
+              <div><strong>Account No:</strong> <span class="font-sans font-bold text-neutral-900">2118311029481</span></div>
+              <div><strong>Routing No:</strong> <span class="font-sans">060260421</span></div>
             </div>
           </div>
 
@@ -318,12 +340,12 @@
 
             <div class="mt-6 pt-4 border-t border-neutral-100 text-xs text-neutral-600 space-y-2">
               <div>
-                <span class="text-neutral-400 block text-[11px]">Payment Mode:</span>
+                <span class="text-neutral-400 block text-xs">Payment Mode:</span>
                 <span id="ord-pay-gateway" class="font-bold text-neutral-800">Credit / Debit Card (Mastercard World)</span>
               </div>
               <div>
-                <span class="text-neutral-400 block text-[11px]">Transaction / Ref ID:</span>
-                <span id="ord-pay-txn" class="font-mono font-bold text-neutral-900 text-xs">TXN-SSL-9928174</span>
+                <span class="text-neutral-400 block text-xs">Transaction / Ref ID:</span>
+                <span id="ord-pay-txn" class="font-sans font-bold text-neutral-900 text-xs">TXN-SSL-9928174</span>
               </div>
             </div>
 
@@ -339,10 +361,10 @@
           <!-- Help Card -->
           <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm text-xs text-neutral-600 space-y-2 no-print">
             <h4 class="font-bold text-neutral-900">Need Billing Support?</h4>
-            <p class="text-[11px] leading-relaxed text-neutral-500">
+            <p class="text-xs leading-relaxed text-neutral-500">
               Our corporate billing desk is available Saturday through Thursday, 9:00 AM – 6:00 PM BST.
             </p>
-            <div class="pt-1 flex flex-col gap-1 text-[11px]">
+            <div class="pt-1 flex flex-col gap-1 text-xs">
               <a href="tel:+8801767804408" class="text-ecdl-green font-bold hover:underline flex items-center gap-1">
                 <i data-lucide="phone" class="w-3 h-3"></i> +880 1767-804408
               </a>
@@ -362,9 +384,9 @@
   <!-- ========================================================= -->
   <!-- 4. FOOTER                                                 -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white pt-8 pb-8 border-t border-white/10 mt-auto no-print">
+  <footer class="bg-[#123B30] text-white pt-8 pb-8 border-t border-white/10 mt-auto no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
         <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="courses.html" class="hover:text-white transition-colors">Courses</a>
@@ -378,10 +400,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/components.js"></script>
-  <script src="assets/js/header-footer.js"></script>
-  <script src="assets/js/checkout.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/header-footer.js"></script>
+  <script src="/assets/js/checkout.js"></script>
   <script>
     if (window.lucide) {
       window.lucide.createIcons();

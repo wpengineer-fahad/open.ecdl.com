@@ -7,10 +7,10 @@
   <meta name="description" content="Register as an individual learner on Open ECDL. Enroll in executive masterclasses, statutory compliance workshops, and verified certificate programmes." />
   <link rel="canonical" href="https://open.ecdl.com.bd/register" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
           },
           boxShadow: {
-            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
-            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -67,16 +85,16 @@
         <div class="flex items-center justify-between mb-8">
           <a href="index.html" class="flex items-center gap-3 group" aria-label="ECDL Home">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div class="leading-tight">
               <span class="block font-display text-lg font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
                 ECDL
               </span>
-              <span class="block text-[10px] font-medium text-neutral-500">
+              <span class="block text-xs font-medium text-neutral-500">
                 Enroute Center for Development
               </span>
             </div>
@@ -107,7 +125,7 @@
             <!-- Full Name -->
             <div>
               <label for="reg-name" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
-                Full Name <span class="text-ecdl-orange">*</span>
+                Full Name <span class="text-[#1B4D3E]">*</span>
               </label>
               <input 
                 type="text" 
@@ -116,7 +134,7 @@
                 placeholder="e.g. Tanvir Chowdhury" 
                 class="auth-input"
               />
-              <span id="regNameError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+              <span id="regNameError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
             </div>
 
             <!-- Email & Phone Grid -->
@@ -124,7 +142,7 @@
               <!-- Email -->
               <div>
                 <label for="reg-email" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
-                  Email Address <span class="text-ecdl-orange">*</span>
+                  Email Address <span class="text-[#1B4D3E]">*</span>
                 </label>
                 <input 
                   type="email" 
@@ -133,13 +151,13 @@
                   placeholder="name@company.com" 
                   class="auth-input"
                 />
-                <span id="regEmailError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+                <span id="regEmailError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
               </div>
 
               <!-- Phone -->
               <div>
                 <label for="reg-phone" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
-                  Mobile Number <span class="text-ecdl-orange">*</span>
+                  Mobile Number <span class="text-[#1B4D3E]">*</span>
                 </label>
                 <input 
                   type="tel" 
@@ -148,14 +166,14 @@
                   placeholder="+880 17XXXXXXXX" 
                   class="auth-input"
                 />
-                <span id="regPhoneError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+                <span id="regPhoneError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
               </div>
             </div>
 
             <!-- Password -->
             <div>
               <label for="reg-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
-                Password <span class="text-ecdl-orange">*</span>
+                Password <span class="text-[#1B4D3E]">*</span>
               </label>
               
               <div class="relative">
@@ -180,8 +198,8 @@
               <!-- Password Strength Meter -->
               <div class="mt-2 space-y-1.5">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="text-neutral-500 text-[11px]">Password Strength:</span>
-                  <span id="strengthLabel" class="text-neutral-400 font-bold text-[11px]">None</span>
+                  <span class="text-neutral-500 text-xs">Password Strength:</span>
+                  <span id="strengthLabel" class="text-neutral-400 font-bold text-xs">None</span>
                 </div>
                 <div class="password-meter-bar">
                   <div id="strengthSegment" class="strength-segment"></div>
@@ -208,13 +226,13 @@
                 </div>
               </div>
 
-              <span id="regPasswordError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+              <span id="regPasswordError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
             </div>
 
             <!-- Confirm Password -->
             <div>
               <label for="reg-password-confirm" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
-                Confirm Password <span class="text-ecdl-orange">*</span>
+                Confirm Password <span class="text-[#1B4D3E]">*</span>
               </label>
               
               <div class="relative">
@@ -235,7 +253,7 @@
                   <i data-lucide="eye-off" class="w-4 h-4 hidden"></i>
                 </button>
               </div>
-              <span id="regConfirmError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+              <span id="regConfirmError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
             </div>
 
             <!-- Terms Acceptance -->
@@ -251,7 +269,7 @@
                   I agree to the Open ECDL <a href="quality-assurance.html" class="text-ecdl-green font-semibold hover:underline">Terms of Service</a> and acknowledge the institutional <a href="contact.html" class="text-ecdl-green font-semibold hover:underline">Privacy Policy</a>.
                 </span>
               </label>
-              <span id="regTermsError" class="hidden text-[11px] text-red-600 font-medium mt-1 block"></span>
+              <span id="regTermsError" class="hidden text-xs text-red-600 font-medium mt-1 block"></span>
             </div>
 
             <!-- Submit Button -->
@@ -330,23 +348,23 @@
           <span class="w-2 h-2 rounded-full bg-ecdl-yellow"></span>
           <span>Tutor LMS Student Registry</span>
         </div>
-        <span class="text-xs text-neutral-300 font-mono">Banani Campus</span>
+        <span class="text-xs text-neutral-300 font-sans">Banani Campus</span>
       </div>
 
       <!-- Middle Quote Card -->
       <div class="relative z-10 max-w-lg space-y-4">
-        <div class="p-6 sm:p-8 rounded-3xl bg-neutral-900/80 backdrop-blur-md border border-white/15 text-white shadow-2xl">
+        <div class="p-6 sm:p-8 rounded-xl bg-neutral-900/80 backdrop-blur-md border border-white/15 text-white shadow-2xl">
           <div class="text-ecdl-yellow text-2xl font-serif leading-none mb-3">“</div>
           <p class="text-sm sm:text-base leading-relaxed text-neutral-200 italic font-serif">
             Open ECDL gives you direct access to Supreme Court advocates, chartered accountants, and seasoned C-Suite practitioners who dissect actual Bangladesh commercial realities.
           </p>
           <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-ecdl-orange text-white font-bold text-xs flex items-center justify-center">
+            <div class="w-9 h-9 rounded-full bg-ecdl-yellow text-black font-bold text-xs flex items-center justify-center">
               RI
             </div>
             <div>
               <div class="text-xs font-bold text-white">Advocate Rafiqul Islam</div>
-              <div class="text-[11px] text-neutral-400">Supreme Court of Bangladesh &amp; Lead Faculty</div>
+              <div class="text-xs text-neutral-400">Supreme Court of Bangladesh &amp; Lead Faculty</div>
             </div>
           </div>
         </div>
@@ -359,7 +377,7 @@
           <span>•</span>
           <span class="font-bold text-white">94.6% Satisfaction</span>
         </div>
-        <span class="text-[11px] text-neutral-400 font-mono">Tutor LMS WordPress Standard</span>
+        <span class="text-xs text-neutral-400 font-sans">Tutor LMS WordPress Standard</span>
       </div>
 
     </div>

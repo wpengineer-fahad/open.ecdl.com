@@ -51,8 +51,8 @@
 }
 
 .ecdl-hero-headline {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-hero);
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: var(--letter-spacing-tight);
@@ -78,7 +78,7 @@
 }
 
 .ecdl-hero-lead {
-  font-size: var(--font-size-body-lead);
+  font-size: var(--font-body-size);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-lg);
@@ -102,7 +102,7 @@
 }
 
 .ecdl-hero-discovery__label {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -120,7 +120,7 @@
 }
 
 .ecdl-hero-chip {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   background-color: var(--ecdl-color-white);
   border: 1px solid var(--ecdl-color-borders);
@@ -152,7 +152,7 @@
   aspect-ratio: 4 / 4.6;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.08);
+  box-shadow: 0 6px 18px rgba(27, 77, 62, 0.08);
   border: 1px solid var(--ecdl-color-borders);
   background-color: var(--ecdl-color-surface);
 }
@@ -168,12 +168,12 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: var(--ecdl-color-black);
+  background-color: var(--color-primary);
   color: var(--ecdl-color-white);
   padding: 6px 12px;
   border-radius: var(--radius-xs);
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -203,15 +203,15 @@
 }
 
 .ecdl-hero-floating-card__num {
-  font-family: var(--font-family-heading);
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-green);
   line-height: 1;
 }
 
 .ecdl-hero-floating-card__text {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   line-height: 1.35;
@@ -257,8 +257,8 @@
 }
 
 .ecdl-impact-numeral {
-  font-family: var(--font-family-heading);
-  font-size: clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   line-height: 1;
   color: var(--ecdl-color-black);
@@ -267,15 +267,15 @@
 }
 
 .ecdl-impact-label {
-  font-family: var(--font-family-heading);
-  font-size: 1.0625rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 6px;
 }
 
 .ecdl-impact-desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
@@ -291,8 +291,8 @@
 }
 
 .ecdl-client-strip__title {
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -313,8 +313,8 @@
   border: 1px solid var(--ecdl-color-borders);
   border-radius: var(--radius-xs);
   padding: 8px 14px;
-  font-family: var(--font-family-heading);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-neutral-800);
 }
@@ -427,8 +427,8 @@
 }
 
 .ecdl-cat-card__count {
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--color-text-secondary);
   background-color: var(--ecdl-color-surface);
@@ -438,8 +438,8 @@
 }
 
 .ecdl-cat-card__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
@@ -447,7 +447,7 @@
 }
 
 .ecdl-cat-card__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-md);
@@ -458,8 +458,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--font-family-heading);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-green);
 }
@@ -521,8 +521,8 @@
 }
 
 .ecdl-split-card__title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   line-height: 1.25;
   margin-bottom: var(--space-sm);
@@ -537,7 +537,7 @@
 }
 
 .ecdl-split-card__desc {
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   margin-bottom: var(--space-lg);
 }
@@ -563,7 +563,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.45;
 }
 
@@ -630,23 +630,23 @@
 }
 
 .ecdl-pillar-num {
-  font-family: var(--font-family-mono);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-green);
   margin-bottom: var(--space-sm);
 }
 
 .ecdl-pillar-title {
-  font-family: var(--font-family-heading);
-  font-size: 1.1875rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-pillar-desc {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
@@ -701,14 +701,14 @@
 }
 
 .ecdl-upcoming-date-text {
-  font-family: var(--font-family-heading);
-  font-size: 1.0625rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
 }
 
 .ecdl-upcoming-schedule-text {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -717,15 +717,15 @@
 }
 
 .ecdl-upcoming-title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 4px;
 }
 
 .ecdl-upcoming-meta {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   display: flex;
   flex-wrap: wrap;
@@ -774,23 +774,23 @@
 }
 
 .ecdl-journey-step__num {
-  font-family: var(--font-family-mono);
-  font-size: 1.5rem;
+  font-family: var(--font-body);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-green);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-journey-step__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 6px;
 }
 
 .ecdl-journey-step__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.55;
   margin: 0;
@@ -882,7 +882,7 @@
 }
 
 .ecdl-pathway-card__target {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -891,8 +891,8 @@
 }
 
 .ecdl-pathway-card__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.1875rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
@@ -900,7 +900,7 @@
 }
 
 .ecdl-pathway-card__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-md);
@@ -915,13 +915,13 @@
   border-top: 1px solid var(--ecdl-color-borders);
   border-bottom: 1px solid var(--ecdl-color-borders);
   margin-bottom: var(--space-md);
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--color-text-secondary);
 }
 
 .ecdl-pathway-card__credential {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-black);
   display: flex;
@@ -967,8 +967,8 @@
 }
 
 .ecdl-outcome-metric-val {
-  font-family: var(--font-family-heading);
-  font-size: 2.75rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-green);
   line-height: 1;
@@ -976,15 +976,15 @@
 }
 
 .ecdl-outcome-metric-label {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 6px;
 }
 
 .ecdl-outcome-metric-desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
@@ -1012,7 +1012,7 @@
 }
 
 .ecdl-case-note-tag {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--ecdl-color-green);
@@ -1021,22 +1021,22 @@
 }
 
 .ecdl-case-note-title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: 4px;
 }
 
 .ecdl-case-note-org {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-case-note-outcome {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--ecdl-neutral-700);
   line-height: 1.55;
   margin: 0;
@@ -1083,7 +1083,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-xs);
 }
@@ -1096,8 +1096,8 @@
 }
 
 .ecdl-insight-card__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   margin-bottom: var(--space-xs);
@@ -1105,7 +1105,7 @@
 }
 
 .ecdl-insight-card__summary {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-md);
@@ -1113,7 +1113,7 @@
 }
 
 .ecdl-insight-card__author {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
   padding-top: var(--space-xs);
@@ -1141,7 +1141,7 @@
 }
 
 .ecdl-final-cta-box {
-  background-color: var(--ecdl-color-black);
+  background-color: var(--color-primary);
   color: var(--ecdl-color-white);
   border-radius: var(--radius-sm);
   padding: clamp(2rem, 4vw, 4rem);
@@ -1154,8 +1154,8 @@
 }
 
 .ecdl-final-cta-title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
   font-weight: 800;
   line-height: 1.15;
   color: var(--ecdl-color-white);
@@ -1163,7 +1163,7 @@
 }
 
 .ecdl-final-cta-desc {
-  font-size: var(--font-size-body-lead);
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--color-text-on-dark-muted);
   max-width: 580px;
@@ -1185,7 +1185,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-lg);
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   color: var(--color-text-on-dark-muted);
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-border-on-dark);

@@ -7,10 +7,10 @@
   <meta name="description" content="Manage your executive profile, professional affiliations, learning notifications, and password security." />
   <link rel="canonical" href="https://open.ecdl.com.bd/learner/settings" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -43,11 +65,11 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/learner.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/learner.css" />
 </head>
 <body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
 
@@ -60,14 +82,14 @@
       <div class="ecdl-sidebar-brand justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div>
-            <span class="block font-display text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
-            <span class="block text-[10px] text-neutral-400">Executive Academy</span>
+            <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL Learner</span>
+            <span class="block text-xs text-neutral-400">Executive Academy</span>
           </div>
         </a>
         <button type="button" class="lg:hidden text-neutral-400 hover:text-white p-1" id="portal-sidebar-close">
@@ -87,7 +109,7 @@
           <span class="ecdl-sidebar-badge">5</span>
         </a>
         <a href="/learner/courses/bangladesh-labour-act-2006-amendment-2026/learn" class="ecdl-sidebar-link">
-          <i data-lucide="play-circle" class="w-4 h-4 text-emerald-400"></i>
+          <i data-lucide="play-circle" class="w-4 h-4 text-[#C9A227]"></i>
           <span>LMS Course Player</span>
         </a>
         <a href="/learner/assessments" class="ecdl-sidebar-link">
@@ -130,7 +152,7 @@
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Naveed Karim" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/40" />
           <div class="flex-1 min-w-0">
             <div class="text-xs font-bold text-white truncate" id="sidebar-user-name">Naveed Karim</div>
-            <div class="text-[11px] text-neutral-400 truncate" id="sidebar-user-company">Unilever Bangladesh</div>
+            <div class="text-xs text-neutral-400 truncate" id="sidebar-user-company">Unilever Bangladesh</div>
           </div>
           <a href="/login" class="text-neutral-400 hover:text-white p-1" title="Sign Out">
             <i data-lucide="log-out" class="w-4 h-4"></i>
@@ -159,7 +181,7 @@
 
         <div class="flex items-center gap-3">
           <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
-            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span class="w-2 h-2 rounded-full bg-[#C9A227] text-black animate-pulse"></span>
             <span>Corporate Account Verified</span>
           </div>
           <a href="/account/select-portal" class="px-3 py-1.5 rounded-lg border border-neutral-200 hover:bg-neutral-50 text-neutral-700 text-xs font-bold transition flex items-center gap-1.5">
@@ -240,8 +262,8 @@
                 <label for="learner-fullname" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Full Name (For Certificate) *
                 </label>
-                <input type="text" id="learner-fullname" name="fullname" value="Naveed Karim" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
-                <p class="text-[11px] text-neutral-400 mt-1.5">Official name verified against national identity or corporate register.</p>
+                <input type="text" id="learner-fullname" name="fullname" value="Naveed Karim" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
+                <p class="text-xs text-neutral-400 mt-1.5">Official name verified against national identity or corporate register.</p>
               </div>
 
               <div>
@@ -249,33 +271,33 @@
                   Official Email Address *
                 </label>
                 <div class="relative">
-                  <input type="email" id="learner-email" name="email" value="naveed.karim@unilever.com" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 pr-24" />
-                  <span class="absolute right-3 top-1/2 -translate-y-1/2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+                  <input type="email" id="learner-email" name="email" value="naveed.karim@unilever.com" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227] pr-24" />
+                  <span class="absolute right-3 top-1/2 -translate-y-1/2 inline-flex items-center gap-1 text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
                     <i data-lucide="check" class="w-3 h-3"></i> Verified
                   </span>
                 </div>
-                <p class="text-[11px] text-neutral-400 mt-1.5">Used for cohort login, webinar links, and course access.</p>
+                <p class="text-xs text-neutral-400 mt-1.5">Used for cohort login, webinar links, and course access.</p>
               </div>
 
               <div>
                 <label for="learner-phone" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Contact Mobile Number *
                 </label>
-                <input type="tel" id="learner-phone" name="phone" value="+880 1711 000000" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
-                <p class="text-[11px] text-neutral-400 mt-1.5">Used for venue coordinates and WhatsApp classroom group dispatch.</p>
+                <input type="tel" id="learner-phone" name="phone" value="+880 1711 000000" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
+                <p class="text-xs text-neutral-400 mt-1.5">Used for venue coordinates and WhatsApp classroom group dispatch.</p>
               </div>
 
               <div>
                 <label for="learner-timezone" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Primary Timezone
                 </label>
-                <select id="learner-timezone" name="timezone" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white">
+                <select id="learner-timezone" name="timezone" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227] bg-white">
                   <option value="Asia/Dhaka" selected>Asia/Dhaka (GMT +6:00, Bangladesh Standard Time)</option>
                   <option value="Asia/Singapore">Asia/Singapore (GMT +8:00)</option>
                   <option value="Asia/Dubai">Asia/Dubai (GMT +4:00)</option>
                   <option value="Europe/London">Europe/London (GMT +0:00 / +1:00)</option>
                 </select>
-                <p class="text-[11px] text-neutral-400 mt-1.5">All webinar schedule dates adjust to this timezone.</p>
+                <p class="text-xs text-neutral-400 mt-1.5">All webinar schedule dates adjust to this timezone.</p>
               </div>
             </div>
           </div>
@@ -297,28 +319,28 @@
                 <label for="learner-organization" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Employing Organisation
                 </label>
-                <input type="text" id="learner-organization" name="organization" value="Unilever Bangladesh Ltd." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="text" id="learner-organization" name="organization" value="Unilever Bangladesh Ltd." class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
 
               <div>
                 <label for="learner-designation" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Official Designation / Title
                 </label>
-                <input type="text" id="learner-designation" name="designation" value="Commercial Sales Director" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="text" id="learner-designation" name="designation" value="Commercial Sales Director" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
 
               <div>
                 <label for="learner-department" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Department / Function
                 </label>
-                <input type="text" id="learner-department" name="department" value="Customer Development &amp; Trade Strategy" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="text" id="learner-department" name="department" value="Customer Development &amp; Trade Strategy" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
 
               <div>
                 <label for="learner-industry" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Industry Sector
                 </label>
-                <select id="learner-industry" name="industry" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white">
+                <select id="learner-industry" name="industry" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227] bg-white">
                   <option value="FMCG" selected>FMCG &amp; Retail Distribution</option>
                   <option value="Banking">Banking &amp; Financial Services</option>
                   <option value="RMG">Textiles &amp; Garments Manufacturing</option>
@@ -346,21 +368,21 @@
                 <label for="curr-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Current Password
                 </label>
-                <input type="password" id="curr-password" name="curr_password" placeholder="••••••••••••" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="password" id="curr-password" name="curr_password" placeholder="••••••••••••" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
 
               <div>
                 <label for="new-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   New Password
                 </label>
-                <input type="password" id="new-password" name="new_password" placeholder="Min 8 characters" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="password" id="new-password" name="new_password" placeholder="Min 8 characters" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
 
               <div>
                 <label for="confirm-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-2">
                   Confirm New Password
                 </label>
-                <input type="password" id="confirm-password" name="confirm_password" placeholder="Repeat new password" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Repeat new password" class="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs font-medium text-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-[#C9A227]" />
               </div>
             </div>
 
@@ -452,8 +474,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/learner.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/learner.js"></script>
   <script>
     if (window.lucide) {
       window.lucide.createIcons();

@@ -301,7 +301,7 @@
 
       relatedGrid.innerHTML = otherResources.map(r => `
         <article class="bg-white rounded-2xl border border-neutral-200 p-5 hover:border-ecdl-green transition-all shadow-sm group">
-          <span class="text-[11px] font-bold text-ecdl-green uppercase tracking-wider block mb-2">${r.type}</span>
+          <span class="text-xs font-bold text-ecdl-green uppercase tracking-wider block mb-2">${r.type}</span>
           <h4 class="font-display text-sm font-bold text-ecdl-dark group-hover:text-ecdl-green transition-colors line-clamp-2 mb-2">
             <a href="resource-detail.html?slug=${r.slug}">${r.title}</a>
           </h4>
@@ -349,7 +349,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
             <div class="absolute bottom-4 left-4 right-4 text-white">
-              <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-ecdl-green text-white mb-1.5 uppercase tracking-wider">
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold bg-ecdl-green text-white mb-1.5 uppercase tracking-wider">
                 ${lead.roleGroup}
               </span>
               <h3 class="font-display text-xl font-extrabold text-white leading-tight">
@@ -374,10 +374,10 @@
               ` : ''}
 
               <div>
-                <h4 class="text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Areas of Governance & Focus</h4>
+                <h4 class="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Areas of Governance & Focus</h4>
                 <div class="flex flex-wrap gap-1.5">
                   ${lead.areasOfFocus ? lead.areasOfFocus.map(f => `
-                    <span class="px-2 py-0.5 rounded-md text-[11px] font-medium bg-neutral-100 text-neutral-700">
+                    <span class="px-2 py-0.5 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700">
                       ${f}
                     </span>
                   `).join('') : ''}

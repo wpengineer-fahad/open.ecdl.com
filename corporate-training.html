@@ -7,10 +7,10 @@
   <meta name="description" content="Customised enterprise learning and capability building solutions aligned with your organisation's operational priorities and business growth in Bangladesh." />
   <link rel="canonical" href="https://open.ecdl.com.bd/corporate-training" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
           },
           boxShadow: {
-            card: '0 4px 20px -2px rgba(17, 17, 17, 0.05), 0 2px 6px -1px rgba(17, 17, 17, 0.03)',
-            cardHover: '0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06)',
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -47,12 +65,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/header-footer.css" />
-  <link rel="stylesheet" href="assets/css/corporate.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/header-footer.css" />
+  <link rel="stylesheet" href="/assets/css/corporate.css" />
   <meta property="og:site_name" content="Open ECDL" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Corporate Training & Executive Solutions — Open ECDL | Enroute Center for Development" />
@@ -69,7 +87,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">VAT INCLUSIVE</span>
         <span class="text-neutral-300 hidden sm:inline">All corporate proposals include statutory Mushak Form 6.3 invoices</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -99,16 +117,16 @@
         <!-- Custom Brand SVG Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -125,7 +143,7 @@
           <a href="training-calendar.html" class="hover:text-ecdl-green transition-colors">Calendar</a>
           <a href="corporate-training.html" class="hover:text-ecdl-green transition-colors text-ecdl-green font-bold">Corporate</a>
           <a href="corporate-case-studies.html" class="hover:text-ecdl-green transition-colors">Case Studies</a>
-          <a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1 text-ecdl-orange font-bold">
+          <a href="corporate-tna.html" class="hover:text-ecdl-green transition-colors inline-flex items-center gap-1 text-[#1B4D3E] font-bold">
             <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
             <span>TNA Tool</span>
           </a>
@@ -177,7 +195,7 @@
       <a href="index.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Home</a>
       <a href="courses.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Courses</a>
       <a href="corporate-training.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-ecdl-green bg-ecdl-greenSoft">Corporate Training</a>
-      <a href="corporate-tna.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-orange hover:bg-amber-50">Online TNA Tool</a>
+      <a href="corporate-tna.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-[#1B4D3E] hover:bg-amber-50">Online TNA Tool</a>
       <a href="corporate-case-studies.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Case Studies</a>
       <a href="training-calendar.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-ecdl-dark hover:bg-ecdl-greenSoft hover:text-ecdl-green">Training Calendar</a>
       <a href="corporate-proposal.html" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-white bg-ecdl-green text-center">Request a Proposal</a>
@@ -240,7 +258,7 @@
               <span class="text-xs text-neutral-500">Mushak-6.3 Compliant</span>
             </div>
             <div>
-              <span class="block font-display text-2xl font-extrabold text-ecdl-orange">200+</span>
+              <span class="block font-display text-2xl font-extrabold text-[#1B4D3E]">200+</span>
               <span class="text-xs text-neutral-500">Senior Faculty</span>
             </div>
           </div>
@@ -252,7 +270,7 @@
             <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-ecdl-yellow/30 blur-2xl pointer-events-none"></div>
             <div class="absolute -bottom-6 -right-6 w-36 h-36 rounded-full bg-ecdl-green/20 blur-2xl pointer-events-none"></div>
 
-            <div class="rounded-3xl overflow-hidden border-2 border-white shadow-2xl relative z-10 bg-white">
+            <div class="rounded-xl overflow-hidden border-2 border-white shadow-2xl relative z-10 bg-white">
               <img
                 src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
                 alt="Open ECDL Corporate Executive Training Workshop"
@@ -271,7 +289,7 @@
                     <p class="text-xs text-neutral-500">Kirkpatrick Level 1–4 Evaluation</p>
                   </div>
                 </div>
-                <a href="corporate-tna.html" class="px-3.5 py-2 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-ecdl-dark font-bold text-xs transition-colors shrink-0">
+                <a href="corporate-tna.html" class="px-3.5 py-2 rounded-lg bg-neutral-100 hover:bg-ecdl-yellow text-black font-bold text-xs transition-colors shrink-0">
                   Run TNA →
                 </a>
               </div>
@@ -303,7 +321,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Challenge 1 -->
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-bold">
               <i data-lucide="users-2" class="w-6 h-6"></i>
@@ -320,7 +338,7 @@
         </div>
 
         <!-- Challenge 2 -->
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold">
               <i data-lucide="scale" class="w-6 h-6"></i>
@@ -337,7 +355,7 @@
         </div>
 
         <!-- Challenge 3 -->
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center font-bold">
               <i data-lucide="trending-down" class="w-6 h-6"></i>
@@ -354,7 +372,7 @@
         </div>
 
         <!-- Challenge 4 -->
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
               <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
@@ -393,7 +411,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Track 1: Leadership -->
-        <article id="leadership-development" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article id="leadership-development" class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-ecdl-greenSoft text-ecdl-green text-xs font-extrabold uppercase">Executive Track</span>
@@ -421,10 +439,10 @@
         </article>
 
         <!-- Track 2: Commercial & Functional Skills -->
-        <article id="functional-skills" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article id="functional-skills" class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">Commercial Growth</span>
+              <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-black text-xs font-extrabold uppercase">Commercial Growth</span>
               <i data-lucide="trending-up" class="w-6 h-6 text-ecdl-dark"></i>
             </div>
             <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
@@ -449,11 +467,11 @@
         </article>
 
         <!-- Track 3: Compliance & Workplace Learning -->
-        <article id="compliance-learning" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article id="compliance-learning" class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-ecdl-orange text-white text-xs font-extrabold uppercase">Statutory Mastery</span>
-              <i data-lucide="scale" class="w-6 h-6 text-ecdl-orange"></i>
+              <span class="px-3 py-1 rounded-full bg-ecdl-yellow text-black text-xs font-extrabold uppercase">Statutory Mastery</span>
+              <i data-lucide="scale" class="w-6 h-6 text-[#1B4D3E]"></i>
             </div>
             <h3 class="font-display text-2xl font-extrabold text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               Statutory Compliance &amp; Labour Law
@@ -477,7 +495,7 @@
         </article>
 
         <!-- Track 4: Digital Tech Skills -->
-        <article id="digital-skills" class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article id="digital-skills" class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-extrabold uppercase">Digital Workplace</span>
@@ -505,7 +523,7 @@
         </article>
 
         <!-- Track 5: RMG Manufacturing -->
-        <article class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-extrabold uppercase">Industry Focused</span>
@@ -533,7 +551,7 @@
         </article>
 
         <!-- Track 6: Banking & NBFI -->
-        <article class="rounded-3xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
+        <article class="rounded-xl border border-neutral-200 p-8 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between bg-white relative overflow-hidden group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-extrabold uppercase">Financial Services</span>
@@ -582,7 +600,7 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+        <div class="bg-white rounded-xl p-6 border border-neutral-200 shadow-card">
           <div class="w-12 h-12 rounded-2xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center mb-4">
             <i data-lucide="building-2" class="w-6 h-6"></i>
           </div>
@@ -593,7 +611,7 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+        <div class="bg-white rounded-xl p-6 border border-neutral-200 shadow-card">
           <div class="w-12 h-12 rounded-2xl bg-ecdl-yellow/20 text-ecdl-dark flex items-center justify-center mb-4">
             <i data-lucide="map-pin" class="w-6 h-6 text-ecdl-green"></i>
           </div>
@@ -604,7 +622,7 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+        <div class="bg-white rounded-xl p-6 border border-neutral-200 shadow-card">
           <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
             <i data-lucide="video" class="w-6 h-6"></i>
           </div>
@@ -615,7 +633,7 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-card">
+        <div class="bg-white rounded-xl p-6 border border-neutral-200 shadow-card">
           <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
             <i data-lucide="compass" class="w-6 h-6"></i>
           </div>
@@ -649,7 +667,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
         <!-- Stage 1: Consult -->
-        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+        <div class="ecdl-process-step bg-neutral-50 rounded-xl p-6 border border-neutral-200 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">01</span>
             <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Consult</h3>
@@ -657,11 +675,11 @@
               Strategic discovery meeting with HR Directors, L&amp;D Managers, and operational sponsors to align learning goals with business KPIs.
             </p>
           </div>
-          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 1 · Strategic Scope</span>
+          <span class="mt-6 text-xs font-bold text-neutral-400">Week 1 · Strategic Scope</span>
         </div>
 
         <!-- Stage 2: Assess -->
-        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+        <div class="ecdl-process-step bg-neutral-50 rounded-xl p-6 border border-neutral-200 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">02</span>
             <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Assess</h3>
@@ -669,11 +687,11 @@
               Diagnostic survey &amp; frontline interviews to benchmark baseline skills, identifying exact operational challenges and behavioral gaps.
             </p>
           </div>
-          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 2 · Diagnostic TNA</span>
+          <span class="mt-6 text-xs font-bold text-neutral-400">Week 2 · Diagnostic TNA</span>
         </div>
 
         <!-- Stage 3: Design -->
-        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+        <div class="ecdl-process-step bg-neutral-50 rounded-xl p-6 border border-neutral-200 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">03</span>
             <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Design</h3>
@@ -681,11 +699,11 @@
               Co-creation of bespoke curriculum, integrating company case studies, standard operating procedures, and practical action simulations.
             </p>
           </div>
-          <span class="mt-6 text-[11px] font-bold text-neutral-400">Week 3 · Syllabus Sign-Off</span>
+          <span class="mt-6 text-xs font-bold text-neutral-400">Week 3 · Syllabus Sign-Off</span>
         </div>
 
         <!-- Stage 4: Deliver -->
-        <div class="ecdl-process-step bg-ecdl-greenSoft/60 rounded-3xl p-6 border border-ecdl-green/30 flex flex-col justify-between">
+        <div class="ecdl-process-step bg-ecdl-greenSoft/60 rounded-xl p-6 border border-ecdl-green/30 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-ecdl-green text-white font-display font-extrabold text-xs mb-4 shadow-sm">04</span>
             <h3 class="font-display text-xl font-extrabold text-ecdl-greenDark mb-2">Deliver</h3>
@@ -693,11 +711,11 @@
               High-engagement experiential workshops led by vetted senior faculty. Case studies, live roleplays, and capstone project assignments.
             </p>
           </div>
-          <span class="mt-6 text-[11px] font-bold text-ecdl-green">Week 4+ · Interactive Execution</span>
+          <span class="mt-6 text-xs font-bold text-ecdl-green">Week 4+ · Interactive Execution</span>
         </div>
 
         <!-- Stage 5: Measure -->
-        <div class="ecdl-process-step bg-neutral-50 rounded-3xl p-6 border border-neutral-200 flex flex-col justify-between">
+        <div class="ecdl-process-step bg-neutral-50 rounded-xl p-6 border border-neutral-200 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-white text-ecdl-green font-display font-extrabold text-xs mb-4 shadow-sm border border-neutral-200">05</span>
             <h3 class="font-display text-xl font-extrabold text-ecdl-dark mb-2">Measure</h3>
@@ -705,7 +723,7 @@
               Kirkpatrick evaluation report, 30-day workplace application check-in, and verified certificates issued via the ECDL Corporate Portal.
             </p>
           </div>
-          <span class="mt-6 text-[11px] font-bold text-neutral-400">Post-Delivery · ROI Audit</span>
+          <span class="mt-6 text-xs font-bold text-neutral-400">Post-Delivery · ROI Audit</span>
         </div>
       </div>
     </div>
@@ -730,7 +748,7 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-sm">
           <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Apparel &amp; Textiles</span>
           <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">RMG Exporters &amp; Garments</h3>
           <p class="text-sm text-neutral-600 leading-relaxed mb-4">
@@ -741,7 +759,7 @@
           </a>
         </div>
 
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-sm">
           <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Financial Services</span>
           <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">Banks, NBFIs &amp; Fintechs</h3>
           <p class="text-sm text-neutral-600 leading-relaxed mb-4">
@@ -752,7 +770,7 @@
           </a>
         </div>
 
-        <div class="bg-white rounded-3xl p-7 border border-neutral-200 shadow-sm">
+        <div class="bg-white rounded-xl p-7 border border-neutral-200 shadow-sm">
           <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-green">Consumer &amp; Retail</span>
           <h3 class="font-display text-xl font-extrabold text-ecdl-dark mt-2 mb-3">FMCG, Retail &amp; Conglomerates</h3>
           <p class="text-sm text-neutral-600 leading-relaxed mb-4">
@@ -791,7 +809,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Faculty 1 -->
-        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+        <div class="rounded-xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-16 h-16 rounded-2xl bg-ecdl-dark text-white font-display font-extrabold text-xl flex items-center justify-center">
               TK
@@ -804,11 +822,11 @@
               Veteran commercial director who has scaled B2B sales forces, FMCG brands, and key account retail networks across Bangladesh.
             </p>
           </div>
-          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">20+ Years Leadership</span>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-xs font-bold text-neutral-500">20+ Years Leadership</span>
         </div>
 
         <!-- Faculty 2 -->
-        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+        <div class="rounded-xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-16 h-16 rounded-2xl bg-ecdl-green text-white font-display font-extrabold text-xl flex items-center justify-center">
               JS
@@ -821,13 +839,13 @@
               Senior legal consultant advising leading conglomerates on Bangladesh Labour Act statutory compliance, collective bargaining, and domestic inquiries.
             </p>
           </div>
-          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">25+ Years Legal Practice</span>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-xs font-bold text-neutral-500">25+ Years Legal Practice</span>
         </div>
 
         <!-- Faculty 3 -->
-        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+        <div class="rounded-xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-ecdl-dark font-display font-extrabold text-xl flex items-center justify-center">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-black font-display font-extrabold text-xl flex items-center justify-center">
               FCA
             </div>
             <div>
@@ -838,13 +856,13 @@
               Chartered Accountants &amp; licensed NBR consultants guiding corporate finance teams through Mushak-6.3 compliance, VDS audits, and input tax rebates.
             </p>
           </div>
-          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">ICAB &amp; NBR Enlisted</span>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-xs font-bold text-neutral-500">ICAB &amp; NBR Enlisted</span>
         </div>
 
         <!-- Faculty 4 -->
-        <div class="rounded-3xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
+        <div class="rounded-xl border border-neutral-200 p-6 shadow-sm hover:shadow-cardHover transition-all bg-white flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-ecdl-orange text-white font-display font-extrabold text-xl flex items-center justify-center">
+            <div class="w-16 h-16 rounded-2xl bg-ecdl-yellow text-black font-display font-extrabold text-xl flex items-center justify-center">
               PMP
             </div>
             <div>
@@ -855,7 +873,7 @@
               Certified Project Management Professionals directing multi-million dollar corporate infrastructure, supply chain, and IT programs.
             </p>
           </div>
-          <span class="mt-4 pt-4 border-t border-neutral-100 text-[11px] font-bold text-neutral-500">PMI Authorized Faculty</span>
+          <span class="mt-4 pt-4 border-t border-neutral-100 text-xs font-bold text-neutral-500">PMI Authorized Faculty</span>
         </div>
       </div>
     </div>
@@ -887,7 +905,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Case 1: Apex -->
-        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <article class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="p-7 space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">APEX FOOTWEAR</span>
@@ -902,11 +920,11 @@
             <div class="grid grid-cols-2 gap-3 pt-2">
               <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-green">28%</span>
-                <span class="text-[11px] text-neutral-600">Lower Turnover</span>
+                <span class="text-xs text-neutral-600">Lower Turnover</span>
               </div>
               <div class="p-3 rounded-2xl bg-neutral-100 text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-dark">Zero</span>
-                <span class="text-[11px] text-neutral-600">Labor Grievances</span>
+                <span class="text-xs text-neutral-600">Labor Grievances</span>
               </div>
             </div>
           </div>
@@ -917,7 +935,7 @@
         </article>
 
         <!-- Case 2: City Bank -->
-        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <article class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="p-7 space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">COMMERCIAL BANK</span>
@@ -932,11 +950,11 @@
             <div class="grid grid-cols-2 gap-3 pt-2">
               <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-green">98.5%</span>
-                <span class="text-[11px] text-neutral-600">Approval Accuracy</span>
+                <span class="text-xs text-neutral-600">Approval Accuracy</span>
               </div>
               <div class="p-3 rounded-2xl bg-neutral-100 text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-dark">250</span>
-                <span class="text-[11px] text-neutral-600">Certified Managers</span>
+                <span class="text-xs text-neutral-600">Certified Managers</span>
               </div>
             </div>
           </div>
@@ -947,7 +965,7 @@
         </article>
 
         <!-- Case 3: FMCG -->
-        <article class="bg-white rounded-3xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
+        <article class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between">
           <div class="p-7 space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-2.5 py-1 rounded-md bg-neutral-100 font-extrabold text-xs text-ecdl-dark">MULTINATIONAL FMCG</span>
@@ -962,11 +980,11 @@
             <div class="grid grid-cols-2 gap-3 pt-2">
               <div class="p-3 rounded-2xl bg-ecdl-greenSoft text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-green">21%</span>
-                <span class="text-[11px] text-neutral-600">Modern Trade Growth</span>
+                <span class="text-xs text-neutral-600">Modern Trade Growth</span>
               </div>
               <div class="p-3 rounded-2xl bg-neutral-100 text-center">
                 <span class="block font-display text-2xl font-extrabold text-ecdl-dark">3.4x</span>
-                <span class="text-[11px] text-neutral-600">Calculated ROI</span>
+                <span class="text-xs text-neutral-600">Calculated ROI</span>
               </div>
             </div>
           </div>
@@ -987,7 +1005,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-8 space-y-6">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-ecdl-dark text-xs font-extrabold uppercase">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ecdl-yellow text-black text-xs font-extrabold uppercase">
             Interactive Diagnostic Tool
           </span>
           <h2 class="font-display text-3xl sm:text-5xl font-extrabold leading-tight">
@@ -999,7 +1017,7 @@
           <div class="flex flex-wrap gap-4 pt-2">
             <a
               href="corporate-tna.html"
-              class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-base shadow-lg transition-all inline-flex items-center gap-2"
+              class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-black font-extrabold text-base shadow-lg transition-all inline-flex items-center gap-2"
             >
               <span>Launch Online TNA Tool</span>
               <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -1013,7 +1031,7 @@
           </div>
         </div>
 
-        <div class="lg:col-span-4 bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-4 backdrop-blur-md">
+        <div class="lg:col-span-4 bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 space-y-4 backdrop-blur-md">
           <h4 class="font-display font-bold text-lg text-white">What You’ll Receive:</h4>
           <ul class="space-y-3 text-sm text-neutral-300">
             <li class="flex items-start gap-2.5">
@@ -1091,16 +1109,16 @@
 
         <!-- Right: Modern Dashboard UI Mockup -->
         <div class="lg:col-span-7">
-          <div class="ecdl-portal-dashboard-mockup rounded-3xl p-6 sm:p-8 text-white relative">
+          <div class="ecdl-portal-dashboard-mockup rounded-xl p-6 sm:p-8 text-white relative">
             <!-- Mock Header -->
             <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
               <div class="flex items-center gap-3">
                 <span class="w-3 h-3 rounded-full bg-red-500"></span>
                 <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
                 <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                <span class="ml-2 font-mono text-xs text-neutral-400">portal.ecdl.com.bd/enterprise/apex-footwear</span>
+                <span class="ml-2 font-sans text-xs text-neutral-400">portal.ecdl.com.bd/enterprise/apex-footwear</span>
               </div>
-              <span class="px-2.5 py-1 rounded-md bg-ecdl-green/20 text-emerald-400 text-xs font-mono font-bold">ACTIVE ENTERPRISE PO</span>
+              <span class="px-2.5 py-1 rounded-md bg-ecdl-green/20 text-[#C9A227] text-xs font-sans font-bold">ACTIVE ENTERPRISE PO</span>
             </div>
 
             <!-- Mock KPI Summary -->
@@ -1108,17 +1126,17 @@
               <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
                 <span class="text-xs text-neutral-400 block">Enrolled Employees</span>
                 <span class="font-display text-2xl font-extrabold text-white">120</span>
-                <span class="text-[10px] text-emerald-400">100% Attendance</span>
+                <span class="text-xs text-[#C9A227]">100% Attendance</span>
               </div>
               <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
                 <span class="text-xs text-neutral-400 block">Active Cohorts</span>
                 <span class="font-display text-2xl font-extrabold text-ecdl-yellow">4 Batches</span>
-                <span class="text-[10px] text-neutral-400">Gazipur Plant</span>
+                <span class="text-xs text-neutral-400">Gazipur Plant</span>
               </div>
               <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
                 <span class="text-xs text-neutral-400 block">Mushak-6.3 Status</span>
-                <span class="font-display text-2xl font-extrabold text-emerald-400">Reconciled</span>
-                <span class="text-[10px] text-neutral-400">Tax Rebate Eligible</span>
+                <span class="font-display text-2xl font-extrabold text-[#C9A227]">Reconciled</span>
+                <span class="text-xs text-neutral-400">Tax Rebate Eligible</span>
               </div>
             </div>
 
@@ -1134,20 +1152,20 @@
                 <div class="grid grid-cols-4 p-3 items-center">
                   <span class="font-semibold text-white">Mahfuzur Rahman</span>
                   <span class="text-neutral-400">Plant Line A</span>
-                  <span class="text-emerald-400 font-bold">100% (Completed)</span>
-                  <span class="text-ecdl-yellow font-mono">ECDL-2026-8492</span>
+                  <span class="text-[#C9A227] font-bold">100% (Completed)</span>
+                  <span class="text-ecdl-yellow font-sans">ECDL-2026-8492</span>
                 </div>
                 <div class="grid grid-cols-4 p-3 items-center">
                   <span class="font-semibold text-white">Farhana Yasmin</span>
                   <span class="text-neutral-400">Quality Assurance</span>
-                  <span class="text-emerald-400 font-bold">95% (Capstone Done)</span>
-                  <span class="text-ecdl-yellow font-mono">ECDL-2026-5104</span>
+                  <span class="text-[#C9A227] font-bold">95% (Capstone Done)</span>
+                  <span class="text-ecdl-yellow font-sans">ECDL-2026-5104</span>
                 </div>
                 <div class="grid grid-cols-4 p-3 items-center">
                   <span class="font-semibold text-white">Shahidul Islam</span>
                   <span class="text-neutral-400">Supply Chain</span>
                   <span class="text-amber-400 font-bold">90% (Final Quiz)</span>
-                  <span class="text-neutral-500 font-mono">Pending Review</span>
+                  <span class="text-neutral-500 font-sans">Pending Review</span>
                 </div>
               </div>
             </div>
@@ -1250,7 +1268,7 @@
   <!-- ========================================================= -->
   <section id="consultation-cta" class="py-16 lg:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl bg-ecdl-green text-white p-8 sm:p-14 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div class="rounded-xl bg-ecdl-green text-white p-8 sm:p-14 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
         <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-ecdl-yellow/20 blur-3xl pointer-events-none"></div>
 
         <div class="space-y-4 max-w-2xl relative z-10">
@@ -1272,7 +1290,7 @@
         <div class="relative z-10 shrink-0 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a
             href="corporate-proposal.html"
-            class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-ecdl-dark font-extrabold text-base shadow-lg transition-colors text-center"
+            class="px-8 py-4 rounded-xl bg-ecdl-yellow hover:bg-ecdl-yellowHover text-black font-extrabold text-base shadow-lg transition-colors text-center"
           >
             Request a Proposal
           </a>
@@ -1290,36 +1308,36 @@
   <!-- ========================================================= -->
   <!-- 16. GLOBAL FOOTER (#111111)                               -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
+  <footer class="bg-[#123B30] text-white pt-16 pb-12 border-t border-neutral-800" id="site-footer">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
         <!-- Brand & Info Column -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="12" fill="#108B44" />
+              <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-              <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+              <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+              <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
             </svg>
             <div>
-              <span class="block font-display text-xl font-extrabold tracking-tight text-white">ECDL</span>
-              <span class="block text-xs text-neutral-400">Enroute Center for Development</span>
+              <span class="block font-sans text-base font-extrabold tracking-tight text-white">ECDL</span>
+              <span class="block text-xs text-white/85">Enroute Center for Development</span>
             </div>
           </div>
-          <p class="text-sm text-neutral-400 leading-relaxed">
+          <p class="text-sm text-white/85 leading-relaxed">
             Premier corporate learning institution delivering expert-led training, statutory compliance workshops, and executive development programs in Bangladesh.
           </p>
           <div class="space-y-2 pt-2 text-xs text-neutral-300">
-            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="tel:+8801767804408" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="phone" class="w-4 h-4 text-ecdl-green shrink-0"></i>
               <span>+8801767804408</span>
             </a>
-            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-ecdl-yellow transition-colors">
+            <a href="mailto:training@ecdl.com.bd" class="flex items-center gap-2.5 hover:text-[#C9A227] transition-colors">
               <i data-lucide="mail" class="w-4 h-4 text-ecdl-yellow shrink-0"></i>
               <span>training@ecdl.com.bd</span>
             </a>
-            <div class="flex items-start gap-2.5 text-neutral-400">
+            <div class="flex items-start gap-2.5 text-white/85">
               <i data-lucide="map-pin" class="w-4 h-4 text-ecdl-yellow shrink-0 mt-0.5"></i>
               <span>Pink City, Gulshan Avenue, Dhaka-1212, Bangladesh</span>
             </div>
@@ -1328,47 +1346,47 @@
 
         <!-- Corporate Solutions Column -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Corporate Solutions</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Corporate Solutions</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-ecdl-yellow transition-colors">Executive Leadership Academy</a></li>
-            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-ecdl-yellow transition-colors">Labour Law &amp; Factory Compliance</a></li>
-            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-ecdl-yellow transition-colors">Key Account Sales &amp; Negotiation</a></li>
-            <li><a href="corporate-solution-detail.html?slug=digital-technology" class="hover:text-ecdl-yellow transition-colors">Power BI &amp; Business Intelligence</a></li>
-            <li><a href="corporate-solution-detail.html?slug=industry-rmg" class="hover:text-ecdl-yellow transition-colors">RMG Manufacturing Competitiveness</a></li>
+            <li><a href="corporate-solution-detail.html?slug=leadership-management" class="hover:text-[#C9A227] transition-colors">Executive Leadership Academy</a></li>
+            <li><a href="corporate-solution-detail.html?slug=compliance-workplace" class="hover:text-[#C9A227] transition-colors">Labour Law &amp; Factory Compliance</a></li>
+            <li><a href="corporate-solution-detail.html?slug=functional-technical" class="hover:text-[#C9A227] transition-colors">Key Account Sales &amp; Negotiation</a></li>
+            <li><a href="corporate-solution-detail.html?slug=digital-technology" class="hover:text-[#C9A227] transition-colors">Power BI &amp; Business Intelligence</a></li>
+            <li><a href="corporate-solution-detail.html?slug=industry-rmg" class="hover:text-[#C9A227] transition-colors">RMG Manufacturing Competitiveness</a></li>
           </ul>
         </div>
 
         <!-- Quick Links Column -->
         <div class="lg:col-span-2 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Quick Links</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="corporate-tna.html" class="hover:text-ecdl-yellow transition-colors">Online TNA Tool</a></li>
-            <li><a href="corporate-case-studies.html" class="hover:text-ecdl-yellow transition-colors">Case Studies</a></li>
-            <li><a href="corporate-proposal.html" class="hover:text-ecdl-yellow transition-colors">Request Proposal</a></li>
-            <li><a href="training-calendar.html" class="hover:text-ecdl-yellow transition-colors">Calendar</a></li>
-            <li><button type="button" onclick="openVerifyModal()" class="hover:text-ecdl-yellow transition-colors">Verify Certificate</button></li>
+            <li><a href="corporate-tna.html" class="hover:text-[#C9A227] transition-colors">Online TNA Tool</a></li>
+            <li><a href="corporate-case-studies.html" class="hover:text-[#C9A227] transition-colors">Case Studies</a></li>
+            <li><a href="corporate-proposal.html" class="hover:text-[#C9A227] transition-colors">Request Proposal</a></li>
+            <li><a href="training-calendar.html" class="hover:text-[#C9A227] transition-colors">Calendar</a></li>
+            <li><button type="button" onclick="openVerifyModal()" class="hover:text-[#C9A227] transition-colors">Verify Certificate</button></li>
           </ul>
         </div>
 
         <!-- Recommend / Sister Concerns Column -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Sister Concerns</h4>
+          <h4 class="font-display font-semibold text-[#C9A227] text-base tracking-wide">Sister Concerns</h4>
           <ul class="space-y-2.5 text-sm text-neutral-300">
-            <li><a href="index.html" class="hover:text-ecdl-yellow transition-colors">Enroute Center for Development Ltd.</a></li>
-            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute International Ltd</a></li>
-            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Enroute Digital Lab</a></li>
-            <li><a href="index.html#company-profile" class="hover:text-ecdl-yellow transition-colors">Sudoksho</a></li>
+            <li><a href="index.html" class="hover:text-[#C9A227] transition-colors">Enroute Center for Development Ltd.</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-[#C9A227] transition-colors">Enroute International Ltd</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-[#C9A227] transition-colors">Enroute Digital Lab</a></li>
+            <li><a href="index.html#company-profile" class="hover:text-[#C9A227] transition-colors">Sudoksho</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Bottom Copyright & Socials -->
-      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-400">
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/85">
         <p>Copyright © 2026, Enroute Center for Development Ltd. All rights reserved.</p>
         <div class="flex items-center gap-3">
-          <a href="#site-header" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">Facebook</a>
-          <a href="#site-header" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-green text-white font-semibold transition-colors">LinkedIn</a>
-          <a href="#site-header" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-ecdl-orange text-white font-semibold transition-colors">Youtube</a>
+          <a href="#site-header" onclick="showToast('Connecting to ECDL Official Facebook Page', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">Facebook</a>
+          <a href="#site-header" onclick="showToast('Connecting to ECDL Official LinkedIn', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">LinkedIn</a>
+          <a href="#site-header" onclick="showToast('Connecting to ECDL YouTube Channel', 'info')" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-[#C9A227] hover:text-black text-white font-semibold transition-colors">Youtube</a>
         </div>
       </div>
     </div>
@@ -1382,7 +1400,7 @@
     <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
       <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
         <div>
-          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Faculty Application</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-yellow">Faculty Application</span>
           <h3 class="font-display text-lg font-extrabold mt-0.5">Become an ECDL Instructor</h3>
         </div>
         <button type="button" onclick="closeModal('instructorModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
@@ -1433,7 +1451,7 @@
     <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200">
       <div class="sticky top-0 bg-ecdl-dark text-white px-6 py-4 flex items-center justify-between z-10 rounded-t-3xl">
         <div>
-          <span class="text-[11px] font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-ecdl-yellow">Official Registry</span>
           <h3 class="font-display text-lg font-extrabold mt-0.5">Verify Training Certificate</h3>
         </div>
         <button type="button" onclick="closeModal('verifyModal')" class="p-2 rounded-xl hover:bg-white/10 text-neutral-300">
@@ -1442,13 +1460,13 @@
       </div>
       <div class="p-6 space-y-4">
         <div class="flex gap-2">
-          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-mono text-sm uppercase" />
+          <input id="modalCertInput" type="text" placeholder="e.g. ECDL-2026-8492" class="flex-1 px-4 py-2.5 rounded-xl border border-neutral-300 focus:border-ecdl-green focus:outline-none font-sans text-sm uppercase" />
           <button type="button" onclick="handleModalVerify()" class="px-5 py-2.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors">Verify</button>
         </div>
         <div class="flex flex-wrap items-center gap-1.5 text-xs text-neutral-500">
           <span>Try sample IDs:</span>
-          <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-8492</button>
-          <button type="button" onclick="setModalCert('ECDL-2026-5104')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-mono text-ecdl-dark">ECDL-2026-5104</button>
+          <button type="button" onclick="setModalCert('ECDL-2026-8492')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-sans text-ecdl-dark">ECDL-2026-8492</button>
+          <button type="button" onclick="setModalCert('ECDL-2026-5104')" class="px-2 py-0.5 rounded bg-neutral-100 hover:bg-ecdl-yellow font-sans text-ecdl-dark">ECDL-2026-5104</button>
         </div>
         <div id="modalCertResult" class="hidden"></div>
       </div>
@@ -1494,7 +1512,7 @@
       if (currentUser.loggedIn) {
         if (badge) badge.textContent = currentUser.initials;
         if (label) label.textContent = 'Profile';
-        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-ecdl-orange font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
+        menu.innerHTML = '<div class="px-3 py-2.5 border-b border-neutral-100"><p class="text-sm font-bold text-ecdl-dark">' + currentUser.name + '</p><p class="text-xs text-neutral-500 truncate">' + currentUser.email + '</p></div><div class="py-1.5 space-y-0.5 text-sm"><button type="button" onclick="toggleProfileDropdown(); showToast(\\'Viewing enrolled courses for ' + currentUser.name + '\\', \\'info\\')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> My Courses</button><button type="button" onclick="toggleProfileDropdown(); openVerifyModal()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-ecdl-greenSoft hover:text-ecdl-green font-medium flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> My Certificates</button><button type="button" onclick="handleLogout()" class="w-full text-left px-3 py-2 rounded-xl hover:bg-red-50 text-[#1B4D3E] font-bold flex items-center gap-2"><i data-lucide="log-out" class="w-4 h-4"></i> Logout</button></div>';
       } else {
         if (badge) badge.textContent = 'IN';
         if (label) label.textContent = 'Sign In';
@@ -1520,7 +1538,7 @@
       res.classList.remove('hidden');
       const rec = CERTIFICATES[val];
       if (rec) {
-        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-mono font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
+        res.innerHTML = '<div class="p-4 rounded-2xl bg-ecdl-greenSoft border border-ecdl-green/30 text-xs text-ecdl-dark space-y-1.5"><div class="flex items-center justify-between"><strong class="text-ecdl-green font-bold text-sm">' + rec.status + ' Certificate</strong><span class="font-sans font-bold text-neutral-500">' + val + '</span></div><p>Recipient: <strong>' + rec.name + '</strong></p><p>Course: <strong>' + rec.course + '</strong></p><p>Issue Date: ' + rec.issueDate + ' · ' + rec.grade + '</p></div>';
       } else {
         res.innerHTML = '<div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-800"><p class="font-bold">Certificate Not Found</p><p>\"' + val + '\" is not registered. Please double check the ID.</p></div>';
       }
@@ -1538,8 +1556,8 @@
   </script>
 
   <!-- Required Scripts -->
-  <script src="assets/data/mock-data.js"></script>
-  <script src="assets/js/corporate.js"></script>
+  <script src="/assets/data/mock-data.js"></script>
+  <script src="/assets/js/corporate.js"></script>
   <script src="/assets/js/seo-schema.js"></script>
 </body>
 </html>

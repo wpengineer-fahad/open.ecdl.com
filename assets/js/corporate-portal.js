@@ -225,11 +225,11 @@
               const heightPercent = Math.round((val / maxVal) * 100);
               return `
                 <div class="flex-1 flex flex-col items-center h-full justify-end group relative">
-                  <div class="absolute -top-7 opacity-0 group-hover:opacity-100 transition-opacity bg-neutral-900 text-white text-[10px] font-bold py-1 px-1.5 rounded pointer-events-none whitespace-nowrap z-20">
+                  <div class="absolute -top-7 opacity-0 group-hover:opacity-100 transition-opacity bg-neutral-900 text-white text-xs font-bold py-1 px-1.5 rounded pointer-events-none whitespace-nowrap z-20">
                     ${val} Learners
                   </div>
                   <div class="w-full max-w-[28px] bg-emerald-600 group-hover:bg-emerald-700 rounded-t transition-all" style="height: ${heightPercent}%;"></div>
-                  <span class="text-[10px] text-neutral-500 font-medium mt-2">${months[idx]}</span>
+                  <span class="text-xs text-neutral-500 font-medium mt-2">${months[idx]}</span>
                 </div>
               `;
             }).join('')}
@@ -260,13 +260,13 @@
           <div class="p-3.5 rounded-xl border border-neutral-200 bg-white hover:border-emerald-500 transition-all text-xs">
             <div class="flex items-center justify-between font-bold text-neutral-900 mb-1">
               <span>${s.courseTitle}</span>
-              <span class="corp-badge corp-badge-green font-mono">${s.enrolledCount} Seats Confirmed</span>
+              <span class="corp-badge corp-badge-green font-sans">${s.enrolledCount} Seats Confirmed</span>
             </div>
             <div class="text-neutral-500 mb-1.5 flex items-center gap-1.5">
               <i data-lucide="calendar" class="w-3.5 h-3.5 text-neutral-400"></i>
               <span>${s.dateTime} • ${s.deliveryMode}</span>
             </div>
-            <div class="text-[11px] text-neutral-600">Trainer: <strong>${s.trainer}</strong></div>
+            <div class="text-xs text-neutral-600">Trainer: <strong>${s.trainer}</strong></div>
           </div>
         `).join('');
       }
@@ -296,11 +296,11 @@
       if (invTable && tenant.invoices) {
         invTable.innerHTML = tenant.invoices.map(inv => `
           <tr class="hover:bg-neutral-50/60 transition-colors">
-            <td class="font-mono font-bold text-neutral-900">
+            <td class="font-sans font-bold text-neutral-900">
               <a href="${inv.orderLink}" class="hover:text-emerald-700 underline">${inv.id}</a>
             </td>
             <td class="text-neutral-600">${inv.courseOrTrack}</td>
-            <td class="text-neutral-500 font-mono">${inv.mushakChallan}</td>
+            <td class="text-neutral-500 font-sans">${inv.mushakChallan}</td>
             <td class="font-bold text-neutral-900">${inv.grandTotal}</td>
             <td>
               <span class="corp-badge ${inv.status === 'Paid' ? 'corp-badge-green' : 'corp-badge-amber'}">${inv.status}</span>
@@ -402,7 +402,7 @@
           <div class="bg-white rounded-xl border border-neutral-200 p-5 shadow-sm hover:border-emerald-500 transition-all flex flex-col justify-between" id="dept-card-${d.id}">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="corp-badge corp-badge-neutral font-mono text-[10px]">${d.code}</span>
+                <span class="corp-badge corp-badge-neutral font-sans text-xs">${d.code}</span>
                 <span class="corp-badge corp-badge-green font-bold">${d.completionRate} Completion</span>
               </div>
               <h3 class="font-display font-bold text-base text-neutral-900 mb-1">${d.name}</h3>
@@ -517,13 +517,13 @@
           } else {
             tbody.innerHTML = employees.map(emp => `
               <tr class="hover:bg-neutral-50/60 transition-colors" id="emp-row-${emp.id}">
-                <td class="font-mono text-xs font-bold text-neutral-500">${emp.id}</td>
+                <td class="font-sans text-xs font-bold text-neutral-500">${emp.id}</td>
                 <td>
                   <div class="flex items-center gap-3">
                     <img src="${emp.avatar}" alt="${emp.name}" class="w-8 h-8 rounded-full object-cover border border-neutral-200">
                     <div>
                       <a href="/corporate/employees/${emp.id}" class="font-bold text-neutral-900 hover:text-emerald-700">${emp.name}</a>
-                      <div class="text-[11px] text-neutral-400">${emp.email}</div>
+                      <div class="text-xs text-neutral-400">${emp.email}</div>
                     </div>
                   </div>
                 </td>
@@ -540,7 +540,7 @@
                     emp.trainingStatus === 'Enrolled' ? 'corp-badge-blue' :
                     emp.trainingStatus === 'Completed' ? 'corp-badge-green' : 'corp-badge-neutral'
                   }">${emp.trainingStatus}</span>
-                  ${emp.activeCourse ? `<div class="text-[10px] text-neutral-400 truncate max-w-[150px] mt-0.5">${emp.activeCourse}</div>` : ''}
+                  ${emp.activeCourse ? `<div class="text-xs text-neutral-400 truncate max-w-[150px] mt-0.5">${emp.activeCourse}</div>` : ''}
                 </td>
                 <td class="text-right">
                   <div class="flex items-center justify-end gap-2">
@@ -577,7 +577,7 @@
               </div>
               <div class="pt-3 border-t border-neutral-100 flex items-center justify-between">
                 <a href="/corporate/employees/${emp.id}" class="text-emerald-700 font-bold hover:underline">View Profile →</a>
-                <button type="button" onclick="OpenECDLCorporate.openDirectNomination('${emp.id}')" class="px-2 py-1 rounded bg-neutral-900 text-white font-bold text-[11px]">
+                <button type="button" onclick="OpenECDLCorporate.openDirectNomination('${emp.id}')" class="px-2 py-1 rounded bg-neutral-900 text-white font-bold text-xs">
                   Nominate
                 </button>
               </div>
@@ -714,14 +714,14 @@
       if (tbody) {
         tbody.innerHTML = nominations.map(n => `
           <tr class="hover:bg-neutral-50/60 transition-colors text-xs">
-            <td class="font-mono font-bold text-neutral-500">${n.id}</td>
+            <td class="font-sans font-bold text-neutral-500">${n.id}</td>
             <td>
               <div class="font-bold text-neutral-900">${n.employeeName}</div>
-              <div class="text-[11px] text-neutral-400">${n.designation} • ${n.department}</div>
+              <div class="text-xs text-neutral-400">${n.designation} • ${n.department}</div>
             </td>
             <td>
               <div class="font-bold text-neutral-900">${n.courseTitle}</div>
-              <div class="text-[11px] text-neutral-500">${n.cohortTitle}</div>
+              <div class="text-xs text-neutral-500">${n.cohortTitle}</div>
             </td>
             <td class="text-neutral-500">${n.nominatedBy}</td>
             <td class="text-neutral-500">${n.nominatedDate}</td>
@@ -843,9 +843,9 @@
             <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm text-xs hover:border-neutral-300 transition">
               <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-neutral-100 mb-3">
                 <div class="flex items-center gap-2">
-                  <span class="font-mono font-bold text-neutral-900">${r.requestNumber || r.id}</span>
+                  <span class="font-sans font-bold text-neutral-900">${r.requestNumber || r.id}</span>
                   <span class="corp-badge ${statusBadgeClass}">${r.status}</span>
-                  <span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] font-bold text-neutral-600">${r.department}</span>
+                  <span class="px-2 py-0.5 rounded bg-neutral-100 text-xs font-bold text-neutral-600">${r.department}</span>
                 </div>
                 <span class="text-neutral-400">Submitted on ${r.submittedDate} by ${r.submittedBy}</span>
               </div>
@@ -856,7 +856,7 @@
                   <p class="text-neutral-600">${r.targetAudience} • <strong>${r.requestedDelivery}</strong></p>
                 </div>
                 <div class="text-right">
-                  <div class="text-[11px] text-neutral-400">Estimated Budget</div>
+                  <div class="text-xs text-neutral-400">Estimated Budget</div>
                   <div class="text-emerald-700 font-bold text-sm">${r.proposalAmount}</div>
                 </div>
               </div>
@@ -864,19 +864,19 @@
               <!-- Assigned Contact & Next Action Strip -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 bg-neutral-50 rounded-lg border border-neutral-200/80 mb-4">
                 <div>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block">Assigned ECDL Contact</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 block">Assigned ECDL Contact</span>
                   <div class="font-bold text-neutral-900">${r.assignedContact ? r.assignedContact.name : 'Advocate Rafiqul Islam'}</div>
-                  <div class="text-[10px] text-neutral-500">${r.assignedContact ? r.assignedContact.role : 'Lead Faculty'}</div>
+                  <div class="text-xs text-neutral-500">${r.assignedContact ? r.assignedContact.role : 'Lead Faculty'}</div>
                 </div>
                 <div>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block">Next Action</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 block">Next Action</span>
                   <div class="font-semibold text-emerald-800">${r.nextAction || 'Review technical proposal'}</div>
                 </div>
               </div>
 
               <div class="bg-white rounded-lg p-3 border border-neutral-100 mb-4">
                 <div class="font-bold text-neutral-900 mb-1">Training Objectives:</div>
-                <ul class="list-disc pl-4 space-y-0.5 text-neutral-600 text-[11px]">
+                <ul class="list-disc pl-4 space-y-0.5 text-neutral-600 text-xs">
                   ${(r.objectives || []).map(obj => `<li>${obj}</li>`).join('')}
                 </ul>
               </div>
@@ -966,9 +966,9 @@
               <div class="flex-1 text-xs pb-3">
                 <div class="flex items-center justify-between">
                   <span class="font-bold ${isDone ? 'text-neutral-900' : (isCurrent ? 'text-blue-700' : 'text-neutral-400')}">${step.stage}</span>
-                  <span class="text-[10px] text-neutral-400">${step.date}</span>
+                  <span class="text-xs text-neutral-400">${step.date}</span>
                 </div>
-                <div class="text-[11px] text-neutral-500 mt-0.5">${step.note}</div>
+                <div class="text-xs text-neutral-500 mt-0.5">${step.note}</div>
               </div>
             </div>
           `;
@@ -1042,12 +1042,12 @@
             <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm text-xs hover:border-neutral-300 transition">
               <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-neutral-100 mb-3">
                 <div class="flex items-center gap-2">
-                  <span class="font-mono font-bold text-neutral-900">${p.proposalNumber}</span>
+                  <span class="font-sans font-bold text-neutral-900">${p.proposalNumber}</span>
                   <span class="corp-badge ${badgeClass}">${p.statusBadge || p.status}</span>
-                  <span class="px-2 py-0.5 rounded bg-neutral-100 text-[10px] font-bold text-neutral-600">${p.version}</span>
+                  <span class="px-2 py-0.5 rounded bg-neutral-100 text-xs font-bold text-neutral-600">${p.version}</span>
                   <span class="text-neutral-400">• ${p.department}</span>
                 </div>
-                <div class="text-neutral-400 text-[11px]">
+                <div class="text-neutral-400 text-xs">
                   Sent: <strong>${p.sentDate}</strong> • Valid Until: <strong>${p.validUntil}</strong>
                 </div>
               </div>
@@ -1058,15 +1058,15 @@
                     <a href="/corporate/proposals/${p.id}" class="hover:text-emerald-700 transition">${p.title}</a>
                   </h3>
                   <p class="text-neutral-600 leading-relaxed mb-2">${p.programmeOverview}</p>
-                  <div class="text-neutral-500 text-[11px]">
+                  <div class="text-neutral-500 text-xs">
                     Lead Faculty: <strong class="text-neutral-800">${p.trainer ? p.trainer.name : 'ECDL Faculty'}</strong> (${p.trainer ? p.trainer.title : 'Senior Consultant'})
                   </div>
                 </div>
 
                 <div class="text-right bg-neutral-50 p-3 rounded-lg border border-neutral-200/60 min-w-[180px]">
-                  <div class="text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Commercial Total</div>
+                  <div class="text-xs text-neutral-400 uppercase font-bold tracking-wider">Commercial Total</div>
                   <div class="text-emerald-700 font-extrabold text-base">${p.commercialSummary.totalFormatted}</div>
-                  <div class="text-[10px] text-neutral-500 mt-0.5">VAT 15% Included • ${p.commercialSummary.participants} Scholars</div>
+                  <div class="text-xs text-neutral-500 mt-0.5">VAT 15% Included • ${p.commercialSummary.participants} Scholars</div>
                 </div>
               </div>
 
@@ -1206,9 +1206,9 @@
           <div class="corp-module-card">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
               <span class="font-bold text-neutral-900 text-xs sm:text-sm">${m.day}: ${m.title}</span>
-              <span class="text-[11px] font-bold text-neutral-500">${m.duration}</span>
+              <span class="text-xs font-bold text-neutral-500">${m.duration}</span>
             </div>
-            <div class="text-[11px] text-neutral-600">
+            <div class="text-xs text-neutral-600">
               <span class="font-semibold text-neutral-700">Covered Topics: </span>
               ${(m.topics || []).join(' • ')}
             </div>
@@ -1224,7 +1224,7 @@
           <div class="flex-1">
             <div class="font-display font-bold text-sm text-neutral-900">${tr.name}</div>
             <div class="text-xs text-neutral-600 font-semibold">${tr.title}</div>
-            <div class="text-[11px] text-emerald-800 font-bold mt-0.5">${tr.qualifications || ''}</div>
+            <div class="text-xs text-emerald-800 font-bold mt-0.5">${tr.qualifications || ''}</div>
             <p class="text-xs text-neutral-600 mt-2 leading-relaxed">${tr.bio}</p>
           </div>
         `;
@@ -1237,32 +1237,32 @@
           <tr>
             <td class="py-2.5 px-4 font-semibold text-neutral-900">Custom Executive Tuition (${com.feePerParticipant} per participant)</td>
             <td class="py-2.5 px-4 text-center font-bold">${com.participants} Scholars</td>
-            <td class="py-2.5 px-4 text-right font-mono">${com.feePerParticipant}</td>
-            <td class="py-2.5 px-4 text-right font-mono font-bold text-neutral-900">${com.tuitionFormatted}</td>
+            <td class="py-2.5 px-4 text-right font-sans">${com.feePerParticipant}</td>
+            <td class="py-2.5 px-4 text-right font-sans font-bold text-neutral-900">${com.tuitionFormatted}</td>
           </tr>
           <tr>
             <td class="py-2.5 px-4 text-neutral-700">Course Materials, Digital Case Studies &amp; LMS Sandbox</td>
             <td class="py-2.5 px-4 text-center font-bold">${com.participants} Sets</td>
-            <td class="py-2.5 px-4 text-right font-mono">Included</td>
-            <td class="py-2.5 px-4 text-right font-mono">BDT 0.00</td>
+            <td class="py-2.5 px-4 text-right font-sans">Included</td>
+            <td class="py-2.5 px-4 text-right font-sans">BDT 0.00</td>
           </tr>
           <tr>
             <td class="py-2.5 px-4 text-neutral-700">Venue &amp; Logistics Provision (${com.venueProvision})</td>
             <td class="py-2.5 px-4 text-center font-bold">1 Package</td>
-            <td class="py-2.5 px-4 text-right font-mono">Included</td>
-            <td class="py-2.5 px-4 text-right font-mono">BDT 0.00</td>
+            <td class="py-2.5 px-4 text-right font-sans">Included</td>
+            <td class="py-2.5 px-4 text-right font-sans">BDT 0.00</td>
           </tr>
           <tr class="bg-neutral-50/80 font-bold">
             <td colspan="3" class="py-2.5 px-4 text-right">Subtotal (Net Professional Fees):</td>
-            <td class="py-2.5 px-4 text-right font-mono text-neutral-900">${com.tuitionFormatted}</td>
+            <td class="py-2.5 px-4 text-right font-sans text-neutral-900">${com.tuitionFormatted}</td>
           </tr>
           <tr class="bg-neutral-50/80 font-bold text-neutral-700">
             <td colspan="3" class="py-2.5 px-4 text-right">VAT Mushak Form 6.3 (${com.vatRate}% Statutory):</td>
-            <td class="py-2.5 px-4 text-right font-mono">${com.vatFormatted}</td>
+            <td class="py-2.5 px-4 text-right font-sans">${com.vatFormatted}</td>
           </tr>
           <tr class="bg-emerald-50/60 font-extrabold text-neutral-900 text-sm">
             <td colspan="3" class="py-3 px-4 text-right text-emerald-900">Grand Total Commercial Value:</td>
-            <td class="py-3 px-4 text-right font-mono text-emerald-800">${com.totalFormatted}</td>
+            <td class="py-3 px-4 text-right font-sans text-emerald-800">${com.totalFormatted}</td>
           </tr>
         `;
       }
@@ -1277,13 +1277,13 @@
       // Versions list
       if (elVersionsList) {
         elVersionsList.innerHTML = (proposal.versionHistory || []).map(vh => `
-          <div class="flex items-center justify-between p-2 rounded bg-neutral-50 border border-neutral-200 text-[11px]">
+          <div class="flex items-center justify-between p-2 rounded bg-neutral-50 border border-neutral-200 text-xs">
             <div>
-              <span class="font-bold text-neutral-900 font-mono">${vh.version}</span>
+              <span class="font-bold text-neutral-900 font-sans">${vh.version}</span>
               <span class="text-neutral-500 mx-1">•</span>
               <span class="text-neutral-700">${vh.summary}</span>
             </div>
-            <div class="text-neutral-400 font-mono">${vh.date} by ${vh.author}</div>
+            <div class="text-neutral-400 font-sans">${vh.date} by ${vh.author}</div>
           </div>
         `).join('');
       }
@@ -1437,7 +1437,7 @@
           const heightPx = Math.max(30, (t.rate / 100) * 140);
           return `
             <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
-              <span class="text-[10px] font-bold text-neutral-600 opacity-0 group-hover:opacity-100 transition">${t.rate}%</span>
+              <span class="text-xs font-bold text-neutral-600 opacity-0 group-hover:opacity-100 transition">${t.rate}%</span>
               <div class="w-full bg-emerald-600/80 group-hover:bg-emerald-600 rounded-t transition-all" style="height: ${heightPx}px;"></div>
             </div>
           `;
@@ -1475,11 +1475,11 @@
             <td class="py-3 px-6 text-center text-neutral-500">${dm.headcount}</td>
             <td class="py-3 px-6 text-center font-semibold text-neutral-800">${dm.enrolled}</td>
             <td class="py-3 px-6 text-center font-bold text-emerald-800">${dm.completed}</td>
-            <td class="py-3 px-6 text-center font-mono">${dm.attendance}</td>
+            <td class="py-3 px-6 text-center font-sans">${dm.attendance}</td>
             <td class="py-3 px-6 text-center">
               <span class="corp-badge corp-badge-green">${dm.completionRate}</span>
             </td>
-            <td class="py-3 px-6 text-right font-bold text-neutral-900 font-mono">${dm.spend}</td>
+            <td class="py-3 px-6 text-right font-bold text-neutral-900 font-sans">${dm.spend}</td>
           </tr>
         `).join('');
       }
@@ -1491,9 +1491,9 @@
           <tr class="hover:bg-neutral-50/60 transition text-xs">
             <td class="py-3 px-6 font-bold text-neutral-900">${ph.title}</td>
             <td class="py-3 px-6 text-neutral-600">${ph.dept}</td>
-            <td class="py-3 px-6 text-neutral-500 font-mono">${ph.dates}</td>
+            <td class="py-3 px-6 text-neutral-500 font-sans">${ph.dates}</td>
             <td class="py-3 px-6 text-center font-bold text-neutral-800">${ph.scholars}</td>
-            <td class="py-3 px-6 text-center font-mono text-emerald-700 font-bold">${ph.avgScore}</td>
+            <td class="py-3 px-6 text-center font-sans text-emerald-700 font-bold">${ph.avgScore}</td>
             <td class="py-3 px-6 text-center font-bold text-amber-700">${ph.rating}</td>
             <td class="py-3 px-6 text-center">
               <span class="corp-badge corp-badge-green">${ph.status}</span>
@@ -1551,22 +1551,22 @@
           <div class="p-4 rounded-xl border border-neutral-200 bg-neutral-50 text-xs">
             <span class="text-neutral-500 font-bold block mb-1">Audited Workforce</span>
             <div class="font-display font-extrabold text-2xl text-neutral-900">${m.totalEmployeesAudited}</div>
-            <div class="text-[11px] text-neutral-400 mt-0.5">Headcount pool</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Headcount pool</div>
           </div>
           <div class="p-4 rounded-xl border border-neutral-200 bg-neutral-50 text-xs">
             <span class="text-neutral-500 font-bold block mb-1">Enrolled Scholars</span>
             <div class="font-display font-extrabold text-2xl text-neutral-900">${m.enrolledScholars}</div>
-            <div class="text-[11px] text-emerald-700 font-semibold mt-0.5">${m.certificationsEarned} Certifications Earned</div>
+            <div class="text-xs text-emerald-700 font-semibold mt-0.5">${m.certificationsEarned} Certifications Earned</div>
           </div>
           <div class="p-4 rounded-xl border border-neutral-200 bg-neutral-50 text-xs">
             <span class="text-neutral-500 font-bold block mb-1">Competency Gain</span>
             <div class="font-display font-extrabold text-2xl text-emerald-700">${m.netCompetencyGain}</div>
-            <div class="text-[11px] text-neutral-500 mt-0.5">${m.averagePreTestScore} to ${m.averagePostTestScore}</div>
+            <div class="text-xs text-neutral-500 mt-0.5">${m.averagePreTestScore} to ${m.averagePostTestScore}</div>
           </div>
           <div class="p-4 rounded-xl border border-neutral-200 bg-neutral-50 text-xs">
             <span class="text-neutral-500 font-bold block mb-1">Total Audit Spend</span>
             <div class="font-display font-extrabold text-2xl text-neutral-900">${m.totalTrainingInvestment}</div>
-            <div class="text-[11px] text-neutral-400 mt-0.5">Statutory NBR Compliant</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Statutory NBR Compliant</div>
           </div>
         `;
       }
@@ -1576,7 +1576,7 @@
           <tr class="hover:bg-neutral-50 text-xs">
             <td class="py-2.5 px-4 font-bold text-neutral-900">${sd.range}</td>
             <td class="py-2.5 px-4 text-center font-bold text-neutral-800">${sd.count}</td>
-            <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-800">${sd.percentage}%</td>
+            <td class="py-2.5 px-4 text-center font-sans font-bold text-emerald-800">${sd.percentage}%</td>
             <td class="py-2.5 px-4">
               <div class="w-full bg-neutral-100 rounded-full h-2.5 overflow-hidden">
                 <div class="bg-emerald-600 h-2.5 rounded-full" style="width: ${sd.percentage}%"></div>
@@ -1626,10 +1626,10 @@
             </div>
             <div class="flex-1 min-w-0">
               <div class="font-bold text-neutral-900 truncate">${act.type}</div>
-              <div class="text-[11px] text-neutral-500 mt-0.5">${act.description}</div>
+              <div class="text-xs text-neutral-500 mt-0.5">${act.description}</div>
               <div class="flex items-center gap-2 mt-1">
-                <span class="font-mono font-bold text-emerald-800 text-[11px]">${act.amount}</span>
-                <span class="text-[10px] text-neutral-400">• ${act.date}</span>
+                <span class="font-sans font-bold text-emerald-800 text-xs">${act.amount}</span>
+                <span class="text-xs text-neutral-400">• ${act.date}</span>
               </div>
             </div>
           </div>
@@ -1684,14 +1684,14 @@
 
           return `
             <tr class="hover:bg-neutral-50/60 transition text-xs">
-              <td class="py-3 px-4 font-mono font-bold text-neutral-900">
+              <td class="py-3 px-4 font-sans font-bold text-neutral-900">
                 <a href="/corporate/invoices/${inv.id}" class="hover:text-emerald-700 underline font-bold">${inv.invoiceNumber || inv.id}</a>
               </td>
-              <td class="py-3 px-4 text-neutral-500 font-mono">${inv.issueDate || inv.date}</td>
+              <td class="py-3 px-4 text-neutral-500 font-sans">${inv.issueDate || inv.date}</td>
               <td class="py-3 px-4 font-semibold text-neutral-900 max-w-[200px] truncate" title="${inv.courseOrTrack}">${inv.courseOrTrack}</td>
-              <td class="py-3 px-4 font-mono text-neutral-600">${inv.mushakChallan}</td>
+              <td class="py-3 px-4 font-sans text-neutral-600">${inv.mushakChallan}</td>
               <td class="py-3 px-4 text-center font-bold">${inv.seats}</td>
-              <td class="py-3 px-4 text-right font-bold text-neutral-900 font-mono">${inv.grandTotalFormatted || inv.grandTotal}</td>
+              <td class="py-3 px-4 text-right font-bold text-neutral-900 font-sans">${inv.grandTotalFormatted || inv.grandTotal}</td>
               <td class="py-3 px-4 text-center">
                 <span class="corp-badge ${badgeClass}">${inv.statusBadge || inv.status}</span>
               </td>
@@ -1789,14 +1789,14 @@
               <td class="text-center font-bold">${item.sl || 1}</td>
               <td>
                 <strong class="text-neutral-900">${item.description}</strong>
-                <div class="text-[10px] text-neutral-400 font-mono">Service Code: ${item.code || 'SVC-EDU-01'}</div>
+                <div class="text-xs text-neutral-400 font-sans">Service Code: ${item.code || 'SVC-EDU-01'}</div>
               </td>
               <td class="text-center font-bold">${item.seats}</td>
-              <td class="text-right font-mono">BDT ${item.unitPrice.toLocaleString()}</td>
-              <td class="text-right font-mono font-semibold">BDT ${item.amount.toLocaleString()}</td>
-              <td class="text-right font-mono">${item.amount > 0 ? '15%' : '0%'}</td>
-              <td class="text-right font-mono">BDT ${itemVat.toLocaleString()}</td>
-              <td class="text-right font-mono font-bold text-neutral-900">BDT ${itemTotal.toLocaleString()}</td>
+              <td class="text-right font-sans">BDT ${item.unitPrice.toLocaleString()}</td>
+              <td class="text-right font-sans font-semibold">BDT ${item.amount.toLocaleString()}</td>
+              <td class="text-right font-sans">${item.amount > 0 ? '15%' : '0%'}</td>
+              <td class="text-right font-sans">BDT ${itemVat.toLocaleString()}</td>
+              <td class="text-right font-sans font-bold text-neutral-900">BDT ${itemTotal.toLocaleString()}</td>
             </tr>
           `;
         }).join('');
@@ -1813,13 +1813,13 @@
         } else {
           elPaymentsTbody.innerHTML = invoice.paymentRecords.map(pr => `
             <tr class="hover:bg-neutral-50 text-xs">
-              <td class="py-2.5 px-4 font-mono font-bold text-neutral-900">${pr.date}</td>
+              <td class="py-2.5 px-4 font-sans font-bold text-neutral-900">${pr.date}</td>
               <td class="py-2.5 px-4">
                 <div class="font-bold text-neutral-900">${pr.method}</div>
-                <div class="font-mono text-[10px] text-neutral-500">Ref: ${pr.ref}</div>
+                <div class="font-sans text-xs text-neutral-500">Ref: ${pr.ref}</div>
               </td>
               <td class="py-2.5 px-4 text-neutral-600">${pr.bank || 'Commercial Bank'}</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold text-emerald-800">${pr.amount}</td>
+              <td class="py-2.5 px-4 text-right font-sans font-bold text-emerald-800">${pr.amount}</td>
               <td class="py-2.5 px-4 text-center">
                 <span class="corp-badge corp-badge-green">${pr.status}</span>
               </td>
@@ -1898,15 +1898,15 @@
         usersTbody.innerHTML = settings.companyUsers.map(u => `
           <tr class="hover:bg-neutral-50/60 transition text-xs">
             <td class="py-3 px-6 font-bold text-neutral-900">${u.name}</td>
-            <td class="py-3 px-6 text-neutral-600 font-mono">${u.email}</td>
+            <td class="py-3 px-6 text-neutral-600 font-sans">${u.email}</td>
             <td class="py-3 px-6">
               <span class="corp-badge ${u.role === 'admin' ? 'corp-badge-green' : (u.role === 'lnd' ? 'corp-badge-blue' : 'corp-badge-neutral')}">${u.roleLabel || u.role}</span>
             </td>
             <td class="py-3 px-6 text-neutral-600">${u.department}</td>
             <td class="py-3 px-6 text-center">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${u.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">${u.status}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-bold ${u.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">${u.status}</span>
             </td>
-            <td class="py-3 px-6 text-right text-neutral-400 font-mono">${u.lastActive}</td>
+            <td class="py-3 px-6 text-right text-neutral-400 font-sans">${u.lastActive}</td>
             <td class="py-3 px-6 text-right">
               <button type="button" onclick="alert('Simulation: Modifying access permissions for ${u.name}');" class="text-neutral-500 hover:text-neutral-900 font-semibold p-1">Edit</button>
             </td>

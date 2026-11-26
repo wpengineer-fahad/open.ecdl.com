@@ -10,23 +10,50 @@
   <!-- Fonts & CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              dark: '#0F172A',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -48,11 +75,11 @@
     <!-- Operations Sidebar -->
     <aside class="ops-sidebar" id="ops-sidebar" aria-label="Operations Navigation">
       <div class="ops-sidebar-brand">
-        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-display font-bold text-base tracking-tight">
-          <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center font-black text-white text-sm">EC</div>
+        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-sans font-bold text-base tracking-tight">
+          <div class="w-8 h-8 rounded bg-[#C9A227] text-black flex items-center justify-center font-black text-white text-sm">EC</div>
           <div>
             <span>Open ECDL</span>
-            <div class="text-[10px] text-emerald-400 font-mono tracking-normal uppercase">Operations Hub</div>
+            <div class="text-xs text-[#C9A227] font-sans tracking-normal uppercase">Operations Hub</div>
           </div>
         </a>
         <button id="ops-sidebar-close" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Close Sidebar">
@@ -60,11 +87,11 @@
         </button>
       </div>
 
-      <div class="px-4 py-3 bg-slate-900/60 border-b border-slate-800 flex items-center gap-3">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-emerald-500 shrink-0 ops-user-avatar" />
+      <div class="px-4 py-3 bg-black/20 border-b border-white/15 flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-[#C9A227] shrink-0 ops-user-avatar" />
         <div class="min-w-0 flex-1">
           <div class="text-xs font-bold text-white truncate ops-user-name">Nahid Hasan</div>
-          <div class="text-[11px] text-emerald-400 font-medium truncate ops-user-role-label">Training Manager</div>
+          <div class="text-xs text-[#C9A227] font-medium truncate ops-user-role-label">Training Manager</div>
         </div>
       </div>
 
@@ -128,13 +155,13 @@
           </button>
           <div>
             <h1 class="text-sm font-bold text-slate-900">Faculty & Trainer Management Console</h1>
-            <div class="text-[11px] text-slate-500">6 Verified Subject Matter Experts • Teaching Hours & Evaluation Analytics</div>
+            <div class="text-xs text-slate-500">6 Verified Subject Matter Experts • Teaching Hours & Evaluation Analytics</div>
           </div>
         </div>
 
         <div class="flex items-center gap-2">
           <div class="ops-role-pill">
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
             <select class="ops-role-select text-xs font-semibold text-slate-900 bg-transparent cursor-pointer">
               <option value="manager">Training Manager (Nahid Hasan)</option>
               <option value="coordinator">Course Coordinator (Afroza Sultana)</option>
@@ -144,7 +171,7 @@
               <option value="admin">Platform Admin (System Operations)</option>
             </select>
           </div>
-          <button onclick="OpenECDLOperations.openModal('trainer-materials-modal')" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
+          <button onclick="OpenECDLOperations.openModal('trainer-materials-modal')" class="px-3 py-1.5 bg-[#C9A227] text-black hover:bg-emerald-700 text-white rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
             <i data-lucide="upload" class="w-3.5 h-3.5"></i>
             <span>Upload Materials</span>
           </button>
@@ -191,13 +218,13 @@
             <div class="p-6 border-2 border-dashed border-slate-300 rounded text-center bg-slate-50">
               <i data-lucide="file-up" class="w-6 h-6 text-slate-400 mx-auto mb-2"></i>
               <div class="text-xs text-slate-600 font-medium">Click to select files or drag-and-drop</div>
-              <div class="text-[10px] text-slate-400 mt-1">Watermarked automatically per Document Control SOP (DOC-2026-008)</div>
+              <div class="text-xs text-slate-400 mt-1">Watermarked automatically per Document Control SOP (DOC-2026-008)</div>
             </div>
           </div>
         </div>
         <div class="ops-modal-footer">
           <button type="button" onclick="OpenECDLOperations.closeModal('trainer-materials-modal')" class="px-3 py-1.5 border border-slate-300 rounded text-slate-700 font-semibold hover:bg-slate-50 text-xs">Cancel</button>
-          <button type="submit" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-semibold text-xs">Upload & Sync</button>
+          <button type="submit" class="px-4 py-1.5 bg-[#C9A227] text-black hover:bg-emerald-700 text-white rounded font-semibold text-xs">Upload & Sync</button>
         </div>
       </form>
     </div>

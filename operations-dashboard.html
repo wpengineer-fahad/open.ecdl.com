@@ -10,23 +10,50 @@
   <!-- Fonts & CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              dark: '#0F172A',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -50,11 +77,11 @@
     <!-- ========================================================= -->
     <aside class="ops-sidebar" id="ops-sidebar" aria-label="Operations Navigation">
       <div class="ops-sidebar-brand">
-        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-display font-bold text-base tracking-tight">
-          <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center font-black text-white text-sm">EC</div>
+        <a href="/operations/dashboard" class="flex items-center gap-2 text-white font-sans font-bold text-base tracking-tight">
+          <div class="w-8 h-8 rounded bg-[#C9A227] text-black flex items-center justify-center font-black text-white text-sm">EC</div>
           <div>
             <span>Open ECDL</span>
-            <div class="text-[10px] text-emerald-400 font-mono tracking-normal uppercase">Operations Hub</div>
+            <div class="text-xs text-[#C9A227] font-sans tracking-normal uppercase">Operations Hub</div>
           </div>
         </a>
         <button id="ops-sidebar-close" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Close Sidebar">
@@ -63,11 +90,11 @@
       </div>
 
       <!-- Current Role Pill in Sidebar -->
-      <div class="px-4 py-3 bg-slate-900/60 border-b border-slate-800 flex items-center gap-3">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-emerald-500 shrink-0 ops-user-avatar" />
+      <div class="px-4 py-3 bg-black/20 border-b border-white/15 flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="User Avatar" class="w-9 h-9 rounded-full object-cover border border-[#C9A227] shrink-0 ops-user-avatar" />
         <div class="min-w-0 flex-1">
           <div class="text-xs font-bold text-white truncate ops-user-name">Nahid Hasan</div>
-          <div class="text-[11px] text-emerald-400 font-medium truncate ops-user-role-label">Training Manager</div>
+          <div class="text-xs text-[#C9A227] font-medium truncate ops-user-role-label">Training Manager</div>
         </div>
       </div>
 
@@ -150,16 +177,16 @@
           <div>
             <h1 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <span>Operations Command Center</span>
-              <span class="ops-badge ops-badge-success text-[10px]">Live Session System</span>
+              <span class="ops-badge ops-badge-success text-xs">Live Session System</span>
             </h1>
-            <div class="text-[11px] text-slate-500 hidden sm:block">Dhaka Time: <span class="font-mono text-slate-700">UTC+6 BST</span> • Banani Campus Operations</div>
+            <div class="text-xs text-slate-500 hidden sm:block">Dhaka Time: <span class="font-sans text-slate-700">UTC+6 BST</span> • Banani Campus Operations</div>
           </div>
         </div>
 
         <div class="flex items-center gap-3">
           <!-- Prototype Role Switcher -->
           <div class="ops-role-pill">
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider hidden md:inline">Simulated Role:</span>
             <select class="ops-role-select text-xs font-semibold text-slate-900 bg-transparent cursor-pointer" aria-label="Simulated Prototype Role Switcher">
               <option value="manager">Training Manager (Nahid Hasan)</option>
               <option value="coordinator">Course Coordinator (Afroza Sultana)</option>
@@ -170,7 +197,7 @@
             </select>
           </div>
 
-          <a href="/operations/cohorts" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-semibold transition-colors shadow-sm">
+          <a href="/operations/cohorts" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#C9A227] text-black hover:bg-emerald-700 text-white rounded text-xs font-semibold transition-colors shadow-sm">
             <i data-lucide="plus" class="w-3.5 h-3.5"></i>
             <span>New Cohort</span>
           </a>
@@ -235,7 +262,7 @@
             <div class="ops-stat-label">Quality NCR / CAPA</div>
             <div class="ops-stat-value text-rose-600" id="stat-open-ncrs">3</div>
             <div class="ops-stat-sub">
-              <span class="text-slate-600 font-mono">1 Action Implemented</span>
+              <span class="text-slate-600 font-sans">1 Action Implemented</span>
             </div>
           </div>
         </div>
@@ -318,7 +345,7 @@
                   <i data-lucide="check-circle" class="w-4 h-4 text-amber-600"></i>
                   <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">Operational Task List</h2>
                 </div>
-                <span class="text-[11px] text-slate-500 font-mono">Live Sync</span>
+                <span class="text-xs text-slate-500 font-sans">Live Sync</span>
               </div>
               <div id="dashboard-tasks-list" class="divide-y divide-slate-100">
                 <!-- Populated dynamically with toggleable checkboxes -->
@@ -338,7 +365,7 @@
               <div class="mt-4 space-y-3">
                 <div class="p-2.5 bg-slate-50 rounded border border-slate-100 flex items-center justify-between">
                   <div>
-                    <div class="text-[10px] uppercase font-bold text-slate-500">Level 1: Reaction (NPS)</div>
+                    <div class="text-xs uppercase font-bold text-slate-500">Level 1: Reaction (NPS)</div>
                     <div class="text-xs text-slate-700 font-semibold">Participant Feedback Score</div>
                   </div>
                   <div class="text-base font-extrabold text-emerald-700">4.88 / 5.0</div>
@@ -346,7 +373,7 @@
 
                 <div class="p-2.5 bg-slate-50 rounded border border-slate-100 flex items-center justify-between">
                   <div>
-                    <div class="text-[10px] uppercase font-bold text-slate-500">Level 2: Learning Gain</div>
+                    <div class="text-xs uppercase font-bold text-slate-500">Level 2: Learning Gain</div>
                     <div class="text-xs text-slate-700 font-semibold">Pre vs Post Test Delta</div>
                   </div>
                   <div class="text-base font-extrabold text-emerald-700">+43.4%</div>
@@ -354,7 +381,7 @@
 
                 <div class="p-2.5 bg-slate-50 rounded border border-slate-100 flex items-center justify-between">
                   <div>
-                    <div class="text-[10px] uppercase font-bold text-slate-500">Level 3: Behavior (60-Day)</div>
+                    <div class="text-xs uppercase font-bold text-slate-500">Level 3: Behavior (60-Day)</div>
                     <div class="text-xs text-slate-700 font-semibold">On-the-job Application</div>
                   </div>
                   <div class="text-base font-extrabold text-emerald-700">4.72 / 5.0</div>
@@ -367,7 +394,7 @@
               <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">Operational Shortcuts</h3>
               <div class="space-y-2">
                 <a href="/operations/attendance" class="w-full flex items-center justify-between p-2.5 bg-slate-800 hover:bg-slate-700 rounded text-xs font-medium text-slate-200 transition-colors">
-                  <span class="flex items-center gap-2"><i data-lucide="check-square" class="w-4 h-4 text-emerald-400"></i> Mark Today's Attendance</span>
+                  <span class="flex items-center gap-2"><i data-lucide="check-square" class="w-4 h-4 text-[#C9A227]"></i> Mark Today's Attendance</span>
                   <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
                 </a>
                 <a href="/operations/quality" class="w-full flex items-center justify-between p-2.5 bg-slate-800 hover:bg-slate-700 rounded text-xs font-medium text-slate-200 transition-colors">
@@ -391,7 +418,7 @@
         <div>
           Enroute Center for Development Ltd. (Open ECDL) • Internal Platform Operations System • ISO 9001:2015 Governance Prototype
         </div>
-        <div class="font-mono text-slate-400 text-[11px]">
+        <div class="font-sans text-slate-400 text-xs">
           Banani Hall 01 & 02 • System Build: 2026.12.14
         </div>
       </footer>

@@ -1008,7 +1008,7 @@
                 <div class="text-neutral-500">${a.designation || 'Participant'} • ${a.email}</div>
               </div>
             </div>
-            <span class="px-2 py-0.5 rounded text-[11px] font-semibold ${currentOrderState === 'paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-neutral-200 text-neutral-700'}">
+            <span class="px-2 py-0.5 rounded text-xs font-semibold ${currentOrderState === 'paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-neutral-200 text-neutral-700'}">
               ${currentOrderState === 'paid' ? 'Seat Reserved' : 'Pending Clearance'}
             </span>
           </div>

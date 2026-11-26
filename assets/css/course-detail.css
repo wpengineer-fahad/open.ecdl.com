@@ -32,8 +32,8 @@
 }
 
 .ecdl-course-header__title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(2rem, 3.8vw, 3.125rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: var(--letter-spacing-tight);
@@ -43,7 +43,7 @@
 }
 
 .ecdl-course-header__lead {
-  font-size: clamp(1rem, 1.25vw, 1.1875rem);
+  font-size: var(--font-body-size);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
   max-width: 860px;
@@ -84,7 +84,7 @@
 }
 
 .ecdl-meta-badge-item__label {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -92,7 +92,7 @@
 }
 
 .ecdl-meta-badge-item__val {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-black);
 }
@@ -147,8 +147,8 @@
 }
 
 .ecdl-detail-section__title {
-  font-family: var(--font-family-heading);
-  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   line-height: 1.25;
   color: var(--ecdl-color-black);
@@ -160,7 +160,7 @@
    ========================================================================== */
 
 .ecdl-overview-prose {
-  font-size: 1rem;
+  font-size: var(--font-body-size);
   line-height: 1.75;
   color: var(--color-text-primary);
 }
@@ -207,12 +207,12 @@
   place-content: center;
   flex-shrink: 0;
   margin-top: 2px;
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 800;
 }
 
 .ecdl-outcome-item__text {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.55;
   color: var(--ecdl-color-black);
   font-weight: 500;
@@ -239,7 +239,7 @@
   background-color: var(--ecdl-color-surface);
   border: 1px solid var(--ecdl-color-borders);
   border-radius: var(--radius-xs);
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-black);
 }
@@ -247,7 +247,7 @@
 .ecdl-attend-item__bullet {
   color: var(--ecdl-color-green);
   font-weight: 800;
-  font-size: 1.125rem;
+  font-size: var(--font-body-size);
 }
 
 .ecdl-prereq-card {
@@ -255,7 +255,7 @@
   border-left: 4px solid var(--ecdl-color-black);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: var(--space-md) var(--space-lg);
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
@@ -301,7 +301,7 @@
 }
 
 .ecdl-module-card.is-open .ecdl-module-card__header {
-  background-color: #EAF5EE;
+  background-color: var(--color-surface);
 }
 
 .ecdl-module-card__title-wrap {
@@ -311,7 +311,7 @@
 }
 
 .ecdl-module-card__num {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -319,8 +319,8 @@
 }
 
 .ecdl-module-card__title {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
 }
@@ -329,7 +329,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -365,10 +365,10 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-green);
-  background-color: #EAF5EE;
+  background-color: var(--color-surface);
   padding: 4px 10px;
   border-radius: var(--radius-xs);
   align-self: flex-start;
@@ -393,7 +393,7 @@
   background-color: var(--ecdl-color-surface);
   border: 1px solid var(--ecdl-color-borders);
   border-radius: var(--radius-xs);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
 }
 
 .ecdl-lesson-item__title {
@@ -408,7 +408,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -416,7 +416,7 @@
   background: none;
   border: 1px solid var(--ecdl-color-green);
   color: var(--ecdl-color-green);
-  font-size: 0.6875rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 2px;
@@ -457,7 +457,7 @@
 }
 
 .ecdl-methodology-card__title {
-  font-size: 0.9375rem;
+  font-size: var(--font-body-size);
   font-weight: 700;
   color: var(--ecdl-color-black);
   display: flex;
@@ -466,7 +466,7 @@
 }
 
 .ecdl-methodology-card__desc {
-  font-size: 0.8125rem;
+  font-size: var(--font-body-size);
   line-height: 1.55;
   color: var(--color-text-secondary);
   margin: 0;
@@ -533,22 +533,22 @@
 }
 
 .ecdl-trainer-profile-name {
-  font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-black);
   margin: 0;
 }
 
 .ecdl-trainer-profile-title {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: 600;
   color: var(--ecdl-color-green);
   margin-bottom: var(--space-2xs);
 }
 
 .ecdl-trainer-bio {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   line-height: 1.65;
   color: var(--color-text-secondary);
 }
@@ -566,7 +566,7 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-primary);
 }
 
@@ -592,15 +592,15 @@
 }
 
 .ecdl-cert-box__title {
-  font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-yellow);
   margin-bottom: var(--space-xs);
 }
 
 .ecdl-cert-box__desc {
-  font-size: 0.875rem;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--color-text-on-dark-muted);
 }
@@ -614,7 +614,7 @@
 }
 
 .ecdl-cert-badge-frame__qr {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--ecdl-color-yellow);
   font-weight: 700;
   text-transform: uppercase;
@@ -663,7 +663,7 @@
 }
 
 .ecdl-reg-fee-block__label {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-text-secondary);
@@ -672,15 +672,15 @@
 }
 
 .ecdl-reg-fee-block__price {
-  font-family: var(--font-family-heading);
-  font-size: 1.875rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
   color: var(--ecdl-color-black);
   line-height: 1.15;
 }
 
 .ecdl-reg-fee-block__tax {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
   display: block;
   margin-top: 2px;
@@ -694,7 +694,7 @@
 }
 
 .ecdl-cohort-selector__title {
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -740,18 +740,18 @@
 }
 
 .ecdl-cohort-card__date {
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-black);
 }
 
 .ecdl-cohort-card__meta {
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
 .ecdl-cohort-card__status {
-  font-size: 0.6875rem;
+  font-size: var(--font-small);
   font-weight: 700;
   color: var(--ecdl-color-green);
 }
@@ -763,10 +763,10 @@
 /* Self-Paced Cohort Notice */
 .ecdl-self-paced-notice {
   background-color: #F4FAF6;
-  border: 1px solid rgba(16, 139, 68, 0.2);
+  border: 1px solid rgba(27, 77, 62, 0.2);
   border-radius: var(--radius-xs);
   padding: var(--space-sm);
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: var(--color-text-primary);
   display: flex;
   align-items: center;
@@ -782,10 +782,10 @@
 
 .ecdl-group-savings-banner {
   background-color: #FFFDF0;
-  border: 1px dashed #F4DB0F;
+  border: 1px dashed var(--color-accent);
   border-radius: var(--radius-xs);
   padding: 8px 10px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--ecdl-color-black);
   display: flex;
   align-items: center;
@@ -801,7 +801,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   color: var(--color-text-secondary);
 }
 
@@ -847,15 +847,15 @@
   }
 
   .ecdl-mobile-bottom-bar__price {
-    font-family: var(--font-family-heading);
-    font-size: 1.125rem;
+    font-family: var(--font-heading);
+    font-size: var(--font-heading-size);
     font-weight: 800;
     color: var(--ecdl-color-black);
     line-height: 1.1;
   }
 
   .ecdl-mobile-bottom-bar__meta {
-    font-size: 0.6875rem;
+    font-size: var(--font-small);
     color: var(--color-text-secondary);
     white-space: nowrap;
     overflow: hidden;
@@ -868,14 +868,14 @@
    OPEN ECDL MODERN HOMEPAGE PARITY STYLES (Single Course Detail)
    ========================================================================== */
 .ecdl-course-sticky-panel {
-  border-radius: 28px !important;
+  border-radius: 8px !important;
   border: 1px solid #E5E7EB !important;
-  box-shadow: 0 20px 30px -4px rgba(16, 139, 68, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06) !important;
+  box-shadow: 0 20px 30px -4px rgba(27, 77, 62, 0.12), 0 8px 12px -2px rgba(17, 17, 17, 0.06) !important;
   background-color: #FFFFFF !important;
 }
 
 .ecdl-module-accordion {
-  border-radius: 20px !important;
+  border-radius: 8px !important;
   border: 1px solid #E5E7EB !important;
   background-color: #FFFFFF !important;
   margin-bottom: 12px !important;
@@ -884,12 +884,12 @@
 }
 
 .ecdl-module-header {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-heading);
   font-weight: 700 !important;
 }
 
 .ecdl-trainer-profile-card {
-  border-radius: 24px !important;
+  border-radius: 8px !important;
   border: 1px solid #E5E7EB !important;
   background-color: #FFFFFF !important;
   box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.05) !important;

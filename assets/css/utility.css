@@ -8,8 +8,8 @@
    ========================================================================== */
 .ecdl-legal-prose {
   max-width: 72ch;
-  color: #374151;
-  font-size: 1rem;
+  color: var(--color-black);
+  font-size: var(--font-body-size);
   line-height: 1.8;
 }
 
@@ -26,10 +26,10 @@
 }
 
 .ecdl-legal-prose h2 {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  font-size: 1.375rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
-  color: #111111;
+  color: var(--color-black);
   letter-spacing: -0.015em;
   margin-bottom: 0.875rem;
   display: flex;
@@ -38,10 +38,10 @@
 }
 
 .ecdl-legal-prose h3 {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  font-size: 1.0625rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-body-size);
   font-weight: 700;
-  color: #1F2937;
+  color: rgba(255, 255, 255, 0.16);
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
 }
@@ -66,22 +66,22 @@
   gap: 0.5rem;
   padding: 0.45rem 0.75rem;
   border-radius: 0.5rem;
-  font-size: 0.8125rem;
+  font-size: var(--font-small);
   color: #4B5563;
   border-left: 2px solid transparent;
   transition: all 0.15s ease;
 }
 
 .legal-toc-link:hover {
-  color: #108B44;
-  background-color: #EDF7F1;
+  color: var(--color-primary);
+  background-color: var(--color-surface);
 }
 
 .legal-toc-link.is-active {
-  color: #0D7338;
+  color: #153D31;
   font-weight: 700;
-  background-color: #EDF7F1;
-  border-left-color: #108B44;
+  background-color: var(--color-surface);
+  border-left-color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -126,7 +126,7 @@
    ========================================================================== */
 .faq-accordion-btn[aria-expanded="true"] .faq-chevron {
   transform: rotate(180deg);
-  color: #108B44;
+  color: var(--color-primary);
 }
 
 .faq-accordion-panel {
@@ -161,7 +161,7 @@
   border-radius: 1.25rem;
   max-width: 28rem;
   width: 100%;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(27, 77, 62, 0.10);
   border: 1px solid #E5E7EB;
   transform: translateY(10px) scale(0.98);
   transition: transform 0.2s ease;
@@ -187,7 +187,7 @@
   body {
     background: #FFFFFF !important;
     color: #000000 !important;
-    font-size: 11pt !important;
+    font-size: var(--font-small);
   }
 
   main {
@@ -197,9 +197,9 @@
 
   .ecdl-legal-prose {
     max-width: 100% !important;
-    font-size: 11pt !important;
+    font-size: var(--font-body-size);
     line-height: 1.6 !important;
-    color: #111111 !important;
+    color: var(--color-black) !important;
   }
 
   .ecdl-legal-prose h2,

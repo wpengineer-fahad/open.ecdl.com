@@ -225,7 +225,7 @@
         cohortsTbody.innerHTML = cohorts.map(c => `
           <tr>
             <td>
-              <a href="/operations/cohorts/COH-2026-088" class="font-bold text-slate-900 hover:text-emerald-700 font-mono">${c.code}</a>
+              <a href="/operations/cohorts/COH-2026-088" class="font-bold text-slate-900 hover:text-emerald-700 font-sans">${c.code}</a>
               <div class="text-xs text-slate-500">${c.programmeTitle}</div>
             </td>
             <td>
@@ -260,13 +260,13 @@
             <input type="checkbox" ${t.status === 'Completed' ? 'checked' : ''} class="mt-1 rounded text-emerald-600 focus:ring-emerald-500 cursor-pointer ops-task-check" data-id="${t.id}" />
             <div class="flex-1 min-w-0">
               <div class="text-xs font-semibold text-slate-800 ${t.status === 'Completed' ? 'line-through text-slate-400' : ''}">${t.title}</div>
-              <div class="text-[11px] text-slate-500 mt-0.5 flex items-center gap-2">
-                <span class="font-mono text-slate-600">${t.cohortCode}</span>
+              <div class="text-xs text-slate-500 mt-0.5 flex items-center gap-2">
+                <span class="font-sans text-slate-600">${t.cohortCode}</span>
                 <span>• Due ${t.dueDate}</span>
                 <span>• Assignee: ${t.assignee.split(' ')[0]}</span>
               </div>
             </div>
-            <span class="ops-badge ${t.priority === 'High' ? 'ops-badge-danger' : (t.priority === 'Medium' ? 'ops-badge-warning' : 'ops-badge-neutral')} text-[10px]">
+            <span class="ops-badge ${t.priority === 'High' ? 'ops-badge-danger' : (t.priority === 'Medium' ? 'ops-badge-warning' : 'ops-badge-neutral')} text-xs">
               ${t.priority}
             </span>
           </div>
@@ -296,14 +296,14 @@
           <tr>
             <td>
               <div class="font-bold text-slate-900">${p.title}</div>
-              <div class="text-xs text-slate-500 font-mono mt-0.5">${p.code} • ${p.category}</div>
+              <div class="text-xs text-slate-500 font-sans mt-0.5">${p.code} • ${p.category}</div>
             </td>
             <td>
-              <div class="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded inline-block">${p.syllabusVersion}</div>
+              <div class="text-xs font-sans font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded inline-block">${p.syllabusVersion}</div>
             </td>
             <td>
               <div class="flex flex-wrap gap-1">
-                ${p.deliveryModes.map(m => `<span class="ops-badge ops-badge-neutral text-[10px]">${m}</span>`).join('')}
+                ${p.deliveryModes.map(m => `<span class="ops-badge ops-badge-neutral text-xs">${m}</span>`).join('')}
               </div>
             </td>
             <td class="text-slate-700 font-medium">${p.totalHours} Hours (${p.sessionCount} Sessions)</td>
@@ -354,29 +354,29 @@
         tbody.innerHTML = cohorts.map(c => `
           <tr>
             <td>
-              <a href="/operations/cohorts/COH-2026-088" class="font-bold text-slate-900 hover:text-emerald-700 font-mono text-sm">${c.code}</a>
+              <a href="/operations/cohorts/COH-2026-088" class="font-bold text-slate-900 hover:text-emerald-700 font-sans text-sm">${c.code}</a>
               <div class="text-xs text-slate-500">${c.programmeTitle}</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">${c.cohortName}</div>
+              <div class="text-xs text-slate-400 mt-0.5">${c.cohortName}</div>
             </td>
             <td>
               <span class="ops-badge ${c.deliveryMode === 'Classroom' ? 'ops-badge-info' : (c.deliveryMode === 'Live Online' ? 'ops-badge-warning' : 'ops-badge-neutral')}">${c.deliveryMode}</span>
             </td>
             <td class="text-xs text-slate-700">
               <div class="font-medium">${c.venueShort}</div>
-              <div class="text-slate-400 text-[11px]">${c.roomAllocation}</div>
+              <div class="text-slate-400 text-xs">${c.roomAllocation}</div>
             </td>
             <td>
               <div class="text-xs font-semibold text-slate-900">${c.trainerName}</div>
-              <div class="text-[11px] text-slate-500">${c.coordinator} (Coord)</div>
+              <div class="text-xs text-slate-500">${c.coordinator} (Coord)</div>
             </td>
             <td class="text-xs text-slate-700">
               <div class="font-semibold">${c.dateRangeFormatted}</div>
-              <div class="text-slate-500 text-[11px]">${c.schedulePattern}</div>
+              <div class="text-slate-500 text-xs">${c.schedulePattern}</div>
             </td>
             <td>
               <div class="flex items-center gap-1.5">
                 <span class="text-xs font-bold text-slate-900">${c.enrolledCount}/${c.capacity}</span>
-                ${c.waitlistCount > 0 ? `<span class="ops-badge ops-badge-warning text-[10px]">+${c.waitlistCount} Waitlist</span>` : ''}
+                ${c.waitlistCount > 0 ? `<span class="ops-badge ops-badge-warning text-xs">+${c.waitlistCount} Waitlist</span>` : ''}
               </div>
               <div class="w-20 bg-slate-200 h-1 rounded-full overflow-hidden mt-1">
                 <div class="bg-emerald-600 h-1 rounded-full" style="width: ${Math.round((c.enrolledCount / c.capacity) * 100)}%"></div>
@@ -433,7 +433,7 @@
             <td class="font-bold text-slate-900">${s.sessionNumber}</td>
             <td>
               <div class="font-semibold text-slate-800 text-xs">${s.title}</div>
-              <div class="text-[11px] text-slate-500">${s.learningMaterials}</div>
+              <div class="text-xs text-slate-500">${s.learningMaterials}</div>
             </td>
             <td class="text-xs text-slate-700">${s.dateFormatted} • ${s.timeFormatted}</td>
             <td class="text-xs text-slate-600">${s.venue}</td>
@@ -456,7 +456,7 @@
           <tr>
             <td class="font-semibold text-slate-900">${r.name}</td>
             <td class="text-xs text-slate-700">${r.company}</td>
-            <td class="text-xs text-slate-500 font-mono">${r.email}</td>
+            <td class="text-xs text-slate-500 font-sans">${r.email}</td>
             <td class="text-xs text-slate-600">${r.phone}</td>
             <td>
               <span class="ops-badge ${r.status === 'Present' ? 'ops-badge-success' : (r.status === 'Late' ? 'ops-badge-warning' : 'ops-badge-danger')}">${r.status}</span>
@@ -487,10 +487,10 @@
         tbody.innerHTML = sessions.map(s => `
           <tr>
             <td class="text-xs font-bold text-slate-900">${s.dateFormatted}</td>
-            <td class="text-xs text-slate-600 font-mono">${s.timeFormatted}</td>
+            <td class="text-xs text-slate-600 font-sans">${s.timeFormatted}</td>
             <td>
               <div class="font-semibold text-slate-900 text-xs">${s.title}</div>
-              <div class="text-[11px] text-slate-500">${s.cohortCode} • ${s.programmeTitle}</div>
+              <div class="text-xs text-slate-500">${s.cohortCode} • ${s.programmeTitle}</div>
             </td>
             <td>
               <span class="ops-badge ${s.deliveryMode === 'Classroom' ? 'ops-badge-info' : 'ops-badge-warning'}">${s.deliveryMode}</span>
@@ -546,7 +546,7 @@
           <tr data-participant-id="${r.participantId}">
             <td class="font-bold text-slate-900 text-xs">${r.name}</td>
             <td class="text-xs text-slate-700">${r.company}</td>
-            <td class="text-xs text-slate-500 font-mono">${r.email}</td>
+            <td class="text-xs text-slate-500 font-sans">${r.email}</td>
             <td class="text-xs text-slate-600">${r.checkInTime}</td>
             <td>
               <span class="ops-badge ${r.status === 'Present' ? 'ops-badge-success' : (r.status === 'Absent' ? 'ops-badge-danger' : (r.status === 'Late' ? 'ops-badge-warning' : 'ops-badge-info'))}" id="badge-${r.participantId}">
@@ -622,10 +622,10 @@
                 <div class="p-3 bg-slate-50 rounded border border-slate-200 text-xs">
                   <div class="flex items-center justify-between font-semibold text-slate-800">
                     <span>${h.previousStatus} &rarr; <strong class="text-emerald-700">${h.newStatus}</strong></span>
-                    <span class="text-slate-400 font-mono text-[11px]">${h.timestamp}</span>
+                    <span class="text-slate-400 font-sans text-xs">${h.timestamp}</span>
                   </div>
                   <div class="text-slate-600 mt-1">Edited by: ${h.modifiedBy}</div>
-                  <div class="text-slate-500 italic text-[11px] mt-0.5">Reason: ${h.reason}</div>
+                  <div class="text-slate-500 italic text-xs mt-0.5">Reason: ${h.reason}</div>
                 </div>
               `).join('')}
             </div>
@@ -649,24 +649,24 @@
             <div class="flex-1 min-w-0">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-slate-900 text-sm truncate">${t.name}</h3>
-                <span class="ops-badge ops-badge-success text-[10px]">Active Faculty</span>
+                <span class="ops-badge ops-badge-success text-xs">Active Faculty</span>
               </div>
               <div class="text-xs text-slate-600 mt-0.5 line-clamp-1">${t.designation}</div>
-              <div class="text-[11px] text-emerald-800 font-medium mt-1">${t.role}</div>
+              <div class="text-xs text-emerald-800 font-medium mt-1">${t.role}</div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-3 gap-2 text-center">
             <div class="p-2 bg-slate-50 rounded">
-              <div class="text-[10px] text-slate-500 font-bold uppercase">Rating</div>
+              <div class="text-xs text-slate-500 font-bold uppercase">Rating</div>
               <div class="text-xs font-bold text-slate-900 mt-0.5">${t.averageRating} / 5.0</div>
             </div>
             <div class="p-2 bg-slate-50 rounded">
-              <div class="text-[10px] text-slate-500 font-bold uppercase">Graduates</div>
+              <div class="text-xs text-slate-500 font-bold uppercase">Graduates</div>
               <div class="text-xs font-bold text-slate-900 mt-0.5">${t.totalGraduatesTrained}+</div>
             </div>
             <div class="p-2 bg-slate-50 rounded">
-              <div class="text-[10px] text-slate-500 font-bold uppercase">NPS</div>
+              <div class="text-xs text-slate-500 font-bold uppercase">NPS</div>
               <div class="text-xs font-bold text-emerald-700 mt-0.5">${t.npsScore}</div>
             </div>
           </div>
@@ -678,7 +678,7 @@
           </div>
 
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-[11px] text-slate-500">${t.materialsUploaded} materials hosted</span>
+            <span class="text-xs text-slate-500">${t.materialsUploaded} materials hosted</span>
             <button class="px-2.5 py-1 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded transition-colors" onclick="OpenECDLOperations.openModal('trainer-materials-modal')">
               Course Packs
             </button>
@@ -712,18 +712,18 @@
           <tr>
             <td>
               <div class="font-bold text-slate-900 text-xs">${c.cohortCode}</div>
-              <div class="text-[11px] text-slate-500">${c.programmeTitle}</div>
+              <div class="text-xs text-slate-500">${c.programmeTitle}</div>
             </td>
             <td class="font-semibold text-slate-800 text-xs">${c.evaluationsSubmitted} / ${c.participantsCount}</td>
             <td class="font-bold text-emerald-700 text-xs">${c.level1Reaction} / 5.0</td>
             <td class="text-xs text-slate-700">
               ${c.level2PreScoreAvg}% &rarr; <strong class="text-emerald-700">${c.level2PostScoreAvg}%</strong>
-              <div class="text-[10px] text-emerald-600 font-bold">Gain: +${c.level2NetGain}%</div>
+              <div class="text-xs text-emerald-600 font-bold">Gain: +${c.level2NetGain}%</div>
             </td>
             <td class="text-xs font-semibold text-slate-800">${c.level3BehaviorProjected} / 5.0</td>
             <td class="text-xs text-slate-800">${c.trainerRating} / 5.0</td>
             <td>
-              <span class="ops-badge ${c.status.includes('Completed') ? 'ops-badge-success' : 'ops-badge-info'} text-[10px]">${c.status}</span>
+              <span class="ops-badge ${c.status.includes('Completed') ? 'ops-badge-success' : 'ops-badge-info'} text-xs">${c.status}</span>
             </td>
           </tr>
         `).join('');
@@ -738,11 +738,11 @@
               <div>
                 <span class="font-bold text-slate-900 text-xs">${s.participantName}</span>
                 <span class="text-slate-500 text-xs">(${s.company})</span>
-                <div class="text-[11px] text-emerald-800 font-mono mt-0.5">${s.cohortCode} • ${s.submissionDate}</div>
+                <div class="text-xs text-emerald-800 font-sans mt-0.5">${s.cohortCode} • ${s.submissionDate}</div>
               </div>
               <div class="text-right">
                 <span class="ops-badge ops-badge-success">${s.ratingOverall} / 5.0 Overall</span>
-                <div class="text-[11px] text-slate-500 mt-1">Pre: ${s.preScore}% &rarr; Post: <strong class="text-emerald-700">${s.postScore}%</strong></div>
+                <div class="text-xs text-slate-500 mt-1">Pre: ${s.preScore}% &rarr; Post: <strong class="text-emerald-700">${s.postScore}%</strong></div>
               </div>
             </div>
             <p class="text-xs text-slate-700 italic mt-3 bg-white p-3 rounded border border-slate-100">
@@ -775,21 +775,21 @@
         tbody.innerHTML = records.map(q => `
           <tr>
             <td>
-              <a href="/operations/quality/${q.id}" class="font-mono font-bold text-slate-900 hover:text-emerald-700 text-xs">${q.id}</a>
-              <div class="text-[11px] text-slate-500">${q.type}</div>
+              <a href="/operations/quality/${q.id}" class="font-sans font-bold text-slate-900 hover:text-emerald-700 text-xs">${q.id}</a>
+              <div class="text-xs text-slate-500">${q.type}</div>
             </td>
             <td>
               <div class="font-semibold text-slate-900 text-xs">${q.title}</div>
-              <div class="text-[11px] text-slate-500">${q.category} • Cohort: ${q.cohortCode}</div>
+              <div class="text-xs text-slate-500">${q.category} • Cohort: ${q.cohortCode}</div>
             </td>
             <td>
-              <span class="ops-badge ${q.severity === 'Major' ? 'ops-badge-danger' : (q.severity === 'Critical' ? 'ops-badge-danger' : 'ops-badge-warning')} text-[10px]">
+              <span class="ops-badge ${q.severity === 'Major' ? 'ops-badge-danger' : (q.severity === 'Critical' ? 'ops-badge-danger' : 'ops-badge-warning')} text-xs">
                 ${q.severity}
               </span>
             </td>
             <td class="text-xs text-slate-700">
               <div>${q.owner}</div>
-              <div class="text-[11px] text-slate-400">Due: ${q.targetDueDate}</div>
+              <div class="text-xs text-slate-400">Due: ${q.targetDueDate}</div>
             </td>
             <td>
               <span class="ops-badge ${q.status === 'Verified & Closed' ? 'ops-badge-success' : (q.status === 'Action Implemented' ? 'ops-badge-info' : 'ops-badge-warning')}">
@@ -871,7 +871,7 @@
       if (whysList && record.fiveWhys) {
         whysList.innerHTML = record.fiveWhys.map((w, idx) => `
           <div class="flex items-start gap-3 p-3 bg-slate-50 rounded border border-slate-200 text-xs">
-            <span class="w-6 h-6 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center shrink-0 text-[11px]">${idx + 1}</span>
+            <span class="w-6 h-6 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center shrink-0 text-xs">${idx + 1}</span>
             <div class="text-slate-800 font-medium">${w}</div>
           </div>
         `).join('');
@@ -883,7 +883,7 @@
         timelineList.innerHTML = record.auditTimeline.map(t => `
           <li class="mb-4 ml-4">
             <div class="absolute w-3 h-3 bg-emerald-600 rounded-full mt-1.5 -left-1.5 border border-white"></div>
-            <time class="mb-1 text-xs font-mono font-medium text-slate-500">${t.timestamp}</time>
+            <time class="mb-1 text-xs font-sans font-medium text-slate-500">${t.timestamp}</time>
             <p class="text-xs text-slate-800 font-medium">${t.event}</p>
           </li>
         `).join('');
@@ -916,7 +916,7 @@
           <tr>
             <td>
               <div class="font-bold text-slate-900 text-xs">${c.cohortCode}</div>
-              <div class="text-[11px] text-slate-500">${c.programmeTitle}</div>
+              <div class="text-xs text-slate-500">${c.programmeTitle}</div>
             </td>
             <td class="text-xs text-slate-700">${c.clientType} (${c.enrolledCount} pax)</td>
             <td class="font-semibold text-slate-900 text-xs">${c.grossRevenueFormatted}</td>
@@ -928,7 +928,7 @@
               <span class="ops-badge ops-badge-success text-xs font-bold">${c.operationalMarginRate}</span>
             </td>
             <td>
-              <span class="ops-badge ops-badge-neutral text-[10px]">${c.vatChallanStatus}</span>
+              <span class="ops-badge ops-badge-neutral text-xs">${c.vatChallanStatus}</span>
             </td>
           </tr>
         `).join('');
@@ -951,7 +951,7 @@
             <td class="text-xs text-slate-600">${v.avEquipment}</td>
             <td class="text-xs text-slate-500">${v.network}</td>
             <td>
-              <span class="ops-badge ops-badge-success text-[10px]">${v.status}</span>
+              <span class="ops-badge ops-badge-success text-xs">${v.status}</span>
             </td>
           </tr>
         `).join('');

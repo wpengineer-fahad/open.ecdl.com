@@ -16,10 +16,10 @@
    1. EDITORIAL ARTICLE TYPOGRAPHY & LAYOUT (resource-detail.html)
    ========================================================================== */
 .ecdl-prose {
-  color: #374151;
-  font-size: 1.0625rem;
+  color: var(--color-black);
+  font-size: var(--font-body-size);
   line-height: 1.8;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-body);
 }
 
 .ecdl-prose p {
@@ -27,10 +27,10 @@
 }
 
 .ecdl-prose h2 {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  font-size: 1.625rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 800;
-  color: #111111;
+  color: var(--color-black);
   letter-spacing: -0.02em;
   margin-top: 2.75rem;
   margin-bottom: 1.25rem;
@@ -39,22 +39,22 @@
 }
 
 .ecdl-prose h3 {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-weight: 700;
-  color: #111111;
+  color: var(--color-black);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .ecdl-prose blockquote {
-  border-left: 4px solid #108B44;
-  background-color: #EDF7F1;
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
   padding: 1.5rem 1.75rem;
   border-radius: 0 1rem 1rem 0;
   margin: 2rem 0;
   font-style: italic;
-  color: #111111;
+  color: var(--color-black);
 }
 
 .ecdl-prose ul, .ecdl-prose ol {
@@ -68,7 +68,7 @@
 }
 
 .ecdl-prose strong {
-  color: #111111;
+  color: var(--color-black);
   font-weight: 700;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .toc-link:hover, .toc-link.is-active {
-  color: #108B44;
+  color: var(--color-primary);
   font-weight: 700;
   padding-left: 0.5rem;
 }
@@ -93,7 +93,7 @@
   transform: translateY(-50%);
   width: 3px;
   height: 16px;
-  background-color: #108B44;
+  background-color: var(--color-primary);
   border-radius: 2px;
 }
 
@@ -111,7 +111,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #108B44 0%, #108B44 80%, #E5E7EB 100%);
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 80%, #E5E7EB 100%);
 }
 
 @media (min-width: 768px) {
@@ -139,15 +139,15 @@
   height: 48px;
   border-radius: 9999px;
   background-color: #FFFFFF;
-  border: 3px solid #108B44;
+  border: 3px solid var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
-  font-size: 0.8125rem;
-  color: #108B44;
-  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.15);
+  font-size: var(--font-small);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(27, 77, 62, 0.15);
   z-index: 10;
 }
 
@@ -180,7 +180,7 @@
 
 .metric-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(27, 77, 62, 0.06);
 }
 
 /* ==========================================================================
@@ -197,9 +197,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
 }
 
 .qa-status-pill {
@@ -208,7 +208,7 @@
   gap: 0.5rem;
   padding: 0.375rem 0.875rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: var(--font-small);
   font-weight: 700;
   letter-spacing: 0.025em;
   text-transform: uppercase;
@@ -223,16 +223,16 @@
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
   border-radius: 0.875rem;
-  font-size: 0.875rem;
+  font-size: var(--font-small);
   font-weight: 600;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .resource-filter-btn.is-active {
-  background-color: #108B44;
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(16, 139, 68, 0.25);
+  box-shadow: 0 4px 12px rgba(27, 77, 62, 0.25);
 }
 
 .resource-filter-btn:not(.is-active) {
@@ -242,9 +242,9 @@
 }
 
 .resource-filter-btn:not(.is-active):hover {
-  background-color: #EDF7F1;
-  color: #108B44;
-  border-color: #108B44;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .resource-card {
@@ -254,7 +254,7 @@
 .resource-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  border-color: #108B44;
+  border-color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -265,14 +265,14 @@
 }
 
 .form-input-field:focus {
-  border-color: #108B44;
-  box-shadow: 0 0 0 3px rgba(16, 139, 68, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.15);
   outline: none;
 }
 
 .form-input-field.is-invalid {
-  border-color: #F3520A;
-  box-shadow: 0 0 0 3px rgba(243, 82, 10, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
 }
 
 .contact-faq-item[open] summary svg {

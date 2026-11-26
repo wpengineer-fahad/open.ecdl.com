@@ -307,7 +307,7 @@
         <div>
           <div class="ecdl-session-card__meta-top">
             <span class="ecdl-badge ecdl-badge--${event.deliveryMode === 'Live Online' ? 'blue' : 'dark'}">${event.deliveryMode}</span>
-            <span class="ecdl-badge ecdl-badge--neutral" style="font-size:0.6875rem;">${event.category}</span>
+            <span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">${event.category}</span>
           </div>
 
           <h3 class="ecdl-session-card__title">
@@ -328,8 +328,8 @@
           <div class="ecdl-session-card__trainer">
             <img class="ecdl-session-card__trainer-avatar" src="${trainer.avatar}" alt="${escapeHtml(trainer.name)}" loading="lazy">
             <div>
-              <div style="font-size:0.8125rem; font-weight:700; color:var(--ecdl-color-black);">${escapeHtml(trainer.name)}</div>
-              <div style="font-size:0.6875rem; color:var(--color-text-secondary);">${escapeHtml(trainer.title)}</div>
+              <div style="font-size: var(--font-small); font-weight:700; color:var(--ecdl-color-black);">${escapeHtml(trainer.name)}</div>
+              <div style="font-size: var(--font-small); color:var(--color-text-secondary);">${escapeHtml(trainer.title)}</div>
             </div>
           </div>
         </div>
@@ -392,9 +392,9 @@
         const isCancelled = evt.status === 'cancelled';
         const isCompleted = evt.status === 'completed';
 
-        let statusText = `<span class="ecdl-badge ecdl-badge--green" style="font-size:0.6875rem;">${evt.seats || 'Open'}</span>`;
-        if (isCancelled) statusText = `<span class="ecdl-badge ecdl-badge--red" style="font-size:0.6875rem;">Cancelled</span>`;
-        if (isCompleted) statusText = `<span class="ecdl-badge ecdl-badge--neutral" style="font-size:0.6875rem;">Completed</span>`;
+        let statusText = `<span class="ecdl-badge ecdl-badge--green" style="font-size: var(--font-small);">${evt.seats || 'Open'}</span>`;
+        if (isCancelled) statusText = `<span class="ecdl-badge ecdl-badge--red" style="font-size: var(--font-small);">Cancelled</span>`;
+        if (isCompleted) statusText = `<span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">Completed</span>`;
 
         const linkUrl = `events.html?slug=${evt.slug}`;
 
@@ -409,7 +409,7 @@
             <div class="ecdl-list-event-body">
               <div class="ecdl-list-event-tags">
                 <span class="ecdl-badge ecdl-badge--${evt.deliveryMode === 'Live Online' ? 'blue' : 'dark'}">${evt.deliveryMode}</span>
-                <span class="ecdl-badge ecdl-badge--neutral" style="font-size:0.6875rem;">${evt.category}</span>
+                <span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">${evt.category}</span>
               </div>
               <h4 class="ecdl-list-event-title">
                 <a href="${linkUrl}">${escapeHtml(evt.title)}</a>

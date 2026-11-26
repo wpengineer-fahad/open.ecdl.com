@@ -1,216 +1,272 @@
 /**
  * Open ECDL — Master Design Foundation
- * Typography System
+ * Global Editorial Typography & Brand Consistency Overrides
  * Enroute Center for Development Ltd.
+ *
+ * Strict Rules Enforced Globally:
+ * 1. Only 2 Fonts: Playfair Display (Headings, Card Titles, Stat Figures) & Inter (All other text/UI)
+ * 2. Only 4 Font Sizes: --font-display (48/36), --font-heading-size (32/26), --font-body-size (16), --font-small (14)
+ * 3. Approved Colour Palette: #1B4D3E, #123B30 (Footer only), #C9A227, #F7F5F0, #FFFFFF, #000000
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 html {
-  font-size: 16px;
+  font-size: var(--font-body-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-  color: var(--color-text-primary);
-  background-color: var(--color-canvas-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  line-height: 1.65;
+  color: var(--color-black);
+  background-color: var(--color-white);
   margin: 0;
   padding: 0;
 }
 
-/* Headings System */
-h1, h2, h3, h4, h5, h6,
-.ecdl-h1, .ecdl-h2, .ecdl-h3, .ecdl-h4, .ecdl-h5, .ecdl-h6 {
-  font-family: var(--font-family-heading);
-  color: var(--color-text-primary);
+/* ==========================================================================
+   1. PLAYFAIR DISPLAY — HEADLINES, SECTION HEADINGS, CARD TITLES, STAT FIGURES
+   ========================================================================== */
+h1, .ecdl-h1, .ecdl-heading-display, .ecdl-heading-hero {
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
   margin-top: 0;
   margin-bottom: var(--space-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-snug);
-  line-height: var(--line-height-heading);
 }
 
-/* Hero Heading (Editorial Statement) */
-.ecdl-heading-hero {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-hero);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-md);
-}
-
-/* H1 / Main Page & Section Display */
-h1, .ecdl-h1, .ecdl-heading-display {
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
-}
-
-/* H2 / Section Headings */
-h2, .ecdl-h2, .ecdl-heading-section {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-snug);
-}
-
-/* H3 / Subheadings & Group Titles */
-h3, .ecdl-h3, .ecdl-heading-sub {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-/* H4 / Component Cards & Module Titles */
-h4, .ecdl-h4, .ecdl-heading-card {
-  font-size: var(--font-size-h4);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-/* H5 / Minor Titles & List Headers */
-h5, .ecdl-h5 {
-  font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.4;
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-/* Section Kicker / Eyebrow Badge */
-.ecdl-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2xs);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-kicker);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-kicker);
-  color: var(--ecdl-color-green);
+h2, h3, h4, h5, h6,
+.ecdl-h2, .ecdl-h3, .ecdl-h4, .ecdl-h5, .ecdl-h6,
+.ecdl-heading-section, .ecdl-heading-sub, .ecdl-heading-card {
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-top: 0;
   margin-bottom: var(--space-xs);
 }
 
-.ecdl-kicker::before {
-  content: '';
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background-color: var(--ecdl-color-green);
-  border-radius: var(--radius-xs);
+/* Statistical Figures & Numerical Displays */
+.ecdl-stat__number,
+.ecdl-stat-value,
+.ecdl-metric-value,
+.corp-kpi-value,
+.ops-stat-value,
+.stat-number,
+[data-stat-figure] {
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--color-primary);
 }
 
-.ecdl-kicker--yellow {
-  color: var(--ecdl-color-black);
-  background-color: var(--ecdl-color-yellow);
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-}
-.ecdl-kicker--yellow::before {
-  display: none;
+/* ==========================================================================
+   2. INTER — BODY COPY, NAVIGATION, BUTTONS, LABELS, METADATA, TABLES
+   ========================================================================== */
+p, li, span, a, button, input, select, option, textarea, label, table, th, td, nav, small, figcaption, time, code, pre {
+  font-family: var(--font-body);
 }
 
-/* Body Text Variants */
-.ecdl-lead {
-  font-size: var(--font-size-body-lead);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-text-secondary);
-  max-width: 68ch;
+/* Preserve Playfair Display inside explicit heading or stat elements when spans are nested */
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
+.ecdl-heading-hero span, .ecdl-heading-display span,
+.ecdl-stat__number span, [data-stat-figure] span {
+  font-family: inherit;
 }
 
+/* Supporting lead & body copy */
 p {
   margin-top: 0;
   margin-bottom: var(--space-md);
-  color: var(--color-text-secondary);
+  font-size: var(--font-body-size);
+  line-height: 1.65;
+  color: var(--color-black);
 }
 
 p:last-child {
   margin-bottom: 0;
 }
 
-.ecdl-text-sm {
-  font-size: var(--font-size-body-sm);
-  line-height: 1.5;
+.ecdl-lead {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  line-height: 1.75;
+  color: var(--color-black);
+  max-width: 68ch;
 }
 
-.ecdl-text-meta {
-  font-size: var(--font-size-meta);
-  line-height: 1.4;
-  color: var(--color-text-muted);
+/* Navigation, Buttons & Form Controls */
+nav a, nav button, header a, header button,
+button, .ecdl-btn, input, select, option, textarea {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
 }
 
-.ecdl-text-caption {
-  font-size: var(--font-size-caption);
-  line-height: 1.4;
-  color: var(--color-text-muted);
+/* Small Token Elements (Labels, Captions, Breadcrumbs, Metadata, Badges) */
+.ecdl-kicker,
+.ecdl-text-sm,
+.ecdl-text-meta,
+.ecdl-text-caption,
+.ecdl-badge,
+.ops-badge,
+.corp-badge,
+.ops-stat-label,
+.corp-kpi-label,
+.ops-table th,
+.ops-table td,
+nav[aria-label="Breadcrumb"],
+nav[aria-label="Breadcrumb"] a,
+nav[aria-label="Breadcrumb"] span {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
 }
 
-/* Editorial Emphasis & Markers */
-.ecdl-mark-yellow {
-  background: linear-gradient(180deg, transparent 65%, var(--ecdl-color-yellow) 65%);
-  padding: 0 4px;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
+.ecdl-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
 }
 
-.ecdl-text-brand-green {
-  color: var(--ecdl-color-green) !important;
+.ecdl-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
 }
 
-.ecdl-text-brand-orange {
-  color: var(--ecdl-color-orange) !important;
+.ecdl-kicker--yellow {
+  color: var(--color-black);
+  background-color: var(--color-accent);
+  padding: 3px 10px;
+  border-radius: 4px;
 }
 
-/* Editorial Blockquote */
+.ecdl-kicker--yellow::before {
+  display: none;
+}
+
+/* ==========================================================================
+   3. DARK PRIMARY GREEN SECTIONS (#1B4D3E) & GOLD ACCENTS (#C9A227)
+   ========================================================================== */
+.ecdl-section--dark,
+.bg-ecdl-dark {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.ecdl-section--dark h1,
+.ecdl-section--dark h2,
+.ecdl-section--dark h3,
+.ecdl-section--dark h4,
+.ecdl-section--dark h5,
+.ecdl-section--dark h6,
+.bg-ecdl-dark h1,
+.bg-ecdl-dark h2,
+.bg-ecdl-dark h3,
+.bg-ecdl-dark h4 {
+  color: var(--color-white);
+}
+
+.ecdl-section--dark p,
+.ecdl-section--dark li,
+.bg-ecdl-dark p,
+.bg-ecdl-dark li {
+  color: var(--color-white);
+}
+
+.ecdl-section--dark .ecdl-stat__number,
+.ecdl-section--dark [data-stat-figure],
+.bg-ecdl-dark [data-stat-figure] {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   4. FOOTER STYLING (EXCLUSIVE #123B30)
+   ========================================================================== */
+footer,
+.ecdl-footer {
+  background-color: var(--color-footer) !important;
+  color: var(--color-white) !important;
+}
+
+footer h2, footer h3, footer h4, footer h5, footer h6,
+.ecdl-footer h2, .ecdl-footer h3, .ecdl-footer h4, .ecdl-footer h5, .ecdl-footer h6 {
+  font-family: var(--font-heading);
+  color: var(--color-accent) !important;
+}
+
+footer p, footer li, footer span,
+.ecdl-footer p, .ecdl-footer li, .ecdl-footer span {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  color: var(--color-white);
+}
+
+footer a,
+.ecdl-footer a {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  color: var(--color-white);
+  transition: color 0.15s ease;
+}
+
+footer a:hover,
+.ecdl-footer a:hover {
+  color: var(--color-accent) !important;
+}
+
+/* ==========================================================================
+   5. EDITORIAL PROSE & BLOCKQUOTES
+   ========================================================================== */
 .ecdl-blockquote {
   position: relative;
   margin: var(--space-lg) 0;
   padding: var(--space-md) var(--space-lg);
-  border-left: 3px solid var(--ecdl-color-green);
-  background-color: var(--ecdl-color-surface);
+  border-left: 3px solid var(--color-accent);
+  background-color: var(--color-surface);
 }
 
 .ecdl-blockquote p {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-lead);
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
   font-style: italic;
-  color: var(--ecdl-neutral-800);
-  line-height: 1.6;
+  color: var(--color-primary);
+  line-height: 1.35;
 }
 
 .ecdl-blockquote cite {
   display: block;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-sm);
+  font-family: var(--font-body);
+  font-size: var(--font-small);
   font-style: normal;
-  font-weight: var(--font-weight-semibold);
-  color: var(--ecdl-neutral-700);
+  font-weight: 600;
+  color: var(--color-black);
   margin-top: var(--space-xs);
 }
 
-/* Code & Tokens */
 code, .ecdl-code {
-  font-family: var(--font-family-mono);
-  font-size: 0.85em;
-  background-color: var(--ecdl-neutral-100);
-  color: var(--ecdl-color-black);
-  padding: 0.15em 0.4em;
-  border-radius: var(--radius-xs);
-  border: 1px solid var(--ecdl-neutral-200);
-}
-
-pre code {
-  display: block;
-  padding: var(--space-sm);
-  overflow-x: auto;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  background-color: var(--color-surface);
+  color: var(--color-black);
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
+  border: 1px solid rgba(27, 77, 62, 0.16);
 }

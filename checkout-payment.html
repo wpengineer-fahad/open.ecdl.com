@@ -7,10 +7,10 @@
   <meta name="description" content="Secure payment gateway and offline corporate bank transfer instructions for Open ECDL programmes." />
   <link rel="canonical" href="https://open.ecdl.com.bd/checkout/payment" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +19,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            mono: ['Inter', 'Arial', 'sans-serif'],
+          },
+          fontSize: {
+            xs: 'var(--font-small)',
+            sm: 'var(--font-small)',
+            base: 'var(--font-body-size)',
+            lg: 'var(--font-body-size)',
+            xl: 'var(--font-heading-size)',
+            '2xl': 'var(--font-heading-size)',
+            '3xl': 'var(--font-heading-size)',
+            '4xl': 'var(--font-display)',
+            '5xl': 'var(--font-display)',
+            '6xl': 'var(--font-display)',
+            '7xl': 'var(--font-display)',
+            '8xl': 'var(--font-display)',
+            '9xl': 'var(--font-display)',
           },
           colors: {
             ecdl: {
-              green: '#108B44',
-              greenDark: '#0D7338',
-              greenSoft: '#EDF7F1',
-              yellow: '#F4DB0F',
-              yellowHover: '#E2CA0A',
-              orange: '#F3520A',
-              orangeDark: '#D64606',
-              dark: '#111111',
-              charcoal: '#1B1B1B',
+              green: '#1B4D3E',
+              greenDark: '#153D31',
+              greenSoft: '#F7F5F0',
+              yellow: '#C9A227',
+              yellowHover: '#B58F1D',
+              orange: '#C9A227',
+              orangeDark: '#B58F1D',
+              dark: '#1B4D3E',
+              charcoal: '#1B4D3E',
+              footer: '#123B30',
+              surface: '#F7F5F0',
             }
+          },
+          boxShadow: {
+            card: '0 2px 8px rgba(27, 77, 62, 0.06)',
+            cardHover: '0 6px 16px rgba(27, 77, 62, 0.10)',
           }
         }
       }
@@ -58,7 +80,7 @@
   <div class="bg-ecdl-dark text-white text-xs py-2 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-ecdl-green text-white">BILLING &amp; SETTLEMENT</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-ecdl-green text-white">BILLING &amp; SETTLEMENT</span>
         <span class="text-neutral-300 hidden sm:inline">Enroute Center for Development Ltd. • Mushak 6.3 Tax Authorized</span>
       </div>
       <div class="flex items-center gap-4 text-neutral-300">
@@ -81,16 +103,16 @@
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="ECDL Home">
           <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#108B44" />
+            <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
-            <circle cx="35.5" cy="16.5" r="4.5" fill="#F4DB0F" />
-            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#F3520A" />
+            <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
+            <path d="M32 34.5L38 25.5V34.5H32Z" fill="#FFFFFF" />
           </svg>
           <div class="leading-tight">
             <span class="block font-display text-xl font-extrabold tracking-tight text-ecdl-dark group-hover:text-ecdl-green transition-colors">
               ECDL
             </span>
-            <span class="block text-[11px] font-medium text-neutral-500">
+            <span class="block text-xs font-medium text-neutral-500">
               Enroute Center for Development
             </span>
           </div>
@@ -154,7 +176,7 @@
             <input type="radio" name="payment_category" value="online" checked class="ecdl-payment-radio">
             <div class="flex-1">
               <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base text-neutral-900">1. Online Payment (Instant Clearance)</span>
+                <span class="font-sans font-bold text-base text-neutral-900">1. Online Payment (Instant Clearance)</span>
                 <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">Automated LMS Dispatch</span>
               </div>
               <p class="text-xs text-neutral-500 mt-1">
@@ -173,7 +195,7 @@
                   <i data-lucide="credit-card" class="w-4 h-4 text-neutral-700"></i>
                   <span class="font-bold text-xs text-neutral-900">Cards</span>
                 </div>
-                <div class="text-[11px] text-neutral-500">
+                <div class="text-xs text-neutral-500">
                   Visa, Mastercard, American Express, UnionPay
                 </div>
               </div>
@@ -184,7 +206,7 @@
                   <i data-lucide="smartphone" class="w-4 h-4 text-emerald-600"></i>
                   <span class="font-bold text-xs text-neutral-900">MFS Wallets</span>
                 </div>
-                <div class="text-[11px] text-neutral-500">
+                <div class="text-xs text-neutral-500">
                   bKash Merchant, Nagad Direct, Rocket, Upay
                 </div>
               </div>
@@ -195,7 +217,7 @@
                   <i data-lucide="landmark" class="w-4 h-4 text-blue-600"></i>
                   <span class="font-bold text-xs text-neutral-900">Internet Banking</span>
                 </div>
-                <div class="text-[11px] text-neutral-500">
+                <div class="text-xs text-neutral-500">
                   City Touch, Astha, EBL Skybanking, SC Straight2Bank
                 </div>
               </div>
@@ -217,7 +239,7 @@
             <input type="radio" name="payment_category" value="offline" class="ecdl-payment-radio">
             <div class="flex-1">
               <div class="flex items-center justify-between">
-                <span class="font-display font-bold text-base text-neutral-900">2. Corporate Invoice &amp; Bank Transfer (Offline)</span>
+                <span class="font-sans font-bold text-base text-neutral-900">2. Corporate Invoice &amp; Bank Transfer (Offline)</span>
                 <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded-full">BEFTN / RTGS / Cheque</span>
               </div>
               <p class="text-xs text-neutral-500 mt-1">
@@ -240,8 +262,8 @@
                 </div>
                 <div class="space-y-1 text-xs text-neutral-600">
                   <div><strong>Account Name:</strong> Enroute Center for Development Ltd.</div>
-                  <div><strong>Account No:</strong> <span class="font-mono font-bold text-neutral-900">2118311029481</span></div>
-                  <div><strong>Routing No:</strong> <span class="font-mono">060260421</span> (Banani Branch)</div>
+                  <div><strong>Account No:</strong> <span class="font-sans font-bold text-neutral-900">2118311029481</span></div>
+                  <div><strong>Routing No:</strong> <span class="font-sans">060260421</span> (Banani Branch)</div>
                   <div><strong>SWIFT:</strong> PRBLBDDH</div>
                 </div>
               </div>
@@ -256,8 +278,8 @@
                 </div>
                 <div class="space-y-1 text-xs text-neutral-600">
                   <div><strong>Account Name:</strong> Enroute Center for Development Ltd.</div>
-                  <div><strong>Account No:</strong> <span class="font-mono font-bold text-neutral-900">1501203894701001</span></div>
-                  <div><strong>Routing No:</strong> <span class="font-mono">060261674</span> (Gulshan Branch)</div>
+                  <div><strong>Account No:</strong> <span class="font-sans font-bold text-neutral-900">1501203894701001</span></div>
+                  <div><strong>Routing No:</strong> <span class="font-sans">060261674</span> (Gulshan Branch)</div>
                   <div><strong>SWIFT:</strong> BRAKBDDH</div>
                 </div>
               </div>
@@ -273,7 +295,7 @@
                 <div class="font-bold text-xs text-neutral-800">
                   Drag and drop bank deposit slip, or <span class="text-ecdl-green underline">browse files</span>
                 </div>
-                <div class="text-[11px] text-neutral-400 mt-1">
+                <div class="text-xs text-neutral-400 mt-1">
                   Supports PDF, JPG, PNG up to 10MB
                 </div>
                 <input type="file" id="deposit-slip-input" accept=".pdf,.jpg,.jpeg,.png" class="hidden">
@@ -304,7 +326,7 @@
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
             <span>Back to Checkout</span>
           </a>
-          <button type="submit" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-display text-sm font-bold shadow-lg hover:shadow-xl transition-all">
+          <button type="submit" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-sans text-sm font-bold shadow-lg hover:shadow-xl transition-all">
             <span>Complete &amp; Confirm Booking</span>
             <i data-lucide="check-circle" class="w-4 h-4"></i>
           </button>
@@ -317,9 +339,9 @@
   <!-- ========================================================= -->
   <!-- 4. FOOTER                                                 -->
   <!-- ========================================================= -->
-  <footer class="bg-ecdl-dark text-white pt-8 pb-8 border-t border-white/10 mt-auto">
+  <footer class="bg-[#123B30] text-white pt-8 pb-8 border-t border-white/10 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
         <p>© 2026 Enroute Center for Development Ltd. (ECDL). All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="cart.html" class="hover:text-white transition-colors">Cart</a>

@@ -1924,7 +1924,7 @@ try {
   const unmappedPages = allHtml.filter(f => !handoverDoc.includes(f));
   const missingFontPages = allHtml.filter(f => f !== 'events.html' && f !== 'select-portal.html').filter(f => {
     const c = fs.readFileSync(path.join(__dirname, f), 'utf8');
-    return !c.includes('Plus Jakarta Sans') || !c.includes('Inter');
+    return !c.includes('Playfair Display') || !c.includes('Inter') || c.includes('Plus Jakarta Sans');
   });
   if (
     unmappedPages.length === 0 &&
