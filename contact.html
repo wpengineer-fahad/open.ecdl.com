@@ -268,27 +268,39 @@
         <!-- Left Column: Location, Hotlines, Emails, Map Placeholder -->
         <div class="lg:col-span-5 space-y-6">
           
-          <!-- Headquarters Address Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center shrink-0">
-                <i data-lucide="building" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider">Executive Campus</span>
-                <h3 class="font-display text-base font-bold text-ecdl-dark">Banani Learning Center</h3>
-              </div>
+          <!-- Headquarters Address Card with Campus Visual -->
+          <div class="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+            <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
+              <img
+                src="/assets/images/ecdl-campus-banani.jpg"
+                alt="ECDL Banani Executive Learning Center in Dhaka"
+                width="1200"
+                height="900"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
             </div>
+            <div class="p-6 sm:p-8 space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-ecdl-greenSoft text-ecdl-green flex items-center justify-center shrink-0">
+                  <i data-lucide="building" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider">Executive Campus</span>
+                  <h3 class="font-display text-base font-bold text-ecdl-dark">Banani Learning Center</h3>
+                </div>
+              </div>
 
-            <p class="text-xs text-neutral-600 leading-relaxed">
-              <strong>House 18, Road 24, Block K, Banani, Dhaka-1213, Bangladesh</strong><br />
-              <span class="text-neutral-500 mt-1 block">Landmark: Adjacent to Banani 11 Bridge, accessible from Kamal Ataturk Avenue. Secure on-site parking available for corporate delegates.</span>
-            </p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                <strong>House 18, Road 24, Block K, Banani, Dhaka-1213, Bangladesh</strong><br />
+                <span class="text-neutral-500 mt-1 block">Adjacent to Banani 11 Bridge, off Kamal Ataturk Avenue, with on-site delegate parking.</span>
+              </p>
 
-            <div class="pt-3 border-t border-neutral-100 flex items-center gap-4 text-xs font-semibold text-neutral-500">
-              <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-ecdl-green"></i> Sun–Thu: 9:00 AM – 6:00 PM</span>
-              <span>•</span>
-              <span>Sat: 10 AM – 5 PM</span>
+              <div class="pt-3 border-t border-neutral-100 flex items-center gap-4 text-xs font-semibold text-neutral-500">
+                <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-ecdl-green"></i> Sun–Thu: 9:00 AM – 6:00 PM</span>
+                <span>•</span>
+                <span>Sat: 10 AM – 5 PM</span>
+              </div>
             </div>
           </div>
 

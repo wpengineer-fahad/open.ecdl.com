@@ -85,7 +85,7 @@ const OpenECDLMockData = {
       deliveryMode: 'Hybrid (Classroom & Zoom Interactive)',
       level: 'Mid to Senior Sales Managers & Commercial Leads',
       duration: '16 Hours • 4 Sessions',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       trainer: 'Tanvir Ahmed, SPHRi',
       trainerTitle: 'Former Head of Commercial Strategy, Leading Multinational',
       price: 'BDT 14,500',
@@ -103,7 +103,7 @@ const OpenECDLMockData = {
       deliveryMode: 'In-Person (Banani Campus) & Virtual Stream',
       level: 'HR Directors, Legal Heads, Factory Managers & Compliance Leads',
       duration: '16 Hours • 4 Weekend Sessions',
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       trainer: 'Advocate Rafiqul Islam',
       trainerTitle: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
       price: 'BDT 12,500',
@@ -121,7 +121,7 @@ const OpenECDLMockData = {
       deliveryMode: 'Interactive Virtual Masterclass',
       level: 'Department Heads, Team Leaders & Project Managers',
       duration: '8 Hours • 2 Sessions',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       trainer: 'Senior Executive Facilitator',
       trainerTitle: 'Certified Executive Coach & Organizational Psychologist',
       price: 'BDT 7,500',
@@ -164,8 +164,8 @@ const OpenECDLMockData = {
         'Accelerate executive decision-making speed through structured risk evaluation'
       ],
       trainers: [
-        { name: 'Dr. Zakiul Islam, DBA', title: 'Senior Corporate Strategist & Former Managing Director', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Farhana Mahbub, MBA', title: 'Organizational Development Director & Executive Coach', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Dr. Zakiul Islam, DBA', title: 'Senior Corporate Strategist & Former Managing Director', avatar: '/assets/images/faculty-trainer-4.jpg' },
+        { name: 'Farhana Mahbub, MBA', title: 'Organizational Development Director & Executive Coach', avatar: '/assets/images/faculty-trainer-3.jpg' }
       ],
       faqs: [
         { q: 'Who should enroll in Business & Management courses?', a: 'These programmes are curated for division heads, general managers, factory heads, and high-potential managers transitioning to strategic leadership.' },
@@ -202,8 +202,8 @@ const OpenECDLMockData = {
         'Lead high-stakes capital allocation and debt restructuring discussions with confidence'
       ],
       trainers: [
-        { name: 'Nusrat Jahan, FCA', title: 'Partner at Leading Audit Firm & Corporate Tax Advisor', avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Kazi Mahmudul Hasan, ACMA', title: 'Financial Controller, Multinational Conglomerate', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Nusrat Jahan, FCA', title: 'Partner at Leading Audit Firm & Corporate Tax Advisor', avatar: '/assets/images/faculty-trainer-3.jpg' },
+        { name: 'Kazi Mahmudul Hasan, ACMA', title: 'Financial Controller, Multinational Conglomerate', avatar: '/assets/images/faculty-trainer-4.jpg' }
       ],
       faqs: [
         { q: 'Do participants need an accounting background?', a: 'Advanced programs assume familiarity with financial statements, while executive finance masterclasses are tailored for non-finance leaders.' },
@@ -240,8 +240,8 @@ const OpenECDLMockData = {
         'Design competitive compensation structures benchmarked against Bangladesh industry averages'
       ],
       trainers: [
-        { name: 'Shamsun Nahar, SPHRi', title: 'Chief Human Resources Officer & Faculty Member', avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Aminul Karim, MBA', title: 'Former Head of Talent, Leading Telecom Operator', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Shamsun Nahar, SPHRi', title: 'Chief Human Resources Officer & Faculty Member', avatar: '/assets/images/hero-slide-3.jpg' },
+        { name: 'Aminul Karim, MBA', title: 'Former Head of Talent, Leading Telecom Operator', avatar: '/assets/images/faculty-trainer-1.jpg' }
       ],
       faqs: [
         { q: 'Does this category cover employee disciplinary matters?', a: 'Core HR handles performance management; for formal domestic inquiries and charge sheets, see Compliance Management.' },
@@ -278,8 +278,8 @@ const OpenECDLMockData = {
         'Supercharge sales team accountability through transparent KPI tracking and incentive models'
       ],
       trainers: [
-        { name: 'Tanvir Ahmed, SPHRi', title: 'Commercial Director & Strategic Negotiation Consultant', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Syed Munirul Huq', title: 'Former Marketing Director, Top FMCG Conglomerate', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Tanvir Ahmed, SPHRi', title: 'Commercial Director & Strategic Negotiation Consultant', avatar: '/assets/images/faculty-trainer-1.jpg' },
+        { name: 'Syed Munirul Huq', title: 'Former Marketing Director, Top FMCG Conglomerate', avatar: '/assets/images/faculty-trainer-2.jpg' }
       ],
       faqs: [
         { q: 'Is this training suited for retail B2C or institutional B2B sales?', a: 'While both benefit, curricula are weighted heavily toward enterprise B2B sales, corporate accounts, and distribution trade.' },
@@ -315,8 +315,8 @@ const OpenECDLMockData = {
         'Inspire commitment across multi-generational teams through empathetic leadership'
       ],
       trainers: [
-        { name: 'Tasneem Chowdhury', title: 'Executive Presence Coach & Media Communications Consultant', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Dr. Shahriar Hossain', title: 'Organizational Psychologist & Leadership Mentor', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Tasneem Chowdhury', title: 'Executive Presence Coach & Media Communications Consultant', avatar: '/assets/images/faculty-trainer-3.jpg' },
+        { name: 'Dr. Shahriar Hossain', title: 'Organizational Psychologist & Leadership Mentor', avatar: '/assets/images/faculty-trainer-4.jpg' }
       ],
       faqs: [
         { q: 'Will I get individualized feedback on my speaking style?', a: 'Yes, masterclasses feature recorded practice sessions with personalized diagnostic notes from the instructor.' },
@@ -352,8 +352,8 @@ const OpenECDLMockData = {
         'Improve cognitive endurance and physical ergonomics in corporate office and plant environments'
       ],
       trainers: [
-        { name: 'Dr. Naila Zaman, MD, MPH', title: 'Occupational Health Consultant & Corporate Wellness Advisor', avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Saadman Rahman', title: 'Mindfulness Practitioner & Certified Ergonomics Specialist', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Dr. Naila Zaman, MD, MPH', title: 'Occupational Health Consultant & Corporate Wellness Advisor', avatar: '/assets/images/faculty-trainer-1.jpg' },
+        { name: 'Saadman Rahman', title: 'Mindfulness Practitioner & Certified Ergonomics Specialist', avatar: '/assets/images/faculty-trainer-4.jpg' }
       ],
       faqs: [
         { q: 'Can corporate leadership teams enroll together?', a: 'Yes, cohesive team wellbeing workshops are our most frequently requested corporate in-house retreats.' },
@@ -389,8 +389,8 @@ const OpenECDLMockData = {
         'Ensure 100% readiness for international export buyers and DIFE factory inspections'
       ],
       trainers: [
-        { name: 'Advocate Rafiqul Islam', title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Barrister Mahbubur Rahman', title: 'Advocate, Supreme Court & Specialist in Industrial Law', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Advocate Rafiqul Islam', title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh', avatar: '/assets/images/faculty-trainer-2.jpg' },
+        { name: 'Barrister Mahbubur Rahman', title: 'Advocate, Supreme Court & Specialist in Industrial Law', avatar: '/assets/images/faculty-trainer-1.jpg' }
       ],
       faqs: [
         { q: 'Are latest gazette amendments up to 2026 covered in detail?', a: 'Yes. All course modules reflect the current official gazetted amendments, judicial precedents, and Ministry circulars.' },
@@ -427,8 +427,8 @@ const OpenECDLMockData = {
         'Turn raw transactional logs into compelling, visual business intelligence narratives'
       ],
       trainers: [
-        { name: 'Tanweer Hasan, Microsoft Certified', title: 'Lead Data Analytics Consultant & Corporate Trainer', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80' },
-        { name: 'Farah Anjum', title: 'Senior BI Architect, Leading FinTech & Telecom', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80' }
+        { name: 'Tanweer Hasan, Microsoft Certified', title: 'Lead Data Analytics Consultant & Corporate Trainer', avatar: '/assets/images/faculty-trainer-4.jpg' },
+        { name: 'Farah Anjum', title: 'Senior BI Architect, Leading FinTech & Telecom', avatar: '/assets/images/faculty-trainer-3.jpg' }
       ],
       faqs: [
         { q: 'Do I need prior coding knowledge for Power BI or SQL?', a: 'No, courses are structured from foundational database concepts through advanced corporate dashboard design.' },
@@ -461,11 +461,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Zakiul Islam, DBA',
         title: 'Senior Corporate Strategist & Former Managing Director',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Dec 19, 2026',
       dateValue: '2026-12-19',
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/corporate-strategy-team.jpg',
       summary: 'Practical shopfloor leadership, supervisory communication, lean 5S execution, and frontline conflict resolution for factory and operational leads.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -491,11 +491,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Farhana Mahbub, MBA',
         title: 'Organizational Development Director',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Jan 15, 2027',
       dateValue: '2027-01-15',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/corporate-strategy-team.jpg',
       summary: 'Master the Kaplan-Norton Balanced Scorecard methodology to translate corporate vision into measurable KPIs across financial, customer, and internal pillars.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -521,11 +521,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Zakiul Islam, DBA',
         title: 'Lean Master Black Belt & Senior Advisor',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Feb 05, 2027',
       dateValue: '2027-02-05',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Deploy DMAIC frameworks, root cause analysis (Ishikawa/5 Whys), value stream mapping, and statistical cycle-time reduction in industrial plants.',
       location: 'In-House Enterprise',
       language: 'Bilingual',
@@ -553,11 +553,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Nusrat Jahan, FCA',
         title: 'Partner at Leading Audit Firm & Corporate Tax Advisor',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Jan 09, 2027',
       dateValue: '2027-01-09',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Detailed practical training on withholding VAT (VDS), Mushak Form 6.3 generation, input tax credit eligibility, and online VAT return filing in Bangladesh.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -583,11 +583,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Kazi Mahmudul Hasan, ACMA',
         title: 'Financial Controller, Multinational Conglomerate',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Jan 22, 2027',
       dateValue: '2027-01-22',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-3.jpg',
       summary: 'Build three-statement integrated financial forecast models, discounted cash flow (DCF) company valuations, and sensitivity scenario analysis in Excel.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -613,11 +613,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Nusrat Jahan, FCA',
         title: 'Chartered Accountant & FRC Compliance Specialist',
-        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Feb 12, 2027',
       dateValue: '2027-02-12',
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'In-depth review of IFRS 9 (Financial Instruments), IFRS 15 (Revenue from Contracts), and IFRS 16 (Leases) application under Bangladesh accounting frameworks.',
       location: 'Gulshan Corporate Suite, Dhaka',
       language: 'Bilingual',
@@ -645,11 +645,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Shamsun Nahar, SPHRi',
         title: 'Chief Human Resources Officer & Faculty Member',
-        avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/hero-slide-3.jpg'
       },
       nextDate: 'Dec 26, 2026',
       dateValue: '2026-12-26',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/faculty-trainer-3.jpg',
       summary: 'Design competency-based behavioral interviewing rubrics, modern executive headhunting strategies, and automated talent analytics dashboards.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -675,11 +675,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Aminul Karim, MBA',
         title: 'Former Head of Talent, Leading Telecom Operator',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-2.jpg'
       },
       nextDate: 'Jan 29, 2027',
       dateValue: '2027-01-29',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Eliminate subjective bias from annual evaluations by building SMART KPI cascades, job competency rubrics, and continuous feedback cycles.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -705,11 +705,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Shamsun Nahar, SPHRi',
         title: 'CHRO & Strategic HR Advisor',
-        avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/hero-slide-3.jpg'
       },
       nextDate: 'Feb 19, 2027',
       dateValue: '2027-02-19',
-      image: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'Transition from tactical HR administrator to boardroom strategic business partner, aligning talent strategy directly with commercial revenue drivers.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -737,11 +737,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Tanvir Ahmed, SPHRi',
         title: 'Former Head of Commercial Strategy, Leading Multinational',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       nextDate: 'Jan 16, 2027',
       dateValue: '2027-01-16',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Master key account prioritization, commercial negotiation psychology, sales pipeline governance, and performance metrics for high-performing sales teams.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -767,11 +767,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Tanvir Ahmed, SPHRi',
         title: 'Commercial Director & Strategic Negotiation Consultant',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       nextDate: 'Feb 06, 2027',
       dateValue: '2027-02-06',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/corporate-strategy-team.jpg',
       summary: 'Learn principled BATNA negotiation, contract term defenses, and executive objection handling to protect margins against tough procurement teams.',
       location: 'Gulshan Corporate Suite, Dhaka',
       language: 'English',
@@ -797,11 +797,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Syed Munirul Huq',
         title: 'Former Marketing Director, Top FMCG Conglomerate',
-        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Rolling / On-Demand',
       dateValue: '2026-12-01',
-      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/ecdl-campus-banani.jpg',
       summary: 'Self-paced video modules covering B2B positioning statements, digital thought leadership on LinkedIn, and content funnels that generate warm inquiries.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -829,11 +829,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Shahriar Hossain',
         title: 'Certified Executive Coach & Organizational Psychologist',
-        avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Dec 18, 2026',
       dateValue: '2026-12-18',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Practical frameworks to eliminate cognitive overload, manage competing corporate deadlines, delegate strategically, and maintain high team velocity.',
       location: 'Live Virtual Stream',
       language: 'Bilingual',
@@ -859,11 +859,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Tasneem Chowdhury',
         title: 'Executive Presence Coach & Media Communications Consultant',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       nextDate: 'Jan 23, 2027',
       dateValue: '2027-01-23',
-      image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Refine vocal authority, slide brevity, executive Q&A defense, and persuasive storytelling to command attention in high-stakes boardroom meetings.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'English',
@@ -889,11 +889,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Shahriar Hossain',
         title: 'Leadership Mentor & Behavioral Scientist',
-        avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-2.jpg'
       },
       nextDate: 'Feb 13, 2027',
       dateValue: '2027-02-13',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'De-escalate inter-departmental conflicts, build empathy across teams, and manage difficult personalities without damaging workplace relationships.',
       location: 'Live Virtual Stream',
       language: 'Bilingual',
@@ -921,11 +921,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Naila Zaman, MD, MPH',
         title: 'Occupational Health Consultant & Corporate Wellness Advisor',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Jan 16, 2027',
       dateValue: '2027-01-16',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Actionable stress-auditing techniques, emotional decompression exercises, and manager protocols to reduce executive burnout and absenteeism.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -951,11 +951,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Saadman Rahman',
         title: 'Certified Ergonomics & Safety Auditor',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Jan 30, 2027',
       dateValue: '2027-01-30',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-3.jpg',
       summary: 'Prevent musculoskeletal disorders, optimize corporate desk and monitor setups, and design compliant factory workstation safety protocols.',
       location: 'Live Virtual Stream',
       language: 'Bilingual',
@@ -981,11 +981,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Dr. Naila Zaman, MD, MPH',
         title: 'Occupational Health Consultant & Corporate Wellness Advisor',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Feb 20, 2027',
       dateValue: '2027-02-20',
-      image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'Bespoke corporate retreat program for C-suite management teams to build institutional cognitive resilience, healthy boundaries, and focus.',
       location: 'In-House Enterprise',
       language: 'English',
@@ -1013,11 +1013,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Advocate Rafiqul Islam',
         title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-2.jpg'
       },
       nextDate: 'Dec 12, 2026',
       dateValue: '2026-12-12',
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'Comprehensive statutory mastery of current amendments, disciplinary inquiry charge-sheet drafting, dispute mediation, trade union protocols, and separation benefits.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -1043,11 +1043,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Advocate Rafiqul Islam',
         title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-2.jpg'
       },
       nextDate: 'Jan 23, 2027',
       dateValue: '2027-01-23',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/corporate-strategy-team.jpg',
       summary: 'Hands-on legal drafting of show cause letters, charge sheets, inquiry notices, examination of witnesses, and preparation of lawful inquiry officer reports.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -1073,11 +1073,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Barrister Mahbubur Rahman',
         title: 'Advocate, Supreme Court & Specialist in Industrial Law',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       nextDate: 'Jan 28, 2027',
       dateValue: '2027-01-28',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/ecdl-campus-banani.jpg',
       summary: 'Overview of European CSDDD supply chain directives, environmental compliance standards, and social audit readiness for Bangladesh export manufacturers.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -1103,11 +1103,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Barrister Mahbubur Rahman',
         title: 'Senior Industrial Law Advocate',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       nextDate: 'Feb 26, 2027',
       dateValue: '2027-02-26',
-      image: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Industrial compliance training on BNBC standards, DIFE factory safety audits, Accord/RSC structural guidelines, and environmental discharge permits.',
       location: 'In-House Enterprise',
       language: 'Bilingual',
@@ -1135,11 +1135,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Tanweer Hasan, Microsoft Certified',
         title: 'Lead Data Analytics Consultant & Corporate Trainer',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Dec 20, 2026',
       dateValue: '2026-12-20',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Automate repetitive tasks with Power Query ETL, build dynamic formula arrays with XLOOKUP and LAMBDA, and design interactive C-suite executive dashboards.',
       location: 'Live Virtual Stream',
       language: 'Bilingual',
@@ -1165,11 +1165,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Farah Anjum',
         title: 'Senior BI Architect, Leading FinTech & Telecom',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       nextDate: 'Jan 16, 2027',
       dateValue: '2027-01-16',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/hero-slide-3.jpg',
       summary: 'Connect multi-source data warehouses, write complex DAX calculation measures, and publish mobile-responsive executive BI reports across your enterprise.',
       location: 'Banani Executive Campus, Dhaka',
       language: 'Bilingual',
@@ -1195,11 +1195,11 @@ const OpenECDLMockData = {
       trainer: {
         name: 'Tanweer Hasan, Microsoft Certified',
         title: 'Data Solutions Architect',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80'
+        avatar: '/assets/images/faculty-trainer-4.jpg'
       },
       nextDate: 'Rolling / On-Demand',
       dateValue: '2026-12-01',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'Self-paced access to interactive browser SQL terminals: learn SELECT queries, relational JOINs, GROUP BY aggregations, and window functions.',
       location: 'Live Virtual Stream',
       language: 'English',
@@ -1580,7 +1580,7 @@ const OpenECDLMockData = {
           title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
           role: 'Lead Legal Faculty & Advisor',
           organization: 'Supreme Court of Bangladesh / ECDL Advisory Panel',
-          avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           bio: 'Advocate Rafiqul Islam is an acclaimed industrial jurisprudence authority with 18+ years of trial practice before the Labour Court, High Court Division, and Labour Appellate Tribunal, advising over 120 multinational and export conglomerates.'
         },
         {
@@ -1588,7 +1588,7 @@ const OpenECDLMockData = {
           title: 'Former Joint Director (Legal & Inspection)',
           role: 'Guest Policy Expert',
           organization: 'Department of Inspection for Factories and Establishments (DIFE)',
-          avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           bio: 'Former senior inspection director with 22 years of field and regulatory enforcement leadership, specializing in industrial safety audits, statutory workplace hygiene standards, and factory compliance protocols.'
         }
       ],
@@ -1641,7 +1641,7 @@ const OpenECDLMockData = {
           title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
           role: 'Lead Masterclass Facilitator',
           organization: 'Supreme Court of Bangladesh',
-          avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           bio: '18+ years trial practice in industrial jurisprudence, advising over 120 multinational corporations and corporate manufacturing establishments.'
         }
       ],
@@ -1692,7 +1692,7 @@ const OpenECDLMockData = {
           title: 'Senior Partner, Commercial Capability & Strategy',
           role: 'Lead Commercial Facilitator',
           organization: 'ECDL Commercial Practice / Former Multinational Commercial Director',
-          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-1.jpg',
           bio: '16+ years commercial leadership experience leading enterprise sales divisions for FMCG, logistics, and industrial conglomerates across South Asia.'
         }
       ],
@@ -1742,7 +1742,7 @@ const OpenECDLMockData = {
           title: 'Senior Partner, Indirect Tax & Advisory',
           role: 'Lead Tax Faculty',
           organization: 'Chartered Accountancy Firm / ECDL Faculty',
-          avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-1.jpg',
           bio: 'Fellow Chartered Accountant with 20 years experience directing corporate taxation for listed conglomerates and multinational joint ventures in Bangladesh.'
         }
       ],
@@ -1792,7 +1792,7 @@ const OpenECDLMockData = {
           title: 'Managing Director & Strategic Transformation Lead',
           role: 'Lead Strategy Facilitator',
           organization: 'Former Country Head, Multinational Consumer Goods',
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           bio: 'Seasoned executive director with 22 years experience driving business turnaround and strategy execution for Fortune 500 multinationals across Asia.'
         }
       ],
@@ -1842,7 +1842,7 @@ const OpenECDLMockData = {
           title: 'Group Head of Human Resources & People Analytics',
           role: 'Lead HR Analytics Faculty',
           organization: 'Leading Diversified Industrial Conglomerate',
-          avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           bio: '15+ years leading digital HR transformation and people analytics across banking, pharmaceuticals, and manufacturing.'
         }
       ],
@@ -1892,7 +1892,7 @@ const OpenECDLMockData = {
           title: 'Former Customs Bond Commissionerate Consultant',
           role: 'Senior Trade & Customs Advisor',
           organization: 'Trade Compliance Advisory Practice',
-          avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           bio: 'Over 24 years advising export manufacturing groups on bonded operations, customs valuation disputes, and trade facilitation.'
         }
       ],
@@ -1940,7 +1940,7 @@ const OpenECDLMockData = {
           title: 'Consultant Organizational Psychologist & Executive Coach',
           role: 'Lead Wellbeing Faculty',
           organization: 'Center for Workplace Mental Health',
-          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           bio: 'Distinguished organizational psychologist specializing in executive cognitive resilience, corporate wellness policy, and leadership sustainability.'
         }
       ],
@@ -1989,7 +1989,7 @@ const OpenECDLMockData = {
           title: 'Senior International Labour Law & ESG Advisor',
           role: 'Lead ESG Faculty',
           organization: 'International Social Compliance Advisory Council',
-          avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           bio: 'Advisor to international buyer associations and multinational export conglomerates on ethical supply chains and ESG compliance.'
         }
       ],
@@ -2044,7 +2044,7 @@ const OpenECDLMockData = {
           title: 'Senior Partner, Commercial Capability & Strategy',
           role: 'Lead Commercial Facilitator',
           organization: 'ECDL Commercial Practice',
-          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-1.jpg',
           bio: '16+ years commercial leadership experience leading enterprise sales divisions across FMCG, retail, and corporate logistics.'
         }
       ],
@@ -2097,7 +2097,7 @@ const OpenECDLMockData = {
           title: 'Consultant Organizational Psychologist & Executive Coach',
           role: 'Lead Wellbeing Faculty',
           organization: 'Center for Workplace Mental Health',
-          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           bio: 'Organizational psychologist specializing in executive cognitive resilience, corporate wellbeing policy, and leadership sustainability.'
         }
       ],
@@ -2150,7 +2150,7 @@ const OpenECDLMockData = {
           title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
           role: 'Summit Co-Chair',
           organization: 'Supreme Court of Bangladesh',
-          avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           bio: '18+ years trial practice in industrial jurisprudence and collective bargaining mediation.'
         }
       ],
@@ -2324,7 +2324,7 @@ const OpenECDLMockData = {
           'Senior Legal Advisor to Tier-1 RMG Conglomerates & Commercial Banks',
           'Lead Facilitator for 350+ corporate legal compliance cohorts across Bangladesh'
         ],
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-2.jpg',
         experience: '18+ Years Professional Legal Practice'
       },
       assessmentAndCertification: {
@@ -2438,7 +2438,7 @@ const OpenECDLMockData = {
           'Certified Executive Coach & Negotiation Masterclass Facilitator',
           'Faculty advisor to top-tier commercial banks and pharmaceutical corporations'
         ],
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-1.jpg',
         experience: '16+ Years Commercial Executive Experience'
       },
       assessmentAndCertification: {
@@ -2581,7 +2581,7 @@ const OpenECDLMockData = {
           'Facilitated capability building for over 80+ enterprise client organizations',
           'Member of distinguished professional institute / statutory bar'
         ],
-        avatar: c.trainer ? c.trainer.avatar : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+        avatar: c.trainer ? c.trainer.avatar : '/assets/images/faculty-trainer-4.jpg',
         experience: '15+ Years Industry Leadership'
       };
     }
@@ -2808,7 +2808,7 @@ const OpenECDLMockData = {
       logoText: 'APEX',
       badge: 'Plant Transformation',
       title: 'Plant Leadership Transformation for 120 Senior Factory Supervisors',
-      heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+      heroImage: '/assets/images/corporate-strategy-team.jpg',
       summary: 'How Open ECDL helped Bangladesh’s premier footwear exporter cut supervisor turnover by 28% and eliminate plant-level labor grievances across 6 Gazipur manufacturing units.',
       challenge: 'Rapid export expansion created communication friction between shift managers, line supervisors, and central planning. Mid-level floor supervisors lacked structured people-management skills, resulting in higher overtime costs, production bottlenecks, and a 34% annual turnover among line leaders.',
       approach: 'ECDL conducted a comprehensive on-site Training Needs Assessment (TNA), observing shift handovers and interviewing plant managers. We then co-designed a customized 8-week "Frontline Leadership Academy" featuring modular weekend workshops and bi-weekly shopfloor coaching audits.',
@@ -2835,7 +2835,7 @@ const OpenECDLMockData = {
       logoText: 'CITY BANK',
       badge: 'Regulatory Excellence',
       title: 'Credit Risk Assessment & NBR VAT Compliance for 250 Branch Relationship Managers',
-      heroImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+      heroImage: '/assets/images/ecdl-campus-banani.jpg',
       summary: 'Nationwide institutional certification ensuring 100% compliance with central bank credit regulations and NBR statutory VAT documentation.',
       challenge: 'Frequent regulatory amendments in Bangladesh Bank credit risk grading standards and NBR withholding tax rules created uncertainties across regional branch managers, leading to documentation rework and audit friction.',
       approach: 'ECDL engineered a tailored nationwide credit academy covering 250 relationship managers across Dhaka, Chittagong, Sylhet, and Bogra. Every session incorporated sanitized real-world loan applications and live Mushak-6.3 reconciliation exercises.',
@@ -2862,7 +2862,7 @@ const OpenECDLMockData = {
       logoText: 'FMCG GLOBAL',
       badge: 'Commercial Growth',
       title: 'Key Account Management (KAM) & Consultative Negotiation Masterclass',
-      heroImage: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=80',
+      heroImage: '/assets/images/hero-slide-1.jpg',
       summary: 'Elevating commercial negotiators to partner with modern trade superstores and high-volume regional distributors without discounting.',
       challenge: 'Modern trade channels and large regional retail partners were exerting aggressive margin pressure. Field commercial managers needed structured negotiation frameworks to protect supplier profit margins while securing prime shelf positioning.',
       approach: 'Developed an intensive 3-day consultative negotiation simulation led by Tarikul Kamrul, incorporating live buyer counter-arguments, annual Joint Business Planning (JBP) models, and margin trade-off concessions.',
@@ -2889,7 +2889,7 @@ const OpenECDLMockData = {
       logoText: 'PHARMA LEAD',
       badge: 'Cross-Functional Synergy',
       title: 'Cross-Functional Leadership Synergy & High-Impact Delegation Cohort',
-      heroImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+      heroImage: '/assets/images/hero-slide-2.jpg',
       summary: 'Bridging quality assurance, manufacturing, regulatory affairs, and marketing to accelerate critical product launch timelines.',
       challenge: 'Inter-departmental silos between quality control, regulatory affairs, and production created approval bottlenecks, extending the time-to-market for high-priority export pharmaceutical formulations.',
       approach: 'ECDL curated an immersive leadership retreat combined with a 60-day capstone challenge focused on high-stakes communication, emotional intelligence, and cross-functional project charters.',
@@ -2916,7 +2916,7 @@ const OpenECDLMockData = {
       logoText: 'TELECOM RETAIL',
       badge: 'Digital Analytics',
       title: 'Data-Driven Retail Store Management & Power BI Analytics Bootcamp',
-      heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+      heroImage: '/assets/images/hero-slide-3.jpg',
       summary: 'Transforming 90 retail store managers from spreadsheet clerks into real-time business intelligence decision-makers.',
       challenge: 'Store managers spent up to 10 hours per week manually consolidating static Excel spreadsheets, leading to delayed inventory replenishment for high-demand smartphones and customer SIM services.',
       approach: 'Built a 4-week hybrid lab program teaching Microsoft Power BI data modeling, automated daily inventory feeds, and real-time footfall conversion dashboards.',
@@ -2994,8 +2994,8 @@ const OpenECDLMockData = {
       title: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
       designation: 'Senior Legal Partner & Lead Industrial Jurisprudence Faculty',
       organization: 'Supreme Court of Bangladesh / ECDL Legal Advisory Panel',
-      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-2.jpg',
+      heroImage: '/assets/images/training-facilitator-workshop.jpg',
       category: 'Compliance Management',
       categorySlug: 'compliance-management',
       industry: 'Legal & Statutory Regulatory',
@@ -3057,8 +3057,8 @@ const OpenECDLMockData = {
       title: 'Associate Cost & Management Accountant & Direct Tax Consultant',
       designation: 'Senior Director of Taxation & Corporate Accounting Faculty',
       organization: 'Institute of Cost and Management Accountants of Bangladesh (ICMAB)',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
+      heroImage: '/assets/images/corporate-strategy-team.jpg',
       category: 'Finance & Accounts',
       categorySlug: 'finance-accounts',
       industry: 'Banking & Financial Institutions',
@@ -3120,8 +3120,8 @@ const OpenECDLMockData = {
       title: 'Doctor of Business Administration & Senior Corporate Strategist',
       designation: 'Chair of Executive Leadership & Strategic Management',
       organization: 'Enroute Center for Development Advisory Council',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
+      heroImage: '/assets/images/training-facilitator-workshop.jpg',
       category: 'Business & Management',
       categorySlug: 'business-management',
       industry: 'Manufacturing & Corporate Conglomerates',
@@ -3183,8 +3183,8 @@ const OpenECDLMockData = {
       title: 'Fellow Chartered Accountant & Strategic Financial Modeler',
       designation: 'Lead Faculty of Corporate Finance & Valuation',
       organization: 'Institute of Chartered Accountants of Bangladesh (ICAB)',
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-3.jpg',
+      heroImage: '/assets/images/ecdl-campus-banani.jpg',
       category: 'Finance & Accounts',
       categorySlug: 'finance-accounts',
       industry: 'Manufacturing & Export Conglomerates',
@@ -3246,8 +3246,8 @@ const OpenECDLMockData = {
       title: 'Senior Human Resources Director & Certified Strategic HR Professional',
       designation: 'Head of Human Resources & People Strategy Faculty',
       organization: 'Society for Human Resource Management (SHRM) / ECDL',
-      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-3.jpg',
+      heroImage: '/assets/images/hero-slide-1.jpg',
       category: 'Human Resource',
       categorySlug: 'human-resource',
       industry: 'FMCG & Consumer Goods',
@@ -3309,8 +3309,8 @@ const OpenECDLMockData = {
       title: 'Commercial Growth Director & Consultative Selling Authority',
       designation: 'Chair of Commercial Leadership & Sales Mastery Faculty',
       organization: 'ECDL Commercial Council',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-3.jpg',
+      heroImage: '/assets/images/hero-slide-1.jpg',
       category: 'Marketing & Sales',
       categorySlug: 'marketing-sales',
       industry: 'Telecommunications & Tech Distribution',
@@ -3371,8 +3371,8 @@ const OpenECDLMockData = {
       title: 'Enterprise Data Architect & Business Intelligence Consultant',
       designation: 'Lead Faculty of Digital Skills & Business Analytics',
       organization: 'Microsoft Certified Professional Network / ECDL',
-      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-1.jpg',
+      heroImage: '/assets/images/hero-slide-2.jpg',
       category: 'Skill Development',
       categorySlug: 'skill-development',
       industry: 'Technology, Telecom & Banking',
@@ -3433,8 +3433,8 @@ const OpenECDLMockData = {
       title: 'Occupational Health & Workplace Mental Resilience Specialist',
       designation: 'Chair of Workplace Wellbeing & Occupational Ergonomics',
       organization: 'Bangladesh Society of Occupational Health / ECDL',
-      avatar: 'https://images.unsplash.com/photo-1594824813576-47b29a25b128?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
+      heroImage: '/assets/images/hero-slide-3.jpg',
       category: 'Workplace Wellbeing',
       categorySlug: 'workplace-wellbeing',
       industry: 'Healthcare, Manufacturing & Corporate Wellbeing',
@@ -3495,8 +3495,8 @@ const OpenECDLMockData = {
       title: 'Executive Coach & High-Stakes Communication Specialist',
       designation: 'Lead Faculty of Personal Mastery & Leadership Presence',
       organization: 'International Coach Federation (ICF) Member / ECDL',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-1.jpg',
+      heroImage: '/assets/images/training-facilitator-workshop.jpg',
       category: 'Personal Development Skills',
       categorySlug: 'personal-development-skills',
       industry: 'Corporate Leadership & Executive Coaching',
@@ -3557,8 +3557,8 @@ const OpenECDLMockData = {
       title: 'Barrister-at-Law, Lincoln’s Inn & Corporate Governance Consultant',
       designation: 'Senior Faculty of Commercial Contracts & Corporate Law',
       organization: 'The Honourable Society of Lincoln’s Inn / Supreme Court Bar',
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-2.jpg',
+      heroImage: '/assets/images/training-facilitator-workshop.jpg',
       category: 'Compliance Management',
       categorySlug: 'compliance-management',
       industry: 'Legal & Statutory Regulatory',
@@ -3620,8 +3620,8 @@ const OpenECDLMockData = {
       title: 'Senior Compensation & Total Rewards Architect',
       designation: 'Lead Faculty of Compensation, Benefits & HR Analytics',
       organization: 'ECDL People & Culture Council',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-3.jpg',
+      heroImage: '/assets/images/hero-slide-3.jpg',
       category: 'Human Resource',
       categorySlug: 'human-resource',
       industry: 'Pharmaceuticals & Healthcare',
@@ -3682,8 +3682,8 @@ const OpenECDLMockData = {
       title: 'Lean Six Sigma Master Black Belt & Factory Operations Specialist',
       designation: 'Chair of Industrial Manufacturing & Lean Productivity',
       organization: 'Institute of Industrial Engineers / ECDL',
-      avatar: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=400&q=80',
-      heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
+      heroImage: '/assets/images/corporate-strategy-team.jpg',
       category: 'Business & Management',
       categorySlug: 'business-management',
       industry: 'Manufacturing, RMG & Export Logistics',
@@ -3796,10 +3796,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Advocate Rafiqul Islam',
         title: 'Advocate, Supreme Court of Bangladesh',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-1.jpg',
         trainerSlug: 'rafiqul-islam'
       },
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/ecdl-campus-banani.jpg',
       summary: 'A practitioner\'s guide on framing unbiased charge sheets, adhering to natural justice, conducting impartial inquiries, and documenting proceedings that withstand Labour Court judicial review.',
       keyTakeaways: [
         'Issuing precise show-cause notices with clear evidentiary grounds within statutory time limits.',
@@ -3887,10 +3887,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Nusrat Jahan, FCA',
         title: 'Senior Partner, Chartered Accountancy & NBR Advisor',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-3.jpg',
         trainerSlug: 'nusrat-jahan'
       },
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'A comprehensive operational manual explaining disallowable expenses, minimum tax recalculations, universal self-assessment protocols, and advance income tax reconciliations for FY 2026-27.',
       keyTakeaways: [
         'Section 55 disallowance rules for cash transactions exceeding statutory ceilings.',
@@ -3956,10 +3956,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Dr. Zakiul Islam, DBA',
         title: 'Director of Strategic Studies & Executive Coach',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-4.jpg',
         trainerSlug: 'zakiul-islam'
       },
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/ecdl-campus-banani.jpg',
       summary: 'Analysis of capability deficits across 140+ Bangladeshi enterprises, identifying critical productivity bottlenecks in middle management, statutory compliance, and digital workflow execution.',
       keyTakeaways: [
         'The middle management capability gap accounts for up to 23% operational margin loss.',
@@ -4030,10 +4030,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Kazi Mahmudul Hasan, ACMA',
         title: 'Associate Cost & Management Accountant & Tax Strategist',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-2.jpg',
         trainerSlug: 'kazi-mahmudul-hasan'
       },
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/training-facilitator-workshop.jpg',
       summary: 'An indispensable operational reference tool for accounting teams to audit vendor tax invoices, verify VDS deduction applicability, and validate input tax rebate claims under VAT & SD Act 2012.',
       keyTakeaways: [
         'Mandatory fields required on Mushak 6.3 tax invoices to protect input tax rebates.',
@@ -4101,10 +4101,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Barrister Ahsan Habib, LL.M.',
         title: 'Senior Legal Counsel & Compliance Governance Advisor',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-2.jpg',
         trainerSlug: 'ahsan-habib'
       },
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Executive webinar recording dissecting Bangladesh Financial Intelligence Unit (BFIU) guidelines, automated transaction monitoring thresholds, PEP customer profiling, and Suspicious Transaction Report (STR) filing.',
       keyTakeaways: [
         'BFIU Master Circular core compliance mandates for scheduled banks and NBFIs.',
@@ -4177,10 +4177,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Tanvir Ahmed, SPHRi',
         title: 'Head of Commercial Strategy & Faculty Chair',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-1.jpg',
         trainerSlug: 'tanvir-ahmed'
       },
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/corporate-strategy-team.jpg',
       summary: 'Practical frameworks for Commercial Directors to eliminate pipeline bloat, establish objective deal stage exit criteria, and forecast enterprise revenue with 90%+ accuracy in volatile commercial environments.',
       keyTakeaways: [
         'Why 60% of forecast enterprise deals slip beyond target closing quarters.',
@@ -4245,10 +4245,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Engr. Tasneem Chowdhury',
         title: 'Principal Consultant, Industrial Engineering & Lean Six Sigma',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-4.jpg',
         trainerSlug: 'tasneem-chowdhury'
       },
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/hero-slide-2.jpg',
       summary: 'Operational blueprint for industrial engineers and production managers to identify bottleneck operations, balance sewing lines, and reduce WIP inventories in high-mix, low-volume garment manufacturing.',
       keyTakeaways: [
         'Calculating pitch time, cycle time variations, and line efficiency indices.',
@@ -4312,10 +4312,10 @@ const OpenECDLMockData = {
       author: {
         name: 'Dr. Farzana Haque',
         title: 'Corporate Wellness Consultant & Occupational Psychologist',
-        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
+        avatar: '/assets/images/faculty-trainer-3.jpg',
         trainerSlug: 'farzana-haque'
       },
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/images/hero-slide-1.jpg',
       summary: 'Empirical research on corporate burnout in Dhaka banking, IT, and telecom sectors, offering actionable ergonomic protocols, psychological safety frameworks, and institutional wellness policies.',
       keyTakeaways: [
         'Chronic workplace stress accounts for 31% involuntary attrition among mid-tier professionals.',
@@ -4402,7 +4402,7 @@ const OpenECDLMockData = {
       category: 'executive',
       experienceYears: '25+',
       credentials: ['Founder & Managing Director, Enroute Group', 'Senior Enterprise HR Strategist', 'MBA in Management'],
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
       bio: 'Visionary business leader and enterprise capability strategist with over 25 years of pioneering impact in human resources, management consulting, and executive education in Bangladesh. Founder of Enroute International Limited and Enroute Center for Development Ltd., he has guided hundreds of corporate transformations across banking, FMCG, telecom, and export manufacturing sectors.',
       quote: 'Human capability is not an operational expense; it is the ultimate compounding capital asset of any enduring enterprise.',
       areasOfFocus: ['Corporate Governance', 'Strategic Talent Transformation', 'Enterprise Capability Building', 'Industry-Academia Alliances'],
@@ -4419,7 +4419,7 @@ const OpenECDLMockData = {
       category: 'executive',
       experienceYears: '22+',
       credentials: ['PhD in Industrial Pedagogy & Adult Learning', 'Former Dean of Management Faculty', 'Certified Quality Auditor'],
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
       bio: 'Distinguished academic administrator and adult learning specialist with over 22 years of experience designing university curricula and executive corporate masterclasses. Dr. Alam leads ECDL\'s rigorous curriculum validation board, Kirkpatrick evaluation protocols, and facilitator vetting mechanisms.',
       quote: 'Adult learning succeeds only when classroom theory is systematically subjected to the crucible of immediate workplace application.',
       areasOfFocus: ['Instructional Design & Andragogy', 'Pedagogical Quality Audits', 'Kirkpatrick Evaluation Systems', 'Executive Cohort Mentorship'],
@@ -4436,7 +4436,7 @@ const OpenECDLMockData = {
       category: 'executive',
       experienceYears: '19+',
       credentials: ['Former Head of L&D, Leading Multinational FMCG', 'Certified Executive Coach (ICF)', 'MA in Industrial Psychology'],
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-3.jpg',
       bio: 'Strategic talent architect with nearly two decades of executive experience steering large-scale organizational capability development programs. Formerly Head of L&D at premier multinational organizations, Rehana orchestrates ECDL\'s customized corporate academies, diagnostic TNAs, and enterprise client partnerships.',
       quote: 'Our enterprise partnerships begin with business outcomes: we reverse-engineer curricula from the organization\'s strategic challenges.',
       areasOfFocus: ['B2B Corporate Learning Strategy', 'Training Needs Diagnostics (TNA)', 'Leadership Pipeline Development', 'Change Management'],
@@ -4453,7 +4453,7 @@ const OpenECDLMockData = {
       category: 'advisory',
       experienceYears: '22+',
       credentials: ['Barrister-at-Law, Lincoln\'s Inn', 'LL.M. in Corporate & Commercial Law, University of London', 'Advocate, Supreme Court of Bangladesh'],
-      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-2.jpg',
       bio: 'Eminent corporate lawyer, legal author, and governance specialist advising banks, industrial conglomerates, and multinational enterprises on labour laws, compliance dispute mitigation, and statutory frameworks. As Chair of ECDL\'s Compliance Governance Board, he oversees statutory masterclass curricula.',
       quote: 'Statutory compliance is not a legal burden to be evaded; it is the protective armor that shields an enterprise from catastrophic disruption.',
       areasOfFocus: ['Bangladesh Labour Act 2006 & Rules', 'Corporate Governance & Integrity', 'Industrial Relations Dispute Resolution', 'Regulatory Compliance'],
@@ -4470,7 +4470,7 @@ const OpenECDLMockData = {
       category: 'executive',
       experienceYears: '18+',
       credentials: ['Associate Member, ICMAB (ACMA)', 'Chartered Global Management Accountant (CGMA)', 'Senior Tax & VAT Practitioner'],
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-4.jpg',
       bio: 'Experienced financial strategist and corporate controller specializing in statutory tax compliance, managerial costing, and financial risk governance. He ensures absolute financial stewardship across all ECDL programs and co-leads the Finance & Accounts curriculum board.',
       quote: 'Robust financial management demands unwavering transparency, disciplined cash flow modeling, and meticulous adherence to the fiscal statutes of Bangladesh.',
       areasOfFocus: ['Corporate Tax Planning', 'VAT & SD Act 2012 Compliance', 'Financial Modeling & Analysis', 'Statutory Financial Audits'],
@@ -4487,7 +4487,7 @@ const OpenECDLMockData = {
       category: 'executive',
       experienceYears: '16+',
       credentials: ['Senior Professional in Human Resources - International (SPHRi)', 'Certified Facilitator, DDI', 'Postgraduate in Strategic Management'],
-      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-1.jpg',
       bio: 'Senior talent development leader with deep cross-border experience across multinational FMCG, telecommunications, and corporate technology sectors. Tanvir oversees ECDL\'s distinguished 200+ faculty roster, session quality delivery, and learner engagement metrics.',
       quote: 'The mark of an extraordinary corporate facilitator is not what they know, but how effectively they empower participants to perform tomorrow morning.',
       areasOfFocus: ['Faculty Auditions & Coaching', 'Learner Experience Design', 'Commercial Sales Performance', 'Cross-Functional Team Dynamics'],
@@ -4504,7 +4504,7 @@ const OpenECDLMockData = {
       category: 'advisory',
       experienceYears: '15+',
       credentials: ['PhD in Occupational Health & Ergonomics', 'Certified Workplace Mental Health Trainer', 'MBBS, MPH'],
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-1.jpg',
       bio: 'Pioneering researcher and consultant in workplace wellness, ergonomics, and institutional stress mitigation. Advises multinational employers on designing productive physical environments and mitigating cognitive burnout.',
       quote: 'A workplace designed for employee dignity and physiological wellbeing generates measurable dividends in productivity, retention, and innovation.',
       areasOfFocus: ['Ergonomic Assessments', 'Psychological Safety Frameworks', 'Occupational Health Policy', 'Executive Stress Management'],
@@ -4521,7 +4521,7 @@ const OpenECDLMockData = {
       category: 'advisory',
       experienceYears: '20+',
       credentials: ['B.Sc. in Industrial & Production Engineering (BUET)', 'Certified Lean Six Sigma Master Black Belt', 'Fellow, Institute of Engineers Bangladesh'],
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
+      avatar: '/assets/images/faculty-trainer-2.jpg',
       bio: 'Senior manufacturing fellow with over 20 years of hands-on shopfloor transformation across export garment factories, light engineering plants, and FMCG supply chains. Guides ECDL\'s technical operations and productivity curricula.',
       quote: 'Productivity is not about working harder or longer; it is about eliminating systemic friction and respecting the craftsman on the line.',
       areasOfFocus: ['Lean Six Sigma Systems', 'Shopfloor Line Balancing', 'Supply Chain Agility', 'Quality Management Systems'],
@@ -5113,7 +5113,7 @@ const OpenECDLMockData = {
     designation: 'Commercial Sales Director',
     department: 'Commercial Strategy & Customer Development',
     location: 'Dhaka, Bangladesh',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    avatar: '/assets/images/faculty-trainer-4.jpg',
     joinedDate: 'January 2026',
     roleTag: 'Executive Scholar',
     stats: {
@@ -5141,7 +5141,7 @@ const OpenECDLMockData = {
       category: 'Compliance Management',
       trainer: 'Advocate Rafiqul Islam',
       trainerTitle: 'LL.M (DU), Advocate, Supreme Court of Bangladesh',
-      thumbnail: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/training-facilitator-workshop.jpg',
       status: 'in_progress',
       progressPercent: 65,
       completedLessonsCount: 7,
@@ -5220,7 +5220,7 @@ const OpenECDLMockData = {
       category: 'Marketing & Sales',
       trainer: 'Tanvir Ahmed, SPHRi',
       trainerTitle: 'Former Head of Commercial Strategy, Leading Multinational',
-      thumbnail: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/hero-slide-2.jpg',
       status: 'in_progress',
       progressPercent: 40,
       completedLessonsCount: 4,
@@ -5245,7 +5245,7 @@ const OpenECDLMockData = {
       category: 'Personal Development Skills',
       trainer: 'Senior Executive Facilitator',
       trainerTitle: 'Certified Executive Coach & Organizational Psychologist',
-      thumbnail: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/hero-slide-1.jpg',
       status: 'completed',
       progressPercent: 100,
       completedLessonsCount: 8,
@@ -5262,7 +5262,7 @@ const OpenECDLMockData = {
       category: 'Human Resource',
       trainer: 'Zakiul Islam',
       trainerTitle: 'Former Director of Human Resources, Leading Telecom',
-      thumbnail: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/faculty-trainer-3.jpg',
       status: 'completed',
       progressPercent: 100,
       completedLessonsCount: 12,
@@ -5279,7 +5279,7 @@ const OpenECDLMockData = {
       category: 'Finance & Accounts',
       trainer: 'Kazi Mahmudul Hasan, ACMA, CGMA',
       trainerTitle: 'Lead Financial Controller & Board Member',
-      thumbnail: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/hero-slide-3.jpg',
       status: 'upcoming',
       progressPercent: 0,
       cohort: 'Starts Jan 16, 2027 (Weekend Intensive)',
@@ -5293,7 +5293,7 @@ const OpenECDLMockData = {
       category: 'Business & Management',
       trainer: 'Engr. Tasneem Chowdhury',
       trainerTitle: 'Senior Industrial Engineering Fellow',
-      thumbnail: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+      thumbnail: '/assets/images/training-facilitator-workshop.jpg',
       status: 'saved',
       progressPercent: 0,
       price: 'BDT 14,000'
@@ -5410,7 +5410,7 @@ const OpenECDLMockData = {
       ],
       verificationUrl: 'https://open.ecdl.com.bd/verify/ECDL-CERT-2026-8812',
       verificationStatus: 'Verified • Active Credential on ECDL Registry',
-      previewThumbnail: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80'
+      previewThumbnail: '/assets/images/corporate-strategy-team.jpg'
     },
     {
       credentialId: 'ECDL-CERT-2026-7940',
@@ -5426,7 +5426,7 @@ const OpenECDLMockData = {
       ],
       verificationUrl: 'https://open.ecdl.com.bd/verify/ECDL-CERT-2026-7940',
       verificationStatus: 'Verified • Active Credential on ECDL Registry',
-      previewThumbnail: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
+      previewThumbnail: '/assets/images/ecdl-campus-banani.jpg'
     }
   ];
 
@@ -5547,7 +5547,7 @@ const OpenECDLMockData = {
         title: 'Head of People, Talent & Organizational L&D',
         email: 'farah.naz@unilever.com',
         phone: '+880 1713 001122',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80'
+        avatar: '/assets/images/faculty-trainer-3.jpg'
       },
       billingContact: {
         name: 'Mahmudul Haque, ACA',
@@ -5587,7 +5587,7 @@ const OpenECDLMockData = {
           headName: 'Naveed Karim',
           headTitle: 'Commercial Sales Director',
           headEmail: 'naveed.karim@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/hero-slide-1.jpg',
           employeeCount: 84,
           activeLearners: 45,
           completedLearners: 40,
@@ -5602,7 +5602,7 @@ const OpenECDLMockData = {
           headName: 'Tariqul Islam, CSCP',
           headTitle: 'Supply Chain Operations Director',
           headEmail: 'tariqul.islam@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-4.jpg',
           employeeCount: 112,
           activeLearners: 52,
           completedLearners: 48,
@@ -5617,7 +5617,7 @@ const OpenECDLMockData = {
           headName: 'Syeda Farah Naz',
           headTitle: 'Head of People & Learning Operations',
           headEmail: 'farah.naz@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-3.jpg',
           employeeCount: 28,
           activeLearners: 22,
           completedLearners: 22,
@@ -5632,7 +5632,7 @@ const OpenECDLMockData = {
           headName: 'Mahmudul Haque, ACA',
           headTitle: 'Senior Manager, Financial Governance',
           headEmail: 'mahmudul.haque@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-4.jpg',
           employeeCount: 36,
           activeLearners: 18,
           completedLearners: 17,
@@ -5647,7 +5647,7 @@ const OpenECDLMockData = {
           headName: 'Sabrina Rahman',
           headTitle: 'Senior Brand Director (Personal Care)',
           headEmail: 'sabrina.rahman@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-3.jpg',
           employeeCount: 54,
           activeLearners: 24,
           completedLearners: 20,
@@ -5662,7 +5662,7 @@ const OpenECDLMockData = {
           headName: 'Barrister M. A. Kashem',
           headTitle: 'Head of Legal & Corporate Affairs',
           headEmail: 'kashem.ma@unilever.com',
-          headAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/hero-slide-2.jpg',
           employeeCount: 22,
           activeLearners: 12,
           completedLearners: 11,
@@ -5680,7 +5680,7 @@ const OpenECDLMockData = {
           departmentName: 'Customer Development & Trade Strategy',
           email: 'naveed.karim@unilever.com',
           phone: '+880 1711 000000',
-          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '15 Jan 2021',
           managerName: 'Managing Director, Bangladesh',
           status: 'Active',
@@ -5705,7 +5705,7 @@ const OpenECDLMockData = {
           departmentName: 'Human Resources & Organizational L&D',
           email: 'farah.naz@unilever.com',
           phone: '+880 1713 001122',
-          avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '01 Mar 2020',
           managerName: 'HR Vice President, South Asia',
           status: 'Active',
@@ -5730,7 +5730,7 @@ const OpenECDLMockData = {
           departmentName: 'Supply Chain, Procurement & Logistics',
           email: 'tariqul.islam@unilever.com',
           phone: '+880 1711 223344',
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '10 May 2019',
           managerName: 'Supply Chain VP',
           status: 'Active',
@@ -5754,7 +5754,7 @@ const OpenECDLMockData = {
           departmentName: 'Finance, Internal Audit & Tax Compliance',
           email: 'mahmudul.haque@unilever.com',
           phone: '+880 1713 001144',
-          avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '12 Nov 2021',
           managerName: 'Chief Financial Officer',
           status: 'Active',
@@ -5778,7 +5778,7 @@ const OpenECDLMockData = {
           departmentName: 'Brand Marketing & Digital Engagement',
           email: 'sabrina.rahman@unilever.com',
           phone: '+880 1715 889900',
-          avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '01 Aug 2022',
           managerName: 'Marketing VP',
           status: 'Active',
@@ -5802,7 +5802,7 @@ const OpenECDLMockData = {
           departmentName: 'Customer Development & Trade Strategy',
           email: 'tanima.chowdhury@unilever.com',
           phone: '+880 1716 334455',
-          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '05 Feb 2023',
           managerName: 'Naveed Karim',
           status: 'Active',
@@ -5826,7 +5826,7 @@ const OpenECDLMockData = {
           departmentName: 'Supply Chain, Procurement & Logistics',
           email: 'asifur.rahman@unilever.com',
           phone: '+880 1718 112233',
-          avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-1.jpg',
           joiningDate: '20 Oct 2020',
           managerName: 'Tariqul Islam',
           status: 'Active',
@@ -5850,7 +5850,7 @@ const OpenECDLMockData = {
           departmentName: 'Human Resources & Organizational L&D',
           email: 'anika.bushra@unilever.com',
           phone: '+880 1719 556677',
-          avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           joiningDate: '15 Jul 2023',
           managerName: 'Syeda Farah Naz',
           status: 'Active',
@@ -5874,7 +5874,7 @@ const OpenECDLMockData = {
           departmentName: 'Customer Development & Trade Strategy',
           email: 'khurshid.alam@unilever.com',
           phone: '+880 1714 667788',
-          avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '01 Jun 2022',
           managerName: 'Naveed Karim',
           status: 'On Leave',
@@ -5898,7 +5898,7 @@ const OpenECDLMockData = {
           departmentName: 'Supply Chain, Procurement & Logistics',
           email: 'shahriar.kabir@unilever.com',
           phone: '+880 1717 990011',
-          avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '01 Nov 2026',
           managerName: 'Tariqul Islam',
           status: 'Probation',
@@ -6163,7 +6163,7 @@ const OpenECDLMockData = {
         title: 'Head of Human Resources & Organizational Development',
         email: 'kamrul.hasan@apexfootwearltd.com',
         phone: '+880 1819 223344',
-        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&q=80'
+        avatar: '/assets/images/faculty-trainer-1.jpg'
       },
       billingContact: {
         name: 'Rafiqul Alam, FCMA',
@@ -6202,7 +6202,7 @@ const OpenECDLMockData = {
           headName: 'Engr. Mofazzal Hossain',
           headTitle: 'Senior General Manager, Plant Operations',
           headEmail: 'mofazzal.hossain@apexfootwearltd.com',
-          headAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-4.jpg',
           employeeCount: 280,
           activeLearners: 95,
           completedLearners: 82,
@@ -6217,7 +6217,7 @@ const OpenECDLMockData = {
           headName: 'Nasreen Akhter',
           headTitle: 'Head of Quality Assurance & Inspection',
           headEmail: 'nasreen.akhter@apexfootwearltd.com',
-          headAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-3.jpg',
           employeeCount: 64,
           activeLearners: 42,
           completedLearners: 40,
@@ -6232,7 +6232,7 @@ const OpenECDLMockData = {
           headName: 'Tanvir Chowdhury',
           headTitle: 'Chief Creative Officer & Lead Designer',
           headEmail: 'tanvir.chowdhury@apexfootwearltd.com',
-          headAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/faculty-trainer-4.jpg',
           employeeCount: 38,
           activeLearners: 28,
           completedLearners: 25,
@@ -6247,7 +6247,7 @@ const OpenECDLMockData = {
           headName: 'Shahidul Islam',
           headTitle: 'Head of Retail Stores & Merchandising',
           headEmail: 'shahidul.islam@apexfootwearltd.com',
-          headAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/hero-slide-3.jpg',
           employeeCount: 190,
           activeLearners: 55,
           completedLearners: 45,
@@ -6262,7 +6262,7 @@ const OpenECDLMockData = {
           headName: 'Kamrul Hasan, SPHRi',
           headTitle: 'Head of HR & Organizational Development',
           headEmail: 'kamrul.hasan@apexfootwearltd.com',
-          headAvatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80',
+          headAvatar: '/assets/images/training-facilitator-workshop.jpg',
           employeeCount: 45,
           activeLearners: 25,
           completedLearners: 24,
@@ -6280,7 +6280,7 @@ const OpenECDLMockData = {
           departmentName: 'Factory Operations, Cutting & Production',
           email: 'mofazzal.hossain@apexfootwearltd.com',
           phone: '+880 1819 001100',
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '01 Apr 2016',
           managerName: 'Chief Operating Officer',
           status: 'Active',
@@ -6304,7 +6304,7 @@ const OpenECDLMockData = {
           departmentName: 'HR, Labour Compliance & Worker Welfare',
           email: 'kamrul.hasan@apexfootwearltd.com',
           phone: '+880 1819 223344',
-          avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           joiningDate: '15 Aug 2018',
           managerName: 'Managing Director',
           status: 'Active',
@@ -6328,7 +6328,7 @@ const OpenECDLMockData = {
           departmentName: 'Quality Assurance, Lean & Export Standards',
           email: 'nasreen.akhter@apexfootwearltd.com',
           phone: '+880 1819 556677',
-          avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '10 Feb 2020',
           managerName: 'Engr. Mofazzal Hossain',
           status: 'Active',
@@ -6352,7 +6352,7 @@ const OpenECDLMockData = {
           departmentName: 'Nationwide Retail Chain Operations',
           email: 'shahidul.islam@apexfootwearltd.com',
           phone: '+880 1819 889900',
-          avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-3.jpg',
           joiningDate: '01 Nov 2019',
           managerName: 'Chief Operating Officer',
           status: 'Active',
@@ -6376,7 +6376,7 @@ const OpenECDLMockData = {
           departmentName: 'Footwear Design, Patterning & R&D Studio',
           email: 'tanvir.chowdhury@apexfootwearltd.com',
           phone: '+880 1819 112233',
-          avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '01 Jul 2021',
           managerName: 'Managing Director',
           status: 'Active',
@@ -6400,7 +6400,7 @@ const OpenECDLMockData = {
           departmentName: 'HR, Labour Compliance & Worker Welfare',
           email: 'jannatul.ferdous@apexfootwearltd.com',
           phone: '+880 1819 445566',
-          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-4.jpg',
           joiningDate: '12 Jan 2022',
           managerName: 'Kamrul Hasan, SPHRi',
           status: 'Active',
@@ -6424,7 +6424,7 @@ const OpenECDLMockData = {
           departmentName: 'Nationwide Retail Chain Operations',
           email: 'mehedi.hasan@apexfootwearltd.com',
           phone: '+880 1819 778899',
-          avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-1.jpg',
           joiningDate: '01 Jun 2020',
           managerName: 'Shahidul Islam',
           status: 'Active',
@@ -6448,7 +6448,7 @@ const OpenECDLMockData = {
           departmentName: 'Factory Operations, Cutting & Production',
           email: 'zubair.mahmud@apexfootwearltd.com',
           phone: '+880 1819 009988',
-          avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=160&q=80',
+          avatar: '/assets/images/faculty-trainer-2.jpg',
           joiningDate: '15 Mar 2021',
           managerName: 'Engr. Mofazzal Hossain',
           status: 'Active',
@@ -6793,7 +6793,7 @@ const OpenECDLMockData = {
       "name": "Advocate Rafiqul Islam",
       "title": "Senior Advocate, Supreme Court of Bangladesh",
       "bio": "Over 22 years of specialized practice in Bangladesh Labour Law, industrial dispute litigation, and executive training for Fortune 500 multinationals.",
-      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/corporate-strategy-team.jpg",
       "qualifications": "LL.B (Honours), LL.M (Dhaka University), Advocate Supreme Court of Bangladesh"
     },
     "commercialSummary": {
@@ -6886,7 +6886,7 @@ const OpenECDLMockData = {
       "name": "Tanvir Ahmed, SPHRi",
       "title": "Principal Commercial Strategy Consultant",
       "bio": "Former Commercial Director at leading multinationals with 18 years experience scaling FMCG route-to-market distributor networks.",
-      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/faculty-trainer-4.jpg",
       "qualifications": "MBA (IBA, University of Dhaka), Certified Supply Chain Strategist"
     },
     "commercialSummary": {
@@ -6991,7 +6991,7 @@ const OpenECDLMockData = {
       "name": "Kazi Mahmudul Hasan",
       "title": "Lead Faculty, Sustainability & Industrial Engineering",
       "bio": "Consultant to international development agencies on industrial energy efficiency and carbon emissions.",
-      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/faculty-trainer-4.jpg",
       "qualifications": "M.Sc (Environmental Engineering), Certified Carbon Auditor"
     },
     "commercialSummary": {
@@ -7080,7 +7080,7 @@ const OpenECDLMockData = {
       "name": "Farhan Kabir",
       "title": "Managing Director & Strategic Transformation Lead",
       "bio": "Former Country Managing Director with 22 years steering Fortune 500 multinationals across Asia.",
-      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/faculty-trainer-4.jpg",
       "qualifications": "MBA (Harvard Business School AMP), Fellow ICMAB"
     },
     "commercialSummary": {
@@ -7148,7 +7148,7 @@ const OpenECDLMockData = {
       "name": "Dr. Shahriar Hossain",
       "title": "Lead AI & Digital Transformation Faculty",
       "bio": "AI researcher and enterprise consultant.",
-      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/faculty-trainer-4.jpg",
       "qualifications": "Ph.D. in Computer Science"
     },
     "commercialSummary": {
@@ -8335,7 +8335,7 @@ const OpenECDLMockData = {
       "name": "Advocate Rafiqul Islam",
       "title": "Senior Advocate, Supreme Court of Bangladesh",
       "bio": "Senior labour law advocate and industrial mediator.",
-      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/ecdl-campus-banani.jpg",
       "qualifications": "LL.B, LL.M (Dhaka University)"
     },
     "commercialSummary": {
@@ -8405,7 +8405,7 @@ const OpenECDLMockData = {
       "name": "Tanvir Ahmed, SPHRi",
       "title": "Principal Commercial Strategy Consultant",
       "bio": "Retail and FMCG transformation lead.",
-      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "photo": "/assets/images/faculty-trainer-4.jpg",
       "qualifications": "MBA (IBA, Dhaka University)"
     },
     "commercialSummary": {
@@ -10396,7 +10396,7 @@ const OpenECDLMockData = {
         specialization: 'Bangladesh Labour Act 2006, Disciplinary Inquiries, Workplace Compliance',
         email: 'rafiqul.islam@open.ecdl.com.bd',
         phone: '+880 1711-409922',
-        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-2.jpg',
         assignedCohortsCount: 3,
         totalGraduatesTrained: 540,
         averageRating: 4.94,
@@ -10422,7 +10422,7 @@ const OpenECDLMockData = {
         specialization: 'Enterprise B2B Sales, High-Stakes Negotiation, Key Account Growth',
         email: 'tanvir.ahmed@open.ecdl.com.bd',
         phone: '+880 1819-502211',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-1.jpg',
         assignedCohortsCount: 2,
         totalGraduatesTrained: 380,
         averageRating: 4.88,
@@ -10448,7 +10448,7 @@ const OpenECDLMockData = {
         specialization: 'Executive Priorities, Delegation Protocols, Focus & Deep Work',
         email: 'anowar.hossain@open.ecdl.com.bd',
         phone: '+880 1715-334455',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-4.jpg',
         assignedCohortsCount: 1,
         totalGraduatesTrained: 310,
         averageRating: 4.91,
@@ -10474,7 +10474,7 @@ const OpenECDLMockData = {
         specialization: 'Supply Chain Due Diligence, ESG Reporting, Factory Environmental Audits',
         email: 'mahbubur.rahman@open.ecdl.com.bd',
         phone: '+880 1911-778899',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-4.jpg',
         assignedCohortsCount: 1,
         totalGraduatesTrained: 215,
         averageRating: 4.82,
@@ -10500,7 +10500,7 @@ const OpenECDLMockData = {
         specialization: 'Strategic HR Business Partnering, Competency Architecture, KPI Governance',
         email: 'farah.naz@open.ecdl.com.bd',
         phone: '+880 1713-889900',
-        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-3.jpg',
         assignedCohortsCount: 1,
         totalGraduatesTrained: 260,
         averageRating: 4.90,
@@ -10526,7 +10526,7 @@ const OpenECDLMockData = {
         specialization: 'PMP Exam Preparation, Agile Project Delivery, Earned Value Management',
         email: 'tareq.mahmud@open.ecdl.com.bd',
         phone: '+880 1817-665544',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80',
+        avatar: '/assets/images/faculty-trainer-3.jpg',
         assignedCohortsCount: 1,
         totalGraduatesTrained: 185,
         averageRating: 4.93,
