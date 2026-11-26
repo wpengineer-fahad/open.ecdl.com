@@ -68,6 +68,22 @@ h6,
   margin-bottom: var(--space-xs);
 }
 
+/* Preserve readable white headings inside dark-green or white-text containers */
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.bg-ecdl-green h1,
+.bg-ecdl-green h2,
+.bg-ecdl-green h3,
+.bg-ecdl-green h4,
+h1.text-white,
+h2.text-white,
+h3.text-white,
+h4.text-white {
+  color: var(--color-white);
+}
+
 /* Statistical Figures & Numerical Displays */
 .ecdl-stat__number,
 .ecdl-stat-value,
