@@ -2082,8 +2082,13 @@
       function runCounters() {
         if (animated) return;
         animated = true;
+        const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         counters.forEach(function (el) {
           const target = parseInt(el.getAttribute("data-target"), 10) || 0;
+          if (prefersReduced) {
+            el.textContent = target.toLocaleString("en-US");
+            return;
+          }
           const duration = 1100;
           const start = performance.now();
 

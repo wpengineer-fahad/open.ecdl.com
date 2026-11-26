@@ -378,11 +378,20 @@
     }
   }
 
+  function ensureMotionLoaded() {
+    if (global.ECDLMotion || document.querySelector('script[src*="motion.js"]')) return;
+    const script = document.createElement('script');
+    script.src = '/assets/js/motion.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function init() {
     applyActiveNavState();
     initUnifiedHeaderInteractions();
     syncHeaderCartBadge();
     initGlobalHeaderSearch();
+    ensureMotionLoaded();
     if (global.lucide && typeof global.lucide.createIcons === 'function') {
       global.lucide.createIcons();
     }
