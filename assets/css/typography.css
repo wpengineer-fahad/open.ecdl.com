@@ -31,7 +31,10 @@ body {
 /* ==========================================================================
    1. PLAYFAIR DISPLAY — HEADLINES, SECTION HEADINGS, CARD TITLES, STAT FIGURES
    ========================================================================== */
-h1, .ecdl-h1, .ecdl-heading-display, .ecdl-heading-hero {
+h1,
+.ecdl-h1,
+.ecdl-heading-display,
+.ecdl-heading-hero {
   font-family: var(--font-heading);
   font-size: var(--font-display);
   font-weight: 600;
@@ -42,9 +45,19 @@ h1, .ecdl-h1, .ecdl-heading-display, .ecdl-heading-hero {
   margin-bottom: var(--space-xs);
 }
 
-h2, h3, h4, h5, h6,
-.ecdl-h2, .ecdl-h3, .ecdl-h4, .ecdl-h5, .ecdl-h6,
-.ecdl-heading-section, .ecdl-heading-sub, .ecdl-heading-card {
+h2,
+h3,
+h4,
+h5,
+h6,
+.ecdl-h2,
+.ecdl-h3,
+.ecdl-h4,
+.ecdl-h5,
+.ecdl-h6,
+.ecdl-heading-section,
+.ecdl-heading-sub,
+.ecdl-heading-card {
   font-family: var(--font-heading);
   font-size: var(--font-heading-size);
   font-weight: 600;
@@ -73,14 +86,39 @@ h2, h3, h4, h5, h6,
 /* ==========================================================================
    2. INTER — BODY COPY, NAVIGATION, BUTTONS, LABELS, METADATA, TABLES
    ========================================================================== */
-p, li, span, a, button, input, select, option, textarea, label, table, th, td, nav, small, figcaption, time, code, pre {
+p,
+li,
+span,
+a,
+button,
+input,
+select,
+option,
+textarea,
+label,
+table,
+th,
+td,
+nav,
+small,
+figcaption,
+time,
+code,
+pre {
   font-family: var(--font-body);
 }
 
 /* Preserve Playfair Display inside explicit heading or stat elements when spans are nested */
-h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
-.ecdl-heading-hero span, .ecdl-heading-display span,
-.ecdl-stat__number span, [data-stat-figure] span {
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+.ecdl-heading-hero span,
+.ecdl-heading-display span,
+.ecdl-stat__number span,
+[data-stat-figure] span {
   font-family: inherit;
 }
 
@@ -106,8 +144,16 @@ p:last-child {
 }
 
 /* Navigation, Buttons & Form Controls */
-nav a, nav button, header a, header button,
-button, .ecdl-btn, input, select, option, textarea {
+nav a,
+nav button,
+header a,
+header button,
+button,
+.ecdl-btn,
+input,
+select,
+option,
+textarea {
   font-family: var(--font-body);
   font-size: var(--font-body-size);
 }
@@ -206,14 +252,26 @@ footer,
   color: var(--color-white) !important;
 }
 
-footer h2, footer h3, footer h4, footer h5, footer h6,
-.ecdl-footer h2, .ecdl-footer h3, .ecdl-footer h4, .ecdl-footer h5, .ecdl-footer h6 {
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+.ecdl-footer h2,
+.ecdl-footer h3,
+.ecdl-footer h4,
+.ecdl-footer h5,
+.ecdl-footer h6 {
   font-family: var(--font-heading);
   color: var(--color-accent) !important;
 }
 
-footer p, footer li, footer span,
-.ecdl-footer p, .ecdl-footer li, .ecdl-footer span {
+footer p,
+footer li,
+footer span,
+.ecdl-footer p,
+.ecdl-footer li,
+.ecdl-footer span {
   font-family: var(--font-body);
   font-size: var(--font-small);
   color: var(--color-white);
@@ -261,7 +319,8 @@ footer a:hover,
   margin-top: var(--space-xs);
 }
 
-code, .ecdl-code {
+code,
+.ecdl-code {
   font-family: var(--font-body);
   font-size: var(--font-small);
   background-color: var(--color-surface);
@@ -304,25 +363,25 @@ code, .ecdl-code {
   font-family: var(--font-body);
 }
 
-#site-header > div {
+#site-header>div {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 @media (min-width: 640px) {
-  #site-header > div {
+  #site-header>div {
     padding: 0 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  #site-header > div {
+  #site-header>div {
     padding: 0 2rem;
   }
 }
 
-#site-header > div > div {
+#site-header>div>div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -384,8 +443,8 @@ code, .ecdl-code {
   z-index: 50;
 }
 
-#site-header nav .group:hover > .hidden,
-#site-header nav .group:focus-within > .hidden {
+#site-header nav .group:hover>.hidden,
+#site-header nav .group:focus-within>.hidden {
   display: block;
 }
 
@@ -410,14 +469,14 @@ code, .ecdl-code {
   color: var(--color-primary);
 }
 
-#site-header > div > div > div:last-child {
+#site-header>div>div>div:last-child {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
 }
 
-#site-header > div > div > div:last-child a[href="/login"] {
+#site-header>div>div>div:last-child a[href="/login"] {
   display: none;
 }
 
@@ -445,7 +504,7 @@ code, .ecdl-code {
     gap: 2rem;
   }
 
-  #site-header > div > div > div:last-child a[href="/login"] {
+  #site-header>div>div>div:last-child a[href="/login"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
