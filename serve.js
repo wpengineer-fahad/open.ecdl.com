@@ -23,6 +23,12 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
+
+  if (reqPath === '/favicon.ico') {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
   
   // Clean route handling
   if (reqPath === '/' || reqPath === '') {

@@ -78,7 +78,7 @@
       state.categorySlug = params.get('slug');
     }
 
-    if (params.get('search')) state.search = params.get('search');
+    if (params.get('search') || params.get('q')) state.search = params.get('search') || params.get('q');
     if (params.get('sort')) state.sort = params.get('sort');
     if (params.get('view')) state.view = params.get('view') === 'list' ? 'list' : 'grid';
     if (params.get('page')) state.page = parseInt(params.get('page'), 10) || 1;
@@ -297,7 +297,7 @@
 
     const ctaBtn = isCorporate
       ? `<button type="button" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm" data-ecdl-modal-target="modal-corporate-enquiry" data-course-title="${escapeHtml(course.title)}">Request Info</button>`
-      : `<a href="course-detail.html?slug=${course.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details →</a>`;
+      : `<a href="/courses/${course.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details →</a>`;
 
     return `
       <article class="ecdl-course-card" data-course-id="${course.id}">
@@ -313,9 +313,9 @@
         </div>
 
         <div class="ecdl-course-card__body">
-          <a href="category.html?slug=${course.categorySlug}" class="ecdl-course-card__category">${course.category}</a>
+          <a href="/courses/category/${course.categorySlug}" class="ecdl-course-card__category">${course.category}</a>
           <h3 class="ecdl-course-card__title">
-            <a href="course-detail.html?slug=${course.slug}">${course.title}</a>
+            <a href="/courses/${course.slug}">${course.title}</a>
           </h3>
           <p class="ecdl-course-card__desc">${course.summary}</p>
 
@@ -631,7 +631,7 @@
     if (relatedGrid && cat.relatedCategorySlugs) {
       const relCategories = data.categories.filter(c => cat.relatedCategorySlugs.includes(c.slug));
       relatedGrid.innerHTML = relCategories.map(rc => `
-        <a href="category.html?slug=${rc.slug}" class="ecdl-related-cat-card">
+        <a href="/courses/category/${rc.slug}" class="ecdl-related-cat-card">
           <span class="ecdl-related-cat-card__title">${escapeHtml(rc.title)}</span>
           <span class="ecdl-related-cat-card__count">${rc.courseCount} Programmes Available →</span>
         </a>

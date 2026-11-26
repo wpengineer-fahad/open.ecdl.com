@@ -124,14 +124,14 @@
     if (bcTitle) bcTitle.textContent = event.title;
     if (bcCategory) {
       bcCategory.textContent = event.category;
-      bcCategory.href = `category.html?slug=${event.categorySlug}`;
+      bcCategory.href = `/courses/category/${event.categorySlug}`;
     }
 
     // Category Kicker
     const kickerCat = document.getElementById('evt-header-category');
     if (kickerCat) {
       kickerCat.textContent = event.category;
-      kickerCat.href = `category.html?slug=${event.categorySlug}`;
+      kickerCat.href = `/courses/category/${event.categorySlug}`;
     }
 
     // Delivery Mode Badge
@@ -320,17 +320,17 @@
                 <span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">${rel.dateFormatted}</span>
               </div>
               <h4 style="font-family:var(--font-heading); font-size: var(--font-body-size); font-weight:700; margin:0 0 6px;">
-                <a href="events.html?slug=${rel.slug}" style="color:inherit; text-decoration:none;">${escapeHtml(rel.title)}</a>
+                <a href="/events/${rel.slug}" style="color:inherit; text-decoration:none;">${escapeHtml(rel.title)}</a>
               </h4>
             </div>
             <div style="margin-top:var(--space-sm); pt:var(--space-xs); display:flex; justify-content:space-between; align-items:center;">
               <span class="ecdl-badge ecdl-badge--green" style="font-size: var(--font-small);">${rel.seats || 'Open'}</span>
-              <a href="events.html?slug=${rel.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">View →</a>
+              <a href="/events/${rel.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">View →</a>
             </div>
           </div>
         `).join('');
       } else {
-        relatedEl.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore upcoming sessions on our <a href="training-calendar.html" style="color:var(--ecdl-color-green); font-weight:600;">Training Calendar</a>.</p>`;
+        relatedEl.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore upcoming sessions on our <a href="/training-calendar" style="color:var(--ecdl-color-green); font-weight:600;">Training Calendar</a>.</p>`;
       }
     }
   }
@@ -395,7 +395,7 @@
           <button type="button" class="ecdl-btn ecdl-btn--primary" style="width:100%; justify-content:center;" onclick="alert('Opening video player for: ' + event.title)">
             <span>Watch Video Recording</span>
           </button>
-          <a href="training-calendar.html" class="ecdl-btn ecdl-btn--secondary" style="width:100%; justify-content:center;">
+          <a href="/training-calendar" class="ecdl-btn ecdl-btn--secondary" style="width:100%; justify-content:center;">
             <span>Explore Upcoming Cohorts</span>
           </a>
         `;
@@ -406,7 +406,7 @@
             <div style="font-size: var(--font-small); font-weight:700; color:#991B1B;">Registration Closed</div>
             <p style="font-size: var(--font-small); color:#7F1D1D; margin:4px 0 0;">This session has been deferred. Please explore alternative dates on the calendar.</p>
           </div>
-          <a href="training-calendar.html" class="ecdl-btn ecdl-btn--primary" style="width:100%; justify-content:center;">
+          <a href="/training-calendar" class="ecdl-btn ecdl-btn--primary" style="width:100%; justify-content:center;">
             <span>Browse Alternative Dates →</span>
           </a>
         `;

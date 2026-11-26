@@ -202,7 +202,7 @@
   }
 
   function renderTrainerCard(t) {
-    const detailUrl = `trainer-detail.html?slug=${t.slug}`;
+    const detailUrl = `/trainers/${t.slug}`;
     const associatedCourses = (window.OpenECDLMockData.getCoursesByTrainer && window.OpenECDLMockData.getCoursesByTrainer(t.slug)) || [];
 
     return `
@@ -283,7 +283,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     let slug = urlParams.get('slug');
     if (!slug) {
-      const parts = window.location.pathname.split('/');
+      const parts = window.location.pathname.split('/').filter(Boolean);
       const last = parts[parts.length - 1];
       if (last && !last.endsWith('.html') && last !== 'trainers') {
         slug = last;
@@ -403,13 +403,13 @@
                 <span class="text-xs text-neutral-400 font-semibold">${c.deliveryMode}</span>
               </div>
               <h4 class="font-display font-bold text-base text-ecdl-dark hover:text-ecdl-green transition-colors">
-                <a href="course-detail.html?slug=${c.slug}">${c.title}</a>
+                <a href="/courses/${c.slug}">${c.title}</a>
               </h4>
               <p class="text-xs text-neutral-600 line-clamp-2 leading-relaxed">${c.summary || c.overview}</p>
             </div>
             <div class="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-between">
               <span class="font-display font-extrabold text-sm text-ecdl-dark">${c.price}</span>
-              <a href="course-detail.html?slug=${c.slug}" class="inline-flex items-center gap-1 font-bold text-xs text-ecdl-green hover:underline">
+              <a href="/courses/${c.slug}" class="inline-flex items-center gap-1 font-bold text-xs text-ecdl-green hover:underline">
                 <span>View Programme</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </a>
@@ -450,7 +450,7 @@
     // Corporate Engagement CTA button
     const corpCta = document.getElementById('trainer-corporate-cta');
     if (corpCta) {
-      corpCta.href = `corporate-proposal.html?trainer=${trainer.slug}&trainerName=${encodeURIComponent(trainer.name)}`;
+      corpCta.href = `/corporate-training/request-proposal?trainer=${trainer.slug}&trainerName=${encodeURIComponent(trainer.name)}`;
     }
 
     // Related Faculty
@@ -462,7 +462,7 @@
 
       if (others.length > 0) {
         relatedGrid.innerHTML = others.map(other => `
-          <a href="trainer-detail.html?slug=${other.slug}" class="flex items-center gap-3 p-3 rounded-2xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200 transition-all">
+          <a href="/trainers/${other.slug}" class="flex items-center gap-3 p-3 rounded-2xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200 transition-all">
             <img src="${other.avatar}" alt="${other.name}" class="w-12 h-12 rounded-xl object-cover shrink-0" />
             <div class="overflow-hidden">
               <h5 class="font-display font-bold text-xs text-ecdl-dark truncate">${other.name}</h5>

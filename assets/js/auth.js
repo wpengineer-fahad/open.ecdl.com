@@ -245,7 +245,7 @@
         else if (email.includes('admin') || email.includes('ecdl.com.bd')) role = 'admin';
 
         sessionStorage.setItem('ecdl_demo_role', role);
-        window.location.href = `account-select-portal.html?role=${role}`;
+        window.location.href = `/account/select-portal?role=${role}`;
       }, 700);
     });
   }

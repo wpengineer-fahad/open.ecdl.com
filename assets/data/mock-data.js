@@ -1463,7 +1463,7 @@ const OpenECDLMockData = {
       type: 'Featured Masterclass',
       duration: '16 Hours',
       keywords: ['labour', 'law', 'bla', 'rules', 'compliance', 'misconduct', 'inquiry', 'disciplinary', 'hr', 'factory', 'amendment'],
-      url: 'course-detail.html?slug=bangladesh-labour-act-2006-amendment-2026',
+      url: '/courses/bangladesh-labour-act-2006-amendment-2026',
       badge: 'Core Compliance'
     },
     {
@@ -1472,7 +1472,7 @@ const OpenECDLMockData = {
       type: 'Featured Masterclass',
       duration: '16 Hours',
       keywords: ['sales', 'b2b', 'negotiation', 'key accounts', 'effective', 'management', 'commercial', 'pipeline'],
-      url: 'course-detail.html?slug=effective-sales-management',
+      url: '/courses/effective-sales-management',
       badge: 'Featured Masterclass'
     },
     {
@@ -1481,7 +1481,7 @@ const OpenECDLMockData = {
       type: 'Executive Masterclass',
       duration: '8 Hours',
       keywords: ['productivity', 'priorities', 'time management', 'focus', 'executive', 'leadership', 'delegation'],
-      url: 'course-detail.html?slug=managing-priorities-and-productivity',
+      url: '/courses/managing-priorities-and-productivity',
       badge: 'Executive Skills'
     },
     {
@@ -1490,7 +1490,7 @@ const OpenECDLMockData = {
       type: 'Weekend Intensive',
       duration: '16 Hours',
       keywords: ['vat', 'tax', 'nbr', 'mushak', 'sd act', '2012', 'deduction', 'vds', 'accounts'],
-      url: 'course-detail.html?slug=corporate-vat-tax-management-act-2012',
+      url: '/courses/corporate-vat-tax-management-act-2012',
       badge: 'Weekend Intensive'
     },
     {
@@ -1499,7 +1499,7 @@ const OpenECDLMockData = {
       type: 'Corporate In-House',
       duration: '16 Hours',
       keywords: ['leadership', 'supervisory', 'plant', 'operations', 'lean', 'production', 'shopfloor'],
-      url: 'course-detail.html?slug=supervisory-leadership-shopfloor-excellence',
+      url: '/courses/supervisory-leadership-shopfloor-excellence',
       badge: 'In-House Delivery'
     },
     {
@@ -1508,7 +1508,7 @@ const OpenECDLMockData = {
       type: 'Open Course',
       duration: '12 Hours',
       keywords: ['talent', 'acquisition', 'recruitment', 'hr', 'analytics', 'headhunting', 'people'],
-      url: 'course-detail.html?slug=strategic-talent-acquisition-people-analytics',
+      url: '/courses/strategic-talent-acquisition-people-analytics',
       badge: 'Upcoming Batch'
     },
     {

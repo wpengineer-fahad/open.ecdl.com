@@ -297,10 +297,10 @@
     const trainer = (event.speakers && event.speakers[0]) ? event.speakers[0] : { name: 'Senior Faculty', title: 'ECDL Lead Instructor', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80' };
 
     const ctaAction = isCancelled
-      ? `<a href="events.html?slug=${event.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">View Cancellation Details</a>`
+      ? `<a href="/events/${event.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">View Cancellation Details</a>`
       : isCompleted
-      ? `<a href="events.html?slug=${event.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">Watch Recording & Slides</a>`
-      : `<a href="events.html?slug=${event.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details & Register →</a>`;
+      ? `<a href="/events/${event.slug}" class="ecdl-btn ecdl-btn--secondary ecdl-btn--sm">Watch Recording & Slides</a>`
+      : `<a href="/events/${event.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details & Register →</a>`;
 
     return `
       <article class="ecdl-session-card">
@@ -311,7 +311,7 @@
           </div>
 
           <h3 class="ecdl-session-card__title">
-            <a href="events.html?slug=${event.slug}">${escapeHtml(event.title)}</a>
+            <a href="/events/${event.slug}">${escapeHtml(event.title)}</a>
           </h3>
 
           <div class="ecdl-session-card__specs">
@@ -396,7 +396,7 @@
         if (isCancelled) statusText = `<span class="ecdl-badge ecdl-badge--red" style="font-size: var(--font-small);">Cancelled</span>`;
         if (isCompleted) statusText = `<span class="ecdl-badge ecdl-badge--neutral" style="font-size: var(--font-small);">Completed</span>`;
 
-        const linkUrl = `events.html?slug=${evt.slug}`;
+        const linkUrl = `/events/${evt.slug}`;
 
         return `
           <div class="ecdl-list-event-row">

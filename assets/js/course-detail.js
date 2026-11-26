@@ -120,7 +120,7 @@
     const bcCat = document.getElementById('cd-bc-category');
     if (bcCat) {
       bcCat.textContent = course.category;
-      bcCat.href = `category.html?slug=${course.categorySlug}`;
+      bcCat.href = `/courses/category/${course.categorySlug}`;
     }
     const bcTitle = document.getElementById('cd-bc-title');
     if (bcTitle) bcTitle.textContent = course.title;
@@ -129,7 +129,7 @@
     const kickerCat = document.getElementById('cd-header-category');
     if (kickerCat) {
       kickerCat.textContent = course.category;
-      kickerCat.href = `category.html?slug=${course.categorySlug}`;
+      kickerCat.href = `/courses/category/${course.categorySlug}`;
     }
 
     // Title & Lead
@@ -350,18 +350,18 @@
             <div class="ecdl-course-card__body">
               <span class="ecdl-course-card__category">${rc.category}</span>
               <h4 class="ecdl-course-card__title">
-                <a href="course-detail.html?slug=${rc.slug}">${rc.title}</a>
+                <a href="/courses/${rc.slug}">${rc.title}</a>
               </h4>
               <p class="ecdl-course-card__desc">${rc.summary}</p>
               <div class="ecdl-course-card__footer">
                 <span class="ecdl-course-card__price">${rc.price}</span>
-                <a href="course-detail.html?slug=${rc.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details →</a>
+                <a href="/courses/${rc.slug}" class="ecdl-btn ecdl-btn--primary ecdl-btn--sm">View Details →</a>
               </div>
             </div>
           </article>
         `).join('');
       } else {
-        relatedWrap.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore more in the <a href="courses.html" style="color:var(--ecdl-color-green); font-weight:700;">full course catalogue →</a></p>`;
+        relatedWrap.innerHTML = `<p style="color:var(--color-text-secondary); font-size: var(--font-small);">Explore more in the <a href="/courses" style="color:var(--ecdl-color-green); font-weight:700;">full course catalogue →</a></p>`;
       }
     }
   }
@@ -596,7 +596,7 @@
           </div>
           <div class="ecdl-modal__footer">
             <button type="button" class="ecdl-btn ecdl-btn--secondary" onclick="document.getElementById('modal-individual-enroll').classList.remove('is-open'); document.body.style.overflow='';">Cancel</button>
-            <a href="cart.html" class="ecdl-btn ecdl-btn--secondary" style="text-decoration:none;">View Cart</a>
+            <a href="/cart" class="ecdl-btn ecdl-btn--secondary" style="text-decoration:none;">View Cart</a>
             <button type="submit" class="ecdl-btn ecdl-btn--primary">Complete Registration →</button>
           </div>
         </form>
@@ -678,7 +678,7 @@
           </div>
           <div class="ecdl-modal__footer">
             <button type="button" class="ecdl-btn ecdl-btn--secondary" onclick="document.getElementById('modal-group-booking').classList.remove('is-open'); document.body.style.overflow='';">Cancel</button>
-            <a href="registration-group.html" class="ecdl-btn ecdl-btn--secondary" style="text-decoration:none;">Open Full Roster Tool →</a>
+            <a href="/registration/group" class="ecdl-btn ecdl-btn--secondary" style="text-decoration:none;">Open Full Roster Tool →</a>
             <button type="submit" class="ecdl-btn ecdl-btn--primary">Submit Group Order →</button>
           </div>
         </form>

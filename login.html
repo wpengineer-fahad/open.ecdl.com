@@ -65,11 +65,11 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/typography.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/auth.css" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/auth.css" />
 </head>
 <body class="bg-white text-neutral-800 antialiased font-sans">
 
@@ -83,7 +83,7 @@
       <!-- Top Bar: Logo & Back Link -->
       <div>
         <div class="flex items-center justify-between mb-8">
-          <a href="index.html" class="flex items-center gap-3 group" aria-label="ECDL Home">
+          <a href="/" class="flex items-center gap-3 group" aria-label="ECDL Home">
             <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
@@ -100,7 +100,7 @@
             </div>
           </a>
 
-          <a href="index.html" class="inline-flex items-center gap-1 text-xs font-semibold text-neutral-500 hover:text-ecdl-green transition-colors">
+          <a href="/" class="inline-flex items-center gap-1 text-xs font-semibold text-neutral-500 hover:text-ecdl-green transition-colors">
             <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
             <span>Back to Home</span>
           </a>
@@ -174,7 +174,7 @@
               <label for="login-password" class="block text-xs font-bold text-neutral-700 uppercase tracking-wider">
                 Password <span class="text-[#1B4D3E]">*</span>
               </label>
-              <a href="forgot-password.html" class="text-xs font-semibold text-ecdl-green hover:underline">
+              <a href="/forgot-password.html" class="text-xs font-semibold text-ecdl-green hover:underline">
                 Forgot password?
               </a>
             </div>
@@ -235,7 +235,7 @@
 
           <button 
             type="button" 
-            onclick="sessionStorage.setItem('ecdl_demo_role', 'corporate'); window.location.href='account-select-portal.html?role=corporate';"
+            onclick="sessionStorage.setItem('ecdl_demo_role', 'corporate'); window.location.href="/account/select-portal?role=corporate";"
             class="w-full py-2.5 px-4 rounded-xl border border-neutral-200 hover:border-neutral-300 bg-white text-xs font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors flex items-center justify-center gap-2 shadow-sm"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24">
@@ -254,9 +254,9 @@
       <div class="mt-8 pt-6 border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
         <span class="text-neutral-500">
           New to Open ECDL? 
-          <a href="register.html" class="font-bold text-ecdl-green hover:underline">Register as a Learner</a>
+          <a href="/register.html" class="font-bold text-ecdl-green hover:underline">Register as a Learner</a>
         </span>
-        <a href="corporate-proposal.html" class="text-neutral-500 hover:text-ecdl-dark font-medium transition-colors">
+        <a href="/corporate-training/request-proposal" class="text-neutral-500 hover:text-ecdl-dark font-medium transition-colors">
           Corporate Account Enquiry →
         </a>
       </div>
@@ -319,11 +319,12 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/auth.js"></script>
+  <script src="/assets/js/auth.js"></script>
   <script>
     if (window.lucide) {
       window.lucide.createIcons();
     }
   </script>
+  <script src="/assets/js/routes.js"></script>
 </body>
 </html>

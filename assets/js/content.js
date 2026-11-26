@@ -71,7 +71,7 @@
                 </div>
 
                 <h3 class="font-display text-lg font-bold text-ecdl-dark group-hover:text-ecdl-green transition-colors leading-snug mb-3">
-                  <a href="resource-detail.html?slug=${res.slug}" class="focus:outline-none">
+                  <a href="/resources/${res.slug}" class="focus:outline-none">
                     ${res.title}
                   </a>
                 </h3>
@@ -90,7 +90,7 @@
                 </div>
 
                 <a 
-                  href="resource-detail.html?slug=${res.slug}" 
+                  href="/resources/${res.slug}" 
                   class="inline-flex items-center gap-1 text-xs font-bold text-ecdl-green hover:text-ecdl-greenDark group-hover:translate-x-0.5 transition-transform"
                 >
                   <span>Read Now</span>
@@ -178,7 +178,7 @@
 
     // Also support /resources/:slug path if served directly
     if (!slug) {
-      const pathParts = window.location.pathname.split('/');
+      const pathParts = window.location.pathname.split('/').filter(Boolean);
       const lastPart = pathParts[pathParts.length - 1];
       if (lastPart && lastPart !== 'resource-detail.html' && lastPart !== 'resources') {
         slug = lastPart.replace('.html', '');
@@ -199,7 +199,7 @@
     const breadcrumbTitle = document.getElementById('detailBreadcrumbTitle');
     if (breadcrumbCategory) {
       breadcrumbCategory.textContent = res.category;
-      breadcrumbCategory.href = `resources.html?category=${res.categorySlug}`;
+      breadcrumbCategory.href = `/resources?category=${res.categorySlug}`;
     }
     if (breadcrumbTitle) {
       breadcrumbTitle.textContent = res.title;
@@ -230,7 +230,7 @@
     if (authorName) authorName.textContent = res.author.name;
     if (authorTitle) authorTitle.textContent = res.author.title;
     if (authorBioLink && res.author.trainerSlug) {
-      authorBioLink.href = `trainer-detail.html?slug=${res.author.trainerSlug}`;
+      authorBioLink.href = `/trainers/${res.author.trainerSlug}`;
       authorBioLink.classList.remove('hidden');
     }
 

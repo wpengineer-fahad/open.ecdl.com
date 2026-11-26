@@ -99,6 +99,11 @@
   <!-- Main 404 Hero -->
   <main class="flex-1 flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl w-full space-y-10 text-center">
+      <nav class="ecdl-breadcrumbs justify-center" aria-label="Breadcrumb">
+        <a href="/" class="ecdl-breadcrumbs__link">Home</a>
+        <span class="ecdl-breadcrumbs__separator">/</span>
+        <span class="ecdl-breadcrumbs__current" aria-current="page">404 Page Not Found</span>
+      </nav>
 
       <div class="space-y-4">
         <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">
@@ -186,5 +191,6 @@
   <script>
     if (window.lucide) window.lucide.createIcons();
   </script>
+  <script src="/assets/js/routes.js"></script>
 </body>
 </html>

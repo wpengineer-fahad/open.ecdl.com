@@ -140,7 +140,7 @@
           </div>
           <div class="flex items-center justify-between pt-2 border-t border-neutral-100">
             <span class="text-neutral-600">Trainer: <strong>${c.trainer}</strong></span>
-            <a href="${c.zoomLink || '#'}" target="_blank" class="inline-flex items-center gap-1 text-ecdl-green font-bold hover:underline">
+            <a href="${c.zoomLink || `/learner/courses/${c.slug}/learn`}" target="_blank" class="inline-flex items-center gap-1 text-ecdl-green font-bold hover:underline">
               <span>Launch Classroom Stream</span>
               <i data-lucide="external-link" class="w-3 h-3"></i>
             </a>

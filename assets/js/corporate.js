@@ -387,7 +387,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     let slug = urlParams.get('slug');
     if (!slug) {
-      const pathParts = window.location.pathname.split('/');
+      const pathParts = window.location.pathname.split('/').filter(Boolean);
       const lastPart = pathParts[pathParts.length - 1];
       if (lastPart && !lastPart.endsWith('.html') && lastPart !== 'solutions') {
         slug = lastPart;
@@ -494,10 +494,10 @@
 
     // CTA links pre-filled with slug
     const propBtn = document.getElementById('sol-proposal-btn');
-    if (propBtn) propBtn.href = `corporate-proposal.html?solution=${solution.slug}`;
+    if (propBtn) propBtn.href = `/corporate-training/request-proposal?solution=${solution.slug}`;
 
     const tnaBtn = document.getElementById('sol-tna-btn');
-    if (tnaBtn) tnaBtn.href = `corporate-tna.html?track=${solution.slug}`;
+    if (tnaBtn) tnaBtn.href = `/corporate-training/tna?track=${solution.slug}`;
 
     // Related Case Study
     const csContainer = document.getElementById('sol-related-casestudy');
@@ -531,7 +531,7 @@
                 “${cs.testimonial.quote.substring(0, 110)}...”
                 <span class="block not-italic font-bold text-white mt-1">— ${cs.testimonial.author}, ${cs.testimonial.designation}</span>
               </div>
-              <a href="corporate-case-studies.html#cs-${cs.slug}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors shrink-0">
+              <a href="/corporate-training/case-studies#cs-${cs.slug}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors shrink-0">
                 <span>Read Full Case Study</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </a>

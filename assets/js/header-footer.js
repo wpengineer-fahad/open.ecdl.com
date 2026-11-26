@@ -324,7 +324,7 @@
       // Matched Categories
       if (matchedCategories.length > 0) {
         html += matchedCategories.map(cat => `
-          <a href="#courses" class="ecdl-search-result-item" style="background-color: var(--ecdl-color-soft-green); border-color: var(--ecdl-green-tint-200);" onclick="OpenECDLNav.closeSearch()">
+          <a href="/courses/category/${cat.slug}" class="ecdl-search-result-item" style="background-color: var(--ecdl-color-soft-green); border-color: var(--ecdl-green-tint-200);" onclick="OpenECDLNav.closeSearch()">
             <div class="ecdl-search-result-item__main">
               <span class="ecdl-search-result-item__title">Category: ${cat.title}</span>
               <span class="ecdl-search-result-item__meta">${cat.description}</span>
