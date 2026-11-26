@@ -1,0 +1,511 @@
+/**
+ * Open ECDL — Editorial Three-Slide Hero Carousel
+ * WordPress / Elementor Pro Handover Ready Component Styles
+ * Strict Tokens: Playfair Display + Inter | 4 Font Sizes | #1B4D3E, #C9A227, #F7F5F0, #FFFFFF, #000000
+ */
+
+.ecdl-hero-carousel-section {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid rgba(27, 77, 62, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.ecdl-hero-carousel__inner {
+  max-width: 80rem; /* 1280px matches max-w-7xl container */
+  margin: 0 auto;
+  padding: 2rem 1rem 2rem;
+}
+
+@media (min-width: 640px) {
+  .ecdl-hero-carousel__inner {
+    padding: 2.5rem 1.5rem 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ecdl-hero-carousel__inner {
+    padding: 2rem 2rem 1.5rem;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* CSS Grid Slide Stage: guarantees zero layout shift (height matches tallest slide cleanly) */
+.ecdl-hero-stage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.ecdl-hero-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(16px);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0s linear 600ms;
+}
+
+.ecdl-hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0s linear 0s;
+  z-index: 2;
+}
+
+.ecdl-hero-slide.is-leaving {
+  transform: translateX(-12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecdl-hero-slide,
+  .ecdl-hero-slide.is-active,
+  .ecdl-hero-slide.is-leaving {
+    transition: opacity 150ms ease;
+    transform: none;
+  }
+}
+
+/* 53% Left / 47% Right Editorial Split */
+.ecdl-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-hero-grid {
+    grid-template-columns: 53fr 47fr;
+    gap: 3rem;
+  }
+}
+
+/* Text Column */
+.ecdl-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.ecdl-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.ecdl-hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Headline strictly Display token (48px desktop / 36px mobile) in Playfair Display */
+.ecdl-hero-carousel-section .ecdl-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-display);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.ecdl-hero-title-accent {
+  display: block;
+  color: var(--color-primary);
+  position: relative;
+  width: fit-content;
+  margin-top: 0.125rem;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.15rem;
+}
+
+.ecdl-hero-desc {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  line-height: 1.65;
+  color: var(--color-black);
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* Slide 01: Restrained Inline Credibility Strip (no oversized cards) */
+.ecdl-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-top: 1px solid rgba(27, 77, 62, 0.16);
+  width: 100%;
+  max-width: 520px;
+}
+
+.ecdl-hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ecdl-hero-stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(27, 77, 62, 0.2);
+}
+
+.ecdl-hero-stat-num {
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+.ecdl-hero-stat-label {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+/* Slide 02: Compact Search Form & Popular Topics */
+.ecdl-hero-search-form {
+  width: 100%;
+  max-width: 560px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(27, 77, 62, 0.25);
+  border-radius: 8px;
+  padding: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 180ms ease;
+}
+
+.ecdl-hero-search-form:focus-within {
+  border-color: var(--color-primary);
+}
+
+@media (min-width: 640px) {
+  .ecdl-hero-search-form {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ecdl-hero-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1;
+  padding: 0 0.625rem;
+}
+
+.ecdl-hero-search-input {
+  width: 100%;
+  min-height: 40px;
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  color: var(--color-black);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.ecdl-hero-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.ecdl-hero-search-btn {
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  transition: background-color 180ms ease;
+}
+
+.ecdl-hero-search-btn:hover {
+  background-color: #153D31;
+}
+
+.ecdl-hero-topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecdl-hero-topics-label {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-right: 0.25rem;
+}
+
+.ecdl-hero-topic-link {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid rgba(27, 77, 62, 0.22);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.ecdl-hero-topic-link:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-accent);
+  color: var(--color-black);
+}
+
+/* Slide 03: Restrained Capability Highlights */
+.ecdl-hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-top: 1px solid rgba(27, 77, 62, 0.16);
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.ecdl-hero-highlights li {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecdl-hero-highlights li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Slide CTAs (Primary #1B4D3E + Secondary #1B4D3E border/text on White) */
+.ecdl-hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  .ecdl-hero-cta-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
+
+.ecdl-hero-btn-primary {
+  min-height: 46px;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 180ms ease;
+}
+
+.ecdl-hero-btn-primary:hover {
+  background-color: #153D31;
+  color: var(--color-white);
+}
+
+.ecdl-hero-btn-secondary {
+  min-height: 46px;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 180ms ease;
+}
+
+.ecdl-hero-btn-secondary:hover {
+  background-color: rgba(27, 77, 62, 0.06);
+  color: var(--color-primary);
+}
+
+/* Right Image Frame (47% Desktop, clean architectural border + restrained gold rule) */
+.ecdl-hero-media {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 77, 62, 0.14);
+  background-color: var(--color-white);
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 1024px) {
+  .ecdl-hero-media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.ecdl-hero-media::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--color-accent);
+  pointer-events: none;
+}
+
+.ecdl-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+/* Bottom Carousel Control Bar */
+.ecdl-hero-controls {
+  margin-top: 1.125rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(27, 77, 62, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ecdl-hero-indicators {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.ecdl-hero-dot {
+  width: 28px;
+  height: 8px;
+  border-radius: 9999px;
+  border: none;
+  padding: 0;
+  background-color: rgba(27, 77, 62, 0.22);
+  cursor: pointer;
+  transition: background-color 250ms ease, width 250ms ease;
+}
+
+.ecdl-hero-dot[aria-selected="true"],
+.ecdl-hero-dot.is-active {
+  width: 44px;
+  background-color: var(--color-accent);
+}
+
+.ecdl-hero-status {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-left: 0.5rem;
+}
+
+.ecdl-hero-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecdl-hero-ctrl-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(27, 77, 62, 0.25);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.ecdl-hero-ctrl-btn:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(27, 77, 62, 0.06);
+}
+
+.ecdl-hero-ctrl-btn:focus-visible,
+.ecdl-hero-dot:focus-visible,
+.ecdl-hero-btn-primary:focus-visible,
+.ecdl-hero-btn-secondary:focus-visible,
+.ecdl-hero-topic-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

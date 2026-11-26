@@ -73,6 +73,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="/assets/css/tokens.css" />
   <link rel="stylesheet" href="/assets/css/typography.css" />
+  <link rel="stylesheet" href="/assets/css/hero-carousel.css" />
 
   <style>
     html, body {
@@ -159,7 +160,7 @@
 
         <!-- ECDL Logo -->
         <a href="/" class="flex items-center gap-3 shrink-0" aria-label="ECDL Home">
-          <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="40" height="40" class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" rx="12" fill="#1B4D3E" />
             <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
             <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
@@ -255,7 +256,7 @@
             aria-controls="mobileMenu"
             aria-expanded="false"
           >
-            <i data-lucide="menu" class="w-5 h-5"></i>
+            <svg width="20" height="20" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
           </button>
         </div>
 
@@ -300,137 +301,202 @@
 
 
   <!-- ========================================================= -->
-  <!-- 3. HERO SECTION WITH LIVE KEYWORD SEARCH                  -->
+  <!-- 3. EDITORIAL THREE-SLIDE HERO CAROUSEL                    -->
+  <!-- WordPress / Elementor Pro Widget Ready                    -->
   <!-- ========================================================= -->
-  <section id="home" class="relative overflow-hidden"><div id="hero" class="sr-only"></div>
-  <div class="relative overflow-hidden bg-white pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-neutral-200">
-    <!-- Decorative subtle shapes -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+  <section
+    id="home"
+    class="ecdl-hero-carousel-section"
+    aria-roledescription="carousel"
+    aria-label="Open ECDL Highlights"
+    data-autoplay-ms="6000"
+  >
+    <div id="hero" class="sr-only"></div>
+    <div id="ecdlHeroCarousel" class="ecdl-hero-carousel__inner" data-autoplay-ms="6000">
+      <div class="sr-only" aria-live="polite" data-hero-live></div>
 
-        <!-- Left Column: Copy & Search -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-ecdl-green/25 shadow-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-ecdl-green"></span>
-            <span class="text-xs sm:text-sm font-bold text-ecdl-green">
-              Bangladesh’s Premier Corporate & Professional Learning Hub
-            </span>
-          </div>
+      <div class="ecdl-hero-stage">
 
-          <h1 class="font-display text-3xl sm:text-5xl lg:text-4xl font-extrabold tracking-tight text-ecdl-dark leading-[1.12]">
-            Over <span class="text-ecdl-green">43,000+</span> Participants.
-            More than <span class="underline decoration-[#C9A227] decoration-2 underline-offset-4">1,500</span> Trainings.
-            <span class="block mt-1 text-[#C9A227]">Learn Anything.</span>
-          </h1>
+        <!-- SLIDE 01: BRAND POSITIONING & CREDIBILITY -->
+        <article class="ecdl-hero-slide is-active" data-slide="0" aria-hidden="false" aria-label="Slide 1 of 3: Brand Positioning">
+          <div class="ecdl-hero-grid">
+            <div class="ecdl-hero-copy">
+              <span class="ecdl-hero-eyebrow">Bangladesh’s Premier Corporate &amp; Professional Learning Hub</span>
+              <h1 class="ecdl-hero-title">
+                Learn Anything.
+                <span class="ecdl-hero-title-accent">Lead Everything.</span>
+              </h1>
+              <p class="ecdl-hero-desc">
+                Industry-led certification workshops and executive masterclasses designed to build the skills and capabilities of Bangladesh’s workforce.
+              </p>
 
-          <p class="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-            Industry-led certification workshops and executive masterclasses built for Bangladesh’s workforce.
-            Every listed price is <strong class="text-ecdl-dark">cleanly inclusive of VAT</strong>—so what you see is the exact amount you pay.
-          </p>
+              <div class="ecdl-hero-stats" aria-label="ECDL Institutional Credibility">
+                <div class="ecdl-hero-stat-item">
+                  <span class="ecdl-hero-stat-num">43,000+</span>
+                  <span class="ecdl-hero-stat-label">Participants</span>
+                </div>
+                <div class="ecdl-hero-stat-divider" aria-hidden="true"></div>
+                <div class="ecdl-hero-stat-item">
+                  <span class="ecdl-hero-stat-num">1,500+</span>
+                  <span class="ecdl-hero-stat-label">Trainings</span>
+                </div>
+              </div>
 
-          <!-- Search Box -->
-          <form onsubmit="handleHeroSearch(event)" class="bg-white p-2 rounded-2xl border-2 border-neutral-200 focus-within:border-ecdl-green shadow-card flex flex-col sm:flex-row gap-2 max-w-2xl transition-colors">
-            <div class="flex items-center gap-3 flex-1 px-3 py-2">
-              <i data-lucide="search" class="w-5 h-5 text-ecdl-green shrink-0"></i>
-              <input
-                id="heroSearchInput"
-                type="text"
-                placeholder="Search by keyword, example: labour law"
-                class="w-full text-sm sm:text-base text-ecdl-dark placeholder-neutral-400 focus:outline-none bg-transparent"
-                oninput="syncSearchInput(this.value)"
+              <div class="ecdl-hero-cta-group">
+                <a href="/courses" class="ecdl-hero-btn-primary">
+                  <span>Explore Courses</span>
+                  <svg width="16" height="16" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <a href="/corporate-training" class="ecdl-hero-btn-secondary">
+                  <span>Corporate Training</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="ecdl-hero-media">
+              <img
+                src="/assets/images/hero-slide-1.jpg"
+                alt="Bangladeshi corporate professionals taking notes during a leadership workshop at ECDL in Dhaka"
+                width="1200"
+                height="900"
+                loading="eager"
+                decoding="async"
               />
             </div>
-            <button
-              type="submit"
-              class="px-6 py-3.5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm sm:text-base shadow-sm transition-colors flex items-center justify-center gap-2 shrink-0"
-            >
-              <span>Find Courses</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-          </form>
-
-          <!-- Popular Keyword Chips -->
-          <div class="flex flex-wrap items-center gap-2 pt-1">
-            <span class="text-xs font-bold uppercase tracking-wider text-neutral-500 mr-1">Popular:</span>
-            <button type="button" onclick="quickKeywordSearch('Labour Law')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Labour Law 2026</button>
-            <button type="button" onclick="quickKeywordSearch('Sales')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Sales Management</button>
-            <button type="button" onclick="quickKeywordSearch('VAT')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">VAT &amp; SD Law</button>
-            <button type="button" onclick="quickKeywordSearch('PMP')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">PMP Prep</button>
-            <button type="button" onclick="quickKeywordSearch('HR')" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 hover:border-ecdl-green hover:bg-ecdl-greenSoft text-ecdl-dark transition-colors">Strategic HR</button>
           </div>
+        </article>
 
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="/courses" class="px-6 py-3 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors inline-flex items-center gap-2">
-              <span>Explore Courses</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <a href="/corporate-training" class="px-6 py-3 rounded-xl border border-ecdl-green bg-white hover:bg-ecdl-greenSoft text-ecdl-green font-bold text-sm transition-colors inline-flex items-center gap-2">
-              <span>Corporate Training</span>
-              <i data-lucide="building-2" class="w-4 h-4"></i>
-            </a>
-            <a href="/training-calendar" class="px-4 py-3 text-sm font-bold text-ecdl-green hover:underline inline-flex items-center gap-1.5">
-              <i data-lucide="calendar" class="w-4 h-4"></i>
-              <span>Training Calendar</span>
-            </a>
-          </div>
-        </div>
+        <!-- SLIDE 02: OPEN TRAINING & COURSE DISCOVERY -->
+        <article class="ecdl-hero-slide" data-slide="1" aria-hidden="true" aria-label="Slide 2 of 3: Open Training">
+          <div class="ecdl-hero-grid">
+            <div class="ecdl-hero-copy">
+              <span class="ecdl-hero-eyebrow">Professional Development &amp; Certification</span>
+              <h2 class="ecdl-hero-title">
+                Learn Skills.
+                <span class="ecdl-hero-title-accent">Advance Your Career.</span>
+              </h2>
+              <p class="ecdl-hero-desc">
+                Explore practical, industry-led training in business, management, compliance, finance and professional development.
+              </p>
 
-        <!-- Right Column: Featured Spotlight Card -->
-        <div class="lg:col-span-5">
-          <div class="bg-ecdl-dark text-white rounded-xl p-6 sm:p-8 shadow-2xl border border-neutral-800 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-ecdl-green/25 rounded-full blur-2xl pointer-events-none"></div>
+              <form onsubmit="handleHeroSearch(event)" class="ecdl-hero-search-form" role="search" aria-label="Course catalogue search">
+                <label for="heroSearchInput" class="sr-only">Search courses</label>
+                <div class="ecdl-hero-search-input-wrap">
+                  <svg width="16" height="16" class="w-4 h-4 text-ecdl-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                  <input
+                    id="heroSearchInput"
+                    type="search"
+                    placeholder="What would you like to learn?"
+                    class="ecdl-hero-search-input"
+                    oninput="syncSearchInput(this.value)"
+                  />
+                </div>
+                <button type="submit" class="ecdl-hero-search-btn">
+                  <span>Find Courses</span>
+                  <svg width="16" height="16" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+              </form>
 
-            <div class="flex items-center justify-between gap-3 mb-5 relative z-10">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-ecdl-yellow text-black uppercase">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                Flagship 2026 Batch
-              </span>
-              <span class="text-xs font-semibold text-neutral-300">Dhaka &amp; Live Online</span>
-            </div>
-
-            <h2 class="font-display text-xl sm:text-2xl font-extrabold leading-snug mb-3 relative z-10">
-              <a href="/courses/bangladesh-labour-act-2006-amendment-2026" class="text-white hover:text-ecdl-yellow transition-colors">
-                Bangladesh Labour Act 2006 and Its Amendment up to 2026
-              </a>
-            </h2>
-            <p class="text-sm text-neutral-300 leading-relaxed mb-5 relative z-10">
-              Master recent statutory updates, HR compliance audits, disciplinary procedures, and termination calculations directly with senior legal practitioner <strong class="text-white">Jafrul Hasan Sharif</strong>.
-            </p>
-
-            <div class="grid grid-cols-2 gap-3 mb-6 relative z-10">
-              <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-                <span class="block text-xs uppercase tracking-wider text-neutral-400">All-Inclusive Fee</span>
-                <span class="block font-display text-xl font-extrabold text-ecdl-yellow mt-0.5">৳ 5,000</span>
-                <span class="text-xs text-emerald-300 font-medium">Incl. 15% VAT · No extra fees</span>
+              <div class="ecdl-hero-topics" aria-label="Popular training topics">
+                <span class="ecdl-hero-topics-label">Popular Topics:</span>
+                <a href="/courses/bangladesh-labour-act-2006-amendment-2026" class="ecdl-hero-topic-link">Labour Law 2026</a>
+                <a href="/courses/effective-sales-management" class="ecdl-hero-topic-link">Sales Management</a>
+                <a href="/courses/corporate-vat-tax-management-act-2012" class="ecdl-hero-topic-link">VAT &amp; SD Law</a>
+                <a href="/courses/category/business-management" class="ecdl-hero-topic-link">PMP Prep</a>
+                <a href="/courses/strategic-hrbp-executive-masterclass" class="ecdl-hero-topic-link">Strategic HR</a>
               </div>
-              <div class="bg-white/5 border border-white/10 rounded-xl p-3">
-                <span class="block text-xs uppercase tracking-wider text-neutral-400">Corporate Savings</span>
-                <span class="block font-display text-xl font-extrabold text-white mt-0.5">Up to 20%</span>
-                <span class="text-xs text-neutral-300 font-medium">5+ Seats · Mushak-6.3</span>
+
+              <div class="ecdl-hero-cta-group">
+                <a href="/courses" class="ecdl-hero-btn-primary">
+                  <span>Explore Courses</span>
+                  <svg width="16" height="16" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <a href="/training-calendar" class="ecdl-hero-btn-secondary">
+                  <span>Training Calendar</span>
+                </a>
               </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 relative z-10">
-              <button
-                type="button"
-                onclick="openEnrollModal('labour-act-2026')"
-                class="flex-1 py-3 px-5 rounded-xl bg-ecdl-green hover:bg-ecdl-greenDark text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
-              >
-                <span>Enroll Now — ৳ 5,000</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </button>
-              <a
-                href="/courses/bangladesh-labour-act-2006-amendment-2026"
-                class="py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors inline-flex items-center justify-center gap-1.5"
-              >
-                <span>View Details</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="ecdl-hero-media">
+              <img
+                src="/assets/images/hero-slide-2.jpg"
+                alt="Bangladeshi executives collaborating during a practical professional development seminar in Dhaka"
+                width="1200"
+                height="900"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
-        </div>
+        </article>
+
+        <!-- SLIDE 03: CORPORATE TRAINING & ORGANISATIONAL DEVELOPMENT -->
+        <article class="ecdl-hero-slide" data-slide="2" aria-hidden="true" aria-label="Slide 3 of 3: Corporate Training">
+          <div class="ecdl-hero-grid">
+            <div class="ecdl-hero-copy">
+              <span class="ecdl-hero-eyebrow">Custom Learning Solutions for Organisations</span>
+              <h2 class="ecdl-hero-title">
+                Develop People.
+                <span class="ecdl-hero-title-accent">Strengthen Performance.</span>
+              </h2>
+              <p class="ecdl-hero-desc">
+                Build stronger teams through customised corporate training, executive masterclasses and practical learning programmes designed around your organisation’s goals.
+              </p>
+
+              <ul class="ecdl-hero-highlights" aria-label="Corporate training capabilities">
+                <li>Tailored Training Programmes</li>
+                <li>Expert Facilitators</li>
+                <li>Classroom, Live Online &amp; Blended Learning</li>
+              </ul>
+
+              <div class="ecdl-hero-cta-group">
+                <a href="/corporate-training" class="ecdl-hero-btn-primary">
+                  <span>Corporate Training</span>
+                  <svg width="16" height="16" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <a href="/courses" class="ecdl-hero-btn-secondary">
+                  <span>Explore Courses</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="ecdl-hero-media">
+              <img
+                src="/assets/images/hero-slide-3.jpg"
+                alt="Senior ECDL facilitator engaging business executives in a modern Dhaka corporate boardroom"
+                width="1200"
+                height="900"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </article>
 
       </div>
+
+      <!-- Accessible Carousel Controls -->
+      <div class="ecdl-hero-controls">
+        <div class="ecdl-hero-indicators" role="tablist" aria-label="Choose a hero slide">
+          <button type="button" class="ecdl-hero-dot is-active" role="tab" aria-selected="true" aria-label="Go to slide 1: Brand Positioning"></button>
+          <button type="button" class="ecdl-hero-dot" role="tab" aria-selected="false" aria-label="Go to slide 2: Open Training"></button>
+          <button type="button" class="ecdl-hero-dot" role="tab" aria-selected="false" aria-label="Go to slide 3: Corporate Training"></button>
+          <span class="ecdl-hero-status" data-hero-status aria-hidden="true">01 / 03</span>
+        </div>
+
+        <div class="ecdl-hero-nav-actions">
+          <button type="button" class="ecdl-hero-ctrl-btn" data-hero-pause aria-pressed="false" aria-label="Pause slide rotation">
+            <span data-hero-pause-label>Pause</span>
+          </button>
+          <button type="button" class="ecdl-hero-ctrl-btn" data-hero-prev aria-label="Previous slide">
+            <svg width="16" height="16" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+          </button>
+          <button type="button" class="ecdl-hero-ctrl-btn" data-hero-next aria-label="Next slide">
+            <svg width="16" height="16" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1164,7 +1230,7 @@
         <!-- Brand & Contact -->
         <div class="lg:col-span-4 space-y-4">
           <a href="/" class="inline-flex items-center gap-3" aria-label="ECDL Home">
-            <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="40" height="40" class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="12" fill="#1B4D3E" />
               <path d="M12 15H30V20H18V22.5H28V27H18V29.5H31V34.5H12V15Z" fill="#FFFFFF" />
               <circle cx="35.5" cy="16.5" r="4.5" fill="#C9A227" />
@@ -2733,6 +2799,7 @@
       initApp();
     }
   </script>
+  <script src="/assets/js/hero-carousel.js"></script>
   <script src="/assets/js/routes.js"></script>
 </body>
 </html>

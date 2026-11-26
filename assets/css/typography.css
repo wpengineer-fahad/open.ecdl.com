@@ -281,3 +281,184 @@ code, .ecdl-code {
   background-color: #153D31;
   color: var(--color-white);
 }
+
+/* Accessible Screen-Reader Utility & Resilient Header Layout Fallbacks (prevents FOUC / CDN-delay breakage) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: var(--color-white);
+  border-bottom: 1px solid #e5e5e5;
+  font-family: var(--font-body);
+}
+
+#site-header > div {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  #site-header > div {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #site-header > div {
+    padding: 0 2rem;
+  }
+}
+
+#site-header > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  gap: 1.5rem;
+}
+
+#site-header a[aria-label="ECDL Home"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #153D31;
+  font-weight: 800;
+  font-size: var(--font-body-size);
+}
+
+#site-header a[aria-label="ECDL Home"] svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+#site-header nav {
+  display: none;
+}
+
+#site-header nav .relative {
+  position: relative;
+}
+
+#site-header nav .inline-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+#site-header nav button,
+#site-header nav a {
+  background: transparent;
+  border: none;
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#site-header nav .hidden {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding-top: 0.5rem;
+  min-width: 13.5rem;
+  z-index: 50;
+}
+
+#site-header nav .group:hover > .hidden,
+#site-header nav .group:focus-within > .hidden {
+  display: block;
+}
+
+#site-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.375rem 0;
+  background-color: var(--color-white);
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+#site-header nav ul a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-small);
+}
+
+#site-header nav ul a:hover {
+  background-color: rgba(27, 77, 62, 0.06);
+  color: var(--color-primary);
+}
+
+#site-header > div > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+#site-header > div > div > div:last-child a[href="/login"] {
+  display: none;
+}
+
+#mobileMenuToggleBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e5e5;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+#mobileMenu.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #site-header > div > div > div:last-child a[href="/login"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-small);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #mobileMenuToggleBtn,
+  #mobileMenu {
+    display: none !important;
+  }
+}
